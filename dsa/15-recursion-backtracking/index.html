@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recursion &amp; Backtracking – LeetCode problems in Java | Compiled Canvas</title>
+<meta name="description" content="18 Recursion &amp; Backtracking LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:title" content="Recursion &amp; Backtracking – LeetCode problems in Java | Compiled Canvas">
+<meta property="og:description" content="18 Recursion &amp; Backtracking LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:image" content="https://amitxaidev.github.io/assets/logo.png">
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="../index.html">DSA Sheet</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Recursion &amp; Backtracking</li>
+    </ol></nav>
+    <div class="row g-4 align-items-end">
+      <div class="col-lg-8">
+        <h1 class="h2 mb-1">15. Recursion &amp; Backtracking</h1>
+        <p class="text-body-secondary mb-2">Subsets, permutations, combinations, N-Queens, Sudoku and word search.</p>
+        <div><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 29 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 30 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 31 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 32 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 33 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 34 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 35 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 36 (coming soon)</span></div>
+      </div>
+      <div class="col-lg-4" data-slugs="fibonacci-number,sum-of-all-subset-xor-totals,subsets,subsets-ii,permutations,permutations-ii,combinations,combination-sum,combination-sum-ii,letter-combinations-of-a-phone-number,generate-parentheses,palindrome-partitioning,word-search,partition-to-k-equal-sum-subsets,path-with-maximum-gold,n-queens,sudoku-solver,permutation-sequence">
+        <div class="d-flex justify-content-between small mb-1"><span>Your progress</span><span><span class="done-count">0</span> of 18</span></div>
+        <div class="progress" role="progressbar" aria-label="Topic progress" style="height: 8px"><div class="progress-bar bg-success" style="width: 0%"></div></div>
+        <div class="small text-body-secondary mt-1">2 easy · 13 medium · 3 hard</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="d-flex flex-wrap gap-2 mb-3">
+  <input type="search" class="form-control search" style="max-width: 320px" placeholder="Search problems…" aria-label="Search problems">
+  <div class="btn-group btn-group-sm flex-wrap" role="group" aria-label="Filter">
+    <button type="button" class="btn btn-outline-secondary active" data-filter="all">All</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Easy">Easy</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Medium">Medium</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Hard">Hard</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="todo">Unsolved</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="done">Solved</button>
+  </div>
+</div>
+<div class="table-responsive">
+<table class="table table-hover align-middle ptable stagger">
+  <thead><tr><th style="width:2rem"></th><th class="d-none d-sm-table-cell" style="width:2.5rem">#</th><th>Problem</th><th class="d-none d-md-table-cell">Pattern</th><th>Level</th><th class="d-none d-sm-table-cell"></th></tr></thead>
+  <tbody>
+<tr data-slug="fibonacci-number" data-diff="Easy" data-text="fibonacci number recursion → iteration 509">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="fibonacci-number" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">1</td>
+  <td><a href="001-fibonacci-number.html" class="fw-semibold">Fibonacci Number</a> <span class="text-body-secondary small">#509</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Recursion → iteration</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/fibonacci-number/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="sum-of-all-subset-xor-totals" data-diff="Easy" data-text="sum of all subset xor totals pick / not pick recursion 1863">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="sum-of-all-subset-xor-totals" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">2</td>
+  <td><a href="002-sum-of-all-subset-xor-totals.html" class="fw-semibold">Sum of All Subset XOR Totals</a> <span class="text-body-secondary small">#1863</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Pick / not pick recursion</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/sum-of-all-subset-xor-totals/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="subsets" data-diff="Medium" data-text="subsets backtracking (pick / not pick) 78">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="subsets" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">3</td>
+  <td><a href="003-subsets.html" class="fw-semibold">Subsets</a> <span class="text-body-secondary small">#78</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Backtracking (pick / not pick)</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/subsets/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="subsets-ii" data-diff="Medium" data-text="subsets ii backtracking with duplicate skip 90">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="subsets-ii" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">4</td>
+  <td><a href="004-subsets-ii.html" class="fw-semibold">Subsets II</a> <span class="text-body-secondary small">#90</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Backtracking with duplicate skip</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/subsets-ii/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="permutations" data-diff="Medium" data-text="permutations backtracking with used[] 46">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="permutations" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">5</td>
+  <td><a href="005-permutations.html" class="fw-semibold">Permutations</a> <span class="text-body-secondary small">#46</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Backtracking with used[]</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/permutations/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="permutations-ii" data-diff="Medium" data-text="permutations ii backtracking with duplicate skip 47">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="permutations-ii" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">6</td>
+  <td><a href="006-permutations-ii.html" class="fw-semibold">Permutations II</a> <span class="text-body-secondary small">#47</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Backtracking with duplicate skip</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/permutations-ii/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="combinations" data-diff="Medium" data-text="combinations backtracking with pruning 77">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="combinations" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">7</td>
+  <td><a href="007-combinations.html" class="fw-semibold">Combinations</a> <span class="text-body-secondary small">#77</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Backtracking with pruning</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/combinations/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="combination-sum" data-diff="Medium" data-text="combination sum backtracking with reuse 39">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="combination-sum" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">8</td>
+  <td><a href="008-combination-sum.html" class="fw-semibold">Combination Sum</a> <span class="text-body-secondary small">#39</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Backtracking with reuse</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/combination-sum/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="combination-sum-ii" data-diff="Medium" data-text="combination sum ii backtracking, use once, skip duplicates 40">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="combination-sum-ii" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">9</td>
+  <td><a href="009-combination-sum-ii.html" class="fw-semibold">Combination Sum II</a> <span class="text-body-secondary small">#40</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Backtracking, use once, skip duplicates</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/combination-sum-ii/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="letter-combinations-of-a-phone-number" data-diff="Medium" data-text="letter combinations of a phone number backtracking over choices 17">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="letter-combinations-of-a-phone-number" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">10</td>
+  <td><a href="010-letter-combinations-of-a-phone-number.html" class="fw-semibold">Letter Combinations of a Phone Number</a> <span class="text-body-secondary small">#17</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Backtracking over choices</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="generate-parentheses" data-diff="Medium" data-text="generate parentheses backtracking with counts 22">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="generate-parentheses" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">11</td>
+  <td><a href="011-generate-parentheses.html" class="fw-semibold">Generate Parentheses</a> <span class="text-body-secondary small">#22</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Backtracking with counts</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/generate-parentheses/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="palindrome-partitioning" data-diff="Medium" data-text="palindrome partitioning backtracking on cut positions 131">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="palindrome-partitioning" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">12</td>
+  <td><a href="012-palindrome-partitioning.html" class="fw-semibold">Palindrome Partitioning</a> <span class="text-body-secondary small">#131</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Backtracking on cut positions</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/palindrome-partitioning/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="word-search" data-diff="Medium" data-text="word search grid dfs backtracking 79">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="word-search" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">13</td>
+  <td><a href="013-word-search.html" class="fw-semibold">Word Search</a> <span class="text-body-secondary small">#79</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Grid DFS backtracking</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/word-search/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="partition-to-k-equal-sum-subsets" data-diff="Medium" data-text="partition to k equal sum subsets backtracking with pruning 698">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="partition-to-k-equal-sum-subsets" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">14</td>
+  <td><a href="014-partition-to-k-equal-sum-subsets.html" class="fw-semibold">Partition to K Equal Sum Subsets</a> <span class="text-body-secondary small">#698</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Backtracking with pruning</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/partition-to-k-equal-sum-subsets/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="path-with-maximum-gold" data-diff="Medium" data-text="path with maximum gold grid dfs backtracking 1219">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="path-with-maximum-gold" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">15</td>
+  <td><a href="015-path-with-maximum-gold.html" class="fw-semibold">Path with Maximum Gold</a> <span class="text-body-secondary small">#1219</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Grid DFS backtracking</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/path-with-maximum-gold/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="n-queens" data-diff="Hard" data-text="n-queens backtracking row by row 51">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="n-queens" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">16</td>
+  <td><a href="016-n-queens.html" class="fw-semibold">N-Queens</a> <span class="text-body-secondary small">#51</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Backtracking row by row</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/n-queens/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="sudoku-solver" data-diff="Hard" data-text="sudoku solver backtracking on empty cells 37">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="sudoku-solver" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">17</td>
+  <td><a href="017-sudoku-solver.html" class="fw-semibold">Sudoku Solver</a> <span class="text-body-secondary small">#37</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Backtracking on empty cells</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/sudoku-solver/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="permutation-sequence" data-diff="Hard" data-text="permutation sequence factorial number system 60">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="permutation-sequence" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">18</td>
+  <td><a href="018-permutation-sequence.html" class="fw-semibold">Permutation Sequence</a> <span class="text-body-secondary small">#60</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Factorial number system</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/permutation-sequence/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+  </tbody>
+</table>
+</div>
+<p class="empty text-body-secondary" hidden>Nothing matches that filter.</p>
+<p class="small text-body-secondary mt-3">Work top to bottom — each list goes from easy to hard. Try a problem for at least 15 minutes before opening a hint. Ticks are saved in your browser.</p>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-0">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>
