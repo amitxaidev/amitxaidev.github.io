@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>847. Shortest Path Visiting All Nodes – hints and Java solution | Compiled Canvas</title>
+<meta name="description" content="Shortest Path Visiting All Nodes (LeetCode 847): summary, hints, approach and a commented Java solution.">
+<meta property="og:title" content="847. Shortest Path Visiting All Nodes – hints and Java solution | Compiled Canvas">
+<meta property="og:description" content="Shortest Path Visiting All Nodes (LeetCode 847): summary, hints, approach and a commented Java solution.">
+<meta property="og:image" content="https://amitxaidev.github.io/assets/logo.png">
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" id="hl-light"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" id="hl-dark" disabled><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<div class="container py-4">
+<nav aria-label="breadcrumb"><ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="../index.html">DSA Sheet</a></li>
+  <li class="breadcrumb-item"><a href="index.html">Dynamic Programming</a></li>
+  <li class="breadcrumb-item active" aria-current="page">Problem 28 of 28</li>
+</ol></nav>
+<div class="row g-4">
+  <div class="col-lg-8">
+    <h1 class="h3 mb-2">847. Shortest Path Visiting All Nodes</h1>
+    <p class="mb-3"><span class="badge text-bg-danger">Hard</span> <span class="badge text-bg-light border">BFS over (node, visited-mask)</span></p>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
+    <p>In a connected undirected graph with n ≤ 12 nodes, return the length of the shortest walk that visits every node (you can start and end anywhere and reuse nodes and edges).</p>
+    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode.</p>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
+    <div class="hint mb-2">
+  <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show hint 1">Show hint 1</button>
+  <div class="reveal-body border-start border-3 border-warning ps-3 mt-2" hidden>The state is (current node, set of visited nodes) — a bitmask.</div>
+</div>
+<div class="hint mb-2" hidden>
+  <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show hint 2">Show hint 2</button>
+  <div class="reveal-body border-start border-3 border-warning ps-3 mt-2" hidden>All edges have length 1, so BFS over states finds the shortest walk.</div>
+</div>
+<div class="hint mb-2" hidden>
+  <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show hint 3">Show hint 3</button>
+  <div class="reveal-body border-start border-3 border-warning ps-3 mt-2" hidden>Start from every node at once.</div>
+</div>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Approach</h2>
+    <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show approach">Show approach</button>
+    <div class="reveal-body mt-2" hidden><p>Multi-source BFS with states (node, mask) and a seen[node][mask] table. The first time a state has all bits set, its distance is the answer.</p></div>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Solution (Java)</h2>
+    <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show solution">Show solution</button>
+    <div class="reveal-body mt-2 position-relative code-block" hidden>
+      <button class="btn btn-sm btn-light border copy position-absolute top-0 end-0 m-2" type="button">Copy</button>
+      <pre class="border rounded mb-0"><code class="language-java">import java.util.*;
+
+class Solution {
+    public int shortestPathLength(int[][] graph) {
+        int n = graph.length, full = (1 &lt;&lt; n) - 1;
+        boolean[][] seen = new boolean[n][1 &lt;&lt; n];
+        Queue&lt;int[]&gt; q = new ArrayDeque&lt;&gt;();   // {node, mask}
+        for (int i = 0; i &lt; n; i++) {
+            q.offer(new int[]{i, 1 &lt;&lt; i});
+            seen[i][1 &lt;&lt; i] = true;
+        }
+        for (int steps = 0; !q.isEmpty(); steps++) {
+            for (int s = q.size(); s &gt; 0; s--) {
+                int[] cur = q.poll();
+                if (cur[1] == full) return steps;
+                for (int v : graph[cur[0]]) {
+                    int mask = cur[1] | (1 &lt;&lt; v);
+                    if (!seen[v][mask]) {
+                        seen[v][mask] = true;
+                        q.offer(new int[]{v, mask});
+                    }
+                }
+            }
+        }
+        return 0;
+    }
+}</code></pre>
+    </div>
+
+    <div class="alert alert-warning mt-4 mb-0"><strong>Common mistake:</strong> Marking only nodes as visited — you must be allowed to revisit a node with a different mask.</div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card mb-3 shadow-sm">
+      <div class="card-body">
+        <a class="btn btn-brand w-100 mb-2" href="https://leetcode.com/problems/shortest-path-visiting-all-nodes/" target="_blank" rel="noopener">Solve on LeetCode ↗</a>
+        <div class="form-check">
+          <input class="form-check-input done-box" type="checkbox" id="done" data-slug="shortest-path-visiting-all-nodes">
+          <label class="form-check-label" for="done">I solved this</label>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3 shadow-sm">
+      <div class="card-header small fw-semibold">Complexity</div>
+      <ul class="list-group list-group-flush small">
+        <li class="list-group-item"><strong>Time:</strong> O(n² · 2^n).</li>
+        <li class="list-group-item"><strong>Space:</strong> O(n · 2^n).</li>
+      </ul>
+    </div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Dynamic Programming</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 86 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 87 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 88 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 89 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 90 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 91 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 92 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 93 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 94 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 95 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 96 (coming soon)</span></div></div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="027-minimum-cost-to-cut-a-stick.html" data-key="ArrowLeft">← Minimum Cost to Cut a Stick</a><a class="btn btn-outline-secondary" href="../index.html">Back to all topics →</a></div>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-0">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

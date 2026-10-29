@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dynamic Programming – LeetCode problems in Java | Compiled Canvas</title>
+<meta name="description" content="28 Dynamic Programming LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:title" content="Dynamic Programming – LeetCode problems in Java | Compiled Canvas">
+<meta property="og:description" content="28 Dynamic Programming LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:image" content="https://amitxaidev.github.io/assets/logo.png">
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="../index.html">DSA Sheet</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Dynamic Programming</li>
+    </ol></nav>
+    <div class="row g-4 align-items-end">
+      <div class="col-lg-8">
+        <h1 class="h2 mb-1">24. Dynamic Programming</h1>
+        <p class="text-body-secondary mb-2">1D, grid, knapsack, subsequences, strings, stocks, partition, trees and bitmask DP.</p>
+        <div><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 86 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 87 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 88 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 89 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 90 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 91 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 92 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 93 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 94 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 95 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 96 (coming soon)</span></div>
+      </div>
+      <div class="col-lg-4" data-slugs="climbing-stairs,min-cost-climbing-stairs,n-th-tribonacci-number,house-robber,house-robber-ii,unique-paths,minimum-path-sum,triangle,partition-equal-subset-sum,target-sum,coin-change,coin-change-ii,longest-common-subsequence,longest-increasing-subsequence,longest-palindromic-subsequence,edit-distance,best-time-to-buy-and-sell-stock-with-cooldown,best-time-to-buy-and-sell-stock-with-transaction-fee,word-break,house-robber-iii,beautiful-arrangement,distinct-subsequences,wildcard-matching,best-time-to-buy-and-sell-stock-iii,best-time-to-buy-and-sell-stock-iv,burst-balloons,minimum-cost-to-cut-a-stick,shortest-path-visiting-all-nodes">
+        <div class="d-flex justify-content-between small mb-1"><span>Your progress</span><span><span class="done-count">0</span> of 28</span></div>
+        <div class="progress" role="progressbar" aria-label="Topic progress" style="height: 8px"><div class="progress-bar bg-success" style="width: 0%"></div></div>
+        <div class="small text-body-secondary mt-1">3 easy · 18 medium · 7 hard</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="d-flex flex-wrap gap-2 mb-3">
+  <input type="search" class="form-control search" style="max-width: 320px" placeholder="Search problems…" aria-label="Search problems">
+  <div class="btn-group btn-group-sm flex-wrap" role="group" aria-label="Filter">
+    <button type="button" class="btn btn-outline-secondary active" data-filter="all">All</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Easy">Easy</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Medium">Medium</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Hard">Hard</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="todo">Unsolved</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="done">Solved</button>
+  </div>
+</div>
+<div class="table-responsive">
+<table class="table table-hover align-middle ptable stagger">
+  <thead><tr><th style="width:2rem"></th><th class="d-none d-sm-table-cell" style="width:2.5rem">#</th><th>Problem</th><th class="d-none d-md-table-cell">Pattern</th><th>Level</th><th class="d-none d-sm-table-cell"></th></tr></thead>
+  <tbody>
+<tr data-slug="climbing-stairs" data-diff="Easy" data-text="climbing stairs 1d dp 70">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="climbing-stairs" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">1</td>
+  <td><a href="001-climbing-stairs.html" class="fw-semibold">Climbing Stairs</a> <span class="text-body-secondary small">#70</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">1D DP</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/climbing-stairs/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="min-cost-climbing-stairs" data-diff="Easy" data-text="min cost climbing stairs 1d dp 746">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="min-cost-climbing-stairs" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">2</td>
+  <td><a href="002-min-cost-climbing-stairs.html" class="fw-semibold">Min Cost Climbing Stairs</a> <span class="text-body-secondary small">#746</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">1D DP</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/min-cost-climbing-stairs/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="n-th-tribonacci-number" data-diff="Easy" data-text="n-th tribonacci number 1d dp 1137">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="n-th-tribonacci-number" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">3</td>
+  <td><a href="003-n-th-tribonacci-number.html" class="fw-semibold">N-th Tribonacci Number</a> <span class="text-body-secondary small">#1137</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">1D DP</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/n-th-tribonacci-number/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="house-robber" data-diff="Medium" data-text="house robber 1d dp (take / skip) 198">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="house-robber" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">4</td>
+  <td><a href="004-house-robber.html" class="fw-semibold">House Robber</a> <span class="text-body-secondary small">#198</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">1D DP (take / skip)</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/house-robber/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="house-robber-ii" data-diff="Medium" data-text="house robber ii 1d dp on two ranges 213">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="house-robber-ii" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">5</td>
+  <td><a href="005-house-robber-ii.html" class="fw-semibold">House Robber II</a> <span class="text-body-secondary small">#213</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">1D DP on two ranges</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/house-robber-ii/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="unique-paths" data-diff="Medium" data-text="unique paths 2d grid dp 62">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="unique-paths" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">6</td>
+  <td><a href="006-unique-paths.html" class="fw-semibold">Unique Paths</a> <span class="text-body-secondary small">#62</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">2D grid DP</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/unique-paths/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="minimum-path-sum" data-diff="Medium" data-text="minimum path sum 2d grid dp 64">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="minimum-path-sum" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">7</td>
+  <td><a href="007-minimum-path-sum.html" class="fw-semibold">Minimum Path Sum</a> <span class="text-body-secondary small">#64</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">2D grid DP</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/minimum-path-sum/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="triangle" data-diff="Medium" data-text="triangle bottom-up dp 120">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="triangle" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">8</td>
+  <td><a href="008-triangle.html" class="fw-semibold">Triangle</a> <span class="text-body-secondary small">#120</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Bottom-up DP</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/triangle/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="partition-equal-subset-sum" data-diff="Medium" data-text="partition equal subset sum 0/1 knapsack (subset sum) 416">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="partition-equal-subset-sum" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">9</td>
+  <td><a href="009-partition-equal-subset-sum.html" class="fw-semibold">Partition Equal Subset Sum</a> <span class="text-body-secondary small">#416</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">0/1 knapsack (subset sum)</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/partition-equal-subset-sum/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="target-sum" data-diff="Medium" data-text="target sum 0/1 knapsack (count subsets) 494">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="target-sum" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">10</td>
+  <td><a href="010-target-sum.html" class="fw-semibold">Target Sum</a> <span class="text-body-secondary small">#494</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">0/1 knapsack (count subsets)</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/target-sum/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="coin-change" data-diff="Medium" data-text="coin change unbounded knapsack (min coins) 322">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="coin-change" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">11</td>
+  <td><a href="011-coin-change.html" class="fw-semibold">Coin Change</a> <span class="text-body-secondary small">#322</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Unbounded knapsack (min coins)</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/coin-change/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="coin-change-ii" data-diff="Medium" data-text="coin change ii unbounded knapsack (count combinations) 518">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="coin-change-ii" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">12</td>
+  <td><a href="012-coin-change-ii.html" class="fw-semibold">Coin Change II</a> <span class="text-body-secondary small">#518</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Unbounded knapsack (count combinations)</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/coin-change-ii/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="longest-common-subsequence" data-diff="Medium" data-text="longest common subsequence 2d dp on two strings 1143">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="longest-common-subsequence" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">13</td>
+  <td><a href="013-longest-common-subsequence.html" class="fw-semibold">Longest Common Subsequence</a> <span class="text-body-secondary small">#1143</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">2D DP on two strings</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/longest-common-subsequence/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="longest-increasing-subsequence" data-diff="Medium" data-text="longest increasing subsequence patience sorting + binary search 300">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="longest-increasing-subsequence" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">14</td>
+  <td><a href="014-longest-increasing-subsequence.html" class="fw-semibold">Longest Increasing Subsequence</a> <span class="text-body-secondary small">#300</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Patience sorting + binary search</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/longest-increasing-subsequence/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="longest-palindromic-subsequence" data-diff="Medium" data-text="longest palindromic subsequence interval dp 516">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="longest-palindromic-subsequence" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">15</td>
+  <td><a href="015-longest-palindromic-subsequence.html" class="fw-semibold">Longest Palindromic Subsequence</a> <span class="text-body-secondary small">#516</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Interval DP</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/longest-palindromic-subsequence/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="edit-distance" data-diff="Medium" data-text="edit distance 2d dp on two strings 72">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="edit-distance" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">16</td>
+  <td><a href="016-edit-distance.html" class="fw-semibold">Edit Distance</a> <span class="text-body-secondary small">#72</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">2D DP on two strings</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/edit-distance/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="best-time-to-buy-and-sell-stock-with-cooldown" data-diff="Medium" data-text="best time to buy and sell stock with cooldown state machine dp 309">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="best-time-to-buy-and-sell-stock-with-cooldown" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">17</td>
+  <td><a href="017-best-time-to-buy-and-sell-stock-with-cooldown.html" class="fw-semibold">Best Time to Buy and Sell Stock with Cooldown</a> <span class="text-body-secondary small">#309</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">State machine DP</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="best-time-to-buy-and-sell-stock-with-transaction-fee" data-diff="Medium" data-text="best time to buy and sell stock with transaction fee state machine dp 714">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="best-time-to-buy-and-sell-stock-with-transaction-fee" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">18</td>
+  <td><a href="018-best-time-to-buy-and-sell-stock-with-transaction-fee.html" class="fw-semibold">Best Time to Buy and Sell Stock with Transaction Fee</a> <span class="text-body-secondary small">#714</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">State machine DP</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="word-break" data-diff="Medium" data-text="word break prefix dp 139">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="word-break" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">19</td>
+  <td><a href="019-word-break.html" class="fw-semibold">Word Break</a> <span class="text-body-secondary small">#139</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Prefix DP</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/word-break/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="house-robber-iii" data-diff="Medium" data-text="house robber iii dp on trees 337">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="house-robber-iii" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">20</td>
+  <td><a href="020-house-robber-iii.html" class="fw-semibold">House Robber III</a> <span class="text-body-secondary small">#337</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">DP on trees</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/house-robber-iii/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="beautiful-arrangement" data-diff="Medium" data-text="beautiful arrangement bitmask dp 526">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="beautiful-arrangement" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">21</td>
+  <td><a href="021-beautiful-arrangement.html" class="fw-semibold">Beautiful Arrangement</a> <span class="text-body-secondary small">#526</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Bitmask DP</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/beautiful-arrangement/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="distinct-subsequences" data-diff="Hard" data-text="distinct subsequences 2d dp counting 115">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="distinct-subsequences" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">22</td>
+  <td><a href="022-distinct-subsequences.html" class="fw-semibold">Distinct Subsequences</a> <span class="text-body-secondary small">#115</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">2D DP counting</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/distinct-subsequences/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="wildcard-matching" data-diff="Hard" data-text="wildcard matching 2d dp on string and pattern 44">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="wildcard-matching" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">23</td>
+  <td><a href="023-wildcard-matching.html" class="fw-semibold">Wildcard Matching</a> <span class="text-body-secondary small">#44</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">2D DP on string and pattern</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/wildcard-matching/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="best-time-to-buy-and-sell-stock-iii" data-diff="Hard" data-text="best time to buy and sell stock iii state machine dp (2 transactions) 123">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="best-time-to-buy-and-sell-stock-iii" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">24</td>
+  <td><a href="024-best-time-to-buy-and-sell-stock-iii.html" class="fw-semibold">Best Time to Buy and Sell Stock III</a> <span class="text-body-secondary small">#123</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">State machine DP (2 transactions)</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="best-time-to-buy-and-sell-stock-iv" data-diff="Hard" data-text="best time to buy and sell stock iv state machine dp (k transactions) 188">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="best-time-to-buy-and-sell-stock-iv" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">25</td>
+  <td><a href="025-best-time-to-buy-and-sell-stock-iv.html" class="fw-semibold">Best Time to Buy and Sell Stock IV</a> <span class="text-body-secondary small">#188</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">State machine DP (k transactions)</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="burst-balloons" data-diff="Hard" data-text="burst balloons interval dp (last to burst) 312">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="burst-balloons" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">26</td>
+  <td><a href="026-burst-balloons.html" class="fw-semibold">Burst Balloons</a> <span class="text-body-secondary small">#312</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Interval DP (last to burst)</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/burst-balloons/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="minimum-cost-to-cut-a-stick" data-diff="Hard" data-text="minimum cost to cut a stick partition dp (mcm style) 1547">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="minimum-cost-to-cut-a-stick" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">27</td>
+  <td><a href="027-minimum-cost-to-cut-a-stick.html" class="fw-semibold">Minimum Cost to Cut a Stick</a> <span class="text-body-secondary small">#1547</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Partition DP (MCM style)</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/minimum-cost-to-cut-a-stick/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="shortest-path-visiting-all-nodes" data-diff="Hard" data-text="shortest path visiting all nodes bfs over (node, visited-mask) 847">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="shortest-path-visiting-all-nodes" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">28</td>
+  <td><a href="028-shortest-path-visiting-all-nodes.html" class="fw-semibold">Shortest Path Visiting All Nodes</a> <span class="text-body-secondary small">#847</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">BFS over (node, visited-mask)</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/shortest-path-visiting-all-nodes/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+  </tbody>
+</table>
+</div>
+<p class="empty text-body-secondary" hidden>Nothing matches that filter.</p>
+<p class="small text-body-secondary mt-3">Work top to bottom — each list goes from easy to hard. Try a problem for at least 15 minutes before opening a hint. Ticks are saved in your browser.</p>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-0">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>
