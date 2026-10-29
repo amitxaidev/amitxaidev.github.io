@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arrays – LeetCode problems in Java | Compiled Canvas</title>
+<meta name="description" content="14 Arrays LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:title" content="Arrays – LeetCode problems in Java | Compiled Canvas">
+<meta property="og:description" content="14 Arrays LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:image" content="https://amitxaidev.github.io/assets/logo.png">
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="../index.html">DSA Sheet</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Arrays</li>
+    </ol></nav>
+    <div class="row g-4 align-items-end">
+      <div class="col-lg-8">
+        <h1 class="h2 mb-1">5. Arrays</h1>
+        <p class="text-body-secondary mb-2">Traversal, in-place updates, rotation and the top array interview questions.</p>
+        <div><a class="btn btn-sm btn-outline-danger me-1 mb-1" href="https://youtu.be/4NdluWqUZ3c" target="_blank" rel="noopener">▶ Watch Ep 7</a><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 15 (coming soon)</span></div>
+      </div>
+      <div class="col-lg-4" data-slugs="build-array-from-permutation,max-consecutive-ones,check-if-array-is-sorted-and-rotated,best-time-to-buy-and-sell-stock,find-all-numbers-disappeared-in-an-array,plus-one,merge-sorted-array,rotate-array,next-permutation,rearrange-array-elements-by-sign,find-all-duplicates-in-an-array,find-the-duplicate-number,h-index,first-missing-positive">
+        <div class="d-flex justify-content-between small mb-1"><span>Your progress</span><span><span class="done-count">0</span> of 14</span></div>
+        <div class="progress" role="progressbar" aria-label="Topic progress" style="height: 8px"><div class="progress-bar bg-success" style="width: 0%"></div></div>
+        <div class="small text-body-secondary mt-1">7 easy · 6 medium · 1 hard</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="d-flex flex-wrap gap-2 mb-3">
+  <input type="search" class="form-control search" style="max-width: 320px" placeholder="Search problems…" aria-label="Search problems">
+  <div class="btn-group btn-group-sm flex-wrap" role="group" aria-label="Filter">
+    <button type="button" class="btn btn-outline-secondary active" data-filter="all">All</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Easy">Easy</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Medium">Medium</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Hard">Hard</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="todo">Unsolved</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="done">Solved</button>
+  </div>
+</div>
+<div class="table-responsive">
+<table class="table table-hover align-middle ptable stagger">
+  <thead><tr><th style="width:2rem"></th><th class="d-none d-sm-table-cell" style="width:2.5rem">#</th><th>Problem</th><th class="d-none d-md-table-cell">Pattern</th><th>Level</th><th class="d-none d-sm-table-cell"></th></tr></thead>
+  <tbody>
+<tr data-slug="build-array-from-permutation" data-diff="Easy" data-text="build array from permutation index mapping 1920">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="build-array-from-permutation" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">1</td>
+  <td><a href="001-build-array-from-permutation.html" class="fw-semibold">Build Array from Permutation</a> <span class="text-body-secondary small">#1920</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Index mapping</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/build-array-from-permutation/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="max-consecutive-ones" data-diff="Easy" data-text="max consecutive ones running counter 485">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="max-consecutive-ones" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">2</td>
+  <td><a href="002-max-consecutive-ones.html" class="fw-semibold">Max Consecutive Ones</a> <span class="text-body-secondary small">#485</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Running counter</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/max-consecutive-ones/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="check-if-array-is-sorted-and-rotated" data-diff="Easy" data-text="check if array is sorted and rotated count drops 1752">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="check-if-array-is-sorted-and-rotated" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">3</td>
+  <td><a href="003-check-if-array-is-sorted-and-rotated.html" class="fw-semibold">Check if Array Is Sorted and Rotated</a> <span class="text-body-secondary small">#1752</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Count drops</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="best-time-to-buy-and-sell-stock" data-diff="Easy" data-text="best time to buy and sell stock running minimum 121">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="best-time-to-buy-and-sell-stock" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">4</td>
+  <td><a href="004-best-time-to-buy-and-sell-stock.html" class="fw-semibold">Best Time to Buy and Sell Stock</a> <span class="text-body-secondary small">#121</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Running minimum</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="find-all-numbers-disappeared-in-an-array" data-diff="Easy" data-text="find all numbers disappeared in an array index marking 448">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="find-all-numbers-disappeared-in-an-array" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">5</td>
+  <td><a href="005-find-all-numbers-disappeared-in-an-array.html" class="fw-semibold">Find All Numbers Disappeared in an Array</a> <span class="text-body-secondary small">#448</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Index marking</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="plus-one" data-diff="Easy" data-text="plus one carry handling 66">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="plus-one" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">6</td>
+  <td><a href="006-plus-one.html" class="fw-semibold">Plus One</a> <span class="text-body-secondary small">#66</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Carry handling</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/plus-one/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="merge-sorted-array" data-diff="Easy" data-text="merge sorted array merge from the back 88">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="merge-sorted-array" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">7</td>
+  <td><a href="007-merge-sorted-array.html" class="fw-semibold">Merge Sorted Array</a> <span class="text-body-secondary small">#88</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Merge from the back</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/merge-sorted-array/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="rotate-array" data-diff="Medium" data-text="rotate array reversal trick 189">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="rotate-array" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">8</td>
+  <td><a href="008-rotate-array.html" class="fw-semibold">Rotate Array</a> <span class="text-body-secondary small">#189</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Reversal trick</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/rotate-array/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="next-permutation" data-diff="Medium" data-text="next permutation pivot + reverse 31">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="next-permutation" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">9</td>
+  <td><a href="009-next-permutation.html" class="fw-semibold">Next Permutation</a> <span class="text-body-secondary small">#31</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Pivot + reverse</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/next-permutation/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="rearrange-array-elements-by-sign" data-diff="Medium" data-text="rearrange array elements by sign two write indexes 2149">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="rearrange-array-elements-by-sign" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">10</td>
+  <td><a href="010-rearrange-array-elements-by-sign.html" class="fw-semibold">Rearrange Array Elements by Sign</a> <span class="text-body-secondary small">#2149</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Two write indexes</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/rearrange-array-elements-by-sign/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="find-all-duplicates-in-an-array" data-diff="Medium" data-text="find all duplicates in an array index marking 442">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="find-all-duplicates-in-an-array" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">11</td>
+  <td><a href="011-find-all-duplicates-in-an-array.html" class="fw-semibold">Find All Duplicates in an Array</a> <span class="text-body-secondary small">#442</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Index marking</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/find-all-duplicates-in-an-array/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="find-the-duplicate-number" data-diff="Medium" data-text="find the duplicate number floyd&#x27;s cycle on indexes 287">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="find-the-duplicate-number" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">12</td>
+  <td><a href="012-find-the-duplicate-number.html" class="fw-semibold">Find the Duplicate Number</a> <span class="text-body-secondary small">#287</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Floyd&#x27;s cycle on indexes</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/find-the-duplicate-number/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="h-index" data-diff="Medium" data-text="h-index counting sort 274">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="h-index" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">13</td>
+  <td><a href="013-h-index.html" class="fw-semibold">H-Index</a> <span class="text-body-secondary small">#274</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Counting sort</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/h-index/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="first-missing-positive" data-diff="Hard" data-text="first missing positive cyclic sort 41">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="first-missing-positive" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">14</td>
+  <td><a href="014-first-missing-positive.html" class="fw-semibold">First Missing Positive</a> <span class="text-body-secondary small">#41</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Cyclic sort</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/first-missing-positive/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+  </tbody>
+</table>
+</div>
+<p class="empty text-body-secondary" hidden>Nothing matches that filter.</p>
+<p class="small text-body-secondary mt-3">Work top to bottom — each list goes from easy to hard. Try a problem for at least 15 minutes before opening a hint. Ticks are saved in your browser.</p>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-0">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>
