@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1122. Relative Sort Array – hints and Java solution | Compiled Canvas</title>
+<meta name="description" content="Relative Sort Array (LeetCode 1122): summary, hints, approach and a commented Java solution.">
+<meta property="og:title" content="1122. Relative Sort Array – hints and Java solution | Compiled Canvas">
+<meta property="og:description" content="Relative Sort Array (LeetCode 1122): summary, hints, approach and a commented Java solution.">
+<meta property="og:image" content="https://amitxaidev.github.io/assets/logo.png">
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" id="hl-light"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" id="hl-dark" disabled><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<div class="container py-4">
+<nav aria-label="breadcrumb"><ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="../index.html">DSA Sheet</a></li>
+  <li class="breadcrumb-item"><a href="index.html">Sorting</a></li>
+  <li class="breadcrumb-item active" aria-current="page">Problem 3 of 11</li>
+</ol></nav>
+<div class="row g-4">
+  <div class="col-lg-8">
+    <h1 class="h3 mb-2">1122. Relative Sort Array</h1>
+    <p class="mb-3"><span class="badge text-bg-success">Easy</span> <span class="badge text-bg-light border">Counting sort</span></p>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
+    <p>Sort arr1 so its elements follow the order given by arr2. Elements not in arr2 go at the end in ascending order. Values are 0..1000.</p>
+    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode.</p>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
+    <div class="hint mb-2">
+  <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show hint 1">Show hint 1</button>
+  <div class="reveal-body border-start border-3 border-warning ps-3 mt-2" hidden>Count every value in arr1.</div>
+</div>
+<div class="hint mb-2" hidden>
+  <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show hint 2">Show hint 2</button>
+  <div class="reveal-body border-start border-3 border-warning ps-3 mt-2" hidden>Emit values in arr2&#x27;s order first, then the leftovers from 0 to 1000.</div>
+</div>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Approach</h2>
+    <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show approach">Show approach</button>
+    <div class="reveal-body mt-2" hidden><p>Counting sort with a custom order: first walk arr2 and write each value count times, then walk 0..1000 for the rest.</p></div>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Solution (Java)</h2>
+    <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show solution">Show solution</button>
+    <div class="reveal-body mt-2 position-relative code-block" hidden>
+      <button class="btn btn-sm btn-light border copy position-absolute top-0 end-0 m-2" type="button">Copy</button>
+      <pre class="border rounded mb-0"><code class="language-java">class Solution {
+    public int[] relativeSortArray(int[] arr1, int[] arr2) {
+        int[] count = new int[1001];
+        for (int x : arr1) count[x]++;
+        int i = 0;
+        for (int x : arr2) {
+            while (count[x]-- &gt; 0) arr1[i++] = x;   // arr2 order first
+        }
+        for (int x = 0; x &lt;= 1000; x++) {
+            while (count[x]-- &gt; 0) arr1[i++] = x;   // leftovers ascending
+        }
+        return arr1;
+    }
+}</code></pre>
+    </div>
+
+    <div class="alert alert-warning mt-4 mb-0"><strong>Common mistake:</strong> Using a comparator with indexOf on arr2 for every comparison — O(m) per compare.</div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card mb-3 shadow-sm">
+      <div class="card-body">
+        <a class="btn btn-brand w-100 mb-2" href="https://leetcode.com/problems/relative-sort-array/" target="_blank" rel="noopener">Solve on LeetCode ↗</a>
+        <div class="form-check">
+          <input class="form-check-input done-box" type="checkbox" id="done" data-slug="relative-sort-array">
+          <label class="form-check-label" for="done">I solved this</label>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3 shadow-sm">
+      <div class="card-header small fw-semibold">Complexity</div>
+      <ul class="list-group list-group-flush small">
+        <li class="list-group-item"><strong>Time:</strong> O(n + m + 1000).</li>
+        <li class="list-group-item"><strong>Space:</strong> O(1001).</li>
+      </ul>
+    </div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Sorting</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 24 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 25 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 26 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 27 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 28 (coming soon)</span></div></div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="002-sort-array-by-increasing-frequency.html" data-key="ArrowLeft">← Sort Array by Increasing Frequency</a><a class="btn btn-outline-secondary" href="004-sort-an-array.html" data-key="ArrowRight">Sort an Array →</a></div>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-0">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>
