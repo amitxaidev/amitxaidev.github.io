@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Linked List – LeetCode problems in Java | Compiled Canvas</title>
+<meta name="description" content="19 Linked List LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:title" content="Linked List – LeetCode problems in Java | Compiled Canvas">
+<meta property="og:description" content="19 Linked List LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:image" content="https://amitxaidev.github.io/assets/logo.png">
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="../index.html">DSA Sheet</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Linked List</li>
+    </ol></nav>
+    <div class="row g-4 align-items-end">
+      <div class="col-lg-8">
+        <h1 class="h2 mb-1">17. Linked List</h1>
+        <p class="text-body-secondary mb-2">Reverse, fast &amp; slow pointers, merge, and LRU cache.</p>
+        <div><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 40 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 41 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 42 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 43 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 44 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 45 (coming soon)</span></div>
+      </div>
+      <div class="col-lg-4" data-slugs="reverse-linked-list,middle-of-the-linked-list,linked-list-cycle,merge-two-sorted-lists,intersection-of-two-linked-lists,palindrome-linked-list,remove-duplicates-from-sorted-list,remove-nth-node-from-end-of-list,linked-list-cycle-ii,add-two-numbers,odd-even-linked-list,reorder-list,reverse-linked-list-ii,copy-list-with-random-pointer,lru-cache,flatten-a-multilevel-doubly-linked-list,merge-k-sorted-lists,reverse-nodes-in-k-group,lfu-cache">
+        <div class="d-flex justify-content-between small mb-1"><span>Your progress</span><span><span class="done-count">0</span> of 19</span></div>
+        <div class="progress" role="progressbar" aria-label="Topic progress" style="height: 8px"><div class="progress-bar bg-success" style="width: 0%"></div></div>
+        <div class="small text-body-secondary mt-1">7 easy · 9 medium · 3 hard</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="d-flex flex-wrap gap-2 mb-3">
+  <input type="search" class="form-control search" style="max-width: 320px" placeholder="Search problems…" aria-label="Search problems">
+  <div class="btn-group btn-group-sm flex-wrap" role="group" aria-label="Filter">
+    <button type="button" class="btn btn-outline-secondary active" data-filter="all">All</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Easy">Easy</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Medium">Medium</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Hard">Hard</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="todo">Unsolved</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="done">Solved</button>
+  </div>
+</div>
+<div class="table-responsive">
+<table class="table table-hover align-middle ptable stagger">
+  <thead><tr><th style="width:2rem"></th><th class="d-none d-sm-table-cell" style="width:2.5rem">#</th><th>Problem</th><th class="d-none d-md-table-cell">Pattern</th><th>Level</th><th class="d-none d-sm-table-cell"></th></tr></thead>
+  <tbody>
+<tr data-slug="reverse-linked-list" data-diff="Easy" data-text="reverse linked list iterative pointer reversal 206">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="reverse-linked-list" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">1</td>
+  <td><a href="001-reverse-linked-list.html" class="fw-semibold">Reverse Linked List</a> <span class="text-body-secondary small">#206</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Iterative pointer reversal</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="middle-of-the-linked-list" data-diff="Easy" data-text="middle of the linked list fast &amp; slow pointers 876">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="middle-of-the-linked-list" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">2</td>
+  <td><a href="002-middle-of-the-linked-list.html" class="fw-semibold">Middle of the Linked List</a> <span class="text-body-secondary small">#876</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Fast &amp; slow pointers</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/middle-of-the-linked-list/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="linked-list-cycle" data-diff="Easy" data-text="linked list cycle floyd&#x27;s cycle detection 141">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="linked-list-cycle" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">3</td>
+  <td><a href="003-linked-list-cycle.html" class="fw-semibold">Linked List Cycle</a> <span class="text-body-secondary small">#141</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Floyd&#x27;s cycle detection</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/linked-list-cycle/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="merge-two-sorted-lists" data-diff="Easy" data-text="merge two sorted lists dummy head merge 21">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="merge-two-sorted-lists" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">4</td>
+  <td><a href="004-merge-two-sorted-lists.html" class="fw-semibold">Merge Two Sorted Lists</a> <span class="text-body-secondary small">#21</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Dummy head merge</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/merge-two-sorted-lists/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="intersection-of-two-linked-lists" data-diff="Easy" data-text="intersection of two linked lists two pointers switching lists 160">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="intersection-of-two-linked-lists" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">5</td>
+  <td><a href="005-intersection-of-two-linked-lists.html" class="fw-semibold">Intersection of Two Linked Lists</a> <span class="text-body-secondary small">#160</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Two pointers switching lists</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/intersection-of-two-linked-lists/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="palindrome-linked-list" data-diff="Easy" data-text="palindrome linked list middle + reverse second half 234">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="palindrome-linked-list" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">6</td>
+  <td><a href="006-palindrome-linked-list.html" class="fw-semibold">Palindrome Linked List</a> <span class="text-body-secondary small">#234</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Middle + reverse second half</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/palindrome-linked-list/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="remove-duplicates-from-sorted-list" data-diff="Easy" data-text="remove duplicates from sorted list in-place unlink 83">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="remove-duplicates-from-sorted-list" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">7</td>
+  <td><a href="007-remove-duplicates-from-sorted-list.html" class="fw-semibold">Remove Duplicates from Sorted List</a> <span class="text-body-secondary small">#83</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">In-place unlink</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="remove-nth-node-from-end-of-list" data-diff="Medium" data-text="remove nth node from end of list gap of n between two pointers 19">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="remove-nth-node-from-end-of-list" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">8</td>
+  <td><a href="008-remove-nth-node-from-end-of-list.html" class="fw-semibold">Remove Nth Node From End of List</a> <span class="text-body-secondary small">#19</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Gap of n between two pointers</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="linked-list-cycle-ii" data-diff="Medium" data-text="linked list cycle ii floyd&#x27;s cycle entrance 142">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="linked-list-cycle-ii" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">9</td>
+  <td><a href="009-linked-list-cycle-ii.html" class="fw-semibold">Linked List Cycle II</a> <span class="text-body-secondary small">#142</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Floyd&#x27;s cycle entrance</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/linked-list-cycle-ii/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="add-two-numbers" data-diff="Medium" data-text="add two numbers digit-by-digit with carry 2">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="add-two-numbers" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">10</td>
+  <td><a href="010-add-two-numbers.html" class="fw-semibold">Add Two Numbers</a> <span class="text-body-secondary small">#2</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Digit-by-digit with carry</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/add-two-numbers/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="odd-even-linked-list" data-diff="Medium" data-text="odd even linked list two chains, then join 328">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="odd-even-linked-list" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">11</td>
+  <td><a href="011-odd-even-linked-list.html" class="fw-semibold">Odd Even Linked List</a> <span class="text-body-secondary small">#328</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Two chains, then join</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/odd-even-linked-list/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="reorder-list" data-diff="Medium" data-text="reorder list middle + reverse + weave 143">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="reorder-list" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">12</td>
+  <td><a href="012-reorder-list.html" class="fw-semibold">Reorder List</a> <span class="text-body-secondary small">#143</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Middle + reverse + weave</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/reorder-list/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="reverse-linked-list-ii" data-diff="Medium" data-text="reverse linked list ii reverse a sublist in place 92">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="reverse-linked-list-ii" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">13</td>
+  <td><a href="013-reverse-linked-list-ii.html" class="fw-semibold">Reverse Linked List II</a> <span class="text-body-secondary small">#92</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Reverse a sublist in place</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/reverse-linked-list-ii/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="copy-list-with-random-pointer" data-diff="Medium" data-text="copy list with random pointer interleave copies 138">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="copy-list-with-random-pointer" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">14</td>
+  <td><a href="014-copy-list-with-random-pointer.html" class="fw-semibold">Copy List with Random Pointer</a> <span class="text-body-secondary small">#138</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Interleave copies</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/copy-list-with-random-pointer/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="lru-cache" data-diff="Medium" data-text="lru cache hashmap + doubly linked list 146">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="lru-cache" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">15</td>
+  <td><a href="015-lru-cache.html" class="fw-semibold">LRU Cache</a> <span class="text-body-secondary small">#146</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">HashMap + doubly linked list</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/lru-cache/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="flatten-a-multilevel-doubly-linked-list" data-diff="Medium" data-text="flatten a multilevel doubly linked list doubly linked list splicing 430">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="flatten-a-multilevel-doubly-linked-list" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">16</td>
+  <td><a href="016-flatten-a-multilevel-doubly-linked-list.html" class="fw-semibold">Flatten a Multilevel Doubly Linked List</a> <span class="text-body-secondary small">#430</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Doubly linked list splicing</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="merge-k-sorted-lists" data-diff="Hard" data-text="merge k sorted lists min-heap of list heads 23">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="merge-k-sorted-lists" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">17</td>
+  <td><a href="017-merge-k-sorted-lists.html" class="fw-semibold">Merge k Sorted Lists</a> <span class="text-body-secondary small">#23</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Min-heap of list heads</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/merge-k-sorted-lists/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="reverse-nodes-in-k-group" data-diff="Hard" data-text="reverse nodes in k-group group reversal with reconnection 25">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="reverse-nodes-in-k-group" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">18</td>
+  <td><a href="018-reverse-nodes-in-k-group.html" class="fw-semibold">Reverse Nodes in k-Group</a> <span class="text-body-secondary small">#25</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Group reversal with reconnection</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/reverse-nodes-in-k-group/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="lfu-cache" data-diff="Hard" data-text="lfu cache frequency buckets of linkedhashsets 460">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="lfu-cache" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">19</td>
+  <td><a href="019-lfu-cache.html" class="fw-semibold">LFU Cache</a> <span class="text-body-secondary small">#460</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Frequency buckets of LinkedHashSets</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/lfu-cache/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+  </tbody>
+</table>
+</div>
+<p class="empty text-body-secondary" hidden>Nothing matches that filter.</p>
+<p class="small text-body-secondary mt-3">Work top to bottom — each list goes from easy to hard. Try a problem for at least 15 minutes before opening a hint. Ticks are saved in your browser.</p>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-0">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>
