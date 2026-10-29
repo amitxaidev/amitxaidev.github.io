@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sliding Window – LeetCode problems in Java | Compiled Canvas</title>
+<meta name="description" content="14 Sliding Window LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:title" content="Sliding Window – LeetCode problems in Java | Compiled Canvas">
+<meta property="og:description" content="14 Sliding Window LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:image" content="https://amitxaidev.github.io/assets/logo.png">
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="../index.html">DSA Sheet</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Sliding Window</li>
+    </ol></nav>
+    <div class="row g-4 align-items-end">
+      <div class="col-lg-8">
+        <h1 class="h2 mb-1">8. Sliding Window</h1>
+        <p class="text-body-secondary mb-2">Fixed and variable windows over arrays and strings.</p>
+        <div><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 10 (coming soon)</span></div>
+      </div>
+      <div class="col-lg-4" data-slugs="maximum-average-subarray-i,contains-duplicate-ii,longest-substring-without-repeating-characters,longest-repeating-character-replacement,permutation-in-string,find-all-anagrams-in-a-string,minimum-size-subarray-sum,max-consecutive-ones-iii,fruit-into-baskets,maximum-number-of-vowels-in-a-substring-of-given-length,maximum-points-you-can-obtain-from-cards,count-number-of-nice-subarrays,minimum-window-substring,subarrays-with-k-different-integers">
+        <div class="d-flex justify-content-between small mb-1"><span>Your progress</span><span><span class="done-count">0</span> of 14</span></div>
+        <div class="progress" role="progressbar" aria-label="Topic progress" style="height: 8px"><div class="progress-bar bg-success" style="width: 0%"></div></div>
+        <div class="small text-body-secondary mt-1">2 easy · 10 medium · 2 hard</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="d-flex flex-wrap gap-2 mb-3">
+  <input type="search" class="form-control search" style="max-width: 320px" placeholder="Search problems…" aria-label="Search problems">
+  <div class="btn-group btn-group-sm flex-wrap" role="group" aria-label="Filter">
+    <button type="button" class="btn btn-outline-secondary active" data-filter="all">All</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Easy">Easy</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Medium">Medium</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Hard">Hard</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="todo">Unsolved</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="done">Solved</button>
+  </div>
+</div>
+<div class="table-responsive">
+<table class="table table-hover align-middle ptable stagger">
+  <thead><tr><th style="width:2rem"></th><th class="d-none d-sm-table-cell" style="width:2.5rem">#</th><th>Problem</th><th class="d-none d-md-table-cell">Pattern</th><th>Level</th><th class="d-none d-sm-table-cell"></th></tr></thead>
+  <tbody>
+<tr data-slug="maximum-average-subarray-i" data-diff="Easy" data-text="maximum average subarray i fixed window 643">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="maximum-average-subarray-i" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">1</td>
+  <td><a href="001-maximum-average-subarray-i.html" class="fw-semibold">Maximum Average Subarray I</a> <span class="text-body-secondary small">#643</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Fixed window</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/maximum-average-subarray-i/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="contains-duplicate-ii" data-diff="Easy" data-text="contains duplicate ii fixed window + hashset 219">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="contains-duplicate-ii" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">2</td>
+  <td><a href="002-contains-duplicate-ii.html" class="fw-semibold">Contains Duplicate II</a> <span class="text-body-secondary small">#219</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Fixed window + HashSet</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/contains-duplicate-ii/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="longest-substring-without-repeating-characters" data-diff="Medium" data-text="longest substring without repeating characters variable window 3">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="longest-substring-without-repeating-characters" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">3</td>
+  <td><a href="003-longest-substring-without-repeating-characters.html" class="fw-semibold">Longest Substring Without Repeating Characters</a> <span class="text-body-secondary small">#3</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Variable window</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="longest-repeating-character-replacement" data-diff="Medium" data-text="longest repeating character replacement variable window + max frequency 424">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="longest-repeating-character-replacement" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">4</td>
+  <td><a href="004-longest-repeating-character-replacement.html" class="fw-semibold">Longest Repeating Character Replacement</a> <span class="text-body-secondary small">#424</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Variable window + max frequency</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/longest-repeating-character-replacement/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="permutation-in-string" data-diff="Medium" data-text="permutation in string fixed window + counts 567">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="permutation-in-string" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">5</td>
+  <td><a href="005-permutation-in-string.html" class="fw-semibold">Permutation in String</a> <span class="text-body-secondary small">#567</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Fixed window + counts</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/permutation-in-string/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="find-all-anagrams-in-a-string" data-diff="Medium" data-text="find all anagrams in a string fixed window + counts 438">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="find-all-anagrams-in-a-string" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">6</td>
+  <td><a href="006-find-all-anagrams-in-a-string.html" class="fw-semibold">Find All Anagrams in a String</a> <span class="text-body-secondary small">#438</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Fixed window + counts</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/find-all-anagrams-in-a-string/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="minimum-size-subarray-sum" data-diff="Medium" data-text="minimum size subarray sum variable window (shrink while valid) 209">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="minimum-size-subarray-sum" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">7</td>
+  <td><a href="007-minimum-size-subarray-sum.html" class="fw-semibold">Minimum Size Subarray Sum</a> <span class="text-body-secondary small">#209</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Variable window (shrink while valid)</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/minimum-size-subarray-sum/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="max-consecutive-ones-iii" data-diff="Medium" data-text="max consecutive ones iii variable window with budget 1004">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="max-consecutive-ones-iii" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">8</td>
+  <td><a href="008-max-consecutive-ones-iii.html" class="fw-semibold">Max Consecutive Ones III</a> <span class="text-body-secondary small">#1004</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Variable window with budget</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/max-consecutive-ones-iii/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="fruit-into-baskets" data-diff="Medium" data-text="fruit into baskets variable window, at most 2 kinds 904">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="fruit-into-baskets" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">9</td>
+  <td><a href="009-fruit-into-baskets.html" class="fw-semibold">Fruit Into Baskets</a> <span class="text-body-secondary small">#904</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Variable window, at most 2 kinds</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/fruit-into-baskets/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="maximum-number-of-vowels-in-a-substring-of-given-length" data-diff="Medium" data-text="maximum number of vowels in a substring of given length fixed window 1456">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="maximum-number-of-vowels-in-a-substring-of-given-length" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">10</td>
+  <td><a href="010-maximum-number-of-vowels-in-a-substring-of-given-length.html" class="fw-semibold">Maximum Number of Vowels in a Substring of Given Length</a> <span class="text-body-secondary small">#1456</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Fixed window</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="maximum-points-you-can-obtain-from-cards" data-diff="Medium" data-text="maximum points you can obtain from cards window on the complement 1423">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="maximum-points-you-can-obtain-from-cards" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">11</td>
+  <td><a href="011-maximum-points-you-can-obtain-from-cards.html" class="fw-semibold">Maximum Points You Can Obtain from Cards</a> <span class="text-body-secondary small">#1423</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Window on the complement</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="count-number-of-nice-subarrays" data-diff="Medium" data-text="count number of nice subarrays atmost(k) − atmost(k−1) 1248">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="count-number-of-nice-subarrays" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">12</td>
+  <td><a href="012-count-number-of-nice-subarrays.html" class="fw-semibold">Count Number of Nice Subarrays</a> <span class="text-body-secondary small">#1248</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">atMost(k) − atMost(k−1)</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/count-number-of-nice-subarrays/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="minimum-window-substring" data-diff="Hard" data-text="minimum window substring variable window with need counts 76">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="minimum-window-substring" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">13</td>
+  <td><a href="013-minimum-window-substring.html" class="fw-semibold">Minimum Window Substring</a> <span class="text-body-secondary small">#76</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Variable window with need counts</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/minimum-window-substring/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="subarrays-with-k-different-integers" data-diff="Hard" data-text="subarrays with k different integers atmost(k) − atmost(k−1) 992">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="subarrays-with-k-different-integers" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">14</td>
+  <td><a href="014-subarrays-with-k-different-integers.html" class="fw-semibold">Subarrays with K Different Integers</a> <span class="text-body-secondary small">#992</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">atMost(k) − atMost(k−1)</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/subarrays-with-k-different-integers/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+  </tbody>
+</table>
+</div>
+<p class="empty text-body-secondary" hidden>Nothing matches that filter.</p>
+<p class="small text-body-secondary mt-3">Work top to bottom — each list goes from easy to hard. Try a problem for at least 15 minutes before opening a hint. Ticks are saved in your browser.</p>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-0">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>
