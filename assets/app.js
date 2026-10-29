@@ -145,7 +145,7 @@
     el.textContent = '0';
     requestAnimationFrame(step);
   }
-  var animated = document.querySelectorAll('.fade-up, .stagger, [data-count]');
+  var animated = document.querySelectorAll('.fade-up, .stagger, .path, [data-count]');
   if ('IntersectionObserver' in window && !reduceMotion) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
