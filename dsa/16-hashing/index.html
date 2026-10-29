@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hashing – LeetCode problems in Java | Compiled Canvas</title>
+<meta name="description" content="12 Hashing LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:title" content="Hashing – LeetCode problems in Java | Compiled Canvas">
+<meta property="og:description" content="12 Hashing LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:image" content="https://amitxaidev.github.io/assets/logo.png">
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="../index.html">DSA Sheet</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Hashing</li>
+    </ol></nav>
+    <div class="row g-4 align-items-end">
+      <div class="col-lg-8">
+        <h1 class="h2 mb-1">16. Hashing</h1>
+        <p class="text-body-secondary mb-2">HashMap and HashSet patterns: counting, grouping and prefix-sum maps.</p>
+        <div><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 37 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 38 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 39 (coming soon)</span></div>
+      </div>
+      <div class="col-lg-4" data-slugs="two-sum,contains-duplicate,intersection-of-two-arrays,word-pattern,unique-number-of-occurrences,happy-number,longest-consecutive-sequence,4sum-ii,max-number-of-k-sum-pairs,brick-wall,equal-row-and-column-pairs,max-points-on-a-line">
+        <div class="d-flex justify-content-between small mb-1"><span>Your progress</span><span><span class="done-count">0</span> of 12</span></div>
+        <div class="progress" role="progressbar" aria-label="Topic progress" style="height: 8px"><div class="progress-bar bg-success" style="width: 0%"></div></div>
+        <div class="small text-body-secondary mt-1">6 easy · 5 medium · 1 hard</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="d-flex flex-wrap gap-2 mb-3">
+  <input type="search" class="form-control search" style="max-width: 320px" placeholder="Search problems…" aria-label="Search problems">
+  <div class="btn-group btn-group-sm flex-wrap" role="group" aria-label="Filter">
+    <button type="button" class="btn btn-outline-secondary active" data-filter="all">All</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Easy">Easy</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Medium">Medium</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Hard">Hard</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="todo">Unsolved</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="done">Solved</button>
+  </div>
+</div>
+<div class="table-responsive">
+<table class="table table-hover align-middle ptable stagger">
+  <thead><tr><th style="width:2rem"></th><th class="d-none d-sm-table-cell" style="width:2.5rem">#</th><th>Problem</th><th class="d-none d-md-table-cell">Pattern</th><th>Level</th><th class="d-none d-sm-table-cell"></th></tr></thead>
+  <tbody>
+<tr data-slug="two-sum" data-diff="Easy" data-text="two sum hashmap complement lookup 1">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="two-sum" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">1</td>
+  <td><a href="001-two-sum.html" class="fw-semibold">Two Sum</a> <span class="text-body-secondary small">#1</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">HashMap complement lookup</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="contains-duplicate" data-diff="Easy" data-text="contains duplicate hashset 217">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="contains-duplicate" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">2</td>
+  <td><a href="002-contains-duplicate.html" class="fw-semibold">Contains Duplicate</a> <span class="text-body-secondary small">#217</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">HashSet</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/contains-duplicate/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="intersection-of-two-arrays" data-diff="Easy" data-text="intersection of two arrays hashset 349">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="intersection-of-two-arrays" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">3</td>
+  <td><a href="003-intersection-of-two-arrays.html" class="fw-semibold">Intersection of Two Arrays</a> <span class="text-body-secondary small">#349</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">HashSet</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/intersection-of-two-arrays/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="word-pattern" data-diff="Easy" data-text="word pattern two-way hashmap 290">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="word-pattern" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">4</td>
+  <td><a href="004-word-pattern.html" class="fw-semibold">Word Pattern</a> <span class="text-body-secondary small">#290</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Two-way HashMap</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/word-pattern/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="unique-number-of-occurrences" data-diff="Easy" data-text="unique number of occurrences hashmap + hashset 1207">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="unique-number-of-occurrences" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">5</td>
+  <td><a href="005-unique-number-of-occurrences.html" class="fw-semibold">Unique Number of Occurrences</a> <span class="text-body-secondary small">#1207</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">HashMap + HashSet</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/unique-number-of-occurrences/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="happy-number" data-diff="Easy" data-text="happy number hashset cycle detection 202">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="happy-number" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">6</td>
+  <td><a href="006-happy-number.html" class="fw-semibold">Happy Number</a> <span class="text-body-secondary small">#202</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">HashSet cycle detection</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/happy-number/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="longest-consecutive-sequence" data-diff="Medium" data-text="longest consecutive sequence hashset, start only at run starts 128">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="longest-consecutive-sequence" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">7</td>
+  <td><a href="007-longest-consecutive-sequence.html" class="fw-semibold">Longest Consecutive Sequence</a> <span class="text-body-secondary small">#128</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">HashSet, start only at run starts</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/longest-consecutive-sequence/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="4sum-ii" data-diff="Medium" data-text="4sum ii meet in the middle with hashmap 454">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="4sum-ii" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">8</td>
+  <td><a href="008-4sum-ii.html" class="fw-semibold">4Sum II</a> <span class="text-body-secondary small">#454</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Meet in the middle with HashMap</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/4sum-ii/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="max-number-of-k-sum-pairs" data-diff="Medium" data-text="max number of k-sum pairs hashmap pairing 1679">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="max-number-of-k-sum-pairs" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">9</td>
+  <td><a href="009-max-number-of-k-sum-pairs.html" class="fw-semibold">Max Number of K-Sum Pairs</a> <span class="text-body-secondary small">#1679</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">HashMap pairing</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/max-number-of-k-sum-pairs/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="brick-wall" data-diff="Medium" data-text="brick wall hashmap of edge positions 554">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="brick-wall" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">10</td>
+  <td><a href="010-brick-wall.html" class="fw-semibold">Brick Wall</a> <span class="text-body-secondary small">#554</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">HashMap of edge positions</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/brick-wall/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="equal-row-and-column-pairs" data-diff="Medium" data-text="equal row and column pairs hashmap of row signatures 2352">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="equal-row-and-column-pairs" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">11</td>
+  <td><a href="011-equal-row-and-column-pairs.html" class="fw-semibold">Equal Row and Column Pairs</a> <span class="text-body-secondary small">#2352</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">HashMap of row signatures</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/equal-row-and-column-pairs/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="max-points-on-a-line" data-diff="Hard" data-text="max points on a line hashmap of reduced slopes 149">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="max-points-on-a-line" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">12</td>
+  <td><a href="012-max-points-on-a-line.html" class="fw-semibold">Max Points on a Line</a> <span class="text-body-secondary small">#149</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">HashMap of reduced slopes</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/max-points-on-a-line/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+  </tbody>
+</table>
+</div>
+<p class="empty text-body-secondary" hidden>Nothing matches that filter.</p>
+<p class="small text-body-secondary mt-3">Work top to bottom — each list goes from easy to hard. Try a problem for at least 15 minutes before opening a hint. Ticks are saved in your browser.</p>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-0">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>
