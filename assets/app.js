@@ -168,7 +168,7 @@
       el.addEventListener('pointermove', function (ev) {
         var b = el.getBoundingClientRect();
         var x = (ev.clientX - b.left) / b.width - 0.5, y = (ev.clientY - b.top) / b.height - 0.5;
-        var k = el.classList.contains('toon') ? 22 : 8;
+        var k = (el.classList.contains('toon') || el.classList.contains('profile-art')) ? 14 : 8;
         target.style.transform = 'perspective(800px) rotateY(' + (x * k) + 'deg) rotateX(' + (-y * k) + 'deg) translateZ(0)';
       });
       el.addEventListener('pointerleave', function () { target.style.transform = ''; });
@@ -213,6 +213,26 @@
       });
     }, { threshold: 0.12 });
     animated.forEach(function (el) { io.observe(el); });
+    // safety net: anything already on screen shows up even if the observer missed it
+    var revealVisible = function () {
+      animated.forEach(function (el) {
+        if (el.classList.contains('in')) return;
+        var r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight && r.bottom > 0 && r.width > 0) {
+          el.classList.add('in');
+          if (el.dataset.stepWatch) markStep(el.dataset.stepWatch);
+          if (el.dataset.count) countUp(el);
+          io.unobserve(el);
+        }
+      });
+    };
+    var pending = false;
+    var schedule = function () { if (!pending) { pending = true; requestAnimationFrame(function () { pending = false; revealVisible(); }); } };
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    document.addEventListener('visibilitychange', schedule);
+    window.addEventListener('load', schedule);
+    setTimeout(revealVisible, 600);
   } else {
     animated.forEach(function (el) { el.classList.add('in'); if (el.dataset.stepWatch) markStep(el.dataset.stepWatch); });
   }

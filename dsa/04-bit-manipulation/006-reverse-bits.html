@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" id="hl-light"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" id="hl-dark" disabled><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
 </head>
 <body class="d-flex flex-column min-vh-100">
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
@@ -52,32 +53,39 @@
 </nav>
 <main class="flex-grow-1">
 
-<div class="container py-4">
-<nav aria-label="breadcrumb"><ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
-  <li class="breadcrumb-item"><a href="index.html">Bit Manipulation</a></li>
-  <li class="breadcrumb-item active" aria-current="page">Problem 6 of 12</li>
-</ol></nav>
-<div class="row g-4">
-  <div class="col-lg-8">
-    <h1 class="h3 mb-2">190. Reverse Bits</h1>
-    <p class="mb-3"><span class="badge text-bg-success">Easy</span> <span class="badge text-bg-light border">Shifts</span></p>
-    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+<section class="page-head problem-head py-4 mb-4 diff-easy">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Bit Manipulation</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Problem 6 of 12</li>
+    </ol></nav>
+    <span class="lc-num-big">#190</span>
+    <h1 class="h2 fw-bold mb-2">Reverse Bits</h1>
+    <p class="mb-3"><span class="badge text-bg-success">Easy</span> <span class="badge pattern-badge">Shifts</span></p>
+    <ol class="journey list-unstyled mb-0" aria-label="Your steps for this problem">
       <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
     </ol>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
 
-    <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
-    <p>Reverse the order of the 32 bits of an integer.</p>
-    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/reverse-bits/" target="_blank" rel="noopener">open problem ↗</a></p>
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>The problem</h2>
+      <p>Reverse the order of the 32 bits of an integer.</p>
+      <p class="small text-body-secondary mb-0">This is a short summary in our own words. Read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/reverse-bits/" target="_blank" rel="noopener">open problem ↗</a></p>
+    </section>
 
-    <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> mirror the 32-bit pattern.</p>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>Understanding</h2>
+      <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> mirror the 32-bit pattern.</p>
 <p><strong>Why this works:</strong> take the last bit of n and push it onto the right of the result, 32 times. Leading zeros become trailing zeros.</p>
 <p>Example (4 bits for short): n = 0011</p>
 <pre class="trace border rounded"><span class="tl" style="--i:0">step1: result 1,    n 001</span><span class="tl" style="--i:1">step2: result 11,   n 00</span><span class="tl" style="--i:2">step3: result 110,  n 0</span><span class="tl" style="--i:3">step4: result 1100</span></pre></div>
+    </section>
 
-    <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
-    <div class="hint mb-2">
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Hints <small>open one at a time</small></h2>
+      <div class="hint mb-2">
   <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show hint 1">Show hint 1</button>
   <div class="reveal-body border-start border-3 border-warning ps-3 mt-2" hidden>Build the result one bit at a time: shift the result left, then add the lowest bit of n.</div>
 </div>
@@ -85,16 +93,18 @@
   <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show hint 2">Show hint 2</button>
   <div class="reveal-body border-start border-3 border-warning ps-3 mt-2" hidden>Use n &gt;&gt;&gt;= 1 so the sign bit doesn&#x27;t get copied.</div>
 </div>
+    </section>
 
-    <h2 class="h6 text-uppercase text-body-secondary mt-4">Approach</h2>
-    <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show approach">Show approach</button>
-    <div class="reveal-body mt-2" hidden><p>Loop exactly 32 times. Each step moves the lowest bit of n into the lowest position of the result after shifting the result left.</p></div>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Approach</h2>
+      <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show approach">Show approach</button>
+      <div class="reveal-body mt-2" hidden><p class="mb-0">Loop exactly 32 times. Each step moves the lowest bit of n into the lowest position of the result after shifting the result left.</p></div>
+    </section>
 
-    <h2 class="h6 text-uppercase text-body-secondary mt-4">Solution (Java)</h2>
-    <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show solution">Show solution</button>
-    <div class="reveal-body mt-2 position-relative code-block" hidden>
-      <button class="btn btn-sm btn-light border copy position-absolute top-0 end-0 m-2" type="button">Copy</button>
-      <pre class="border rounded mb-0"><code class="language-java">class Solution {
+    <section class="sec sec-solution fade-up"><h2 class="sec-title"><span class="sec-ico">&lt;/&gt;</span>Solution (Java)</h2>
+      <button class="btn btn-sm btn-outline-light reveal" type="button" data-label="Show solution">Show solution</button>
+      <div class="reveal-body mt-2 position-relative code-block" hidden>
+        <button class="btn btn-sm btn-light border copy position-absolute top-0 end-0 m-2" type="button">Copy</button>
+        <pre class="rounded mb-0"><code class="language-java">class Solution {
     public int reverseBits(int n) {
         int result = 0;
         for (int i = 0; i &lt; 32; i++) {
@@ -104,12 +114,16 @@
         return result;
     }
 }</code></pre>
-    </div>
+      </div>
+    </section>
 
-    <div class="alert alert-warning mt-4 mb-0"><strong>Common mistake:</strong> Stopping when n becomes 0. Leading zeros still need to become trailing zeros, so always run all 32 steps.</div>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>Common mistake</h2>
+      <p class="mb-0">Stopping when n becomes 0. Leading zeros still need to become trailing zeros, so always run all 32 steps.</p>
+    </section>
   </div>
   <div class="col-lg-4">
-    <div class="card mb-3 shadow-sm">
+    <div class="side-sticky">
+    <div class="card mb-3 shadow-sm solve-card">
       <div class="card-body">
         <a class="btn btn-brand w-100 mb-2" href="https://leetcode.com/problems/reverse-bits/" target="_blank" rel="noopener">Solve on LeetCode ↗</a>
         <div class="form-check">
@@ -118,7 +132,7 @@
         </div>
       </div>
     </div>
-    <div class="card mb-3 shadow-sm">
+    <div class="card mb-3 shadow-sm complexity-card">
       <div class="card-header small fw-semibold">Complexity</div>
       <ul class="list-group list-group-flush small">
         <li class="list-group-item"><strong>Time:</strong> O(32) = O(1).</li>
@@ -129,6 +143,7 @@
   <span class="video-thumb"><img src="https://i.ytimg.com/vi/ZzdK8SqvsGU/mqdefault.jpg" alt="" loading="lazy"><span class="play"><span></span></span></span>
   <span class="video-text"><span class="video-kicker">▶ Watch the lesson first</span><strong>Episode 6: Bit manipulation from scratch</strong><small>Free on YouTube · Compiled Canvas</small></span>
 </a></div></div>
+    </div>
   </div>
 </div>
 <hr class="my-4">

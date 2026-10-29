@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" id="hl-light"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" id="hl-dark" disabled><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
 </head>
 <body class="d-flex flex-column min-vh-100">
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
@@ -52,32 +53,39 @@
 </nav>
 <main class="flex-grow-1">
 
-<div class="container py-4">
-<nav aria-label="breadcrumb"><ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
-  <li class="breadcrumb-item"><a href="index.html">Heaps &amp; Priority Queue</a></li>
-  <li class="breadcrumb-item active" aria-current="page">Problem 4 of 13</li>
-</ol></nav>
-<div class="row g-4">
-  <div class="col-lg-8">
-    <h1 class="h3 mb-2">347. Top K Frequent Elements</h1>
-    <p class="mb-3"><span class="badge text-bg-warning">Medium</span> <span class="badge text-bg-light border">Bucket sort by frequency</span></p>
-    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+<section class="page-head problem-head py-4 mb-4 diff-medium">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Heaps &amp; Priority Queue</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Problem 4 of 13</li>
+    </ol></nav>
+    <span class="lc-num-big">#347</span>
+    <h1 class="h2 fw-bold mb-2">Top K Frequent Elements</h1>
+    <p class="mb-3"><span class="badge text-bg-warning">Medium</span> <span class="badge pattern-badge">Bucket sort by frequency</span></p>
+    <ol class="journey list-unstyled mb-0" aria-label="Your steps for this problem">
       <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
     </ol>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
 
-    <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
-    <p>Return the k most frequent values in the array (the answer is unique).</p>
-    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/top-k-frequent-elements/" target="_blank" rel="noopener">open problem ↗</a></p>
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>The problem</h2>
+      <p>Return the k most frequent values in the array (the answer is unique).</p>
+      <p class="small text-body-secondary mb-0">This is a short summary in our own words. Read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/top-k-frequent-elements/" target="_blank" rel="noopener">open problem ↗</a></p>
+    </section>
 
-    <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> the k values that appear most.</p>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>Understanding</h2>
+      <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> the k values that appear most.</p>
 <p><strong>Why this works:</strong> count, then bucket values by count (counts are ≤ n) and read buckets from the top.</p>
 <p><strong>Example:</strong> [1, 1, 1, 2, 2, 3], k = 2</p>
 <pre class="trace border rounded"><span class="tl" style="--i:0">counts 1→3, 2→2, 3→1</span><span class="tl" style="--i:1">buckets: 3:[1], 2:[2] → [1, 2]</span></pre></div>
+    </section>
 
-    <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
-    <div class="hint mb-2">
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Hints <small>open one at a time</small></h2>
+      <div class="hint mb-2">
   <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show hint 1">Show hint 1</button>
   <div class="reveal-body border-start border-3 border-warning ps-3 mt-2" hidden>Count frequencies with a HashMap.</div>
 </div>
@@ -89,16 +97,18 @@
   <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show hint 3">Show hint 3</button>
   <div class="reveal-body border-start border-3 border-warning ps-3 mt-2" hidden>Frequencies are between 1 and n, so buckets indexed by frequency give O(n).</div>
 </div>
+    </section>
 
-    <h2 class="h6 text-uppercase text-body-secondary mt-4">Approach</h2>
-    <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show approach">Show approach</button>
-    <div class="reveal-body mt-2" hidden><p>Count, then put each value in bucket[freq]. Walk buckets from n down and collect values until you have k.</p></div>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Approach</h2>
+      <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show approach">Show approach</button>
+      <div class="reveal-body mt-2" hidden><p class="mb-0">Count, then put each value in bucket[freq]. Walk buckets from n down and collect values until you have k.</p></div>
+    </section>
 
-    <h2 class="h6 text-uppercase text-body-secondary mt-4">Solution (Java)</h2>
-    <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show solution">Show solution</button>
-    <div class="reveal-body mt-2 position-relative code-block" hidden>
-      <button class="btn btn-sm btn-light border copy position-absolute top-0 end-0 m-2" type="button">Copy</button>
-      <pre class="border rounded mb-0"><code class="language-java">import java.util.*;
+    <section class="sec sec-solution fade-up"><h2 class="sec-title"><span class="sec-ico">&lt;/&gt;</span>Solution (Java)</h2>
+      <button class="btn btn-sm btn-outline-light reveal" type="button" data-label="Show solution">Show solution</button>
+      <div class="reveal-body mt-2 position-relative code-block" hidden>
+        <button class="btn btn-sm btn-light border copy position-absolute top-0 end-0 m-2" type="button">Copy</button>
+        <pre class="rounded mb-0"><code class="language-java">import java.util.*;
 
 class Solution {
     public int[] topKFrequent(int[] nums, int k) {
@@ -117,12 +127,16 @@ class Solution {
         return res;
     }
 }</code></pre>
-    </div>
+      </div>
+    </section>
 
-    <div class="alert alert-warning mt-4 mb-0"><strong>Common mistake:</strong> Sorting all map entries by frequency — O(n log n), fine but not the best.</div>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>Common mistake</h2>
+      <p class="mb-0">Sorting all map entries by frequency — O(n log n), fine but not the best.</p>
+    </section>
   </div>
   <div class="col-lg-4">
-    <div class="card mb-3 shadow-sm">
+    <div class="side-sticky">
+    <div class="card mb-3 shadow-sm solve-card">
       <div class="card-body">
         <a class="btn btn-brand w-100 mb-2" href="https://leetcode.com/problems/top-k-frequent-elements/" target="_blank" rel="noopener">Solve on LeetCode ↗</a>
         <div class="form-check">
@@ -131,7 +145,7 @@ class Solution {
         </div>
       </div>
     </div>
-    <div class="card mb-3 shadow-sm">
+    <div class="card mb-3 shadow-sm complexity-card">
       <div class="card-header small fw-semibold">Complexity</div>
       <ul class="list-group list-group-flush small">
         <li class="list-group-item"><strong>Time:</strong> O(n).</li>
@@ -139,6 +153,7 @@ class Solution {
       </ul>
     </div>
     <div class="small text-body-secondary">Topic: <a href="index.html">Heaps &amp; Priority Queue</a><div class="mt-2"><span class="badge rounded-pill text-bg-light border me-1 mb-1 py-2 px-3">🎬 Episodes 64–68: video coming soon</span></div></div>
+    </div>
   </div>
 </div>
 <hr class="my-4">

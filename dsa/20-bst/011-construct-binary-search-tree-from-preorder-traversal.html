@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" id="hl-light"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" id="hl-dark" disabled><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
 </head>
 <body class="d-flex flex-column min-vh-100">
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
@@ -52,32 +53,39 @@
 </nav>
 <main class="flex-grow-1">
 
-<div class="container py-4">
-<nav aria-label="breadcrumb"><ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
-  <li class="breadcrumb-item"><a href="index.html">Binary Search Trees</a></li>
-  <li class="breadcrumb-item active" aria-current="page">Problem 11 of 12</li>
-</ol></nav>
-<div class="row g-4">
-  <div class="col-lg-8">
-    <h1 class="h3 mb-2">1008. Construct Binary Search Tree from Preorder Traversal</h1>
-    <p class="mb-3"><span class="badge text-bg-warning">Medium</span> <span class="badge text-bg-light border">Upper-bound recursion</span></p>
-    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+<section class="page-head problem-head py-4 mb-4 diff-medium">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Binary Search Trees</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Problem 11 of 12</li>
+    </ol></nav>
+    <span class="lc-num-big">#1008</span>
+    <h1 class="h2 fw-bold mb-2">Construct Binary Search Tree from Preorder Traversal</h1>
+    <p class="mb-3"><span class="badge text-bg-warning">Medium</span> <span class="badge pattern-badge">Upper-bound recursion</span></p>
+    <ol class="journey list-unstyled mb-0" aria-label="Your steps for this problem">
       <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
     </ol>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
 
-    <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
-    <p>Rebuild a BST from its preorder traversal.</p>
-    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/" target="_blank" rel="noopener">open problem ↗</a></p>
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>The problem</h2>
+      <p>Rebuild a BST from its preorder traversal.</p>
+      <p class="small text-body-secondary mb-0">This is a short summary in our own words. Read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/" target="_blank" rel="noopener">open problem ↗</a></p>
+    </section>
 
-    <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> rebuild a BST from preorder.</p>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>Understanding</h2>
+      <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> rebuild a BST from preorder.</p>
 <p><strong>Why this works:</strong> give each node an upper limit; a value goes into the current subtree only while it&#x27;s below that limit.</p>
 <p><strong>Example:</strong> [8, 5, 1, 7, 10, 12]</p>
 <pre class="trace border rounded"><span class="tl" style="--i:0">8 → left (below 8): 5 → 1, 7</span><span class="tl" style="--i:1">right: 10 → 12</span></pre></div>
+    </section>
 
-    <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
-    <div class="hint mb-2">
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Hints <small>open one at a time</small></h2>
+      <div class="hint mb-2">
   <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show hint 1">Show hint 1</button>
   <div class="reveal-body border-start border-3 border-warning ps-3 mt-2" hidden>The first value is the root; following smaller values form the left subtree.</div>
 </div>
@@ -85,16 +93,18 @@
   <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show hint 2">Show hint 2</button>
   <div class="reveal-body border-start border-3 border-warning ps-3 mt-2" hidden>Pass an upper bound: a node may be placed only if its value is below the bound.</div>
 </div>
+    </section>
 
-    <h2 class="h6 text-uppercase text-body-secondary mt-4">Approach</h2>
-    <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show approach">Show approach</button>
-    <div class="reveal-body mt-2" hidden><p>Keep an index into preorder. build(bound): if the next value is above the bound (or none left), return null. Otherwise create the node, build left with bound = node.val, build right with the same outer bound.</p></div>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Approach</h2>
+      <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show approach">Show approach</button>
+      <div class="reveal-body mt-2" hidden><p class="mb-0">Keep an index into preorder. build(bound): if the next value is above the bound (or none left), return null. Otherwise create the node, build left with bound = node.val, build right with the same outer bound.</p></div>
+    </section>
 
-    <h2 class="h6 text-uppercase text-body-secondary mt-4">Solution (Java)</h2>
-    <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show solution">Show solution</button>
-    <div class="reveal-body mt-2 position-relative code-block" hidden>
-      <button class="btn btn-sm btn-light border copy position-absolute top-0 end-0 m-2" type="button">Copy</button>
-      <pre class="border rounded mb-0"><code class="language-java">/**
+    <section class="sec sec-solution fade-up"><h2 class="sec-title"><span class="sec-ico">&lt;/&gt;</span>Solution (Java)</h2>
+      <button class="btn btn-sm btn-outline-light reveal" type="button" data-label="Show solution">Show solution</button>
+      <div class="reveal-body mt-2 position-relative code-block" hidden>
+        <button class="btn btn-sm btn-light border copy position-absolute top-0 end-0 m-2" type="button">Copy</button>
+        <pre class="rounded mb-0"><code class="language-java">/**
  * class TreeNode { int val; TreeNode left, right; TreeNode(int x) { val = x; } }  // provided by LeetCode
  */
 class Solution {
@@ -112,12 +122,16 @@ class Solution {
         return root;
     }
 }</code></pre>
-    </div>
+      </div>
+    </section>
 
-    <div class="alert alert-warning mt-4 mb-0"><strong>Common mistake:</strong> Inserting values one by one — O(n²) for skewed input.</div>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>Common mistake</h2>
+      <p class="mb-0">Inserting values one by one — O(n²) for skewed input.</p>
+    </section>
   </div>
   <div class="col-lg-4">
-    <div class="card mb-3 shadow-sm">
+    <div class="side-sticky">
+    <div class="card mb-3 shadow-sm solve-card">
       <div class="card-body">
         <a class="btn btn-brand w-100 mb-2" href="https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/" target="_blank" rel="noopener">Solve on LeetCode ↗</a>
         <div class="form-check">
@@ -126,7 +140,7 @@ class Solution {
         </div>
       </div>
     </div>
-    <div class="card mb-3 shadow-sm">
+    <div class="card mb-3 shadow-sm complexity-card">
       <div class="card-header small fw-semibold">Complexity</div>
       <ul class="list-group list-group-flush small">
         <li class="list-group-item"><strong>Time:</strong> O(n).</li>
@@ -134,6 +148,7 @@ class Solution {
       </ul>
     </div>
     <div class="small text-body-secondary">Topic: <a href="index.html">Binary Search Trees</a><div class="mt-2"><span class="badge rounded-pill text-bg-light border me-1 mb-1 py-2 px-3">🎬 Episodes 61–63: video coming soon</span></div></div>
+    </div>
   </div>
 </div>
 <hr class="my-4">
