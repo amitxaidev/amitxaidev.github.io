@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Binary Search – LeetCode problems in Java | Compiled Canvas</title>
+<meta name="description" content="17 Binary Search LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:title" content="Binary Search – LeetCode problems in Java | Compiled Canvas">
+<meta property="og:description" content="17 Binary Search LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:image" content="https://amitxaidev.github.io/assets/logo.png">
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="../index.html">DSA Sheet</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Binary Search</li>
+    </ol></nav>
+    <div class="row g-4 align-items-end">
+      <div class="col-lg-8">
+        <h1 class="h2 mb-1">13. Binary Search</h1>
+        <p class="text-body-secondary mb-2">Lower/upper bound, rotated arrays and binary search on the answer.</p>
+        <div><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 21 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 22 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 23 (coming soon)</span></div>
+      </div>
+      <div class="col-lg-4" data-slugs="binary-search,search-insert-position,sqrtx,first-bad-version,kth-missing-positive-number,find-first-and-last-position-of-element-in-sorted-array,search-in-rotated-sorted-array,find-minimum-in-rotated-sorted-array,find-peak-element,single-element-in-a-sorted-array,koko-eating-bananas,capacity-to-ship-packages-within-d-days,minimum-number-of-days-to-make-m-bouquets,find-the-smallest-divisor-given-a-threshold,magnetic-force-between-two-balls,split-array-largest-sum,median-of-two-sorted-arrays">
+        <div class="d-flex justify-content-between small mb-1"><span>Your progress</span><span><span class="done-count">0</span> of 17</span></div>
+        <div class="progress" role="progressbar" aria-label="Topic progress" style="height: 8px"><div class="progress-bar bg-success" style="width: 0%"></div></div>
+        <div class="small text-body-secondary mt-1">5 easy · 10 medium · 2 hard</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="d-flex flex-wrap gap-2 mb-3">
+  <input type="search" class="form-control search" style="max-width: 320px" placeholder="Search problems…" aria-label="Search problems">
+  <div class="btn-group btn-group-sm flex-wrap" role="group" aria-label="Filter">
+    <button type="button" class="btn btn-outline-secondary active" data-filter="all">All</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Easy">Easy</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Medium">Medium</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Hard">Hard</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="todo">Unsolved</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="done">Solved</button>
+  </div>
+</div>
+<div class="table-responsive">
+<table class="table table-hover align-middle ptable stagger">
+  <thead><tr><th style="width:2rem"></th><th class="d-none d-sm-table-cell" style="width:2.5rem">#</th><th>Problem</th><th class="d-none d-md-table-cell">Pattern</th><th>Level</th><th class="d-none d-sm-table-cell"></th></tr></thead>
+  <tbody>
+<tr data-slug="binary-search" data-diff="Easy" data-text="binary search classic binary search 704">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="binary-search" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">1</td>
+  <td><a href="001-binary-search.html" class="fw-semibold">Binary Search</a> <span class="text-body-secondary small">#704</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Classic binary search</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/binary-search/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="search-insert-position" data-diff="Easy" data-text="search insert position lower bound 35">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="search-insert-position" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">2</td>
+  <td><a href="002-search-insert-position.html" class="fw-semibold">Search Insert Position</a> <span class="text-body-secondary small">#35</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Lower bound</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/search-insert-position/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="sqrtx" data-diff="Easy" data-text="sqrt(x) binary search on the answer 69">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="sqrtx" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">3</td>
+  <td><a href="003-sqrtx.html" class="fw-semibold">Sqrt(x)</a> <span class="text-body-secondary small">#69</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Binary search on the answer</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/sqrtx/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="first-bad-version" data-diff="Easy" data-text="first bad version first true 278">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="first-bad-version" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">4</td>
+  <td><a href="004-first-bad-version.html" class="fw-semibold">First Bad Version</a> <span class="text-body-secondary small">#278</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">First true</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/first-bad-version/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="kth-missing-positive-number" data-diff="Easy" data-text="kth missing positive number binary search on a derived value 1539">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="kth-missing-positive-number" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">5</td>
+  <td><a href="005-kth-missing-positive-number.html" class="fw-semibold">Kth Missing Positive Number</a> <span class="text-body-secondary small">#1539</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Binary search on a derived value</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/kth-missing-positive-number/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="find-first-and-last-position-of-element-in-sorted-array" data-diff="Medium" data-text="find first and last position of element in sorted array lower &amp; upper bound 34">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="find-first-and-last-position-of-element-in-sorted-array" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">6</td>
+  <td><a href="006-find-first-and-last-position-of-element-in-sorted-array.html" class="fw-semibold">Find First and Last Position of Element in Sorted Array</a> <span class="text-body-secondary small">#34</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Lower &amp; upper bound</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="search-in-rotated-sorted-array" data-diff="Medium" data-text="search in rotated sorted array find the sorted half 33">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="search-in-rotated-sorted-array" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">7</td>
+  <td><a href="007-search-in-rotated-sorted-array.html" class="fw-semibold">Search in Rotated Sorted Array</a> <span class="text-body-secondary small">#33</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Find the sorted half</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/search-in-rotated-sorted-array/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="find-minimum-in-rotated-sorted-array" data-diff="Medium" data-text="find minimum in rotated sorted array compare with the right end 153">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="find-minimum-in-rotated-sorted-array" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">8</td>
+  <td><a href="008-find-minimum-in-rotated-sorted-array.html" class="fw-semibold">Find Minimum in Rotated Sorted Array</a> <span class="text-body-secondary small">#153</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Compare with the right end</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="find-peak-element" data-diff="Medium" data-text="find peak element follow the slope 162">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="find-peak-element" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">9</td>
+  <td><a href="009-find-peak-element.html" class="fw-semibold">Find Peak Element</a> <span class="text-body-secondary small">#162</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Follow the slope</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/find-peak-element/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="single-element-in-a-sorted-array" data-diff="Medium" data-text="single element in a sorted array pair parity 540">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="single-element-in-a-sorted-array" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">10</td>
+  <td><a href="010-single-element-in-a-sorted-array.html" class="fw-semibold">Single Element in a Sorted Array</a> <span class="text-body-secondary small">#540</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Pair parity</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/single-element-in-a-sorted-array/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="koko-eating-bananas" data-diff="Medium" data-text="koko eating bananas binary search on the answer 875">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="koko-eating-bananas" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">11</td>
+  <td><a href="011-koko-eating-bananas.html" class="fw-semibold">Koko Eating Bananas</a> <span class="text-body-secondary small">#875</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Binary search on the answer</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/koko-eating-bananas/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="capacity-to-ship-packages-within-d-days" data-diff="Medium" data-text="capacity to ship packages within d days binary search on the answer 1011">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="capacity-to-ship-packages-within-d-days" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">12</td>
+  <td><a href="012-capacity-to-ship-packages-within-d-days.html" class="fw-semibold">Capacity To Ship Packages Within D Days</a> <span class="text-body-secondary small">#1011</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Binary search on the answer</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="minimum-number-of-days-to-make-m-bouquets" data-diff="Medium" data-text="minimum number of days to make m bouquets binary search on the answer 1482">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="minimum-number-of-days-to-make-m-bouquets" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">13</td>
+  <td><a href="013-minimum-number-of-days-to-make-m-bouquets.html" class="fw-semibold">Minimum Number of Days to Make m Bouquets</a> <span class="text-body-secondary small">#1482</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Binary search on the answer</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="find-the-smallest-divisor-given-a-threshold" data-diff="Medium" data-text="find the smallest divisor given a threshold binary search on the answer 1283">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="find-the-smallest-divisor-given-a-threshold" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">14</td>
+  <td><a href="014-find-the-smallest-divisor-given-a-threshold.html" class="fw-semibold">Find the Smallest Divisor Given a Threshold</a> <span class="text-body-secondary small">#1283</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Binary search on the answer</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="magnetic-force-between-two-balls" data-diff="Medium" data-text="magnetic force between two balls binary search on the answer (aggressive cows) 1552">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="magnetic-force-between-two-balls" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">15</td>
+  <td><a href="015-magnetic-force-between-two-balls.html" class="fw-semibold">Magnetic Force Between Two Balls</a> <span class="text-body-secondary small">#1552</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Binary search on the answer (aggressive cows)</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/magnetic-force-between-two-balls/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="split-array-largest-sum" data-diff="Hard" data-text="split array largest sum binary search on the answer (book allocation) 410">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="split-array-largest-sum" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">16</td>
+  <td><a href="016-split-array-largest-sum.html" class="fw-semibold">Split Array Largest Sum</a> <span class="text-body-secondary small">#410</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Binary search on the answer (book allocation)</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/split-array-largest-sum/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="median-of-two-sorted-arrays" data-diff="Hard" data-text="median of two sorted arrays binary search on the partition 4">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="median-of-two-sorted-arrays" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">17</td>
+  <td><a href="017-median-of-two-sorted-arrays.html" class="fw-semibold">Median of Two Sorted Arrays</a> <span class="text-body-secondary small">#4</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Binary search on the partition</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/median-of-two-sorted-arrays/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+  </tbody>
+</table>
+</div>
+<p class="empty text-body-secondary" hidden>Nothing matches that filter.</p>
+<p class="small text-body-secondary mt-3">Work top to bottom — each list goes from easy to hard. Try a problem for at least 15 minutes before opening a hint. Ticks are saved in your browser.</p>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-0">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>
