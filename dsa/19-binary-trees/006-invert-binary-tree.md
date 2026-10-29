@@ -1,14 +1,26 @@
 # 6. Invert Binary Tree
 
 **LeetCode 226** · 🟢 Easy · Pattern: **Swap children recursively**
-🔗 Solve it here: [https://leetcode.com/problems/invert-binary-tree/](https://leetcode.com/problems/invert-binary-tree/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/006-invert-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/006-invert-binary-tree.html)
 
 ## The problem, in short
 
 Mirror a binary tree by swapping every node's left and right children.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/invert-binary-tree/](https://leetcode.com/problems/invert-binary-tree/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/006-invert-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/006-invert-binary-tree.html)
+
+## Understanding
+
+**Really asking:** swap left and right everywhere.
+
+**Why this works:** invert both subtrees, then swap them.
+
+**Example:** 4 (2 (1, 3), 7 (6, 9))
+```text
+→ 4 (7 (9, 6), 2 (3, 1))
+```
 
 ## Hints
 

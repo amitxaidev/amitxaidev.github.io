@@ -1,14 +1,27 @@
 # 7. Gas Station
 
 **LeetCode 134** · 🟡 Medium · Pattern: **Reset start on deficit**
-🔗 Solve it here: [https://leetcode.com/problems/gas-station/](https://leetcode.com/problems/gas-station/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/007-gas-station.html](https://amitxaidev.github.io/dsa/22-greedy/007-gas-station.html)
 
 ## The problem, in short
 
 Stations form a circle. You get gas[i] at station i and spend cost[i] to reach the next. Return the starting station that lets you go all the way around once, or -1. The answer is unique if it exists.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/gas-station/](https://leetcode.com/problems/gas-station/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/007-gas-station.html](https://amitxaidev.github.io/dsa/22-greedy/007-gas-station.html)
+
+## Understanding
+
+**Really asking:** from which station can you drive the full circle?
+
+**Why this works:** if you run out between start and i, none of those stations can work either, so restart at i + 1. If total gas ≥ total cost, the last start works.
+
+**Example:** gas [1,2,3,4,5], cost [3,4,5,1,2]
+```text
+tank goes negative at 0, 1, 2 → restart at 3
+from 3: +3, +3, … total ≥ 0 → answer 3
+```
 
 ## Hints
 

@@ -1,14 +1,26 @@
 # 11. Is Graph Bipartite?
 
 **LeetCode 785** · 🟡 Medium · Pattern: **2-colouring with BFS**
-🔗 Solve it here: [https://leetcode.com/problems/is-graph-bipartite/](https://leetcode.com/problems/is-graph-bipartite/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/011-is-graph-bipartite.html](https://amitxaidev.github.io/dsa/23-graphs/011-is-graph-bipartite.html)
 
 ## The problem, in short
 
 Decide whether an undirected graph's nodes can be split into two groups so that every edge connects nodes from different groups.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/is-graph-bipartite/](https://leetcode.com/problems/is-graph-bipartite/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/011-is-graph-bipartite.html](https://amitxaidev.github.io/dsa/23-graphs/011-is-graph-bipartite.html)
+
+## Understanding
+
+**Really asking:** can nodes be split into two teams with every edge between teams?
+
+**Why this works:** colour with two colours using BFS; a neighbour with your own colour means it's impossible.
+
+**Example:** square 0-1-2-3-0
+```text
+0 red, 1 blue, 2 red, 3 blue → no conflict → true
+```
 
 ## Hints
 

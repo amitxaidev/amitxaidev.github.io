@@ -1,14 +1,29 @@
 # 10. Count of Smaller Numbers After Self
 
 **LeetCode 315** · 🔴 Hard · Pattern: **Merge sort with indexes**
-🔗 Solve it here: [https://leetcode.com/problems/count-of-smaller-numbers-after-self/](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/010-count-of-smaller-numbers-after-self.html](https://amitxaidev.github.io/dsa/14-sorting/010-count-of-smaller-numbers-after-self.html)
 
 ## The problem, in short
 
 For every element, count how many elements to its right are strictly smaller.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/count-of-smaller-numbers-after-self/](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/010-count-of-smaller-numbers-after-self.html](https://amitxaidev.github.io/dsa/14-sorting/010-count-of-smaller-numbers-after-self.html)
+
+## Understanding
+
+**Really asking:** for each number, how many to its right are smaller?
+
+**Why this works:** during merge sort, when a left element is placed, every right element already placed is smaller and was to its right. Add that count.
+
+**Example:** [5, 2, 6, 1]
+```text
+5 → (2, 1) = 2
+2 → (1) = 1
+6 → (1) = 1
+1 → 0 → [2, 1, 1, 0]
+```
 
 ## Hints
 

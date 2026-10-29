@@ -1,14 +1,27 @@
 # 6. Longest Palindrome
 
 **LeetCode 409** · 🟢 Easy · Pattern: **Frequency count**
-🔗 Solve it here: [https://leetcode.com/problems/longest-palindrome/](https://leetcode.com/problems/longest-palindrome/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/006-longest-palindrome.html](https://amitxaidev.github.io/dsa/11-strings/006-longest-palindrome.html)
 
 ## The problem, in short
 
 Using the letters of s (case-sensitive), return the length of the longest palindrome you can build.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/longest-palindrome/](https://leetcode.com/problems/longest-palindrome/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/006-longest-palindrome.html](https://amitxaidev.github.io/dsa/11-strings/006-longest-palindrome.html)
+
+## Understanding
+
+**Really asking:** using these letters, how long a palindrome can you build?
+
+**Why this works:** pairs go on both sides; one leftover odd letter can sit in the middle.
+
+**Example:** "abccccdd"
+```text
+c4 → 4, d2 → 2, a1 b1 → odd
+6 + 1 = 7 ("dccaccd")
+```
 
 ## Hints
 

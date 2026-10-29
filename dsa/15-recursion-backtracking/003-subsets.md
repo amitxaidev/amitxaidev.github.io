@@ -1,14 +1,29 @@
 # 3. Subsets
 
 **LeetCode 78** · 🟡 Medium · Pattern: **Backtracking (pick / not pick)**
-🔗 Solve it here: [https://leetcode.com/problems/subsets/](https://leetcode.com/problems/subsets/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/003-subsets.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/003-subsets.html)
 
 ## The problem, in short
 
 Return every possible subset of an array of distinct integers.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/subsets/](https://leetcode.com/problems/subsets/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/003-subsets.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/003-subsets.html)
+
+## Understanding
+
+**Really asking:** list every subset.
+
+**Why this works:** each node of the recursion is a subset. From a start index, try adding each later element, recurse, then remove it.
+
+**Example:** [1, 2, 3]
+```text
+[] → [1] → [1,2] → [1,2,3]
+back → [1,3]
+back → [2] → [2,3] → [3]
+8 subsets
+```
 
 ## Hints
 

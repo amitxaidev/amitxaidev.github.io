@@ -30,6 +30,7 @@
         <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
         <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
       </ul>
@@ -51,7 +52,16 @@
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>For every index, return the absolute difference between the sum of elements to its left and the sum of elements to its right.</p>
-    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode.</p>
+    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/left-and-right-sum-differences/" target="_blank" rel="noopener">open problem ↗</a></p>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
+    <div class="understanding"><p><strong>Really asking:</strong> for each index, |sum on the left - sum on the right|.</p>
+<p><strong>Why this works:</strong> same trick as the pivot index: right = total - left - nums[i].</p>
+<p><strong>Example:</strong> [10, 4, 8, 3], total 25</p>
+<pre class="trace border rounded">i=0: left 0,  right 15 → 15
+i=1: left 10, right 11 → 1
+i=2: left 14, right 3  → 11
+i=3: left 22, right 0  → 22</pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">

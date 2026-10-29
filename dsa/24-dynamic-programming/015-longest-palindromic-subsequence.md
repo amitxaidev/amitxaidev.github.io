@@ -1,14 +1,26 @@
 # 15. Longest Palindromic Subsequence
 
 **LeetCode 516** · 🟡 Medium · Pattern: **Interval DP**
-🔗 Solve it here: [https://leetcode.com/problems/longest-palindromic-subsequence/](https://leetcode.com/problems/longest-palindromic-subsequence/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/015-longest-palindromic-subsequence.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/015-longest-palindromic-subsequence.html)
 
 ## The problem, in short
 
 Return the length of the longest subsequence of s that is a palindrome.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/longest-palindromic-subsequence/](https://leetcode.com/problems/longest-palindromic-subsequence/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/015-longest-palindromic-subsequence.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/015-longest-palindromic-subsequence.html)
+
+## Understanding
+
+**Really asking:** the longest palindrome you can get by deleting letters.
+
+**Why this works:** dp[i][j] for s[i..j]: equal ends → 2 + inside; otherwise the better of dropping one end.
+
+**Example:** "bbbab"
+```text
+"bbbb" → 4
+```
 
 ## Hints
 

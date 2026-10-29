@@ -1,14 +1,27 @@
 # 12. Valid Parenthesis String
 
 **LeetCode 678** · 🟡 Medium · Pattern: **Range of open counts**
-🔗 Solve it here: [https://leetcode.com/problems/valid-parenthesis-string/](https://leetcode.com/problems/valid-parenthesis-string/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/012-valid-parenthesis-string.html](https://amitxaidev.github.io/dsa/22-greedy/012-valid-parenthesis-string.html)
 
 ## The problem, in short
 
 A string has '(', ')' and '*', where '*' can be '(', ')' or empty. Decide whether it can be a valid parentheses string.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/valid-parenthesis-string/](https://leetcode.com/problems/valid-parenthesis-string/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/012-valid-parenthesis-string.html](https://amitxaidev.github.io/dsa/22-greedy/012-valid-parenthesis-string.html)
+
+## Understanding
+
+**Really asking:** with '*' as '(', ')' or nothing, can the string be valid?
+
+**Why this works:** track the possible range of open brackets [lo, hi]; '*' widens it.
+
+**Example:** "(*))"
+```text
+'(' → [1,1], '*' → [0,2], ')' → [0,1], ')' → [0,0]
+lo reaches 0 → valid
+```
 
 ## Hints
 

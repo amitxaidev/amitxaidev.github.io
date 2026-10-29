@@ -1,14 +1,26 @@
 # 2. Convert Sorted Array to Binary Search Tree
 
 **LeetCode 108** · 🟢 Easy · Pattern: **Middle as root**
-🔗 Solve it here: [https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/002-convert-sorted-array-to-binary-search-tree.html](https://amitxaidev.github.io/dsa/20-bst/002-convert-sorted-array-to-binary-search-tree.html)
 
 ## The problem, in short
 
 Turn a sorted array into a height-balanced BST.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/002-convert-sorted-array-to-binary-search-tree.html](https://amitxaidev.github.io/dsa/20-bst/002-convert-sorted-array-to-binary-search-tree.html)
+
+## Understanding
+
+**Really asking:** build a height-balanced BST from a sorted array.
+
+**Why this works:** the middle value as root splits the rest evenly; repeat on both halves.
+
+**Example:** [-10, -3, 0, 5, 9]
+```text
+root 0, left from [-10, -3] → -3 (-10), right from [5, 9] → 9 (5)
+```
 
 ## Hints
 

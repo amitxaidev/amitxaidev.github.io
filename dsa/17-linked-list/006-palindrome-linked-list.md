@@ -1,14 +1,27 @@
 # 6. Palindrome Linked List
 
 **LeetCode 234** · 🟢 Easy · Pattern: **Middle + reverse second half**
-🔗 Solve it here: [https://leetcode.com/problems/palindrome-linked-list/](https://leetcode.com/problems/palindrome-linked-list/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/006-palindrome-linked-list.html](https://amitxaidev.github.io/dsa/17-linked-list/006-palindrome-linked-list.html)
 
 ## The problem, in short
 
 Decide whether a singly linked list reads the same forwards and backwards, ideally in O(1) extra space.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/palindrome-linked-list/](https://leetcode.com/problems/palindrome-linked-list/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/006-palindrome-linked-list.html](https://amitxaidev.github.io/dsa/17-linked-list/006-palindrome-linked-list.html)
+
+## Understanding
+
+**Really asking:** does the list read the same backwards?
+
+**Why this works:** find the middle, reverse the second half, compare the two halves node by node.
+
+**Example:** 1 → 2 → 2 → 1
+```text
+second half reversed: 1 → 2
+compare 1=1, 2=2 → true
+```
 
 ## Hints
 

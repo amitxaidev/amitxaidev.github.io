@@ -1,14 +1,29 @@
 # 2. Richest Customer Wealth
 
 **LeetCode 1672** · 🟢 Easy · Pattern: **Nested loops**
-🔗 Solve it here: [https://leetcode.com/problems/richest-customer-wealth/](https://leetcode.com/problems/richest-customer-wealth/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/01-complexity/002-richest-customer-wealth.html](https://amitxaidev.github.io/dsa/01-complexity/002-richest-customer-wealth.html)
 
 ## The problem, in short
 
 A grid lists how much money each customer (row) has in each bank (column). A customer's wealth is the sum of their row. Return the largest wealth.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/richest-customer-wealth/](https://leetcode.com/problems/richest-customer-wealth/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/01-complexity/002-richest-customer-wealth.html](https://amitxaidev.github.io/dsa/01-complexity/002-richest-customer-wealth.html)
+
+## Understanding
+
+**Really asking:** add up each row, and report the biggest row total.
+
+**Why this works:** every cell is read exactly once, so the cost is rows × columns. Nested loops are not always "n squared"; they are the product of the two sizes.
+
+**Example:** accounts = [[1,5],[7,3],[3,5]]
+```text
+row 0: 1 + 5 = 6    best = 6
+row 1: 7 + 3 = 10   best = 10
+row 2: 3 + 5 = 8    best = 10
+answer: 10
+```
 
 ## Hints
 

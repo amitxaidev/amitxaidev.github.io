@@ -1,14 +1,26 @@
 # 8. Balanced Binary Tree
 
 **LeetCode 110** · 🟢 Easy · Pattern: **Height with early exit**
-🔗 Solve it here: [https://leetcode.com/problems/balanced-binary-tree/](https://leetcode.com/problems/balanced-binary-tree/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/008-balanced-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/008-balanced-binary-tree.html)
 
 ## The problem, in short
 
 Decide whether every node's left and right subtree heights differ by at most 1.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/balanced-binary-tree/](https://leetcode.com/problems/balanced-binary-tree/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/008-balanced-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/008-balanced-binary-tree.html)
+
+## Understanding
+
+**Really asking:** do the two subtree heights differ by at most 1 at every node?
+
+**Why this works:** return the height, or -1 as soon as any subtree is unbalanced, so you never recompute.
+
+**Example:** 1 (2 (3 (4)), -)
+```text
+node 2: heights 2 vs 0 → -1 → whole tree unbalanced
+```
 
 ## Hints
 

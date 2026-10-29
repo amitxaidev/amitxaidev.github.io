@@ -1,14 +1,27 @@
 # 4. First Bad Version
 
 **LeetCode 278** · 🟢 Easy · Pattern: **First true**
-🔗 Solve it here: [https://leetcode.com/problems/first-bad-version/](https://leetcode.com/problems/first-bad-version/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/004-first-bad-version.html](https://amitxaidev.github.io/dsa/13-binary-search/004-first-bad-version.html)
 
 ## The problem, in short
 
 Versions 1..n are good up to some point and bad after it. Using an isBadVersion(v) API, find the first bad version with as few calls as possible.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/first-bad-version/](https://leetcode.com/problems/first-bad-version/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/004-first-bad-version.html](https://amitxaidev.github.io/dsa/13-binary-search/004-first-bad-version.html)
+
+## Understanding
+
+**Really asking:** versions go good, good, …, bad, bad. Find the first bad.
+
+**Why this works:** if mid is bad, the answer is mid or before; if good, it's after.
+
+**Example:** n = 5, first bad = 4
+```text
+mid 3 good → lo 4
+mid 4 bad → hi 4 → answer 4
+```
 
 ## Hints
 

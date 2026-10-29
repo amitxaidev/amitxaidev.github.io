@@ -1,14 +1,26 @@
 # 21. Swim in Rising Water
 
 **LeetCode 778** · 🔴 Hard · Pattern: **Dijkstra (minimax) on a grid**
-🔗 Solve it here: [https://leetcode.com/problems/swim-in-rising-water/](https://leetcode.com/problems/swim-in-rising-water/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/021-swim-in-rising-water.html](https://amitxaidev.github.io/dsa/23-graphs/021-swim-in-rising-water.html)
 
 ## The problem, in short
 
 At time t the water level is t, and you can swim between adjacent cells whose heights are both at most t. Return the least time to get from the top-left to the bottom-right.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/swim-in-rising-water/](https://leetcode.com/problems/swim-in-rising-water/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/021-swim-in-rising-water.html](https://amitxaidev.github.io/dsa/23-graphs/021-swim-in-rising-water.html)
+
+## Understanding
+
+**Really asking:** the earliest time you can swim from the top-left to the bottom-right.
+
+**Why this works:** the time for a path is its highest cell; minimise that with a min-heap Dijkstra.
+
+**Example:** [[0,2],[1,3]]
+```text
+best path 0 → 1 → 3 → time 3
+```
 
 ## Hints
 

@@ -1,14 +1,27 @@
 # 3. Implement Stack using Queues
 
 **LeetCode 225** · 🟢 Easy · Pattern: **Rotate on push**
-🔗 Solve it here: [https://leetcode.com/problems/implement-stack-using-queues/](https://leetcode.com/problems/implement-stack-using-queues/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/003-implement-stack-using-queues.html](https://amitxaidev.github.io/dsa/18-stack-queue/003-implement-stack-using-queues.html)
 
 ## The problem, in short
 
 Build a LIFO stack (push, pop, top, empty) using only queue operations.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/implement-stack-using-queues/](https://leetcode.com/problems/implement-stack-using-queues/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/003-implement-stack-using-queues.html](https://amitxaidev.github.io/dsa/18-stack-queue/003-implement-stack-using-queues.html)
+
+## Understanding
+
+**Really asking:** LIFO behaviour from a queue.
+
+**Why this works:** after adding x, rotate the older items behind it, so x is at the front.
+
+**Example:** push 1, push 2
+```text
+[1] → add 2 → [1, 2] → rotate → [2, 1]
+pop → 2
+```
 
 ## Hints
 

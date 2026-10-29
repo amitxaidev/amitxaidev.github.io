@@ -1,14 +1,26 @@
 # 7. Pacific Atlantic Water Flow
 
 **LeetCode 417** · 🟡 Medium · Pattern: **Reverse BFS/DFS from the oceans**
-🔗 Solve it here: [https://leetcode.com/problems/pacific-atlantic-water-flow/](https://leetcode.com/problems/pacific-atlantic-water-flow/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/007-pacific-atlantic-water-flow.html](https://amitxaidev.github.io/dsa/23-graphs/007-pacific-atlantic-water-flow.html)
 
 ## The problem, in short
 
 Rain flows from a cell to neighbours with equal or lower height. The Pacific touches the top and left edges, the Atlantic the bottom and right. Return cells from which water can reach both oceans.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/pacific-atlantic-water-flow/](https://leetcode.com/problems/pacific-atlantic-water-flow/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/007-pacific-atlantic-water-flow.html](https://amitxaidev.github.io/dsa/23-graphs/007-pacific-atlantic-water-flow.html)
+
+## Understanding
+
+**Really asking:** cells from which water can reach both oceans.
+
+**Why this works:** flip it: start from each ocean's edge and climb uphill. Cells reached from both oceans are the answer.
+
+**Example:** a high peak in the middle of the grid
+```text
+reachable uphill from the top/left edge and from the bottom/right edge → included
+```
 
 ## Hints
 

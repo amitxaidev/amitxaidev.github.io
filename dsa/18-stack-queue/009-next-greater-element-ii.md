@@ -1,14 +1,28 @@
 # 9. Next Greater Element II
 
 **LeetCode 503** · 🟡 Medium · Pattern: **Monotonic stack, circular**
-🔗 Solve it here: [https://leetcode.com/problems/next-greater-element-ii/](https://leetcode.com/problems/next-greater-element-ii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/009-next-greater-element-ii.html](https://amitxaidev.github.io/dsa/18-stack-queue/009-next-greater-element-ii.html)
 
 ## The problem, in short
 
 The array is circular. For each element, return the next greater element when searching forward (wrapping around), or -1.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/next-greater-element-ii/](https://leetcode.com/problems/next-greater-element-ii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/009-next-greater-element-ii.html](https://amitxaidev.github.io/dsa/18-stack-queue/009-next-greater-element-ii.html)
+
+## Understanding
+
+**Really asking:** next greater element in a circular array.
+
+**Why this works:** loop twice; the second lap only answers items still waiting.
+
+**Example:** [1, 2, 1]
+```text
+2 answers the first 1
+second lap: 2 answers the last 1; 2 itself → -1
+[2, -1, 2]
+```
 
 ## Hints
 

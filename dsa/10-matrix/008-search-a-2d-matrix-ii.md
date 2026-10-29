@@ -1,14 +1,27 @@
 # 8. Search a 2D Matrix II
 
 **LeetCode 240** · 🟡 Medium · Pattern: **Staircase search**
-🔗 Solve it here: [https://leetcode.com/problems/search-a-2d-matrix-ii/](https://leetcode.com/problems/search-a-2d-matrix-ii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/008-search-a-2d-matrix-ii.html](https://amitxaidev.github.io/dsa/10-matrix/008-search-a-2d-matrix-ii.html)
 
 ## The problem, in short
 
 Rows are sorted left to right and columns top to bottom (but rows don't continue each other). Decide if target is present.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/search-a-2d-matrix-ii/](https://leetcode.com/problems/search-a-2d-matrix-ii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/008-search-a-2d-matrix-ii.html](https://amitxaidev.github.io/dsa/10-matrix/008-search-a-2d-matrix-ii.html)
+
+## Understanding
+
+**Really asking:** rows and columns are each sorted; is the target there?
+
+**Why this works:** start top-right. Going left decreases, going down increases, so each step throws away a whole row or column.
+
+**Example:** target 5, top-right 15
+```text
+15 > 5 → left 11 → left 7 → left 4
+4 < 5 → down 5 ✓
+```
 
 ## Hints
 

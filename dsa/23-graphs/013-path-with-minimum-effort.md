@@ -1,14 +1,26 @@
 # 13. Path With Minimum Effort
 
 **LeetCode 1631** · 🟡 Medium · Pattern: **Dijkstra on a grid (minimax)**
-🔗 Solve it here: [https://leetcode.com/problems/path-with-minimum-effort/](https://leetcode.com/problems/path-with-minimum-effort/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/013-path-with-minimum-effort.html](https://amitxaidev.github.io/dsa/23-graphs/013-path-with-minimum-effort.html)
 
 ## The problem, in short
 
 Walk from the top-left to the bottom-right of a height grid. A path's effort is its largest height difference between consecutive cells. Return the minimum effort.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/path-with-minimum-effort/](https://leetcode.com/problems/path-with-minimum-effort/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/013-path-with-minimum-effort.html](https://amitxaidev.github.io/dsa/23-graphs/013-path-with-minimum-effort.html)
+
+## Understanding
+
+**Really asking:** a path where the biggest single step is as small as possible.
+
+**Why this works:** Dijkstra where a path's cost is its maximum step, not its sum.
+
+**Example:** [[1,2,2],[3,8,2],[5,3,5]]
+```text
+path 1→3→5→3→5 has steps 2, 2, 2, 2 → effort 2
+```
 
 ## Hints
 

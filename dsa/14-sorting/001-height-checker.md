@@ -1,14 +1,26 @@
 # 1. Height Checker
 
 **LeetCode 1051** · 🟢 Easy · Pattern: **Counting sort**
-🔗 Solve it here: [https://leetcode.com/problems/height-checker/](https://leetcode.com/problems/height-checker/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/001-height-checker.html](https://amitxaidev.github.io/dsa/14-sorting/001-height-checker.html)
 
 ## The problem, in short
 
 Students stand in a line. Count how many positions differ from where they'd be if the line were sorted by height (heights are 1..100).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/height-checker/](https://leetcode.com/problems/height-checker/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/001-height-checker.html](https://amitxaidev.github.io/dsa/14-sorting/001-height-checker.html)
+
+## Understanding
+
+**Really asking:** how many students stand in the wrong place compared with the sorted line?
+
+**Why this works:** heights are only 1..100, so counting sort gives the expected order in O(n).
+
+**Example:** [1, 1, 4, 2, 1, 3] → expected [1, 1, 1, 2, 3, 4]
+```text
+differences at indexes 2, 4, 5 → 3
+```
 
 ## Hints
 

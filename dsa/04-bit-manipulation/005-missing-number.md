@@ -1,14 +1,28 @@
 # 5. Missing Number
 
 **LeetCode 268** · 🟢 Easy · Pattern: **XOR**
-🔗 Solve it here: [https://leetcode.com/problems/missing-number/](https://leetcode.com/problems/missing-number/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/005-missing-number.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/005-missing-number.html)
 
 ## The problem, in short
 
 The array holds n distinct numbers taken from 0..n. Exactly one is missing; find it.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/missing-number/](https://leetcode.com/problems/missing-number/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/005-missing-number.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/005-missing-number.html)
+
+## Understanding
+
+**Really asking:** numbers 0..n with one missing; which one?
+
+**Why this works:** XOR all indexes 0..n with all values. Every number that is present shows up twice and cancels.
+
+**Example:** nums = [3, 0, 1], n = 3
+```text
+start x = 3
+^0^3 → 0, ^1^0 → 1, ^2^1 → 2
+answer 2
+```
 
 ## Hints
 

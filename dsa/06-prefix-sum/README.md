@@ -6,6 +6,12 @@ Precompute running totals so range questions become O(1).
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/06-prefix-sum/  
 🧮 **12 problems** · 🟢 4 Easy · 🟡 7 Medium · 🔴 1 Hard
 
+## Understand the topic
+
+A prefix sum is a running total: prefix[i] = sum of the first i numbers. Once you have it, the sum of any range is one subtraction: sum(l..r) = prefix[r+1] - prefix[l].
+
+Three ideas build on that. Store prefix sums in a HashMap to count subarrays with a target sum. Use a difference array to add to whole ranges in O(1). Use a 2D prefix sum for rectangles in a matrix.
+
 ## How to use this list
 
 1. Watch the episode above.

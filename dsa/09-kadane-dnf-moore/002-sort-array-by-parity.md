@@ -1,14 +1,28 @@
 # 2. Sort Array By Parity
 
 **LeetCode 905** · 🟢 Easy · Pattern: **Two-way partition**
-🔗 Solve it here: [https://leetcode.com/problems/sort-array-by-parity/](https://leetcode.com/problems/sort-array-by-parity/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/002-sort-array-by-parity.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/002-sort-array-by-parity.html)
 
 ## The problem, in short
 
 Rearrange the array so all even numbers come before all odd numbers. Any order inside each group is fine.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/sort-array-by-parity/](https://leetcode.com/problems/sort-array-by-parity/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/002-sort-array-by-parity.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/002-sort-array-by-parity.html)
+
+## Understanding
+
+**Really asking:** evens first, odds after, any order inside.
+
+**Why this works:** a boundary marks the end of the even zone; every even number found is swapped into it.
+
+**Example:** [3, 1, 2, 4]
+```text
+3 odd, 1 odd
+2 even → swap to index 0 → [2, 1, 3, 4]
+4 even → swap to index 1 → [2, 4, 3, 1]
+```
 
 ## Hints
 

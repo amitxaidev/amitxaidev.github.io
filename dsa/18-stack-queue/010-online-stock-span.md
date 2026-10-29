@@ -1,14 +1,26 @@
 # 10. Online Stock Span
 
 **LeetCode 901** · 🟡 Medium · Pattern: **Monotonic stack with spans**
-🔗 Solve it here: [https://leetcode.com/problems/online-stock-span/](https://leetcode.com/problems/online-stock-span/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/010-online-stock-span.html](https://amitxaidev.github.io/dsa/18-stack-queue/010-online-stock-span.html)
 
 ## The problem, in short
 
 Prices arrive one per day. For each new price, return its span: the number of consecutive days up to today with price less than or equal to today's.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/online-stock-span/](https://leetcode.com/problems/online-stock-span/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/010-online-stock-span.html](https://amitxaidev.github.io/dsa/18-stack-queue/010-online-stock-span.html)
+
+## Understanding
+
+**Really asking:** how many consecutive days up to today had a price ≤ today's?
+
+**Why this works:** smaller earlier prices can be merged into today's span forever; keep (price, span) on a stack.
+
+**Example:** 100, 80, 60, 70, 60, 75, 85
+```text
+spans 1, 1, 1, 2, 1, 4, 6
+```
 
 ## Hints
 

@@ -1,14 +1,27 @@
 # 12. Count Number of Nice Subarrays
 
 **LeetCode 1248** · 🟡 Medium · Pattern: **atMost(k) − atMost(k−1)**
-🔗 Solve it here: [https://leetcode.com/problems/count-number-of-nice-subarrays/](https://leetcode.com/problems/count-number-of-nice-subarrays/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/012-count-number-of-nice-subarrays.html](https://amitxaidev.github.io/dsa/08-sliding-window/012-count-number-of-nice-subarrays.html)
 
 ## The problem, in short
 
 Count subarrays that contain exactly k odd numbers.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/count-number-of-nice-subarrays/](https://leetcode.com/problems/count-number-of-nice-subarrays/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/012-count-number-of-nice-subarrays.html](https://amitxaidev.github.io/dsa/08-sliding-window/012-count-number-of-nice-subarrays.html)
+
+## Understanding
+
+**Really asking:** count subarrays with exactly k odd numbers.
+
+**Why this works:** counting "at most k" is easy with a window (each right end adds window-length subarrays). Exactly k = atMost(k) - atMost(k-1).
+
+**Example:** [1, 1, 2, 1, 1], k = 3
+```text
+atMost(3) = 14, atMost(2) = 12
+answer 2: [1,1,2,1] and [1,2,1,1]
+```
 
 ## Hints
 

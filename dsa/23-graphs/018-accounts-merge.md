@@ -1,14 +1,27 @@
 # 18. Accounts Merge
 
 **LeetCode 721** · 🟡 Medium · Pattern: **Union-Find on emails**
-🔗 Solve it here: [https://leetcode.com/problems/accounts-merge/](https://leetcode.com/problems/accounts-merge/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/018-accounts-merge.html](https://amitxaidev.github.io/dsa/23-graphs/018-accounts-merge.html)
 
 ## The problem, in short
 
 Each account is a name followed by emails. Two accounts belong to the same person if they share any email. Merge them and return each person's name with their sorted emails.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/accounts-merge/](https://leetcode.com/problems/accounts-merge/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/018-accounts-merge.html](https://amitxaidev.github.io/dsa/23-graphs/018-accounts-merge.html)
+
+## Understanding
+
+**Really asking:** merge accounts that share any email.
+
+**Why this works:** union all emails inside each account; emails with the same root belong to one person.
+
+**Example:** John [a, b], John [b, c], John [d]
+```text
+a-b-c connected → one account
+d alone → another account
+```
 
 ## Hints
 

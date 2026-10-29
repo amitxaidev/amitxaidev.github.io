@@ -1,14 +1,27 @@
 # 11. Odd Even Linked List
 
 **LeetCode 328** · 🟡 Medium · Pattern: **Two chains, then join**
-🔗 Solve it here: [https://leetcode.com/problems/odd-even-linked-list/](https://leetcode.com/problems/odd-even-linked-list/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/011-odd-even-linked-list.html](https://amitxaidev.github.io/dsa/17-linked-list/011-odd-even-linked-list.html)
 
 ## The problem, in short
 
 Reorder a linked list so all nodes at odd positions (1st, 3rd, …) come first, followed by nodes at even positions, keeping relative order. O(1) extra space.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/odd-even-linked-list/](https://leetcode.com/problems/odd-even-linked-list/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/011-odd-even-linked-list.html](https://amitxaidev.github.io/dsa/17-linked-list/011-odd-even-linked-list.html)
+
+## Understanding
+
+**Really asking:** all odd-position nodes first, then even-position nodes.
+
+**Why this works:** build two chains while walking, then attach the even chain after the odd one.
+
+**Example:** 1→2→3→4→5
+```text
+odd: 1→3→5, even: 2→4
+1→3→5→2→4
+```
 
 ## Hints
 

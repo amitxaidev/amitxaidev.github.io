@@ -1,14 +1,28 @@
 # 1. Kth Largest Element in a Stream
 
 **LeetCode 703** · 🟢 Easy · Pattern: **Min-heap of size k**
-🔗 Solve it here: [https://leetcode.com/problems/kth-largest-element-in-a-stream/](https://leetcode.com/problems/kth-largest-element-in-a-stream/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/001-kth-largest-element-in-a-stream.html](https://amitxaidev.github.io/dsa/21-heaps/001-kth-largest-element-in-a-stream.html)
 
 ## The problem, in short
 
 Design a class that receives numbers one by one and, after each one, returns the k-th largest number seen so far.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/kth-largest-element-in-a-stream/](https://leetcode.com/problems/kth-largest-element-in-a-stream/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/001-kth-largest-element-in-a-stream.html](https://amitxaidev.github.io/dsa/21-heaps/001-kth-largest-element-in-a-stream.html)
+
+## Understanding
+
+**Really asking:** after each new number, what's the k-th largest so far?
+
+**Why this works:** keep only the k largest numbers in a min-heap; its smallest (the top) is the k-th largest.
+
+**Example:** k = 3, start [4, 5, 8, 2] → heap {4, 5, 8}
+```text
+add 3 → {3,4,5,8} → drop 3 → top 4
+add 5 → {4,5,5,8} → drop 4 → top 5
+add 10 → drop 5 → {5, 8, 10} top 5
+```
 
 ## Hints
 

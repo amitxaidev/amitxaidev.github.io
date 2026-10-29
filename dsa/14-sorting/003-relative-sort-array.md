@@ -1,14 +1,26 @@
 # 3. Relative Sort Array
 
 **LeetCode 1122** · 🟢 Easy · Pattern: **Counting sort**
-🔗 Solve it here: [https://leetcode.com/problems/relative-sort-array/](https://leetcode.com/problems/relative-sort-array/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/003-relative-sort-array.html](https://amitxaidev.github.io/dsa/14-sorting/003-relative-sort-array.html)
 
 ## The problem, in short
 
 Sort arr1 so its elements follow the order given by arr2. Elements not in arr2 go at the end in ascending order. Values are 0..1000.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/relative-sort-array/](https://leetcode.com/problems/relative-sort-array/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/003-relative-sort-array.html](https://amitxaidev.github.io/dsa/14-sorting/003-relative-sort-array.html)
+
+## Understanding
+
+**Really asking:** order arr1 by arr2's order, leftovers ascending at the end.
+
+**Why this works:** count every value, write arr2's values in its order, then the rest from 0 to 1000.
+
+**Example:** arr1 [2,3,1,3,2,4,6,7,9,2,19], arr2 [2,1,4,3,9,6]
+```text
+2,2,2, 1, 4, 3,3, 9, 6, then 7, 19
+```
 
 ## Hints
 

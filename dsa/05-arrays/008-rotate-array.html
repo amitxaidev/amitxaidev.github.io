@@ -30,6 +30,7 @@
         <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
         <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
       </ul>
@@ -51,7 +52,15 @@
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Rotate an array to the right by k steps in place.</p>
-    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode.</p>
+    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/rotate-array/" target="_blank" rel="noopener">open problem ↗</a></p>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
+    <div class="understanding"><p><strong>Really asking:</strong> shift every element k steps to the right, wrapping around.</p>
+<p><strong>Why this works:</strong> rotating = moving the last k elements to the front. Reversing everything, then reversing the two parts, achieves exactly that with no extra array.</p>
+<p><strong>Example:</strong> [1, 2, 3, 4, 5, 6, 7], k = 3</p>
+<pre class="trace border rounded">reverse all:   7 6 5 4 3 2 1
+reverse first 3: 5 6 7 4 3 2 1
+reverse rest:  5 6 7 1 2 3 4</pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -113,7 +122,7 @@
         <li class="list-group-item"><strong>Space:</strong> O(1).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Arrays</a><div class="mt-2"><a class="btn btn-sm btn-outline-danger me-1 mb-1" href="https://youtu.be/4NdluWqUZ3c" target="_blank" rel="noopener">▶ Watch Ep 7</a><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 15 (coming soon)</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Arrays</a><div class="mt-2"><a class="btn btn-sm btn-outline-danger me-1 mb-1" href="https://youtu.be/4NdluWqUZ3c" target="_blank" rel="noopener">▶ Watch Ep 7</a><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 15 coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

@@ -30,6 +30,7 @@
         <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
         <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
       </ul>
@@ -51,7 +52,14 @@
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Trees in a row each give one fruit type. With two baskets (one type each), pick from a contiguous stretch of trees. Return the most fruit you can collect.</p>
-    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode.</p>
+    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/fruit-into-baskets/" target="_blank" rel="noopener">open problem ↗</a></p>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
+    <div class="understanding"><p><strong>Really asking:</strong> longest stretch with at most two kinds of fruit.</p>
+<p><strong>Why this works:</strong> keep counts per kind in the window; when a third kind enters, shrink from the left until one kind disappears.</p>
+<p><strong>Example:</strong> [1, 2, 3, 2, 2]</p>
+<pre class="trace border rounded">[1, 2] ok, add 3 → three kinds → drop 1
+[2, 3, 2, 2] → length 4</pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -109,7 +117,7 @@ class Solution {
         <li class="list-group-item"><strong>Space:</strong> O(1) — at most 3 keys.</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Sliding Window</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 10 (coming soon)</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Sliding Window</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 10 coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

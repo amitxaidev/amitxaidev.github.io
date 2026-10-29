@@ -1,14 +1,27 @@
 # 20. Critical Connections in a Network
 
 **LeetCode 1192** · 🔴 Hard · Pattern: **Tarjan's bridges**
-🔗 Solve it here: [https://leetcode.com/problems/critical-connections-in-a-network/](https://leetcode.com/problems/critical-connections-in-a-network/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/020-critical-connections-in-a-network.html](https://amitxaidev.github.io/dsa/23-graphs/020-critical-connections-in-a-network.html)
 
 ## The problem, in short
 
 In an undirected connected network, return every connection whose removal disconnects some servers (the bridges).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/critical-connections-in-a-network/](https://leetcode.com/problems/critical-connections-in-a-network/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/020-critical-connections-in-a-network.html](https://amitxaidev.github.io/dsa/23-graphs/020-critical-connections-in-a-network.html)
+
+## Understanding
+
+**Really asking:** edges whose removal cuts the network.
+
+**Why this works:** Tarjan: low[v] is the earliest node v's subtree can reach with a back edge. If low[v] > disc[u], the edge u-v is the only way back.
+
+**Example:** 0-1, 1-2, 2-0, 1-3
+```text
+triangle 0-1-2 has back edges
+1-3: low[3] = 3 > disc[1] → bridge [1,3]
+```
 
 ## Hints
 

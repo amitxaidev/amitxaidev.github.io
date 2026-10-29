@@ -1,14 +1,27 @@
 # 11. Reverse Pairs
 
 **LeetCode 493** · 🔴 Hard · Pattern: **Merge sort counting**
-🔗 Solve it here: [https://leetcode.com/problems/reverse-pairs/](https://leetcode.com/problems/reverse-pairs/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/011-reverse-pairs.html](https://amitxaidev.github.io/dsa/14-sorting/011-reverse-pairs.html)
 
 ## The problem, in short
 
 Count pairs (i, j) with i &lt; j and nums[i] > 2 × nums[j].
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/reverse-pairs/](https://leetcode.com/problems/reverse-pairs/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/011-reverse-pairs.html](https://amitxaidev.github.io/dsa/14-sorting/011-reverse-pairs.html)
+
+## Understanding
+
+**Really asking:** count pairs i &lt; j with nums[i] > 2 × nums[j].
+
+**Why this works:** inside merge sort both halves are sorted, so one pointer sweep counts pairs across the halves before merging.
+
+**Example:** [1, 3, 2, 3, 1]
+```text
+pairs: (3, 1) at indexes 1, 4 and (3, 1) at 3, 4
+answer 2
+```
 
 ## Hints
 

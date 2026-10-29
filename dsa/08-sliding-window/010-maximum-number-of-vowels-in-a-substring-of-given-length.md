@@ -1,14 +1,26 @@
 # 10. Maximum Number of Vowels in a Substring of Given Length
 
 **LeetCode 1456** · 🟡 Medium · Pattern: **Fixed window**
-🔗 Solve it here: [https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/](https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/010-maximum-number-of-vowels-in-a-substring-of-given-length.html](https://amitxaidev.github.io/dsa/08-sliding-window/010-maximum-number-of-vowels-in-a-substring-of-given-length.html)
 
 ## The problem, in short
 
 Return the most vowels found in any substring of length k.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/](https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/010-maximum-number-of-vowels-in-a-substring-of-given-length.html](https://amitxaidev.github.io/dsa/08-sliding-window/010-maximum-number-of-vowels-in-a-substring-of-given-length.html)
+
+## Understanding
+
+**Really asking:** the most vowels in any k-length window.
+
+**Why this works:** fixed window; +1 if the new letter is a vowel, -1 if the letter leaving was one.
+
+**Example:** "abciiidef", k = 3
+```text
+"abc" 1, "bci" 1, "cii" 2, "iii" 3 (best)
+```
 
 ## Hints
 

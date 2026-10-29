@@ -1,14 +1,26 @@
 # 9. Partition Equal Subset Sum
 
 **LeetCode 416** · 🟡 Medium · Pattern: **0/1 knapsack (subset sum)**
-🔗 Solve it here: [https://leetcode.com/problems/partition-equal-subset-sum/](https://leetcode.com/problems/partition-equal-subset-sum/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/009-partition-equal-subset-sum.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/009-partition-equal-subset-sum.html)
 
 ## The problem, in short
 
 Decide whether the array can be split into two subsets with equal sums.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/partition-equal-subset-sum/](https://leetcode.com/problems/partition-equal-subset-sum/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/009-partition-equal-subset-sum.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/009-partition-equal-subset-sum.html)
+
+## Understanding
+
+**Really asking:** can the numbers be split into two equal-sum halves?
+
+**Why this works:** find a subset summing to total / 2 — 0/1 knapsack with a boolean array, looping sums downward so each number is used once.
+
+**Example:** [1, 5, 11, 5], target 11
+```text
+reachable after 1: {0,1}; after 5: {0,1,5,6}; after 11: {…,11} ✓ → true
+```
 
 ## Hints
 

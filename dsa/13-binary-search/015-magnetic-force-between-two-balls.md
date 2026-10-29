@@ -1,14 +1,27 @@
 # 15. Magnetic Force Between Two Balls
 
 **LeetCode 1552** · 🟡 Medium · Pattern: **Binary search on the answer (aggressive cows)**
-🔗 Solve it here: [https://leetcode.com/problems/magnetic-force-between-two-balls/](https://leetcode.com/problems/magnetic-force-between-two-balls/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/015-magnetic-force-between-two-balls.html](https://amitxaidev.github.io/dsa/13-binary-search/015-magnetic-force-between-two-balls.html)
 
 ## The problem, in short
 
 Place m balls into baskets at given positions so that the minimum distance between any two balls is as large as possible. Return that distance.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/magnetic-force-between-two-balls/](https://leetcode.com/problems/magnetic-force-between-two-balls/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/015-magnetic-force-between-two-balls.html](https://amitxaidev.github.io/dsa/13-binary-search/015-magnetic-force-between-two-balls.html)
+
+## Understanding
+
+**Really asking:** place m balls to make the closest pair as far apart as possible ("aggressive cows").
+
+**Why this works:** if a minimum gap d is possible, every smaller gap is too. Binary search d and place balls greedily from the left.
+
+**Example:** positions [1, 2, 3, 4, 7], m = 3
+```text
+d=3: place at 1, 4, 7 ✓
+d=4: place at 1, 7 only ✗ → answer 3
+```
 
 ## Hints
 

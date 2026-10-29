@@ -1,14 +1,28 @@
 # 2. Sort Array by Increasing Frequency
 
 **LeetCode 1636** · 🟢 Easy · Pattern: **Custom comparator**
-🔗 Solve it here: [https://leetcode.com/problems/sort-array-by-increasing-frequency/](https://leetcode.com/problems/sort-array-by-increasing-frequency/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/002-sort-array-by-increasing-frequency.html](https://amitxaidev.github.io/dsa/14-sorting/002-sort-array-by-increasing-frequency.html)
 
 ## The problem, in short
 
 Sort numbers by how often they appear (rarest first). When two values are equally frequent, put the larger value first.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/sort-array-by-increasing-frequency/](https://leetcode.com/problems/sort-array-by-increasing-frequency/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/002-sort-array-by-increasing-frequency.html](https://amitxaidev.github.io/dsa/14-sorting/002-sort-array-by-increasing-frequency.html)
+
+## Understanding
+
+**Really asking:** sort by how often each value appears; ties go bigger value first.
+
+**Why this works:** count with a map, then sort with a two-key comparator.
+
+**Example:** [2, 3, 1, 3, 2]
+```text
+freq: 1→1, 2→2, 3→2
+1 first, then 3, 3 before 2, 2 (tie → bigger first)
+[1, 3, 3, 2, 2]
+```
 
 ## Hints
 

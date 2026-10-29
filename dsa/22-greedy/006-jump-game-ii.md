@@ -1,14 +1,27 @@
 # 6. Jump Game II
 
 **LeetCode 45** · 🟡 Medium · Pattern: **BFS by ranges**
-🔗 Solve it here: [https://leetcode.com/problems/jump-game-ii/](https://leetcode.com/problems/jump-game-ii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/006-jump-game-ii.html](https://amitxaidev.github.io/dsa/22-greedy/006-jump-game-ii.html)
 
 ## The problem, in short
 
 Same jumps as Jump Game, and the end is always reachable. Return the minimum number of jumps to reach the last index.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/jump-game-ii/](https://leetcode.com/problems/jump-game-ii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/006-jump-game-ii.html](https://amitxaidev.github.io/dsa/22-greedy/006-jump-game-ii.html)
+
+## Understanding
+
+**Really asking:** the fewest jumps to the end.
+
+**Why this works:** think in levels: all indexes reachable in j jumps form a range; the next range ends at the furthest point reachable from it.
+
+**Example:** [2, 3, 1, 1, 4]
+```text
+jump 1 covers indexes 1..2
+from there furthest 4 → jump 2 → done
+```
 
 ## Hints
 

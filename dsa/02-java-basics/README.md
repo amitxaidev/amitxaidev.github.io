@@ -6,6 +6,12 @@ Arrays, Strings, StringBuilder and Collections — the Java toolbox every later 
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/02-java-basics/  
 🧮 **10 problems** · 🟢 9 Easy · 🟡 1 Medium · 🔴 0 Hard
 
+## Understand the topic
+
+Before patterns, you need to be fast with Java's toolbox: fixed-size arrays (int[]), Strings (immutable), StringBuilder (for building text), and Collections like ArrayList, HashMap and HashSet.
+
+These problems each practise one tool. Pay attention to the small Java details interviewers notice: arrays can't grow, String comparison uses equals(), and StringBuilder avoids creating a new string on every +.
+
 ## How to use this list
 
 1. Watch the episode above.

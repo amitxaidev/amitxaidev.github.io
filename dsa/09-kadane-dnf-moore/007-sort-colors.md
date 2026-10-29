@@ -1,14 +1,28 @@
 # 7. Sort Colors
 
 **LeetCode 75** · 🟡 Medium · Pattern: **Dutch National Flag**
-🔗 Solve it here: [https://leetcode.com/problems/sort-colors/](https://leetcode.com/problems/sort-colors/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/007-sort-colors.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/007-sort-colors.html)
 
 ## The problem, in short
 
 The array contains only 0, 1 and 2. Sort it in place in one pass without using a library sort.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/sort-colors/](https://leetcode.com/problems/sort-colors/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/007-sort-colors.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/007-sort-colors.html)
+
+## Understanding
+
+**Really asking:** sort 0s, 1s and 2s in one pass, in place.
+
+**Why this works:** three zones: [0..low) are 0s, [low..mid) are 1s, (high..end] are 2s. Look at nums[mid] and send it to the right zone.
+
+**Example:** [2, 0, 2, 1, 1, 0]
+```text
+mid=0 is 2 → swap with high → [0, 0, 2, 1, 1, 2]
+0 → low, 0 → low, 2 → swap with high → [0, 0, 1, 1, 2, 2]
+1, 1 → mid moves → done
+```
 
 ## Hints
 

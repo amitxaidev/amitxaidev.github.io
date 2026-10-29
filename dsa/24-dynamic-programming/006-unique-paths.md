@@ -1,14 +1,28 @@
 # 6. Unique Paths
 
 **LeetCode 62** · 🟡 Medium · Pattern: **2D grid DP**
-🔗 Solve it here: [https://leetcode.com/problems/unique-paths/](https://leetcode.com/problems/unique-paths/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/006-unique-paths.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/006-unique-paths.html)
 
 ## The problem, in short
 
 A robot at the top-left of an m × n grid moves only right or down. Count the paths to the bottom-right.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/unique-paths/](https://leetcode.com/problems/unique-paths/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/006-unique-paths.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/006-unique-paths.html)
+
+## Understanding
+
+**Really asking:** paths from the top-left to the bottom-right moving right or down.
+
+**Why this works:** paths to a cell = paths from above + paths from the left.
+
+**Example:** 3 × 3 grid
+```text
+row 0: 1 1 1
+row 1: 1 2 3
+row 2: 1 3 6 → 6
+```
 
 ## Hints
 

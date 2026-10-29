@@ -1,14 +1,27 @@
 # 14. Find the Smallest Divisor Given a Threshold
 
 **LeetCode 1283** · 🟡 Medium · Pattern: **Binary search on the answer**
-🔗 Solve it here: [https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/014-find-the-smallest-divisor-given-a-threshold.html](https://amitxaidev.github.io/dsa/13-binary-search/014-find-the-smallest-divisor-given-a-threshold.html)
 
 ## The problem, in short
 
 Pick a positive divisor, divide every number by it rounding up, and sum the results. Return the smallest divisor whose sum is at most threshold.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/014-find-the-smallest-divisor-given-a-threshold.html](https://amitxaidev.github.io/dsa/13-binary-search/014-find-the-smallest-divisor-given-a-threshold.html)
+
+## Understanding
+
+**Really asking:** the smallest divisor so that the sum of rounded-up divisions stays within the threshold.
+
+**Why this works:** a bigger divisor makes the sum smaller or equal, so binary search the divisor.
+
+**Example:** [1, 2, 5, 9], threshold 6
+```text
+d=5: 1+1+1+2 = 5 ✓
+d=4: 1+1+2+3 = 7 ✗ → answer 5
+```
 
 ## Hints
 

@@ -1,14 +1,29 @@
 # 8. Shuffle String
 
 **LeetCode 1528** · 🟢 Easy · Pattern: **char[] basics**
-🔗 Solve it here: [https://leetcode.com/problems/shuffle-string/](https://leetcode.com/problems/shuffle-string/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/008-shuffle-string.html](https://amitxaidev.github.io/dsa/02-java-basics/008-shuffle-string.html)
 
 ## The problem, in short
 
 Character i of the string must move to position indices[i]. Return the rearranged string.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/shuffle-string/](https://leetcode.com/problems/shuffle-string/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/008-shuffle-string.html](https://amitxaidev.github.io/dsa/02-java-basics/008-shuffle-string.html)
+
+## Understanding
+
+**Really asking:** character i should end up at position indices[i].
+
+**Why this works:** Strings can't be changed, so place characters into a char[] and turn it into a String at the end.
+
+**Example:** s = "abc", indices = [2, 0, 1]
+```text
+'a' → res[2]
+'b' → res[0]
+'c' → res[1]
+res = "bca"
+```
 
 ## Hints
 

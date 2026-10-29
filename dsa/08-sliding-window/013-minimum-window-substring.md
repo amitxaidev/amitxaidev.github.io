@@ -1,14 +1,28 @@
 # 13. Minimum Window Substring
 
 **LeetCode 76** · 🔴 Hard · Pattern: **Variable window with need counts**
-🔗 Solve it here: [https://leetcode.com/problems/minimum-window-substring/](https://leetcode.com/problems/minimum-window-substring/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/013-minimum-window-substring.html](https://amitxaidev.github.io/dsa/08-sliding-window/013-minimum-window-substring.html)
 
 ## The problem, in short
 
 Return the shortest substring of s that contains every character of t (with multiplicity). Return "" if none exists.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/minimum-window-substring/](https://leetcode.com/problems/minimum-window-substring/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/013-minimum-window-substring.html](https://amitxaidev.github.io/dsa/08-sliding-window/013-minimum-window-substring.html)
+
+## Understanding
+
+**Really asking:** the shortest part of s containing all letters of t.
+
+**Why this works:** expand until everything is covered, then shrink from the left while it stays covered. A single "missing" counter tells you when you're covered.
+
+**Example:** s = "ADOBECODEBANC", t = "ABC"
+```text
+first cover "ADOBEC" (6)
+keep sliding … "BANC" covers A, B, C (4)
+answer "BANC"
+```
 
 ## Hints
 

@@ -1,14 +1,27 @@
 # 2. Sum of All Subset XOR Totals
 
 **LeetCode 1863** · 🟢 Easy · Pattern: **Pick / not pick recursion**
-🔗 Solve it here: [https://leetcode.com/problems/sum-of-all-subset-xor-totals/](https://leetcode.com/problems/sum-of-all-subset-xor-totals/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/002-sum-of-all-subset-xor-totals.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/002-sum-of-all-subset-xor-totals.html)
 
 ## The problem, in short
 
 For every subset of the array, take the XOR of its elements. Return the sum of all those XOR values.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/sum-of-all-subset-xor-totals/](https://leetcode.com/problems/sum-of-all-subset-xor-totals/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/002-sum-of-all-subset-xor-totals.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/002-sum-of-all-subset-xor-totals.html)
+
+## Understanding
+
+**Really asking:** XOR each subset, add all those results.
+
+**Why this works:** every element is either in or out — two branches. At the end of the array you have one finished subset.
+
+**Example:** [1, 3]
+```text
+{} → 0, {1} → 1, {3} → 3, {1,3} → 2
+total 6
+```
 
 ## Hints
 

@@ -1,14 +1,28 @@
 # 9. Next Permutation
 
 **LeetCode 31** · 🟡 Medium · Pattern: **Pivot + reverse**
-🔗 Solve it here: [https://leetcode.com/problems/next-permutation/](https://leetcode.com/problems/next-permutation/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/009-next-permutation.html](https://amitxaidev.github.io/dsa/05-arrays/009-next-permutation.html)
 
 ## The problem, in short
 
 Rearrange the array into the next larger ordering of its numbers in dictionary order. If it's already the largest, wrap around to the smallest. Do it in place.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/next-permutation/](https://leetcode.com/problems/next-permutation/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/009-next-permutation.html](https://amitxaidev.github.io/dsa/05-arrays/009-next-permutation.html)
+
+## Understanding
+
+**Really asking:** the next bigger arrangement of the same digits.
+
+**Why this works:** from the right, find the first digit that can be increased (smaller than its right neighbour). Swap it with the smallest bigger digit on its right, then make the tail as small as possible.
+
+**Example:** [1, 3, 5, 4, 2]
+```text
+pivot: 3 (since 3 < 5)
+smallest bigger on right: 4 → swap → [1, 4, 5, 3, 2]
+reverse tail [5,3,2] → [1, 4, 2, 3, 5]
+```
 
 ## Hints
 

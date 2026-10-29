@@ -1,14 +1,29 @@
 # 9. Count Primes
 
 **LeetCode 204** · 🟡 Medium · Pattern: **Sieve of Eratosthenes**
-🔗 Solve it here: [https://leetcode.com/problems/count-primes/](https://leetcode.com/problems/count-primes/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/009-count-primes.html](https://amitxaidev.github.io/dsa/03-math/009-count-primes.html)
 
 ## The problem, in short
 
 Count the prime numbers strictly less than n.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/count-primes/](https://leetcode.com/problems/count-primes/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/009-count-primes.html](https://amitxaidev.github.io/dsa/03-math/009-count-primes.html)
+
+## Understanding
+
+**Really asking:** how many primes are below n (n up to 5 million)?
+
+**Why this works:** instead of testing each number, cross out the multiples of each prime. Every composite gets crossed out by its smallest prime factor.
+
+**Example:** n = 10
+```text
+start: 2 3 4 5 6 7 8 9
+p=2: cross 4, 6, 8
+p=3: cross 9
+left: 2 3 5 7 → 4 primes
+```
 
 ## Hints
 

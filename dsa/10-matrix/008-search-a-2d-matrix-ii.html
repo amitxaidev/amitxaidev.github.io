@@ -30,6 +30,7 @@
         <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
         <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
       </ul>
@@ -51,7 +52,14 @@
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Rows are sorted left to right and columns top to bottom (but rows don&#x27;t continue each other). Decide if target is present.</p>
-    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode.</p>
+    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/search-a-2d-matrix-ii/" target="_blank" rel="noopener">open problem ↗</a></p>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
+    <div class="understanding"><p><strong>Really asking:</strong> rows and columns are each sorted; is the target there?</p>
+<p><strong>Why this works:</strong> start top-right. Going left decreases, going down increases, so each step throws away a whole row or column.</p>
+<p><strong>Example:</strong> target 5, top-right 15</p>
+<pre class="trace border rounded">15 &gt; 5 → left 11 → left 7 → left 4
+4 &lt; 5 → down 5 ✓</pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -104,7 +112,7 @@
         <li class="list-group-item"><strong>Space:</strong> O(1).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">2D Arrays &amp; Matrix</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 14 (coming soon)</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">2D Arrays &amp; Matrix</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 14 coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

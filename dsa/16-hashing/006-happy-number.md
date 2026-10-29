@@ -1,14 +1,26 @@
 # 6. Happy Number
 
 **LeetCode 202** · 🟢 Easy · Pattern: **HashSet cycle detection**
-🔗 Solve it here: [https://leetcode.com/problems/happy-number/](https://leetcode.com/problems/happy-number/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/006-happy-number.html](https://amitxaidev.github.io/dsa/16-hashing/006-happy-number.html)
 
 ## The problem, in short
 
 Replace a number by the sum of the squares of its digits, again and again. It's "happy" if this reaches 1; otherwise it loops forever. Decide which.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/happy-number/](https://leetcode.com/problems/happy-number/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/006-happy-number.html](https://amitxaidev.github.io/dsa/16-hashing/006-happy-number.html)
+
+## Understanding
+
+**Really asking:** does "sum of squared digits" reach 1, or loop forever?
+
+**Why this works:** a repeated number means a loop; a set detects it.
+
+**Example:** 19
+```text
+1+81 = 82 → 64+4 = 68 → 36+64 = 100 → 1 ✓ happy
+```
 
 ## Hints
 

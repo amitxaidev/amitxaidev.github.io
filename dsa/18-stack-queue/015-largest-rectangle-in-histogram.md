@@ -1,14 +1,27 @@
 # 15. Largest Rectangle in Histogram
 
 **LeetCode 84** · 🔴 Hard · Pattern: **Monotonic stack**
-🔗 Solve it here: [https://leetcode.com/problems/largest-rectangle-in-histogram/](https://leetcode.com/problems/largest-rectangle-in-histogram/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/015-largest-rectangle-in-histogram.html](https://amitxaidev.github.io/dsa/18-stack-queue/015-largest-rectangle-in-histogram.html)
 
 ## The problem, in short
 
 Bars of width 1 have given heights. Return the area of the largest rectangle that fits inside the histogram.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/largest-rectangle-in-histogram/](https://leetcode.com/problems/largest-rectangle-in-histogram/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/015-largest-rectangle-in-histogram.html](https://amitxaidev.github.io/dsa/18-stack-queue/015-largest-rectangle-in-histogram.html)
+
+## Understanding
+
+**Really asking:** the largest rectangle inside the bars.
+
+**Why this works:** each bar's best rectangle stretches until a shorter bar on each side. An increasing stack finds both sides when a bar is popped.
+
+**Example:** [2, 1, 5, 6, 2, 3]
+```text
+2 pops 6 → 6×1, then 5 → 5×2 = 10
+best 10
+```
 
 ## Hints
 

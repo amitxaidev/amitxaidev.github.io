@@ -30,6 +30,7 @@
         <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
         <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
       </ul>
@@ -51,7 +52,16 @@
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Design a set that supports insert, remove and getRandom (each element equally likely), all in average O(1) time.</p>
-    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode.</p>
+    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/insert-delete-getrandom-o1/" target="_blank" rel="noopener">open problem ↗</a></p>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
+    <div class="understanding"><p><strong>Really asking:</strong> a set where add, remove and &quot;pick a random element&quot; are all O(1).</p>
+<p><strong>Why this works:</strong> a list gives random access by index; a map gives value → index lookups. Remove becomes O(1) by moving the last element into the hole instead of shifting everything.</p>
+<p><strong>Example:</strong> insert 1, insert 2, insert 3, remove 1</p>
+<pre class="trace border rounded">list = [1, 2, 3], pos = {1:0, 2:1, 3:2}
+remove 1: last = 3 moves to index 0
+list = [3, 2], pos = {3:0, 2:1}
+getRandom picks index 0 or 1 → 3 or 2</pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">

@@ -1,14 +1,27 @@
 # 5. Permutation in String
 
 **LeetCode 567** · 🟡 Medium · Pattern: **Fixed window + counts**
-🔗 Solve it here: [https://leetcode.com/problems/permutation-in-string/](https://leetcode.com/problems/permutation-in-string/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/005-permutation-in-string.html](https://amitxaidev.github.io/dsa/08-sliding-window/005-permutation-in-string.html)
 
 ## The problem, in short
 
 Decide whether some rearrangement of s1 appears as a contiguous substring of s2.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/permutation-in-string/](https://leetcode.com/problems/permutation-in-string/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/005-permutation-in-string.html](https://amitxaidev.github.io/dsa/08-sliding-window/005-permutation-in-string.html)
+
+## Understanding
+
+**Really asking:** does some rearrangement of s1 appear inside s2?
+
+**Why this works:** a rearrangement has the same letter counts. Slide a window of length |s1| over s2 and compare counts.
+
+**Example:** s1 = "ab", s2 = "eidbaooo"
+```text
+"ei", "id", "db" → no
+"ba" → counts a1 b1 match → true
+```
 
 ## Hints
 

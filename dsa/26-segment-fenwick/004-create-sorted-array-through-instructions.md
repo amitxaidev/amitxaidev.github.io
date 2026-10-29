@@ -1,14 +1,26 @@
 # 4. Create Sorted Array through Instructions
 
 **LeetCode 1649** · 🔴 Hard · Pattern: **Fenwick tree counting**
-🔗 Solve it here: [https://leetcode.com/problems/create-sorted-array-through-instructions/](https://leetcode.com/problems/create-sorted-array-through-instructions/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/26-segment-fenwick/004-create-sorted-array-through-instructions.html](https://amitxaidev.github.io/dsa/26-segment-fenwick/004-create-sorted-array-through-instructions.html)
 
 ## The problem, in short
 
 Insert numbers one by one into a sorted container. Each insertion costs min(count of existing numbers strictly less, count strictly greater). Return the total cost modulo 1e9+7.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/create-sorted-array-through-instructions/](https://leetcode.com/problems/create-sorted-array-through-instructions/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/26-segment-fenwick/004-create-sorted-array-through-instructions.html](https://amitxaidev.github.io/dsa/26-segment-fenwick/004-create-sorted-array-through-instructions.html)
+
+## Understanding
+
+**Really asking:** inserting each number costs min(smaller already in, bigger already in); total cost?
+
+**Why this works:** a Fenwick tree indexed by value counts how many inserted numbers are below or above x in O(log M).
+
+**Example:** [1, 5, 6, 2]
+```text
+1: 0, 5: 0, 6: 0, 2: min(1 smaller, 2 bigger) = 1 → total 1
+```
 
 ## Hints
 

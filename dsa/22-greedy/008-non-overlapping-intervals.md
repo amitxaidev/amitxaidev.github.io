@@ -1,14 +1,27 @@
 # 8. Non-overlapping Intervals
 
 **LeetCode 435** · 🟡 Medium · Pattern: **Sort by end (activity selection)**
-🔗 Solve it here: [https://leetcode.com/problems/non-overlapping-intervals/](https://leetcode.com/problems/non-overlapping-intervals/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/008-non-overlapping-intervals.html](https://amitxaidev.github.io/dsa/22-greedy/008-non-overlapping-intervals.html)
 
 ## The problem, in short
 
 Return the minimum number of intervals to remove so the rest don't overlap (touching ends are fine).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/non-overlapping-intervals/](https://leetcode.com/problems/non-overlapping-intervals/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/008-non-overlapping-intervals.html](https://amitxaidev.github.io/dsa/22-greedy/008-non-overlapping-intervals.html)
+
+## Understanding
+
+**Really asking:** remove the fewest intervals so none overlap.
+
+**Why this works:** keep the interval that ends earliest; it leaves the most room for the rest.
+
+**Example:** [[1,2],[2,3],[3,4],[1,3]] sorted by end
+```text
+keep [1,2], [2,3], skip [1,3], keep [3,4]
+removed 1
+```
 
 ## Hints
 

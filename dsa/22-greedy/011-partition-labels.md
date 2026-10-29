@@ -1,14 +1,27 @@
 # 11. Partition Labels
 
 **LeetCode 763** · 🟡 Medium · Pattern: **Last occurrence**
-🔗 Solve it here: [https://leetcode.com/problems/partition-labels/](https://leetcode.com/problems/partition-labels/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/011-partition-labels.html](https://amitxaidev.github.io/dsa/22-greedy/011-partition-labels.html)
 
 ## The problem, in short
 
 Split a string into as many parts as possible so each letter appears in at most one part. Return the part sizes.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/partition-labels/](https://leetcode.com/problems/partition-labels/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/011-partition-labels.html](https://amitxaidev.github.io/dsa/22-greedy/011-partition-labels.html)
+
+## Understanding
+
+**Really asking:** cut the string into as many parts as possible with no letter in two parts.
+
+**Why this works:** a part must reach the last occurrence of every letter inside it; cut when the scan reaches that point.
+
+**Example:** "ababcbacadefegdehijhklij"
+```text
+first part ends at last 'a' (index 8) → 9
+then "defegde" → 7, then "hijhklij" → 8
+```
 
 ## Hints
 

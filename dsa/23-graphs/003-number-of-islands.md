@@ -1,14 +1,27 @@
 # 3. Number of Islands
 
 **LeetCode 200** · 🟡 Medium · Pattern: **Connected components on a grid**
-🔗 Solve it here: [https://leetcode.com/problems/number-of-islands/](https://leetcode.com/problems/number-of-islands/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/003-number-of-islands.html](https://amitxaidev.github.io/dsa/23-graphs/003-number-of-islands.html)
 
 ## The problem, in short
 
 In a grid of '1' (land) and '0' (water), count islands — groups of land connected up/down/left/right.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/number-of-islands/](https://leetcode.com/problems/number-of-islands/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/003-number-of-islands.html](https://amitxaidev.github.io/dsa/23-graphs/003-number-of-islands.html)
+
+## Understanding
+
+**Really asking:** how many separate groups of land?
+
+**Why this works:** each time you find new land, count one island and sink the whole island with DFS so it isn't counted again.
+
+**Example:** 1 1 0 / 0 1 0 / 0 0 1
+```text
+first island: top-left 3 cells
+second island: bottom-right cell → 2
+```
 
 ## Hints
 

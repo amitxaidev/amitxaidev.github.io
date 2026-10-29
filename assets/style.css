@@ -169,3 +169,12 @@ pre code.hljs { background: transparent; padding: 0; }
   .path::after, .array-strip .window, .step-icon * { animation: none !important; }
   .step-icon .brackets, .step-icon .fill, .step-icon .tick { stroke-dashoffset: 0 !important; }
 }
+
+/* understanding traces */
+.trace { padding: .75rem 1rem; font-size: .85rem; background: var(--bs-tertiary-bg); white-space: pre; overflow-x: auto; }
+.understanding p:last-child { margin-bottom: 0; }
+
+/* about the creator */
+.about-photo { width: 220px; height: 220px; object-fit: cover; border: 4px solid var(--brand); }
+.creator:hover { text-decoration: none; }
+.creator:hover span { color: #fff; }

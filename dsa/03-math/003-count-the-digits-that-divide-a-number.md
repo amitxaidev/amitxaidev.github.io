@@ -1,14 +1,29 @@
 # 3. Count the Digits That Divide a Number
 
 **LeetCode 2520** · 🟢 Easy · Pattern: **Digit extraction + modulo**
-🔗 Solve it here: [https://leetcode.com/problems/count-the-digits-that-divide-a-number/](https://leetcode.com/problems/count-the-digits-that-divide-a-number/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/003-count-the-digits-that-divide-a-number.html](https://amitxaidev.github.io/dsa/03-math/003-count-the-digits-that-divide-a-number.html)
 
 ## The problem, in short
 
 Count how many digits of num (counting repeats) divide num evenly. num contains no zero digits.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/count-the-digits-that-divide-a-number/](https://leetcode.com/problems/count-the-digits-that-divide-a-number/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/003-count-the-digits-that-divide-a-number.html](https://amitxaidev.github.io/dsa/03-math/003-count-the-digits-that-divide-a-number.html)
+
+## Understanding
+
+**Really asking:** for each digit of the number, does it divide the whole number evenly?
+
+**Why this works:** walk the digits on a copy, but test divisibility on the original number.
+
+**Example:** num = 1248
+```text
+8: 1248 % 8 = 0 ✓
+4: 1248 % 4 = 0 ✓
+2: 1248 % 2 = 0 ✓
+1: 1248 % 1 = 0 ✓   → 4
+```
 
 ## Hints
 

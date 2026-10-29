@@ -1,14 +1,27 @@
 # 5. Find All Numbers Disappeared in an Array
 
 **LeetCode 448** · 🟢 Easy · Pattern: **Index marking**
-🔗 Solve it here: [https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/005-find-all-numbers-disappeared-in-an-array.html](https://amitxaidev.github.io/dsa/05-arrays/005-find-all-numbers-disappeared-in-an-array.html)
 
 ## The problem, in short
 
 An array of n numbers has values in 1..n, some repeated. Return all values in 1..n that never appear, using no extra space besides the output.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/005-find-all-numbers-disappeared-in-an-array.html](https://amitxaidev.github.io/dsa/05-arrays/005-find-all-numbers-disappeared-in-an-array.html)
+
+## Understanding
+
+**Really asking:** values are 1..n; which of them never appear?
+
+**Why this works:** use the array as its own checklist. Seeing value v flips nums[v-1] negative. Positions that stay positive were never "visited".
+
+**Example:** [4, 3, 2, 7, 8, 2, 3, 1]
+```text
+after marking: [-4, -3, -2, -7, 8, 2, -3, -1]
+index 4 and 5 still positive → 5 and 6 are missing
+```
 
 ## Hints
 

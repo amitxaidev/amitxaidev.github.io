@@ -1,14 +1,28 @@
 # 2. Range Sum Query - Immutable
 
 **LeetCode 303** · 🟢 Easy · Pattern: **Prefix array**
-🔗 Solve it here: [https://leetcode.com/problems/range-sum-query-immutable/](https://leetcode.com/problems/range-sum-query-immutable/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/002-range-sum-query-immutable.html](https://amitxaidev.github.io/dsa/06-prefix-sum/002-range-sum-query-immutable.html)
 
 ## The problem, in short
 
 Design a class that answers many queries "sum of nums from index left to right" on a fixed array.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/range-sum-query-immutable/](https://leetcode.com/problems/range-sum-query-immutable/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/002-range-sum-query-immutable.html](https://amitxaidev.github.io/dsa/06-prefix-sum/002-range-sum-query-immutable.html)
+
+## Understanding
+
+**Really asking:** answer "sum from left to right" many times on the same array.
+
+**Why this works:** build the prefix totals once; every query is then a subtraction.
+
+**Example:** nums = [-2, 0, 3, -5, 2, -1]
+```text
+prefix = [0, -2, -2, 1, -4, -2, -3]
+sum(0..2) = prefix[3] - prefix[0] = 1
+sum(2..5) = prefix[6] - prefix[2] = -1
+```
 
 ## Hints
 

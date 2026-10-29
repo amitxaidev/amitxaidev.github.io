@@ -6,6 +6,12 @@ Insert, delete, validate, kth smallest and BST iterators.
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/20-bst/  
 🧮 **12 problems** · 🟢 4 Easy · 🟡 8 Medium · 🔴 0 Hard
 
+## Understand the topic
+
+A binary search tree keeps everything smaller on the left and everything bigger on the right, at every node. So you can search by going one way, like binary search on a tree: O(h), where h is the height.
+
+Two facts solve most BST problems. An inorder traversal visits the values in sorted order. And you can pass an allowed range (min, max) down the tree.
+
 ## How to use this list
 
 1. Watch the episode above.

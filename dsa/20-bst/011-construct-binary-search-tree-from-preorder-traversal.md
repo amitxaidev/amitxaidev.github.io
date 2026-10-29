@@ -1,14 +1,27 @@
 # 11. Construct Binary Search Tree from Preorder Traversal
 
 **LeetCode 1008** · 🟡 Medium · Pattern: **Upper-bound recursion**
-🔗 Solve it here: [https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/011-construct-binary-search-tree-from-preorder-traversal.html](https://amitxaidev.github.io/dsa/20-bst/011-construct-binary-search-tree-from-preorder-traversal.html)
 
 ## The problem, in short
 
 Rebuild a BST from its preorder traversal.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/011-construct-binary-search-tree-from-preorder-traversal.html](https://amitxaidev.github.io/dsa/20-bst/011-construct-binary-search-tree-from-preorder-traversal.html)
+
+## Understanding
+
+**Really asking:** rebuild a BST from preorder.
+
+**Why this works:** give each node an upper limit; a value goes into the current subtree only while it's below that limit.
+
+**Example:** [8, 5, 1, 7, 10, 12]
+```text
+8 → left (below 8): 5 → 1, 7
+right: 10 → 12
+```
 
 ## Hints
 

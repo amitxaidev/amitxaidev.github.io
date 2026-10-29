@@ -1,14 +1,30 @@
 # 7. Merge Sorted Array
 
 **LeetCode 88** · 🟢 Easy · Pattern: **Merge from the back**
-🔗 Solve it here: [https://leetcode.com/problems/merge-sorted-array/](https://leetcode.com/problems/merge-sorted-array/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/007-merge-sorted-array.html](https://amitxaidev.github.io/dsa/05-arrays/007-merge-sorted-array.html)
 
 ## The problem, in short
 
 nums1 has m sorted values followed by n empty slots; nums2 has n sorted values. Merge nums2 into nums1 so the result is sorted, in place.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/merge-sorted-array/](https://leetcode.com/problems/merge-sorted-array/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/007-merge-sorted-array.html](https://amitxaidev.github.io/dsa/05-arrays/007-merge-sorted-array.html)
+
+## Understanding
+
+**Really asking:** merge two sorted arrays into the first one, which has empty space at the end.
+
+**Why this works:** filling from the front would overwrite numbers we still need. The back is empty, so place the largest numbers there first.
+
+**Example:** nums1 = [1, 2, 3, 0, 0, 0], nums2 = [2, 5, 6]
+```text
+compare 3 vs 6 → put 6 at end
+3 vs 5 → put 5
+3 vs 2 → put 3
+2 vs 2 → put 2 (from nums2)
+result [1, 2, 2, 3, 5, 6]
+```
 
 ## Hints
 

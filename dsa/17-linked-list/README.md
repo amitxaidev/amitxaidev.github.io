@@ -6,6 +6,12 @@ Reverse, fast & slow pointers, merge, and LRU cache.
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/17-linked-list/  
 🧮 **19 problems** · 🟢 7 Easy · 🟡 9 Medium · 🔴 3 Hard
 
+## Understand the topic
+
+A linked list is a chain of nodes, where each node knows only the next one (and in a doubly linked list, the previous one too). You can't jump to index i; you walk. In exchange, inserting or removing next to a node you already hold is O(1).
+
+Four tools solve almost everything here. A dummy head node removes edge cases at the front. Reversing with prev, cur and next handles flips. Fast and slow pointers find the middle and detect cycles. A HashMap plus a doubly linked list gives O(1) caches. Draw the arrows on paper before you code.
+
 ## How to use this list
 
 1. Watch the episode above.

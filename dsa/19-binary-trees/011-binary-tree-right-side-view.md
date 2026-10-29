@@ -1,14 +1,26 @@
 # 11. Binary Tree Right Side View
 
 **LeetCode 199** · 🟡 Medium · Pattern: **Rightmost per level**
-🔗 Solve it here: [https://leetcode.com/problems/binary-tree-right-side-view/](https://leetcode.com/problems/binary-tree-right-side-view/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/011-binary-tree-right-side-view.html](https://amitxaidev.github.io/dsa/19-binary-trees/011-binary-tree-right-side-view.html)
 
 ## The problem, in short
 
 Imagine standing to the right of the tree. Return the values you can see, from top to bottom.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/binary-tree-right-side-view/](https://leetcode.com/problems/binary-tree-right-side-view/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/011-binary-tree-right-side-view.html](https://amitxaidev.github.io/dsa/19-binary-trees/011-binary-tree-right-side-view.html)
+
+## Understanding
+
+**Really asking:** the last node of every level.
+
+**Why this works:** DFS that visits right before left; the first node reached at each depth is the one you see.
+
+**Example:** 1 (2 (-, 5), 3 (-, 4))
+```text
+depth 0: 1, depth 1: 3, depth 2: 4 → [1, 3, 4]
+```
 
 ## Hints
 

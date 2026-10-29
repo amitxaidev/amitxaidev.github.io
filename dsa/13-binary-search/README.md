@@ -6,6 +6,12 @@ Lower/upper bound, rotated arrays and binary search on the answer.
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/13-binary-search/  
 🧮 **17 problems** · 🟢 5 Easy · 🟡 10 Medium · 🔴 2 Hard
 
+## Understand the topic
+
+Binary search cuts the search space in half each step, so a million items take about 20 steps. It doesn't really need a sorted array; it needs a yes/no question whose answers look like F F F T T T. Then you find the first T.
+
+There are two flavours. First, searching an array (lower bound, rotated arrays, peaks). Second, "binary search on the answer": guess a value like a speed or a capacity, check whether it's feasible, and move the guess.
+
 ## How to use this list
 
 1. Watch the episode above.

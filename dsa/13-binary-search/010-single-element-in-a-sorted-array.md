@@ -1,14 +1,28 @@
 # 10. Single Element in a Sorted Array
 
 **LeetCode 540** · 🟡 Medium · Pattern: **Pair parity**
-🔗 Solve it here: [https://leetcode.com/problems/single-element-in-a-sorted-array/](https://leetcode.com/problems/single-element-in-a-sorted-array/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/010-single-element-in-a-sorted-array.html](https://amitxaidev.github.io/dsa/13-binary-search/010-single-element-in-a-sorted-array.html)
 
 ## The problem, in short
 
 In a sorted array every value appears twice except one. Find the single one in O(log n) time and O(1) space.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/single-element-in-a-sorted-array/](https://leetcode.com/problems/single-element-in-a-sorted-array/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/010-single-element-in-a-sorted-array.html](https://amitxaidev.github.io/dsa/13-binary-search/010-single-element-in-a-sorted-array.html)
+
+## Understanding
+
+**Really asking:** everything is in pairs except one; find it in O(log n).
+
+**Why this works:** before the single element, pairs start at even indexes; after it, at odd ones. Check the pair at an even mid.
+
+**Example:** [1, 1, 2, 3, 3, 4, 4, 8, 8]
+```text
+mid 4 (3) pairs with index 5? (4) no → hi 4
+mid 2 (2) pairs with 3? (3) no → hi 2
+mid 0 (1) pairs with 1 ✓ → lo 2 → answer 2
+```
 
 ## Hints
 

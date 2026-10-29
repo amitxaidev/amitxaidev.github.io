@@ -1,14 +1,26 @@
 # 16. Edit Distance
 
 **LeetCode 72** · 🟡 Medium · Pattern: **2D DP on two strings**
-🔗 Solve it here: [https://leetcode.com/problems/edit-distance/](https://leetcode.com/problems/edit-distance/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/016-edit-distance.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/016-edit-distance.html)
 
 ## The problem, in short
 
 Return the minimum number of single-character inserts, deletes and replacements needed to turn word1 into word2.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/edit-distance/](https://leetcode.com/problems/edit-distance/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/016-edit-distance.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/016-edit-distance.html)
+
+## Understanding
+
+**Really asking:** fewest inserts, deletes and replaces to turn one word into another.
+
+**Why this works:** dp[i][j] for prefixes: same letter → no cost; otherwise 1 + the best of replace, delete or insert.
+
+**Example:** "horse" → "ros"
+```text
+horse → rorse (replace h) → rose (delete r) → ros (delete e) → 3
+```
 
 ## Hints
 

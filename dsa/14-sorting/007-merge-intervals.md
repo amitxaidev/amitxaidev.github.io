@@ -1,14 +1,27 @@
 # 7. Merge Intervals
 
 **LeetCode 56** · 🟡 Medium · Pattern: **Sort by start**
-🔗 Solve it here: [https://leetcode.com/problems/merge-intervals/](https://leetcode.com/problems/merge-intervals/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/007-merge-intervals.html](https://amitxaidev.github.io/dsa/14-sorting/007-merge-intervals.html)
 
 ## The problem, in short
 
 Merge all overlapping intervals and return the non-overlapping result.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/merge-intervals/](https://leetcode.com/problems/merge-intervals/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/007-merge-intervals.html](https://amitxaidev.github.io/dsa/14-sorting/007-merge-intervals.html)
+
+## Understanding
+
+**Really asking:** merge overlapping intervals.
+
+**Why this works:** after sorting by start, an interval either overlaps the last merged one (extend it) or starts a new one.
+
+**Example:** [[1,3],[2,6],[8,10],[15,18]]
+```text
+[1,3]+[2,6] → [1,6]
+[8,10] new, [15,18] new
+```
 
 ## Hints
 

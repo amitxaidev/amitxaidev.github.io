@@ -1,14 +1,28 @@
 # 8. Group Anagrams
 
 **LeetCode 49** · 🟡 Medium · Pattern: **Canonical key + HashMap**
-🔗 Solve it here: [https://leetcode.com/problems/group-anagrams/](https://leetcode.com/problems/group-anagrams/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/008-group-anagrams.html](https://amitxaidev.github.io/dsa/11-strings/008-group-anagrams.html)
 
 ## The problem, in short
 
 Group the strings so that anagrams end up in the same group.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/group-anagrams/](https://leetcode.com/problems/group-anagrams/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/008-group-anagrams.html](https://amitxaidev.github.io/dsa/11-strings/008-group-anagrams.html)
+
+## Understanding
+
+**Really asking:** put anagrams in the same group.
+
+**Why this works:** anagrams share the same sorted spelling; use it as a HashMap key.
+
+**Example:** ["eat","tea","tan","ate","nat","bat"]
+```text
+"aet" → eat, tea, ate
+"ant" → tan, nat
+"abt" → bat
+```
 
 ## Hints
 

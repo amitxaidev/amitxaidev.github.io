@@ -1,14 +1,28 @@
 # 5. Maximum Sum Circular Subarray
 
 **LeetCode 918** · 🟡 Medium · Pattern: **Kadane max & min**
-🔗 Solve it here: [https://leetcode.com/problems/maximum-sum-circular-subarray/](https://leetcode.com/problems/maximum-sum-circular-subarray/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/005-maximum-sum-circular-subarray.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/005-maximum-sum-circular-subarray.html)
 
 ## The problem, in short
 
 The array is circular (the end wraps to the start). Return the largest possible sum of a non-empty subarray that uses each element at most once.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/maximum-sum-circular-subarray/](https://leetcode.com/problems/maximum-sum-circular-subarray/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/005-maximum-sum-circular-subarray.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/005-maximum-sum-circular-subarray.html)
+
+## Understanding
+
+**Really asking:** best subarray when the array wraps around.
+
+**Why this works:** either the best piece doesn't wrap (normal Kadane), or it wraps, which means it's the total minus the worst middle piece.
+
+**Example:** [5, -3, 5]
+```text
+no wrap (Kadane): 5, 2, 7 → best 7
+wrap: total 7 - min piece (-3) = 10 → [5, 5]
+answer 10
+```
 
 ## Hints
 

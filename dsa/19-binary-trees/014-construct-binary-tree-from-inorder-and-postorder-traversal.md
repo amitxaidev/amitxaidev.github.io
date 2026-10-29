@@ -1,14 +1,26 @@
 # 14. Construct Binary Tree from Inorder and Postorder Traversal
 
 **LeetCode 106** · 🟡 Medium · Pattern: **Divide by root position**
-🔗 Solve it here: [https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/014-construct-binary-tree-from-inorder-and-postorder-traversal.html](https://amitxaidev.github.io/dsa/19-binary-trees/014-construct-binary-tree-from-inorder-and-postorder-traversal.html)
 
 ## The problem, in short
 
 Rebuild a binary tree (with unique values) from its inorder and postorder traversals.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/014-construct-binary-tree-from-inorder-and-postorder-traversal.html](https://amitxaidev.github.io/dsa/19-binary-trees/014-construct-binary-tree-from-inorder-and-postorder-traversal.html)
+
+## Understanding
+
+**Really asking:** rebuild from inorder and postorder.
+
+**Why this works:** postorder's last value is the root. Read postorder backwards: root, then the right subtree, then the left.
+
+**Example:** in [9, 3, 15, 20, 7], post [9, 15, 7, 20, 3]
+```text
+root 3 → build right from 20 (left 15, right 7) → then left 9
+```
 
 ## Hints
 

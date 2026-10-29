@@ -1,14 +1,26 @@
 # 17. Redundant Connection
 
 **LeetCode 684** · 🟡 Medium · Pattern: **Union-Find**
-🔗 Solve it here: [https://leetcode.com/problems/redundant-connection/](https://leetcode.com/problems/redundant-connection/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/017-redundant-connection.html](https://amitxaidev.github.io/dsa/23-graphs/017-redundant-connection.html)
 
 ## The problem, in short
 
 A tree with n nodes had one extra edge added. Return an edge that can be removed to leave a tree (if several, the one that appears last in the input).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/redundant-connection/](https://leetcode.com/problems/redundant-connection/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/017-redundant-connection.html](https://amitxaidev.github.io/dsa/23-graphs/017-redundant-connection.html)
+
+## Understanding
+
+**Really asking:** which extra edge turned the tree into a graph with a cycle?
+
+**Why this works:** add edges with Union-Find; the first edge whose ends are already connected closes the cycle.
+
+**Example:** [[1,2],[1,3],[2,3]]
+```text
+1-2 join, 1-3 join, 2-3 already connected → [2,3]
+```
 
 ## Hints
 

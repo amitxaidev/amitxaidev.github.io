@@ -1,14 +1,26 @@
 # 4. Merge Two Sorted Lists
 
 **LeetCode 21** · 🟢 Easy · Pattern: **Dummy head merge**
-🔗 Solve it here: [https://leetcode.com/problems/merge-two-sorted-lists/](https://leetcode.com/problems/merge-two-sorted-lists/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/004-merge-two-sorted-lists.html](https://amitxaidev.github.io/dsa/17-linked-list/004-merge-two-sorted-lists.html)
 
 ## The problem, in short
 
 Merge two sorted linked lists into one sorted list by splicing their nodes together.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/merge-two-sorted-lists/](https://leetcode.com/problems/merge-two-sorted-lists/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/004-merge-two-sorted-lists.html](https://amitxaidev.github.io/dsa/17-linked-list/004-merge-two-sorted-lists.html)
+
+## Understanding
+
+**Really asking:** zip two sorted lists into one sorted list.
+
+**Why this works:** the next node is always the smaller of the two heads; a dummy node holds the start.
+
+**Example:** 1→2→4 and 1→3→4
+```text
+1, 1, 2, 3, 4, 4
+```
 
 ## Hints
 

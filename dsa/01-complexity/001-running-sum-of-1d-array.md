@@ -1,14 +1,29 @@
 # 1. Running Sum of 1d Array
 
 **LeetCode 1480** · 🟢 Easy · Pattern: **Single pass**
-🔗 Solve it here: [https://leetcode.com/problems/running-sum-of-1d-array/](https://leetcode.com/problems/running-sum-of-1d-array/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/01-complexity/001-running-sum-of-1d-array.html](https://amitxaidev.github.io/dsa/01-complexity/001-running-sum-of-1d-array.html)
 
 ## The problem, in short
 
 Given an array, return a new array where each position holds the total of all elements from index 0 up to that position.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/running-sum-of-1d-array/](https://leetcode.com/problems/running-sum-of-1d-array/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/01-complexity/001-running-sum-of-1d-array.html](https://amitxaidev.github.io/dsa/01-complexity/001-running-sum-of-1d-array.html)
+
+## Understanding
+
+**Really asking:** for each position, what is the total of everything up to here? The answer for one position is just the answer for the position before it plus one more number.
+
+**Why this works:** we reuse the total we already have instead of adding everything again. That turns O(n²) into O(n).
+
+**Example:** nums = [1, 2, 3, 4]
+```text
+i=0: total = 1                → [1, 2, 3, 4]
+i=1: total = 1 + 2 = 3        → [1, 3, 3, 4]
+i=2: total = 3 + 3 = 6        → [1, 3, 6, 4]
+i=3: total = 6 + 4 = 10       → [1, 3, 6, 10]
+```
 
 ## Hints
 

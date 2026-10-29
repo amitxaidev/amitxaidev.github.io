@@ -1,14 +1,28 @@
 # 6. Largest Number
 
 **LeetCode 179** · 🟡 Medium · Pattern: **Comparator on concatenation**
-🔗 Solve it here: [https://leetcode.com/problems/largest-number/](https://leetcode.com/problems/largest-number/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/006-largest-number.html](https://amitxaidev.github.io/dsa/14-sorting/006-largest-number.html)
 
 ## The problem, in short
 
 Arrange non-negative integers so that, written side by side, they form the largest possible number. Return it as a string.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/largest-number/](https://leetcode.com/problems/largest-number/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/006-largest-number.html](https://amitxaidev.github.io/dsa/14-sorting/006-largest-number.html)
+
+## Understanding
+
+**Really asking:** arrange numbers to form the biggest possible number.
+
+**Why this works:** compare two numbers by gluing them both ways: put a first if a + b > b + a as strings.
+
+**Example:** [3, 30, 34, 5, 9]
+```text
+"9" first, then "5", then "34" ("343" > "334")
+"3" before "30" ("330" > "303")
+"9534330"
+```
 
 ## Hints
 

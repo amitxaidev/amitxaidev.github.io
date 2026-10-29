@@ -1,14 +1,28 @@
 # 14. Copy List with Random Pointer
 
 **LeetCode 138** · 🟡 Medium · Pattern: **Interleave copies**
-🔗 Solve it here: [https://leetcode.com/problems/copy-list-with-random-pointer/](https://leetcode.com/problems/copy-list-with-random-pointer/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/014-copy-list-with-random-pointer.html](https://amitxaidev.github.io/dsa/17-linked-list/014-copy-list-with-random-pointer.html)
 
 ## The problem, in short
 
 Each node has next and random pointers (random can point anywhere or be null). Return a deep copy of the list.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/copy-list-with-random-pointer/](https://leetcode.com/problems/copy-list-with-random-pointer/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/014-copy-list-with-random-pointer.html](https://amitxaidev.github.io/dsa/17-linked-list/014-copy-list-with-random-pointer.html)
+
+## Understanding
+
+**Really asking:** deep-copy a list whose nodes also have a random pointer.
+
+**Why this works:** put each copy right after its original. Then copy.random = original.random.next, and finally split the two lists.
+
+**Example:** A(random C) → B → C
+```text
+A → A' → B → B' → C → C'
+A'.random = A.random.next = C'
+split → A' → B' → C'
+```
 
 ## Hints
 

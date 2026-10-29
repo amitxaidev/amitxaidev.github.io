@@ -1,14 +1,28 @@
 # 11. String to Integer (atoi)
 
 **LeetCode 8** · 🟡 Medium · Pattern: **Parsing with overflow clamp**
-🔗 Solve it here: [https://leetcode.com/problems/string-to-integer-atoi/](https://leetcode.com/problems/string-to-integer-atoi/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/011-string-to-integer-atoi.html](https://amitxaidev.github.io/dsa/11-strings/011-string-to-integer-atoi.html)
 
 ## The problem, in short
 
 Parse an integer from a string: skip leading spaces, read an optional sign, read digits until a non-digit, and clamp the result to the 32-bit range.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/string-to-integer-atoi/](https://leetcode.com/problems/string-to-integer-atoi/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/011-string-to-integer-atoi.html](https://amitxaidev.github.io/dsa/11-strings/011-string-to-integer-atoi.html)
+
+## Understanding
+
+**Really asking:** read an integer the way C's atoi does: spaces, sign, digits, then stop; clamp to int range.
+
+**Why this works:** do the steps in order, and check for overflow before adding each digit.
+
+**Example:** "   -42abc"
+```text
+skip spaces → '-' sign
+digits 4, 2 → 42, stop at 'a'
+→ -42
+```
 
 ## Hints
 

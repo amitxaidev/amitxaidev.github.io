@@ -1,14 +1,26 @@
 # 19. Word Ladder
 
 **LeetCode 127** · 🔴 Hard · Pattern: **BFS on implicit graph**
-🔗 Solve it here: [https://leetcode.com/problems/word-ladder/](https://leetcode.com/problems/word-ladder/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/019-word-ladder.html](https://amitxaidev.github.io/dsa/23-graphs/019-word-ladder.html)
 
 ## The problem, in short
 
 Transform beginWord into endWord by changing one letter at a time, where every intermediate word must be in wordList. Return the number of words in the shortest such sequence, or 0.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/word-ladder/](https://leetcode.com/problems/word-ladder/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/019-word-ladder.html](https://amitxaidev.github.io/dsa/23-graphs/019-word-ladder.html)
+
+## Understanding
+
+**Really asking:** the shortest chain of one-letter changes from begin to end.
+
+**Why this works:** words are nodes and one-letter changes are edges. The shortest path in an unweighted graph is BFS.
+
+**Example:** hit → hot → dot → dog → cog
+```text
+5 words
+```
 
 ## Hints
 

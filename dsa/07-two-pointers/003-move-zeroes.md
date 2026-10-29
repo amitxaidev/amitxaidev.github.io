@@ -1,14 +1,28 @@
 # 3. Move Zeroes
 
 **LeetCode 283** · 🟢 Easy · Pattern: **Read/write pointers**
-🔗 Solve it here: [https://leetcode.com/problems/move-zeroes/](https://leetcode.com/problems/move-zeroes/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/003-move-zeroes.html](https://amitxaidev.github.io/dsa/07-two-pointers/003-move-zeroes.html)
 
 ## The problem, in short
 
 Move all zeros to the end of the array in place, keeping the order of the non-zero elements.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/move-zeroes/](https://leetcode.com/problems/move-zeroes/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/003-move-zeroes.html](https://amitxaidev.github.io/dsa/07-two-pointers/003-move-zeroes.html)
+
+## Understanding
+
+**Really asking:** push zeros to the end, keep the other numbers in order.
+
+**Why this works:** swap every non-zero to the next write position. Zeros drift right automatically.
+
+**Example:** [0, 1, 0, 3, 12]
+```text
+1 → swap with index 0 → [1, 0, 0, 3, 12]
+3 → swap with index 1 → [1, 3, 0, 0, 12]
+12 → swap with index 2 → [1, 3, 12, 0, 0]
+```
 
 ## Hints
 

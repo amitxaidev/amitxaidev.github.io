@@ -1,14 +1,26 @@
 # 9. Binary Tree Level Order Traversal
 
 **LeetCode 102** · 🟡 Medium · Pattern: **BFS by levels**
-🔗 Solve it here: [https://leetcode.com/problems/binary-tree-level-order-traversal/](https://leetcode.com/problems/binary-tree-level-order-traversal/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/009-binary-tree-level-order-traversal.html](https://amitxaidev.github.io/dsa/19-binary-trees/009-binary-tree-level-order-traversal.html)
 
 ## The problem, in short
 
 Return the node values level by level, from left to right.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/binary-tree-level-order-traversal/](https://leetcode.com/problems/binary-tree-level-order-traversal/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/009-binary-tree-level-order-traversal.html](https://amitxaidev.github.io/dsa/19-binary-trees/009-binary-tree-level-order-traversal.html)
+
+## Understanding
+
+**Really asking:** values row by row.
+
+**Why this works:** BFS with a queue; the queue size at the start of a round is exactly one level.
+
+**Example:** 3 (9, 20 (15, 7))
+```text
+[3], [9, 20], [15, 7]
+```
 
 ## Hints
 

@@ -1,14 +1,28 @@
 # 1. Majority Element
 
 **LeetCode 169** · 🟢 Easy · Pattern: **Moore's voting**
-🔗 Solve it here: [https://leetcode.com/problems/majority-element/](https://leetcode.com/problems/majority-element/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/001-majority-element.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/001-majority-element.html)
 
 ## The problem, in short
 
 One value appears more than n/2 times. Return it, ideally in O(n) time and O(1) space.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/majority-element/](https://leetcode.com/problems/majority-element/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/001-majority-element.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/001-majority-element.html)
+
+## Understanding
+
+**Really asking:** which value appears more than half the time?
+
+**Why this works:** pair every majority vote against a different vote. The majority has more than half, so it always survives the cancelling.
+
+**Example:** [2, 2, 1, 1, 1, 2, 2]
+```text
+2 (c1), 2 (c2), 1 (c1), 1 (c0)
+1 → new candidate 1 (c1), 2 (c0)
+2 → new candidate 2 (c1) → answer 2
+```
 
 ## Hints
 

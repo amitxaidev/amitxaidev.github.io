@@ -1,14 +1,26 @@
 # 8. Reorganize String
 
 **LeetCode 767** · 🟡 Medium · Pattern: **Max-heap, place two at a time**
-🔗 Solve it here: [https://leetcode.com/problems/reorganize-string/](https://leetcode.com/problems/reorganize-string/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/008-reorganize-string.html](https://amitxaidev.github.io/dsa/21-heaps/008-reorganize-string.html)
 
 ## The problem, in short
 
 Rearrange the letters of a string so no two adjacent letters are equal. Return any valid result, or "" if impossible.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/reorganize-string/](https://leetcode.com/problems/reorganize-string/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/008-reorganize-string.html](https://amitxaidev.github.io/dsa/21-heaps/008-reorganize-string.html)
+
+## Understanding
+
+**Really asking:** rearrange so no two neighbours are the same letter.
+
+**Why this works:** always place the two most frequent remaining letters together; it's impossible if one letter has more than (n + 1) / 2.
+
+**Example:** "aaabc"
+```text
+take a, b → "ab", then a, c → "abac", then a → "abaca"
+```
 
 ## Hints
 

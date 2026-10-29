@@ -1,14 +1,26 @@
 # 12. Coin Change II
 
 **LeetCode 518** · 🟡 Medium · Pattern: **Unbounded knapsack (count combinations)**
-🔗 Solve it here: [https://leetcode.com/problems/coin-change-ii/](https://leetcode.com/problems/coin-change-ii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/012-coin-change-ii.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/012-coin-change-ii.html)
 
 ## The problem, in short
 
 Count the combinations of coins (unlimited supply) that add up to amount. Order doesn't matter.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/coin-change-ii/](https://leetcode.com/problems/coin-change-ii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/012-coin-change-ii.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/012-coin-change-ii.html)
+
+## Understanding
+
+**Really asking:** how many combinations make the amount?
+
+**Why this works:** loop coins outside, amounts inside, so each combination is counted once (order doesn't matter).
+
+**Example:** amount 5, coins [1, 2, 5]
+```text
+5, 2+2+1, 2+1+1+1, 1×5 → 4
+```
 
 ## Hints
 

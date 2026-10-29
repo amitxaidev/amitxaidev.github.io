@@ -1,14 +1,27 @@
 # 10. Game of Life
 
 **LeetCode 289** · 🟡 Medium · Pattern: **In-place state encoding**
-🔗 Solve it here: [https://leetcode.com/problems/game-of-life/](https://leetcode.com/problems/game-of-life/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/010-game-of-life.html](https://amitxaidev.github.io/dsa/10-matrix/010-game-of-life.html)
 
 ## The problem, in short
 
 Compute the next generation of Conway's Game of Life on a grid, in place. All cells update at the same time based on their eight neighbours.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/game-of-life/](https://leetcode.com/problems/game-of-life/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/010-game-of-life.html](https://amitxaidev.github.io/dsa/10-matrix/010-game-of-life.html)
+
+## Understanding
+
+**Really asking:** compute the next generation, where every cell updates at the same time.
+
+**Why this works:** keep the old state in bit 0 and write the new state into bit 1. Neighbours read bit 0 only; at the end shift every cell right.
+
+**Example:** live cell with 1 live neighbour
+```text
+old bit 1, dies → new bit 0 → value stays 01
+after shifting → 0 (dead)
+```
 
 ## Hints
 

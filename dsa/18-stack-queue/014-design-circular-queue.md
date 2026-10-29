@@ -1,14 +1,28 @@
 # 14. Design Circular Queue
 
 **LeetCode 622** · 🟡 Medium · Pattern: **Array ring buffer**
-🔗 Solve it here: [https://leetcode.com/problems/design-circular-queue/](https://leetcode.com/problems/design-circular-queue/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/014-design-circular-queue.html](https://amitxaidev.github.io/dsa/18-stack-queue/014-design-circular-queue.html)
 
 ## The problem, in short
 
 Implement a fixed-size circular queue with enQueue, deQueue, Front, Rear, isEmpty and isFull.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/design-circular-queue/](https://leetcode.com/problems/design-circular-queue/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/014-design-circular-queue.html](https://amitxaidev.github.io/dsa/18-stack-queue/014-design-circular-queue.html)
+
+## Understanding
+
+**Really asking:** a fixed-size queue that wraps around an array.
+
+**Why this works:** keep head and count; the next free slot is (head + count) % capacity.
+
+**Example:** capacity 3: add 1, 2, 3, remove, add 4
+```text
+[1, 2, 3], head 0
+remove → head 1
+add 4 at (1 + 2) % 3 = 0 → [4, 2, 3]
+```
 
 ## Hints
 

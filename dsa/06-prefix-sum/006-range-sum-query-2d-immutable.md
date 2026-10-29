@@ -1,14 +1,27 @@
 # 6. Range Sum Query 2D - Immutable
 
 **LeetCode 304** · 🟡 Medium · Pattern: **2D prefix sum**
-🔗 Solve it here: [https://leetcode.com/problems/range-sum-query-2d-immutable/](https://leetcode.com/problems/range-sum-query-2d-immutable/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/006-range-sum-query-2d-immutable.html](https://amitxaidev.github.io/dsa/06-prefix-sum/006-range-sum-query-2d-immutable.html)
 
 ## The problem, in short
 
 Answer many queries for the sum of a rectangle inside a fixed matrix.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/range-sum-query-2d-immutable/](https://leetcode.com/problems/range-sum-query-2d-immutable/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/006-range-sum-query-2d-immutable.html](https://amitxaidev.github.io/dsa/06-prefix-sum/006-range-sum-query-2d-immutable.html)
+
+## Understanding
+
+**Really asking:** sum of any rectangle in a fixed grid, fast.
+
+**Why this works:** P[r][c] holds the sum of everything above and to the left. A rectangle is the big corner sum minus the strip above and the strip to the left, plus the corner that got subtracted twice.
+
+**Example:** rectangle rows 1..2, cols 1..2
+```text
+answer = P[3][3] - P[1][3] - P[3][1] + P[1][1]
+(whole) - (top strip) - (left strip) + (top-left corner)
+```
 
 ## Hints
 

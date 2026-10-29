@@ -1,14 +1,28 @@
 # 5. Kth Missing Positive Number
 
 **LeetCode 1539** · 🟢 Easy · Pattern: **Binary search on a derived value**
-🔗 Solve it here: [https://leetcode.com/problems/kth-missing-positive-number/](https://leetcode.com/problems/kth-missing-positive-number/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/005-kth-missing-positive-number.html](https://amitxaidev.github.io/dsa/13-binary-search/005-kth-missing-positive-number.html)
 
 ## The problem, in short
 
 Given a strictly increasing array of positive integers, return the k-th positive integer that is missing from it.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/kth-missing-positive-number/](https://leetcode.com/problems/kth-missing-positive-number/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/005-kth-missing-positive-number.html](https://amitxaidev.github.io/dsa/13-binary-search/005-kth-missing-positive-number.html)
+
+## Understanding
+
+**Really asking:** the k-th positive number that's not in the array.
+
+**Why this works:** before index i, arr[i] - (i+1) numbers are missing, and that count only grows. Binary search the first index where it reaches k.
+
+**Example:** [2, 3, 4, 7, 11], k = 5
+```text
+missing counts: 1, 1, 1, 3, 6
+first index with count ≥ 5 is 4
+answer 4 + 5 = 9
+```
 
 ## Hints
 

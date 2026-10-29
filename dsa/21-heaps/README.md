@@ -6,6 +6,12 @@ Top K, k-way merge and the two-heap median pattern.
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/21-heaps/  
 🧮 **13 problems** · 🟢 2 Easy · 🟡 8 Medium · 🔴 3 Hard
 
+## Understand the topic
+
+A heap always gives you the smallest (min-heap) or largest (max-heap) item in O(1), and adding or removing costs O(log n). In Java it's PriorityQueue, which is a min-heap by default; use Collections.reverseOrder() or a comparator for a max-heap.
+
+Three patterns cover most questions. For Top K, keep a heap of size k, and the top is your boundary. For a K-way merge, put the head of each list in a heap and always take the smallest. For a running median, use two heaps that each hold half of the numbers.
+
 ## How to use this list
 
 1. Watch the episode above.

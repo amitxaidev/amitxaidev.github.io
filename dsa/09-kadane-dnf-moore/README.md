@@ -6,6 +6,12 @@ Three famous one-pass array algorithms and their variations.
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/  
 🧮 **9 problems** · 🟢 2 Easy · 🟡 7 Medium · 🔴 0 Hard
 
+## Understand the topic
+
+Three classic one-pass algorithms. Kadane's algorithm finds the best subarray sum by deciding at each step: extend the current run, or start fresh? The Dutch National Flag sorts 0s, 1s and 2s in one pass with three pointers (low, mid, high). Moore's voting finds the majority element by letting different votes cancel each other out.
+
+They all run in O(n) time with O(1) extra space, which is why interviewers love them.
+
 ## How to use this list
 
 1. Watch the episode above.

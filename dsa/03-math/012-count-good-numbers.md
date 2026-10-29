@@ -1,14 +1,27 @@
 # 12. Count Good Numbers
 
 **LeetCode 1922** · 🟡 Medium · Pattern: **Modular exponentiation**
-🔗 Solve it here: [https://leetcode.com/problems/count-good-numbers/](https://leetcode.com/problems/count-good-numbers/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/012-count-good-numbers.html](https://amitxaidev.github.io/dsa/03-math/012-count-good-numbers.html)
 
 ## The problem, in short
 
 A digit string is "good" if digits at even indexes are even (0,2,4,6,8) and digits at odd indexes are prime (2,3,5,7). Count good strings of length n, modulo 1e9+7. n can be up to 10^15.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/count-good-numbers/](https://leetcode.com/problems/count-good-numbers/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/012-count-good-numbers.html](https://amitxaidev.github.io/dsa/03-math/012-count-good-numbers.html)
+
+## Understanding
+
+**Really asking:** even positions can hold 5 digits, odd positions 4 digits. How many strings of length n (up to 10^15)?
+
+**Why this works:** choices multiply: 5^(even count) × 4^(odd count). Fast power with modulo handles the huge exponent.
+
+**Example:** n = 4
+```text
+positions 0,1,2,3 → 2 even, 2 odd
+5² × 4² = 25 × 16 = 400
+```
 
 ## Hints
 

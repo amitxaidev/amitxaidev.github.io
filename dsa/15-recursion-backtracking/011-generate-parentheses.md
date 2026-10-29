@@ -1,14 +1,27 @@
 # 11. Generate Parentheses
 
 **LeetCode 22** · 🟡 Medium · Pattern: **Backtracking with counts**
-🔗 Solve it here: [https://leetcode.com/problems/generate-parentheses/](https://leetcode.com/problems/generate-parentheses/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/011-generate-parentheses.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/011-generate-parentheses.html)
 
 ## The problem, in short
 
 Return every valid string of n pairs of parentheses.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/generate-parentheses/](https://leetcode.com/problems/generate-parentheses/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/011-generate-parentheses.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/011-generate-parentheses.html)
+
+## Understanding
+
+**Really asking:** all valid strings with n pairs of brackets.
+
+**Why this works:** add '(' while you have some left; add ')' only if it closes something open. Only valid strings get built.
+
+**Example:** n = 2
+```text
+"((" → "(())"
+"()" → "()()"
+```
 
 ## Hints
 

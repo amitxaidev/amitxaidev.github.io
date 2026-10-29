@@ -1,14 +1,27 @@
 # 4. Add Digits
 
 **LeetCode 258** · 🟢 Easy · Pattern: **Digital root**
-🔗 Solve it here: [https://leetcode.com/problems/add-digits/](https://leetcode.com/problems/add-digits/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/004-add-digits.html](https://amitxaidev.github.io/dsa/03-math/004-add-digits.html)
 
 ## The problem, in short
 
 Keep replacing a number with the sum of its digits until only one digit is left, and return that digit.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/add-digits/](https://leetcode.com/problems/add-digits/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/004-add-digits.html](https://amitxaidev.github.io/dsa/03-math/004-add-digits.html)
+
+## Understanding
+
+**Really asking:** keep summing digits until one digit is left (the "digital root").
+
+**Why this works:** a number and its digit sum have the same remainder mod 9, so the final digit is fixed by num mod 9, with multiples of 9 giving 9.
+
+**Example:** num = 38
+```text
+3 + 8 = 11 → 1 + 1 = 2
+formula: 1 + (38 - 1) % 9 = 1 + 1 = 2 ✓
+```
 
 ## Hints
 

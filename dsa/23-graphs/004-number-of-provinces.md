@@ -1,14 +1,27 @@
 # 4. Number of Provinces
 
 **LeetCode 547** · 🟡 Medium · Pattern: **Connected components (adjacency matrix)**
-🔗 Solve it here: [https://leetcode.com/problems/number-of-provinces/](https://leetcode.com/problems/number-of-provinces/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/004-number-of-provinces.html](https://amitxaidev.github.io/dsa/23-graphs/004-number-of-provinces.html)
 
 ## The problem, in short
 
 isConnected[i][j] = 1 means cities i and j are directly connected. A province is a group of connected cities. Count provinces.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/number-of-provinces/](https://leetcode.com/problems/number-of-provinces/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/004-number-of-provinces.html](https://amitxaidev.github.io/dsa/23-graphs/004-number-of-provinces.html)
+
+## Understanding
+
+**Really asking:** how many connected groups of cities?
+
+**Why this works:** the input is an adjacency matrix; count how many DFS runs you need to visit every city.
+
+**Example:** [[1,1,0],[1,1,0],[0,0,1]]
+```text
+DFS from 0 visits 0, 1
+DFS from 2 visits 2 → 2 provinces
+```
 
 ## Hints
 

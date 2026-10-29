@@ -1,14 +1,28 @@
 # 5. Defanging an IP Address
 
 **LeetCode 1108** · 🟢 Easy · Pattern: **StringBuilder**
-🔗 Solve it here: [https://leetcode.com/problems/defanging-an-ip-address/](https://leetcode.com/problems/defanging-an-ip-address/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/005-defanging-an-ip-address.html](https://amitxaidev.github.io/dsa/02-java-basics/005-defanging-an-ip-address.html)
 
 ## The problem, in short
 
 Replace every "." in an IPv4 address with "[.]".
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/defanging-an-ip-address/](https://leetcode.com/problems/defanging-an-ip-address/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/005-defanging-an-ip-address.html](https://amitxaidev.github.io/dsa/02-java-basics/005-defanging-an-ip-address.html)
+
+## Understanding
+
+**Really asking:** rewrite the address with every "." turned into "[.]".
+
+**Why this works:** StringBuilder lets you append piece by piece in O(n). Adding to a String with + inside a loop copies the whole string each time.
+
+**Example:** "1.1.1.1"
+```text
+'1' → "1"
+'.' → "1[.]"
+… → "1[.]1[.]1[.]1"
+```
 
 ## Hints
 

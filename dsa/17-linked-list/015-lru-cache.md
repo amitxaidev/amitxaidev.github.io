@@ -1,14 +1,27 @@
 # 15. LRU Cache
 
 **LeetCode 146** · 🟡 Medium · Pattern: **HashMap + doubly linked list**
-🔗 Solve it here: [https://leetcode.com/problems/lru-cache/](https://leetcode.com/problems/lru-cache/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/015-lru-cache.html](https://amitxaidev.github.io/dsa/17-linked-list/015-lru-cache.html)
 
 ## The problem, in short
 
 Design a fixed-capacity cache with get and put in O(1). When full, put evicts the least recently used key.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/lru-cache/](https://leetcode.com/problems/lru-cache/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/015-lru-cache.html](https://amitxaidev.github.io/dsa/17-linked-list/015-lru-cache.html)
+
+## Understanding
+
+**Really asking:** a cache that evicts the least recently used key, with O(1) get and put.
+
+**Why this works:** the HashMap finds nodes; the doubly linked list keeps usage order (most recent at the front) and removes any node in O(1).
+
+**Example:** capacity 2: put 1, put 2, get 1, put 3
+```text
+order after get 1: [1, 2]
+put 3 evicts the tail 2 → [3, 1]
+```
 
 ## Hints
 

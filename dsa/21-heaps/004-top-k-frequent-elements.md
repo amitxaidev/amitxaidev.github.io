@@ -1,14 +1,27 @@
 # 4. Top K Frequent Elements
 
 **LeetCode 347** · 🟡 Medium · Pattern: **Bucket sort by frequency**
-🔗 Solve it here: [https://leetcode.com/problems/top-k-frequent-elements/](https://leetcode.com/problems/top-k-frequent-elements/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/004-top-k-frequent-elements.html](https://amitxaidev.github.io/dsa/21-heaps/004-top-k-frequent-elements.html)
 
 ## The problem, in short
 
 Return the k most frequent values in the array (the answer is unique).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/top-k-frequent-elements/](https://leetcode.com/problems/top-k-frequent-elements/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/004-top-k-frequent-elements.html](https://amitxaidev.github.io/dsa/21-heaps/004-top-k-frequent-elements.html)
+
+## Understanding
+
+**Really asking:** the k values that appear most.
+
+**Why this works:** count, then bucket values by count (counts are ≤ n) and read buckets from the top.
+
+**Example:** [1, 1, 1, 2, 2, 3], k = 2
+```text
+counts 1→3, 2→2, 3→1
+buckets: 3:[1], 2:[2] → [1, 2]
+```
 
 ## Hints
 

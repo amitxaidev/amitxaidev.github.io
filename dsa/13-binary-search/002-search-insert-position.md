@@ -1,14 +1,28 @@
 # 2. Search Insert Position
 
 **LeetCode 35** · 🟢 Easy · Pattern: **Lower bound**
-🔗 Solve it here: [https://leetcode.com/problems/search-insert-position/](https://leetcode.com/problems/search-insert-position/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/002-search-insert-position.html](https://amitxaidev.github.io/dsa/13-binary-search/002-search-insert-position.html)
 
 ## The problem, in short
 
 In a sorted array of distinct values, return the index of target, or the index where it would be inserted to keep the order.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/search-insert-position/](https://leetcode.com/problems/search-insert-position/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/002-search-insert-position.html](https://amitxaidev.github.io/dsa/13-binary-search/002-search-insert-position.html)
+
+## Understanding
+
+**Really asking:** where is target, or where would it go?
+
+**Why this works:** when the search fails, lo ends at the first value bigger than target, which is the insert spot.
+
+**Example:** [1, 3, 5, 6], target 2
+```text
+mid 1 (3) > 2 → hi 0
+mid 0 (1) < 2 → lo 1
+answer 1
+```
 
 ## Hints
 

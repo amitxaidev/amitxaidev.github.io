@@ -1,14 +1,27 @@
 # 15. Find the City With the Smallest Number of Neighbors at a Threshold Distance
 
 **LeetCode 1334** · 🟡 Medium · Pattern: **Floyd-Warshall**
-🔗 Solve it here: [https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/015-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance.html](https://amitxaidev.github.io/dsa/23-graphs/015-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance.html)
 
 ## The problem, in short
 
 In a weighted undirected graph of n cities, count for each city how many others are within distanceThreshold. Return the city with the fewest such neighbours; on ties, the one with the greatest number.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/015-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance.html](https://amitxaidev.github.io/dsa/23-graphs/015-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance.html)
+
+## Understanding
+
+**Really asking:** which city can reach the fewest others within the distance limit?
+
+**Why this works:** Floyd-Warshall gives all-pairs shortest paths by trying every city k as a middle stop.
+
+**Example:** 4 cities, threshold 4
+```text
+reachable counts: 0→2, 1→3, 2→3, 3→2
+tie between 0 and 3 → pick the larger, 3
+```
 
 ## Hints
 

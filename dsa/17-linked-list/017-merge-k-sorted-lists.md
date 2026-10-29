@@ -1,14 +1,27 @@
 # 17. Merge k Sorted Lists
 
 **LeetCode 23** · 🔴 Hard · Pattern: **Min-heap of list heads**
-🔗 Solve it here: [https://leetcode.com/problems/merge-k-sorted-lists/](https://leetcode.com/problems/merge-k-sorted-lists/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/017-merge-k-sorted-lists.html](https://amitxaidev.github.io/dsa/17-linked-list/017-merge-k-sorted-lists.html)
 
 ## The problem, in short
 
 Merge k sorted linked lists into one sorted linked list.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/merge-k-sorted-lists/](https://leetcode.com/problems/merge-k-sorted-lists/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/017-merge-k-sorted-lists.html](https://amitxaidev.github.io/dsa/17-linked-list/017-merge-k-sorted-lists.html)
+
+## Understanding
+
+**Really asking:** merge k sorted lists.
+
+**Why this works:** the next node is the smallest current head; a min-heap returns it in O(log k).
+
+**Example:** [1→4→5, 1→3→4, 2→6]
+```text
+heap {1, 1, 2} → take 1, push 4 …
+1→1→2→3→4→4→5→6
+```
 
 ## Hints
 

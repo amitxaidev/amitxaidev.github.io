@@ -1,14 +1,27 @@
 # 9. Maximum Gap
 
 **LeetCode 164** · 🟡 Medium · Pattern: **Bucket sort (pigeonhole)**
-🔗 Solve it here: [https://leetcode.com/problems/maximum-gap/](https://leetcode.com/problems/maximum-gap/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/009-maximum-gap.html](https://amitxaidev.github.io/dsa/14-sorting/009-maximum-gap.html)
 
 ## The problem, in short
 
 Return the largest difference between consecutive elements after sorting, in linear time and space. Return 0 for fewer than two elements.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/maximum-gap/](https://leetcode.com/problems/maximum-gap/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/009-maximum-gap.html](https://amitxaidev.github.io/dsa/14-sorting/009-maximum-gap.html)
+
+## Understanding
+
+**Really asking:** the biggest gap between neighbours after sorting, in O(n).
+
+**Why this works:** with n numbers spread over [min, max], the biggest gap is at least (max-min)/(n-1). Buckets that small can't contain the biggest gap, so only compare between buckets.
+
+**Example:** [3, 6, 9, 1] → min 1, max 9, bucket size 3
+```text
+buckets: [1,3], [6], [9]
+gaps: 6-3 = 3, 9-6 = 3 → answer 3
+```
 
 ## Hints
 

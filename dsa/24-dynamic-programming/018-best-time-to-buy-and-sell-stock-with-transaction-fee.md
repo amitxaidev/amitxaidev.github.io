@@ -1,14 +1,26 @@
 # 18. Best Time to Buy and Sell Stock with Transaction Fee
 
 **LeetCode 714** · 🟡 Medium · Pattern: **State machine DP**
-🔗 Solve it here: [https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/018-best-time-to-buy-and-sell-stock-with-transaction-fee.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/018-best-time-to-buy-and-sell-stock-with-transaction-fee.html)
 
 ## The problem, in short
 
 Trade as often as you like (one share at a time), paying a fee on every sale. Maximise profit.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/018-best-time-to-buy-and-sell-stock-with-transaction-fee.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/018-best-time-to-buy-and-sell-stock-with-transaction-fee.html)
+
+## Understanding
+
+**Really asking:** unlimited trades with a fee per sale.
+
+**Why this works:** two states: holding a share or holding cash; pay the fee when selling.
+
+**Example:** [1, 3, 2, 8, 4, 9], fee 2
+```text
+buy 1 sell 8 (+5), buy 4 sell 9 (+3) → 8
+```
 
 ## Hints
 

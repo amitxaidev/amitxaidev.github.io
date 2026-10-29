@@ -1,14 +1,28 @@
 # 5. Spiral Matrix II
 
 **LeetCode 59** · 🟡 Medium · Pattern: **Shrinking boundaries**
-🔗 Solve it here: [https://leetcode.com/problems/spiral-matrix-ii/](https://leetcode.com/problems/spiral-matrix-ii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/005-spiral-matrix-ii.html](https://amitxaidev.github.io/dsa/10-matrix/005-spiral-matrix-ii.html)
 
 ## The problem, in short
 
 Build an n × n matrix filled with 1 to n² in clockwise spiral order.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/spiral-matrix-ii/](https://leetcode.com/problems/spiral-matrix-ii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/005-spiral-matrix-ii.html](https://amitxaidev.github.io/dsa/10-matrix/005-spiral-matrix-ii.html)
+
+## Understanding
+
+**Really asking:** fill 1..n² in spiral order.
+
+**Why this works:** the same four shrinking walls, writing a counter instead of reading.
+
+**Example:** n = 3
+```text
+1 2 3
+8 9 4
+7 6 5
+```
 
 ## Hints
 

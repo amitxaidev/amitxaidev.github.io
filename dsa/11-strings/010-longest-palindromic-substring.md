@@ -1,14 +1,28 @@
 # 10. Longest Palindromic Substring
 
 **LeetCode 5** · 🟡 Medium · Pattern: **Expand around centre**
-🔗 Solve it here: [https://leetcode.com/problems/longest-palindromic-substring/](https://leetcode.com/problems/longest-palindromic-substring/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/010-longest-palindromic-substring.html](https://amitxaidev.github.io/dsa/11-strings/010-longest-palindromic-substring.html)
 
 ## The problem, in short
 
 Return the longest substring that is a palindrome.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/longest-palindromic-substring/](https://leetcode.com/problems/longest-palindromic-substring/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/010-longest-palindromic-substring.html](https://amitxaidev.github.io/dsa/11-strings/010-longest-palindromic-substring.html)
+
+## Understanding
+
+**Really asking:** the longest piece that is a palindrome.
+
+**Why this works:** every palindrome grows out from a centre (one letter, or a gap between two). Try every centre and expand while both sides match.
+
+**Example:** "babad"
+```text
+centre 'a' (index 1): "bab" length 3
+centre 'b' (index 2): "aba" length 3
+answer "bab"
+```
 
 ## Hints
 

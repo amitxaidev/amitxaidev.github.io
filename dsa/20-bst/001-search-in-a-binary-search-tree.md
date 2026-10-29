@@ -1,14 +1,26 @@
 # 1. Search in a Binary Search Tree
 
 **LeetCode 700** · 🟢 Easy · Pattern: **BST walk**
-🔗 Solve it here: [https://leetcode.com/problems/search-in-a-binary-search-tree/](https://leetcode.com/problems/search-in-a-binary-search-tree/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/001-search-in-a-binary-search-tree.html](https://amitxaidev.github.io/dsa/20-bst/001-search-in-a-binary-search-tree.html)
 
 ## The problem, in short
 
 Find the node with a given value in a BST and return its subtree, or null.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/search-in-a-binary-search-tree/](https://leetcode.com/problems/search-in-a-binary-search-tree/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/001-search-in-a-binary-search-tree.html](https://amitxaidev.github.io/dsa/20-bst/001-search-in-a-binary-search-tree.html)
+
+## Understanding
+
+**Really asking:** find the node with a value.
+
+**Why this works:** smaller → go left, bigger → go right. Never search both sides.
+
+**Example:** find 2 in 4 (2 (1, 3), 7)
+```text
+2 < 4 → left → found 2
+```
 
 ## Hints
 

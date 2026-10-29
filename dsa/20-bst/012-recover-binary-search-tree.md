@@ -1,14 +1,27 @@
 # 12. Recover Binary Search Tree
 
 **LeetCode 99** · 🟡 Medium · Pattern: **Inorder to find swapped pair**
-🔗 Solve it here: [https://leetcode.com/problems/recover-binary-search-tree/](https://leetcode.com/problems/recover-binary-search-tree/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/012-recover-binary-search-tree.html](https://amitxaidev.github.io/dsa/20-bst/012-recover-binary-search-tree.html)
 
 ## The problem, in short
 
 Exactly two nodes of a BST had their values swapped by mistake. Fix the tree without changing its structure.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/recover-binary-search-tree/](https://leetcode.com/problems/recover-binary-search-tree/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/012-recover-binary-search-tree.html](https://amitxaidev.github.io/dsa/20-bst/012-recover-binary-search-tree.html)
+
+## Understanding
+
+**Really asking:** two values were swapped by mistake; fix them.
+
+**Why this works:** inorder should be increasing. The swap creates one or two "drops"; the first wrong node is at the first drop, the second at the last drop.
+
+**Example:** inorder 1, 3, 2, 4 (3 and 2 swapped)
+```text
+drop at 3 > 2 → first 3, second 2
+swap back → 1, 2, 3, 4
+```
 
 ## Hints
 

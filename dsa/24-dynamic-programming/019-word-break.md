@@ -1,14 +1,26 @@
 # 19. Word Break
 
 **LeetCode 139** · 🟡 Medium · Pattern: **Prefix DP**
-🔗 Solve it here: [https://leetcode.com/problems/word-break/](https://leetcode.com/problems/word-break/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/019-word-break.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/019-word-break.html)
 
 ## The problem, in short
 
 Decide whether a string can be split into a sequence of words from a dictionary (words can be reused).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/word-break/](https://leetcode.com/problems/word-break/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/019-word-break.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/019-word-break.html)
+
+## Understanding
+
+**Really asking:** can the string be split into dictionary words?
+
+**Why this works:** ok[i] = the first i letters can be split. ok[i] is true if some ok[j] is true and s[j..i) is a word.
+
+**Example:** "leetcode", ["leet", "code"]
+```text
+ok[4] (leet) ✓ → ok[8] (code) ✓ → true
+```
 
 ## Hints
 

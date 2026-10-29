@@ -1,14 +1,29 @@
 # 1. Build Array from Permutation
 
 **LeetCode 1920** · 🟢 Easy · Pattern: **Index mapping**
-🔗 Solve it here: [https://leetcode.com/problems/build-array-from-permutation/](https://leetcode.com/problems/build-array-from-permutation/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/001-build-array-from-permutation.html](https://amitxaidev.github.io/dsa/05-arrays/001-build-array-from-permutation.html)
 
 ## The problem, in short
 
 Given a permutation nums of 0..n-1, return ans where ans[i] = nums[nums[i]].
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/build-array-from-permutation/](https://leetcode.com/problems/build-array-from-permutation/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/001-build-array-from-permutation.html](https://amitxaidev.github.io/dsa/05-arrays/001-build-array-from-permutation.html)
+
+## Understanding
+
+**Really asking:** ans[i] = nums[nums[i]] — follow the pointer once.
+
+**Why this works:** the simple version builds a new array. The in-place version stores two values in one slot (old + n × new), then divides by n.
+
+**Example:** nums = [0, 2, 1, 5, 3, 4]
+```text
+i=0: nums[0]=0 → nums[0]=0
+i=1: nums[1]=2 → nums[2]=1
+i=3: nums[3]=5 → nums[5]=4
+ans = [0, 1, 2, 4, 5, 3]
+```
 
 ## Hints
 

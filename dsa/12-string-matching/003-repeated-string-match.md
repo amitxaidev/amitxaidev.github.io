@@ -1,14 +1,27 @@
 # 3. Repeated String Match
 
 **LeetCode 686** · 🟡 Medium · Pattern: **Repeat + KMP search**
-🔗 Solve it here: [https://leetcode.com/problems/repeated-string-match/](https://leetcode.com/problems/repeated-string-match/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/12-string-matching/003-repeated-string-match.html](https://amitxaidev.github.io/dsa/12-string-matching/003-repeated-string-match.html)
 
 ## The problem, in short
 
 Return the fewest times you must repeat string a so that b becomes a substring of the result, or -1 if it's impossible.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/repeated-string-match/](https://leetcode.com/problems/repeated-string-match/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/12-string-matching/003-repeated-string-match.html](https://amitxaidev.github.io/dsa/12-string-matching/003-repeated-string-match.html)
+
+## Understanding
+
+**Really asking:** the fewest copies of a so that b fits inside.
+
+**Why this works:** you need at least enough copies to be as long as b; one extra copy covers b starting in the middle of a copy.
+
+**Example:** a = "abcd", b = "cdabcdab"
+```text
+2 copies "abcdabcd" — not inside
+3 copies "abcdabcdabcd" — contains b → 3
+```
 
 ## Hints
 

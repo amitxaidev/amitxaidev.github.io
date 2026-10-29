@@ -1,14 +1,28 @@
 # 8. 4Sum II
 
 **LeetCode 454** · 🟡 Medium · Pattern: **Meet in the middle with HashMap**
-🔗 Solve it here: [https://leetcode.com/problems/4sum-ii/](https://leetcode.com/problems/4sum-ii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/008-4sum-ii.html](https://amitxaidev.github.io/dsa/16-hashing/008-4sum-ii.html)
 
 ## The problem, in short
 
 Given four arrays of equal length, count tuples (i, j, k, l) with a[i] + b[j] + c[k] + d[l] == 0.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/4sum-ii/](https://leetcode.com/problems/4sum-ii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/008-4sum-ii.html](https://amitxaidev.github.io/dsa/16-hashing/008-4sum-ii.html)
+
+## Understanding
+
+**Really asking:** count (i, j, k, l) with a + b + c + d = 0 from four arrays.
+
+**Why this works:** store counts of every a + b, then for every c + d look up its negative. n⁴ becomes n².
+
+**Example:** A [1,2], B [-2,-1], C [-1,2], D [0,2]
+```text
+a+b sums: -1, 0, 0, 1
+c+d sums: -1, 1, 2, 4 → need 1, -1, -2, -4
+matches: 1 → 1, -1 → 1 → total 2
+```
 
 ## Hints
 

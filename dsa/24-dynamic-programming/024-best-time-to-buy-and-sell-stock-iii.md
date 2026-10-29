@@ -1,14 +1,26 @@
 # 24. Best Time to Buy and Sell Stock III
 
 **LeetCode 123** · 🔴 Hard · Pattern: **State machine DP (2 transactions)**
-🔗 Solve it here: [https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/024-best-time-to-buy-and-sell-stock-iii.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/024-best-time-to-buy-and-sell-stock-iii.html)
 
 ## The problem, in short
 
 Make at most two buy-sell transactions (not overlapping). Return the maximum profit.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/024-best-time-to-buy-and-sell-stock-iii.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/024-best-time-to-buy-and-sell-stock-iii.html)
+
+## Understanding
+
+**Really asking:** at most two trades.
+
+**Why this works:** four states in a chain: after buy 1, after sell 1, after buy 2, after sell 2.
+
+**Example:** [3, 3, 5, 0, 0, 3, 1, 4]
+```text
+buy 0 sell 3 (+3), buy 1 sell 4 (+3) → 6
+```
 
 ## Hints
 

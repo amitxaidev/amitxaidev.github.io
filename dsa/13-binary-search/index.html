@@ -30,6 +30,7 @@
         <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
         <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
       </ul>
@@ -49,7 +50,7 @@
       <div class="col-lg-8">
         <h1 class="h2 mb-1">13. Binary Search</h1>
         <p class="text-body-secondary mb-2">Lower/upper bound, rotated arrays and binary search on the answer.</p>
-        <div><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 21 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 22 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 23 (coming soon)</span></div>
+        <div><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 21–23 coming soon</span></div>
         <div class="array-strip mt-3" aria-hidden="true"><span>4</span><span>1</span><span>7</span><span>3</span><span>9</span><span>2</span><span>6</span><span>5</span><span>8</span><i class="window"></i></div>
       </div>
       <div class="col-lg-4" data-slugs="binary-search,search-insert-position,sqrtx,first-bad-version,kth-missing-positive-number,find-first-and-last-position-of-element-in-sorted-array,search-in-rotated-sorted-array,find-minimum-in-rotated-sorted-array,find-peak-element,single-element-in-a-sorted-array,koko-eating-bananas,capacity-to-ship-packages-within-d-days,minimum-number-of-days-to-make-m-bouquets,find-the-smallest-divisor-given-a-threshold,magnetic-force-between-two-balls,split-array-largest-sum,median-of-two-sorted-arrays">
@@ -61,6 +62,11 @@
   </div>
 </section>
 <div class="container pb-4">
+<div class="card shadow-sm mb-4"><div class="card-body">
+  <h2 class="h5 fw-bold">Understand the topic</h2>
+  <div class="understanding"><p>Binary search cuts the search space in half each step, so a million items take about 20 steps. It doesn&#x27;t really need a sorted array; it needs a yes/no question whose answers look like F F F T T T. Then you find the first T.</p>
+<p>There are two flavours. First, searching an array (lower bound, rotated arrays, peaks). Second, &quot;binary search on the answer&quot;: guess a value like a speed or a capacity, check whether it&#x27;s feasible, and move the guess.</p></div>
+</div></div>
 <div class="d-flex flex-wrap gap-2 mb-3">
   <input type="search" class="form-control search" style="max-width: 320px" placeholder="Search problems…" aria-label="Search problems">
   <div class="btn-group btn-group-sm flex-wrap" role="group" aria-label="Filter">

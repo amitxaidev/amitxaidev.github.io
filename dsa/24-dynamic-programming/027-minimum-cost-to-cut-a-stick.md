@@ -1,14 +1,26 @@
 # 27. Minimum Cost to Cut a Stick
 
 **LeetCode 1547** · 🔴 Hard · Pattern: **Partition DP (MCM style)**
-🔗 Solve it here: [https://leetcode.com/problems/minimum-cost-to-cut-a-stick/](https://leetcode.com/problems/minimum-cost-to-cut-a-stick/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/027-minimum-cost-to-cut-a-stick.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/027-minimum-cost-to-cut-a-stick.html)
 
 ## The problem, in short
 
 A stick of length n must be cut at given positions, in any order. Each cut costs the length of the piece being cut. Return the minimum total cost.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/minimum-cost-to-cut-a-stick/](https://leetcode.com/problems/minimum-cost-to-cut-a-stick/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/027-minimum-cost-to-cut-a-stick.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/027-minimum-cost-to-cut-a-stick.html)
+
+## Understanding
+
+**Really asking:** the cheapest order of cuts, where each cut costs the current piece length.
+
+**Why this works:** interval DP over the sorted cut positions: dp[i][j] = piece length + the best first cut k inside.
+
+**Example:** n = 7, cuts [1, 3, 4, 5]
+```text
+cutting at 3 first, then 5, then 1 and 4 → 16
+```
 
 ## Hints
 

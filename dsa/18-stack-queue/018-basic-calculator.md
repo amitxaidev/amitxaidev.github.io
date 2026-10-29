@@ -1,14 +1,28 @@
 # 18. Basic Calculator
 
 **LeetCode 224** · 🔴 Hard · Pattern: **Stack for parentheses and signs**
-🔗 Solve it here: [https://leetcode.com/problems/basic-calculator/](https://leetcode.com/problems/basic-calculator/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/018-basic-calculator.html](https://amitxaidev.github.io/dsa/18-stack-queue/018-basic-calculator.html)
 
 ## The problem, in short
 
 Evaluate a string expression with integers, + and -, unary minus, parentheses and spaces. No eval allowed.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/basic-calculator/](https://leetcode.com/problems/basic-calculator/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/018-basic-calculator.html](https://amitxaidev.github.io/dsa/18-stack-queue/018-basic-calculator.html)
+
+## Understanding
+
+**Really asking:** evaluate + and - with brackets.
+
+**Why this works:** keep a running result and a sign. On '(' save them on the stack and start fresh; on ')' combine with the saved values.
+
+**Example:** "1 - (2 + 3)"
+```text
+result 1, sign -
+'(' saves (1, -) → inner 5
+')' → 1 + (-1 × 5) = -4
+```
 
 ## Hints
 

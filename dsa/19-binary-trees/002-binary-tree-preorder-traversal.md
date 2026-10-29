@@ -1,14 +1,27 @@
 # 2. Binary Tree Preorder Traversal
 
 **LeetCode 144** · 🟢 Easy · Pattern: **Iterative preorder with a stack**
-🔗 Solve it here: [https://leetcode.com/problems/binary-tree-preorder-traversal/](https://leetcode.com/problems/binary-tree-preorder-traversal/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/002-binary-tree-preorder-traversal.html](https://amitxaidev.github.io/dsa/19-binary-trees/002-binary-tree-preorder-traversal.html)
 
 ## The problem, in short
 
 Return the values of a binary tree in preorder (node, left subtree, right subtree).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/binary-tree-preorder-traversal/](https://leetcode.com/problems/binary-tree-preorder-traversal/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/002-binary-tree-preorder-traversal.html](https://amitxaidev.github.io/dsa/19-binary-trees/002-binary-tree-preorder-traversal.html)
+
+## Understanding
+
+**Really asking:** node first, then left, then right.
+
+**Why this works:** with a stack, pop and visit; push right before left so left comes out first.
+
+**Example:** tree 1 (left 2, right 3)
+```text
+pop 1 → push 3, 2
+pop 2, pop 3 → [1, 2, 3]
+```
 
 ## Hints
 

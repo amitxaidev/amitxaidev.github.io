@@ -1,14 +1,27 @@
 # 9. Find Peak Element
 
 **LeetCode 162** · 🟡 Medium · Pattern: **Follow the slope**
-🔗 Solve it here: [https://leetcode.com/problems/find-peak-element/](https://leetcode.com/problems/find-peak-element/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/009-find-peak-element.html](https://amitxaidev.github.io/dsa/13-binary-search/009-find-peak-element.html)
 
 ## The problem, in short
 
 Return the index of any element that is strictly greater than its neighbours (outside the array counts as minus infinity), in O(log n).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/find-peak-element/](https://leetcode.com/problems/find-peak-element/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/009-find-peak-element.html](https://amitxaidev.github.io/dsa/13-binary-search/009-find-peak-element.html)
+
+## Understanding
+
+**Really asking:** any element bigger than both neighbours.
+
+**Why this works:** if you're walking uphill (nums[mid] &lt; nums[mid+1]), a peak must exist ahead; otherwise one exists here or behind.
+
+**Example:** [1, 2, 3, 1]
+```text
+mid 1 (2) < 3 → lo 2
+mid 2 (3) > 1 → hi 2 → peak at 2
+```
 
 ## Hints
 

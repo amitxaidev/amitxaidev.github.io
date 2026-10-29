@@ -1,14 +1,27 @@
 # 11. Maximum Points You Can Obtain from Cards
 
 **LeetCode 1423** · 🟡 Medium · Pattern: **Window on the complement**
-🔗 Solve it here: [https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/011-maximum-points-you-can-obtain-from-cards.html](https://amitxaidev.github.io/dsa/08-sliding-window/011-maximum-points-you-can-obtain-from-cards.html)
 
 ## The problem, in short
 
 Cards are in a row. Take exactly k cards, each from either the left or right end. Maximise the sum of taken cards.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/011-maximum-points-you-can-obtain-from-cards.html](https://amitxaidev.github.io/dsa/08-sliding-window/011-maximum-points-you-can-obtain-from-cards.html)
+
+## Understanding
+
+**Really asking:** take k cards from the two ends to maximise points.
+
+**Why this works:** whatever you take, the cards left form one block of n - k in the middle. Minimise that block's sum.
+
+**Example:** [1, 2, 3, 4, 5, 6, 1], k = 3, total 22
+```text
+windows of length 4: 10, 14, 18, 16
+smallest 10 → 22 - 10 = 12
+```
 
 ## Hints
 

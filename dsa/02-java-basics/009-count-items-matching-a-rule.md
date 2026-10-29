@@ -1,14 +1,30 @@
 # 9. Count Items Matching a Rule
 
 **LeetCode 1773** · 🟢 Easy · Pattern: **List of lists**
-🔗 Solve it here: [https://leetcode.com/problems/count-items-matching-a-rule/](https://leetcode.com/problems/count-items-matching-a-rule/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/009-count-items-matching-a-rule.html](https://amitxaidev.github.io/dsa/02-java-basics/009-count-items-matching-a-rule.html)
 
 ## The problem, in short
 
 Each item is a list [type, color, name]. Given a rule key ("type", "color" or "name") and a value, count items whose matching field equals the value.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/count-items-matching-a-rule/](https://leetcode.com/problems/count-items-matching-a-rule/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/009-count-items-matching-a-rule.html](https://amitxaidev.github.io/dsa/02-java-basics/009-count-items-matching-a-rule.html)
+
+## Understanding
+
+**Really asking:** look at one field (type, color or name) of each item and count matches.
+
+**Why this works:** convert the rule key to a column index once, then each item is a single equals() check.
+
+**Example:** ruleKey = "color", ruleValue = "silver"
+```text
+index = 1
+["phone","blue","pixel"]     → blue ≠ silver
+["computer","silver","lenovo"] → match
+["phone","gold","iphone"]    → gold ≠ silver
+answer: 1
+```
 
 ## Hints
 

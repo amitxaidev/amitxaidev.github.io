@@ -1,14 +1,27 @@
 # 1. Binary Search
 
 **LeetCode 704** · 🟢 Easy · Pattern: **Classic binary search**
-🔗 Solve it here: [https://leetcode.com/problems/binary-search/](https://leetcode.com/problems/binary-search/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/001-binary-search.html](https://amitxaidev.github.io/dsa/13-binary-search/001-binary-search.html)
 
 ## The problem, in short
 
 Find the index of target in a sorted array, or return -1, in O(log n).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/binary-search/](https://leetcode.com/problems/binary-search/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/001-binary-search.html](https://amitxaidev.github.io/dsa/13-binary-search/001-binary-search.html)
+
+## Understanding
+
+**Really asking:** find target in a sorted array in O(log n).
+
+**Why this works:** compare with the middle; the target can only be in one half.
+
+**Example:** [-1, 0, 3, 5, 9, 12], target 9
+```text
+lo 0, hi 5 → mid 2 (3) < 9 → lo 3
+mid 4 (9) ✓ → index 4
+```
 
 ## Hints
 

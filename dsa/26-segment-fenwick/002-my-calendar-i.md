@@ -1,14 +1,23 @@
 # 2. My Calendar I
 
 **LeetCode 729** · 🟡 Medium · Pattern: **Ordered map (floor / ceiling)**
-🔗 Solve it here: [https://leetcode.com/problems/my-calendar-i/](https://leetcode.com/problems/my-calendar-i/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/26-segment-fenwick/002-my-calendar-i.html](https://amitxaidev.github.io/dsa/26-segment-fenwick/002-my-calendar-i.html)
 
 ## The problem, in short
 
 Book half-open time intervals [start, end). Reject a booking if it overlaps any existing one.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/my-calendar-i/](https://leetcode.com/problems/my-calendar-i/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/26-segment-fenwick/002-my-calendar-i.html](https://amitxaidev.github.io/dsa/26-segment-fenwick/002-my-calendar-i.html)
+
+## Understanding
+
+**Really asking:** accept a booking only if it doesn't overlap an existing one.
+
+**Why this works:** in a sorted map, only the booking just before and the one just after the new start can clash.
+
+**Example:** book [10,20] ✓, [15,25] → previous ends at 20 > 15 → ✗, [20,30] ✓
 
 ## Hints
 

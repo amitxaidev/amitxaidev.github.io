@@ -1,14 +1,26 @@
 # 2. Contains Duplicate
 
 **LeetCode 217** · 🟢 Easy · Pattern: **HashSet**
-🔗 Solve it here: [https://leetcode.com/problems/contains-duplicate/](https://leetcode.com/problems/contains-duplicate/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/002-contains-duplicate.html](https://amitxaidev.github.io/dsa/16-hashing/002-contains-duplicate.html)
 
 ## The problem, in short
 
 Return true if any value appears at least twice in the array.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/contains-duplicate/](https://leetcode.com/problems/contains-duplicate/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/002-contains-duplicate.html](https://amitxaidev.github.io/dsa/16-hashing/002-contains-duplicate.html)
+
+## Understanding
+
+**Really asking:** does any value repeat?
+
+**Why this works:** add to a set; a failed add means a repeat.
+
+**Example:** [1, 2, 3, 1]
+```text
+add 1, 2, 3 ✓, add 1 ✗ → true
+```
 
 ## Hints
 

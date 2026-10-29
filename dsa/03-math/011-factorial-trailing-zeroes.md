@@ -1,14 +1,28 @@
 # 11. Factorial Trailing Zeroes
 
 **LeetCode 172** · 🟡 Medium · Pattern: **Counting factors**
-🔗 Solve it here: [https://leetcode.com/problems/factorial-trailing-zeroes/](https://leetcode.com/problems/factorial-trailing-zeroes/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/011-factorial-trailing-zeroes.html](https://amitxaidev.github.io/dsa/03-math/011-factorial-trailing-zeroes.html)
 
 ## The problem, in short
 
 Return how many zeros n! ends with.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/factorial-trailing-zeroes/](https://leetcode.com/problems/factorial-trailing-zeroes/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/011-factorial-trailing-zeroes.html](https://amitxaidev.github.io/dsa/03-math/011-factorial-trailing-zeroes.html)
+
+## Understanding
+
+**Really asking:** how many zeros are at the end of n!?
+
+**Why this works:** each zero is a 10 = 2 × 5, and 2s are always plentiful, so count the 5s. Numbers like 25 give two 5s.
+
+**Example:** n = 30
+```text
+30 / 5 = 6   (5,10,15,20,25,30)
+30 / 25 = 1  (the extra 5 in 25)
+total 7 zeros
+```
 
 ## Hints
 

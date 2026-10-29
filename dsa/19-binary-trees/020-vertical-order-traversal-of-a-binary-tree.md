@@ -1,14 +1,26 @@
 # 20. Vertical Order Traversal of a Binary Tree
 
 **LeetCode 987** · 🔴 Hard · Pattern: **Coordinates + sort**
-🔗 Solve it here: [https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/020-vertical-order-traversal-of-a-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/020-vertical-order-traversal-of-a-binary-tree.html)
 
 ## The problem, in short
 
 Give each node a (row, column): the root is (0, 0), a left child is (row + 1, col − 1), a right child is (row + 1, col + 1). Return values column by column from left to right; inside a column sort by row, and break ties by value.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/020-vertical-order-traversal-of-a-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/020-vertical-order-traversal-of-a-binary-tree.html)
+
+## Understanding
+
+**Really asking:** group nodes by column, sorted by row then value.
+
+**Why this works:** give each node (col, row); left child col - 1, right col + 1. Sort all triples and group by column.
+
+**Example:** 3 (9, 20 (15, 7))
+```text
+col -1: [9], col 0: [3, 15], col 1: [20], col 2: [7]
+```
 
 ## Hints
 

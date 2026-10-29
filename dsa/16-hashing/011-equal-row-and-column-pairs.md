@@ -1,14 +1,26 @@
 # 11. Equal Row and Column Pairs
 
 **LeetCode 2352** · 🟡 Medium · Pattern: **HashMap of row signatures**
-🔗 Solve it here: [https://leetcode.com/problems/equal-row-and-column-pairs/](https://leetcode.com/problems/equal-row-and-column-pairs/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/011-equal-row-and-column-pairs.html](https://amitxaidev.github.io/dsa/16-hashing/011-equal-row-and-column-pairs.html)
 
 ## The problem, in short
 
 In an n×n grid, count pairs (row r, column c) where the row and the column contain the same values in the same order.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/equal-row-and-column-pairs/](https://leetcode.com/problems/equal-row-and-column-pairs/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/011-equal-row-and-column-pairs.html](https://amitxaidev.github.io/dsa/16-hashing/011-equal-row-and-column-pairs.html)
+
+## Understanding
+
+**Really asking:** count (row, column) pairs with identical values in order.
+
+**Why this works:** turn each row into a key and count it; then build each column's key and look it up.
+
+**Example:** [[3,2,1],[1,7,6],[2,7,7]]
+```text
+column 1 = [2, 7, 7] equals row 2 → 1 pair
+```
 
 ## Hints
 

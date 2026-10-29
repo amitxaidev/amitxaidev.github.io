@@ -1,14 +1,28 @@
 # 11. Koko Eating Bananas
 
 **LeetCode 875** · 🟡 Medium · Pattern: **Binary search on the answer**
-🔗 Solve it here: [https://leetcode.com/problems/koko-eating-bananas/](https://leetcode.com/problems/koko-eating-bananas/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/011-koko-eating-bananas.html](https://amitxaidev.github.io/dsa/13-binary-search/011-koko-eating-bananas.html)
 
 ## The problem, in short
 
 Koko eats from one pile per hour at speed k bananas/hour (a smaller pile still takes the full hour). Find the minimum k that lets her finish all piles within h hours.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/koko-eating-bananas/](https://leetcode.com/problems/koko-eating-bananas/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/011-koko-eating-bananas.html](https://amitxaidev.github.io/dsa/13-binary-search/011-koko-eating-bananas.html)
+
+## Understanding
+
+**Really asking:** the slowest eating speed that still finishes all piles in h hours.
+
+**Why this works:** faster always works if slower works, so binary search the speed and count hours = sum of ceil(pile / speed).
+
+**Example:** piles [3, 6, 7, 11], h = 8
+```text
+speed 4: 1+2+2+3 = 8 ✓
+speed 3: 1+2+3+4 = 10 ✗
+answer 4
+```
 
 ## Hints
 

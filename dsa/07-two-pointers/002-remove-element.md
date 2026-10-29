@@ -1,14 +1,27 @@
 # 2. Remove Element
 
 **LeetCode 27** · 🟢 Easy · Pattern: **Read/write pointers**
-🔗 Solve it here: [https://leetcode.com/problems/remove-element/](https://leetcode.com/problems/remove-element/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/002-remove-element.html](https://amitxaidev.github.io/dsa/07-two-pointers/002-remove-element.html)
 
 ## The problem, in short
 
 Remove every occurrence of val from the array in place and return how many elements are left. Order of the rest may change.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/remove-element/](https://leetcode.com/problems/remove-element/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/002-remove-element.html](https://amitxaidev.github.io/dsa/07-two-pointers/002-remove-element.html)
+
+## Understanding
+
+**Really asking:** drop every copy of val, in place.
+
+**Why this works:** copy everything that isn't val to the write position; whatever is left behind doesn't matter.
+
+**Example:** [3, 2, 2, 3], val = 3
+```text
+3 skip, 2 → [2], 2 → [2, 2], 3 skip
+length 2
+```
 
 ## Hints
 

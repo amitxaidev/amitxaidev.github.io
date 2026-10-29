@@ -1,14 +1,28 @@
 # 6. Find First and Last Position of Element in Sorted Array
 
 **LeetCode 34** · 🟡 Medium · Pattern: **Lower & upper bound**
-🔗 Solve it here: [https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/006-find-first-and-last-position-of-element-in-sorted-array.html](https://amitxaidev.github.io/dsa/13-binary-search/006-find-first-and-last-position-of-element-in-sorted-array.html)
 
 ## The problem, in short
 
 Return the first and last index of target in a sorted array, or [-1, -1], in O(log n).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/006-find-first-and-last-position-of-element-in-sorted-array.html](https://amitxaidev.github.io/dsa/13-binary-search/006-find-first-and-last-position-of-element-in-sorted-array.html)
+
+## Understanding
+
+**Really asking:** the first and last index of target.
+
+**Why this works:** lowerBound(x) gives the first index with value ≥ x. First = lowerBound(target), last = lowerBound(target + 1) - 1.
+
+**Example:** [5, 7, 7, 8, 8, 10], target 8
+```text
+lowerBound(8) = 3
+lowerBound(9) = 5 → last 4
+[3, 4]
+```
 
 ## Hints
 

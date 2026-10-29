@@ -1,14 +1,28 @@
 # 7. Search in Rotated Sorted Array
 
 **LeetCode 33** · 🟡 Medium · Pattern: **Find the sorted half**
-🔗 Solve it here: [https://leetcode.com/problems/search-in-rotated-sorted-array/](https://leetcode.com/problems/search-in-rotated-sorted-array/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/007-search-in-rotated-sorted-array.html](https://amitxaidev.github.io/dsa/13-binary-search/007-search-in-rotated-sorted-array.html)
 
 ## The problem, in short
 
 A sorted array of distinct values was rotated at an unknown point. Find target's index in O(log n), or -1.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/search-in-rotated-sorted-array/](https://leetcode.com/problems/search-in-rotated-sorted-array/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/007-search-in-rotated-sorted-array.html](https://amitxaidev.github.io/dsa/13-binary-search/007-search-in-rotated-sorted-array.html)
+
+## Understanding
+
+**Really asking:** binary search in a sorted array that was rotated.
+
+**Why this works:** at any mid, one half is still properly sorted. Check if the target lies in that half's range; otherwise search the other half.
+
+**Example:** [4, 5, 6, 7, 0, 1, 2], target 0
+```text
+mid 3 (7): left half 4..7 sorted, 0 not in it → go right
+mid 5 (1): left half 0..1 sorted, 0 in it → go left
+mid 4 (0) ✓
+```
 
 ## Hints
 

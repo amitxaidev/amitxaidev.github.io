@@ -30,6 +30,7 @@
         <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
         <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
       </ul>
@@ -51,7 +52,13 @@
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Decide whether a sentence follows a pattern of letters, where each letter maps to exactly one word and each word to exactly one letter.</p>
-    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode.</p>
+    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/word-pattern/" target="_blank" rel="noopener">open problem ↗</a></p>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
+    <div class="understanding"><p><strong>Really asking:</strong> does each letter stand for exactly one word, and each word for one letter?</p>
+<p><strong>Why this works:</strong> two maps, one per direction; any conflict fails.</p>
+<p><strong>Example:</strong> &quot;abba&quot; and &quot;dog cat cat dog&quot;</p>
+<pre class="trace border rounded">a→dog, b→cat, b→cat ✓, a→dog ✓ → true</pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -111,7 +118,7 @@ class Solution {
         <li class="list-group-item"><strong>Space:</strong> O(n).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Hashing</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 37 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 38 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 39 (coming soon)</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Hashing</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 37–39 coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

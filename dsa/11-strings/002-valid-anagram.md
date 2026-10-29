@@ -1,14 +1,26 @@
 # 2. Valid Anagram
 
 **LeetCode 242** · 🟢 Easy · Pattern: **Frequency count**
-🔗 Solve it here: [https://leetcode.com/problems/valid-anagram/](https://leetcode.com/problems/valid-anagram/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/002-valid-anagram.html](https://amitxaidev.github.io/dsa/11-strings/002-valid-anagram.html)
 
 ## The problem, in short
 
 Decide whether t is a rearrangement of s.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/valid-anagram/](https://leetcode.com/problems/valid-anagram/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/002-valid-anagram.html](https://amitxaidev.github.io/dsa/11-strings/002-valid-anagram.html)
+
+## Understanding
+
+**Really asking:** same letters, same counts?
+
+**Why this works:** one count array: +1 for s, -1 for t. Anagrams leave all zeros.
+
+**Example:** "anagram" vs "nagaram"
+```text
+a: 3-3, n: 1-1, g: 1-1, r: 1-1, m: 1-1 → all 0 → true
+```
 
 ## Hints
 

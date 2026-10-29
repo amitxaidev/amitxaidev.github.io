@@ -1,14 +1,27 @@
 # 7. Longest Consecutive Sequence
 
 **LeetCode 128** · 🟡 Medium · Pattern: **HashSet, start only at run starts**
-🔗 Solve it here: [https://leetcode.com/problems/longest-consecutive-sequence/](https://leetcode.com/problems/longest-consecutive-sequence/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/007-longest-consecutive-sequence.html](https://amitxaidev.github.io/dsa/16-hashing/007-longest-consecutive-sequence.html)
 
 ## The problem, in short
 
 Return the length of the longest run of consecutive integers (like 4, 5, 6, 7) found in an unsorted array, in O(n).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/longest-consecutive-sequence/](https://leetcode.com/problems/longest-consecutive-sequence/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/007-longest-consecutive-sequence.html](https://amitxaidev.github.io/dsa/16-hashing/007-longest-consecutive-sequence.html)
+
+## Understanding
+
+**Really asking:** the longest run like 4, 5, 6, 7 hidden in an unsorted array, in O(n).
+
+**Why this works:** only start counting from x when x - 1 is missing (x starts a run). Each number is then counted once.
+
+**Example:** [100, 4, 200, 1, 3, 2]
+```text
+1 starts a run: 1, 2, 3, 4 → length 4
+100 and 200: length 1 each
+```
 
 ## Hints
 

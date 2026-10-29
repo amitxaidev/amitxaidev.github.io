@@ -1,14 +1,27 @@
 # 5. Jump Game
 
 **LeetCode 55** · 🟡 Medium · Pattern: **Furthest reach**
-🔗 Solve it here: [https://leetcode.com/problems/jump-game/](https://leetcode.com/problems/jump-game/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/005-jump-game.html](https://amitxaidev.github.io/dsa/22-greedy/005-jump-game.html)
 
 ## The problem, in short
 
 nums[i] is the maximum jump length from index i. Starting at index 0, decide whether you can reach the last index.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/jump-game/](https://leetcode.com/problems/jump-game/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/005-jump-game.html](https://amitxaidev.github.io/dsa/22-greedy/005-jump-game.html)
+
+## Understanding
+
+**Really asking:** can you reach the last index?
+
+**Why this works:** track the furthest index reachable. If you ever stand beyond it, you're stuck.
+
+**Example:** [3, 2, 1, 0, 4]
+```text
+reach 3, 3, 3, 3
+index 4 > reach 3 → false
+```
 
 ## Hints
 

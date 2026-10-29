@@ -1,14 +1,28 @@
 # 11. Find Median from Data Stream
 
 **LeetCode 295** · 🔴 Hard · Pattern: **Two heaps**
-🔗 Solve it here: [https://leetcode.com/problems/find-median-from-data-stream/](https://leetcode.com/problems/find-median-from-data-stream/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/011-find-median-from-data-stream.html](https://amitxaidev.github.io/dsa/21-heaps/011-find-median-from-data-stream.html)
 
 ## The problem, in short
 
 Design a structure that adds numbers from a stream and returns the median of all numbers so far at any time.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/find-median-from-data-stream/](https://leetcode.com/problems/find-median-from-data-stream/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/011-find-median-from-data-stream.html](https://amitxaidev.github.io/dsa/21-heaps/011-find-median-from-data-stream.html)
+
+## Understanding
+
+**Really asking:** the median after every new number.
+
+**Why this works:** a max-heap holds the smaller half and a min-heap the larger half; the median is at the tops.
+
+**Example:** add 1, 2, 3
+```text
+low {1}, high {} → 1
+low {1}, high {2} → 1.5
+low {2, 1}, high {3} → 2
+```
 
 ## Hints
 

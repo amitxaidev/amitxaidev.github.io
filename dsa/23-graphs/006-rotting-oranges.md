@@ -1,14 +1,26 @@
 # 6. Rotting Oranges
 
 **LeetCode 994** · 🟡 Medium · Pattern: **Multi-source BFS**
-🔗 Solve it here: [https://leetcode.com/problems/rotting-oranges/](https://leetcode.com/problems/rotting-oranges/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/006-rotting-oranges.html](https://amitxaidev.github.io/dsa/23-graphs/006-rotting-oranges.html)
 
 ## The problem, in short
 
 Every minute, rotten oranges rot their fresh 4-directional neighbours. Return the minutes until no fresh orange is left, or -1 if that never happens.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/rotting-oranges/](https://leetcode.com/problems/rotting-oranges/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/006-rotting-oranges.html](https://amitxaidev.github.io/dsa/23-graphs/006-rotting-oranges.html)
+
+## Understanding
+
+**Really asking:** minutes until every orange is rotten, or -1.
+
+**Why this works:** all rotten oranges spread at once, so start BFS from all of them together; each BFS level is one minute.
+
+**Example:** 2 1 1 / 1 1 0 / 0 1 1
+```text
+minute 1, 2, 3, 4 → all rotten → 4
+```
 
 ## Hints
 

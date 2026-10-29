@@ -1,14 +1,26 @@
 # 16. Flatten a Multilevel Doubly Linked List
 
 **LeetCode 430** · 🟡 Medium · Pattern: **Doubly linked list splicing**
-🔗 Solve it here: [https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/016-flatten-a-multilevel-doubly-linked-list.html](https://amitxaidev.github.io/dsa/17-linked-list/016-flatten-a-multilevel-doubly-linked-list.html)
 
 ## The problem, in short
 
 A doubly linked list's nodes may have a child pointer to another doubly linked list (which may have children too). Flatten everything into one level, placing each child list right after its parent node.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/016-flatten-a-multilevel-doubly-linked-list.html](https://amitxaidev.github.io/dsa/17-linked-list/016-flatten-a-multilevel-doubly-linked-list.html)
+
+## Understanding
+
+**Really asking:** splice every child list in right after its parent node.
+
+**Why this works:** on a node with a child, link node ⇄ child, find the child list's tail, link tail ⇄ old next, and clear the child pointer.
+
+**Example:** 1 ⇄ 2 ⇄ 3, where 2 has child 7 ⇄ 8
+```text
+1 ⇄ 2 ⇄ 7 ⇄ 8 ⇄ 3
+```
 
 ## Hints
 

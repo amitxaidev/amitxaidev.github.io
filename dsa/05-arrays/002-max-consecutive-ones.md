@@ -1,14 +1,27 @@
 # 2. Max Consecutive Ones
 
 **LeetCode 485** · 🟢 Easy · Pattern: **Running counter**
-🔗 Solve it here: [https://leetcode.com/problems/max-consecutive-ones/](https://leetcode.com/problems/max-consecutive-ones/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/002-max-consecutive-ones.html](https://amitxaidev.github.io/dsa/05-arrays/002-max-consecutive-ones.html)
 
 ## The problem, in short
 
 In a binary array, return the length of the longest run of consecutive 1s.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/max-consecutive-ones/](https://leetcode.com/problems/max-consecutive-ones/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/002-max-consecutive-ones.html](https://amitxaidev.github.io/dsa/05-arrays/002-max-consecutive-ones.html)
+
+## Understanding
+
+**Really asking:** the longest unbroken streak of 1s.
+
+**Why this works:** one counter grows on 1 and resets on 0; remember the best value it ever reached.
+
+**Example:** [1, 1, 0, 1, 1, 1]
+```text
+run: 1, 2, 0, 1, 2, 3
+best = 3
+```
 
 ## Hints
 

@@ -1,14 +1,28 @@
 # 1. Find the Index of the First Occurrence in a String
 
 **LeetCode 28** · 🟢 Easy · Pattern: **KMP**
-🔗 Solve it here: [https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/12-string-matching/001-find-the-index-of-the-first-occurrence-in-a-string.html](https://amitxaidev.github.io/dsa/12-string-matching/001-find-the-index-of-the-first-occurrence-in-a-string.html)
 
 ## The problem, in short
 
 Return the index where needle first appears in haystack, or -1 if it doesn't appear.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/12-string-matching/001-find-the-index-of-the-first-occurrence-in-a-string.html](https://amitxaidev.github.io/dsa/12-string-matching/001-find-the-index-of-the-first-occurrence-in-a-string.html)
+
+## Understanding
+
+**Really asking:** where does needle first appear in haystack?
+
+**Why this works:** KMP's LPS table remembers how much of the needle still matches after a mismatch, so the haystack pointer never goes back.
+
+**Example:** needle "abab" → lps [0, 0, 1, 2]
+```text
+text "abaabab": match "aba", mismatch at 'a' vs 'b'
+jump j to lps[2] = 1 (keep "a") instead of restarting
+continue → match found at index 3
+```
 
 ## Hints
 

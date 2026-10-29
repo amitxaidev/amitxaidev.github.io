@@ -1,14 +1,26 @@
 # 4. Word Pattern
 
 **LeetCode 290** · 🟢 Easy · Pattern: **Two-way HashMap**
-🔗 Solve it here: [https://leetcode.com/problems/word-pattern/](https://leetcode.com/problems/word-pattern/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/004-word-pattern.html](https://amitxaidev.github.io/dsa/16-hashing/004-word-pattern.html)
 
 ## The problem, in short
 
 Decide whether a sentence follows a pattern of letters, where each letter maps to exactly one word and each word to exactly one letter.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/word-pattern/](https://leetcode.com/problems/word-pattern/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/004-word-pattern.html](https://amitxaidev.github.io/dsa/16-hashing/004-word-pattern.html)
+
+## Understanding
+
+**Really asking:** does each letter stand for exactly one word, and each word for one letter?
+
+**Why this works:** two maps, one per direction; any conflict fails.
+
+**Example:** "abba" and "dog cat cat dog"
+```text
+a→dog, b→cat, b→cat ✓, a→dog ✓ → true
+```
 
 ## Hints
 

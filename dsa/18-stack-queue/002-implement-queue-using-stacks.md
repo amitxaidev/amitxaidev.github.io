@@ -1,14 +1,27 @@
 # 2. Implement Queue using Stacks
 
 **LeetCode 232** · 🟢 Easy · Pattern: **Two stacks**
-🔗 Solve it here: [https://leetcode.com/problems/implement-queue-using-stacks/](https://leetcode.com/problems/implement-queue-using-stacks/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/002-implement-queue-using-stacks.html](https://amitxaidev.github.io/dsa/18-stack-queue/002-implement-queue-using-stacks.html)
 
 ## The problem, in short
 
 Build a FIFO queue (push, pop, peek, empty) using only stack operations.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/implement-queue-using-stacks/](https://leetcode.com/problems/implement-queue-using-stacks/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/002-implement-queue-using-stacks.html](https://amitxaidev.github.io/dsa/18-stack-queue/002-implement-queue-using-stacks.html)
+
+## Understanding
+
+**Really asking:** FIFO behaviour from LIFO stacks.
+
+**Why this works:** pouring one stack into another reverses the order. Pour only when the "out" stack is empty.
+
+**Example:** push 1, push 2, pop
+```text
+in [1, 2] → pour → out [2, 1] (1 on top)
+pop → 1
+```
 
 ## Hints
 

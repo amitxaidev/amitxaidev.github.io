@@ -1,14 +1,27 @@
 # 4. Subsets II
 
 **LeetCode 90** · 🟡 Medium · Pattern: **Backtracking with duplicate skip**
-🔗 Solve it here: [https://leetcode.com/problems/subsets-ii/](https://leetcode.com/problems/subsets-ii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/004-subsets-ii.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/004-subsets-ii.html)
 
 ## The problem, in short
 
 Return all distinct subsets of an array that may contain duplicates.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/subsets-ii/](https://leetcode.com/problems/subsets-ii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/004-subsets-ii.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/004-subsets-ii.html)
+
+## Understanding
+
+**Really asking:** subsets without duplicates when the input has repeats.
+
+**Why this works:** sort, then at the same level skip a value equal to the one just tried.
+
+**Example:** [1, 2, 2]
+```text
+[], [1], [1,2], [1,2,2], [2], [2,2]
+the second 2 is skipped as a starting choice at the same level
+```
 
 ## Hints
 

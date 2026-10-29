@@ -1,14 +1,27 @@
 # 5. Sort List
 
 **LeetCode 148** · 🟡 Medium · Pattern: **Merge sort on a linked list**
-🔗 Solve it here: [https://leetcode.com/problems/sort-list/](https://leetcode.com/problems/sort-list/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/005-sort-list.html](https://amitxaidev.github.io/dsa/14-sorting/005-sort-list.html)
 
 ## The problem, in short
 
 Sort a singly linked list in O(n log n) time.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/sort-list/](https://leetcode.com/problems/sort-list/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/005-sort-list.html](https://amitxaidev.github.io/dsa/14-sorting/005-sort-list.html)
+
+## Understanding
+
+**Really asking:** sort a linked list in O(n log n).
+
+**Why this works:** merge sort only needs to walk forward: find the middle, cut, sort both halves, merge.
+
+**Example:** 4 → 2 → 1 → 3
+```text
+halves 4→2 and 1→3 → sorted 2→4 and 1→3
+merge → 1→2→3→4
+```
 
 ## Hints
 

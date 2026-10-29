@@ -1,14 +1,30 @@
 # 7. Subarray Sum Equals K
 
 **LeetCode 560** · 🟡 Medium · Pattern: **Prefix sum + HashMap**
-🔗 Solve it here: [https://leetcode.com/problems/subarray-sum-equals-k/](https://leetcode.com/problems/subarray-sum-equals-k/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/007-subarray-sum-equals-k.html](https://amitxaidev.github.io/dsa/06-prefix-sum/007-subarray-sum-equals-k.html)
 
 ## The problem, in short
 
 Count the contiguous subarrays whose elements add up to exactly k. Values can be negative.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/subarray-sum-equals-k/](https://leetcode.com/problems/subarray-sum-equals-k/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/007-subarray-sum-equals-k.html](https://amitxaidev.github.io/dsa/06-prefix-sum/007-subarray-sum-equals-k.html)
+
+## Understanding
+
+**Really asking:** count contiguous pieces that add to exactly k (negatives allowed).
+
+**Why this works:** a piece from i+1 to j sums to k when prefix[j] - prefix[i] = k. So at each j, count earlier prefixes equal to prefix[j] - k, using a HashMap.
+
+**Example:** nums = [1, 1, 1], k = 2
+```text
+map {0:1}
+sum 1: need -1 → 0;  map {0:1, 1:1}
+sum 2: need 0  → +1; map {…, 2:1}
+sum 3: need 1  → +1
+answer 2
+```
 
 ## Hints
 

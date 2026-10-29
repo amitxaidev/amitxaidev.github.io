@@ -1,14 +1,27 @@
 # 6. Top K Frequent Words
 
 **LeetCode 692** · 🟡 Medium · Pattern: **Heap with a two-key comparator**
-🔗 Solve it here: [https://leetcode.com/problems/top-k-frequent-words/](https://leetcode.com/problems/top-k-frequent-words/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/006-top-k-frequent-words.html](https://amitxaidev.github.io/dsa/21-heaps/006-top-k-frequent-words.html)
 
 ## The problem, in short
 
 Return the k most frequent words, sorted by frequency (high to low) and alphabetically for ties.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/top-k-frequent-words/](https://leetcode.com/problems/top-k-frequent-words/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/006-top-k-frequent-words.html](https://amitxaidev.github.io/dsa/21-heaps/006-top-k-frequent-words.html)
+
+## Understanding
+
+**Really asking:** the k most frequent words, ties in alphabetical order.
+
+**Why this works:** a min-heap of size k where the "worst" word sits on top (lower count, or later alphabetically). Reverse at the end.
+
+**Example:** ["i","love","leetcode","i","love","coding"], k = 2
+```text
+i:2, love:2, others 1
+tie → "i" before "love" → ["i", "love"]
+```
 
 ## Hints
 

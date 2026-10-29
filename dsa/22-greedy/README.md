@@ -6,6 +6,12 @@ Intervals, jump game, gas station and exchange arguments.
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/22-greedy/  
 🧮 **14 problems** · 🟢 3 Easy · 🟡 10 Medium · 🔴 1 Hard
 
+## Understand the topic
+
+A greedy algorithm makes the best-looking choice at each step and never goes back. It's fast and simple, but it's only correct when you can argue that the local choice never blocks a better overall answer. If you can't make that argument, use dynamic programming.
+
+The classic greedy choices: sort intervals by end time and keep the one that finishes first (activity selection); take the best value per unit first (fractional knapsack); track the furthest reach (jump game); reset the start when your running balance goes negative (gas station).
+
 ## How to use this list
 
 1. Watch the episode above.

@@ -1,14 +1,27 @@
 # 10. Insert Interval
 
 **LeetCode 57** · 🟡 Medium · Pattern: **Three phases**
-🔗 Solve it here: [https://leetcode.com/problems/insert-interval/](https://leetcode.com/problems/insert-interval/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/010-insert-interval.html](https://amitxaidev.github.io/dsa/22-greedy/010-insert-interval.html)
 
 ## The problem, in short
 
 Insert a new interval into a sorted list of non-overlapping intervals, merging where needed.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/insert-interval/](https://leetcode.com/problems/insert-interval/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/010-insert-interval.html](https://amitxaidev.github.io/dsa/22-greedy/010-insert-interval.html)
+
+## Understanding
+
+**Really asking:** insert a new interval into a sorted list and merge overlaps.
+
+**Why this works:** three phases: copy the ones before it, merge the ones that overlap it, copy the ones after it.
+
+**Example:** [[1,3],[6,9]] + [2,5]
+```text
+[1,3] overlaps → [1,5]
+[6,9] after → [[1,5],[6,9]]
+```
 
 ## Hints
 

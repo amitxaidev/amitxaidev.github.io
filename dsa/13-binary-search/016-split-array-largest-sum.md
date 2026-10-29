@@ -1,14 +1,27 @@
 # 16. Split Array Largest Sum
 
 **LeetCode 410** · 🔴 Hard · Pattern: **Binary search on the answer (book allocation)**
-🔗 Solve it here: [https://leetcode.com/problems/split-array-largest-sum/](https://leetcode.com/problems/split-array-largest-sum/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/016-split-array-largest-sum.html](https://amitxaidev.github.io/dsa/13-binary-search/016-split-array-largest-sum.html)
 
 ## The problem, in short
 
 Split the array into k non-empty contiguous parts so that the largest part's sum is as small as possible. Return that sum.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/split-array-largest-sum/](https://leetcode.com/problems/split-array-largest-sum/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/016-split-array-largest-sum.html](https://amitxaidev.github.io/dsa/13-binary-search/016-split-array-largest-sum.html)
+
+## Understanding
+
+**Really asking:** cut the array into k parts so the biggest part sum is as small as possible ("book allocation").
+
+**Why this works:** guess a limit; greedily count how many parts you need. Fewer parts than k is fine. Binary search the smallest workable limit.
+
+**Example:** [7, 2, 5, 10, 8], k = 2
+```text
+limit 18: [7,2,5] [10,8] → 2 parts ✓
+limit 17: [7,2,5] [10] [8] → 3 parts ✗ → answer 18
+```
 
 ## Hints
 

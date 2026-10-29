@@ -1,14 +1,26 @@
 # 12. Network Delay Time
 
 **LeetCode 743** · 🟡 Medium · Pattern: **Dijkstra**
-🔗 Solve it here: [https://leetcode.com/problems/network-delay-time/](https://leetcode.com/problems/network-delay-time/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/012-network-delay-time.html](https://amitxaidev.github.io/dsa/23-graphs/012-network-delay-time.html)
 
 ## The problem, in short
 
 A signal starts at node k in a directed weighted graph. Return how long until every node receives it, or -1 if some never do.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/network-delay-time/](https://leetcode.com/problems/network-delay-time/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/012-network-delay-time.html](https://amitxaidev.github.io/dsa/23-graphs/012-network-delay-time.html)
+
+## Understanding
+
+**Really asking:** how long until a signal from k reaches every node?
+
+**Why this works:** each node's arrival time is its shortest distance from k. Dijkstra with a min-heap finds them; the answer is the largest.
+
+**Example:** edges 2→1 (1), 2→3 (1), 3→4 (1), k = 2
+```text
+dist: 1→1, 3→1, 4→2 → answer 2
+```
 
 ## Hints
 

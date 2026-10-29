@@ -1,14 +1,27 @@
 # 1. Assign Cookies
 
 **LeetCode 455** · 🟢 Easy · Pattern: **Sort + match smallest**
-🔗 Solve it here: [https://leetcode.com/problems/assign-cookies/](https://leetcode.com/problems/assign-cookies/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/001-assign-cookies.html](https://amitxaidev.github.io/dsa/22-greedy/001-assign-cookies.html)
 
 ## The problem, in short
 
 Each child needs a cookie of at least their greed size; each cookie has a size and goes to at most one child. Maximise the number of content children.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/assign-cookies/](https://leetcode.com/problems/assign-cookies/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/001-assign-cookies.html](https://amitxaidev.github.io/dsa/22-greedy/001-assign-cookies.html)
+
+## Understanding
+
+**Really asking:** feed as many children as possible.
+
+**Why this works:** give each child the smallest cookie that is big enough, so the big cookies are saved for greedier kids.
+
+**Example:** greed [1, 2, 3], cookies [1, 1]
+```text
+child 1 gets cookie 1
+child 2: remaining cookie 1 too small → 1 content child
+```
 
 ## Hints
 

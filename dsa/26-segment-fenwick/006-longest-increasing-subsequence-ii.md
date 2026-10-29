@@ -1,14 +1,26 @@
 # 6. Longest Increasing Subsequence II
 
 **LeetCode 2407** · 🔴 Hard · Pattern: **Segment tree over values (range max)**
-🔗 Solve it here: [https://leetcode.com/problems/longest-increasing-subsequence-ii/](https://leetcode.com/problems/longest-increasing-subsequence-ii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/26-segment-fenwick/006-longest-increasing-subsequence-ii.html](https://amitxaidev.github.io/dsa/26-segment-fenwick/006-longest-increasing-subsequence-ii.html)
 
 ## The problem, in short
 
 Find the longest strictly increasing subsequence where each pair of neighbouring elements differs by at most k.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/longest-increasing-subsequence-ii/](https://leetcode.com/problems/longest-increasing-subsequence-ii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/26-segment-fenwick/006-longest-increasing-subsequence-ii.html](https://amitxaidev.github.io/dsa/26-segment-fenwick/006-longest-increasing-subsequence-ii.html)
+
+## Understanding
+
+**Really asking:** the longest increasing subsequence where neighbouring values differ by at most k.
+
+**Why this works:** best[v] = the longest run ending with value v. For x, ask the max of best over [x-k, x-1], a range max query on a segment tree.
+
+**Example:** [4, 2, 1, 4, 3, 4, 5, 8, 15], k = 3
+```text
+1 → 3 → 4 → 5 → 8 → length 5
+```
 
 ## Hints
 

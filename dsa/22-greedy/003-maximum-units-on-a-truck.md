@@ -1,14 +1,27 @@
 # 3. Maximum Units on a Truck
 
 **LeetCode 1710** · 🟢 Easy · Pattern: **Fractional-knapsack style**
-🔗 Solve it here: [https://leetcode.com/problems/maximum-units-on-a-truck/](https://leetcode.com/problems/maximum-units-on-a-truck/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/003-maximum-units-on-a-truck.html](https://amitxaidev.github.io/dsa/22-greedy/003-maximum-units-on-a-truck.html)
 
 ## The problem, in short
 
 Box types come as [count, unitsPerBox]. A truck holds at most truckSize boxes. Maximise the total units loaded.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/maximum-units-on-a-truck/](https://leetcode.com/problems/maximum-units-on-a-truck/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/003-maximum-units-on-a-truck.html](https://amitxaidev.github.io/dsa/22-greedy/003-maximum-units-on-a-truck.html)
+
+## Understanding
+
+**Really asking:** load boxes to maximise units, limited by the number of boxes.
+
+**Why this works:** every box uses one slot, so take the boxes with the most units first.
+
+**Example:** [[1,3],[2,2],[3,1]], truck 4
+```text
+1 box × 3, 2 boxes × 2, 1 box × 1
+3 + 4 + 1 = 8
+```
 
 ## Hints
 

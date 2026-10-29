@@ -1,14 +1,27 @@
 # 9. Linked List Cycle II
 
 **LeetCode 142** · 🟡 Medium · Pattern: **Floyd's cycle entrance**
-🔗 Solve it here: [https://leetcode.com/problems/linked-list-cycle-ii/](https://leetcode.com/problems/linked-list-cycle-ii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/009-linked-list-cycle-ii.html](https://amitxaidev.github.io/dsa/17-linked-list/009-linked-list-cycle-ii.html)
 
 ## The problem, in short
 
 Return the node where a linked list's cycle begins, or null if there is no cycle.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/linked-list-cycle-ii/](https://leetcode.com/problems/linked-list-cycle-ii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/009-linked-list-cycle-ii.html](https://amitxaidev.github.io/dsa/17-linked-list/009-linked-list-cycle-ii.html)
+
+## Understanding
+
+**Really asking:** where does the cycle start?
+
+**Why this works:** after slow and fast meet, the distance from head to the entrance equals the distance from the meeting point to the entrance. Walk both at speed 1.
+
+**Example:** 3 → 2 → 0 → -4 → (2)
+```text
+meet at -4
+one pointer from 3, one from -4: next steps land on 2 together → entrance 2
+```
 
 ## Hints
 

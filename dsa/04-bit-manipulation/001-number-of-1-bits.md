@@ -1,14 +1,28 @@
 # 1. Number of 1 Bits
 
 **LeetCode 191** · 🟢 Easy · Pattern: **n & (n-1)**
-🔗 Solve it here: [https://leetcode.com/problems/number-of-1-bits/](https://leetcode.com/problems/number-of-1-bits/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/001-number-of-1-bits.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/001-number-of-1-bits.html)
 
 ## The problem, in short
 
 Count how many bits are set to 1 in the binary form of a number.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/number-of-1-bits/](https://leetcode.com/problems/number-of-1-bits/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/001-number-of-1-bits.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/001-number-of-1-bits.html)
+
+## Understanding
+
+**Really asking:** how many switches are ON in this number?
+
+**Why this works:** n & (n - 1) turns off the lowest ON bit. Count how many times you can do that before n is 0.
+
+**Example:** n = 11 (1011)
+```text
+1011 & 1010 = 1010  count 1
+1010 & 1001 = 1000  count 2
+1000 & 0111 = 0000  count 3
+```
 
 ## Hints
 

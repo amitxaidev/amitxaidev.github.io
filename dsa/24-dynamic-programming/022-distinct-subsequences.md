@@ -1,14 +1,26 @@
 # 22. Distinct Subsequences
 
 **LeetCode 115** · 🔴 Hard · Pattern: **2D DP counting**
-🔗 Solve it here: [https://leetcode.com/problems/distinct-subsequences/](https://leetcode.com/problems/distinct-subsequences/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/022-distinct-subsequences.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/022-distinct-subsequences.html)
 
 ## The problem, in short
 
 Count how many distinct ways t appears as a subsequence of s.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/distinct-subsequences/](https://leetcode.com/problems/distinct-subsequences/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/022-distinct-subsequences.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/022-distinct-subsequences.html)
+
+## Understanding
+
+**Really asking:** in how many ways does t appear as a subsequence of s?
+
+**Why this works:** dp[j] = ways to build t's first j letters. A matching letter of s can extend dp[j-1] (loop j downward).
+
+**Example:** s "rabbbit", t "rabbit"
+```text
+choose which 2 of the 3 b's → 3 ways
+```
 
 ## Hints
 

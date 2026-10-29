@@ -30,6 +30,7 @@
         <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
         <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
       </ul>
@@ -49,7 +50,7 @@
       <div class="col-lg-8">
         <h1 class="h2 mb-1">16. Hashing</h1>
         <p class="text-body-secondary mb-2">HashMap and HashSet patterns: counting, grouping and prefix-sum maps.</p>
-        <div><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 37 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 38 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 39 (coming soon)</span></div>
+        <div><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 37–39 coming soon</span></div>
         <div class="array-strip mt-3" aria-hidden="true"><span>4</span><span>1</span><span>7</span><span>3</span><span>9</span><span>2</span><span>6</span><span>5</span><span>8</span><i class="window"></i></div>
       </div>
       <div class="col-lg-4" data-slugs="two-sum,contains-duplicate,intersection-of-two-arrays,word-pattern,unique-number-of-occurrences,happy-number,longest-consecutive-sequence,4sum-ii,max-number-of-k-sum-pairs,brick-wall,equal-row-and-column-pairs,max-points-on-a-line">
@@ -61,6 +62,11 @@
   </div>
 </section>
 <div class="container pb-4">
+<div class="card shadow-sm mb-4"><div class="card-body">
+  <h2 class="h5 fw-bold">Understand the topic</h2>
+  <div class="understanding"><p>A HashMap stores key → value pairs, and a HashSet stores keys, both with O(1) average lookup. Inside, the key&#x27;s hashCode picks a bucket; collisions go into a chain (Java turns long chains into trees).</p>
+<p>The common patterns are: &quot;have I seen this before?&quot; (a set), &quot;how many of each?&quot; (a count map), &quot;where did I see it?&quot; (a value → index map), and &quot;group by a canonical key&quot;. Remember that arrays used as keys compare by reference, so convert them to a String or List first.</p></div>
+</div></div>
 <div class="d-flex flex-wrap gap-2 mb-3">
   <input type="search" class="form-control search" style="max-width: 320px" placeholder="Search problems…" aria-label="Search problems">
   <div class="btn-group btn-group-sm flex-wrap" role="group" aria-label="Filter">

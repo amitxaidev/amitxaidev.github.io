@@ -1,14 +1,27 @@
 # 1. Find the Highest Altitude
 
 **LeetCode 1732** · 🟢 Easy · Pattern: **Running sum**
-🔗 Solve it here: [https://leetcode.com/problems/find-the-highest-altitude/](https://leetcode.com/problems/find-the-highest-altitude/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/001-find-the-highest-altitude.html](https://amitxaidev.github.io/dsa/06-prefix-sum/001-find-the-highest-altitude.html)
 
 ## The problem, in short
 
 A biker starts at altitude 0. gain[i] is the change in altitude between point i and point i + 1. Return the highest altitude reached.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/find-the-highest-altitude/](https://leetcode.com/problems/find-the-highest-altitude/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/001-find-the-highest-altitude.html](https://amitxaidev.github.io/dsa/06-prefix-sum/001-find-the-highest-altitude.html)
+
+## Understanding
+
+**Really asking:** the altitude after each step is a running total of the gains; what's the highest point?
+
+**Why this works:** keep the running total and its maximum; the start (0) counts too.
+
+**Example:** gain = [-5, 1, 5, 0, -7]
+```text
+altitudes: 0, -5, -4, 1, 1, -6
+highest = 1
+```
 
 ## Hints
 

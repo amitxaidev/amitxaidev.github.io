@@ -1,14 +1,27 @@
 # 13. Minimum Number of Days to Make m Bouquets
 
 **LeetCode 1482** · 🟡 Medium · Pattern: **Binary search on the answer**
-🔗 Solve it here: [https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/013-minimum-number-of-days-to-make-m-bouquets.html](https://amitxaidev.github.io/dsa/13-binary-search/013-minimum-number-of-days-to-make-m-bouquets.html)
 
 ## The problem, in short
 
 Flower i blooms on bloomDay[i]. A bouquet needs k adjacent bloomed flowers. Return the earliest day you can make m bouquets, or -1.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/013-minimum-number-of-days-to-make-m-bouquets.html](https://amitxaidev.github.io/dsa/13-binary-search/013-minimum-number-of-days-to-make-m-bouquets.html)
+
+## Understanding
+
+**Really asking:** the earliest day you can make m bouquets of k neighbouring flowers.
+
+**Why this works:** waiting longer never hurts, so binary search the day and count bouquets from runs of bloomed flowers.
+
+**Example:** bloomDay [1, 10, 3, 10, 2], m = 3, k = 1
+```text
+day 3: bloomed 1, 3, 2 → 3 bouquets ✓
+day 2: only 2 bouquets ✗ → answer 3
+```
 
 ## Hints
 

@@ -1,14 +1,27 @@
 # 9. Kth Smallest Element in a Sorted Matrix
 
 **LeetCode 378** · 🟡 Medium · Pattern: **K-way merge with a min-heap**
-🔗 Solve it here: [https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/009-kth-smallest-element-in-a-sorted-matrix.html](https://amitxaidev.github.io/dsa/21-heaps/009-kth-smallest-element-in-a-sorted-matrix.html)
 
 ## The problem, in short
 
 In an n×n matrix where every row and column is sorted ascending, return the k-th smallest element.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/009-kth-smallest-element-in-a-sorted-matrix.html](https://amitxaidev.github.io/dsa/21-heaps/009-kth-smallest-element-in-a-sorted-matrix.html)
+
+## Understanding
+
+**Really asking:** the k-th smallest number in a matrix with sorted rows and columns.
+
+**Why this works:** merge the rows like k sorted lists with a min-heap; pop k - 1 times.
+
+**Example:** [[1,5,9],[10,11,13],[12,13,15]], k = 8
+```text
+pops: 1, 5, 9, 10, 11, 12, 13
+8th = 13
+```
 
 ## Hints
 

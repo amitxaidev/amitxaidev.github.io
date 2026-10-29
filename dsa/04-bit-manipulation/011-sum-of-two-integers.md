@@ -1,14 +1,29 @@
 # 11. Sum of Two Integers
 
 **LeetCode 371** · 🟡 Medium · Pattern: **XOR + carry**
-🔗 Solve it here: [https://leetcode.com/problems/sum-of-two-integers/](https://leetcode.com/problems/sum-of-two-integers/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/011-sum-of-two-integers.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/011-sum-of-two-integers.html)
 
 ## The problem, in short
 
 Add two integers without using + or -.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/sum-of-two-integers/](https://leetcode.com/problems/sum-of-two-integers/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/011-sum-of-two-integers.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/011-sum-of-two-integers.html)
+
+## Understanding
+
+**Really asking:** add without using + or -.
+
+**Why this works:** XOR adds bits but forgets carries; AND finds where carries happen, and shifting left moves them into place. Repeat until there's no carry.
+
+**Example:** a = 5 (101), b = 3 (011)
+```text
+sum 110, carry 010
+sum 100, carry 100
+sum 000, carry 1000
+sum 1000, carry 0 → 8
+```
 
 ## Hints
 

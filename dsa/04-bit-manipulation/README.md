@@ -6,6 +6,12 @@ AND, OR, XOR, shifts and the classic bit tricks.
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/04-bit-manipulation/  
 🧮 **12 problems** · 🟢 8 Easy · 🟡 4 Medium · 🔴 0 Hard
 
+## Understand the topic
+
+Every int is 32 switches. Bit manipulation means flipping and reading those switches directly with & (both on), | (either on), ^ (different), ~ (flip) and shifts (&lt;&lt; and >>).
+
+Three tricks solve most problems here: x & (x - 1) removes the lowest 1-bit, x & -x keeps only the lowest 1-bit, and a ^ a = 0 makes pairs cancel out. In Java, use >>> to shift right without copying the sign bit.
+
 ## How to use this list
 
 1. Watch the episode above.

@@ -1,14 +1,26 @@
 # 16. Flatten Binary Tree to Linked List
 
 **LeetCode 114** · 🟡 Medium · Pattern: **Morris-style rewiring**
-🔗 Solve it here: [https://leetcode.com/problems/flatten-binary-tree-to-linked-list/](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/016-flatten-binary-tree-to-linked-list.html](https://amitxaidev.github.io/dsa/19-binary-trees/016-flatten-binary-tree-to-linked-list.html)
 
 ## The problem, in short
 
 Flatten a binary tree into a "linked list" in place, using right pointers in preorder order and setting every left pointer to null.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/flatten-binary-tree-to-linked-list/](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/016-flatten-binary-tree-to-linked-list.html](https://amitxaidev.github.io/dsa/19-binary-trees/016-flatten-binary-tree-to-linked-list.html)
+
+## Understanding
+
+**Really asking:** turn the tree into a right-only chain in preorder.
+
+**Why this works:** at each node with a left child, attach the right subtree to the end of the left subtree, then move the left subtree to the right.
+
+**Example:** 1 (2 (3, 4), 5 (-, 6))
+```text
+1 → 2 → 3 → 4 → 5 → 6
+```
 
 ## Hints
 

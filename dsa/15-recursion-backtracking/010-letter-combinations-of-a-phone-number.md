@@ -1,14 +1,27 @@
 # 10. Letter Combinations of a Phone Number
 
 **LeetCode 17** · 🟡 Medium · Pattern: **Backtracking over choices**
-🔗 Solve it here: [https://leetcode.com/problems/letter-combinations-of-a-phone-number/](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/010-letter-combinations-of-a-phone-number.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/010-letter-combinations-of-a-phone-number.html)
 
 ## The problem, in short
 
 Each digit 2–9 maps to letters as on a phone keypad. Return all letter strings the digit string could represent.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/letter-combinations-of-a-phone-number/](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/010-letter-combinations-of-a-phone-number.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/010-letter-combinations-of-a-phone-number.html)
+
+## Understanding
+
+**Really asking:** every word the digits could spell on a phone keypad.
+
+**Why this works:** one recursion level per digit, one branch per letter on that key.
+
+**Example:** "23"
+```text
+2 → a, b, c ; 3 → d, e, f
+ad ae af bd be bf cd ce cf
+```
 
 ## Hints
 

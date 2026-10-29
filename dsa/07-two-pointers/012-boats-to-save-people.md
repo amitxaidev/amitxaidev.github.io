@@ -1,14 +1,28 @@
 # 12. Boats to Save People
 
 **LeetCode 881** · 🟡 Medium · Pattern: **Sort + opposite ends**
-🔗 Solve it here: [https://leetcode.com/problems/boats-to-save-people/](https://leetcode.com/problems/boats-to-save-people/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/012-boats-to-save-people.html](https://amitxaidev.github.io/dsa/07-two-pointers/012-boats-to-save-people.html)
 
 ## The problem, in short
 
 Each boat carries at most two people and has a weight limit. Return the minimum number of boats to carry everyone.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/boats-to-save-people/](https://leetcode.com/problems/boats-to-save-people/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/012-boats-to-save-people.html](https://amitxaidev.github.io/dsa/07-two-pointers/012-boats-to-save-people.html)
+
+## Understanding
+
+**Really asking:** boats carry at most 2 people under a weight limit; fewest boats?
+
+**Why this works:** the heaviest person must go now. The only useful partner is the lightest person; if even they don't fit, nobody does.
+
+**Example:** [3, 2, 2, 1], limit 3 → sorted [1, 2, 2, 3]
+```text
+3 + 1 = 4 > 3 → 3 alone (boat 1)
+2 + 1 = 3 ✓ (boat 2)
+2 alone (boat 3) → 3 boats
+```
 
 ## Hints
 

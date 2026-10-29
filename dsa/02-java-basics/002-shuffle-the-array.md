@@ -1,14 +1,30 @@
 # 2. Shuffle the Array
 
 **LeetCode 1470** · 🟢 Easy · Pattern: **Index arithmetic**
-🔗 Solve it here: [https://leetcode.com/problems/shuffle-the-array/](https://leetcode.com/problems/shuffle-the-array/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/002-shuffle-the-array.html](https://amitxaidev.github.io/dsa/02-java-basics/002-shuffle-the-array.html)
 
 ## The problem, in short
 
 The array holds x1..xn followed by y1..yn. Return it interleaved as x1, y1, x2, y2, ...
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/shuffle-the-array/](https://leetcode.com/problems/shuffle-the-array/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/002-shuffle-the-array.html](https://amitxaidev.github.io/dsa/02-java-basics/002-shuffle-the-array.html)
+
+## Understanding
+
+**Really asking:** take the first half (x's) and the second half (y's) and zip them together: x1, y1, x2, y2…
+
+**Why this works:** x_i lives at index i and y_i at index i + n; in the answer they go to 2i and 2i + 1.
+
+**Example:** nums = [2, 5, 1, 3, 4, 7], n = 3
+```text
+x = [2, 5, 1], y = [3, 4, 7]
+i=0 → ans[0]=2, ans[1]=3
+i=1 → ans[2]=5, ans[3]=4
+i=2 → ans[4]=1, ans[5]=7
+ans = [2, 3, 5, 4, 1, 7]
+```
 
 ## Hints
 

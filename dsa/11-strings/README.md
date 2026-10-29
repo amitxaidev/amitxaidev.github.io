@@ -6,6 +6,12 @@ StringBuilder, palindromes, anagrams, frequency counting and top string question
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/11-strings/  
 🧮 **15 problems** · 🟢 7 Easy · 🟡 8 Medium · 🔴 0 Hard
 
+## Understand the topic
+
+In Java a String can't be changed; every "change" makes a new String. Use StringBuilder to build text, and toCharArray() when you need to edit characters.
+
+Most string questions use one of these ideas: a frequency array of 26 or 128 counts (anagrams, unique letters), two pointers from the ends (palindromes), expanding around a centre (palindromic substrings), or a HashMap with a canonical key (grouping).
+
 ## How to use this list
 
 1. Watch the episode above.

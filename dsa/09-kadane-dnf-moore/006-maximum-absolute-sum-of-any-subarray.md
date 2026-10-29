@@ -1,14 +1,28 @@
 # 6. Maximum Absolute Sum of Any Subarray
 
 **LeetCode 1749** · 🟡 Medium · Pattern: **Kadane max & min**
-🔗 Solve it here: [https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/](https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/006-maximum-absolute-sum-of-any-subarray.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/006-maximum-absolute-sum-of-any-subarray.html)
 
 ## The problem, in short
 
 Return the largest absolute value of any subarray sum (an empty subarray counts as 0).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/](https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/006-maximum-absolute-sum-of-any-subarray.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/006-maximum-absolute-sum-of-any-subarray.html)
+
+## Understanding
+
+**Really asking:** the largest |sum| of any piece.
+
+**Why this works:** the largest absolute value is either the most positive sum or the most negative sum; run Kadane for both.
+
+**Example:** [1, -3, 2, 3, -4]
+```text
+best positive: 2 + 3 = 5
+most negative: -4
+answer 5
+```
 
 ## Hints
 

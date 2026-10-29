@@ -1,14 +1,26 @@
 # 7. Combinations
 
 **LeetCode 77** · 🟡 Medium · Pattern: **Backtracking with pruning**
-🔗 Solve it here: [https://leetcode.com/problems/combinations/](https://leetcode.com/problems/combinations/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/007-combinations.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/007-combinations.html)
 
 ## The problem, in short
 
 Return all ways to choose k numbers from 1..n (order doesn't matter).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/combinations/](https://leetcode.com/problems/combinations/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/007-combinations.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/007-combinations.html)
+
+## Understanding
+
+**Really asking:** all ways to choose k numbers from 1..n.
+
+**Why this works:** pick in increasing order so each set appears once; stop early when not enough numbers remain.
+
+**Example:** n = 4, k = 2
+```text
+[1,2] [1,3] [1,4] [2,3] [2,4] [3,4]
+```
 
 ## Hints
 

@@ -1,14 +1,26 @@
 # 5. Isomorphic Strings
 
 **LeetCode 205** · 🟢 Easy · Pattern: **Two-way mapping**
-🔗 Solve it here: [https://leetcode.com/problems/isomorphic-strings/](https://leetcode.com/problems/isomorphic-strings/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/005-isomorphic-strings.html](https://amitxaidev.github.io/dsa/11-strings/005-isomorphic-strings.html)
 
 ## The problem, in short
 
 Decide whether characters of s can be replaced one-to-one to get t (no two characters may map to the same character).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/isomorphic-strings/](https://leetcode.com/problems/isomorphic-strings/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/005-isomorphic-strings.html](https://amitxaidev.github.io/dsa/11-strings/005-isomorphic-strings.html)
+
+## Understanding
+
+**Really asking:** can letters of s be renamed one-to-one to get t?
+
+**Why this works:** check the mapping in both directions; "ab" → "aa" fails because two letters would map to the same one.
+
+**Example:** "egg" → "add"
+```text
+e→a, g→d, g→d ✓ and back a→e, d→g ✓ → true
+```
 
 ## Hints
 

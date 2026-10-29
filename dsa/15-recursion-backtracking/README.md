@@ -6,6 +6,12 @@ Subsets, permutations, combinations, N-Queens, Sudoku and word search.
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/15-recursion-backtracking/  
 🧮 **18 problems** · 🟢 2 Easy · 🟡 13 Medium · 🔴 3 Hard
 
+## Understand the topic
+
+Recursion means solving a problem using a smaller copy of itself, plus a base case that stops the calls. Each call waits on the call stack until the smaller call returns.
+
+Backtracking is recursion that builds an answer one choice at a time. The template is: choose, explore (recurse), un-choose. Subsets, permutations, combinations, N-Queens and Sudoku all use this same template. Only three things change between problems: the choices at each step, when a path is complete, and when to prune a dead branch early.
+
 ## How to use this list
 
 1. Watch the episode above.

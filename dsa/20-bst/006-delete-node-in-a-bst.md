@@ -1,14 +1,27 @@
 # 6. Delete Node in a BST
 
 **LeetCode 450** · 🟡 Medium · Pattern: **Three deletion cases**
-🔗 Solve it here: [https://leetcode.com/problems/delete-node-in-a-bst/](https://leetcode.com/problems/delete-node-in-a-bst/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/006-delete-node-in-a-bst.html](https://amitxaidev.github.io/dsa/20-bst/006-delete-node-in-a-bst.html)
 
 ## The problem, in short
 
 Delete the node with a given key from a BST and return the new root.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/delete-node-in-a-bst/](https://leetcode.com/problems/delete-node-in-a-bst/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/006-delete-node-in-a-bst.html](https://amitxaidev.github.io/dsa/20-bst/006-delete-node-in-a-bst.html)
+
+## Understanding
+
+**Really asking:** remove a value and keep it a BST.
+
+**Why this works:** a leaf or one-child node is replaced by its child. A two-child node takes the smallest value from its right subtree, which is then deleted there.
+
+**Example:** delete 3 from 5 (3 (2, 4), 6)
+```text
+3 has two children → successor 4
+copy 4 into the node, delete the old 4 → 5 (4 (2), 6)
+```
 
 ## Hints
 

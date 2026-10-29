@@ -1,14 +1,27 @@
 # 2. Contains Duplicate II
 
 **LeetCode 219** · 🟢 Easy · Pattern: **Fixed window + HashSet**
-🔗 Solve it here: [https://leetcode.com/problems/contains-duplicate-ii/](https://leetcode.com/problems/contains-duplicate-ii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/002-contains-duplicate-ii.html](https://amitxaidev.github.io/dsa/08-sliding-window/002-contains-duplicate-ii.html)
 
 ## The problem, in short
 
 Decide whether two equal values exist whose indexes are at most k apart.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/contains-duplicate-ii/](https://leetcode.com/problems/contains-duplicate-ii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/002-contains-duplicate-ii.html](https://amitxaidev.github.io/dsa/08-sliding-window/002-contains-duplicate-ii.html)
+
+## Understanding
+
+**Really asking:** are there two equal values at most k apart?
+
+**Why this works:** only the last k values matter. Keep them in a set and drop the one that falls out.
+
+**Example:** [1, 2, 3, 1], k = 3
+```text
+window {1, 2, 3}
+next 1 is already in the window → true
+```
 
 ## Hints
 

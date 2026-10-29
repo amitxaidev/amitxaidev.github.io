@@ -6,6 +6,12 @@ Traversals, BFS, height/diameter, views, LCA, construction and serialization.
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/19-binary-trees/  
 🧮 **20 problems** · 🟢 8 Easy · 🟡 9 Medium · 🔴 3 Hard
 
+## Understand the topic
+
+A binary tree is nodes with up to two children. Almost every tree solution is recursion: solve for the left subtree, solve for the right subtree, combine at the node. Ask yourself what each call should return (a height, a sum, a node, a pair of values).
+
+Traversals decide when you visit the node. Preorder is node, left, right. Inorder is left, node, right. Postorder is left, right, node. Level order (BFS with a queue) goes row by row and is used for views and widths.
+
 ## How to use this list
 
 1. Watch the episode above.

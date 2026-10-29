@@ -1,14 +1,27 @@
 # 13. Smallest Range Covering Elements from K Lists
 
 **LeetCode 632** · 🔴 Hard · Pattern: **Min-heap with running max**
-🔗 Solve it here: [https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/](https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/013-smallest-range-covering-elements-from-k-lists.html](https://amitxaidev.github.io/dsa/21-heaps/013-smallest-range-covering-elements-from-k-lists.html)
 
 ## The problem, in short
 
 Given k sorted lists, find the smallest range [a, b] that includes at least one number from each list (ties: the one with the smaller a).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/](https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/013-smallest-range-covering-elements-from-k-lists.html](https://amitxaidev.github.io/dsa/21-heaps/013-smallest-range-covering-elements-from-k-lists.html)
+
+## Understanding
+
+**Really asking:** the narrowest range containing at least one number from every list.
+
+**Why this works:** hold one pointer per list. The range is [min, max] of the pointed values; only advancing the list with the minimum can make it narrower.
+
+**Example:** [[4,10,15,24,26],[0,9,12,20],[5,18,22,30]]
+```text
+start {4, 0, 5} → [0, 5]
+… best found [20, 24]
+```
 
 ## Hints
 

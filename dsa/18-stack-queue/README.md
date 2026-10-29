@@ -6,6 +6,12 @@ Parentheses, expression evaluation, monotonic stack and deque.
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/18-stack-queue/  
 🧮 **18 problems** · 🟢 5 Easy · 🟡 9 Medium · 🔴 4 Hard
 
+## Understand the topic
+
+A stack is last-in, first-out, like a pile of plates. A queue is first-in, first-out, like a line at a counter. A deque lets you add and remove at both ends. In Java, use ArrayDeque for all three; Stack and LinkedList are older and slower.
+
+The big pattern here is the monotonic stack: keep the stack increasing (or decreasing), and every pop answers "next greater" or "next smaller" for the popped item. Each item is pushed and popped once, so it's O(n).
+
 ## How to use this list
 
 1. Watch the episode above.

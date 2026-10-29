@@ -1,14 +1,28 @@
 # 4. Reverse String
 
 **LeetCode 344** · 🟢 Easy · Pattern: **Two pointers**
-🔗 Solve it here: [https://leetcode.com/problems/reverse-string/](https://leetcode.com/problems/reverse-string/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/004-reverse-string.html](https://amitxaidev.github.io/dsa/02-java-basics/004-reverse-string.html)
 
 ## The problem, in short
 
 Reverse a char array in place without making a new array.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/reverse-string/](https://leetcode.com/problems/reverse-string/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/004-reverse-string.html](https://amitxaidev.github.io/dsa/02-java-basics/004-reverse-string.html)
+
+## Understanding
+
+**Really asking:** flip the order of characters without making a new array.
+
+**Why this works:** swapping the two ends fixes two positions at once; move inward until the pointers meet.
+
+**Example:** ['h','e','l','l','o']
+```text
+swap 0,4 → o e l l h
+swap 1,3 → o l l e h
+l=2, r=2 → stop
+```
 
 ## Hints
 

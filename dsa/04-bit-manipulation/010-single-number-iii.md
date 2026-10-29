@@ -1,14 +1,29 @@
 # 10. Single Number III
 
 **LeetCode 260** · 🟡 Medium · Pattern: **XOR + lowest set bit**
-🔗 Solve it here: [https://leetcode.com/problems/single-number-iii/](https://leetcode.com/problems/single-number-iii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/010-single-number-iii.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/010-single-number-iii.html)
 
 ## The problem, in short
 
 Every number appears twice except two different numbers that appear once each. Return those two.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/single-number-iii/](https://leetcode.com/problems/single-number-iii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/010-single-number-iii.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/010-single-number-iii.html)
+
+## Understanding
+
+**Really asking:** two different loners, everything else in pairs.
+
+**Why this works:** XOR of all = a ^ b, which has a 1 where a and b differ. Split all numbers by that bit; each group becomes the easy "single number" problem.
+
+**Example:** [1, 2, 1, 3, 2, 5]
+```text
+xor = 3 ^ 5 = 110
+lowest bit = 010
+group with bit: 2, 3, 2 → 3
+group without:  1, 1, 5 → 5
+```
 
 ## Hints
 

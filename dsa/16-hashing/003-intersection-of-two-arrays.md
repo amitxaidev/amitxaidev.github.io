@@ -1,14 +1,27 @@
 # 3. Intersection of Two Arrays
 
 **LeetCode 349** · 🟢 Easy · Pattern: **HashSet**
-🔗 Solve it here: [https://leetcode.com/problems/intersection-of-two-arrays/](https://leetcode.com/problems/intersection-of-two-arrays/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/003-intersection-of-two-arrays.html](https://amitxaidev.github.io/dsa/16-hashing/003-intersection-of-two-arrays.html)
 
 ## The problem, in short
 
 Return the distinct values present in both arrays.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/intersection-of-two-arrays/](https://leetcode.com/problems/intersection-of-two-arrays/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/003-intersection-of-two-arrays.html](https://amitxaidev.github.io/dsa/16-hashing/003-intersection-of-two-arrays.html)
+
+## Understanding
+
+**Really asking:** distinct values present in both arrays.
+
+**Why this works:** put one array in a set; remove a value when found so it's reported once.
+
+**Example:** [1, 2, 2, 1] and [2, 2]
+```text
+set {1, 2}
+2 found → remove → [2]; next 2 not in set
+```
 
 ## Hints
 

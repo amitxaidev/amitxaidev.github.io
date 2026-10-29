@@ -1,14 +1,27 @@
 # 12. Capacity To Ship Packages Within D Days
 
 **LeetCode 1011** · 🟡 Medium · Pattern: **Binary search on the answer**
-🔗 Solve it here: [https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/012-capacity-to-ship-packages-within-d-days.html](https://amitxaidev.github.io/dsa/13-binary-search/012-capacity-to-ship-packages-within-d-days.html)
 
 ## The problem, in short
 
 Packages must be shipped in the given order, with one ship trip per day. Find the smallest ship capacity that ships everything within the given number of days.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/012-capacity-to-ship-packages-within-d-days.html](https://amitxaidev.github.io/dsa/13-binary-search/012-capacity-to-ship-packages-within-d-days.html)
+
+## Understanding
+
+**Really asking:** the smallest ship capacity that ships everything, in order, within the days.
+
+**Why this works:** bigger capacity never needs more days. Binary search between the heaviest package and the total weight, counting days greedily.
+
+**Example:** [1..10], days 5
+```text
+capacity 15: [1-5] [6-7] [8] [9] [10] → 5 days ✓
+capacity 14 needs 6 days ✗ → answer 15
+```
 
 ## Hints
 

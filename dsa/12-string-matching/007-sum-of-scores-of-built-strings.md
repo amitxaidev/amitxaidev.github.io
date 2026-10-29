@@ -1,14 +1,27 @@
 # 7. Sum of Scores of Built Strings
 
 **LeetCode 2223** · 🔴 Hard · Pattern: **Z-algorithm**
-🔗 Solve it here: [https://leetcode.com/problems/sum-of-scores-of-built-strings/](https://leetcode.com/problems/sum-of-scores-of-built-strings/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/12-string-matching/007-sum-of-scores-of-built-strings.html](https://amitxaidev.github.io/dsa/12-string-matching/007-sum-of-scores-of-built-strings.html)
 
 ## The problem, in short
 
 The string is built by adding characters to the front one at a time. Each intermediate string's score is the length of the longest common prefix it shares with the final string. Return the sum of all scores.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/sum-of-scores-of-built-strings/](https://leetcode.com/problems/sum-of-scores-of-built-strings/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/12-string-matching/007-sum-of-scores-of-built-strings.html](https://amitxaidev.github.io/dsa/12-string-matching/007-sum-of-scores-of-built-strings.html)
+
+## Understanding
+
+**Really asking:** for every suffix, how long a prefix of the full string does it start with? Add those up.
+
+**Why this works:** that's exactly the Z-array, which the Z-algorithm builds in O(n) by reusing the furthest match window.
+
+**Example:** "babab"
+```text
+z = [5, 0, 3, 0, 1]
+sum = 9
+```
 
 ## Hints
 

@@ -1,14 +1,28 @@
 # 8. Rotate Array
 
 **LeetCode 189** · 🟡 Medium · Pattern: **Reversal trick**
-🔗 Solve it here: [https://leetcode.com/problems/rotate-array/](https://leetcode.com/problems/rotate-array/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/008-rotate-array.html](https://amitxaidev.github.io/dsa/05-arrays/008-rotate-array.html)
 
 ## The problem, in short
 
 Rotate an array to the right by k steps in place.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/rotate-array/](https://leetcode.com/problems/rotate-array/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/008-rotate-array.html](https://amitxaidev.github.io/dsa/05-arrays/008-rotate-array.html)
+
+## Understanding
+
+**Really asking:** shift every element k steps to the right, wrapping around.
+
+**Why this works:** rotating = moving the last k elements to the front. Reversing everything, then reversing the two parts, achieves exactly that with no extra array.
+
+**Example:** [1, 2, 3, 4, 5, 6, 7], k = 3
+```text
+reverse all:   7 6 5 4 3 2 1
+reverse first 3: 5 6 7 4 3 2 1
+reverse rest:  5 6 7 1 2 3 4
+```
 
 ## Hints
 

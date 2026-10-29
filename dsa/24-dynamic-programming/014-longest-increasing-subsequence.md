@@ -1,14 +1,27 @@
 # 14. Longest Increasing Subsequence
 
 **LeetCode 300** · 🟡 Medium · Pattern: **Patience sorting + binary search**
-🔗 Solve it here: [https://leetcode.com/problems/longest-increasing-subsequence/](https://leetcode.com/problems/longest-increasing-subsequence/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/014-longest-increasing-subsequence.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/014-longest-increasing-subsequence.html)
 
 ## The problem, in short
 
 Return the length of the longest strictly increasing subsequence.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/longest-increasing-subsequence/](https://leetcode.com/problems/longest-increasing-subsequence/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/014-longest-increasing-subsequence.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/014-longest-increasing-subsequence.html)
+
+## Understanding
+
+**Really asking:** the longest strictly increasing subsequence.
+
+**Why this works:** tails[k] = the smallest possible tail of an increasing run of length k + 1. Each number replaces the first tail ≥ it (binary search).
+
+**Example:** [10, 9, 2, 5, 3, 7, 101, 18]
+```text
+tails: [10] → [9] → [2] → [2,5] → [2,3] → [2,3,7] → [2,3,7,101] → [2,3,7,18]
+length 4
+```
 
 ## Hints
 

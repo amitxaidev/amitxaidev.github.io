@@ -30,6 +30,7 @@
         <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
         <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
       </ul>
@@ -51,7 +52,18 @@
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Count pairs of indexes (i, j) with i &lt; j where nums[i] equals nums[j].</p>
-    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode.</p>
+    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/number-of-good-pairs/" target="_blank" rel="noopener">open problem ↗</a></p>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
+    <div class="understanding"><p><strong>Really asking:</strong> count pairs of equal values (i before j).</p>
+<p><strong>Why this works:</strong> when a value appears for the k-th time, it makes a new pair with each of the k-1 earlier copies. Keep a count per value and add it before increasing.</p>
+<p><strong>Example:</strong> nums = [1, 2, 3, 1, 1, 3]</p>
+<pre class="trace border rounded">1: seen 0 before → +0   (seen[1]=1)
+2: +0, 3: +0
+1: seen 1 before → +1   (seen[1]=2)
+1: seen 2 before → +2   (seen[1]=3)
+3: seen 1 before → +1
+total = 4</pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">

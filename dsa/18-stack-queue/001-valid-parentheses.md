@@ -1,14 +1,27 @@
 # 1. Valid Parentheses
 
 **LeetCode 20** · 🟢 Easy · Pattern: **Stack matching**
-🔗 Solve it here: [https://leetcode.com/problems/valid-parentheses/](https://leetcode.com/problems/valid-parentheses/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/001-valid-parentheses.html](https://amitxaidev.github.io/dsa/18-stack-queue/001-valid-parentheses.html)
 
 ## The problem, in short
 
 Decide whether a string of ()[]{} brackets is balanced: every opener is closed by the same type, in the right order.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/valid-parentheses/](https://leetcode.com/problems/valid-parentheses/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/001-valid-parentheses.html](https://amitxaidev.github.io/dsa/18-stack-queue/001-valid-parentheses.html)
+
+## Understanding
+
+**Really asking:** does every bracket close in the right order?
+
+**Why this works:** the most recent unclosed bracket must close first — that's a stack.
+
+**Example:** "([]{})"
+```text
+push ) ] → pop ] ✓ → push } → pop } ✓ → pop ) ✓
+stack empty → valid
+```
 
 ## Hints
 

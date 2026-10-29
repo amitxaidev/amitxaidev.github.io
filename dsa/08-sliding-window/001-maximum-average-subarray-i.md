@@ -1,14 +1,29 @@
 # 1. Maximum Average Subarray I
 
 **LeetCode 643** · 🟢 Easy · Pattern: **Fixed window**
-🔗 Solve it here: [https://leetcode.com/problems/maximum-average-subarray-i/](https://leetcode.com/problems/maximum-average-subarray-i/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/001-maximum-average-subarray-i.html](https://amitxaidev.github.io/dsa/08-sliding-window/001-maximum-average-subarray-i.html)
 
 ## The problem, in short
 
 Find the contiguous subarray of length k with the largest average and return that average.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/maximum-average-subarray-i/](https://leetcode.com/problems/maximum-average-subarray-i/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/001-maximum-average-subarray-i.html](https://amitxaidev.github.io/dsa/08-sliding-window/001-maximum-average-subarray-i.html)
+
+## Understanding
+
+**Really asking:** the best average of any k neighbours in a row.
+
+**Why this works:** k is fixed, so best average = best sum ÷ k. Slide: add the new number, subtract the one that left.
+
+**Example:** [1, 12, -5, -6, 50, 3], k = 4
+```text
+first window 1+12-5-6 = 2
+slide: +50 -1 = 51
+slide: +3 -12 = 42
+best 51 → 12.75
+```
 
 ## Hints
 

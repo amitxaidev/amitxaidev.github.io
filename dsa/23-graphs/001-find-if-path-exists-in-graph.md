@@ -1,14 +1,26 @@
 # 1. Find if Path Exists in Graph
 
 **LeetCode 1971** · 🟢 Easy · Pattern: **Adjacency list + BFS**
-🔗 Solve it here: [https://leetcode.com/problems/find-if-path-exists-in-graph/](https://leetcode.com/problems/find-if-path-exists-in-graph/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/001-find-if-path-exists-in-graph.html](https://amitxaidev.github.io/dsa/23-graphs/001-find-if-path-exists-in-graph.html)
 
 ## The problem, in short
 
 An undirected graph has n vertices and an edge list. Decide whether a path exists from source to destination.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/find-if-path-exists-in-graph/](https://leetcode.com/problems/find-if-path-exists-in-graph/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/001-find-if-path-exists-in-graph.html](https://amitxaidev.github.io/dsa/23-graphs/001-find-if-path-exists-in-graph.html)
+
+## Understanding
+
+**Really asking:** can you get from source to destination?
+
+**Why this works:** build the adjacency list and BFS from the source; if you reach the destination, a path exists.
+
+**Example:** edges [0-1, 1-2, 2-0], 0 → 2
+```text
+visit 0 → neighbours 1, 2 → found 2 → true
+```
 
 ## Hints
 

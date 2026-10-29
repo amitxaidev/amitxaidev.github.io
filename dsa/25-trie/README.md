@@ -6,6 +6,12 @@ Prefix trees for words, autocomplete and XOR tricks.
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/25-trie/  
 🧮 **8 problems** · 🟢 0 Easy · 🟡 6 Medium · 🔴 2 Hard
 
+## Understand the topic
+
+A trie (prefix tree) stores words letter by letter. Words that share a beginning share a path, so "car", "cart" and "care" all use the c → a → r nodes. Each node has up to 26 children and a flag that says "a word ends here".
+
+Lookups take O(word length), however many words are stored. Tries power autocomplete and prefix search. A binary trie (two children per node, one per bit) also solves maximum-XOR problems.
+
 ## How to use this list
 
 1. Watch the episode above.

@@ -1,14 +1,27 @@
 # 7. Task Scheduler
 
 **LeetCode 621** · 🟡 Medium · Pattern: **Greedy counting**
-🔗 Solve it here: [https://leetcode.com/problems/task-scheduler/](https://leetcode.com/problems/task-scheduler/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/007-task-scheduler.html](https://amitxaidev.github.io/dsa/21-heaps/007-task-scheduler.html)
 
 ## The problem, in short
 
 CPU tasks are letters; the same letter needs at least n intervals between runs. Each interval runs one task or idles. Return the minimum number of intervals.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/task-scheduler/](https://leetcode.com/problems/task-scheduler/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/007-task-scheduler.html](https://amitxaidev.github.io/dsa/21-heaps/007-task-scheduler.html)
+
+## Understanding
+
+**Really asking:** least time to run tasks when the same task needs n gaps between runs.
+
+**Why this works:** the most frequent task sets a frame: (max - 1) blocks of size n + 1, plus one slot for each task tied at max. If there are more tasks than slots, no idling is needed.
+
+**Example:** A A A B B B, n = 2
+```text
+(3 - 1) × 3 + 2 = 8
+A B _ A B _ A B
+```
 
 ## Hints
 

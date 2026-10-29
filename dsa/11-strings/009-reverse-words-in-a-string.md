@@ -1,14 +1,27 @@
 # 9. Reverse Words in a String
 
 **LeetCode 151** · 🟡 Medium · Pattern: **Split & rebuild**
-🔗 Solve it here: [https://leetcode.com/problems/reverse-words-in-a-string/](https://leetcode.com/problems/reverse-words-in-a-string/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/009-reverse-words-in-a-string.html](https://amitxaidev.github.io/dsa/11-strings/009-reverse-words-in-a-string.html)
 
 ## The problem, in short
 
 Reverse the order of words in a string. Remove leading, trailing and repeated spaces.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/reverse-words-in-a-string/](https://leetcode.com/problems/reverse-words-in-a-string/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/009-reverse-words-in-a-string.html](https://amitxaidev.github.io/dsa/11-strings/009-reverse-words-in-a-string.html)
+
+## Understanding
+
+**Really asking:** reverse the word order and clean up spaces.
+
+**Why this works:** split on runs of spaces, then join the words from last to first with single spaces.
+
+**Example:** "  the sky  is blue "
+```text
+words: [the, sky, is, blue]
+→ "blue is sky the"
+```
 
 ## Hints
 

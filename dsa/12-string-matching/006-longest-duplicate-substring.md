@@ -1,14 +1,28 @@
 # 6. Longest Duplicate Substring
 
 **LeetCode 1044** · 🔴 Hard · Pattern: **Binary search + Rabin-Karp**
-🔗 Solve it here: [https://leetcode.com/problems/longest-duplicate-substring/](https://leetcode.com/problems/longest-duplicate-substring/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/12-string-matching/006-longest-duplicate-substring.html](https://amitxaidev.github.io/dsa/12-string-matching/006-longest-duplicate-substring.html)
 
 ## The problem, in short
 
 Return any longest substring that appears at least twice in s (occurrences may overlap), or "" if none.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/longest-duplicate-substring/](https://leetcode.com/problems/longest-duplicate-substring/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/12-string-matching/006-longest-duplicate-substring.html](https://amitxaidev.github.io/dsa/12-string-matching/006-longest-duplicate-substring.html)
+
+## Understanding
+
+**Really asking:** the longest piece that appears at least twice.
+
+**Why this works:** if a length-L duplicate exists, shorter ones do too, so binary search L. For each L, rolling hashes find repeated windows quickly.
+
+**Example:** "banana"
+```text
+L=3: "ana" appears at 1 and 3 ✓
+L=4: "bana","anan","nana" all different ✗
+answer "ana"
+```
 
 ## Hints
 

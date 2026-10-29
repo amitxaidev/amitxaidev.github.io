@@ -6,6 +6,12 @@ Opposite ends, same direction, and merging — two indexes instead of nested loo
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/07-two-pointers/  
 🧮 **13 problems** · 🟢 6 Easy · 🟡 6 Medium · 🔴 1 Hard
 
+## Understand the topic
+
+Two pointers means using two indexes instead of a nested loop. It shows up in three shapes: pointers at both ends moving inward (sorted pairs, palindromes), a slow "write" pointer and a fast "read" pointer moving the same way (removing items in place), and one pointer per array (merging).
+
+The key question every time: after looking at the two pointed values, which pointer can I safely move, and why can't I miss the answer by moving it?
+
 ## How to use this list
 
 1. Watch the episode above.

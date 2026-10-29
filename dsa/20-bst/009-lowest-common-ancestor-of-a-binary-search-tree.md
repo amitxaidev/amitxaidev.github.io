@@ -1,14 +1,26 @@
 # 9. Lowest Common Ancestor of a Binary Search Tree
 
 **LeetCode 235** · 🟡 Medium · Pattern: **Split point**
-🔗 Solve it here: [https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/009-lowest-common-ancestor-of-a-binary-search-tree.html](https://amitxaidev.github.io/dsa/20-bst/009-lowest-common-ancestor-of-a-binary-search-tree.html)
 
 ## The problem, in short
 
 Return the lowest common ancestor of two nodes p and q in a BST.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/009-lowest-common-ancestor-of-a-binary-search-tree.html](https://amitxaidev.github.io/dsa/20-bst/009-lowest-common-ancestor-of-a-binary-search-tree.html)
+
+## Understanding
+
+**Really asking:** the split point of p and q.
+
+**Why this works:** both smaller → go left; both bigger → go right; otherwise you're at the split.
+
+**Example:** tree 6 (2 (0, 4), 8 (7, 9)), p 2, q 8
+```text
+2 < 6 < 8 → split at 6
+```
 
 ## Hints
 

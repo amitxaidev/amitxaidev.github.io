@@ -1,14 +1,27 @@
 # 8. Complement of Base 10 Integer
 
 **LeetCode 1009** · 🟢 Easy · Pattern: **Bit masks**
-🔗 Solve it here: [https://leetcode.com/problems/complement-of-base-10-integer/](https://leetcode.com/problems/complement-of-base-10-integer/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/008-complement-of-base-10-integer.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/008-complement-of-base-10-integer.html)
 
 ## The problem, in short
 
 Flip every bit of n's binary form (only the bits that are actually used, no leading zeros) and return the result. For example 5 = 101 becomes 010 = 2.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/complement-of-base-10-integer/](https://leetcode.com/problems/complement-of-base-10-integer/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/008-complement-of-base-10-integer.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/008-complement-of-base-10-integer.html)
+
+## Understanding
+
+**Really asking:** flip only the bits that are actually used, not the leading zeros.
+
+**Why this works:** XOR with a mask of all 1s of the same length flips exactly those bits.
+
+**Example:** n = 5 (101)
+```text
+mask grows 1 → 11 → 111
+101 ^ 111 = 010 → 2
+```
 
 ## Hints
 

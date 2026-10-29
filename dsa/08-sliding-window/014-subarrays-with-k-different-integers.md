@@ -1,14 +1,27 @@
 # 14. Subarrays with K Different Integers
 
 **LeetCode 992** · 🔴 Hard · Pattern: **atMost(k) − atMost(k−1)**
-🔗 Solve it here: [https://leetcode.com/problems/subarrays-with-k-different-integers/](https://leetcode.com/problems/subarrays-with-k-different-integers/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/014-subarrays-with-k-different-integers.html](https://amitxaidev.github.io/dsa/08-sliding-window/014-subarrays-with-k-different-integers.html)
 
 ## The problem, in short
 
 Count subarrays that contain exactly k distinct integers.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/subarrays-with-k-different-integers/](https://leetcode.com/problems/subarrays-with-k-different-integers/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/014-subarrays-with-k-different-integers.html](https://amitxaidev.github.io/dsa/08-sliding-window/014-subarrays-with-k-different-integers.html)
+
+## Understanding
+
+**Really asking:** count subarrays with exactly k distinct numbers.
+
+**Why this works:** same trick: exactly k = atMost(k) - atMost(k-1).
+
+**Example:** [1, 2, 1, 2, 3], k = 2
+```text
+atMost(2) = 12, atMost(1) = 5
+answer 7
+```
 
 ## Hints
 

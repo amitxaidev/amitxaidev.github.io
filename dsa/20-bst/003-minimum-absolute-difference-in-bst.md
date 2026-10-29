@@ -1,14 +1,26 @@
 # 3. Minimum Absolute Difference in BST
 
 **LeetCode 530** · 🟢 Easy · Pattern: **Inorder = sorted**
-🔗 Solve it here: [https://leetcode.com/problems/minimum-absolute-difference-in-bst/](https://leetcode.com/problems/minimum-absolute-difference-in-bst/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/003-minimum-absolute-difference-in-bst.html](https://amitxaidev.github.io/dsa/20-bst/003-minimum-absolute-difference-in-bst.html)
 
 ## The problem, in short
 
 Return the smallest difference between the values of any two nodes in a BST.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/minimum-absolute-difference-in-bst/](https://leetcode.com/problems/minimum-absolute-difference-in-bst/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/003-minimum-absolute-difference-in-bst.html](https://amitxaidev.github.io/dsa/20-bst/003-minimum-absolute-difference-in-bst.html)
+
+## Understanding
+
+**Really asking:** the smallest difference between any two values.
+
+**Why this works:** inorder gives sorted values; the closest pair is always neighbours in sorted order.
+
+**Example:** 4 (2 (1, 3), 6)
+```text
+inorder 1, 2, 3, 4, 6 → gaps 1, 1, 1, 2 → 1
+```
 
 ## Hints
 

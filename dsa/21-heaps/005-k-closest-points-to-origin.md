@@ -1,14 +1,26 @@
 # 5. K Closest Points to Origin
 
 **LeetCode 973** · 🟡 Medium · Pattern: **Max-heap of size k**
-🔗 Solve it here: [https://leetcode.com/problems/k-closest-points-to-origin/](https://leetcode.com/problems/k-closest-points-to-origin/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/005-k-closest-points-to-origin.html](https://amitxaidev.github.io/dsa/21-heaps/005-k-closest-points-to-origin.html)
 
 ## The problem, in short
 
 Return the k points closest to (0, 0), in any order.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/k-closest-points-to-origin/](https://leetcode.com/problems/k-closest-points-to-origin/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/005-k-closest-points-to-origin.html](https://amitxaidev.github.io/dsa/21-heaps/005-k-closest-points-to-origin.html)
+
+## Understanding
+
+**Really asking:** the k points nearest to (0, 0).
+
+**Why this works:** a max-heap of size k by distance; when a closer point comes, the farthest of the kept ones leaves.
+
+**Example:** [[1,3], [-2,2]], k = 1
+```text
+distances 10 and 8 → keep [-2, 2]
+```
 
 ## Hints
 

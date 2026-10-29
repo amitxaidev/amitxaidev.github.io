@@ -1,14 +1,27 @@
 # 10. Add Two Numbers
 
 **LeetCode 2** · 🟡 Medium · Pattern: **Digit-by-digit with carry**
-🔗 Solve it here: [https://leetcode.com/problems/add-two-numbers/](https://leetcode.com/problems/add-two-numbers/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/010-add-two-numbers.html](https://amitxaidev.github.io/dsa/17-linked-list/010-add-two-numbers.html)
 
 ## The problem, in short
 
 Two non-negative numbers are stored as linked lists with digits in reverse order (ones digit first). Return their sum as a list in the same format.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/add-two-numbers/](https://leetcode.com/problems/add-two-numbers/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/010-add-two-numbers.html](https://amitxaidev.github.io/dsa/17-linked-list/010-add-two-numbers.html)
+
+## Understanding
+
+**Really asking:** add two numbers stored backwards as lists of digits.
+
+**Why this works:** the ones digit comes first, so add digit by digit with a carry, just like on paper.
+
+**Example:** 2→4→3 (342) + 5→6→4 (465)
+```text
+2+5 = 7, 4+6 = 10 → 0 carry 1, 3+4+1 = 8
+7 → 0 → 8 (807)
+```
 
 ## Hints
 

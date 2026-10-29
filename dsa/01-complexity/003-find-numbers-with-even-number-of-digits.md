@@ -1,14 +1,31 @@
 # 3. Find Numbers with Even Number of Digits
 
 **LeetCode 1295** · 🟢 Easy · Pattern: **Digit counting**
-🔗 Solve it here: [https://leetcode.com/problems/find-numbers-with-even-number-of-digits/](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/01-complexity/003-find-numbers-with-even-number-of-digits.html](https://amitxaidev.github.io/dsa/01-complexity/003-find-numbers-with-even-number-of-digits.html)
 
 ## The problem, in short
 
 Count how many numbers in the array have an even count of digits (for example 12 and 4321 qualify, 7 and 123 do not).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/find-numbers-with-even-number-of-digits/](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/01-complexity/003-find-numbers-with-even-number-of-digits.html](https://amitxaidev.github.io/dsa/01-complexity/003-find-numbers-with-even-number-of-digits.html)
+
+## Understanding
+
+**Really asking:** how many numbers have 2, 4, 6… digits?
+
+**Why this works:** dividing by 10 chops off one digit, so counting digits takes about log10(x) steps. This is your first logarithmic loop.
+
+**Example:** nums = [12, 345, 2, 6, 7896]
+```text
+12   → 1 → 0          2 digits  ✓
+345  → 34 → 3 → 0     3 digits
+2    → 0              1 digit
+6    → 0              1 digit
+7896 → 789 → 78 → 7 → 0   4 digits ✓
+answer: 2
+```
 
 ## Hints
 

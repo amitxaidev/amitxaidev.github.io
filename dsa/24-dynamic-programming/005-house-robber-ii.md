@@ -1,14 +1,27 @@
 # 5. House Robber II
 
 **LeetCode 213** · 🟡 Medium · Pattern: **1D DP on two ranges**
-🔗 Solve it here: [https://leetcode.com/problems/house-robber-ii/](https://leetcode.com/problems/house-robber-ii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/005-house-robber-ii.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/005-house-robber-ii.html)
 
 ## The problem, in short
 
 Same as House Robber, but the houses form a circle, so the first and last are adjacent.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/house-robber-ii/](https://leetcode.com/problems/house-robber-ii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/005-house-robber-ii.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/005-house-robber-ii.html)
+
+## Understanding
+
+**Really asking:** same, but the houses are in a circle.
+
+**Why this works:** the first and last can't both be robbed, so solve without the last, solve without the first, and take the better.
+
+**Example:** [2, 3, 2]
+```text
+without last [2, 3] → 3
+without first [3, 2] → 3 → answer 3
+```
 
 ## Hints
 

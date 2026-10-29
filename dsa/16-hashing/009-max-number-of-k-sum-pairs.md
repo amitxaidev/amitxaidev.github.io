@@ -1,14 +1,28 @@
 # 9. Max Number of K-Sum Pairs
 
 **LeetCode 1679** · 🟡 Medium · Pattern: **HashMap pairing**
-🔗 Solve it here: [https://leetcode.com/problems/max-number-of-k-sum-pairs/](https://leetcode.com/problems/max-number-of-k-sum-pairs/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/009-max-number-of-k-sum-pairs.html](https://amitxaidev.github.io/dsa/16-hashing/009-max-number-of-k-sum-pairs.html)
 
 ## The problem, in short
 
 In one operation you remove two numbers that sum to k. Return the most operations you can do.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/max-number-of-k-sum-pairs/](https://leetcode.com/problems/max-number-of-k-sum-pairs/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/009-max-number-of-k-sum-pairs.html](https://amitxaidev.github.io/dsa/16-hashing/009-max-number-of-k-sum-pairs.html)
+
+## Understanding
+
+**Really asking:** how many disjoint pairs sum to k?
+
+**Why this works:** keep numbers waiting for a partner; when x arrives and k - x is waiting, use it up.
+
+**Example:** [3, 1, 3, 4, 3], k = 6
+```text
+3 waits, 1 waits
+3 pairs with 3 → 1 op
+4 waits, 3 waits → answer 1
+```
 
 ## Hints
 

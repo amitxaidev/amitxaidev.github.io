@@ -6,6 +6,12 @@ KMP, Rabin-Karp and the Z-algorithm.
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/12-string-matching/  
 🧮 **7 problems** · 🟢 2 Easy · 🟡 1 Medium · 🔴 4 Hard
 
+## Understand the topic
+
+Finding a pattern inside a text the simple way restarts on every mismatch: O(n·m). Three classic algorithms avoid the restart.
+
+KMP precomputes an LPS array (the longest proper prefix that is also a suffix) so a mismatch knows how far back to jump. Rabin-Karp compares rolling hashes of windows, and a hash match is then confirmed letter by letter. The Z-algorithm computes, for every position, how long a prefix of the string starts there.
+
 ## How to use this list
 
 1. Watch the episode above.

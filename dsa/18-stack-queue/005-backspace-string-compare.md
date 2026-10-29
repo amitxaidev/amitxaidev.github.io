@@ -1,14 +1,26 @@
 # 5. Backspace String Compare
 
 **LeetCode 844** · 🟢 Easy · Pattern: **Stack / backwards scan**
-🔗 Solve it here: [https://leetcode.com/problems/backspace-string-compare/](https://leetcode.com/problems/backspace-string-compare/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/005-backspace-string-compare.html](https://amitxaidev.github.io/dsa/18-stack-queue/005-backspace-string-compare.html)
 
 ## The problem, in short
 
 In two strings, '#' means backspace. Decide whether they're equal after applying the backspaces.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/backspace-string-compare/](https://leetcode.com/problems/backspace-string-compare/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/005-backspace-string-compare.html](https://amitxaidev.github.io/dsa/18-stack-queue/005-backspace-string-compare.html)
+
+## Understanding
+
+**Really asking:** are the strings equal after applying '#' as backspace?
+
+**Why this works:** build each final string with a stack: push letters, pop on '#'.
+
+**Example:** "ab#c" and "ad#c"
+```text
+"ab#c" → "ac", "ad#c" → "ac" → true
+```
 
 ## Hints
 

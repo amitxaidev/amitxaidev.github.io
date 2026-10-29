@@ -1,14 +1,26 @@
 # 5. Intersection of Two Linked Lists
 
 **LeetCode 160** · 🟢 Easy · Pattern: **Two pointers switching lists**
-🔗 Solve it here: [https://leetcode.com/problems/intersection-of-two-linked-lists/](https://leetcode.com/problems/intersection-of-two-linked-lists/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/005-intersection-of-two-linked-lists.html](https://amitxaidev.github.io/dsa/17-linked-list/005-intersection-of-two-linked-lists.html)
 
 ## The problem, in short
 
 Two singly linked lists may merge at some node and share their tail. Return that first shared node, or null.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/intersection-of-two-linked-lists/](https://leetcode.com/problems/intersection-of-two-linked-lists/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/005-intersection-of-two-linked-lists.html](https://amitxaidev.github.io/dsa/17-linked-list/005-intersection-of-two-linked-lists.html)
+
+## Understanding
+
+**Really asking:** the first node shared by both lists.
+
+**Why this works:** walk A then B, and B then A. Both pointers travel the same total distance, so they meet at the shared node (or at null).
+
+**Example:** A: 4→1→8→4→5, B: 5→6→1→8→4→5 (shared from 8)
+```text
+pointer A walks 5 + 3, pointer B walks 6 + 2 → both arrive at 8 together
+```
 
 ## Hints
 

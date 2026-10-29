@@ -1,14 +1,26 @@
 # 2. Design Add and Search Words Data Structure
 
 **LeetCode 211** · 🟡 Medium · Pattern: **Trie + DFS for wildcards**
-🔗 Solve it here: [https://leetcode.com/problems/design-add-and-search-words-data-structure/](https://leetcode.com/problems/design-add-and-search-words-data-structure/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/002-design-add-and-search-words-data-structure.html](https://amitxaidev.github.io/dsa/25-trie/002-design-add-and-search-words-data-structure.html)
 
 ## The problem, in short
 
 Support addWord(word) and search(pattern), where '.' in the pattern matches any one letter.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/design-add-and-search-words-data-structure/](https://leetcode.com/problems/design-add-and-search-words-data-structure/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/002-design-add-and-search-words-data-structure.html](https://amitxaidev.github.io/dsa/25-trie/002-design-add-and-search-words-data-structure.html)
+
+## Understanding
+
+**Really asking:** search where '.' matches any letter.
+
+**Why this works:** same trie; on '.', try every child (a small DFS).
+
+**Example:** add "bad", "dad"
+```text
+search ".ad" → try b, d, … → "bad" ✓ → true
+```
 
 ## Hints
 

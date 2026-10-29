@@ -1,14 +1,26 @@
 # 13. Longest Common Subsequence
 
 **LeetCode 1143** · 🟡 Medium · Pattern: **2D DP on two strings**
-🔗 Solve it here: [https://leetcode.com/problems/longest-common-subsequence/](https://leetcode.com/problems/longest-common-subsequence/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/013-longest-common-subsequence.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/013-longest-common-subsequence.html)
 
 ## The problem, in short
 
 Return the length of the longest sequence of characters that appears in both strings in the same order (not necessarily contiguous).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/longest-common-subsequence/](https://leetcode.com/problems/longest-common-subsequence/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/013-longest-common-subsequence.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/013-longest-common-subsequence.html)
+
+## Understanding
+
+**Really asking:** the longest sequence of letters in both strings, in order.
+
+**Why this works:** dp[i][j] for prefixes: equal last letters → 1 + diagonal; otherwise the better of dropping a letter from either string.
+
+**Example:** "abcde" and "ace"
+```text
+matches a, c, e → 3
+```
 
 ## Hints
 

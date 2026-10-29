@@ -30,6 +30,7 @@
         <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
         <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
       </ul>
@@ -51,7 +52,13 @@
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Courses have prerequisite pairs [a, b] meaning b must come before a. Decide whether all courses can be finished.</p>
-    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode.</p>
+    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/course-schedule/" target="_blank" rel="noopener">open problem ↗</a></p>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
+    <div class="understanding"><p><strong>Really asking:</strong> can you finish all courses given their prerequisites (is there no cycle)?</p>
+<p><strong>Why this works:</strong> Kahn&#x27;s algorithm keeps taking courses with no remaining prerequisites. If some courses are never taken, they sit on a cycle.</p>
+<p><strong>Example:</strong> 2 courses, [1 needs 0], [0 needs 1]</p>
+<pre class="trace border rounded">no course starts with 0 prerequisites → 0 taken → false</pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -114,7 +121,7 @@ class Solution {
         <li class="list-group-item"><strong>Space:</strong> O(V + E).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Graphs</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 74 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 75 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 76 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 77 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 78 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 79 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 80 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 81 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 82 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 83 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 84 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 85 (coming soon)</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Graphs</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 74–85 coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

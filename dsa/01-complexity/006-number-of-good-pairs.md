@@ -1,14 +1,31 @@
 # 6. Number of Good Pairs
 
 **LeetCode 1512** · 🟢 Easy · Pattern: **Counting**
-🔗 Solve it here: [https://leetcode.com/problems/number-of-good-pairs/](https://leetcode.com/problems/number-of-good-pairs/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/01-complexity/006-number-of-good-pairs.html](https://amitxaidev.github.io/dsa/01-complexity/006-number-of-good-pairs.html)
 
 ## The problem, in short
 
 Count pairs of indexes (i, j) with i &lt; j where nums[i] equals nums[j].
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/number-of-good-pairs/](https://leetcode.com/problems/number-of-good-pairs/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/01-complexity/006-number-of-good-pairs.html](https://amitxaidev.github.io/dsa/01-complexity/006-number-of-good-pairs.html)
+
+## Understanding
+
+**Really asking:** count pairs of equal values (i before j).
+
+**Why this works:** when a value appears for the k-th time, it makes a new pair with each of the k-1 earlier copies. Keep a count per value and add it before increasing.
+
+**Example:** nums = [1, 2, 3, 1, 1, 3]
+```text
+1: seen 0 before → +0   (seen[1]=1)
+2: +0, 3: +0
+1: seen 1 before → +1   (seen[1]=2)
+1: seen 2 before → +2   (seen[1]=3)
+3: seen 1 before → +1
+total = 4
+```
 
 ## Hints
 

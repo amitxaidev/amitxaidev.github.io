@@ -1,14 +1,27 @@
 # 13. Reverse Linked List II
 
 **LeetCode 92** · 🟡 Medium · Pattern: **Reverse a sublist in place**
-🔗 Solve it here: [https://leetcode.com/problems/reverse-linked-list-ii/](https://leetcode.com/problems/reverse-linked-list-ii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/013-reverse-linked-list-ii.html](https://amitxaidev.github.io/dsa/17-linked-list/013-reverse-linked-list-ii.html)
 
 ## The problem, in short
 
 Reverse only the nodes from position left to position right (1-indexed) in one pass.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/reverse-linked-list-ii/](https://leetcode.com/problems/reverse-linked-list-ii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/013-reverse-linked-list-ii.html](https://amitxaidev.github.io/dsa/17-linked-list/013-reverse-linked-list-ii.html)
+
+## Understanding
+
+**Really asking:** reverse only positions left..right.
+
+**Why this works:** stand before the segment, then repeatedly move the node after the segment's first node to the front of the segment.
+
+**Example:** 1→2→3→4→5, left 2, right 4
+```text
+move 3 to front: 1→3→2→4→5
+move 4 to front: 1→4→3→2→5
+```
 
 ## Hints
 

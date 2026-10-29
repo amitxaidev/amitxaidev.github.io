@@ -1,14 +1,28 @@
 # 1. Binary Tree Inorder Traversal
 
 **LeetCode 94** · 🟢 Easy · Pattern: **Iterative inorder with a stack**
-🔗 Solve it here: [https://leetcode.com/problems/binary-tree-inorder-traversal/](https://leetcode.com/problems/binary-tree-inorder-traversal/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/001-binary-tree-inorder-traversal.html](https://amitxaidev.github.io/dsa/19-binary-trees/001-binary-tree-inorder-traversal.html)
 
 ## The problem, in short
 
 Return the values of a binary tree in inorder (left subtree, node, right subtree).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/binary-tree-inorder-traversal/](https://leetcode.com/problems/binary-tree-inorder-traversal/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/001-binary-tree-inorder-traversal.html](https://amitxaidev.github.io/dsa/19-binary-trees/001-binary-tree-inorder-traversal.html)
+
+## Understanding
+
+**Really asking:** list nodes as left subtree, node, right subtree.
+
+**Why this works:** the iterative version pushes all left children, pops one, visits it, then moves to its right child.
+
+**Example:** 1 with right child 2, and 2 has left child 3
+```text
+go left from 1: none → visit 1
+go to 2 → left 3 → visit 3, visit 2
+[1, 3, 2]
+```
 
 ## Hints
 

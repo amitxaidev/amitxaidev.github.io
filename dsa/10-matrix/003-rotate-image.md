@@ -1,14 +1,27 @@
 # 3. Rotate Image
 
 **LeetCode 48** · 🟡 Medium · Pattern: **Transpose + reverse rows**
-🔗 Solve it here: [https://leetcode.com/problems/rotate-image/](https://leetcode.com/problems/rotate-image/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/003-rotate-image.html](https://amitxaidev.github.io/dsa/10-matrix/003-rotate-image.html)
 
 ## The problem, in short
 
 Rotate an n × n matrix 90 degrees clockwise, in place.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/rotate-image/](https://leetcode.com/problems/rotate-image/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/003-rotate-image.html](https://amitxaidev.github.io/dsa/10-matrix/003-rotate-image.html)
+
+## Understanding
+
+**Really asking:** turn the picture 90° clockwise without a second matrix.
+
+**Why this works:** transpose (mirror across the diagonal), then reverse each row. Together that's a clockwise turn.
+
+**Example:** [[1,2,3],[4,5,6],[7,8,9]]
+```text
+transpose → [[1,4,7],[2,5,8],[3,6,9]]
+reverse rows → [[7,4,1],[8,5,2],[9,6,3]]
+```
 
 ## Hints
 

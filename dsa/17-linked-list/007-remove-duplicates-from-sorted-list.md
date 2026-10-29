@@ -1,14 +1,26 @@
 # 7. Remove Duplicates from Sorted List
 
 **LeetCode 83** · 🟢 Easy · Pattern: **In-place unlink**
-🔗 Solve it here: [https://leetcode.com/problems/remove-duplicates-from-sorted-list/](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/007-remove-duplicates-from-sorted-list.html](https://amitxaidev.github.io/dsa/17-linked-list/007-remove-duplicates-from-sorted-list.html)
 
 ## The problem, in short
 
 Delete duplicate nodes from a sorted linked list so each value appears once.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/remove-duplicates-from-sorted-list/](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/007-remove-duplicates-from-sorted-list.html](https://amitxaidev.github.io/dsa/17-linked-list/007-remove-duplicates-from-sorted-list.html)
+
+## Understanding
+
+**Really asking:** keep one node per value in a sorted list.
+
+**Why this works:** duplicates sit together; skip cur.next while it repeats cur's value.
+
+**Example:** 1 → 1 → 2 → 3 → 3
+```text
+skip second 1, skip second 3 → 1 → 2 → 3
+```
 
 ## Hints
 

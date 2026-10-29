@@ -6,6 +6,12 @@
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/24-dynamic-programming/  
 🧮 **28 problems** · 🟢 3 Easy · 🟡 18 Medium · 🔴 7 Hard
 
+## Understand the topic
+
+Dynamic programming is recursion that remembers. When a problem breaks into smaller sub-problems that repeat, solve each one once and store the result: top-down with memoisation, or bottom-up with a table.
+
+Every DP answer needs four things. The state: what does dp[i] (or dp[i][j]) mean in plain words? The transition: how is it built from smaller states? The base cases. And the fill order. Write the state in a comment before you code. The families here are 1D, grid, 0/1 and unbounded knapsack, subsequences (LCS, LIS), strings (edit distance), stock state machines, partition/interval DP, trees and bitmasks.
+
 ## How to use this list
 
 1. Watch the episode above.

@@ -1,14 +1,28 @@
 # 4. Spiral Matrix
 
 **LeetCode 54** · 🟡 Medium · Pattern: **Shrinking boundaries**
-🔗 Solve it here: [https://leetcode.com/problems/spiral-matrix/](https://leetcode.com/problems/spiral-matrix/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/004-spiral-matrix.html](https://amitxaidev.github.io/dsa/10-matrix/004-spiral-matrix.html)
 
 ## The problem, in short
 
 Return all elements of an m × n matrix in clockwise spiral order.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/spiral-matrix/](https://leetcode.com/problems/spiral-matrix/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/004-spiral-matrix.html](https://amitxaidev.github.io/dsa/10-matrix/004-spiral-matrix.html)
+
+## Understanding
+
+**Really asking:** read the matrix around the edges, inward.
+
+**Why this works:** four walls (top, bottom, left, right) shrink after each side is read.
+
+**Example:** [[1,2,3],[4,5,6],[7,8,9]]
+```text
+top row 1 2 3, right col 6 9
+bottom row 8 7, left col 4
+middle 5 → [1,2,3,6,9,8,7,4,5]
+```
 
 ## Hints
 

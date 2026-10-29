@@ -1,14 +1,28 @@
 # 7. Two Sum II - Input Array Is Sorted
 
 **LeetCode 167** · 🟡 Medium · Pattern: **Opposite ends**
-🔗 Solve it here: [https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/007-two-sum-ii-input-array-is-sorted.html](https://amitxaidev.github.io/dsa/07-two-pointers/007-two-sum-ii-input-array-is-sorted.html)
 
 ## The problem, in short
 
 In a sorted (1-indexed) array, find the two positions whose values add up to target. Use only constant extra space.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/007-two-sum-ii-input-array-is-sorted.html](https://amitxaidev.github.io/dsa/07-two-pointers/007-two-sum-ii-input-array-is-sorted.html)
+
+## Understanding
+
+**Really asking:** two numbers in a sorted array that add up to target.
+
+**Why this works:** start with smallest + largest. Too small? Only moving left up can help. Too big? Only moving right down can help.
+
+**Example:** [2, 7, 11, 15], target 9
+```text
+2 + 15 = 17 too big → r--
+2 + 11 = 13 too big → r--
+2 + 7 = 9 ✓ → [1, 2]
+```
 
 ## Hints
 

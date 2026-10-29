@@ -1,14 +1,29 @@
 # 6. Reverse Bits
 
 **LeetCode 190** · 🟢 Easy · Pattern: **Shifts**
-🔗 Solve it here: [https://leetcode.com/problems/reverse-bits/](https://leetcode.com/problems/reverse-bits/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/006-reverse-bits.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/006-reverse-bits.html)
 
 ## The problem, in short
 
 Reverse the order of the 32 bits of an integer.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/reverse-bits/](https://leetcode.com/problems/reverse-bits/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/006-reverse-bits.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/006-reverse-bits.html)
+
+## Understanding
+
+**Really asking:** mirror the 32-bit pattern.
+
+**Why this works:** take the last bit of n and push it onto the right of the result, 32 times. Leading zeros become trailing zeros.
+
+Example (4 bits for short): n = 0011
+```text
+step1: result 1,    n 001
+step2: result 11,   n 00
+step3: result 110,  n 0
+step4: result 1100
+```
 
 ## Hints
 

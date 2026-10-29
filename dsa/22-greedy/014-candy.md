@@ -1,14 +1,27 @@
 # 14. Candy
 
 **LeetCode 135** · 🔴 Hard · Pattern: **Two passes**
-🔗 Solve it here: [https://leetcode.com/problems/candy/](https://leetcode.com/problems/candy/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/014-candy.html](https://amitxaidev.github.io/dsa/22-greedy/014-candy.html)
 
 ## The problem, in short
 
 Children stand in a line with ratings. Each gets at least one candy, and a child with a higher rating than a neighbour must get more than that neighbour. Return the minimum total.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/candy/](https://leetcode.com/problems/candy/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/014-candy.html](https://amitxaidev.github.io/dsa/22-greedy/014-candy.html)
+
+## Understanding
+
+**Really asking:** fewest candies so higher-rated kids get more than their neighbours.
+
+**Why this works:** one pass fixes the left neighbour rule, one pass from the right fixes the right neighbour rule (take the max).
+
+**Example:** ratings [1, 0, 2]
+```text
+left pass:  [1, 1, 2]
+right pass: [2, 1, 2] → 5
+```
 
 ## Hints
 

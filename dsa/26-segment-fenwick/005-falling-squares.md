@@ -1,14 +1,28 @@
 # 5. Falling Squares
 
 **LeetCode 699** · 🔴 Hard · Pattern: **Segment tree with range assign / range max**
-🔗 Solve it here: [https://leetcode.com/problems/falling-squares/](https://leetcode.com/problems/falling-squares/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/26-segment-fenwick/005-falling-squares.html](https://amitxaidev.github.io/dsa/26-segment-fenwick/005-falling-squares.html)
 
 ## The problem, in short
 
 Squares fall one by one onto a line; each lands on top of the highest square under its span. After each drop, report the tallest stack height so far.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/falling-squares/](https://leetcode.com/problems/falling-squares/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/26-segment-fenwick/005-falling-squares.html](https://amitxaidev.github.io/dsa/26-segment-fenwick/005-falling-squares.html)
+
+## Understanding
+
+**Really asking:** drop squares one by one; report the tallest stack after each drop.
+
+**Why this works:** a segment tree over compressed x-coordinates answers "max height in a range" and "set a range to h".
+
+**Example:** [[1,2], [2,3], [6,1]]
+```text
+square 1 lands at 0 → height 2
+square 2 overlaps → 2 + 3 = 5
+square 3 alone → 1 → answers [2, 5, 5]
+```
 
 ## Hints
 

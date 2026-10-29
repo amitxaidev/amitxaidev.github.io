@@ -1,14 +1,27 @@
 # 19. LFU Cache
 
 **LeetCode 460** · 🔴 Hard · Pattern: **Frequency buckets of LinkedHashSets**
-🔗 Solve it here: [https://leetcode.com/problems/lfu-cache/](https://leetcode.com/problems/lfu-cache/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/019-lfu-cache.html](https://amitxaidev.github.io/dsa/17-linked-list/019-lfu-cache.html)
 
 ## The problem, in short
 
 Design a cache with get and put in O(1). When full, evict the key used least often; among ties, evict the least recently used one.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/lfu-cache/](https://leetcode.com/problems/lfu-cache/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/019-lfu-cache.html](https://amitxaidev.github.io/dsa/17-linked-list/019-lfu-cache.html)
+
+## Understanding
+
+**Really asking:** evict the least frequently used key; break ties by least recently used.
+
+**Why this works:** group keys by use count, each group in insertion order (LinkedHashSet). Track the smallest count so eviction is O(1).
+
+**Example:** capacity 2: put 1, put 2, get 1, put 3
+```text
+counts: 1→2, 2→1
+put 3 evicts key 2 (lowest count)
+```
 
 ## Hints
 

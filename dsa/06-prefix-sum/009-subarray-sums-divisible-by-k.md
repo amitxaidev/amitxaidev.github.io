@@ -1,14 +1,28 @@
 # 9. Subarray Sums Divisible by K
 
 **LeetCode 974** · 🟡 Medium · Pattern: **Prefix remainders**
-🔗 Solve it here: [https://leetcode.com/problems/subarray-sums-divisible-by-k/](https://leetcode.com/problems/subarray-sums-divisible-by-k/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/009-subarray-sums-divisible-by-k.html](https://amitxaidev.github.io/dsa/06-prefix-sum/009-subarray-sums-divisible-by-k.html)
 
 ## The problem, in short
 
 Count the non-empty subarrays whose sum is divisible by k.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/subarray-sums-divisible-by-k/](https://leetcode.com/problems/subarray-sums-divisible-by-k/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/009-subarray-sums-divisible-by-k.html](https://amitxaidev.github.io/dsa/06-prefix-sum/009-subarray-sums-divisible-by-k.html)
+
+## Understanding
+
+**Really asking:** count pieces whose sum is a multiple of k.
+
+**Why this works:** two prefixes with the same remainder mod k differ by a multiple of k. Count remainders as you go.
+
+**Example:** [4, 5, 0, -2, -3, 1], k = 5
+```text
+remainders: 4, 4, 4, 2, 4, 0 (start 0)
+each repeat adds the count seen so far
+total 7
+```
 
 ## Hints
 

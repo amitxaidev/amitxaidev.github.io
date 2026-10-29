@@ -1,14 +1,26 @@
 # 5. Longest Word in Dictionary
 
 **LeetCode 720** · 🟡 Medium · Pattern: **Trie walk through complete words**
-🔗 Solve it here: [https://leetcode.com/problems/longest-word-in-dictionary/](https://leetcode.com/problems/longest-word-in-dictionary/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/005-longest-word-in-dictionary.html](https://amitxaidev.github.io/dsa/25-trie/005-longest-word-in-dictionary.html)
 
 ## The problem, in short
 
 Return the longest word that can be built one letter at a time where every prefix along the way is also a word in the list. On ties, return the alphabetically smallest.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/longest-word-in-dictionary/](https://leetcode.com/problems/longest-word-in-dictionary/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/005-longest-word-in-dictionary.html](https://amitxaidev.github.io/dsa/25-trie/005-longest-word-in-dictionary.html)
+
+## Understanding
+
+**Really asking:** the longest word that can be built one letter at a time from other words.
+
+**Why this works:** in the trie, only walk through nodes that end a word; every prefix is then also a word.
+
+**Example:** ["w","wo","wor","worl","world"]
+```text
+w → wo → wor → worl → world ✓
+```
 
 ## Hints
 

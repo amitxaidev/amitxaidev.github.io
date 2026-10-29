@@ -1,14 +1,28 @@
 # 11. Find All Duplicates in an Array
 
 **LeetCode 442** · 🟡 Medium · Pattern: **Index marking**
-🔗 Solve it here: [https://leetcode.com/problems/find-all-duplicates-in-an-array/](https://leetcode.com/problems/find-all-duplicates-in-an-array/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/011-find-all-duplicates-in-an-array.html](https://amitxaidev.github.io/dsa/05-arrays/011-find-all-duplicates-in-an-array.html)
 
 ## The problem, in short
 
 Values are in 1..n and each appears once or twice. Return every value that appears twice, in O(n) time and O(1) extra space.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/find-all-duplicates-in-an-array/](https://leetcode.com/problems/find-all-duplicates-in-an-array/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/011-find-all-duplicates-in-an-array.html](https://amitxaidev.github.io/dsa/05-arrays/011-find-all-duplicates-in-an-array.html)
+
+## Understanding
+
+**Really asking:** values 1..n, some appear twice — list them.
+
+**Why this works:** visiting value v flips nums[v-1] negative. If it's already negative, we've seen v before.
+
+**Example:** [4, 3, 2, 7, 8, 2, 3, 1]
+```text
+4,3,2,7,8 mark their slots
+2 again → slot 1 already negative → duplicate 2
+3 again → slot 2 already negative → duplicate 3
+```
 
 ## Hints
 

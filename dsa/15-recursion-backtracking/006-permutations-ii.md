@@ -1,14 +1,26 @@
 # 6. Permutations II
 
 **LeetCode 47** · 🟡 Medium · Pattern: **Backtracking with duplicate skip**
-🔗 Solve it here: [https://leetcode.com/problems/permutations-ii/](https://leetcode.com/problems/permutations-ii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/006-permutations-ii.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/006-permutations-ii.html)
 
 ## The problem, in short
 
 Return all distinct orderings of an array that may contain duplicates.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/permutations-ii/](https://leetcode.com/problems/permutations-ii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/006-permutations-ii.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/006-permutations-ii.html)
+
+## Understanding
+
+**Really asking:** distinct orderings when numbers repeat.
+
+**Why this works:** sort, and only use a duplicate if its earlier twin is already used. That fixes the order of equal values, so each arrangement is built once.
+
+**Example:** [1, 1, 2]
+```text
+[1, 1, 2], [1, 2, 1], [2, 1, 1]
+```
 
 ## Hints
 

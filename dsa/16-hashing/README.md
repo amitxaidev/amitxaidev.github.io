@@ -6,6 +6,12 @@ HashMap and HashSet patterns: counting, grouping and prefix-sum maps.
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/16-hashing/  
 🧮 **12 problems** · 🟢 6 Easy · 🟡 5 Medium · 🔴 1 Hard
 
+## Understand the topic
+
+A HashMap stores key → value pairs, and a HashSet stores keys, both with O(1) average lookup. Inside, the key's hashCode picks a bucket; collisions go into a chain (Java turns long chains into trees).
+
+The common patterns are: "have I seen this before?" (a set), "how many of each?" (a count map), "where did I see it?" (a value → index map), and "group by a canonical key". Remember that arrays used as keys compare by reference, so convert them to a String or List first.
+
 ## How to use this list
 
 1. Watch the episode above.

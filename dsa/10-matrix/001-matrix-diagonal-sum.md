@@ -1,14 +1,27 @@
 # 1. Matrix Diagonal Sum
 
 **LeetCode 1572** · 🟢 Easy · Pattern: **Index patterns**
-🔗 Solve it here: [https://leetcode.com/problems/matrix-diagonal-sum/](https://leetcode.com/problems/matrix-diagonal-sum/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/001-matrix-diagonal-sum.html](https://amitxaidev.github.io/dsa/10-matrix/001-matrix-diagonal-sum.html)
 
 ## The problem, in short
 
 Sum the primary and secondary diagonals of a square matrix, counting the centre only once when n is odd.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/matrix-diagonal-sum/](https://leetcode.com/problems/matrix-diagonal-sum/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/001-matrix-diagonal-sum.html](https://amitxaidev.github.io/dsa/10-matrix/001-matrix-diagonal-sum.html)
+
+## Understanding
+
+**Really asking:** add both diagonals, counting the centre once.
+
+**Why this works:** one loop reads mat[i][i] and mat[i][n-1-i]; for odd n they meet in the middle.
+
+**Example:** [[1,2,3],[4,5,6],[7,8,9]]
+```text
+primary 1+5+9 = 15, secondary 3+5+7 = 15
+30 - 5 (centre twice) = 25
+```
 
 ## Hints
 

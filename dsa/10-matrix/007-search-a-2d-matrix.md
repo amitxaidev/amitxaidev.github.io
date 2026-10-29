@@ -1,14 +1,28 @@
 # 7. Search a 2D Matrix
 
 **LeetCode 74** · 🟡 Medium · Pattern: **Binary search on flattened index**
-🔗 Solve it here: [https://leetcode.com/problems/search-a-2d-matrix/](https://leetcode.com/problems/search-a-2d-matrix/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/007-search-a-2d-matrix.html](https://amitxaidev.github.io/dsa/10-matrix/007-search-a-2d-matrix.html)
 
 ## The problem, in short
 
 Each row is sorted and each row starts with a value larger than the previous row's last value. Decide if target is in the matrix in O(log(m·n)).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/search-a-2d-matrix/](https://leetcode.com/problems/search-a-2d-matrix/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/007-search-a-2d-matrix.html](https://amitxaidev.github.io/dsa/10-matrix/007-search-a-2d-matrix.html)
+
+## Understanding
+
+**Really asking:** find a value in a matrix that is sorted row after row.
+
+**Why this works:** read row by row it's one sorted list, so binary search over index k = r·n + c.
+
+**Example:** target 3 in [[1,3,5,7],[10,11,16,20],[23,30,34,60]]
+```text
+mid index 5 → (1,1) = 11 > 3 → left
+mid index 2 → (0,2) = 5 > 3 → left
+mid index 0 → 1 < 3 → right; index 1 → 3 ✓
+```
 
 ## Hints
 

@@ -1,14 +1,26 @@
 # 5. Insert into a Binary Search Tree
 
 **LeetCode 701** · 🟡 Medium · Pattern: **BST walk to a null slot**
-🔗 Solve it here: [https://leetcode.com/problems/insert-into-a-binary-search-tree/](https://leetcode.com/problems/insert-into-a-binary-search-tree/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/005-insert-into-a-binary-search-tree.html](https://amitxaidev.github.io/dsa/20-bst/005-insert-into-a-binary-search-tree.html)
 
 ## The problem, in short
 
 Insert a new value (not already present) into a BST and return the root.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/insert-into-a-binary-search-tree/](https://leetcode.com/problems/insert-into-a-binary-search-tree/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/005-insert-into-a-binary-search-tree.html](https://amitxaidev.github.io/dsa/20-bst/005-insert-into-a-binary-search-tree.html)
+
+## Understanding
+
+**Really asking:** add a new value in the right place.
+
+**Why this works:** walk down as if searching; the empty spot where you fall off is where the new node goes.
+
+**Example:** insert 5 into 4 (2, 7)
+```text
+5 > 4 → right 7, 5 < 7 → left is empty → place 5
+```
 
 ## Hints
 

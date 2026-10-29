@@ -1,14 +1,28 @@
 # 11. Remove Duplicates from Sorted Array II
 
 **LeetCode 80** · 🟡 Medium · Pattern: **Read/write pointers**
-🔗 Solve it here: [https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/011-remove-duplicates-from-sorted-array-ii.html](https://amitxaidev.github.io/dsa/07-two-pointers/011-remove-duplicates-from-sorted-array-ii.html)
 
 ## The problem, in short
 
 In a sorted array, keep at most two copies of each value at the front, in place, and return the new length.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/011-remove-duplicates-from-sorted-array-ii.html](https://amitxaidev.github.io/dsa/07-two-pointers/011-remove-duplicates-from-sorted-array-ii.html)
+
+## Understanding
+
+**Really asking:** keep at most two copies of each value.
+
+**Why this works:** a value may be written if it differs from the value two places behind the write pointer.
+
+**Example:** [1, 1, 1, 2, 2, 3]
+```text
+write 1, 1
+third 1 = nums[write-2] → skip
+write 2, 2, 3 → [1, 1, 2, 2, 3]
+```
 
 ## Hints
 

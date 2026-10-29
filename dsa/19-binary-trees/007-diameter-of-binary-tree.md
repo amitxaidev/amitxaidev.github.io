@@ -1,14 +1,27 @@
 # 7. Diameter of Binary Tree
 
 **LeetCode 543** · 🟢 Easy · Pattern: **Height with a global best**
-🔗 Solve it here: [https://leetcode.com/problems/diameter-of-binary-tree/](https://leetcode.com/problems/diameter-of-binary-tree/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/007-diameter-of-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/007-diameter-of-binary-tree.html)
 
 ## The problem, in short
 
 Return the number of edges on the longest path between any two nodes of a binary tree (the path need not pass through the root).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/diameter-of-binary-tree/](https://leetcode.com/problems/diameter-of-binary-tree/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/007-diameter-of-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/007-diameter-of-binary-tree.html)
+
+## Understanding
+
+**Really asking:** the longest path (in edges) between any two nodes.
+
+**Why this works:** the longest path through a node = left height + right height. Compute heights once and update a global best.
+
+**Example:** 1 (2 (4, 5), 3)
+```text
+at 2: heights 1 + 1 = 2
+at 1: heights 2 + 1 = 3 → path 4-2-1-3
+```
 
 ## Hints
 

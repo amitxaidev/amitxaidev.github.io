@@ -6,6 +6,12 @@ Warm-up problems where the point is to say the Big O of your own code before you
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/01-complexity/  
 🧮 **6 problems** · 🟢 6 Easy · 🟡 0 Medium · 🔴 0 Hard
 
+## Understand the topic
+
+Big O tells you how the work grows when the input grows. You don't count exact steps, you count the shape: one loop over n items is O(n), a loop inside a loop is O(n²), and halving the input each step is O(log n).
+
+The problems here are easy on purpose. Solve each one, then say its time and space complexity out loud before you submit. Where the brute force and the smart answer differ (good pairs, smaller numbers), feel the difference between O(n²) and O(n).
+
 ## How to use this list
 
 1. Watch the episode above.

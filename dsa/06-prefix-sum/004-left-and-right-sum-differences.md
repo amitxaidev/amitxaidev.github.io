@@ -1,14 +1,29 @@
 # 4. Left and Right Sum Differences
 
 **LeetCode 2574** · 🟢 Easy · Pattern: **Prefix & suffix**
-🔗 Solve it here: [https://leetcode.com/problems/left-and-right-sum-differences/](https://leetcode.com/problems/left-and-right-sum-differences/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/004-left-and-right-sum-differences.html](https://amitxaidev.github.io/dsa/06-prefix-sum/004-left-and-right-sum-differences.html)
 
 ## The problem, in short
 
 For every index, return the absolute difference between the sum of elements to its left and the sum of elements to its right.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/left-and-right-sum-differences/](https://leetcode.com/problems/left-and-right-sum-differences/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/004-left-and-right-sum-differences.html](https://amitxaidev.github.io/dsa/06-prefix-sum/004-left-and-right-sum-differences.html)
+
+## Understanding
+
+**Really asking:** for each index, |sum on the left - sum on the right|.
+
+**Why this works:** same trick as the pivot index: right = total - left - nums[i].
+
+**Example:** [10, 4, 8, 3], total 25
+```text
+i=0: left 0,  right 15 → 15
+i=1: left 10, right 11 → 1
+i=2: left 14, right 3  → 11
+i=3: left 22, right 0  → 22
+```
 
 ## Hints
 

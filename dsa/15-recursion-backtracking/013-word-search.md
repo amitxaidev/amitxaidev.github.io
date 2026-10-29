@@ -1,14 +1,26 @@
 # 13. Word Search
 
 **LeetCode 79** · 🟡 Medium · Pattern: **Grid DFS backtracking**
-🔗 Solve it here: [https://leetcode.com/problems/word-search/](https://leetcode.com/problems/word-search/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/013-word-search.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/013-word-search.html)
 
 ## The problem, in short
 
 Decide whether a word can be traced in a letter grid by moving up, down, left or right, without reusing a cell.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/word-search/](https://leetcode.com/problems/word-search/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/013-word-search.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/013-word-search.html)
+
+## Understanding
+
+**Really asking:** can you trace the word through neighbouring cells without reusing a cell?
+
+**Why this works:** DFS from each matching start cell; mark cells on the current path and unmark them when you go back.
+
+**Example:** word "SEE" on [[A,B,C,E],[S,F,C,S],[A,D,E,E]]
+```text
+start S at (1,3) → E at (2,3) → E at (2,2) ✓
+```
 
 ## Hints
 

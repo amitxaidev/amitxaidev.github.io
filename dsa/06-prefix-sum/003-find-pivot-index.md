@@ -1,14 +1,29 @@
 # 3. Find Pivot Index
 
 **LeetCode 724** · 🟢 Easy · Pattern: **Total minus left**
-🔗 Solve it here: [https://leetcode.com/problems/find-pivot-index/](https://leetcode.com/problems/find-pivot-index/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/003-find-pivot-index.html](https://amitxaidev.github.io/dsa/06-prefix-sum/003-find-pivot-index.html)
 
 ## The problem, in short
 
 Find the leftmost index where the sum of everything to its left equals the sum of everything to its right. Return -1 if none.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/find-pivot-index/](https://leetcode.com/problems/find-pivot-index/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/003-find-pivot-index.html](https://amitxaidev.github.io/dsa/06-prefix-sum/003-find-pivot-index.html)
+
+## Understanding
+
+**Really asking:** the first index where the left total equals the right total.
+
+**Why this works:** right total = total - left - current, so one running left sum is enough.
+
+**Example:** [1, 7, 3, 6, 5, 6], total 28
+```text
+i=0: left 0, right 27
+i=1: left 1, right 20
+i=2: left 8, right 17
+i=3: left 11, right 11 → index 3
+```
 
 ## Hints
 

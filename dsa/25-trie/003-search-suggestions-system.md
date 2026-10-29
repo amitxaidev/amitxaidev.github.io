@@ -1,14 +1,27 @@
 # 3. Search Suggestions System
 
 **LeetCode 1268** · 🟡 Medium · Pattern: **Trie with top-3 lists**
-🔗 Solve it here: [https://leetcode.com/problems/search-suggestions-system/](https://leetcode.com/problems/search-suggestions-system/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/003-search-suggestions-system.html](https://amitxaidev.github.io/dsa/25-trie/003-search-suggestions-system.html)
 
 ## The problem, in short
 
 As each character of searchWord is typed, return up to three product names (alphabetically smallest) that start with the typed prefix.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/search-suggestions-system/](https://leetcode.com/problems/search-suggestions-system/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/003-search-suggestions-system.html](https://amitxaidev.github.io/dsa/25-trie/003-search-suggestions-system.html)
+
+## Understanding
+
+**Really asking:** up to 3 suggestions for every prefix typed.
+
+**Why this works:** insert sorted products; each node keeps the first three words passing through it.
+
+**Example:** products ["mobile","mouse","moneypot","monitor","mousepad"], type "mouse"
+```text
+"m" → mobile, moneypot, monitor
+"mou" → mouse, mousepad
+```
 
 ## Hints
 

@@ -1,14 +1,26 @@
 # 10. Course Schedule II
 
 **LeetCode 210** · 🟡 Medium · Pattern: **Topological sort (Kahn)**
-🔗 Solve it here: [https://leetcode.com/problems/course-schedule-ii/](https://leetcode.com/problems/course-schedule-ii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/010-course-schedule-ii.html](https://amitxaidev.github.io/dsa/23-graphs/010-course-schedule-ii.html)
 
 ## The problem, in short
 
 Same prerequisites as Course Schedule. Return any valid order to take all courses, or an empty array if impossible.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/course-schedule-ii/](https://leetcode.com/problems/course-schedule-ii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/010-course-schedule-ii.html](https://amitxaidev.github.io/dsa/23-graphs/010-course-schedule-ii.html)
+
+## Understanding
+
+**Really asking:** give a valid order to take all courses.
+
+**Why this works:** the order in which Kahn's algorithm removes courses is a topological order.
+
+**Example:** 4 courses, 1 and 2 need 0, 3 needs 1 and 2
+```text
+take 0 → then 1, 2 → then 3 → [0, 1, 2, 3]
+```
 
 ## Hints
 

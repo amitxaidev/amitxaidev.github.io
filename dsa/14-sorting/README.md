@@ -6,6 +6,12 @@ Merge sort, quick sort, counting/bucket sort and custom comparators.
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/14-sorting/  
 🧮 **11 problems** · 🟢 3 Easy · 🟡 6 Medium · 🔴 2 Hard
 
+## Understand the topic
+
+Sorting puts order into data so that later steps become easy. Merge sort splits in half, sorts both halves and merges them, always O(n log n). Quick sort partitions around a pivot. Counting and bucket sort beat n log n when values come from a small range.
+
+In Java, Arrays.sort(int[]) sorts primitives, while Arrays.sort(T[], comparator) and list.sort(...) take a custom order. Many hard problems are "merge sort plus counting while you merge".
+
 ## How to use this list
 
 1. Watch the episode above.

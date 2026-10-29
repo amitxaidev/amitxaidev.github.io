@@ -1,14 +1,26 @@
 # 3. Count of Range Sum
 
 **LeetCode 327** · 🔴 Hard · Pattern: **Fenwick tree over compressed prefix sums**
-🔗 Solve it here: [https://leetcode.com/problems/count-of-range-sum/](https://leetcode.com/problems/count-of-range-sum/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/26-segment-fenwick/003-count-of-range-sum.html](https://amitxaidev.github.io/dsa/26-segment-fenwick/003-count-of-range-sum.html)
 
 ## The problem, in short
 
 Count subarrays whose sum lies within [lower, upper].
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/count-of-range-sum/](https://leetcode.com/problems/count-of-range-sum/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/26-segment-fenwick/003-count-of-range-sum.html](https://amitxaidev.github.io/dsa/26-segment-fenwick/003-count-of-range-sum.html)
+
+## Understanding
+
+**Really asking:** count subarrays with sum in [lower, upper].
+
+**Why this works:** with prefix sums, count earlier prefixes in [P - upper, P - lower] for each P. Compress the values and count with a Fenwick tree.
+
+**Example:** [-2, 5, -1], range [-2, 2]
+```text
+valid: [-2], [-1], [-2, 5, -1] → 3
+```
 
 ## Hints
 

@@ -1,14 +1,26 @@
 # 7. Validate Binary Search Tree
 
 **LeetCode 98** · 🟡 Medium · Pattern: **Bounds passed down**
-🔗 Solve it here: [https://leetcode.com/problems/validate-binary-search-tree/](https://leetcode.com/problems/validate-binary-search-tree/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/007-validate-binary-search-tree.html](https://amitxaidev.github.io/dsa/20-bst/007-validate-binary-search-tree.html)
 
 ## The problem, in short
 
 Decide whether a binary tree is a valid BST: every node is strictly greater than all nodes in its left subtree and strictly less than all in its right subtree.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/validate-binary-search-tree/](https://leetcode.com/problems/validate-binary-search-tree/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/007-validate-binary-search-tree.html](https://amitxaidev.github.io/dsa/20-bst/007-validate-binary-search-tree.html)
+
+## Understanding
+
+**Really asking:** is every node within the range its ancestors allow?
+
+**Why this works:** pass (low, high) down: the left child gets (low, node), the right child gets (node, high).
+
+**Example:** 5 (1, 4 (3, 6))
+```text
+4 must be > 5 (right of 5) → fails → false
+```
 
 ## Hints
 

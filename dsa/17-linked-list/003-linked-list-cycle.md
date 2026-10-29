@@ -1,14 +1,26 @@
 # 3. Linked List Cycle
 
 **LeetCode 141** · 🟢 Easy · Pattern: **Floyd's cycle detection**
-🔗 Solve it here: [https://leetcode.com/problems/linked-list-cycle/](https://leetcode.com/problems/linked-list-cycle/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/003-linked-list-cycle.html](https://amitxaidev.github.io/dsa/17-linked-list/003-linked-list-cycle.html)
 
 ## The problem, in short
 
 Decide whether a linked list has a cycle (some node's next points back to an earlier node).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/linked-list-cycle/](https://leetcode.com/problems/linked-list-cycle/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/003-linked-list-cycle.html](https://amitxaidev.github.io/dsa/17-linked-list/003-linked-list-cycle.html)
+
+## Understanding
+
+**Really asking:** does the list loop back on itself?
+
+**Why this works:** on a circular track a faster runner always laps a slower one; on a straight road the fast one reaches the end.
+
+**Example:** 3 → 2 → 0 → -4 → (back to 2)
+```text
+slow 2, fast 0 → slow 0, fast 2 → slow -4, fast -4 → meet → cycle
+```
 
 ## Hints
 

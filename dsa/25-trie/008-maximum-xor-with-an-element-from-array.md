@@ -1,14 +1,27 @@
 # 8. Maximum XOR With an Element From Array
 
 **LeetCode 1707** · 🔴 Hard · Pattern: **Offline queries + binary trie**
-🔗 Solve it here: [https://leetcode.com/problems/maximum-xor-with-an-element-from-array/](https://leetcode.com/problems/maximum-xor-with-an-element-from-array/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/008-maximum-xor-with-an-element-from-array.html](https://amitxaidev.github.io/dsa/25-trie/008-maximum-xor-with-an-element-from-array.html)
 
 ## The problem, in short
 
 For each query [x, m], return the maximum x XOR v over array values v ≤ m, or -1 if no value is ≤ m.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/maximum-xor-with-an-element-from-array/](https://leetcode.com/problems/maximum-xor-with-an-element-from-array/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/008-maximum-xor-with-an-element-from-array.html](https://amitxaidev.github.io/dsa/25-trie/008-maximum-xor-with-an-element-from-array.html)
+
+## Understanding
+
+**Really asking:** for each query (x, m), the max x XOR v with v ≤ m.
+
+**Why this works:** sort the queries by m and insert numbers into the trie only while they're ≤ m; then query as usual.
+
+**Example:** nums [0,1,2,3,4], query (3, 1)
+```text
+insert 0, 1
+3 ^ 0 = 3, 3 ^ 1 = 2 → 3
+```
 
 ## Hints
 

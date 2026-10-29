@@ -1,14 +1,27 @@
 # 16. N-Queens
 
 **LeetCode 51** · 🔴 Hard · Pattern: **Backtracking row by row**
-🔗 Solve it here: [https://leetcode.com/problems/n-queens/](https://leetcode.com/problems/n-queens/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/016-n-queens.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/016-n-queens.html)
 
 ## The problem, in short
 
 Place n queens on an n×n board so that no two attack each other (same row, column or diagonal). Return all such boards.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/n-queens/](https://leetcode.com/problems/n-queens/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/016-n-queens.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/016-n-queens.html)
+
+## Understanding
+
+**Really asking:** place n queens so none attack each other; list all boards.
+
+**Why this works:** one queen per row; track used columns and both diagonals (r - c and r + c) so each check is O(1).
+
+**Example:** n = 4
+```text
+row 0 col 1, row 1 col 3, row 2 col 0, row 3 col 2 ✓
+and its mirror: cols 2, 0, 3, 1
+```
 
 ## Hints
 

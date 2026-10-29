@@ -1,14 +1,26 @@
 # 2. Transpose Matrix
 
 **LeetCode 867** · 🟢 Easy · Pattern: **Index swap**
-🔗 Solve it here: [https://leetcode.com/problems/transpose-matrix/](https://leetcode.com/problems/transpose-matrix/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/002-transpose-matrix.html](https://amitxaidev.github.io/dsa/10-matrix/002-transpose-matrix.html)
 
 ## The problem, in short
 
 Return the transpose of a matrix (rows become columns). The matrix may not be square.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/transpose-matrix/](https://leetcode.com/problems/transpose-matrix/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/002-transpose-matrix.html](https://amitxaidev.github.io/dsa/10-matrix/002-transpose-matrix.html)
+
+## Understanding
+
+**Really asking:** rows become columns.
+
+**Why this works:** the cell at (r, c) moves to (c, r), so the result is n × m.
+
+**Example:** [[1,2,3],[4,5,6]]
+```text
+→ [[1,4],[2,5],[3,6]]
+```
 
 ## Hints
 

@@ -1,102 +1,79 @@
-# DSA LeetCode Sheet in Java · Compiled Canvas
+<p align="center">
+  <a href="https://amitxaidev.github.io/"><img src="./assets/banner.svg" alt="Compiled Canvas — DSA in Java" width="100%"></a>
+</p>
 
-**352 hand-picked LeetCode problems**, in the same order as the free
-[Compiled Canvas DSA course](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg) on YouTube. Every problem comes with a short summary,
-step-by-step hints, the approach, a commented **Java** solution, its complexity and the most common mistake —
-so you never have to jump to another site to get unstuck.
+<p align="center"><b>Developed and created by Amit Singh</b></p>
+
+<p align="center">
+  <a href="https://amitxaidev.github.io/"><img src="https://img.shields.io/badge/Website-amitxaidev.github.io-FF4D12?style=for-the-badge" alt="Website"></a>
+  <a href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg"><img src="https://img.shields.io/badge/YouTube-DSA%20playlist-FF8A1F?style=for-the-badge" alt="DSA playlist"></a>
+  <img src="https://img.shields.io/badge/Problems-352-FFC629?style=for-the-badge" alt="352 problems">
+  <img src="https://img.shields.io/badge/Language-Java-0E0D0C?style=for-the-badge" alt="Java">
+  <img src="https://img.shields.io/badge/Price-Free-0E0D0C?style=for-the-badge" alt="Free">
+</p>
+
+# Free DSA course in Java — videos + 352 LeetCode problems
+
+Watch each Compiled Canvas episode, then solve its LeetCode list right here. Every problem has a short summary, an **Understanding** section with a worked example, hints you open one at a time, the approach, a commented **Java** solution, complexity and the most common mistake — so you never need another site.
 
 🟢 112 Easy · 🟡 192 Medium · 🔴 48 Hard
 
-🌐 **Use the interactive website:** https://amitxaidev.github.io/dsa/ — progress tracking, filters, hints revealed one at a time, copy-ready Java.  
+🌐 **Interactive course page (progress tracking, filters, hints):** https://amitxaidev.github.io/  
 ▶️ **Watch the full DSA series in order:** https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg
-📺 Start here: [Ep 1 · DSA Roadmap 2026](https://youtu.be/z7LRqT8mBQ4)
 
-## How to use this sheet
+📺 **New here? Start with [Ep 1 · DSA Roadmap 2026](https://youtu.be/z7LRqT8mBQ4).**
 
-1. Watch the episode for a topic (links in the table below).
-2. Open the topic folder and solve its problems **in order** — each list goes easy → medium → hard.
-3. Try every problem on LeetCode first. Open hints one by one only after a real attempt (15–20 minutes).
-4. After solving, read our answer anyway: compare complexity and the "common mistake" note.
-5. Fork this repo and tick the checklist below to track your progress.
+## How to use this course
 
-## Roadmap
+1. **Watch** the episode for a topic (thumbnail in the syllabus below).
+2. **Understand** — read the topic intro, then each problem's Understanding section.
+3. **Try** the problem on LeetCode. Stuck for 15+ minutes? Open **one** hint at a time.
+4. **Check** the approach and the Java solution, and read the common mistake.
+5. **Track** your progress on the website, or fork this repo and tick the boxes.
 
-| # | Topic | Problems | Folder | Episodes |
-|---|---|---|---|---|
-| 01 | **Time & Space Complexity** | 6 | [`dsa/01-complexity/`](./dsa/01-complexity) | [Ep 2](https://youtu.be/jZeS1tRzGs4), [Ep 3](https://youtu.be/PxjhjjhEIqw) |
-| 02 | **Java Basics for DSA** | 10 | [`dsa/02-java-basics/`](./dsa/02-java-basics) | [Ep 4](https://youtu.be/YvtYDDQgn9U) |
-| 03 | **Basic Math** | 13 | [`dsa/03-math/`](./dsa/03-math) | [Ep 5](https://youtu.be/y1GZw3VByAU) |
-| 04 | **Bit Manipulation** | 12 | [`dsa/04-bit-manipulation/`](./dsa/04-bit-manipulation) | [Ep 6](https://youtu.be/ZzdK8SqvsGU) |
-| 05 | **Arrays** | 14 | [`dsa/05-arrays/`](./dsa/05-arrays) | [Ep 7](https://youtu.be/4NdluWqUZ3c), Ep 15 |
-| 06 | **Prefix Sum** | 12 | [`dsa/06-prefix-sum/`](./dsa/06-prefix-sum) | [Ep 8](https://youtu.be/liU6avyvXQM) |
-| 07 | **Two Pointers** | 13 | [`dsa/07-two-pointers/`](./dsa/07-two-pointers) | Ep 9 |
-| 08 | **Sliding Window** | 14 | [`dsa/08-sliding-window/`](./dsa/08-sliding-window) | Ep 10 |
-| 09 | **Kadane, Dutch Flag & Moore's Voting** | 9 | [`dsa/09-kadane-dnf-moore/`](./dsa/09-kadane-dnf-moore) | Ep 11, Ep 12, Ep 13 |
-| 10 | **2D Arrays & Matrix** | 10 | [`dsa/10-matrix/`](./dsa/10-matrix) | Ep 14 |
-| 11 | **Strings** | 15 | [`dsa/11-strings/`](./dsa/11-strings) | Ep 16, Ep 17, Ep 20 |
-| 12 | **String Pattern Matching** | 7 | [`dsa/12-string-matching/`](./dsa/12-string-matching) | Ep 18, Ep 19 |
-| 13 | **Binary Search** | 17 | [`dsa/13-binary-search/`](./dsa/13-binary-search) | Ep 21, Ep 22, Ep 23 |
-| 14 | **Sorting** | 11 | [`dsa/14-sorting/`](./dsa/14-sorting) | Ep 24, Ep 25, Ep 26, Ep 27, Ep 28 |
-| 15 | **Recursion & Backtracking** | 18 | [`dsa/15-recursion-backtracking/`](./dsa/15-recursion-backtracking) | Ep 29, Ep 30, Ep 31, Ep 32, Ep 33, Ep 34, Ep 35, Ep 36 |
-| 16 | **Hashing** | 12 | [`dsa/16-hashing/`](./dsa/16-hashing) | Ep 37, Ep 38, Ep 39 |
-| 17 | **Linked List** | 19 | [`dsa/17-linked-list/`](./dsa/17-linked-list) | Ep 40, Ep 41, Ep 42, Ep 43, Ep 44, Ep 45 |
-| 18 | **Stack & Queue** | 18 | [`dsa/18-stack-queue/`](./dsa/18-stack-queue) | Ep 46, Ep 47, Ep 48, Ep 49, Ep 50, Ep 51, Ep 52 |
-| 19 | **Binary Trees** | 20 | [`dsa/19-binary-trees/`](./dsa/19-binary-trees) | Ep 53, Ep 54, Ep 55, Ep 56, Ep 57, Ep 58, Ep 59, Ep 60 |
-| 20 | **Binary Search Trees** | 12 | [`dsa/20-bst/`](./dsa/20-bst) | Ep 61, Ep 62, Ep 63 |
-| 21 | **Heaps & Priority Queue** | 13 | [`dsa/21-heaps/`](./dsa/21-heaps) | Ep 64, Ep 65, Ep 66, Ep 67, Ep 68 |
-| 22 | **Greedy** | 14 | [`dsa/22-greedy/`](./dsa/22-greedy) | Ep 69, Ep 70, Ep 71, Ep 72, Ep 73 |
-| 23 | **Graphs** | 21 | [`dsa/23-graphs/`](./dsa/23-graphs) | Ep 74, Ep 75, Ep 76, Ep 77, Ep 78, Ep 79, Ep 80, Ep 81, Ep 82, Ep 83, Ep 84, Ep 85 |
-| 24 | **Dynamic Programming** | 28 | [`dsa/24-dynamic-programming/`](./dsa/24-dynamic-programming) | Ep 86, Ep 87, Ep 88, Ep 89, Ep 90, Ep 91, Ep 92, Ep 93, Ep 94, Ep 95, Ep 96 |
-| 25 | **Trie** | 8 | [`dsa/25-trie/`](./dsa/25-trie) | Ep 97 |
-| 26 | **Segment Tree, Fenwick & Sparse Table** | 6 | [`dsa/26-segment-fenwick/`](./dsa/26-segment-fenwick) | Ep 98, Ep 99, Ep 100 |
-| | **Total** | **352** | | |
+## Syllabus
+
+| Video | Topic | Problems | Practice |
+|---|---|:-:|---|
+| <a href="https://youtu.be/jZeS1tRzGs4"><img src="https://img.youtube.com/vi/jZeS1tRzGs4/hqdefault.jpg" width="200" alt="Episode 2"></a> | **1. Time & Space Complexity**<br><sub>Warm-up problems where the point is to say the Big O of your own code before you submit it.</sub><br><sub>Eps 2–3 · [▶ Ep 2](https://youtu.be/jZeS1tRzGs4) · [▶ Ep 3](https://youtu.be/PxjhjjhEIqw)</sub> | **6** | [Solve the problems →](./dsa/01-complexity) <br><sub>[on the website](https://amitxaidev.github.io/dsa/01-complexity/)</sub> |
+| <a href="https://youtu.be/YvtYDDQgn9U"><img src="https://img.youtube.com/vi/YvtYDDQgn9U/hqdefault.jpg" width="200" alt="Episode 4"></a> | **2. Java Basics for DSA**<br><sub>Arrays, Strings, StringBuilder and Collections — the Java toolbox every later topic uses.</sub><br><sub>Ep 4 · [▶ Ep 4](https://youtu.be/YvtYDDQgn9U)</sub> | **10** | [Solve the problems →](./dsa/02-java-basics) <br><sub>[on the website](https://amitxaidev.github.io/dsa/02-java-basics/)</sub> |
+| <a href="https://youtu.be/y1GZw3VByAU"><img src="https://img.youtube.com/vi/y1GZw3VByAU/hqdefault.jpg" width="200" alt="Episode 5"></a> | **3. Basic Math**<br><sub>Primes, GCD, modulo, digits and the Sieve of Eratosthenes.</sub><br><sub>Ep 5 · [▶ Ep 5](https://youtu.be/y1GZw3VByAU)</sub> | **13** | [Solve the problems →](./dsa/03-math) <br><sub>[on the website](https://amitxaidev.github.io/dsa/03-math/)</sub> |
+| <a href="https://youtu.be/ZzdK8SqvsGU"><img src="https://img.youtube.com/vi/ZzdK8SqvsGU/hqdefault.jpg" width="200" alt="Episode 6"></a> | **4. Bit Manipulation**<br><sub>AND, OR, XOR, shifts and the classic bit tricks.</sub><br><sub>Ep 6 · [▶ Ep 6](https://youtu.be/ZzdK8SqvsGU)</sub> | **12** | [Solve the problems →](./dsa/04-bit-manipulation) <br><sub>[on the website](https://amitxaidev.github.io/dsa/04-bit-manipulation/)</sub> |
+| <a href="https://youtu.be/4NdluWqUZ3c"><img src="https://img.youtube.com/vi/4NdluWqUZ3c/hqdefault.jpg" width="200" alt="Episode 7"></a> | **5. Arrays**<br><sub>Traversal, in-place updates, rotation and the top array interview questions.</sub><br><sub>Eps 7–15 · [▶ Ep 7](https://youtu.be/4NdluWqUZ3c)</sub> | **14** | [Solve the problems →](./dsa/05-arrays) <br><sub>[on the website](https://amitxaidev.github.io/dsa/05-arrays/)</sub> |
+| <a href="https://youtu.be/liU6avyvXQM"><img src="https://img.youtube.com/vi/liU6avyvXQM/hqdefault.jpg" width="200" alt="Episode 8"></a> | **6. Prefix Sum**<br><sub>Precompute running totals so range questions become O(1).</sub><br><sub>Ep 8 · [▶ Ep 8](https://youtu.be/liU6avyvXQM)</sub> | **12** | [Solve the problems →](./dsa/06-prefix-sum) <br><sub>[on the website](https://amitxaidev.github.io/dsa/06-prefix-sum/)</sub> |
+| <img src="https://img.shields.io/badge/Video-Coming%20soon-FF8A1F?style=for-the-badge" alt="Coming soon"> | **7. Two Pointers**<br><sub>Opposite ends, same direction, and merging — two indexes instead of nested loops.</sub><br><sub>Ep 9 · Coming soon</sub> | **13** | [Solve the problems →](./dsa/07-two-pointers) <br><sub>[on the website](https://amitxaidev.github.io/dsa/07-two-pointers/)</sub> |
+| <img src="https://img.shields.io/badge/Video-Coming%20soon-FF8A1F?style=for-the-badge" alt="Coming soon"> | **8. Sliding Window**<br><sub>Fixed and variable windows over arrays and strings.</sub><br><sub>Ep 10 · Coming soon</sub> | **14** | [Solve the problems →](./dsa/08-sliding-window) <br><sub>[on the website](https://amitxaidev.github.io/dsa/08-sliding-window/)</sub> |
+| <img src="https://img.shields.io/badge/Video-Coming%20soon-FF8A1F?style=for-the-badge" alt="Coming soon"> | **9. Kadane, Dutch Flag & Moore's Voting**<br><sub>Three famous one-pass array algorithms and their variations.</sub><br><sub>Eps 11–13 · Coming soon</sub> | **9** | [Solve the problems →](./dsa/09-kadane-dnf-moore) <br><sub>[on the website](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/)</sub> |
+| <img src="https://img.shields.io/badge/Video-Coming%20soon-FF8A1F?style=for-the-badge" alt="Coming soon"> | **10. 2D Arrays & Matrix**<br><sub>Rotate, spiral, search and in-place tricks on grids.</sub><br><sub>Ep 14 · Coming soon</sub> | **10** | [Solve the problems →](./dsa/10-matrix) <br><sub>[on the website](https://amitxaidev.github.io/dsa/10-matrix/)</sub> |
+| <img src="https://img.shields.io/badge/Video-Coming%20soon-FF8A1F?style=for-the-badge" alt="Coming soon"> | **11. Strings**<br><sub>StringBuilder, palindromes, anagrams, frequency counting and top string questions.</sub><br><sub>Eps 16–20 · Coming soon</sub> | **15** | [Solve the problems →](./dsa/11-strings) <br><sub>[on the website](https://amitxaidev.github.io/dsa/11-strings/)</sub> |
+| <img src="https://img.shields.io/badge/Video-Coming%20soon-FF8A1F?style=for-the-badge" alt="Coming soon"> | **12. String Pattern Matching**<br><sub>KMP, Rabin-Karp and the Z-algorithm.</sub><br><sub>Eps 18–19 · Coming soon</sub> | **7** | [Solve the problems →](./dsa/12-string-matching) <br><sub>[on the website](https://amitxaidev.github.io/dsa/12-string-matching/)</sub> |
+| <img src="https://img.shields.io/badge/Video-Coming%20soon-FF8A1F?style=for-the-badge" alt="Coming soon"> | **13. Binary Search**<br><sub>Lower/upper bound, rotated arrays and binary search on the answer.</sub><br><sub>Eps 21–23 · Coming soon</sub> | **17** | [Solve the problems →](./dsa/13-binary-search) <br><sub>[on the website](https://amitxaidev.github.io/dsa/13-binary-search/)</sub> |
+| <img src="https://img.shields.io/badge/Video-Coming%20soon-FF8A1F?style=for-the-badge" alt="Coming soon"> | **14. Sorting**<br><sub>Merge sort, quick sort, counting/bucket sort and custom comparators.</sub><br><sub>Eps 24–28 · Coming soon</sub> | **11** | [Solve the problems →](./dsa/14-sorting) <br><sub>[on the website](https://amitxaidev.github.io/dsa/14-sorting/)</sub> |
+| <img src="https://img.shields.io/badge/Video-Coming%20soon-FF8A1F?style=for-the-badge" alt="Coming soon"> | **15. Recursion & Backtracking**<br><sub>Subsets, permutations, combinations, N-Queens, Sudoku and word search.</sub><br><sub>Eps 29–36 · Coming soon</sub> | **18** | [Solve the problems →](./dsa/15-recursion-backtracking) <br><sub>[on the website](https://amitxaidev.github.io/dsa/15-recursion-backtracking/)</sub> |
+| <img src="https://img.shields.io/badge/Video-Coming%20soon-FF8A1F?style=for-the-badge" alt="Coming soon"> | **16. Hashing**<br><sub>HashMap and HashSet patterns: counting, grouping and prefix-sum maps.</sub><br><sub>Eps 37–39 · Coming soon</sub> | **12** | [Solve the problems →](./dsa/16-hashing) <br><sub>[on the website](https://amitxaidev.github.io/dsa/16-hashing/)</sub> |
+| <img src="https://img.shields.io/badge/Video-Coming%20soon-FF8A1F?style=for-the-badge" alt="Coming soon"> | **17. Linked List**<br><sub>Reverse, fast & slow pointers, merge, and LRU cache.</sub><br><sub>Eps 40–45 · Coming soon</sub> | **19** | [Solve the problems →](./dsa/17-linked-list) <br><sub>[on the website](https://amitxaidev.github.io/dsa/17-linked-list/)</sub> |
+| <img src="https://img.shields.io/badge/Video-Coming%20soon-FF8A1F?style=for-the-badge" alt="Coming soon"> | **18. Stack & Queue**<br><sub>Parentheses, expression evaluation, monotonic stack and deque.</sub><br><sub>Eps 46–52 · Coming soon</sub> | **18** | [Solve the problems →](./dsa/18-stack-queue) <br><sub>[on the website](https://amitxaidev.github.io/dsa/18-stack-queue/)</sub> |
+| <img src="https://img.shields.io/badge/Video-Coming%20soon-FF8A1F?style=for-the-badge" alt="Coming soon"> | **19. Binary Trees**<br><sub>Traversals, BFS, height/diameter, views, LCA, construction and serialization.</sub><br><sub>Eps 53–60 · Coming soon</sub> | **20** | [Solve the problems →](./dsa/19-binary-trees) <br><sub>[on the website](https://amitxaidev.github.io/dsa/19-binary-trees/)</sub> |
+| <img src="https://img.shields.io/badge/Video-Coming%20soon-FF8A1F?style=for-the-badge" alt="Coming soon"> | **20. Binary Search Trees**<br><sub>Insert, delete, validate, kth smallest and BST iterators.</sub><br><sub>Eps 61–63 · Coming soon</sub> | **12** | [Solve the problems →](./dsa/20-bst) <br><sub>[on the website](https://amitxaidev.github.io/dsa/20-bst/)</sub> |
+| <img src="https://img.shields.io/badge/Video-Coming%20soon-FF8A1F?style=for-the-badge" alt="Coming soon"> | **21. Heaps & Priority Queue**<br><sub>Top K, k-way merge and the two-heap median pattern.</sub><br><sub>Eps 64–68 · Coming soon</sub> | **13** | [Solve the problems →](./dsa/21-heaps) <br><sub>[on the website](https://amitxaidev.github.io/dsa/21-heaps/)</sub> |
+| <img src="https://img.shields.io/badge/Video-Coming%20soon-FF8A1F?style=for-the-badge" alt="Coming soon"> | **22. Greedy**<br><sub>Intervals, jump game, gas station and exchange arguments.</sub><br><sub>Eps 69–73 · Coming soon</sub> | **14** | [Solve the problems →](./dsa/22-greedy) <br><sub>[on the website](https://amitxaidev.github.io/dsa/22-greedy/)</sub> |
+| <img src="https://img.shields.io/badge/Video-Coming%20soon-FF8A1F?style=for-the-badge" alt="Coming soon"> | **23. Graphs**<br><sub>BFS/DFS, islands, cycles, topo sort, bipartite, shortest paths, MST, DSU, SCC and bridges.</sub><br><sub>Eps 74–85 · Coming soon</sub> | **21** | [Solve the problems →](./dsa/23-graphs) <br><sub>[on the website](https://amitxaidev.github.io/dsa/23-graphs/)</sub> |
+| <img src="https://img.shields.io/badge/Video-Coming%20soon-FF8A1F?style=for-the-badge" alt="Coming soon"> | **24. Dynamic Programming**<br><sub>1D, grid, knapsack, subsequences, strings, stocks, partition, trees and bitmask DP.</sub><br><sub>Eps 86–96 · Coming soon</sub> | **28** | [Solve the problems →](./dsa/24-dynamic-programming) <br><sub>[on the website](https://amitxaidev.github.io/dsa/24-dynamic-programming/)</sub> |
+| <img src="https://img.shields.io/badge/Video-Coming%20soon-FF8A1F?style=for-the-badge" alt="Coming soon"> | **25. Trie**<br><sub>Prefix trees for words, autocomplete and XOR tricks.</sub><br><sub>Ep 97 · Coming soon</sub> | **8** | [Solve the problems →](./dsa/25-trie) <br><sub>[on the website](https://amitxaidev.github.io/dsa/25-trie/)</sub> |
+| <img src="https://img.shields.io/badge/Video-Coming%20soon-FF8A1F?style=for-the-badge" alt="Coming soon"> | **26. Segment Tree, Fenwick & Sparse Table**<br><sub>Range queries with point updates.</sub><br><sub>Eps 98–100 · Coming soon</sub> | **6** | [Solve the problems →](./dsa/26-segment-fenwick) <br><sub>[on the website](https://amitxaidev.github.io/dsa/26-segment-fenwick/)</sub> |
+| | **Total** | **352** | |
 
 Episodes 101–105 (patterns, mock interviews and common mistakes) use the whole sheet as practice.
 
-## Progress checklist
+## More courses are coming
 
-- [ ] 01 · [Time & Space Complexity](./dsa/01-complexity) (6)
-- [ ] 02 · [Java Basics for DSA](./dsa/02-java-basics) (10)
-- [ ] 03 · [Basic Math](./dsa/03-math) (13)
-- [ ] 04 · [Bit Manipulation](./dsa/04-bit-manipulation) (12)
-- [ ] 05 · [Arrays](./dsa/05-arrays) (14)
-- [ ] 06 · [Prefix Sum](./dsa/06-prefix-sum) (12)
-- [ ] 07 · [Two Pointers](./dsa/07-two-pointers) (13)
-- [ ] 08 · [Sliding Window](./dsa/08-sliding-window) (14)
-- [ ] 09 · [Kadane, Dutch Flag & Moore's Voting](./dsa/09-kadane-dnf-moore) (9)
-- [ ] 10 · [2D Arrays & Matrix](./dsa/10-matrix) (10)
-- [ ] 11 · [Strings](./dsa/11-strings) (15)
-- [ ] 12 · [String Pattern Matching](./dsa/12-string-matching) (7)
-- [ ] 13 · [Binary Search](./dsa/13-binary-search) (17)
-- [ ] 14 · [Sorting](./dsa/14-sorting) (11)
-- [ ] 15 · [Recursion & Backtracking](./dsa/15-recursion-backtracking) (18)
-- [ ] 16 · [Hashing](./dsa/16-hashing) (12)
-- [ ] 17 · [Linked List](./dsa/17-linked-list) (19)
-- [ ] 18 · [Stack & Queue](./dsa/18-stack-queue) (18)
-- [ ] 19 · [Binary Trees](./dsa/19-binary-trees) (20)
-- [ ] 20 · [Binary Search Trees](./dsa/20-bst) (12)
-- [ ] 21 · [Heaps & Priority Queue](./dsa/21-heaps) (13)
-- [ ] 22 · [Greedy](./dsa/22-greedy) (14)
-- [ ] 23 · [Graphs](./dsa/23-graphs) (21)
-- [ ] 24 · [Dynamic Programming](./dsa/24-dynamic-programming) (28)
-- [ ] 25 · [Trie](./dsa/25-trie) (8)
-- [ ] 26 · [Segment Tree, Fenwick & Sparse Table](./dsa/26-segment-fenwick) (6)
-
-## Each problem page has
-
-- 📝 the problem in short (our own words) and a link to the original on LeetCode
-- 💡 2–3 progressive hints, hidden until you click
-- 🧠 the approach, ✅ a complete Java solution with comments
-- ⏱️ time and space complexity, ⚠️ one common mistake
+DSA in Java is live. Next on the plan: Java, AI for Developers, Python, SQL, Spring Boot, OOPS, System Design, and Interviews, Resume & LinkedIn. [Subscribe on YouTube](https://www.youtube.com/@compiledcanvas?sub_confirmation=1) so you don't miss them.
 
 ## Notes
 
 - Problem statements belong to LeetCode; we only link to them and summarise in our own words. All solutions are original.
 - Found a bug or a cleaner solution? Open an issue or a pull request.
-
-## License
-
-Solutions and notes are released under the [MIT License](./LICENSE).
+- Solutions and notes are released under the [MIT License](./LICENSE).
 
 ---
 

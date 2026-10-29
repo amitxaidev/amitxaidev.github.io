@@ -1,14 +1,28 @@
 # 8. Triangle
 
 **LeetCode 120** · 🟡 Medium · Pattern: **Bottom-up DP**
-🔗 Solve it here: [https://leetcode.com/problems/triangle/](https://leetcode.com/problems/triangle/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/008-triangle.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/008-triangle.html)
 
 ## The problem, in short
 
 Find the minimum path sum from the top to the bottom of a number triangle, moving to an adjacent number on the row below each step.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/triangle/](https://leetcode.com/problems/triangle/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/008-triangle.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/008-triangle.html)
+
+## Understanding
+
+**Really asking:** the smallest top-to-bottom path sum in a triangle.
+
+**Why this works:** go bottom-up: each cell becomes its value + the smaller of its two children.
+
+**Example:** [[2],[3,4],[6,5,7],[4,1,8,3]]
+```text
+row 2 becomes [7, 6, 10]
+row 1 becomes [9, 10]
+top 2 + 9 = 11
+```
 
 ## Hints
 

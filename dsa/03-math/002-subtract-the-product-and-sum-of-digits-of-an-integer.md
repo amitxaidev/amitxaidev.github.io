@@ -1,14 +1,29 @@
 # 2. Subtract the Product and Sum of Digits of an Integer
 
 **LeetCode 1281** · 🟢 Easy · Pattern: **Digit extraction**
-🔗 Solve it here: [https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/002-subtract-the-product-and-sum-of-digits-of-an-integer.html](https://amitxaidev.github.io/dsa/03-math/002-subtract-the-product-and-sum-of-digits-of-an-integer.html)
 
 ## The problem, in short
 
 Return (product of the digits) minus (sum of the digits) of a positive integer.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/002-subtract-the-product-and-sum-of-digits-of-an-integer.html](https://amitxaidev.github.io/dsa/03-math/002-subtract-the-product-and-sum-of-digits-of-an-integer.html)
+
+## Understanding
+
+**Really asking:** multiply the digits, add the digits, and subtract.
+
+**Why this works:** % 10 reads the last digit and / 10 removes it. Product starts at 1, sum at 0.
+
+**Example:** n = 234
+```text
+digit 4: product 4,  sum 4
+digit 3: product 12, sum 7
+digit 2: product 24, sum 9
+24 - 9 = 15
+```
 
 ## Hints
 

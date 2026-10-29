@@ -1,14 +1,27 @@
 # 8. Remove Nth Node From End of List
 
 **LeetCode 19** · 🟡 Medium · Pattern: **Gap of n between two pointers**
-🔗 Solve it here: [https://leetcode.com/problems/remove-nth-node-from-end-of-list/](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/008-remove-nth-node-from-end-of-list.html](https://amitxaidev.github.io/dsa/17-linked-list/008-remove-nth-node-from-end-of-list.html)
 
 ## The problem, in short
 
 Remove the n-th node from the end of a linked list in one pass and return the head.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/remove-nth-node-from-end-of-list/](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/008-remove-nth-node-from-end-of-list.html](https://amitxaidev.github.io/dsa/17-linked-list/008-remove-nth-node-from-end-of-list.html)
+
+## Understanding
+
+**Really asking:** delete the n-th node counted from the end, in one pass.
+
+**Why this works:** move fast n steps ahead; then move both. When fast hits the end, slow sits right before the target.
+
+**Example:** 1→2→3→4→5, n = 2
+```text
+fast ahead by 2
+when fast is at 5, slow is at 3 → unlink 4 → 1→2→3→5
+```
 
 ## Hints
 

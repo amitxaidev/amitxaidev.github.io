@@ -1,14 +1,27 @@
 # 11. Corporate Flight Bookings
 
 **LeetCode 1109** · 🟡 Medium · Pattern: **Difference array**
-🔗 Solve it here: [https://leetcode.com/problems/corporate-flight-bookings/](https://leetcode.com/problems/corporate-flight-bookings/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/011-corporate-flight-bookings.html](https://amitxaidev.github.io/dsa/06-prefix-sum/011-corporate-flight-bookings.html)
 
 ## The problem, in short
 
 There are n flights. Each booking [first, last, seats] reserves seats on every flight from first to last. Return the total seats for each flight.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/corporate-flight-bookings/](https://leetcode.com/problems/corporate-flight-bookings/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/011-corporate-flight-bookings.html](https://amitxaidev.github.io/dsa/06-prefix-sum/011-corporate-flight-bookings.html)
+
+## Understanding
+
+**Really asking:** many bookings each add seats to a range of flights; total per flight?
+
+**Why this works:** instead of updating every flight in a range, mark +seats where the range starts and -seats just after it ends. One running sum at the end spreads the marks.
+
+**Example:** bookings [1,2,10], [2,3,20], [2,5,25], n = 5
+```text
+marks: +10 at 1, -10 at 3; +20 at 2, -20 at 4; +25 at 2
+running: 10, 55, 45, 25, 25
+```
 
 ## Hints
 

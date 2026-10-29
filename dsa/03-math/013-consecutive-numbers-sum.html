@@ -30,6 +30,7 @@
         <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
         <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
       </ul>
@@ -51,7 +52,17 @@
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Count the ways to write n as a sum of one or more consecutive positive integers.</p>
-    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode.</p>
+    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/consecutive-numbers-sum/" target="_blank" rel="noopener">open problem ↗</a></p>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
+    <div class="understanding"><p><strong>Really asking:</strong> in how many ways is n a sum of a run of consecutive positive numbers?</p>
+<p><strong>Why this works:</strong> a run of length k starting at x sums to k·x + k(k-1)/2. For a fixed k, solve for x and check it&#x27;s a positive whole number. k only goes up to about √(2n).</p>
+<p><strong>Example:</strong> n = 9</p>
+<pre class="trace border rounded">k=1: 9 % 1 = 0 → [9]
+k=2: (9-1) % 2 = 0 → [4,5]
+k=3: (9-3) % 3 = 0 → [2,3,4]
+k=4: (9-6) % 4 ≠ 0
+answer: 3</pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">

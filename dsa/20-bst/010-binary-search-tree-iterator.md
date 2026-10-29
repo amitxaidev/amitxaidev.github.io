@@ -1,14 +1,27 @@
 # 10. Binary Search Tree Iterator
 
 **LeetCode 173** · 🟡 Medium · Pattern: **Controlled inorder with a stack**
-🔗 Solve it here: [https://leetcode.com/problems/binary-search-tree-iterator/](https://leetcode.com/problems/binary-search-tree-iterator/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/010-binary-search-tree-iterator.html](https://amitxaidev.github.io/dsa/20-bst/010-binary-search-tree-iterator.html)
 
 ## The problem, in short
 
 Build an iterator over a BST that returns values in increasing order with next() and hasNext(), using O(h) memory.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/binary-search-tree-iterator/](https://leetcode.com/problems/binary-search-tree-iterator/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/010-binary-search-tree-iterator.html](https://amitxaidev.github.io/dsa/20-bst/010-binary-search-tree-iterator.html)
+
+## Understanding
+
+**Really asking:** return values in sorted order one at a time using O(h) memory.
+
+**Why this works:** keep only the left spine on a stack (a paused inorder traversal); after popping a node, push the left spine of its right child.
+
+**Example:** 7 (3, 15 (9, 20))
+```text
+stack [7, 3] → next 3
+next 7 → push 15, 9 → next 9, 15, 20
+```
 
 ## Hints
 

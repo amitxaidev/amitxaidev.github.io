@@ -1,14 +1,26 @@
 # 5. Max Area of Island
 
 **LeetCode 695** · 🟡 Medium · Pattern: **DFS returning size**
-🔗 Solve it here: [https://leetcode.com/problems/max-area-of-island/](https://leetcode.com/problems/max-area-of-island/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/005-max-area-of-island.html](https://amitxaidev.github.io/dsa/23-graphs/005-max-area-of-island.html)
 
 ## The problem, in short
 
 In a 0/1 grid, return the area (number of cells) of the largest island, or 0.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/max-area-of-island/](https://leetcode.com/problems/max-area-of-island/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/005-max-area-of-island.html](https://amitxaidev.github.io/dsa/23-graphs/005-max-area-of-island.html)
+
+## Understanding
+
+**Really asking:** the size of the biggest island.
+
+**Why this works:** same as counting islands, but the DFS returns how many cells it sank.
+
+**Example:** an island of 4 cells and one of 6
+```text
+answer 6
+```
 
 ## Hints
 

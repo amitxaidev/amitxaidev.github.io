@@ -1,14 +1,27 @@
 # 4. Maximum Depth of Binary Tree
 
 **LeetCode 104** · 🟢 Easy · Pattern: **Recursive height**
-🔗 Solve it here: [https://leetcode.com/problems/maximum-depth-of-binary-tree/](https://leetcode.com/problems/maximum-depth-of-binary-tree/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/004-maximum-depth-of-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/004-maximum-depth-of-binary-tree.html)
 
 ## The problem, in short
 
 Return the number of nodes on the longest path from the root down to a leaf.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/maximum-depth-of-binary-tree/](https://leetcode.com/problems/maximum-depth-of-binary-tree/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/004-maximum-depth-of-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/004-maximum-depth-of-binary-tree.html)
+
+## Understanding
+
+**Really asking:** the number of levels.
+
+**Why this works:** depth = 1 + deeper of the two subtrees; an empty tree is 0.
+
+**Example:** 3 (9, 20 (15, 7))
+```text
+depth(9) = 1, depth(20) = 2
+depth(3) = 1 + 2 = 3
+```
 
 ## Hints
 

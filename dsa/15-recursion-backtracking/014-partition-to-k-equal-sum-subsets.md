@@ -1,14 +1,26 @@
 # 14. Partition to K Equal Sum Subsets
 
 **LeetCode 698** · 🟡 Medium · Pattern: **Backtracking with pruning**
-🔗 Solve it here: [https://leetcode.com/problems/partition-to-k-equal-sum-subsets/](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/014-partition-to-k-equal-sum-subsets.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/014-partition-to-k-equal-sum-subsets.html)
 
 ## The problem, in short
 
 Decide whether the array can be split into k groups that all have the same sum.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/partition-to-k-equal-sum-subsets/](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/014-partition-to-k-equal-sum-subsets.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/014-partition-to-k-equal-sum-subsets.html)
+
+## Understanding
+
+**Really asking:** can the numbers be split into k groups with equal sums?
+
+**Why this works:** each group must hit total / k. Place the largest numbers first into buckets and backtrack on failure; skip buckets that look the same.
+
+**Example:** [4, 3, 2, 3, 5, 2, 1], k = 4 → target 5
+```text
+5 | 4+1 | 3+2 | 3+2 ✓
+```
 
 ## Hints
 

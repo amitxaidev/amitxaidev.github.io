@@ -1,14 +1,27 @@
 # 4. Best Time to Buy and Sell Stock II
 
 **LeetCode 122** · 🟡 Medium · Pattern: **Collect every rise**
-🔗 Solve it here: [https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/004-best-time-to-buy-and-sell-stock-ii.html](https://amitxaidev.github.io/dsa/22-greedy/004-best-time-to-buy-and-sell-stock-ii.html)
 
 ## The problem, in short
 
 You may buy and sell a stock many times (holding at most one share at a time). Return the maximum total profit.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/004-best-time-to-buy-and-sell-stock-ii.html](https://amitxaidev.github.io/dsa/22-greedy/004-best-time-to-buy-and-sell-stock-ii.html)
+
+## Understanding
+
+**Really asking:** many trades allowed; maximise profit.
+
+**Why this works:** any profitable run equals the sum of its daily rises, so collect every rise.
+
+**Example:** [7, 1, 5, 3, 6, 4]
+```text
+rises: 1→5 (+4), 3→6 (+3)
+total 7
+```
 
 ## Hints
 

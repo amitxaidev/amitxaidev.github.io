@@ -1,14 +1,26 @@
 # 23. Wildcard Matching
 
 **LeetCode 44** · 🔴 Hard · Pattern: **2D DP on string and pattern**
-🔗 Solve it here: [https://leetcode.com/problems/wildcard-matching/](https://leetcode.com/problems/wildcard-matching/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/023-wildcard-matching.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/023-wildcard-matching.html)
 
 ## The problem, in short
 
 Decide whether a pattern with '?' (any one character) and '*' (any sequence, including empty) matches the whole string.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/wildcard-matching/](https://leetcode.com/problems/wildcard-matching/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/023-wildcard-matching.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/023-wildcard-matching.html)
+
+## Understanding
+
+**Really asking:** does a pattern with ? and * match the whole string?
+
+**Why this works:** dp[i][j] for prefixes. '*' matches nothing (left cell) or one more letter (cell above).
+
+**Example:** s "adceb", p "*a*b"
+```text
+'*' empty, 'a' matches, '*' eats "dce", 'b' matches → true
+```
 
 ## Hints
 

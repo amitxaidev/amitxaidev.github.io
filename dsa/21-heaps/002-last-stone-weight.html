@@ -30,6 +30,7 @@
         <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
         <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
       </ul>
@@ -51,7 +52,14 @@
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Repeatedly smash the two heaviest stones: equal weights destroy both, otherwise the heavier one loses the lighter one&#x27;s weight. Return the last stone&#x27;s weight, or 0.</p>
-    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode.</p>
+    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/last-stone-weight/" target="_blank" rel="noopener">open problem ↗</a></p>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
+    <div class="understanding"><p><strong>Really asking:</strong> keep smashing the two heaviest stones; what&#x27;s left?</p>
+<p><strong>Why this works:</strong> a max-heap always hands you the two heaviest.</p>
+<p><strong>Example:</strong> [2, 7, 4, 1, 8, 1]</p>
+<pre class="trace border rounded">8 vs 7 → 1, 4 vs 2 → 2, 2 vs 1 → 1, 1 vs 1 → 0
+last stone 1</pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -105,7 +113,7 @@ class Solution {
         <li class="list-group-item"><strong>Space:</strong> O(n).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Heaps &amp; Priority Queue</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 64 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 65 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 66 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 67 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 68 (coming soon)</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Heaps &amp; Priority Queue</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 64–68 coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

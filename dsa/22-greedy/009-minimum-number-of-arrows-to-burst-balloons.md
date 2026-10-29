@@ -1,14 +1,27 @@
 # 9. Minimum Number of Arrows to Burst Balloons
 
 **LeetCode 452** · 🟡 Medium · Pattern: **Sort by end**
-🔗 Solve it here: [https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/009-minimum-number-of-arrows-to-burst-balloons.html](https://amitxaidev.github.io/dsa/22-greedy/009-minimum-number-of-arrows-to-burst-balloons.html)
 
 ## The problem, in short
 
 Balloons span intervals on the x-axis. A vertical arrow at x bursts every balloon whose interval contains x (ends included). Return the fewest arrows needed.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/009-minimum-number-of-arrows-to-burst-balloons.html](https://amitxaidev.github.io/dsa/22-greedy/009-minimum-number-of-arrows-to-burst-balloons.html)
+
+## Understanding
+
+**Really asking:** fewest arrows to pop all balloons.
+
+**Why this works:** shoot at the end of the earliest-ending balloon; it pops every balloon that has already started.
+
+**Example:** [[10,16],[2,8],[1,6],[7,12]] sorted by end
+```text
+arrow at 6 pops [1,6], [2,8]
+arrow at 12 pops [7,12], [10,16] → 2 arrows
+```
 
 ## Hints
 

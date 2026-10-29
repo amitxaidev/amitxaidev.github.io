@@ -1,14 +1,27 @@
 # 13. Sum of Subarray Minimums
 
 **LeetCode 907** · 🟡 Medium · Pattern: **Monotonic stack contribution**
-🔗 Solve it here: [https://leetcode.com/problems/sum-of-subarray-minimums/](https://leetcode.com/problems/sum-of-subarray-minimums/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/013-sum-of-subarray-minimums.html](https://amitxaidev.github.io/dsa/18-stack-queue/013-sum-of-subarray-minimums.html)
 
 ## The problem, in short
 
 Sum the minimum of every contiguous subarray, modulo 1e9+7.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/sum-of-subarray-minimums/](https://leetcode.com/problems/sum-of-subarray-minimums/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/013-sum-of-subarray-minimums.html](https://amitxaidev.github.io/dsa/18-stack-queue/013-sum-of-subarray-minimums.html)
+
+## Understanding
+
+**Really asking:** add up the minimum of every subarray.
+
+**Why this works:** count how many subarrays have arr[i] as their minimum: (distance to previous smaller) × (distance to next smaller-or-equal).
+
+**Example:** [3, 1, 2, 4]
+```text
+3: 1×1 → 3, 1: 2×3 → 6, 2: 1×2 → 4, 4: 1×1 → 4
+total 17
+```
 
 ## Hints
 

@@ -1,14 +1,27 @@
 # 6. Set Matrix Zeroes
 
 **LeetCode 73** · 🟡 Medium · Pattern: **First row/column as markers**
-🔗 Solve it here: [https://leetcode.com/problems/set-matrix-zeroes/](https://leetcode.com/problems/set-matrix-zeroes/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/006-set-matrix-zeroes.html](https://amitxaidev.github.io/dsa/10-matrix/006-set-matrix-zeroes.html)
 
 ## The problem, in short
 
 If a cell is 0, set its whole row and column to 0. Do it in place, ideally with O(1) extra space.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/set-matrix-zeroes/](https://leetcode.com/problems/set-matrix-zeroes/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/006-set-matrix-zeroes.html](https://amitxaidev.github.io/dsa/10-matrix/006-set-matrix-zeroes.html)
+
+## Understanding
+
+**Really asking:** any 0 wipes its whole row and column.
+
+**Why this works:** mark rows and columns first, then wipe; wiping while scanning would create fake zeros. The first row and column can store the marks.
+
+**Example:** [[1,1,1],[1,0,1],[1,1,1]]
+```text
+zero at (1,1) → mark row 1, col 1
+→ [[1,0,1],[0,0,0],[1,0,1]]
+```
 
 ## Hints
 

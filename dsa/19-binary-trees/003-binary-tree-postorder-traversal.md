@@ -1,14 +1,27 @@
 # 3. Binary Tree Postorder Traversal
 
 **LeetCode 145** · 🟢 Easy · Pattern: **Reverse of modified preorder**
-🔗 Solve it here: [https://leetcode.com/problems/binary-tree-postorder-traversal/](https://leetcode.com/problems/binary-tree-postorder-traversal/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/003-binary-tree-postorder-traversal.html](https://amitxaidev.github.io/dsa/19-binary-trees/003-binary-tree-postorder-traversal.html)
 
 ## The problem, in short
 
 Return the values of a binary tree in postorder (left subtree, right subtree, node).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/binary-tree-postorder-traversal/](https://leetcode.com/problems/binary-tree-postorder-traversal/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/003-binary-tree-postorder-traversal.html](https://amitxaidev.github.io/dsa/19-binary-trees/003-binary-tree-postorder-traversal.html)
+
+## Understanding
+
+**Really asking:** left, right, then node.
+
+**Why this works:** node-right-left reversed equals left-right-node. Do a preorder with the children swapped and add to the front.
+
+**Example:** tree 1 (left 2, right 3)
+```text
+node-right-left: 1, 3, 2
+reversed: [2, 3, 1]
+```
 
 ## Hints
 

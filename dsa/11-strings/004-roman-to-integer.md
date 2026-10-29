@@ -1,14 +1,27 @@
 # 4. Roman to Integer
 
 **LeetCode 13** · 🟢 Easy · Pattern: **Look-ahead**
-🔗 Solve it here: [https://leetcode.com/problems/roman-to-integer/](https://leetcode.com/problems/roman-to-integer/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/004-roman-to-integer.html](https://amitxaidev.github.io/dsa/11-strings/004-roman-to-integer.html)
 
 ## The problem, in short
 
 Convert a Roman numeral (I, V, X, L, C, D, M with subtractive pairs like IV and CM) to an integer.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/roman-to-integer/](https://leetcode.com/problems/roman-to-integer/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/004-roman-to-integer.html](https://amitxaidev.github.io/dsa/11-strings/004-roman-to-integer.html)
+
+## Understanding
+
+**Really asking:** turn Roman numerals into a number.
+
+**Why this works:** add each symbol, except when a smaller symbol comes before a bigger one (IV, IX, XL…), then subtract it.
+
+**Example:** "MCMXCIV"
+```text
+M +1000, C<M -100, M +1000, X<C -10, C +100, I<V -1, V +5
+= 1994
+```
 
 ## Hints
 

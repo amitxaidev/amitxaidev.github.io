@@ -1,14 +1,28 @@
 # 3. Longest Substring Without Repeating Characters
 
 **LeetCode 3** · 🟡 Medium · Pattern: **Variable window**
-🔗 Solve it here: [https://leetcode.com/problems/longest-substring-without-repeating-characters/](https://leetcode.com/problems/longest-substring-without-repeating-characters/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/003-longest-substring-without-repeating-characters.html](https://amitxaidev.github.io/dsa/08-sliding-window/003-longest-substring-without-repeating-characters.html)
 
 ## The problem, in short
 
 Return the length of the longest substring with no repeated characters.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/longest-substring-without-repeating-characters/](https://leetcode.com/problems/longest-substring-without-repeating-characters/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/003-longest-substring-without-repeating-characters.html](https://amitxaidev.github.io/dsa/08-sliding-window/003-longest-substring-without-repeating-characters.html)
+
+## Understanding
+
+**Really asking:** the longest stretch with no repeated letter.
+
+**Why this works:** grow the window to the right; when a letter repeats, jump the left edge past its previous position.
+
+**Example:** "abcabcbb"
+```text
+"abc" length 3
+next 'a' repeats → left moves past first 'a' → "bca"
+… best stays 3
+```
 
 ## Hints
 

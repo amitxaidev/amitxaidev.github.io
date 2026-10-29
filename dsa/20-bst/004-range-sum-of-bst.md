@@ -1,14 +1,26 @@
 # 4. Range Sum of BST
 
 **LeetCode 938** · 🟢 Easy · Pattern: **Pruned DFS**
-🔗 Solve it here: [https://leetcode.com/problems/range-sum-of-bst/](https://leetcode.com/problems/range-sum-of-bst/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/004-range-sum-of-bst.html](https://amitxaidev.github.io/dsa/20-bst/004-range-sum-of-bst.html)
 
 ## The problem, in short
 
 Return the sum of all node values in a BST that lie in the range [low, high].
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/range-sum-of-bst/](https://leetcode.com/problems/range-sum-of-bst/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/004-range-sum-of-bst.html](https://amitxaidev.github.io/dsa/20-bst/004-range-sum-of-bst.html)
+
+## Understanding
+
+**Really asking:** sum the values between low and high.
+
+**Why this works:** skip whole subtrees that are out of range: below low → ignore the left side; above high → ignore the right side.
+
+**Example:** 10 (5 (3, 7), 15 (-, 18)), range [7, 15]
+```text
+7 + 10 + 15 = 32
+```
 
 ## Hints
 

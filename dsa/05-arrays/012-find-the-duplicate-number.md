@@ -1,14 +1,28 @@
 # 12. Find the Duplicate Number
 
 **LeetCode 287** · 🟡 Medium · Pattern: **Floyd's cycle on indexes**
-🔗 Solve it here: [https://leetcode.com/problems/find-the-duplicate-number/](https://leetcode.com/problems/find-the-duplicate-number/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/012-find-the-duplicate-number.html](https://amitxaidev.github.io/dsa/05-arrays/012-find-the-duplicate-number.html)
 
 ## The problem, in short
 
 An array of n + 1 numbers has values in 1..n, so one value repeats (possibly many times). Find it without modifying the array and with O(1) extra space.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/find-the-duplicate-number/](https://leetcode.com/problems/find-the-duplicate-number/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/012-find-the-duplicate-number.html](https://amitxaidev.github.io/dsa/05-arrays/012-find-the-duplicate-number.html)
+
+## Understanding
+
+**Really asking:** n+1 numbers in 1..n, so one repeats. Find it without changing the array or using extra memory.
+
+**Why this works:** treat index → nums[index] as "next". Two indexes pointing to the same place form a loop, and the loop's entrance is the duplicate. Floyd's slow/fast pointers find it.
+
+**Example:** [1, 3, 4, 2, 2]
+```text
+path: 0 → 1 → 3 → 2 → 4 → 2 → 4 …
+loop is 2 → 4 → 2, entered at 2
+answer 2
+```
 
 ## Hints
 

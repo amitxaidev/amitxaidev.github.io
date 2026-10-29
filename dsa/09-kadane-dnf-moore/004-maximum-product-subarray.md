@@ -1,14 +1,27 @@
 # 4. Maximum Product Subarray
 
 **LeetCode 152** · 🟡 Medium · Pattern: **Kadane with min & max**
-🔗 Solve it here: [https://leetcode.com/problems/maximum-product-subarray/](https://leetcode.com/problems/maximum-product-subarray/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/004-maximum-product-subarray.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/004-maximum-product-subarray.html)
 
 ## The problem, in short
 
 Find the contiguous subarray with the largest product and return the product.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/maximum-product-subarray/](https://leetcode.com/problems/maximum-product-subarray/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/004-maximum-product-subarray.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/004-maximum-product-subarray.html)
+
+## Understanding
+
+**Really asking:** the contiguous piece with the biggest product.
+
+**Why this works:** a negative number flips the smallest product into the biggest, so track both the max and the min ending here.
+
+**Example:** [2, 3, -2, 4]
+```text
+max/min: 2/2, 6/3, -2/-12, 4/-48
+best = 6
+```
 
 ## Hints
 

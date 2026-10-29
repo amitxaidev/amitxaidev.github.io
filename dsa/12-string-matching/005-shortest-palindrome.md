@@ -1,14 +1,27 @@
 # 5. Shortest Palindrome
 
 **LeetCode 214** · 🔴 Hard · Pattern: **KMP on s + # + reverse**
-🔗 Solve it here: [https://leetcode.com/problems/shortest-palindrome/](https://leetcode.com/problems/shortest-palindrome/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/12-string-matching/005-shortest-palindrome.html](https://amitxaidev.github.io/dsa/12-string-matching/005-shortest-palindrome.html)
 
 ## The problem, in short
 
 Add characters only to the front of s to make it a palindrome. Return the shortest such palindrome.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/shortest-palindrome/](https://leetcode.com/problems/shortest-palindrome/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/12-string-matching/005-shortest-palindrome.html](https://amitxaidev.github.io/dsa/12-string-matching/005-shortest-palindrome.html)
+
+## Understanding
+
+**Really asking:** add the fewest letters in front to make a palindrome.
+
+**Why this works:** find the longest palindromic prefix: run KMP on s + "#" + reverse(s). Whatever comes after it must be mirrored in front.
+
+**Example:** "aacecaaa"
+```text
+longest palindromic prefix "aacecaa" (7)
+leftover "a" → put "a" in front → "aaacecaaa"
+```
 
 ## Hints
 

@@ -1,14 +1,28 @@
 # 10. Furthest Building You Can Reach
 
 **LeetCode 1642** · 🟡 Medium · Pattern: **Min-heap of climbs given ladders**
-🔗 Solve it here: [https://leetcode.com/problems/furthest-building-you-can-reach/](https://leetcode.com/problems/furthest-building-you-can-reach/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/010-furthest-building-you-can-reach.html](https://amitxaidev.github.io/dsa/21-heaps/010-furthest-building-you-can-reach.html)
 
 ## The problem, in short
 
 Walk past buildings left to right. Climbing up costs bricks equal to the height difference, or one ladder. Return the furthest building index you can reach.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/furthest-building-you-can-reach/](https://leetcode.com/problems/furthest-building-you-can-reach/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/010-furthest-building-you-can-reach.html](https://amitxaidev.github.io/dsa/21-heaps/010-furthest-building-you-can-reach.html)
+
+## Understanding
+
+**Really asking:** climb as far as possible with limited bricks and ladders.
+
+**Why this works:** ladders should go on the biggest climbs. Keep the climbs on ladders in a min-heap; when there are too many, pay bricks for the smallest.
+
+**Example:** heights [4, 2, 7, 6, 9, 14, 12], bricks 5, ladders 1
+```text
+climb 5 (2→7): ladder
+climb 3 (6→9): heap {3, 5} → bricks pay 3 → 2 left
+climb 5 (9→14): pay 5? only 2 → stop at index 4
+```
 
 ## Hints
 

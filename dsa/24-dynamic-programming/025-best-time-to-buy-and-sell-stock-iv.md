@@ -1,14 +1,26 @@
 # 25. Best Time to Buy and Sell Stock IV
 
 **LeetCode 188** · 🔴 Hard · Pattern: **State machine DP (k transactions)**
-🔗 Solve it here: [https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/025-best-time-to-buy-and-sell-stock-iv.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/025-best-time-to-buy-and-sell-stock-iv.html)
 
 ## The problem, in short
 
 Make at most k buy-sell transactions. Return the maximum profit.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/025-best-time-to-buy-and-sell-stock-iv.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/025-best-time-to-buy-and-sell-stock-iv.html)
+
+## Understanding
+
+**Really asking:** at most k trades.
+
+**Why this works:** arrays buy[1..k] and sell[1..k], each built from the previous transaction's sell.
+
+**Example:** k = 2, [3, 2, 6, 5, 0, 3]
+```text
+buy 2 sell 6 (+4), buy 0 sell 3 (+3) → 7
+```
 
 ## Hints
 

@@ -1,14 +1,30 @@
 # 1. Concatenation of Array
 
 **LeetCode 1929** · 🟢 Easy · Pattern: **Array basics**
-🔗 Solve it here: [https://leetcode.com/problems/concatenation-of-array/](https://leetcode.com/problems/concatenation-of-array/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/001-concatenation-of-array.html](https://amitxaidev.github.io/dsa/02-java-basics/001-concatenation-of-array.html)
 
 ## The problem, in short
 
 Return an array of length 2n that is the input array followed by itself.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/concatenation-of-array/](https://leetcode.com/problems/concatenation-of-array/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/001-concatenation-of-array.html](https://amitxaidev.github.io/dsa/02-java-basics/001-concatenation-of-array.html)
+
+## Understanding
+
+**Really asking:** make an array twice as long that holds the input two times in a row.
+
+**Why this works:** Java arrays have a fixed size, so you create the full 2n array first and fill both halves with simple index maths.
+
+**Example:** nums = [1, 2, 1]
+```text
+ans has length 6
+i=0: ans[0]=1, ans[3]=1
+i=1: ans[1]=2, ans[4]=2
+i=2: ans[2]=1, ans[5]=1
+ans = [1, 2, 1, 1, 2, 1]
+```
 
 ## Hints
 

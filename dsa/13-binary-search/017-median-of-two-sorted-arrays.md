@@ -1,14 +1,28 @@
 # 17. Median of Two Sorted Arrays
 
 **LeetCode 4** · 🔴 Hard · Pattern: **Binary search on the partition**
-🔗 Solve it here: [https://leetcode.com/problems/median-of-two-sorted-arrays/](https://leetcode.com/problems/median-of-two-sorted-arrays/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/017-median-of-two-sorted-arrays.html](https://amitxaidev.github.io/dsa/13-binary-search/017-median-of-two-sorted-arrays.html)
 
 ## The problem, in short
 
 Return the median of two sorted arrays in O(log(m + n)).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/median-of-two-sorted-arrays/](https://leetcode.com/problems/median-of-two-sorted-arrays/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/017-median-of-two-sorted-arrays.html](https://amitxaidev.github.io/dsa/13-binary-search/017-median-of-two-sorted-arrays.html)
+
+## Understanding
+
+**Really asking:** the median of two sorted arrays combined, in O(log).
+
+**Why this works:** cut both arrays so the left halves hold half of all numbers. The cut is right when every left number ≤ every right number. Binary search where to cut the smaller array.
+
+**Example:** [1, 3] and [2]
+```text
+cut A after 1 element, B after 1 → left {1, 2}, right {3}
+max(left) = 2 ≤ min(right) = 3 ✓
+odd total → median 2
+```
 
 ## Hints
 

@@ -6,6 +6,12 @@ Rotate, spiral, search and in-place tricks on grids.
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/10-matrix/  
 🧮 **10 problems** · 🟢 2 Easy · 🟡 8 Medium · 🔴 0 Hard
 
+## Understand the topic
+
+A matrix is an array of rows. Cell (r, c) is row r, column c. Most matrix tricks are index tricks: the main diagonal is (i, i), the other diagonal is (i, n-1-i), and transposing swaps (r, c) with (c, r).
+
+For in-place problems, look for a spare place to store information: the first row and column as markers, or a second bit in each cell.
+
 ## How to use this list
 
 1. Watch the episode above.

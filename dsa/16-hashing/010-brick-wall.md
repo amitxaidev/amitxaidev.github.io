@@ -1,14 +1,27 @@
 # 10. Brick Wall
 
 **LeetCode 554** · 🟡 Medium · Pattern: **HashMap of edge positions**
-🔗 Solve it here: [https://leetcode.com/problems/brick-wall/](https://leetcode.com/problems/brick-wall/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/010-brick-wall.html](https://amitxaidev.github.io/dsa/16-hashing/010-brick-wall.html)
 
 ## The problem, in short
 
 A wall is made of rows of bricks of different widths (all rows equally wide). Draw one vertical line top to bottom crossing the fewest bricks; lines along brick edges don't cross them. Return the minimum crossed.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/brick-wall/](https://leetcode.com/problems/brick-wall/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/010-brick-wall.html](https://amitxaidev.github.io/dsa/16-hashing/010-brick-wall.html)
+
+## Understanding
+
+**Really asking:** where should a vertical line go to cross the fewest bricks?
+
+**Why this works:** crossing fewest bricks = passing through the most brick edges. Count the edge positions across rows.
+
+**Example:** rows [1,2,2,1], [3,1,2], [1,3,2] …
+```text
+edge at position 4 appears in most rows
+answer = rows - that count
+```
 
 ## Hints
 

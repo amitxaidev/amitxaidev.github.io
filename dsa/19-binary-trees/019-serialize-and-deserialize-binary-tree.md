@@ -1,14 +1,26 @@
 # 19. Serialize and Deserialize Binary Tree
 
 **LeetCode 297** · 🔴 Hard · Pattern: **Preorder with null markers**
-🔗 Solve it here: [https://leetcode.com/problems/serialize-and-deserialize-binary-tree/](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/019-serialize-and-deserialize-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/019-serialize-and-deserialize-binary-tree.html)
 
 ## The problem, in short
 
 Design an encoder that turns a binary tree into a string and a decoder that rebuilds the exact same tree from it.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/serialize-and-deserialize-binary-tree/](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/019-serialize-and-deserialize-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/019-serialize-and-deserialize-binary-tree.html)
+
+## Understanding
+
+**Really asking:** turn a tree into a string and back.
+
+**Why this works:** preorder with "#" for null fully describes the shape; reading tokens back in the same order rebuilds it.
+
+**Example:** 1 (2, 3 (4, 5))
+```text
+"1,2,#,#,3,4,#,#,5,#,#"
+```
 
 ## Hints
 

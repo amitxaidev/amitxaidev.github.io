@@ -1,14 +1,29 @@
 # 14. First Missing Positive
 
 **LeetCode 41** · 🔴 Hard · Pattern: **Cyclic sort**
-🔗 Solve it here: [https://leetcode.com/problems/first-missing-positive/](https://leetcode.com/problems/first-missing-positive/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/014-first-missing-positive.html](https://amitxaidev.github.io/dsa/05-arrays/014-first-missing-positive.html)
 
 ## The problem, in short
 
 Return the smallest positive integer that is not in an unsorted array, in O(n) time and O(1) extra space.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/first-missing-positive/](https://leetcode.com/problems/first-missing-positive/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/014-first-missing-positive.html](https://amitxaidev.github.io/dsa/05-arrays/014-first-missing-positive.html)
+
+## Understanding
+
+**Really asking:** the smallest positive number that's not in the array, in O(n) time and O(1) space.
+
+**Why this works:** the answer is between 1 and n+1. Put each value v in 1..n into its "home" index v-1 by swapping; then the first home that has the wrong value tells you the answer.
+
+**Example:** [3, 4, -1, 1]
+```text
+place 3 at index 2 → [-1, 4, 3, 1]
+place 4 at index 3 → [-1, 1, 3, 4]
+place 1 at index 0 → [1, -1, 3, 4]
+index 1 should hold 2 → answer 2
+```
 
 ## Hints
 

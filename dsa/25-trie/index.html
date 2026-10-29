@@ -30,6 +30,7 @@
         <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
         <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
       </ul>
@@ -49,7 +50,7 @@
       <div class="col-lg-8">
         <h1 class="h2 mb-1">25. Trie</h1>
         <p class="text-body-secondary mb-2">Prefix trees for words, autocomplete and XOR tricks.</p>
-        <div><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 97 (coming soon)</span></div>
+        <div><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 97 coming soon</span></div>
         <div class="array-strip mt-3" aria-hidden="true"><span>4</span><span>1</span><span>7</span><span>3</span><span>9</span><span>2</span><span>6</span><span>5</span><span>8</span><i class="window"></i></div>
       </div>
       <div class="col-lg-4" data-slugs="implement-trie-prefix-tree,design-add-and-search-words-data-structure,search-suggestions-system,replace-words,longest-word-in-dictionary,maximum-xor-of-two-numbers-in-an-array,word-search-ii,maximum-xor-with-an-element-from-array">
@@ -61,6 +62,11 @@
   </div>
 </section>
 <div class="container pb-4">
+<div class="card shadow-sm mb-4"><div class="card-body">
+  <h2 class="h5 fw-bold">Understand the topic</h2>
+  <div class="understanding"><p>A trie (prefix tree) stores words letter by letter. Words that share a beginning share a path, so &quot;car&quot;, &quot;cart&quot; and &quot;care&quot; all use the c → a → r nodes. Each node has up to 26 children and a flag that says &quot;a word ends here&quot;.</p>
+<p>Lookups take O(word length), however many words are stored. Tries power autocomplete and prefix search. A binary trie (two children per node, one per bit) also solves maximum-XOR problems.</p></div>
+</div></div>
 <div class="d-flex flex-wrap gap-2 mb-3">
   <input type="search" class="form-control search" style="max-width: 320px" placeholder="Search problems…" aria-label="Search problems">
   <div class="btn-group btn-group-sm flex-wrap" role="group" aria-label="Filter">

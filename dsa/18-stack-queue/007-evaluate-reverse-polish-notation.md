@@ -1,14 +1,27 @@
 # 7. Evaluate Reverse Polish Notation
 
 **LeetCode 150** · 🟡 Medium · Pattern: **Operand stack**
-🔗 Solve it here: [https://leetcode.com/problems/evaluate-reverse-polish-notation/](https://leetcode.com/problems/evaluate-reverse-polish-notation/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/007-evaluate-reverse-polish-notation.html](https://amitxaidev.github.io/dsa/18-stack-queue/007-evaluate-reverse-polish-notation.html)
 
 ## The problem, in short
 
 Evaluate an arithmetic expression in Reverse Polish (postfix) notation with + - * / on integers. Division truncates toward zero.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/evaluate-reverse-polish-notation/](https://leetcode.com/problems/evaluate-reverse-polish-notation/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/007-evaluate-reverse-polish-notation.html](https://amitxaidev.github.io/dsa/18-stack-queue/007-evaluate-reverse-polish-notation.html)
+
+## Understanding
+
+**Really asking:** compute a postfix expression.
+
+**Why this works:** numbers go on a stack; an operator pops two, applies, and pushes the result.
+
+**Example:** ["2", "1", "+", "3", "*"]
+```text
+2, 1 → + → 3
+3, 3 → * → 9
+```
 
 ## Hints
 

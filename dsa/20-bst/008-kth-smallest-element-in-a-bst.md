@@ -1,14 +1,26 @@
 # 8. Kth Smallest Element in a BST
 
 **LeetCode 230** · 🟡 Medium · Pattern: **Inorder with a counter**
-🔗 Solve it here: [https://leetcode.com/problems/kth-smallest-element-in-a-bst/](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/008-kth-smallest-element-in-a-bst.html](https://amitxaidev.github.io/dsa/20-bst/008-kth-smallest-element-in-a-bst.html)
 
 ## The problem, in short
 
 Return the k-th smallest value (1-indexed) in a BST.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/kth-smallest-element-in-a-bst/](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/008-kth-smallest-element-in-a-bst.html](https://amitxaidev.github.io/dsa/20-bst/008-kth-smallest-element-in-a-bst.html)
+
+## Understanding
+
+**Really asking:** the k-th smallest value.
+
+**Why this works:** inorder visits values in increasing order; stop at the k-th visit.
+
+**Example:** 3 (1 (-, 2), 4), k = 1
+```text
+inorder: 1 → first → answer 1
+```
 
 ## Hints
 

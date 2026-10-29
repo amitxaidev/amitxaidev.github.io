@@ -1,14 +1,27 @@
 # 6. Greatest Common Divisor of Strings
 
 **LeetCode 1071** · 🟢 Easy · Pattern: **GCD on lengths**
-🔗 Solve it here: [https://leetcode.com/problems/greatest-common-divisor-of-strings/](https://leetcode.com/problems/greatest-common-divisor-of-strings/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/006-greatest-common-divisor-of-strings.html](https://amitxaidev.github.io/dsa/03-math/006-greatest-common-divisor-of-strings.html)
 
 ## The problem, in short
 
 A string t "divides" s if s is t repeated some number of times. Return the longest string that divides both inputs, or "" if none.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/greatest-common-divisor-of-strings/](https://leetcode.com/problems/greatest-common-divisor-of-strings/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/006-greatest-common-divisor-of-strings.html](https://amitxaidev.github.io/dsa/03-math/006-greatest-common-divisor-of-strings.html)
+
+## Understanding
+
+**Really asking:** the longest block that, repeated, builds both strings.
+
+**Why this works:** if both strings are made of the same block, gluing them in either order gives the same text. The block length must divide both lengths, and the longest such length is their GCD.
+
+**Example:** str1 = "ABCABC", str2 = "ABC"
+```text
+"ABCABC"+"ABC" == "ABC"+"ABCABC" ✓
+gcd(6, 3) = 3 → "ABC"
+```
 
 ## Hints
 

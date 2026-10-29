@@ -1,14 +1,26 @@
 # 28. Shortest Path Visiting All Nodes
 
 **LeetCode 847** · 🔴 Hard · Pattern: **BFS over (node, visited-mask)**
-🔗 Solve it here: [https://leetcode.com/problems/shortest-path-visiting-all-nodes/](https://leetcode.com/problems/shortest-path-visiting-all-nodes/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/028-shortest-path-visiting-all-nodes.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/028-shortest-path-visiting-all-nodes.html)
 
 ## The problem, in short
 
 In a connected undirected graph with n ≤ 12 nodes, return the length of the shortest walk that visits every node (you can start and end anywhere and reuse nodes and edges).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/shortest-path-visiting-all-nodes/](https://leetcode.com/problems/shortest-path-visiting-all-nodes/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/028-shortest-path-visiting-all-nodes.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/028-shortest-path-visiting-all-nodes.html)
+
+## Understanding
+
+**Really asking:** the shortest walk that visits every node.
+
+**Why this works:** the state is (current node, set of visited nodes). BFS over those states finds the shortest walk.
+
+**Example:** star graph 0 connected to 1, 2, 3
+```text
+1 → 0 → 2 → 0 → 3 → 4 steps
+```
 
 ## Hints
 

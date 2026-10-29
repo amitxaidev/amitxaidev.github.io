@@ -1,14 +1,26 @@
 # 8. Custom Sort String
 
 **LeetCode 791** · 🟡 Medium · Pattern: **Counting by custom order**
-🔗 Solve it here: [https://leetcode.com/problems/custom-sort-string/](https://leetcode.com/problems/custom-sort-string/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/008-custom-sort-string.html](https://amitxaidev.github.io/dsa/14-sorting/008-custom-sort-string.html)
 
 ## The problem, in short
 
 order lists some unique letters in a custom order. Rearrange s so that letters in order appear in that order; other letters can go anywhere.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/custom-sort-string/](https://leetcode.com/problems/custom-sort-string/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/008-custom-sort-string.html](https://amitxaidev.github.io/dsa/14-sorting/008-custom-sort-string.html)
+
+## Understanding
+
+**Really asking:** reorder s to follow the letter order in order.
+
+**Why this works:** count letters of s, write them in order's sequence, then the rest.
+
+**Example:** order "cba", s = "abcd"
+```text
+c, b, a, then d → "cbad"
+```
 
 ## Hints
 

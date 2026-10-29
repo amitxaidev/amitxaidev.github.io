@@ -1,14 +1,27 @@
 # 1. Longest Common Prefix
 
 **LeetCode 14** · 🟢 Easy · Pattern: **Vertical scan**
-🔗 Solve it here: [https://leetcode.com/problems/longest-common-prefix/](https://leetcode.com/problems/longest-common-prefix/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/001-longest-common-prefix.html](https://amitxaidev.github.io/dsa/11-strings/001-longest-common-prefix.html)
 
 ## The problem, in short
 
 Return the longest prefix shared by every string in the array, or "" if there is none.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/longest-common-prefix/](https://leetcode.com/problems/longest-common-prefix/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/001-longest-common-prefix.html](https://amitxaidev.github.io/dsa/11-strings/001-longest-common-prefix.html)
+
+## Understanding
+
+**Really asking:** the longest start shared by all the words.
+
+**Why this works:** compare column by column; stop at the first column where any word differs or ends.
+
+**Example:** ["flower", "flow", "flight"]
+```text
+col 0: f f f ✓, col 1: l l l ✓
+col 2: o o i ✗ → "fl"
+```
 
 ## Hints
 

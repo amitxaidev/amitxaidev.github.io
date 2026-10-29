@@ -1,14 +1,29 @@
 # 10. Insert Delete GetRandom O(1)
 
 **LeetCode 380** · 🟡 Medium · Pattern: **ArrayList + HashMap**
-🔗 Solve it here: [https://leetcode.com/problems/insert-delete-getrandom-o1/](https://leetcode.com/problems/insert-delete-getrandom-o1/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/010-insert-delete-getrandom-o1.html](https://amitxaidev.github.io/dsa/02-java-basics/010-insert-delete-getrandom-o1.html)
 
 ## The problem, in short
 
 Design a set that supports insert, remove and getRandom (each element equally likely), all in average O(1) time.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/insert-delete-getrandom-o1/](https://leetcode.com/problems/insert-delete-getrandom-o1/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/010-insert-delete-getrandom-o1.html](https://amitxaidev.github.io/dsa/02-java-basics/010-insert-delete-getrandom-o1.html)
+
+## Understanding
+
+**Really asking:** a set where add, remove and "pick a random element" are all O(1).
+
+**Why this works:** a list gives random access by index; a map gives value → index lookups. Remove becomes O(1) by moving the last element into the hole instead of shifting everything.
+
+**Example:** insert 1, insert 2, insert 3, remove 1
+```text
+list = [1, 2, 3], pos = {1:0, 2:1, 3:2}
+remove 1: last = 3 moves to index 0
+list = [3, 2], pos = {3:0, 2:1}
+getRandom picks index 0 or 1 → 3 or 2
+```
 
 ## Hints
 

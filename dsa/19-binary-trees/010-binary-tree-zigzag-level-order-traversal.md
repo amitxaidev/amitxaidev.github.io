@@ -1,14 +1,26 @@
 # 10. Binary Tree Zigzag Level Order Traversal
 
 **LeetCode 103** · 🟡 Medium · Pattern: **BFS with alternating direction**
-🔗 Solve it here: [https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/010-binary-tree-zigzag-level-order-traversal.html](https://amitxaidev.github.io/dsa/19-binary-trees/010-binary-tree-zigzag-level-order-traversal.html)
 
 ## The problem, in short
 
 Return level-order values, but alternate direction each level: left-to-right, then right-to-left, and so on.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/010-binary-tree-zigzag-level-order-traversal.html](https://amitxaidev.github.io/dsa/19-binary-trees/010-binary-tree-zigzag-level-order-traversal.html)
+
+## Understanding
+
+**Really asking:** level order, but alternating left-to-right and right-to-left.
+
+**Why this works:** normal BFS; on odd levels add values to the front of the level list.
+
+**Example:** 3 (9, 20 (15, 7))
+```text
+[3], [20, 9], [15, 7]
+```
 
 ## Hints
 

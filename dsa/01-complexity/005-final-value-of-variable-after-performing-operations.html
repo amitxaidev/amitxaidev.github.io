@@ -30,6 +30,7 @@
         <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
         <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
       </ul>
@@ -51,7 +52,15 @@
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>A variable X starts at 0. You get a list of operations, each one of &quot;++X&quot;, &quot;X++&quot;, &quot;--X&quot; or &quot;X--&quot;. Return X after applying all of them.</p>
-    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode.</p>
+    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/final-value-of-variable-after-performing-operations/" target="_blank" rel="noopener">open problem ↗</a></p>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
+    <div class="understanding"><p><strong>Really asking:</strong> start at 0, add 1 for every &quot;++&quot; and subtract 1 for every &quot;--&quot;. The position of the ++ doesn&#x27;t matter.</p>
+<p><strong>Why this works:</strong> the middle character of every operation is the sign, so one check per operation is enough. Constant work per item × n items = O(n).</p>
+<p><strong>Example:</strong> [&quot;--X&quot;, &quot;X++&quot;, &quot;X++&quot;]</p>
+<pre class="trace border rounded">&quot;--X&quot; → middle &#x27;-&#x27; → X = -1
+&quot;X++&quot; → middle &#x27;+&#x27; → X = 0
+&quot;X++&quot; → middle &#x27;+&#x27; → X = 1</pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">

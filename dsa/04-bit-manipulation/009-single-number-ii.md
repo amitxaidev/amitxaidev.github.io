@@ -1,14 +1,28 @@
 # 9. Single Number II
 
 **LeetCode 137** · 🟡 Medium · Pattern: **Bit counting**
-🔗 Solve it here: [https://leetcode.com/problems/single-number-ii/](https://leetcode.com/problems/single-number-ii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/009-single-number-ii.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/009-single-number-ii.html)
 
 ## The problem, in short
 
 Every number appears three times except one, which appears once. Find it with O(1) extra space.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/single-number-ii/](https://leetcode.com/problems/single-number-ii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/009-single-number-ii.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/009-single-number-ii.html)
+
+## Understanding
+
+**Really asking:** every number appears three times except one.
+
+**Why this works:** look at one bit position at a time. The triplets add a multiple of 3 to that bit's count, so count % 3 is the single number's bit.
+
+**Example:** [2, 2, 3, 2] → binary 10, 10, 11, 10
+```text
+bit 0: 0+0+1+0 = 1 → 1 % 3 = 1
+bit 1: 1+1+1+1 = 4 → 4 % 3 = 1
+answer 11 = 3
+```
 
 ## Hints
 

@@ -1,14 +1,26 @@
 # 17. Count Good Nodes in Binary Tree
 
 **LeetCode 1448** · 🟡 Medium · Pattern: **DFS carrying the path maximum**
-🔗 Solve it here: [https://leetcode.com/problems/count-good-nodes-in-binary-tree/](https://leetcode.com/problems/count-good-nodes-in-binary-tree/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/017-count-good-nodes-in-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/017-count-good-nodes-in-binary-tree.html)
 
 ## The problem, in short
 
 A node is "good" if no node on the path from the root to it has a greater value. Count the good nodes.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/count-good-nodes-in-binary-tree/](https://leetcode.com/problems/count-good-nodes-in-binary-tree/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/017-count-good-nodes-in-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/017-count-good-nodes-in-binary-tree.html)
+
+## Understanding
+
+**Really asking:** nodes with no bigger node above them on their path.
+
+**Why this works:** pass the maximum seen so far down the recursion.
+
+**Example:** 3 (1 (3), 4 (1, 5))
+```text
+good: 3, 3 (path 3,1,3), 4, 5 → 4
+```
 
 ## Hints
 

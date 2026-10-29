@@ -1,14 +1,26 @@
 # 5. Unique Number of Occurrences
 
 **LeetCode 1207** · 🟢 Easy · Pattern: **HashMap + HashSet**
-🔗 Solve it here: [https://leetcode.com/problems/unique-number-of-occurrences/](https://leetcode.com/problems/unique-number-of-occurrences/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/005-unique-number-of-occurrences.html](https://amitxaidev.github.io/dsa/16-hashing/005-unique-number-of-occurrences.html)
 
 ## The problem, in short
 
 Return true if every distinct value in the array appears a different number of times.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/unique-number-of-occurrences/](https://leetcode.com/problems/unique-number-of-occurrences/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/005-unique-number-of-occurrences.html](https://amitxaidev.github.io/dsa/16-hashing/005-unique-number-of-occurrences.html)
+
+## Understanding
+
+**Really asking:** are all the counts different?
+
+**Why this works:** count values, then check whether the set of counts is as big as the number of values.
+
+**Example:** [1, 2, 2, 1, 1, 3]
+```text
+counts 1→3, 2→2, 3→1 → {3, 2, 1} all distinct → true
+```
 
 ## Hints
 

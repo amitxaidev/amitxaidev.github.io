@@ -1,14 +1,28 @@
 # 8. Reverse Integer
 
 **LeetCode 7** · 🟡 Medium · Pattern: **Overflow checks**
-🔗 Solve it here: [https://leetcode.com/problems/reverse-integer/](https://leetcode.com/problems/reverse-integer/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/008-reverse-integer.html](https://amitxaidev.github.io/dsa/03-math/008-reverse-integer.html)
 
 ## The problem, in short
 
 Reverse the digits of a 32-bit signed integer. If the reversed value doesn't fit in 32 bits, return 0. You may not use 64-bit integers.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/reverse-integer/](https://leetcode.com/problems/reverse-integer/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/008-reverse-integer.html](https://amitxaidev.github.io/dsa/03-math/008-reverse-integer.html)
+
+## Understanding
+
+**Really asking:** reverse the digits but return 0 if the answer doesn't fit in an int, and you can't use long to cheat.
+
+**Why this works:** before adding a digit, compare the current result with MAX/10. If it's already bigger, the next step would overflow.
+
+**Example:** x = -123
+```text
+d = -3 → rev = -3
+d = -2 → rev = -32
+d = -1 → rev = -321
+```
 
 ## Hints
 

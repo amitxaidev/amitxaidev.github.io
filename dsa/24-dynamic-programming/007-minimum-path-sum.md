@@ -1,14 +1,26 @@
 # 7. Minimum Path Sum
 
 **LeetCode 64** · 🟡 Medium · Pattern: **2D grid DP**
-🔗 Solve it here: [https://leetcode.com/problems/minimum-path-sum/](https://leetcode.com/problems/minimum-path-sum/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/007-minimum-path-sum.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/007-minimum-path-sum.html)
 
 ## The problem, in short
 
 Move only right or down from the top-left to the bottom-right of a grid of non-negative numbers. Minimise the sum of the numbers on the path.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/minimum-path-sum/](https://leetcode.com/problems/minimum-path-sum/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/007-minimum-path-sum.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/007-minimum-path-sum.html)
+
+## Understanding
+
+**Really asking:** the cheapest right/down path.
+
+**Why this works:** cost to a cell = its value + the cheaper of above and left.
+
+**Example:** [[1,3,1],[1,5,1],[4,2,1]]
+```text
+best path 1→3→1→1→1 = 7
+```
 
 ## Hints
 

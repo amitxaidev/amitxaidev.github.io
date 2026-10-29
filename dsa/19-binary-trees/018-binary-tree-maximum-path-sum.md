@@ -1,14 +1,28 @@
 # 18. Binary Tree Maximum Path Sum
 
 **LeetCode 124** · 🔴 Hard · Pattern: **Gain function with global best**
-🔗 Solve it here: [https://leetcode.com/problems/binary-tree-maximum-path-sum/](https://leetcode.com/problems/binary-tree-maximum-path-sum/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/018-binary-tree-maximum-path-sum.html](https://amitxaidev.github.io/dsa/19-binary-trees/018-binary-tree-maximum-path-sum.html)
 
 ## The problem, in short
 
 A path is any sequence of connected nodes, used at most once each, not necessarily through the root. Return the maximum sum of node values on any path.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/binary-tree-maximum-path-sum/](https://leetcode.com/problems/binary-tree-maximum-path-sum/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/018-binary-tree-maximum-path-sum.html](https://amitxaidev.github.io/dsa/19-binary-trees/018-binary-tree-maximum-path-sum.html)
+
+## Understanding
+
+**Really asking:** the largest sum along any path.
+
+**Why this works:** each node returns its best downward path (one side only). A path that bends at the node uses both sides; update the global best with it.
+
+**Example:** -10 (9, 20 (15, 7))
+```text
+at 20: bend 15 + 20 + 7 = 42 (best)
+return 20 + 15 = 35 up
+at -10: 9 - 10 + 35 = 34 < 42
+```
 
 ## Hints
 

@@ -1,14 +1,27 @@
 # 12. Remove K Digits
 
 **LeetCode 402** · 🟡 Medium · Pattern: **Monotonic increasing stack**
-🔗 Solve it here: [https://leetcode.com/problems/remove-k-digits/](https://leetcode.com/problems/remove-k-digits/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/012-remove-k-digits.html](https://amitxaidev.github.io/dsa/18-stack-queue/012-remove-k-digits.html)
 
 ## The problem, in short
 
 Remove k digits from a number string to make the smallest possible number. Return it without leading zeros ("0" if empty).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/remove-k-digits/](https://leetcode.com/problems/remove-k-digits/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/012-remove-k-digits.html](https://amitxaidev.github.io/dsa/18-stack-queue/012-remove-k-digits.html)
+
+## Understanding
+
+**Really asking:** remove k digits to make the smallest number.
+
+**Why this works:** a digit followed by a smaller digit should go. Keep the kept digits increasing with a stack.
+
+**Example:** "1432219", k = 3
+```text
+4 removed by 3, 3 removed by 2, 2 removed by 1
+"1219"
+```
 
 ## Hints
 

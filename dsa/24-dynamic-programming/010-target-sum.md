@@ -1,14 +1,26 @@
 # 10. Target Sum
 
 **LeetCode 494** · 🟡 Medium · Pattern: **0/1 knapsack (count subsets)**
-🔗 Solve it here: [https://leetcode.com/problems/target-sum/](https://leetcode.com/problems/target-sum/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/010-target-sum.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/010-target-sum.html)
 
 ## The problem, in short
 
 Put + or − in front of every number. Count the sign choices that make the expression equal target.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/target-sum/](https://leetcode.com/problems/target-sum/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/010-target-sum.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/010-target-sum.html)
+
+## Understanding
+
+**Really asking:** ways to put + or − before each number to reach target.
+
+**Why this works:** the plus group P must equal (total + target) / 2, so count subsets with that sum.
+
+**Example:** [1, 1, 1, 1, 1], target 3 → P = 4
+```text
+ways to choose 4 ones out of 5 → 5
+```
 
 ## Hints
 

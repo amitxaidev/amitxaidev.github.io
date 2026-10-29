@@ -1,14 +1,26 @@
 # 15. Path with Maximum Gold
 
 **LeetCode 1219** · 🟡 Medium · Pattern: **Grid DFS backtracking**
-🔗 Solve it here: [https://leetcode.com/problems/path-with-maximum-gold/](https://leetcode.com/problems/path-with-maximum-gold/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/015-path-with-maximum-gold.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/015-path-with-maximum-gold.html)
 
 ## The problem, in short
 
 Each grid cell holds some gold (0 means you can't step there). Starting anywhere, walk up/down/left/right without revisiting a cell and collect gold. Return the most gold possible.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/path-with-maximum-gold/](https://leetcode.com/problems/path-with-maximum-gold/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/015-path-with-maximum-gold.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/015-path-with-maximum-gold.html)
+
+## Understanding
+
+**Really asking:** walk through gold cells without revisiting; collect the most gold.
+
+**Why this works:** try each gold cell as a start, DFS in four directions, and restore the cell when backtracking.
+
+**Example:** [[0,6,0],[5,8,7],[0,9,0]]
+```text
+9 → 8 → 7 = 24 (best)
+```
 
 ## Hints
 

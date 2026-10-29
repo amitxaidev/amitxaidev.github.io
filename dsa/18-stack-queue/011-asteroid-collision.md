@@ -1,14 +1,27 @@
 # 11. Asteroid Collision
 
 **LeetCode 735** · 🟡 Medium · Pattern: **Stack simulation**
-🔗 Solve it here: [https://leetcode.com/problems/asteroid-collision/](https://leetcode.com/problems/asteroid-collision/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/011-asteroid-collision.html](https://amitxaidev.github.io/dsa/18-stack-queue/011-asteroid-collision.html)
 
 ## The problem, in short
 
 Asteroids move along a line: positive values go right, negative go left, absolute value is size. When two collide, the smaller explodes; equal sizes both explode. Return the survivors.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/asteroid-collision/](https://leetcode.com/problems/asteroid-collision/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/011-asteroid-collision.html](https://amitxaidev.github.io/dsa/18-stack-queue/011-asteroid-collision.html)
+
+## Understanding
+
+**Really asking:** right-moving and left-moving asteroids crash; what's left?
+
+**Why this works:** only a left-mover arriving after a right-mover collides. The stack holds survivors; the new left-mover fights the top.
+
+**Example:** [5, 10, -5]
+```text
+5, 10 on stack
+-5 meets 10 → -5 explodes → [5, 10]
+```
 
 ## Hints
 

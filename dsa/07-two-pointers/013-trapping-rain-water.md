@@ -1,14 +1,27 @@
 # 13. Trapping Rain Water
 
 **LeetCode 42** · 🔴 Hard · Pattern: **Opposite ends with max heights**
-🔗 Solve it here: [https://leetcode.com/problems/trapping-rain-water/](https://leetcode.com/problems/trapping-rain-water/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/013-trapping-rain-water.html](https://amitxaidev.github.io/dsa/07-two-pointers/013-trapping-rain-water.html)
 
 ## The problem, in short
 
 Bars of given heights stand side by side. Return how much rain water is trapped between them.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/trapping-rain-water/](https://leetcode.com/problems/trapping-rain-water/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/013-trapping-rain-water.html](https://amitxaidev.github.io/dsa/07-two-pointers/013-trapping-rain-water.html)
+
+## Understanding
+
+**Really asking:** how much rain sits between the bars?
+
+**Why this works:** water above a bar = min(tallest on left, tallest on right) - bar. With two pointers, the side with the smaller max is already decided, so process that side.
+
+**Example:** [4, 2, 0, 3, 2, 5]
+```text
+leftMax 4 < rightMax 5 → water at 2: 2, at 0: 4, at 3: 1, at 2: 2
+total 9
+```
 
 ## Hints
 

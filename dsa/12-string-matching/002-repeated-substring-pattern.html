@@ -30,6 +30,7 @@
         <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
         <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
       </ul>
@@ -51,7 +52,14 @@
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Decide whether s can be built by repeating one of its substrings two or more times.</p>
-    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode.</p>
+    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/repeated-substring-pattern/" target="_blank" rel="noopener">open problem ↗</a></p>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
+    <div class="understanding"><p><strong>Really asking:</strong> is the string some block repeated 2+ times?</p>
+<p><strong>Why this works:</strong> if it is, the leftover after removing the longest border (lps[n-1]) is the block length, and it divides n.</p>
+<p><strong>Example:</strong> &quot;abcabc&quot;</p>
+<pre class="trace border rounded">lps last = 3 → block length 6 - 3 = 3
+6 % 3 = 0 → true (&quot;abc&quot;)</pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -105,7 +113,7 @@
         <li class="list-group-item"><strong>Space:</strong> O(n).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">String Pattern Matching</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 18 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 19 (coming soon)</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">String Pattern Matching</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 18–19 coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

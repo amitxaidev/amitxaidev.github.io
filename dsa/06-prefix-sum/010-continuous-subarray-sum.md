@@ -1,14 +1,27 @@
 # 10. Continuous Subarray Sum
 
 **LeetCode 523** · 🟡 Medium · Pattern: **Prefix remainders + index**
-🔗 Solve it here: [https://leetcode.com/problems/continuous-subarray-sum/](https://leetcode.com/problems/continuous-subarray-sum/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/010-continuous-subarray-sum.html](https://amitxaidev.github.io/dsa/06-prefix-sum/010-continuous-subarray-sum.html)
 
 ## The problem, in short
 
 Decide whether there is a subarray of length at least 2 whose sum is a multiple of k.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/continuous-subarray-sum/](https://leetcode.com/problems/continuous-subarray-sum/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/010-continuous-subarray-sum.html](https://amitxaidev.github.io/dsa/06-prefix-sum/010-continuous-subarray-sum.html)
+
+## Understanding
+
+**Really asking:** is there a piece of length ≥ 2 whose sum is a multiple of k?
+
+**Why this works:** same remainder twice means the part between them is a multiple of k. Store the first index of each remainder so the gap check (≥ 2) is fair.
+
+**Example:** [23, 2, 4, 6, 7], k = 6
+```text
+remainders: 5, 1, 5 …
+remainder 5 at index 0 and index 2 → gap 2 → [2, 4] sums to 6 ✓
+```
 
 ## Hints
 

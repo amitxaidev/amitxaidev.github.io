@@ -1,14 +1,27 @@
 # 12. Number of Submatrices That Sum to Target
 
 **LeetCode 1074** · 🔴 Hard · Pattern: **2D → 1D prefix + HashMap**
-🔗 Solve it here: [https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/012-number-of-submatrices-that-sum-to-target.html](https://amitxaidev.github.io/dsa/06-prefix-sum/012-number-of-submatrices-that-sum-to-target.html)
 
 ## The problem, in short
 
 Count all non-empty rectangles in a matrix whose elements sum to a target.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/012-number-of-submatrices-that-sum-to-target.html](https://amitxaidev.github.io/dsa/06-prefix-sum/012-number-of-submatrices-that-sum-to-target.html)
+
+## Understanding
+
+**Really asking:** count rectangles in a grid with a given sum.
+
+**Why this works:** fix a top row and a bottom row; squash the columns between them into one array of column sums. Now it's "subarray sum equals k" on that array.
+
+**Example:** rows 0..1 of [[0,1],[1,0]] squashed → column sums [1, 1]
+```text
+subarrays summing to 1: [1], [1] → 2
+repeat for every pair of rows and add up
+```
 
 ## Hints
 

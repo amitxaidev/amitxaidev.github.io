@@ -1,14 +1,27 @@
 # 6. Min Stack
 
 **LeetCode 155** · 🟡 Medium · Pattern: **Stack of (value, min) pairs**
-🔗 Solve it here: [https://leetcode.com/problems/min-stack/](https://leetcode.com/problems/min-stack/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/006-min-stack.html](https://amitxaidev.github.io/dsa/18-stack-queue/006-min-stack.html)
 
 ## The problem, in short
 
 Design a stack that supports push, pop, top and getMin, all in O(1).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/min-stack/](https://leetcode.com/problems/min-stack/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/006-min-stack.html](https://amitxaidev.github.io/dsa/18-stack-queue/006-min-stack.html)
+
+## Understanding
+
+**Really asking:** a stack with getMin in O(1).
+
+**Why this works:** store with every value the minimum at that moment; popping restores the old minimum automatically.
+
+**Example:** push -2, 0, -3
+```text
+[(-2,-2), (0,-2), (-3,-3)] → min -3
+pop → min -2
+```
 
 ## Hints
 

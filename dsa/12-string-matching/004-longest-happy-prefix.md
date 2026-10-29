@@ -1,14 +1,26 @@
 # 4. Longest Happy Prefix
 
 **LeetCode 1392** · 🔴 Hard · Pattern: **LPS array**
-🔗 Solve it here: [https://leetcode.com/problems/longest-happy-prefix/](https://leetcode.com/problems/longest-happy-prefix/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/12-string-matching/004-longest-happy-prefix.html](https://amitxaidev.github.io/dsa/12-string-matching/004-longest-happy-prefix.html)
 
 ## The problem, in short
 
 A "happy prefix" is a non-empty prefix that is also a suffix, but not the whole string. Return the longest one, or "".
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/longest-happy-prefix/](https://leetcode.com/problems/longest-happy-prefix/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/12-string-matching/004-longest-happy-prefix.html](https://amitxaidev.github.io/dsa/12-string-matching/004-longest-happy-prefix.html)
+
+## Understanding
+
+**Really asking:** the longest prefix that is also a suffix (not the whole string).
+
+**Why this works:** that is exactly the last value of the LPS array.
+
+**Example:** "level"
+```text
+lps = [0, 0, 0, 0, 1] → "l"
+```
 
 ## Hints
 

@@ -6,6 +6,12 @@ Primes, GCD, modulo, digits and the Sieve of Eratosthenes.
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/03-math/  
 🧮 **13 problems** · 🟢 7 Easy · 🟡 5 Medium · 🔴 1 Hard
 
+## Understand the topic
+
+A lot of coding questions hide simple maths: pulling digits out with % 10 and / 10, the GCD with Euclid's rule, primes with the Sieve, fast powers by squaring, and keeping numbers small with modulo 1e9+7.
+
+Watch for overflow in every problem here. If a value can pass about 2.1 billion, use long, and check the limit before you multiply, not after.
+
 ## How to use this list
 
 1. Watch the episode above.

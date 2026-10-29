@@ -1,14 +1,29 @@
 # 10. Pow(x, n)
 
 **LeetCode 50** · 🟡 Medium · Pattern: **Fast exponentiation**
-🔗 Solve it here: [https://leetcode.com/problems/powx-n/](https://leetcode.com/problems/powx-n/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/010-powx-n.html](https://amitxaidev.github.io/dsa/03-math/010-powx-n.html)
 
 ## The problem, in short
 
 Compute x raised to an integer power n, where n can be negative and as large as 2^31 in size.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/powx-n/](https://leetcode.com/problems/powx-n/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/010-powx-n.html](https://amitxaidev.github.io/dsa/03-math/010-powx-n.html)
+
+## Understanding
+
+**Really asking:** x to the power n where n can be about ±2 billion.
+
+**Why this works:** x^13 = x^8 · x^4 · x^1 (13 is 1101 in binary). Squaring x each step gives x, x², x⁴, x⁸; multiply in the ones whose bit is set. That's about 31 steps instead of 2 billion.
+
+**Example:** x = 2, n = 10 (binary 1010)
+```text
+bit 0 = 0: base 2 → 4
+bit 1 = 1: result 4,   base 16
+bit 2 = 0: base 256
+bit 3 = 1: result 4·256 = 1024
+```
 
 ## Hints
 

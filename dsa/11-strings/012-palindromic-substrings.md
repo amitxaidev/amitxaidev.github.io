@@ -1,14 +1,28 @@
 # 12. Palindromic Substrings
 
 **LeetCode 647** · 🟡 Medium · Pattern: **Expand around centre**
-🔗 Solve it here: [https://leetcode.com/problems/palindromic-substrings/](https://leetcode.com/problems/palindromic-substrings/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/012-palindromic-substrings.html](https://amitxaidev.github.io/dsa/11-strings/012-palindromic-substrings.html)
 
 ## The problem, in short
 
 Count how many substrings (by position) are palindromes.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/palindromic-substrings/](https://leetcode.com/problems/palindromic-substrings/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/012-palindromic-substrings.html](https://amitxaidev.github.io/dsa/11-strings/012-palindromic-substrings.html)
+
+## Understanding
+
+**Really asking:** how many substrings (by position) are palindromes?
+
+**Why this works:** expand around every centre; each successful step is one more palindrome.
+
+**Example:** "aaa"
+```text
+single letters: 3
+"aa" twice: 2
+"aaa": 1 → 6
+```
 
 ## Hints
 

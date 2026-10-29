@@ -1,14 +1,27 @@
 # 13. H-Index
 
 **LeetCode 274** · 🟡 Medium · Pattern: **Counting sort**
-🔗 Solve it here: [https://leetcode.com/problems/h-index/](https://leetcode.com/problems/h-index/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/013-h-index.html](https://amitxaidev.github.io/dsa/05-arrays/013-h-index.html)
 
 ## The problem, in short
 
 citations[i] is how many citations paper i has. The h-index is the largest h such that at least h papers have h or more citations each. Return it.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/h-index/](https://leetcode.com/problems/h-index/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/013-h-index.html](https://amitxaidev.github.io/dsa/05-arrays/013-h-index.html)
+
+## Understanding
+
+**Really asking:** the biggest h where at least h papers have h or more citations.
+
+**Why this works:** h can't exceed n, so bucket citations (capping at n) and walk from high to low, adding up papers.
+
+**Example:** [3, 0, 6, 1, 5], n = 5
+```text
+buckets: 0→1, 1→1, 3→1, 5→2 (6 capped to 5)
+h=5: 2 papers, h=4: 2, h=3: 3 ≥ 3 → answer 3
+```
 
 ## Hints
 

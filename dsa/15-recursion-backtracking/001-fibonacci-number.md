@@ -1,14 +1,27 @@
 # 1. Fibonacci Number
 
 **LeetCode 509** · 🟢 Easy · Pattern: **Recursion → iteration**
-🔗 Solve it here: [https://leetcode.com/problems/fibonacci-number/](https://leetcode.com/problems/fibonacci-number/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/001-fibonacci-number.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/001-fibonacci-number.html)
 
 ## The problem, in short
 
 Return the n-th Fibonacci number, where F(0) = 0, F(1) = 1 and each next number is the sum of the two before it.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/fibonacci-number/](https://leetcode.com/problems/fibonacci-number/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/001-fibonacci-number.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/001-fibonacci-number.html)
+
+## Understanding
+
+**Really asking:** F(n) = F(n-1) + F(n-2), starting from 0 and 1.
+
+**Why this works:** the recursion explains the idea, but it repeats work. Each value only needs the two before it, so roll two variables forward.
+
+**Example:** n = 5
+```text
+0, 1 → 1 → 2 → 3 → 5
+F(5) = 5
+```
 
 ## Hints
 

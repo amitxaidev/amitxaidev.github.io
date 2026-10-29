@@ -1,14 +1,27 @@
 # 16. Maximal Rectangle
 
 **LeetCode 85** · 🔴 Hard · Pattern: **Histogram per row**
-🔗 Solve it here: [https://leetcode.com/problems/maximal-rectangle/](https://leetcode.com/problems/maximal-rectangle/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/016-maximal-rectangle.html](https://amitxaidev.github.io/dsa/18-stack-queue/016-maximal-rectangle.html)
 
 ## The problem, in short
 
 In a binary matrix of '0' and '1', return the area of the largest rectangle containing only '1's.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/maximal-rectangle/](https://leetcode.com/problems/maximal-rectangle/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/016-maximal-rectangle.html](https://amitxaidev.github.io/dsa/18-stack-queue/016-maximal-rectangle.html)
+
+## Understanding
+
+**Really asking:** the largest all-'1' rectangle in a grid.
+
+**Why this works:** treat each row as the floor of a histogram of consecutive 1s, then run "largest rectangle in histogram".
+
+**Example:** rows build heights like [3, 1, 3, 2, 2]
+```text
+histogram answer for that row = 6
+best over all rows = answer
+```
 
 ## Hints
 

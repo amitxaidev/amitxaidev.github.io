@@ -1,14 +1,26 @@
 # 5. Find Greatest Common Divisor of Array
 
 **LeetCode 1979** · 🟢 Easy · Pattern: **Euclid's GCD**
-🔗 Solve it here: [https://leetcode.com/problems/find-greatest-common-divisor-of-array/](https://leetcode.com/problems/find-greatest-common-divisor-of-array/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/005-find-greatest-common-divisor-of-array.html](https://amitxaidev.github.io/dsa/03-math/005-find-greatest-common-divisor-of-array.html)
 
 ## The problem, in short
 
 Return the GCD of the smallest and largest numbers in the array.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/find-greatest-common-divisor-of-array/](https://leetcode.com/problems/find-greatest-common-divisor-of-array/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/005-find-greatest-common-divisor-of-array.html](https://amitxaidev.github.io/dsa/03-math/005-find-greatest-common-divisor-of-array.html)
+
+## Understanding
+
+**Really asking:** GCD of the smallest and largest number in the array.
+
+**Why this works:** Euclid's rule gcd(a, b) = gcd(b, a % b) shrinks the numbers fast.
+
+**Example:** nums = [2, 5, 6, 9, 10] → min 2, max 10
+```text
+gcd(10, 2) → gcd(2, 0) → 2
+```
 
 ## Hints
 

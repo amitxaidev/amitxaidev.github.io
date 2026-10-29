@@ -1,14 +1,28 @@
 # 1. Palindrome Number
 
 **LeetCode 9** · 🟢 Easy · Pattern: **Digit reversal**
-🔗 Solve it here: [https://leetcode.com/problems/palindrome-number/](https://leetcode.com/problems/palindrome-number/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/001-palindrome-number.html](https://amitxaidev.github.io/dsa/03-math/001-palindrome-number.html)
 
 ## The problem, in short
 
 Decide whether an integer reads the same forwards and backwards, without converting it to a string.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/palindrome-number/](https://leetcode.com/problems/palindrome-number/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/001-palindrome-number.html](https://amitxaidev.github.io/dsa/03-math/001-palindrome-number.html)
+
+## Understanding
+
+**Really asking:** do the digits read the same from both ends, without turning the number into a string?
+
+**Why this works:** build the reverse of the second half digit by digit. When the reversed half catches up with the front half, compare them. Half is enough, and it can't overflow.
+
+**Example:** x = 1221
+```text
+x=1221, rev=0 → rev=1, x=122
+x=122,  rev=1 → rev=12, x=12
+x == rev (12 == 12) → palindrome
+```
 
 ## Hints
 

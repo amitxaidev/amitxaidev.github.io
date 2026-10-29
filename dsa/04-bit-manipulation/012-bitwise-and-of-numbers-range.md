@@ -1,14 +1,28 @@
 # 12. Bitwise AND of Numbers Range
 
 **LeetCode 201** · 🟡 Medium · Pattern: **Common prefix**
-🔗 Solve it here: [https://leetcode.com/problems/bitwise-and-of-numbers-range/](https://leetcode.com/problems/bitwise-and-of-numbers-range/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/012-bitwise-and-of-numbers-range.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/012-bitwise-and-of-numbers-range.html)
 
 ## The problem, in short
 
 Return the bitwise AND of every integer from left to right inclusive.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/bitwise-and-of-numbers-range/](https://leetcode.com/problems/bitwise-and-of-numbers-range/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/012-bitwise-and-of-numbers-range.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/012-bitwise-and-of-numbers-range.html)
+
+## Understanding
+
+**Really asking:** AND every number from left to right.
+
+**Why this works:** any bit that changes somewhere in the range becomes 0. Only the shared starting bits (the common prefix) survive.
+
+**Example:** left = 5 (101), right = 7 (111)
+```text
+101 vs 111 → shift → 10 vs 11
+→ 1 vs 1 equal after 2 shifts
+1 << 2 = 100 = 4
+```
 
 ## Hints
 

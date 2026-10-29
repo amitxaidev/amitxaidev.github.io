@@ -1,14 +1,27 @@
 # 12. Palindrome Partitioning
 
 **LeetCode 131** · 🟡 Medium · Pattern: **Backtracking on cut positions**
-🔗 Solve it here: [https://leetcode.com/problems/palindrome-partitioning/](https://leetcode.com/problems/palindrome-partitioning/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/012-palindrome-partitioning.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/012-palindrome-partitioning.html)
 
 ## The problem, in short
 
 Split a string into pieces so that every piece is a palindrome. Return all such splits.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/palindrome-partitioning/](https://leetcode.com/problems/palindrome-partitioning/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/012-palindrome-partitioning.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/012-palindrome-partitioning.html)
+
+## Understanding
+
+**Really asking:** every way to cut a string into palindrome pieces.
+
+**Why this works:** choose where the first piece ends (it must be a palindrome), then solve the rest the same way.
+
+**Example:** "aab"
+```text
+"a" + "a" + "b"
+"aa" + "b"
+```
 
 ## Hints
 

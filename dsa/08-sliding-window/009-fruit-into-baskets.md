@@ -1,14 +1,27 @@
 # 9. Fruit Into Baskets
 
 **LeetCode 904** · 🟡 Medium · Pattern: **Variable window, at most 2 kinds**
-🔗 Solve it here: [https://leetcode.com/problems/fruit-into-baskets/](https://leetcode.com/problems/fruit-into-baskets/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/009-fruit-into-baskets.html](https://amitxaidev.github.io/dsa/08-sliding-window/009-fruit-into-baskets.html)
 
 ## The problem, in short
 
 Trees in a row each give one fruit type. With two baskets (one type each), pick from a contiguous stretch of trees. Return the most fruit you can collect.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/fruit-into-baskets/](https://leetcode.com/problems/fruit-into-baskets/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/009-fruit-into-baskets.html](https://amitxaidev.github.io/dsa/08-sliding-window/009-fruit-into-baskets.html)
+
+## Understanding
+
+**Really asking:** longest stretch with at most two kinds of fruit.
+
+**Why this works:** keep counts per kind in the window; when a third kind enters, shrink from the left until one kind disappears.
+
+**Example:** [1, 2, 3, 2, 2]
+```text
+[1, 2] ok, add 3 → three kinds → drop 1
+[2, 3, 2, 2] → length 4
+```
 
 ## Hints
 

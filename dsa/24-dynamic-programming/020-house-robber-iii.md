@@ -1,14 +1,26 @@
 # 20. House Robber III
 
 **LeetCode 337** · 🟡 Medium · Pattern: **DP on trees**
-🔗 Solve it here: [https://leetcode.com/problems/house-robber-iii/](https://leetcode.com/problems/house-robber-iii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/020-house-robber-iii.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/020-house-robber-iii.html)
 
 ## The problem, in short
 
 Houses form a binary tree; robbing two directly linked houses triggers the alarm. Return the most money you can rob.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/house-robber-iii/](https://leetcode.com/problems/house-robber-iii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/020-house-robber-iii.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/020-house-robber-iii.html)
+
+## Understanding
+
+**Really asking:** rob a tree of houses without robbing a parent and its child.
+
+**Why this works:** each node returns two numbers: best if robbed, best if skipped. The parent combines them.
+
+**Example:** 3 (2 (-, 3), 3 (-, 1))
+```text
+rob root + grandchildren: 3 + 3 + 1 = 7
+```
 
 ## Hints
 

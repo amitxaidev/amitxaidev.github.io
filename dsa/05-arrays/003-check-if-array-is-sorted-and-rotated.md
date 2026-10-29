@@ -1,14 +1,27 @@
 # 3. Check if Array Is Sorted and Rotated
 
 **LeetCode 1752** · 🟢 Easy · Pattern: **Count drops**
-🔗 Solve it here: [https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/003-check-if-array-is-sorted-and-rotated.html](https://amitxaidev.github.io/dsa/05-arrays/003-check-if-array-is-sorted-and-rotated.html)
 
 ## The problem, in short
 
 Decide whether the array could be a non-decreasing array that was rotated some number of positions (duplicates allowed).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/003-check-if-array-is-sorted-and-rotated.html](https://amitxaidev.github.io/dsa/05-arrays/003-check-if-array-is-sorted-and-rotated.html)
+
+## Understanding
+
+**Really asking:** could this be a sorted array that was rotated?
+
+**Why this works:** walk around the array in a circle and count the "drops" (a value bigger than the next). A rotated sorted array has at most one drop.
+
+**Example:** [3, 4, 5, 1, 2]
+```text
+3→4 ok, 4→5 ok, 5→1 drop, 1→2 ok, 2→3 (wrap) ok
+1 drop → true
+```
 
 ## Hints
 

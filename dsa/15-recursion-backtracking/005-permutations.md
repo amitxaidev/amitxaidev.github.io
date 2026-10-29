@@ -1,14 +1,28 @@
 # 5. Permutations
 
 **LeetCode 46** · 🟡 Medium · Pattern: **Backtracking with used[]**
-🔗 Solve it here: [https://leetcode.com/problems/permutations/](https://leetcode.com/problems/permutations/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/005-permutations.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/005-permutations.html)
 
 ## The problem, in short
 
 Return all orderings of an array of distinct integers.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/permutations/](https://leetcode.com/problems/permutations/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/005-permutations.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/005-permutations.html)
+
+## Understanding
+
+**Really asking:** every ordering of distinct numbers.
+
+**Why this works:** fill positions one by one with any unused number; undo after exploring.
+
+**Example:** [1, 2, 3]
+```text
+1 → 2 → 3, 1 → 3 → 2
+2 → 1 → 3, 2 → 3 → 1
+3 → 1 → 2, 3 → 2 → 1
+```
 
 ## Hints
 

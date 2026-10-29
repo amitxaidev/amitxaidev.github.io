@@ -1,14 +1,28 @@
 # 1. Reverse Linked List
 
 **LeetCode 206** · 🟢 Easy · Pattern: **Iterative pointer reversal**
-🔗 Solve it here: [https://leetcode.com/problems/reverse-linked-list/](https://leetcode.com/problems/reverse-linked-list/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/001-reverse-linked-list.html](https://amitxaidev.github.io/dsa/17-linked-list/001-reverse-linked-list.html)
 
 ## The problem, in short
 
 Reverse a singly linked list and return the new head.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/reverse-linked-list/](https://leetcode.com/problems/reverse-linked-list/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/001-reverse-linked-list.html](https://amitxaidev.github.io/dsa/17-linked-list/001-reverse-linked-list.html)
+
+## Understanding
+
+**Really asking:** make every arrow point the other way.
+
+**Why this works:** walk once, saving next before flipping cur.next back to prev.
+
+**Example:** 1 → 2 → 3
+```text
+prev null, cur 1: 1 → null
+cur 2: 2 → 1
+cur 3: 3 → 2 → 1, head = 3
+```
 
 ## Hints
 

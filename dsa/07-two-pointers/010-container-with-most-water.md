@@ -1,14 +1,28 @@
 # 10. Container With Most Water
 
 **LeetCode 11** · 🟡 Medium · Pattern: **Opposite ends, move the shorter**
-🔗 Solve it here: [https://leetcode.com/problems/container-with-most-water/](https://leetcode.com/problems/container-with-most-water/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/010-container-with-most-water.html](https://amitxaidev.github.io/dsa/07-two-pointers/010-container-with-most-water.html)
 
 ## The problem, in short
 
 Vertical lines stand at each index with given heights. Pick two lines that, with the x-axis, hold the most water. Return that amount.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/container-with-most-water/](https://leetcode.com/problems/container-with-most-water/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/010-container-with-most-water.html](https://amitxaidev.github.io/dsa/07-two-pointers/010-container-with-most-water.html)
+
+## Understanding
+
+**Really asking:** choose two walls that trap the most water.
+
+**Why this works:** water = width × shorter wall. Start widest. Moving the taller wall can only lose width without raising the shorter wall, so always move the shorter one.
+
+**Example:** [1, 8, 6, 2, 5, 4, 8, 3, 7]
+```text
+l=0 (1), r=8 (7): area 8 → move l
+l=1 (8), r=8 (7): area 49 (best) → move r
+… no wider pair beats 49
+```
 
 ## Hints
 

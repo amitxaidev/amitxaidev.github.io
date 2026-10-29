@@ -1,14 +1,26 @@
 # 21. Beautiful Arrangement
 
 **LeetCode 526** · 🟡 Medium · Pattern: **Bitmask DP**
-🔗 Solve it here: [https://leetcode.com/problems/beautiful-arrangement/](https://leetcode.com/problems/beautiful-arrangement/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/021-beautiful-arrangement.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/021-beautiful-arrangement.html)
 
 ## The problem, in short
 
 Count permutations of 1..n (n ≤ 15) where, at every position i (1-indexed), either the number divides i or i divides the number.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/beautiful-arrangement/](https://leetcode.com/problems/beautiful-arrangement/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/021-beautiful-arrangement.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/021-beautiful-arrangement.html)
+
+## Understanding
+
+**Really asking:** count arrangements where every position and its number divide one way or the other.
+
+**Why this works:** the set of numbers already used is a bitmask, and the next position is its popcount + 1. dp[mask] counts the ways.
+
+**Example:** n = 2
+```text
+[1, 2] ✓, [2, 1] ✓ → 2
+```
 
 ## Hints
 

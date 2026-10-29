@@ -1,14 +1,28 @@
 # 8. Daily Temperatures
 
 **LeetCode 739** · 🟡 Medium · Pattern: **Monotonic stack of indexes**
-🔗 Solve it here: [https://leetcode.com/problems/daily-temperatures/](https://leetcode.com/problems/daily-temperatures/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/008-daily-temperatures.html](https://amitxaidev.github.io/dsa/18-stack-queue/008-daily-temperatures.html)
 
 ## The problem, in short
 
 For each day, return how many days you must wait for a warmer temperature, or 0 if none comes.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/daily-temperatures/](https://leetcode.com/problems/daily-temperatures/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/008-daily-temperatures.html](https://amitxaidev.github.io/dsa/18-stack-queue/008-daily-temperatures.html)
+
+## Understanding
+
+**Really asking:** for each day, how many days until a warmer one?
+
+**Why this works:** a stack of waiting days (cooler ones on top). A warmer day pops them and fills in their wait.
+
+**Example:** [73, 74, 75, 71, 69, 72, 76]
+```text
+74 answers 73 (1), 75 answers 74 (1)
+72 answers 69 (1) and 71 (2)
+76 answers 72 (1) and 75 (4)
+```
 
 ## Hints
 

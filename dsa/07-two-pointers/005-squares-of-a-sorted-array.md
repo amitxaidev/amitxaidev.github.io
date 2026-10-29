@@ -1,14 +1,30 @@
 # 5. Squares of a Sorted Array
 
 **LeetCode 977** · 🟢 Easy · Pattern: **Opposite ends, fill from back**
-🔗 Solve it here: [https://leetcode.com/problems/squares-of-a-sorted-array/](https://leetcode.com/problems/squares-of-a-sorted-array/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/005-squares-of-a-sorted-array.html](https://amitxaidev.github.io/dsa/07-two-pointers/005-squares-of-a-sorted-array.html)
 
 ## The problem, in short
 
 Given a sorted array that may contain negatives, return the squares of all elements in sorted order.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/squares-of-a-sorted-array/](https://leetcode.com/problems/squares-of-a-sorted-array/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/005-squares-of-a-sorted-array.html](https://amitxaidev.github.io/dsa/07-two-pointers/005-squares-of-a-sorted-array.html)
+
+## Understanding
+
+**Really asking:** square everything and return it sorted. Negatives make the squares unsorted.
+
+**Why this works:** the biggest square is always at one of the two ends. Fill the answer from the back with the bigger end.
+
+**Example:** [-4, -1, 0, 3, 10]
+```text
+16 vs 100 → 100 at the back
+16 vs 9 → 16
+1 vs 9 → 9
+1 vs 0 → 1, then 0
+[0, 1, 9, 16, 100]
+```
 
 ## Hints
 

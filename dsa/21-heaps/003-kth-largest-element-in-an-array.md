@@ -1,14 +1,26 @@
 # 3. Kth Largest Element in an Array
 
 **LeetCode 215** · 🟡 Medium · Pattern: **Min-heap / quickselect**
-🔗 Solve it here: [https://leetcode.com/problems/kth-largest-element-in-an-array/](https://leetcode.com/problems/kth-largest-element-in-an-array/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/003-kth-largest-element-in-an-array.html](https://amitxaidev.github.io/dsa/21-heaps/003-kth-largest-element-in-an-array.html)
 
 ## The problem, in short
 
 Return the k-th largest element of an unsorted array (by sorted position, so duplicates count).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/kth-largest-element-in-an-array/](https://leetcode.com/problems/kth-largest-element-in-an-array/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/003-kth-largest-element-in-an-array.html](https://amitxaidev.github.io/dsa/21-heaps/003-kth-largest-element-in-an-array.html)
+
+## Understanding
+
+**Really asking:** the k-th largest value in an unsorted array.
+
+**Why this works:** a min-heap of size k keeps the k largest; its top is the answer.
+
+**Example:** [3, 2, 1, 5, 6, 4], k = 2
+```text
+heap ends as {5, 6} → top 5
+```
 
 ## Hints
 

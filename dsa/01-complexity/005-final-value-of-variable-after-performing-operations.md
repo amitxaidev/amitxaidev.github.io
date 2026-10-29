@@ -1,14 +1,28 @@
 # 5. Final Value of Variable After Performing Operations
 
 **LeetCode 2011** · 🟢 Easy · Pattern: **Simulation**
-🔗 Solve it here: [https://leetcode.com/problems/final-value-of-variable-after-performing-operations/](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/01-complexity/005-final-value-of-variable-after-performing-operations.html](https://amitxaidev.github.io/dsa/01-complexity/005-final-value-of-variable-after-performing-operations.html)
 
 ## The problem, in short
 
 A variable X starts at 0. You get a list of operations, each one of "++X", "X++", "--X" or "X--". Return X after applying all of them.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/final-value-of-variable-after-performing-operations/](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/01-complexity/005-final-value-of-variable-after-performing-operations.html](https://amitxaidev.github.io/dsa/01-complexity/005-final-value-of-variable-after-performing-operations.html)
+
+## Understanding
+
+**Really asking:** start at 0, add 1 for every "++" and subtract 1 for every "--". The position of the ++ doesn't matter.
+
+**Why this works:** the middle character of every operation is the sign, so one check per operation is enough. Constant work per item × n items = O(n).
+
+**Example:** ["--X", "X++", "X++"]
+```text
+"--X" → middle '-' → X = -1
+"X++" → middle '+' → X = 0
+"X++" → middle '+' → X = 1
+```
 
 ## Hints
 

@@ -1,14 +1,27 @@
 # 12. Reorder List
 
 **LeetCode 143** · 🟡 Medium · Pattern: **Middle + reverse + weave**
-🔗 Solve it here: [https://leetcode.com/problems/reorder-list/](https://leetcode.com/problems/reorder-list/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/012-reorder-list.html](https://amitxaidev.github.io/dsa/17-linked-list/012-reorder-list.html)
 
 ## The problem, in short
 
 Reorder L0 → L1 → … → Ln into L0 → Ln → L1 → Ln−1 → … in place.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/reorder-list/](https://leetcode.com/problems/reorder-list/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/012-reorder-list.html](https://amitxaidev.github.io/dsa/17-linked-list/012-reorder-list.html)
+
+## Understanding
+
+**Really asking:** first, last, second, second-last…
+
+**Why this works:** split at the middle, reverse the second half, then weave the halves together.
+
+**Example:** 1→2→3→4→5
+```text
+halves 1→2→3 and 4→5 → reversed 5→4
+weave: 1→5→2→4→3
+```
 
 ## Hints
 

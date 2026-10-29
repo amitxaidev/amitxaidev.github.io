@@ -1,14 +1,26 @@
 # 15. Maximum Width of Binary Tree
 
 **LeetCode 662** · 🟡 Medium · Pattern: **BFS with position indexes**
-🔗 Solve it here: [https://leetcode.com/problems/maximum-width-of-binary-tree/](https://leetcode.com/problems/maximum-width-of-binary-tree/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/015-maximum-width-of-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/015-maximum-width-of-binary-tree.html)
 
 ## The problem, in short
 
 The width of a level is the distance between its leftmost and rightmost non-null nodes, counting the null gaps in between. Return the maximum width.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/maximum-width-of-binary-tree/](https://leetcode.com/problems/maximum-width-of-binary-tree/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/015-maximum-width-of-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/015-maximum-width-of-binary-tree.html)
+
+## Understanding
+
+**Really asking:** the widest level, counting the gaps between the end nodes.
+
+**Why this works:** number nodes like a heap (children 2i and 2i+1). Width = last index - first index + 1.
+
+**Example:** 1 (3 (5, 3), 2 (-, 9))
+```text
+last level indexes 0, 1, 3 → width 3 - 0 + 1 = 4
+```
 
 ## Hints
 

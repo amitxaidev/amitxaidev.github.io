@@ -1,14 +1,28 @@
 # 5. Product of Array Except Self
 
 **LeetCode 238** · 🟡 Medium · Pattern: **Prefix & suffix products**
-🔗 Solve it here: [https://leetcode.com/problems/product-of-array-except-self/](https://leetcode.com/problems/product-of-array-except-self/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/005-product-of-array-except-self.html](https://amitxaidev.github.io/dsa/06-prefix-sum/005-product-of-array-except-self.html)
 
 ## The problem, in short
 
 Return an array where each position holds the product of all other elements, without using division, in O(n).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/product-of-array-except-self/](https://leetcode.com/problems/product-of-array-except-self/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/005-product-of-array-except-self.html](https://amitxaidev.github.io/dsa/06-prefix-sum/005-product-of-array-except-self.html)
+
+## Understanding
+
+**Really asking:** for each index, the product of all the other numbers, without division.
+
+**Why this works:** product of everything else = (product of everything on the left) × (product of everything on the right). Two passes build both.
+
+**Example:** [1, 2, 3, 4]
+```text
+left products:  [1, 1, 2, 6]
+right products: [24, 12, 4, 1]
+multiply:       [24, 12, 8, 6]
+```
 
 ## Hints
 

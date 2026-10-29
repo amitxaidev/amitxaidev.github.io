@@ -1,14 +1,27 @@
 # 14. Cheapest Flights Within K Stops
 
 **LeetCode 787** · 🟡 Medium · Pattern: **Bellman-Ford with k+1 rounds**
-🔗 Solve it here: [https://leetcode.com/problems/cheapest-flights-within-k-stops/](https://leetcode.com/problems/cheapest-flights-within-k-stops/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/014-cheapest-flights-within-k-stops.html](https://amitxaidev.github.io/dsa/23-graphs/014-cheapest-flights-within-k-stops.html)
 
 ## The problem, in short
 
 Find the cheapest price from src to dst using at most k stops (k + 1 flights), or -1.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/cheapest-flights-within-k-stops/](https://leetcode.com/problems/cheapest-flights-within-k-stops/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/014-cheapest-flights-within-k-stops.html](https://amitxaidev.github.io/dsa/23-graphs/014-cheapest-flights-within-k-stops.html)
+
+## Understanding
+
+**Really asking:** the cheapest route using at most k stops.
+
+**Why this works:** Bellman-Ford's i-th round finds the best routes with at most i flights. Run k + 1 rounds, reading the previous round's prices.
+
+**Example:** 0→1 (100), 1→2 (100), 0→2 (500), k = 1
+```text
+round 1: price 1 = 100, price 2 = 500
+round 2: price 2 = min(500, 100+100) = 200
+```
 
 ## Hints
 

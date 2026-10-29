@@ -1,14 +1,29 @@
 # 2. Lemonade Change
 
 **LeetCode 860** · 🟢 Easy · Pattern: **Greedy change-making**
-🔗 Solve it here: [https://leetcode.com/problems/lemonade-change/](https://leetcode.com/problems/lemonade-change/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/002-lemonade-change.html](https://amitxaidev.github.io/dsa/22-greedy/002-lemonade-change.html)
 
 ## The problem, in short
 
 Lemonade costs $5. Customers pay with $5, $10 or $20 bills in order, and you start with no change. Decide whether you can give everyone correct change.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/lemonade-change/](https://leetcode.com/problems/lemonade-change/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/002-lemonade-change.html](https://amitxaidev.github.io/dsa/22-greedy/002-lemonade-change.html)
+
+## Understanding
+
+**Really asking:** can you give correct change to every customer, in order?
+
+**Why this works:** for a $20, prefer $10 + $5 over three $5s; $5 bills are more useful later.
+
+**Example:** [5, 5, 10, 10, 20]
+```text
+5, 5 → two fives
+10 → give 5 (one five left)
+10 → give 5 (no fives)
+20 → no change possible → false
+```
 
 ## Hints
 

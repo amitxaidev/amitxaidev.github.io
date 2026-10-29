@@ -1,14 +1,27 @@
 # 1. Two Sum
 
 **LeetCode 1** · 🟢 Easy · Pattern: **HashMap complement lookup**
-🔗 Solve it here: [https://leetcode.com/problems/two-sum/](https://leetcode.com/problems/two-sum/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/001-two-sum.html](https://amitxaidev.github.io/dsa/16-hashing/001-two-sum.html)
 
 ## The problem, in short
 
 Return the indexes of the two numbers that add up to target. Exactly one answer exists and the same element can't be used twice.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/two-sum/](https://leetcode.com/problems/two-sum/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/001-two-sum.html](https://amitxaidev.github.io/dsa/16-hashing/001-two-sum.html)
+
+## Understanding
+
+**Really asking:** two indexes whose values add up to target.
+
+**Why this works:** for each number x, the partner you need is target - x. A map from value to index answers "have I seen it?" in O(1).
+
+**Example:** [2, 7, 11, 15], target 9
+```text
+2: need 7, not seen; store 2→0
+7: need 2, seen at 0 → [0, 1]
+```
 
 ## Hints
 

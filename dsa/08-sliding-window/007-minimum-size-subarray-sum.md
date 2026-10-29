@@ -1,14 +1,29 @@
 # 7. Minimum Size Subarray Sum
 
 **LeetCode 209** · 🟡 Medium · Pattern: **Variable window (shrink while valid)**
-🔗 Solve it here: [https://leetcode.com/problems/minimum-size-subarray-sum/](https://leetcode.com/problems/minimum-size-subarray-sum/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/007-minimum-size-subarray-sum.html](https://amitxaidev.github.io/dsa/08-sliding-window/007-minimum-size-subarray-sum.html)
 
 ## The problem, in short
 
 All numbers are positive. Return the length of the shortest contiguous subarray whose sum is at least target, or 0 if none.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/minimum-size-subarray-sum/](https://leetcode.com/problems/minimum-size-subarray-sum/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/007-minimum-size-subarray-sum.html](https://amitxaidev.github.io/dsa/08-sliding-window/007-minimum-size-subarray-sum.html)
+
+## Understanding
+
+**Really asking:** the shortest piece (positive numbers) with sum ≥ target.
+
+**Why this works:** grow until the sum is big enough, then shrink from the left as long as it stays big enough, recording lengths.
+
+**Example:** target 7, [2, 3, 1, 2, 4, 3]
+```text
+2+3+1+2 = 8 ≥ 7 → length 4, drop 2 → 6
++4 → 10 → length 4, drop 3 → 7 → length 3, drop 1 → 6
++3 → 9 → length 3, drop 2 → 7 → length 2 ✓
+answer 2
+```
 
 ## Hints
 

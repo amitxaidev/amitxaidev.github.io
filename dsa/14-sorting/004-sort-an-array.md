@@ -1,14 +1,28 @@
 # 4. Sort an Array
 
 **LeetCode 912** · 🟡 Medium · Pattern: **Merge sort**
-🔗 Solve it here: [https://leetcode.com/problems/sort-an-array/](https://leetcode.com/problems/sort-an-array/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/004-sort-an-array.html](https://amitxaidev.github.io/dsa/14-sorting/004-sort-an-array.html)
 
 ## The problem, in short
 
 Sort an integer array in ascending order in O(n log n) without built-in sort functions.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/sort-an-array/](https://leetcode.com/problems/sort-an-array/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/004-sort-an-array.html](https://amitxaidev.github.io/dsa/14-sorting/004-sort-an-array.html)
+
+## Understanding
+
+**Really asking:** sort in O(n log n) without library sort.
+
+**Why this works:** merge sort always splits evenly, so it never degrades like a naive quicksort on sorted input.
+
+**Example:** [5, 2, 3, 1]
+```text
+split → [5, 2] [3, 1]
+sort halves → [2, 5] [1, 3]
+merge → [1, 2, 3, 5]
+```
 
 ## Hints
 

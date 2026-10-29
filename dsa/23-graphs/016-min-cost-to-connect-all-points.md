@@ -1,14 +1,26 @@
 # 16. Min Cost to Connect All Points
 
 **LeetCode 1584** · 🟡 Medium · Pattern: **Prim's MST (dense graph)**
-🔗 Solve it here: [https://leetcode.com/problems/min-cost-to-connect-all-points/](https://leetcode.com/problems/min-cost-to-connect-all-points/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/016-min-cost-to-connect-all-points.html](https://amitxaidev.github.io/dsa/23-graphs/016-min-cost-to-connect-all-points.html)
 
 ## The problem, in short
 
 Connect all points on a plane so that every point can reach every other, where an edge costs the Manhattan distance between its points. Return the minimum total cost.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/min-cost-to-connect-all-points/](https://leetcode.com/problems/min-cost-to-connect-all-points/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/016-min-cost-to-connect-all-points.html](https://amitxaidev.github.io/dsa/23-graphs/016-min-cost-to-connect-all-points.html)
+
+## Understanding
+
+**Really asking:** connect all points as cheaply as possible (Manhattan distance).
+
+**Why this works:** that's a minimum spanning tree. Prim's grows the tree by always adding the closest outside point.
+
+**Example:** [[0,0],[2,2],[3,10],[5,2],[7,0]]
+```text
+add edges 4, 3, 4, 9 → total 20
+```
 
 ## Hints
 

@@ -1,14 +1,28 @@
 # 3. Sqrt(x)
 
 **LeetCode 69** · 🟢 Easy · Pattern: **Binary search on the answer**
-🔗 Solve it here: [https://leetcode.com/problems/sqrtx/](https://leetcode.com/problems/sqrtx/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/003-sqrtx.html](https://amitxaidev.github.io/dsa/13-binary-search/003-sqrtx.html)
 
 ## The problem, in short
 
 Return the integer square root of x (rounded down) without using a built-in power or sqrt function.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/sqrtx/](https://leetcode.com/problems/sqrtx/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/003-sqrtx.html](https://amitxaidev.github.io/dsa/13-binary-search/003-sqrtx.html)
+
+## Understanding
+
+**Really asking:** the biggest r with r × r ≤ x.
+
+**Why this works:** "r² ≤ x" is true then false as r grows, so binary search r. Compare mid ≤ x / mid to avoid overflow.
+
+**Example:** x = 8
+```text
+mid 2: 2 ≤ 4 ✓ → ans 2, go right
+mid 3: 3 ≤ 2 ✗ → go left
+answer 2
+```
 
 ## Hints
 

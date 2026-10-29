@@ -1,14 +1,26 @@
 # 12. Lowest Common Ancestor of a Binary Tree
 
 **LeetCode 236** · 🟡 Medium · Pattern: **Postorder search**
-🔗 Solve it here: [https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/012-lowest-common-ancestor-of-a-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/012-lowest-common-ancestor-of-a-binary-tree.html)
 
 ## The problem, in short
 
 Given two nodes p and q in a binary tree, return their lowest common ancestor (a node may be an ancestor of itself).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/012-lowest-common-ancestor-of-a-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/012-lowest-common-ancestor-of-a-binary-tree.html)
+
+## Understanding
+
+**Really asking:** the deepest node that has both p and q below it (or is one of them).
+
+**Why this works:** search both sides. If p is found on one side and q on the other, this node is where they split.
+
+**Example:** p = 5, q = 1 in a tree rooted at 3 with children 5 and 1
+```text
+left finds 5, right finds 1 → answer 3
+```
 
 ## Hints
 

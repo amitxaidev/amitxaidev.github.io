@@ -6,6 +6,12 @@ Fixed and variable windows over arrays and strings.
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/08-sliding-window/  
 🧮 **14 problems** · 🟢 2 Easy · 🟡 10 Medium · 🔴 2 Hard
 
+## Understand the topic
+
+A sliding window is a frame over a contiguous part of an array or string. Instead of recomputing every subarray, you add the element that enters and remove the one that leaves.
+
+Fixed windows keep the same size (k). Variable windows grow on the right and shrink from the left while a rule is broken. For "exactly K" questions, compute atMost(K) - atMost(K - 1).
+
 ## How to use this list
 
 1. Watch the episode above.

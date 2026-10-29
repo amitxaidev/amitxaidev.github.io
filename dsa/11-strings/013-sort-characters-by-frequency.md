@@ -1,14 +1,27 @@
 # 13. Sort Characters By Frequency
 
 **LeetCode 451** · 🟡 Medium · Pattern: **Count + bucket**
-🔗 Solve it here: [https://leetcode.com/problems/sort-characters-by-frequency/](https://leetcode.com/problems/sort-characters-by-frequency/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/013-sort-characters-by-frequency.html](https://amitxaidev.github.io/dsa/11-strings/013-sort-characters-by-frequency.html)
 
 ## The problem, in short
 
 Rearrange a string so characters appear in decreasing order of frequency (equal characters grouped together).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/sort-characters-by-frequency/](https://leetcode.com/problems/sort-characters-by-frequency/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/013-sort-characters-by-frequency.html](https://amitxaidev.github.io/dsa/11-strings/013-sort-characters-by-frequency.html)
+
+## Understanding
+
+**Really asking:** order letters by how often they appear, most first.
+
+**Why this works:** count, then put letters into buckets by count and read buckets from high to low.
+
+**Example:** "tree"
+```text
+e:2, t:1, r:1
+→ "eetr" (or "eert")
+```
 
 ## Hints
 

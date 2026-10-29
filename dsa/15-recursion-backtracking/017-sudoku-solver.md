@@ -1,14 +1,27 @@
 # 17. Sudoku Solver
 
 **LeetCode 37** · 🔴 Hard · Pattern: **Backtracking on empty cells**
-🔗 Solve it here: [https://leetcode.com/problems/sudoku-solver/](https://leetcode.com/problems/sudoku-solver/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/017-sudoku-solver.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/017-sudoku-solver.html)
 
 ## The problem, in short
 
 Fill the empty cells of a 9×9 Sudoku so every row, column and 3×3 box contains 1–9 exactly once. The puzzle has exactly one solution.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/sudoku-solver/](https://leetcode.com/problems/sudoku-solver/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/017-sudoku-solver.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/017-sudoku-solver.html)
+
+## Understanding
+
+**Really asking:** fill the board so every row, column and box has 1–9.
+
+**Why this works:** try each allowed digit in an empty cell, recurse, and undo when a later cell has no options.
+
+**Example:** an empty cell where row, column and box already use 1–8
+```text
+only 9 is allowed → place 9 and move on
+a dead end later → remove 9 and try the previous cell's next digit
+```
 
 ## Hints
 

@@ -1,14 +1,27 @@
 # 3. First Unique Character in a String
 
 **LeetCode 387** · 🟢 Easy · Pattern: **Frequency count**
-🔗 Solve it here: [https://leetcode.com/problems/first-unique-character-in-a-string/](https://leetcode.com/problems/first-unique-character-in-a-string/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/003-first-unique-character-in-a-string.html](https://amitxaidev.github.io/dsa/11-strings/003-first-unique-character-in-a-string.html)
 
 ## The problem, in short
 
 Return the index of the first character that appears exactly once in the string, or -1.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/first-unique-character-in-a-string/](https://leetcode.com/problems/first-unique-character-in-a-string/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/003-first-unique-character-in-a-string.html](https://amitxaidev.github.io/dsa/11-strings/003-first-unique-character-in-a-string.html)
+
+## Understanding
+
+**Really asking:** the first letter that appears exactly once.
+
+**Why this works:** count all letters first, then scan in order for a count of 1.
+
+**Example:** "loveleetcode"
+```text
+counts: l2 o2 v1 e4 …
+first with count 1: 'v' at index 2
+```
 
 ## Hints
 

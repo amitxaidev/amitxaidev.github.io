@@ -1,14 +1,26 @@
 # 6. Is Subsequence
 
 **LeetCode 392** · 🟢 Easy · Pattern: **Same direction**
-🔗 Solve it here: [https://leetcode.com/problems/is-subsequence/](https://leetcode.com/problems/is-subsequence/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/006-is-subsequence.html](https://amitxaidev.github.io/dsa/07-two-pointers/006-is-subsequence.html)
 
 ## The problem, in short
 
 Decide whether s can be obtained from t by deleting some characters without changing the order of the rest.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/is-subsequence/](https://leetcode.com/problems/is-subsequence/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/006-is-subsequence.html](https://amitxaidev.github.io/dsa/07-two-pointers/006-is-subsequence.html)
+
+## Understanding
+
+**Really asking:** can you find s's letters inside t in the same order?
+
+**Why this works:** walk t once; whenever its letter matches the next needed letter of s, move forward in s.
+
+**Example:** s = "abc", t = "ahbgdc"
+```text
+a ✓, h, b ✓, g, d, c ✓ → all found → true
+```
 
 ## Hints
 

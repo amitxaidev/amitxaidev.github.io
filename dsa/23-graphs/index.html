@@ -30,6 +30,7 @@
         <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
         <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
       </ul>
@@ -49,7 +50,7 @@
       <div class="col-lg-8">
         <h1 class="h2 mb-1">23. Graphs</h1>
         <p class="text-body-secondary mb-2">BFS/DFS, islands, cycles, topo sort, bipartite, shortest paths, MST, DSU, SCC and bridges.</p>
-        <div><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 74 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 75 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 76 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 77 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 78 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 79 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 80 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 81 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 82 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 83 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 84 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 85 (coming soon)</span></div>
+        <div><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 74–85 coming soon</span></div>
         <div class="array-strip mt-3" aria-hidden="true"><span>4</span><span>1</span><span>7</span><span>3</span><span>9</span><span>2</span><span>6</span><span>5</span><span>8</span><i class="window"></i></div>
       </div>
       <div class="col-lg-4" data-slugs="find-if-path-exists-in-graph,flood-fill,number-of-islands,number-of-provinces,max-area-of-island,rotting-oranges,pacific-atlantic-water-flow,clone-graph,course-schedule,course-schedule-ii,is-graph-bipartite,network-delay-time,path-with-minimum-effort,cheapest-flights-within-k-stops,find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance,min-cost-to-connect-all-points,redundant-connection,accounts-merge,word-ladder,critical-connections-in-a-network,swim-in-rising-water">
@@ -61,6 +62,11 @@
   </div>
 </section>
 <div class="container pb-4">
+<div class="card shadow-sm mb-4"><div class="card-body">
+  <h2 class="h5 fw-bold">Understand the topic</h2>
+  <div class="understanding"><p>A graph is nodes connected by edges, like cities and roads. Store it as an adjacency list (List&lt;List&lt;Integer&gt;&gt;), or treat a grid as a graph where each cell connects to its four neighbours. Always keep a visited array.</p>
+<p>Pick the tool by the question. To explore or count components, use BFS or DFS. For the shortest path with equal edges, use BFS. For an order with prerequisites, use topological sort (Kahn&#x27;s algorithm). For shortest paths with weights, use Dijkstra, or Bellman-Ford when there&#x27;s a limit on edges. For all pairs, use Floyd-Warshall. To connect everything cheaply, use an MST (Prim or Kruskal). For &quot;are these connected?&quot; while adding edges, use Union-Find. For edges whose removal disconnects the graph, use Tarjan&#x27;s bridges.</p></div>
+</div></div>
 <div class="d-flex flex-wrap gap-2 mb-3">
   <input type="search" class="form-control search" style="max-width: 320px" placeholder="Search problems…" aria-label="Search problems">
   <div class="btn-group btn-group-sm flex-wrap" role="group" aria-label="Filter">

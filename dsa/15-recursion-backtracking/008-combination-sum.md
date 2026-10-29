@@ -1,14 +1,27 @@
 # 8. Combination Sum
 
 **LeetCode 39** · 🟡 Medium · Pattern: **Backtracking with reuse**
-🔗 Solve it here: [https://leetcode.com/problems/combination-sum/](https://leetcode.com/problems/combination-sum/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/008-combination-sum.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/008-combination-sum.html)
 
 ## The problem, in short
 
 Return all unique combinations of candidates (distinct numbers, each usable unlimited times) that sum to target.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/combination-sum/](https://leetcode.com/problems/combination-sum/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/008-combination-sum.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/008-combination-sum.html)
+
+## Understanding
+
+**Really asking:** combinations that add to target, reusing numbers allowed.
+
+**Why this works:** recurse with the same index to allow reuse; stop when a candidate is bigger than what's left.
+
+**Example:** [2, 3, 6, 7], target 7
+```text
+2+2+3 = 7 ✓
+7 = 7 ✓
+```
 
 ## Hints
 

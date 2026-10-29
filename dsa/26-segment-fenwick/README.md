@@ -6,6 +6,12 @@ Range queries with point updates.
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/26-segment-fenwick/  
 🧮 **6 problems** · 🟢 0 Easy · 🟡 2 Medium · 🔴 4 Hard
 
+## Understand the topic
+
+A prefix sum makes range queries fast, but then every update costs O(n). These structures make both queries and updates O(log n).
+
+A Fenwick tree (Binary Indexed Tree) stores partial sums in an array; i & -i decides how far each step jumps, and it's perfect for prefix sums and counts. A segment tree stores the answer for every range in a binary tree; it handles sum, min and max, and with lazy propagation also range updates. A sparse table answers static range-minimum queries in O(1) after O(n log n) preprocessing.
+
 ## How to use this list
 
 1. Watch the episode above.

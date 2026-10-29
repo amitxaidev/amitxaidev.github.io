@@ -1,14 +1,28 @@
 # 9. Maximum Subarray Sum with One Deletion
 
 **LeetCode 1186** · 🟡 Medium · Pattern: **Kadane with two states**
-🔗 Solve it here: [https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/](https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/009-maximum-subarray-sum-with-one-deletion.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/009-maximum-subarray-sum-with-one-deletion.html)
 
 ## The problem, in short
 
 Return the largest sum of a non-empty subarray when you are allowed to delete at most one element from it (it must stay non-empty).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/](https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/009-maximum-subarray-sum-with-one-deletion.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/009-maximum-subarray-sum-with-one-deletion.html)
+
+## Understanding
+
+**Really asking:** best subarray sum if you may delete one element from it.
+
+**Why this works:** track two values per index: best sum ending here with no deletion, and with one deletion already used.
+
+**Example:** [1, -2, 0, 3]
+```text
+at 3: no-deletion best = 0 + 3 = 3
+with deletion of -2: 1 + 0 + 3 = 4
+answer 4
+```
 
 ## Hints
 

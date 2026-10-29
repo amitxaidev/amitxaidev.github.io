@@ -1,14 +1,26 @@
 # 4. House Robber
 
 **LeetCode 198** · 🟡 Medium · Pattern: **1D DP (take / skip)**
-🔗 Solve it here: [https://leetcode.com/problems/house-robber/](https://leetcode.com/problems/house-robber/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/004-house-robber.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/004-house-robber.html)
 
 ## The problem, in short
 
 Houses in a row hold money. You can't rob two adjacent houses. Return the most money you can rob.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/house-robber/](https://leetcode.com/problems/house-robber/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/004-house-robber.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/004-house-robber.html)
+
+## Understanding
+
+**Really asking:** rob houses without robbing two neighbours.
+
+**Why this works:** at each house, either rob it (plus the best two houses back) or skip it (the best one house back).
+
+**Example:** [2, 7, 9, 3, 1]
+```text
+best: 2, 7, 11, 11, 12 → 12 (2 + 9 + 1)
+```
 
 ## Hints
 

@@ -1,14 +1,28 @@
 # 6. Find All Anagrams in a String
 
 **LeetCode 438** · 🟡 Medium · Pattern: **Fixed window + counts**
-🔗 Solve it here: [https://leetcode.com/problems/find-all-anagrams-in-a-string/](https://leetcode.com/problems/find-all-anagrams-in-a-string/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/006-find-all-anagrams-in-a-string.html](https://amitxaidev.github.io/dsa/08-sliding-window/006-find-all-anagrams-in-a-string.html)
 
 ## The problem, in short
 
 Return every starting index in s where a rearrangement of p begins.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/find-all-anagrams-in-a-string/](https://leetcode.com/problems/find-all-anagrams-in-a-string/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/006-find-all-anagrams-in-a-string.html](https://amitxaidev.github.io/dsa/08-sliding-window/006-find-all-anagrams-in-a-string.html)
+
+## Understanding
+
+**Really asking:** every start index where a rearrangement of p begins in s.
+
+**Why this works:** same counting window as above, but record every match.
+
+**Example:** s = "cbaebabacd", p = "abc"
+```text
+index 0 "cba" ✓
+index 6 "bac" ✓
+answer [0, 6]
+```
 
 ## Hints
 

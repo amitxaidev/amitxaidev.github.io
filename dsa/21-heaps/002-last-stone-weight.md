@@ -1,14 +1,27 @@
 # 2. Last Stone Weight
 
 **LeetCode 1046** · 🟢 Easy · Pattern: **Max-heap simulation**
-🔗 Solve it here: [https://leetcode.com/problems/last-stone-weight/](https://leetcode.com/problems/last-stone-weight/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/002-last-stone-weight.html](https://amitxaidev.github.io/dsa/21-heaps/002-last-stone-weight.html)
 
 ## The problem, in short
 
 Repeatedly smash the two heaviest stones: equal weights destroy both, otherwise the heavier one loses the lighter one's weight. Return the last stone's weight, or 0.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/last-stone-weight/](https://leetcode.com/problems/last-stone-weight/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/002-last-stone-weight.html](https://amitxaidev.github.io/dsa/21-heaps/002-last-stone-weight.html)
+
+## Understanding
+
+**Really asking:** keep smashing the two heaviest stones; what's left?
+
+**Why this works:** a max-heap always hands you the two heaviest.
+
+**Example:** [2, 7, 4, 1, 8, 1]
+```text
+8 vs 7 → 1, 4 vs 2 → 2, 2 vs 1 → 1, 1 vs 1 → 0
+last stone 1
+```
 
 ## Hints
 

@@ -1,14 +1,27 @@
 # 4. Next Greater Element I
 
 **LeetCode 496** · 🟢 Easy · Pattern: **Monotonic stack**
-🔗 Solve it here: [https://leetcode.com/problems/next-greater-element-i/](https://leetcode.com/problems/next-greater-element-i/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/004-next-greater-element-i.html](https://amitxaidev.github.io/dsa/18-stack-queue/004-next-greater-element-i.html)
 
 ## The problem, in short
 
 nums1 is a subset of nums2. For each value in nums1, find the first greater value to its right in nums2, or -1.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/next-greater-element-i/](https://leetcode.com/problems/next-greater-element-i/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/004-next-greater-element-i.html](https://amitxaidev.github.io/dsa/18-stack-queue/004-next-greater-element-i.html)
+
+## Understanding
+
+**Really asking:** for each value, the first bigger value to its right.
+
+**Why this works:** keep a stack of values still waiting; a bigger value pops them all and becomes their answer.
+
+**Example:** nums2 [1, 3, 4, 2]
+```text
+1 waits, 3 answers 1, 4 answers 3, 2 waits
+next: 1→3, 3→4, 4→-1, 2→-1
+```
 
 ## Hints
 

@@ -1,14 +1,27 @@
 # 2. Middle of the Linked List
 
 **LeetCode 876** · 🟢 Easy · Pattern: **Fast & slow pointers**
-🔗 Solve it here: [https://leetcode.com/problems/middle-of-the-linked-list/](https://leetcode.com/problems/middle-of-the-linked-list/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/002-middle-of-the-linked-list.html](https://amitxaidev.github.io/dsa/17-linked-list/002-middle-of-the-linked-list.html)
 
 ## The problem, in short
 
 Return the middle node of a linked list; for an even number of nodes, return the second of the two middle nodes.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/middle-of-the-linked-list/](https://leetcode.com/problems/middle-of-the-linked-list/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/002-middle-of-the-linked-list.html](https://amitxaidev.github.io/dsa/17-linked-list/002-middle-of-the-linked-list.html)
+
+## Understanding
+
+**Really asking:** the middle node (second middle for even length).
+
+**Why this works:** fast moves 2 steps while slow moves 1; when fast reaches the end, slow is halfway.
+
+**Example:** 1 → 2 → 3 → 4 → 5
+```text
+slow 1, fast 1 → slow 2, fast 3 → slow 3, fast 5 → stop
+middle 3
+```
 
 ## Hints
 

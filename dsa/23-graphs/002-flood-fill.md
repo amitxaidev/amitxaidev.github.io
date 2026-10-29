@@ -1,14 +1,27 @@
 # 2. Flood Fill
 
 **LeetCode 733** · 🟢 Easy · Pattern: **Grid DFS**
-🔗 Solve it here: [https://leetcode.com/problems/flood-fill/](https://leetcode.com/problems/flood-fill/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/002-flood-fill.html](https://amitxaidev.github.io/dsa/23-graphs/002-flood-fill.html)
 
 ## The problem, in short
 
 Starting from one pixel, repaint it and every 4-directionally connected pixel of the same original colour with a new colour.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/flood-fill/](https://leetcode.com/problems/flood-fill/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/002-flood-fill.html](https://amitxaidev.github.io/dsa/23-graphs/002-flood-fill.html)
+
+## Understanding
+
+**Really asking:** paint a region of same-coloured pixels.
+
+**Why this works:** DFS from the start to neighbours with the original colour; painting also marks them visited.
+
+**Example:** [[1,1,1],[1,1,0],[1,0,1]], start (1,1), colour 2
+```text
+all 1s connected to the centre become 2
+the bottom-right 1 isn't connected → stays 1
+```
 
 ## Hints
 

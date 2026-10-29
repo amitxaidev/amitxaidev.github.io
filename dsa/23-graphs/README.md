@@ -6,6 +6,12 @@ BFS/DFS, islands, cycles, topo sort, bipartite, shortest paths, MST, DSU, SCC an
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/23-graphs/  
 🧮 **21 problems** · 🟢 2 Easy · 🟡 16 Medium · 🔴 3 Hard
 
+## Understand the topic
+
+A graph is nodes connected by edges, like cities and roads. Store it as an adjacency list (List&lt;List&lt;Integer>>), or treat a grid as a graph where each cell connects to its four neighbours. Always keep a visited array.
+
+Pick the tool by the question. To explore or count components, use BFS or DFS. For the shortest path with equal edges, use BFS. For an order with prerequisites, use topological sort (Kahn's algorithm). For shortest paths with weights, use Dijkstra, or Bellman-Ford when there's a limit on edges. For all pairs, use Floyd-Warshall. To connect everything cheaply, use an MST (Prim or Kruskal). For "are these connected?" while adding edges, use Union-Find. For edges whose removal disconnects the graph, use Tarjan's bridges.
+
 ## How to use this list
 
 1. Watch the episode above.

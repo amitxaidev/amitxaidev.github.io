@@ -1,14 +1,29 @@
 # 8. Contiguous Array
 
 **LeetCode 525** · 🟡 Medium · Pattern: **Prefix sum + first index**
-🔗 Solve it here: [https://leetcode.com/problems/contiguous-array/](https://leetcode.com/problems/contiguous-array/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/008-contiguous-array.html](https://amitxaidev.github.io/dsa/06-prefix-sum/008-contiguous-array.html)
 
 ## The problem, in short
 
 In a binary array, find the length of the longest contiguous subarray with equally many 0s and 1s.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/contiguous-array/](https://leetcode.com/problems/contiguous-array/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/008-contiguous-array.html](https://amitxaidev.github.io/dsa/06-prefix-sum/008-contiguous-array.html)
+
+## Understanding
+
+**Really asking:** longest piece with equal 0s and 1s.
+
+**Why this works:** count 0 as -1. Equal counts means the piece sums to 0, which happens when the same running sum appears twice. Remember where each sum first appeared.
+
+**Example:** [0, 1, 0]
+```text
+sums: -1, 0, -1   (start: 0 at index -1)
+index 1: sum 0 seen at -1 → length 2
+index 2: sum -1 seen at 0 → length 2
+answer 2
+```
 
 ## Hints
 

@@ -1,14 +1,26 @@
 # 17. Sliding Window Maximum
 
 **LeetCode 239** · 🔴 Hard · Pattern: **Monotonic deque**
-🔗 Solve it here: [https://leetcode.com/problems/sliding-window-maximum/](https://leetcode.com/problems/sliding-window-maximum/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/017-sliding-window-maximum.html](https://amitxaidev.github.io/dsa/18-stack-queue/017-sliding-window-maximum.html)
 
 ## The problem, in short
 
 For every window of size k sliding across the array, return the maximum.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/sliding-window-maximum/](https://leetcode.com/problems/sliding-window-maximum/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/017-sliding-window-maximum.html](https://amitxaidev.github.io/dsa/18-stack-queue/017-sliding-window-maximum.html)
+
+## Understanding
+
+**Really asking:** the maximum of every window of size k.
+
+**Why this works:** a deque of indexes with decreasing values. The front is the max; drop it when it leaves the window, and drop smaller values from the back.
+
+**Example:** [1, 3, -1, -3, 5, 3, 6, 7], k = 3
+```text
+maxima: 3, 3, 5, 5, 6, 7
+```
 
 ## Hints
 

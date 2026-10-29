@@ -1,14 +1,27 @@
 # 4. Replace Words
 
 **LeetCode 648** · 🟡 Medium · Pattern: **Shortest root in a trie**
-🔗 Solve it here: [https://leetcode.com/problems/replace-words/](https://leetcode.com/problems/replace-words/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/004-replace-words.html](https://amitxaidev.github.io/dsa/25-trie/004-replace-words.html)
 
 ## The problem, in short
 
 Given a list of roots and a sentence, replace every word that starts with a root by the shortest such root.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/replace-words/](https://leetcode.com/problems/replace-words/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/004-replace-words.html](https://amitxaidev.github.io/dsa/25-trie/004-replace-words.html)
+
+## Understanding
+
+**Really asking:** replace each word with its shortest root from a dictionary.
+
+**Why this works:** walk the trie along the word; stop at the first node that ends a root.
+
+**Example:** roots ["cat", "bat", "rat"], sentence "the cattle was rattled"
+```text
+cattle → cat, rattled → rat
+"the cat was rat"
+```
 
 ## Hints
 

@@ -1,14 +1,26 @@
 # 11. Coin Change
 
 **LeetCode 322** · 🟡 Medium · Pattern: **Unbounded knapsack (min coins)**
-🔗 Solve it here: [https://leetcode.com/problems/coin-change/](https://leetcode.com/problems/coin-change/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/011-coin-change.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/011-coin-change.html)
 
 ## The problem, in short
 
 Return the fewest coins needed to make an amount using unlimited coins of given denominations, or -1 if impossible.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/coin-change/](https://leetcode.com/problems/coin-change/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/011-coin-change.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/011-coin-change.html)
+
+## Understanding
+
+**Really asking:** fewest coins to make an amount.
+
+**Why this works:** dp[a] = 1 + min over coins of dp[a - coin]. Greedy can fail; DP tries every last coin.
+
+**Example:** coins [1, 2, 5], amount 11
+```text
+dp[11] = dp[6] + 1 = (dp[1] + 1) + 1 = 3 (5 + 5 + 1)
+```
 
 ## Hints
 

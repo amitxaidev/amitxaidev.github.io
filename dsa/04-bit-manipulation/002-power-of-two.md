@@ -1,14 +1,26 @@
 # 2. Power of Two
 
 **LeetCode 231** · 🟢 Easy · Pattern: **n & (n-1)**
-🔗 Solve it here: [https://leetcode.com/problems/power-of-two/](https://leetcode.com/problems/power-of-two/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/002-power-of-two.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/002-power-of-two.html)
 
 ## The problem, in short
 
 Decide whether n is a power of two.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/power-of-two/](https://leetcode.com/problems/power-of-two/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/002-power-of-two.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/002-power-of-two.html)
+
+## Understanding
+
+**Really asking:** does n have exactly one bit ON?
+
+**Why this works:** removing the lowest ON bit from a power of two leaves 0.
+
+**Example:** n = 16 (10000) → 10000 & 01111 = 0 → yes
+```text
+n = 12 (1100) → 1100 & 1011 = 1000 ≠ 0 → no
+```
 
 ## Hints
 

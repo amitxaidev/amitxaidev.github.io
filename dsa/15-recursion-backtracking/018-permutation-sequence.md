@@ -1,14 +1,28 @@
 # 18. Permutation Sequence
 
 **LeetCode 60** · 🔴 Hard · Pattern: **Factorial number system**
-🔗 Solve it here: [https://leetcode.com/problems/permutation-sequence/](https://leetcode.com/problems/permutation-sequence/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/018-permutation-sequence.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/018-permutation-sequence.html)
 
 ## The problem, in short
 
 The permutations of 1..n are listed in sorted order. Return the k-th one as a string.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/permutation-sequence/](https://leetcode.com/problems/permutation-sequence/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/018-permutation-sequence.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/018-permutation-sequence.html)
+
+## Understanding
+
+**Really asking:** the k-th permutation of 1..n in sorted order, without listing them all.
+
+**Why this works:** each choice of first digit covers (n-1)! permutations, so (k-1) / (n-1)! picks the first digit; repeat on the rest.
+
+**Example:** n = 3, k = 3 (0-based 2)
+```text
+2 / 2! = 1 → second of [1,2,3] → 2, k = 0
+0 / 1! = 0 → 1, then 3
+"213"
+```
 
 ## Hints
 

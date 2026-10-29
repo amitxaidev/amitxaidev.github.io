@@ -1,14 +1,26 @@
 # 7. Ransom Note
 
 **LeetCode 383** · 🟢 Easy · Pattern: **Frequency count**
-🔗 Solve it here: [https://leetcode.com/problems/ransom-note/](https://leetcode.com/problems/ransom-note/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/007-ransom-note.html](https://amitxaidev.github.io/dsa/11-strings/007-ransom-note.html)
 
 ## The problem, in short
 
 Decide whether the letters of magazine (each used at most once) are enough to write ransomNote.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/ransom-note/](https://leetcode.com/problems/ransom-note/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/007-ransom-note.html](https://amitxaidev.github.io/dsa/11-strings/007-ransom-note.html)
+
+## Understanding
+
+**Really asking:** are the magazine's letters enough to write the note?
+
+**Why this works:** count the magazine's letters and spend them; any count below zero means not enough.
+
+**Example:** note "aa", magazine "aab"
+```text
+a: 2 available, spend 2 → ok → true
+```
 
 ## Hints
 

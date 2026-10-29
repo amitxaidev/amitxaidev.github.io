@@ -1,14 +1,27 @@
 # 2. Repeated Substring Pattern
 
 **LeetCode 459** · 🟢 Easy · Pattern: **Doubling trick / LPS**
-🔗 Solve it here: [https://leetcode.com/problems/repeated-substring-pattern/](https://leetcode.com/problems/repeated-substring-pattern/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/12-string-matching/002-repeated-substring-pattern.html](https://amitxaidev.github.io/dsa/12-string-matching/002-repeated-substring-pattern.html)
 
 ## The problem, in short
 
 Decide whether s can be built by repeating one of its substrings two or more times.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/repeated-substring-pattern/](https://leetcode.com/problems/repeated-substring-pattern/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/12-string-matching/002-repeated-substring-pattern.html](https://amitxaidev.github.io/dsa/12-string-matching/002-repeated-substring-pattern.html)
+
+## Understanding
+
+**Really asking:** is the string some block repeated 2+ times?
+
+**Why this works:** if it is, the leftover after removing the longest border (lps[n-1]) is the block length, and it divides n.
+
+**Example:** "abcabc"
+```text
+lps last = 3 → block length 6 - 3 = 3
+6 % 3 = 0 → true ("abc")
+```
 
 ## Hints
 

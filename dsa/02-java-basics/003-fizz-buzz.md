@@ -1,14 +1,26 @@
 # 3. Fizz Buzz
 
 **LeetCode 412** · 🟢 Easy · Pattern: **Strings & List**
-🔗 Solve it here: [https://leetcode.com/problems/fizz-buzz/](https://leetcode.com/problems/fizz-buzz/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/003-fizz-buzz.html](https://amitxaidev.github.io/dsa/02-java-basics/003-fizz-buzz.html)
 
 ## The problem, in short
 
 For numbers 1 to n, produce a list of strings: "FizzBuzz" for multiples of both 3 and 5, "Fizz" for multiples of 3, "Buzz" for multiples of 5, and the number itself otherwise.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/fizz-buzz/](https://leetcode.com/problems/fizz-buzz/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/003-fizz-buzz.html](https://amitxaidev.github.io/dsa/02-java-basics/003-fizz-buzz.html)
+
+## Understanding
+
+**Really asking:** label each number 1..n by whether 3 and/or 5 divide it.
+
+**Why this works:** the % operator tests divisibility. Checking 15 first makes sure "FizzBuzz" wins over plain "Fizz".
+
+**Example:** n = 6
+```text
+1 → "1", 2 → "2", 3 → "Fizz", 4 → "4", 5 → "Buzz", 6 → "Fizz"
+```
 
 ## Hints
 

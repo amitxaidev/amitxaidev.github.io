@@ -30,6 +30,7 @@
         <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
         <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
       </ul>
@@ -51,7 +52,16 @@
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>A grid lists how much money each customer (row) has in each bank (column). A customer&#x27;s wealth is the sum of their row. Return the largest wealth.</p>
-    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode.</p>
+    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/richest-customer-wealth/" target="_blank" rel="noopener">open problem ↗</a></p>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
+    <div class="understanding"><p><strong>Really asking:</strong> add up each row, and report the biggest row total.</p>
+<p><strong>Why this works:</strong> every cell is read exactly once, so the cost is rows × columns. Nested loops are not always &quot;n squared&quot;; they are the product of the two sizes.</p>
+<p><strong>Example:</strong> accounts = [[1,5],[7,3],[3,5]]</p>
+<pre class="trace border rounded">row 0: 1 + 5 = 6    best = 6
+row 1: 7 + 3 = 10   best = 10
+row 2: 3 + 5 = 8    best = 10
+answer: 10</pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">

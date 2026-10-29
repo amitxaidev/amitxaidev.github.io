@@ -1,14 +1,29 @@
 # 4. Best Time to Buy and Sell Stock
 
 **LeetCode 121** · 🟢 Easy · Pattern: **Running minimum**
-🔗 Solve it here: [https://leetcode.com/problems/best-time-to-buy-and-sell-stock/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/004-best-time-to-buy-and-sell-stock.html](https://amitxaidev.github.io/dsa/05-arrays/004-best-time-to-buy-and-sell-stock.html)
 
 ## The problem, in short
 
 prices[i] is a stock's price on day i. Buy on one day and sell on a later day for the biggest profit; return 0 if no profit is possible.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/best-time-to-buy-and-sell-stock/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/004-best-time-to-buy-and-sell-stock.html](https://amitxaidev.github.io/dsa/05-arrays/004-best-time-to-buy-and-sell-stock.html)
+
+## Understanding
+
+**Really asking:** pick a buy day and a later sell day to make the most money.
+
+**Why this works:** if you sell today, the best buy day is the cheapest day so far. Keep that minimum as you scan.
+
+**Example:** [7, 1, 5, 3, 6, 4]
+```text
+day 1: min 1
+day 2: sell at 5 → profit 4
+day 4: sell at 6 → profit 5 (best)
+answer 5
+```
 
 ## Hints
 

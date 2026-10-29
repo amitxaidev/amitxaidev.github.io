@@ -1,14 +1,23 @@
 # 3. N-th Tribonacci Number
 
 **LeetCode 1137** · 🟢 Easy · Pattern: **1D DP**
-🔗 Solve it here: [https://leetcode.com/problems/n-th-tribonacci-number/](https://leetcode.com/problems/n-th-tribonacci-number/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/003-n-th-tribonacci-number.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/003-n-th-tribonacci-number.html)
 
 ## The problem, in short
 
 T0 = 0, T1 = 1, T2 = 1 and each later term is the sum of the three before it. Return Tn.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/n-th-tribonacci-number/](https://leetcode.com/problems/n-th-tribonacci-number/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/003-n-th-tribonacci-number.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/003-n-th-tribonacci-number.html)
+
+## Understanding
+
+**Really asking:** each term is the sum of the previous three.
+
+**Why this works:** keep the last three values and roll forward.
+
+**Example:** 0, 1, 1, 2, 4, 7 → T5 = 7
 
 ## Hints
 

@@ -1,14 +1,28 @@
 # 4. Counting Bits
 
 **LeetCode 338** · 🟢 Easy · Pattern: **Bits + DP**
-🔗 Solve it here: [https://leetcode.com/problems/counting-bits/](https://leetcode.com/problems/counting-bits/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/004-counting-bits.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/004-counting-bits.html)
 
 ## The problem, in short
 
 For every i from 0 to n, return how many 1-bits i has.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/counting-bits/](https://leetcode.com/problems/counting-bits/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/004-counting-bits.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/004-counting-bits.html)
+
+## Understanding
+
+**Really asking:** the number of 1-bits for every number from 0 to n.
+
+**Why this works:** i >> 1 is i without its last bit, and we already know its answer. Add back the last bit with i & 1.
+
+**Example:** n = 5
+```text
+0:0  1:1  2:bits[1]+0=1  3:bits[1]+1=2
+4:bits[2]+0=1  5:bits[2]+1=2
+[0, 1, 1, 2, 1, 2]
+```
 
 ## Hints
 

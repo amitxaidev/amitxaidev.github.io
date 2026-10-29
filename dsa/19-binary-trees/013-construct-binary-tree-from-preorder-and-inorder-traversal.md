@@ -1,14 +1,27 @@
 # 13. Construct Binary Tree from Preorder and Inorder Traversal
 
 **LeetCode 105** · 🟡 Medium · Pattern: **Divide by root position**
-🔗 Solve it here: [https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/013-construct-binary-tree-from-preorder-and-inorder-traversal.html](https://amitxaidev.github.io/dsa/19-binary-trees/013-construct-binary-tree-from-preorder-and-inorder-traversal.html)
 
 ## The problem, in short
 
 Rebuild a binary tree (with unique values) from its preorder and inorder traversals.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/013-construct-binary-tree-from-preorder-and-inorder-traversal.html](https://amitxaidev.github.io/dsa/19-binary-trees/013-construct-binary-tree-from-preorder-and-inorder-traversal.html)
+
+## Understanding
+
+**Really asking:** rebuild the tree from two traversals.
+
+**Why this works:** preorder gives the root first; in inorder everything left of the root is the left subtree.
+
+**Example:** pre [3, 9, 20, 15, 7], in [9, 3, 15, 20, 7]
+```text
+root 3; left {9}; right {15, 20, 7}
+next root 20 → left 15, right 7
+```
 
 ## Hints
 

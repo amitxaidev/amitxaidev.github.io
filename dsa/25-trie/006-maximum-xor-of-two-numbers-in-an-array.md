@@ -1,14 +1,26 @@
 # 6. Maximum XOR of Two Numbers in an Array
 
 **LeetCode 421** · 🟡 Medium · Pattern: **Binary trie**
-🔗 Solve it here: [https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/006-maximum-xor-of-two-numbers-in-an-array.html](https://amitxaidev.github.io/dsa/25-trie/006-maximum-xor-of-two-numbers-in-an-array.html)
 
 ## The problem, in short
 
 Return the maximum value of nums[i] XOR nums[j] over all pairs.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/006-maximum-xor-of-two-numbers-in-an-array.html](https://amitxaidev.github.io/dsa/25-trie/006-maximum-xor-of-two-numbers-in-an-array.html)
+
+## Understanding
+
+**Really asking:** the biggest XOR of any two numbers.
+
+**Why this works:** store numbers bit by bit from the top. For each number, try to go the opposite way at every bit; a 1 in a high bit beats anything lower.
+
+**Example:** [3, 10, 5, 25, 2, 8]
+```text
+5 (00101) with 25 (11001) → 11100 = 28
+```
 
 ## Hints
 

@@ -1,14 +1,28 @@
 # 14. Integer to Roman
 
 **LeetCode 12** · 🟡 Medium · Pattern: **Greedy table**
-🔗 Solve it here: [https://leetcode.com/problems/integer-to-roman/](https://leetcode.com/problems/integer-to-roman/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/014-integer-to-roman.html](https://amitxaidev.github.io/dsa/11-strings/014-integer-to-roman.html)
 
 ## The problem, in short
 
 Convert an integer from 1 to 3999 into a Roman numeral.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/integer-to-roman/](https://leetcode.com/problems/integer-to-roman/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/014-integer-to-roman.html](https://amitxaidev.github.io/dsa/11-strings/014-integer-to-roman.html)
+
+## Understanding
+
+**Really asking:** write a number in Roman numerals.
+
+**Why this works:** include the subtractive pairs (CM, XC, IV…) in the value table, then greedily take the biggest piece that fits.
+
+**Example:** 58
+```text
+50 → L, 8 left
+5 → V, 3 left
+III → "LVIII"
+```
 
 ## Hints
 

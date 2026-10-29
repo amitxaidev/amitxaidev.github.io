@@ -6,6 +6,12 @@ Traversal, in-place updates, rotation and the top array interview questions.
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/05-arrays/  
 🧮 **14 problems** · 🟢 7 Easy · 🟡 6 Medium · 🔴 1 Hard
 
+## Understand the topic
+
+An array is a row of numbered lockers: you can open any locker instantly by its number (O(1)), but inserting into the middle means shifting everyone after it (O(n)).
+
+Most array problems are won by one of these moves: a single pass with a running value (max, min, count), using the values themselves as indexes (marking or "cyclic sort"), reversing parts of the array, or writing from the back so you don't overwrite data you still need.
+
 ## How to use this list
 
 1. Watch the episode above.

@@ -1,14 +1,27 @@
 # 3. Maximum Subarray
 
 **LeetCode 53** · 🟡 Medium · Pattern: **Kadane**
-🔗 Solve it here: [https://leetcode.com/problems/maximum-subarray/](https://leetcode.com/problems/maximum-subarray/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/003-maximum-subarray.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/003-maximum-subarray.html)
 
 ## The problem, in short
 
 Find the contiguous non-empty subarray with the largest sum and return the sum.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/maximum-subarray/](https://leetcode.com/problems/maximum-subarray/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/003-maximum-subarray.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/003-maximum-subarray.html)
+
+## Understanding
+
+**Really asking:** the contiguous piece with the biggest sum.
+
+**Why this works:** a running sum that has gone negative only drags down whatever comes next, so start over from the current number.
+
+**Example:** [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+```text
+cur: -2, 1, -2, 4, 3, 5, 6, 1, 5
+best = 6 → [4, -1, 2, 1]
+```
 
 ## Hints
 

@@ -1,14 +1,26 @@
 # 9. Course Schedule
 
 **LeetCode 207** · 🟡 Medium · Pattern: **Cycle detection with Kahn's algorithm**
-🔗 Solve it here: [https://leetcode.com/problems/course-schedule/](https://leetcode.com/problems/course-schedule/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/009-course-schedule.html](https://amitxaidev.github.io/dsa/23-graphs/009-course-schedule.html)
 
 ## The problem, in short
 
 Courses have prerequisite pairs [a, b] meaning b must come before a. Decide whether all courses can be finished.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/course-schedule/](https://leetcode.com/problems/course-schedule/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/009-course-schedule.html](https://amitxaidev.github.io/dsa/23-graphs/009-course-schedule.html)
+
+## Understanding
+
+**Really asking:** can you finish all courses given their prerequisites (is there no cycle)?
+
+**Why this works:** Kahn's algorithm keeps taking courses with no remaining prerequisites. If some courses are never taken, they sit on a cycle.
+
+**Example:** 2 courses, [1 needs 0], [0 needs 1]
+```text
+no course starts with 0 prerequisites → 0 taken → false
+```
 
 ## Hints
 

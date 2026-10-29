@@ -1,14 +1,28 @@
 # 4. Longest Repeating Character Replacement
 
 **LeetCode 424** · 🟡 Medium · Pattern: **Variable window + max frequency**
-🔗 Solve it here: [https://leetcode.com/problems/longest-repeating-character-replacement/](https://leetcode.com/problems/longest-repeating-character-replacement/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/004-longest-repeating-character-replacement.html](https://amitxaidev.github.io/dsa/08-sliding-window/004-longest-repeating-character-replacement.html)
 
 ## The problem, in short
 
 You may change at most k characters of an uppercase string. Return the longest substring that can be made of one repeated letter.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/longest-repeating-character-replacement/](https://leetcode.com/problems/longest-repeating-character-replacement/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/004-longest-repeating-character-replacement.html](https://amitxaidev.github.io/dsa/08-sliding-window/004-longest-repeating-character-replacement.html)
+
+## Understanding
+
+**Really asking:** change at most k letters to get the longest run of one letter.
+
+**Why this works:** a window is fine when (length - count of its most common letter) ≤ k, because those other letters are the ones you change.
+
+**Example:** "AABABBA", k = 1
+```text
+"AABA": length 4, most common A=3 → 1 change ✓
+"AABAB": 5 - 3 = 2 > 1 → slide left
+best 4
+```
 
 ## Hints
 

@@ -1,14 +1,26 @@
 # 17. Best Time to Buy and Sell Stock with Cooldown
 
 **LeetCode 309** · 🟡 Medium · Pattern: **State machine DP**
-🔗 Solve it here: [https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/017-best-time-to-buy-and-sell-stock-with-cooldown.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/017-best-time-to-buy-and-sell-stock-with-cooldown.html)
 
 ## The problem, in short
 
 Trade as many times as you like, holding at most one share, but after selling you must wait one day before buying again. Maximise profit.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/017-best-time-to-buy-and-sell-stock-with-cooldown.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/017-best-time-to-buy-and-sell-stock-with-cooldown.html)
+
+## Understanding
+
+**Really asking:** unlimited trades, but a day of rest after selling.
+
+**Why this works:** three states per day: holding, just sold, resting. You may only buy from resting.
+
+**Example:** [1, 2, 3, 0, 2]
+```text
+buy 1, sell 2, cooldown, buy 0, sell 2 → 3
+```
 
 ## Hints
 

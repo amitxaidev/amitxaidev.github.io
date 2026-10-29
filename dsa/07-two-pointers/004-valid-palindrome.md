@@ -1,14 +1,27 @@
 # 4. Valid Palindrome
 
 **LeetCode 125** · 🟢 Easy · Pattern: **Opposite ends**
-🔗 Solve it here: [https://leetcode.com/problems/valid-palindrome/](https://leetcode.com/problems/valid-palindrome/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/004-valid-palindrome.html](https://amitxaidev.github.io/dsa/07-two-pointers/004-valid-palindrome.html)
 
 ## The problem, in short
 
 Ignoring case and every character that isn't a letter or digit, decide whether a string reads the same both ways.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/valid-palindrome/](https://leetcode.com/problems/valid-palindrome/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/004-valid-palindrome.html](https://amitxaidev.github.io/dsa/07-two-pointers/004-valid-palindrome.html)
+
+## Understanding
+
+**Really asking:** ignoring case and symbols, does it read the same both ways?
+
+**Why this works:** compare from both ends, skipping anything that isn't a letter or digit.
+
+**Example:** "A man, a plan, a canal: Panama"
+```text
+'a' vs 'a', 'm' vs 'm', 'a' vs 'a' …
+all pairs match → true
+```
 
 ## Hints
 

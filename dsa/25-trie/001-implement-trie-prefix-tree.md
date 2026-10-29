@@ -1,14 +1,27 @@
 # 1. Implement Trie (Prefix Tree)
 
 **LeetCode 208** · 🟡 Medium · Pattern: **Trie basics**
-🔗 Solve it here: [https://leetcode.com/problems/implement-trie-prefix-tree/](https://leetcode.com/problems/implement-trie-prefix-tree/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/001-implement-trie-prefix-tree.html](https://amitxaidev.github.io/dsa/25-trie/001-implement-trie-prefix-tree.html)
 
 ## The problem, in short
 
 Build a trie with insert(word), search(word) (exact word) and startsWith(prefix).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/implement-trie-prefix-tree/](https://leetcode.com/problems/implement-trie-prefix-tree/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/001-implement-trie-prefix-tree.html](https://amitxaidev.github.io/dsa/25-trie/001-implement-trie-prefix-tree.html)
+
+## Understanding
+
+**Really asking:** build insert, search and startsWith.
+
+**Why this works:** walk one node per letter; search also needs the end flag, startsWith doesn't.
+
+**Example:** insert "apple"
+```text
+search "app" → path exists, but no end flag → false
+startsWith "app" → true
+```
 
 ## Hints
 

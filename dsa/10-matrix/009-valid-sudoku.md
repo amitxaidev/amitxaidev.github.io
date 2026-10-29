@@ -1,14 +1,26 @@
 # 9. Valid Sudoku
 
 **LeetCode 36** · 🟡 Medium · Pattern: **Row/column/box sets**
-🔗 Solve it here: [https://leetcode.com/problems/valid-sudoku/](https://leetcode.com/problems/valid-sudoku/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/009-valid-sudoku.html](https://amitxaidev.github.io/dsa/10-matrix/009-valid-sudoku.html)
 
 ## The problem, in short
 
 Check whether a partially filled 9×9 Sudoku board breaks any rule: no digit repeats in a row, a column or a 3×3 box. The puzzle doesn't need to be solvable.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/valid-sudoku/](https://leetcode.com/problems/valid-sudoku/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/009-valid-sudoku.html](https://amitxaidev.github.io/dsa/10-matrix/009-valid-sudoku.html)
+
+## Understanding
+
+**Really asking:** does any row, column or 3×3 box repeat a digit?
+
+**Why this works:** remember which digits each row, column and box has seen. Box number = (r/3)·3 + c/3.
+
+**Example:** a '5' at (0,0) and another '5' at (1,1)
+```text
+both in box 0 → repeat → false
+```
 
 ## Hints
 

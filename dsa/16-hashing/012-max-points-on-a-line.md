@@ -1,14 +1,26 @@
 # 12. Max Points on a Line
 
 **LeetCode 149** · 🔴 Hard · Pattern: **HashMap of reduced slopes**
-🔗 Solve it here: [https://leetcode.com/problems/max-points-on-a-line/](https://leetcode.com/problems/max-points-on-a-line/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/012-max-points-on-a-line.html](https://amitxaidev.github.io/dsa/16-hashing/012-max-points-on-a-line.html)
 
 ## The problem, in short
 
 Given points on a plane, return the largest number of them that lie on one straight line.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/max-points-on-a-line/](https://leetcode.com/problems/max-points-on-a-line/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/012-max-points-on-a-line.html](https://amitxaidev.github.io/dsa/16-hashing/012-max-points-on-a-line.html)
+
+## Understanding
+
+**Really asking:** the most points on one straight line.
+
+**Why this works:** fix one point; points on the same line through it share a slope. Store slopes as reduced (dy, dx) fractions to avoid decimals.
+
+**Example:** [[1,1],[2,2],[3,3]]
+```text
+from (1,1): (1,1) slope twice → 2 + 1 = 3 points
+```
 
 ## Hints
 

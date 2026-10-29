@@ -1,14 +1,27 @@
 # 2. Min Cost Climbing Stairs
 
 **LeetCode 746** · 🟢 Easy · Pattern: **1D DP**
-🔗 Solve it here: [https://leetcode.com/problems/min-cost-climbing-stairs/](https://leetcode.com/problems/min-cost-climbing-stairs/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/002-min-cost-climbing-stairs.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/002-min-cost-climbing-stairs.html)
 
 ## The problem, in short
 
 cost[i] is paid when you step on stair i, and you can then climb 1 or 2 stairs. You may start on stair 0 or 1. Return the minimum cost to get past the last stair.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/min-cost-climbing-stairs/](https://leetcode.com/problems/min-cost-climbing-stairs/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/002-min-cost-climbing-stairs.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/002-min-cost-climbing-stairs.html)
+
+## Understanding
+
+**Really asking:** cheapest way to get past the top when each step has a cost.
+
+**Why this works:** dp[i] = min(dp[i-1] + cost[i-1], dp[i-2] + cost[i-2]).
+
+**Example:** cost [10, 15, 20]
+```text
+dp[2] = min(0+15, 0+10) = 10
+dp[3] = min(10+20, 0+15) = 15
+```
 
 ## Hints
 

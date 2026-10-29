@@ -1,14 +1,28 @@
 # 6. Plus One
 
 **LeetCode 66** · 🟢 Easy · Pattern: **Carry handling**
-🔗 Solve it here: [https://leetcode.com/problems/plus-one/](https://leetcode.com/problems/plus-one/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/006-plus-one.html](https://amitxaidev.github.io/dsa/05-arrays/006-plus-one.html)
 
 ## The problem, in short
 
 A large integer is stored as an array of digits, most significant first. Add one and return the new digit array.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/plus-one/](https://leetcode.com/problems/plus-one/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/006-plus-one.html](https://amitxaidev.github.io/dsa/05-arrays/006-plus-one.html)
+
+## Understanding
+
+**Really asking:** add 1 to a big number stored as a digit array.
+
+**Why this works:** like adding on paper from the right. A 9 becomes 0 and carries; the first non-9 just goes up by one.
+
+**Example:** [1, 2, 9, 9]
+```text
+9 → 0 (carry), 9 → 0 (carry)
+2 → 3, stop
+[1, 3, 0, 0]
+```
 
 ## Hints
 

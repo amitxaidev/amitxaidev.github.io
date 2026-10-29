@@ -1,14 +1,26 @@
 # 8. Clone Graph
 
 **LeetCode 133** · 🟡 Medium · Pattern: **DFS with old → new map**
-🔗 Solve it here: [https://leetcode.com/problems/clone-graph/](https://leetcode.com/problems/clone-graph/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/008-clone-graph.html](https://amitxaidev.github.io/dsa/23-graphs/008-clone-graph.html)
 
 ## The problem, in short
 
 Return a deep copy of a connected undirected graph, given a reference to one node.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/clone-graph/](https://leetcode.com/problems/clone-graph/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/008-clone-graph.html](https://amitxaidev.github.io/dsa/23-graphs/008-clone-graph.html)
+
+## Understanding
+
+**Really asking:** deep-copy a graph.
+
+**Why this works:** map each original node to its copy; register the copy before visiting neighbours so cycles stop.
+
+**Example:** 1 - 2 - 3 - 4 - 1 (a square)
+```text
+copy 1 → copy neighbours 2 and 4 → … each node copied once
+```
 
 ## Hints
 

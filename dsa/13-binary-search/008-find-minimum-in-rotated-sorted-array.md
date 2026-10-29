@@ -1,14 +1,27 @@
 # 8. Find Minimum in Rotated Sorted Array
 
 **LeetCode 153** · 🟡 Medium · Pattern: **Compare with the right end**
-🔗 Solve it here: [https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/008-find-minimum-in-rotated-sorted-array.html](https://amitxaidev.github.io/dsa/13-binary-search/008-find-minimum-in-rotated-sorted-array.html)
 
 ## The problem, in short
 
 A sorted array of distinct values was rotated. Return its smallest element in O(log n).
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/008-find-minimum-in-rotated-sorted-array.html](https://amitxaidev.github.io/dsa/13-binary-search/008-find-minimum-in-rotated-sorted-array.html)
+
+## Understanding
+
+**Really asking:** the smallest value of a rotated sorted array.
+
+**Why this works:** if nums[mid] > nums[hi], the "drop" is to the right of mid; otherwise the minimum is at mid or to the left.
+
+**Example:** [3, 4, 5, 1, 2]
+```text
+mid 2 (5) > 2 → lo 3
+mid 3 (1) ≤ 2 → hi 3 → answer 1
+```
 
 ## Hints
 

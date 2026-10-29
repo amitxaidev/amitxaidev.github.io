@@ -1,14 +1,28 @@
 # 8. Majority Element II
 
 **LeetCode 229** · 🟡 Medium · Pattern: **Extended Moore's voting**
-🔗 Solve it here: [https://leetcode.com/problems/majority-element-ii/](https://leetcode.com/problems/majority-element-ii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/008-majority-element-ii.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/008-majority-element-ii.html)
 
 ## The problem, in short
 
 Return every value that appears more than n/3 times.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/majority-element-ii/](https://leetcode.com/problems/majority-element-ii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/008-majority-element-ii.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/008-majority-element-ii.html)
+
+## Understanding
+
+**Really asking:** all values that appear more than n/3 times (at most two).
+
+**Why this works:** keep two candidates; a third different value cancels one vote from each. Then count the two candidates to confirm.
+
+**Example:** [3, 2, 3]
+```text
+candidates 3 and 2 survive
+counts: 3 → 2 times > 1 ✓, 2 → 1 time ✗
+answer [3]
+```
 
 ## Hints
 

@@ -1,14 +1,28 @@
 # 7. Ugly Number
 
 **LeetCode 263** · 🟢 Easy · Pattern: **Prime factors**
-🔗 Solve it here: [https://leetcode.com/problems/ugly-number/](https://leetcode.com/problems/ugly-number/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/007-ugly-number.html](https://amitxaidev.github.io/dsa/03-math/007-ugly-number.html)
 
 ## The problem, in short
 
 An ugly number is a positive integer whose only prime factors are 2, 3 and 5. Decide whether n is ugly.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/ugly-number/](https://leetcode.com/problems/ugly-number/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/007-ugly-number.html](https://amitxaidev.github.io/dsa/03-math/007-ugly-number.html)
+
+## Understanding
+
+**Really asking:** is n built only from the primes 2, 3 and 5?
+
+**Why this works:** divide out every 2, 3 and 5. If nothing else was in there, 1 is left.
+
+**Example:** n = 14
+```text
+14 / 2 = 7
+7 not divisible by 2, 3, 5
+left with 7 ≠ 1 → not ugly
+```
 
 ## Hints
 

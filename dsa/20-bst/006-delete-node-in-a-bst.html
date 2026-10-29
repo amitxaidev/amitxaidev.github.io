@@ -30,6 +30,7 @@
         <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
         <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
       </ul>
@@ -51,7 +52,14 @@
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Delete the node with a given key from a BST and return the new root.</p>
-    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode.</p>
+    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/delete-node-in-a-bst/" target="_blank" rel="noopener">open problem ↗</a></p>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
+    <div class="understanding"><p><strong>Really asking:</strong> remove a value and keep it a BST.</p>
+<p><strong>Why this works:</strong> a leaf or one-child node is replaced by its child. A two-child node takes the smallest value from its right subtree, which is then deleted there.</p>
+<p><strong>Example:</strong> delete 3 from 5 (3 (2, 4), 6)</p>
+<pre class="trace border rounded">3 has two children → successor 4
+copy 4 into the node, delete the old 4 → 5 (4 (2), 6)</pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -111,7 +119,7 @@ class Solution {
         <li class="list-group-item"><strong>Space:</strong> O(h).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Binary Search Trees</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 61 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 62 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 63 (coming soon)</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Binary Search Trees</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 61–63 coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

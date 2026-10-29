@@ -1,14 +1,26 @@
 # 1. Climbing Stairs
 
 **LeetCode 70** · 🟢 Easy · Pattern: **1D DP**
-🔗 Solve it here: [https://leetcode.com/problems/climbing-stairs/](https://leetcode.com/problems/climbing-stairs/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/001-climbing-stairs.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/001-climbing-stairs.html)
 
 ## The problem, in short
 
 You climb a staircase of n steps, taking 1 or 2 steps at a time. Count the distinct ways to reach the top.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/climbing-stairs/](https://leetcode.com/problems/climbing-stairs/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/001-climbing-stairs.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/001-climbing-stairs.html)
+
+## Understanding
+
+**Really asking:** ways to climb n steps taking 1 or 2 at a time.
+
+**Why this works:** your last move came from step n-1 or n-2, so ways(n) = ways(n-1) + ways(n-2).
+
+**Example:** n = 4
+```text
+ways: 1, 1, 2, 3, 5 → 5
+```
 
 ## Hints
 

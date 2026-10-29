@@ -1,14 +1,26 @@
 # 13. Hand of Straights
 
 **LeetCode 846** · 🟡 Medium · Pattern: **Smallest card starts a group**
-🔗 Solve it here: [https://leetcode.com/problems/hand-of-straights/](https://leetcode.com/problems/hand-of-straights/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/013-hand-of-straights.html](https://amitxaidev.github.io/dsa/22-greedy/013-hand-of-straights.html)
 
 ## The problem, in short
 
 Decide whether cards can be split into groups of groupSize consecutive values.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/hand-of-straights/](https://leetcode.com/problems/hand-of-straights/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/013-hand-of-straights.html](https://amitxaidev.github.io/dsa/22-greedy/013-hand-of-straights.html)
+
+## Understanding
+
+**Really asking:** split cards into groups of consecutive values.
+
+**Why this works:** the smallest remaining card must start a group; take the next values right after it.
+
+**Example:** [1,2,3,6,2,3,4,7,8], size 3
+```text
+[1,2,3], [2,3,4], [6,7,8] ✓
+```
 
 ## Hints
 

@@ -1,14 +1,27 @@
 # 7. Word Search II
 
 **LeetCode 212** · 🔴 Hard · Pattern: **Trie-guided grid DFS**
-🔗 Solve it here: [https://leetcode.com/problems/word-search-ii/](https://leetcode.com/problems/word-search-ii/)  
-🌐 Interactive version (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/007-word-search-ii.html](https://amitxaidev.github.io/dsa/25-trie/007-word-search-ii.html)
 
 ## The problem, in short
 
 Find every word from a list that can be traced in a letter grid by adjacent moves without reusing a cell.
 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
+
+🔗 **Solve it here:** [https://leetcode.com/problems/word-search-ii/](https://leetcode.com/problems/word-search-ii/)  
+🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/007-word-search-ii.html](https://amitxaidev.github.io/dsa/25-trie/007-word-search-ii.html)
+
+## Understanding
+
+**Really asking:** find all dictionary words in a letter grid.
+
+**Why this works:** one trie for all the words; one DFS over the grid that follows trie edges, so dead ends stop early.
+
+**Example:** words ["oath", "eat"] on a board
+```text
+DFS from 'o' follows o → a → t → h → found "oath"
+from 'e' → a → t → found "eat"
+```
 
 ## Hints
 
