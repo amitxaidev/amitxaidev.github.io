@@ -279,3 +279,25 @@ pre code.hljs { background: transparent; padding: 0; }
 .video-pill { animation: playpulse 1.8s ease-out infinite; }
 @media (max-width: 420px) { .video-thumb { width: 110px; } .video-text strong { font-size: .85rem; } }
 @media (prefers-reduced-motion: reduce) { .play, .video-pill { animation: none; } }
+
+/* ================= animated caricature (drawn from the GitHub photo) ================= */
+.toon { width: 280px; height: auto; }
+.toon-stage { height: auto; }
+.caricature { display: block; width: 100%; height: auto; overflow: visible; filter: drop-shadow(0 14px 18px rgba(0,0,0,.22)); }
+.caricature * { transform-box: view-box; }
+.cc-head { transform-origin: 150px 240px; animation: ccbob 3.4s ease-in-out infinite; }
+.cc-body { transform-origin: 150px 350px; animation: ccbreath 3.4s ease-in-out infinite; }
+.cc-wave { transform-origin: 204px 276px; animation: ccwave 2.2s ease-in-out infinite; }
+.cc-eyes { transform-origin: 150px 142px; animation: ccblink 4.6s infinite; }
+.cc-pupils { animation: cclook 7s ease-in-out infinite; }
+.cc-shadow { transform-origin: 150px 362px; animation: ccshadow 3.4s ease-in-out infinite; }
+.cc-clouds { animation: ccclouds 18s linear infinite alternate; }
+@keyframes ccbob { 0%, 100% { transform: rotate(-4deg); } 50% { transform: rotate(4deg) translateY(-5px); } }
+@keyframes ccbreath { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.015, .99); } }
+@keyframes ccwave { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-14deg); } 50% { transform: rotate(8deg); } 75% { transform: rotate(-10deg); } }
+@keyframes ccblink { 0%, 90%, 100% { transform: scaleY(1); } 93% { transform: scaleY(.08); } 96% { transform: scaleY(1); } }
+@keyframes cclook { 0%, 30% { transform: translate(0, 0); } 40%, 60% { transform: translate(-6px, 1px); } 70%, 100% { transform: translate(0, 0); } }
+@keyframes ccshadow { 0%, 100% { transform: scaleX(1); } 50% { transform: scaleX(.92); } }
+@keyframes ccclouds { from { transform: translateX(-10px); } to { transform: translateX(14px); } }
+@media (prefers-reduced-motion: reduce) { .caricature * { animation: none !important; } }
+@media (max-width: 575.98px) { .toon { width: 240px; transform: none; } }
