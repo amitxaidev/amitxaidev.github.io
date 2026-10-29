@@ -39,7 +39,7 @@ The common patterns are: "have I seen this before?" (a set), "how many of each?"
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

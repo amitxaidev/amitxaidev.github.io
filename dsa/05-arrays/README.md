@@ -41,7 +41,7 @@ Most array problems are won by one of these moves: a single pass with a running 
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

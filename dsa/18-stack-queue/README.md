@@ -45,7 +45,7 @@ The big pattern here is the monotonic stack: keep the stack increasing (or decre
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

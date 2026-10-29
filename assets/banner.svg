@@ -30,7 +30,7 @@
   <text x="80" y="150" font-family="Archivo Black, Arial Black, Helvetica, Arial, sans-serif" font-size="86" font-weight="900" letter-spacing="2">
     <tspan fill="#F2EDE4">COMPILED</tspan><tspan fill="url(#canvas)" dx="18">CANVAS</tspan>
   </text>
-  <text x="84" y="210" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="#F2EDE4">Free DSA course in Java · Videos + LeetCode practice</text>
+  <text x="84" y="210" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="#F2EDE4">Free coding courses for tech careers</text>
   <text x="84" y="256" font-family="Menlo, Consolas, monospace" font-size="22" fill="#FF8A1F">watch → understand → try with hints → check the solution</text>
   <text x="84" y="310" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#F2EDE4" fill-opacity="0.7">Developed and created by Amit Singh</text>
 </svg>

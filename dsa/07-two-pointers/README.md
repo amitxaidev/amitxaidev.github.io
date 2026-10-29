@@ -40,7 +40,7 @@ The key question every time: after looking at the two pointed values, which poin
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

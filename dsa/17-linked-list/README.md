@@ -46,7 +46,7 @@ Four tools solve almost everything here. A dummy head node removes edge cases at
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

@@ -35,7 +35,7 @@ Lookups take O(word length), however many words are stored. Tries power autocomp
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

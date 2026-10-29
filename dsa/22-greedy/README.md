@@ -41,7 +41,7 @@ The classic greedy choices: sort intervals by end time and keep the one that fin
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

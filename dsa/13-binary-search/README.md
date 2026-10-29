@@ -44,7 +44,7 @@ There are two flavours. First, searching an array (lower bound, rotated arrays, 
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

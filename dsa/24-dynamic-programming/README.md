@@ -55,7 +55,7 @@ Every DP answer needs four things. The state: what does dp[i] (or dp[i][j]) mean
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

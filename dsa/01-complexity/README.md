@@ -33,7 +33,7 @@ The problems here are easy on purpose. Solve each one, then say its time and spa
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

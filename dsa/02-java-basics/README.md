@@ -37,7 +37,7 @@ These problems each practise one tool. Pay attention to the small Java details i
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

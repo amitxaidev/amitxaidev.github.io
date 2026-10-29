@@ -40,7 +40,7 @@ Three patterns cover most questions. For Top K, keep a heap of size k, and the t
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

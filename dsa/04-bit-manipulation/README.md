@@ -39,7 +39,7 @@ Three tricks solve most problems here: x & (x - 1) removes the lowest 1-bit, x &
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

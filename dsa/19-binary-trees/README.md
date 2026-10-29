@@ -47,7 +47,7 @@ Traversals decide when you visit the node. Preorder is node, left, right. Inorde
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

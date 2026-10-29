@@ -42,7 +42,7 @@ Most string questions use one of these ideas: a frequency array of 26 or 128 cou
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

@@ -38,7 +38,7 @@ In Java, Arrays.sort(int[]) sorts primitives, while Arrays.sort(T[], comparator)
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

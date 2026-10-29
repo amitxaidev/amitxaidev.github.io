@@ -34,7 +34,7 @@ KMP precomputes an LPS array (the longest proper prefix that is also a suffix) s
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

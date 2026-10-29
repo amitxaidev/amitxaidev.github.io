@@ -37,7 +37,7 @@ For in-place problems, look for a spare place to store information: the first ro
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

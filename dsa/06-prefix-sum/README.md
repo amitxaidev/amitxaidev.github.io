@@ -39,7 +39,7 @@ Three ideas build on that. Store prefix sums in a HashMap to count subarrays wit
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

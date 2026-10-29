@@ -36,7 +36,7 @@ They all run in O(n) time with O(1) extra space, which is why interviewers love 
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

@@ -48,7 +48,7 @@ Pick the tool by the question. To explore or count components, use BFS or DFS. F
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

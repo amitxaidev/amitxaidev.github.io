@@ -39,7 +39,7 @@ Two facts solve most BST problems. An inorder traversal visits the values in sor
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

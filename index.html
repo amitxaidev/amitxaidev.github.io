@@ -28,8 +28,21 @@
     <div class="collapse navbar-collapse" id="nav">
       <ul class="navbar-nav ms-auto align-items-md-center">
         <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#courses">Courses</a></li>
-        <li class="nav-item"><a class="nav-link" href="dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">AI for Developers <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
         <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
         <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
@@ -45,19 +58,19 @@
     <div class="row align-items-center g-4 py-lg-4">
       <div class="col-lg-7">
         <span class="badge rounded-pill bg-brand mb-3">100% free · No sign-up</span>
-        <h1 class="display-5 fw-bold mb-3">Stuck on DSA? Let's draw it out together.</h1>
-        <p class="lead text-white-50 mb-4">Short videos that show what your code is actually doing, then real LeetCode problems to practise right after. It's all free, and it goes at your pace.</p>
+        <h1 class="display-5 fw-bold mb-3">Coding makes more sense when you can see it.</h1>
+        <p class="lead text-white-50 mb-4">Free courses for tech careers, explained with animations that show what the code is really doing. Every course has short videos and practice problems right here, so you can learn at your own pace.</p>
         <a class="d-inline-flex align-items-center gap-2 mb-4 text-white-50 small creator" href="#about">
           <img src="https://avatars.githubusercontent.com/u/270575207?v=4" alt="" width="36" height="36" class="rounded-circle border border-2 border-warning">
           <span>Developed and created by <strong class="text-white">Amit Singh</strong></span>
         </a><br>
-        <a class="btn btn-brand btn-lg me-2 mb-2" href="dsa/index.html">Start the DSA course</a>
+        <a class="btn btn-brand btn-lg me-2 mb-2" href="#courses">Browse courses</a>
         <a class="btn btn-outline-light btn-lg mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch on YouTube</a>
       </div>
       <div class="col-lg-5">
         <div class="code-card shadow">
-          <div class="code-card-bar"><span></span><span></span><span></span><small>TwoPointers.java</small></div>
-          <pre class="mb-0"><code id="typed" data-text="int l = 0, r = n - 1;&#10;while (l &lt; r) {&#10;    int sum = a[l] + a[r];&#10;    if (sum == target) return true;&#10;    if (sum &lt; target) l++;&#10;    else r--;&#10;}"></code><span class="caret"></span></pre>
+          <div class="code-card-bar"><span></span><span></span><span></span><small>Start.java</small></div>
+          <pre class="mb-0"><code id="typed" data-text="String goal = &quot;your first tech job&quot;;&#10;for (Course course : courses) {&#10;    course.watch();&#10;    course.practise();&#10;    if (course.clicked()) next();&#10;}"></code><span class="caret"></span></pre>
         </div>
       </div>
     </div>
@@ -67,10 +80,10 @@
 <section class="py-4 border-bottom bg-body-tertiary">
   <div class="container">
     <div class="row text-center g-3">
-      <div class="col-6 col-md-3"><div class="fs-2 fw-bold" data-count="352">352</div><div class="small text-body-secondary">practice problems</div></div>
-      <div class="col-6 col-md-3"><div class="fs-2 fw-bold" data-count="105">105</div><div class="small text-body-secondary">DSA episodes planned</div></div>
-      <div class="col-6 col-md-3"><div class="fs-2 fw-bold" data-count="8">8</div><div class="small text-body-secondary">episodes out now</div></div>
       <div class="col-6 col-md-3"><div class="fs-2 fw-bold" data-count="9">9</div><div class="small text-body-secondary">courses on the plan</div></div>
+      <div class="col-6 col-md-3"><div class="fs-2 fw-bold" data-count="8">8</div><div class="small text-body-secondary">episodes out now</div></div>
+      <div class="col-6 col-md-3"><div class="fs-2 fw-bold" data-count="352">352</div><div class="small text-body-secondary">practice problems so far</div></div>
+      <div class="col-6 col-md-3"><div class="fs-2 fw-bold">₹0</div><div class="small text-body-secondary">to join, always</div></div>
     </div>
   </div>
 </section>
@@ -99,7 +112,7 @@
                   <div class="d-flex justify-content-between small mb-1"><span>Your progress</span><span><span class="done-count">0</span> / 352 solved</span></div>
                   <div class="progress" style="height:8px" role="progressbar" aria-label="DSA progress"><div class="progress-bar bg-success" style="width:0%"></div></div>
                 </div>
-                <a class="btn btn-brand" href="dsa/index.html">Open the DSA sheet</a>
+                <a class="btn btn-brand" href="dsa/index.html">Open the course</a>
                 <a class="btn btn-outline-secondary" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Playlist</a>
               </div>
             </div>
@@ -187,21 +200,12 @@
 </section>
 
 
-<section class="py-5 path-section">
-  <div class="container">
-    <div class="fade-up mb-4">
-      <h2 class="h3 fw-bold mb-1">The DSA path</h2>
-      <p class="text-body-secondary mb-0">15 modules, 105 episodes, one direction. The orange stations are out now — the rest light up as new episodes go live.</p>
-    </div>
-    <ol class="path list-unstyled mb-0"><li class="station here" style="--i:0"><span class="dot">0</span><span class="name">Foundations</span></li><li class="station here" style="--i:1"><span class="dot">1</span><span class="name">Arrays</span></li><li class="station" style="--i:2"><span class="dot">2</span><span class="name">Strings</span></li><li class="station" style="--i:3"><span class="dot">3</span><span class="name">Searching &amp; Sorting</span></li><li class="station" style="--i:4"><span class="dot">4</span><span class="name">Recursion &amp; Backtracking</span></li><li class="station" style="--i:5"><span class="dot">5</span><span class="name">Hashing</span></li><li class="station" style="--i:6"><span class="dot">6</span><span class="name">Linked List</span></li><li class="station" style="--i:7"><span class="dot">7</span><span class="name">Stack &amp; Queue</span></li><li class="station" style="--i:8"><span class="dot">8</span><span class="name">Trees</span></li><li class="station" style="--i:9"><span class="dot">9</span><span class="name">Heaps</span></li><li class="station" style="--i:10"><span class="dot">10</span><span class="name">Greedy</span></li><li class="station" style="--i:11"><span class="dot">11</span><span class="name">Graphs</span></li><li class="station" style="--i:12"><span class="dot">12</span><span class="name">Dynamic Programming</span></li><li class="station" style="--i:13"><span class="dot">13</span><span class="name">Advanced DS</span></li><li class="station" style="--i:14"><span class="dot">14</span><span class="name">Interview Prep</span></li></ol>
-  </div>
-</section>
 <section class="py-5 bg-body-tertiary border-top border-bottom">
   <div class="container">
     <h2 class="h3 fw-bold mb-4 fade-up">How it works</h2>
     <div class="row g-4">
-      <div class="col-md-4 fade-up"><div class="step-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle class="pulse" cx="24" cy="24" r="20"/><circle cx="24" cy="24" r="20" class="ring"/><path d="M20 16l12 8-12 8z" class="play"/></svg></div><h3 class="h6 fw-bold">Watch the episode</h3><p class="text-body-secondary small mb-0">Short videos that explain each idea with pictures and animations, in Java.</p></div>
-      <div class="col-md-4 fade-up"><div class="step-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 14l-9 10 9 10M30 14l9 10-9 10" class="brackets"/><rect x="22" y="17" width="4" height="14" rx="1" class="cursor"/></svg></div><h3 class="h6 fw-bold">Practise the problems</h3><p class="text-body-secondary small mb-0">Every topic has its own LeetCode list, easy to hard, with hints when you're stuck.</p></div>
+      <div class="col-md-4 fade-up"><div class="step-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle class="pulse" cx="24" cy="24" r="20"/><circle cx="24" cy="24" r="20" class="ring"/><path d="M20 16l12 8-12 8z" class="play"/></svg></div><h3 class="h6 fw-bold">Watch the episode</h3><p class="text-body-secondary small mb-0">Short videos that explain each idea with pictures and animations.</p></div>
+      <div class="col-md-4 fade-up"><div class="step-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 14l-9 10 9 10M30 14l9 10-9 10" class="brackets"/><rect x="22" y="17" width="4" height="14" rx="1" class="cursor"/></svg></div><h3 class="h6 fw-bold">Practise the problems</h3><p class="text-body-secondary small mb-0">Each topic comes with practice problems, easy to hard, and hints for when you're stuck.</p></div>
       <div class="col-md-4 fade-up"><div class="step-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="18" class="track"/><circle cx="24" cy="24" r="18" class="fill"/><path d="M17 24l5 5 9-10" class="tick"/></svg></div><h3 class="h6 fw-bold">Track your progress</h3><p class="text-body-secondary small mb-0">Tick problems as you solve them. Your progress stays saved in your browser.</p></div>
     </div>
   </div>
@@ -247,7 +251,7 @@
       <div class="col-md-4 col-lg-3 text-center fade-up">
         <div class="toon mx-auto" data-tilt aria-label="Cartoon of Amit Kumar Singh">
           <div class="toon-stage">
-            <span class="toon-chip c1">O(n)</span><span class="toon-chip c2">{ }</span><span class="toon-chip c3">DSA</span>
+            <span class="toon-chip c1">Java</span><span class="toon-chip c2">{ }</span><span class="toon-chip c3">AI</span>
             <div class="toon-shadow"></div>
             <svg class="toon-body" viewBox="0 0 160 150" aria-hidden="true">
               <defs>

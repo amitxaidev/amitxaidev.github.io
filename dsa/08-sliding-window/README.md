@@ -41,7 +41,7 @@ Fixed windows keep the same size (k). Variable windows grow on the right and shr
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 

@@ -221,7 +221,7 @@
   var typed = document.getElementById('typed');
   if (typed) {
     var text = typed.dataset.text;
-    var keywords = /\b(int|while|if|else|return|true)\b/g;
+    var keywords = /\b(int|while|if|else|return|true|for|String)\b/g;
     function paint(s) {
       return s.replace(/&/g, '&amp;').replace(/</g, '&lt;')
         .replace(keywords, '<span class="kw">$1</span>').replace(/\b(\d+)\b/g, '<span class="num">$1</span>');

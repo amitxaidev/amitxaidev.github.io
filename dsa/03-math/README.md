@@ -40,7 +40,7 @@ Watch for overflow in every problem here. If a value can pass about 2.1 billion,
 
 ---
 
-[🏠 Back to the full roadmap](../../README.md)
+[🏠 Back to the DSA in Java course](../README.md)
 
 ---
 
