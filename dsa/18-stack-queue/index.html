@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stack &amp; Queue – LeetCode problems in Java | Compiled Canvas</title>
+<meta name="description" content="18 Stack &amp; Queue LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:title" content="Stack &amp; Queue – LeetCode problems in Java | Compiled Canvas">
+<meta property="og:description" content="18 Stack &amp; Queue LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:image" content="https://amitxaidev.github.io/assets/logo.png">
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="../index.html">DSA Sheet</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Stack &amp; Queue</li>
+    </ol></nav>
+    <div class="row g-4 align-items-end">
+      <div class="col-lg-8">
+        <h1 class="h2 mb-1">18. Stack &amp; Queue</h1>
+        <p class="text-body-secondary mb-2">Parentheses, expression evaluation, monotonic stack and deque.</p>
+        <div><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 46 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 47 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 48 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 49 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 50 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 51 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 52 (coming soon)</span></div>
+      </div>
+      <div class="col-lg-4" data-slugs="valid-parentheses,implement-queue-using-stacks,implement-stack-using-queues,next-greater-element-i,backspace-string-compare,min-stack,evaluate-reverse-polish-notation,daily-temperatures,next-greater-element-ii,online-stock-span,asteroid-collision,remove-k-digits,sum-of-subarray-minimums,design-circular-queue,largest-rectangle-in-histogram,maximal-rectangle,sliding-window-maximum,basic-calculator">
+        <div class="d-flex justify-content-between small mb-1"><span>Your progress</span><span><span class="done-count">0</span> of 18</span></div>
+        <div class="progress" role="progressbar" aria-label="Topic progress" style="height: 8px"><div class="progress-bar bg-success" style="width: 0%"></div></div>
+        <div class="small text-body-secondary mt-1">5 easy · 9 medium · 4 hard</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="d-flex flex-wrap gap-2 mb-3">
+  <input type="search" class="form-control search" style="max-width: 320px" placeholder="Search problems…" aria-label="Search problems">
+  <div class="btn-group btn-group-sm flex-wrap" role="group" aria-label="Filter">
+    <button type="button" class="btn btn-outline-secondary active" data-filter="all">All</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Easy">Easy</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Medium">Medium</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Hard">Hard</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="todo">Unsolved</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="done">Solved</button>
+  </div>
+</div>
+<div class="table-responsive">
+<table class="table table-hover align-middle ptable stagger">
+  <thead><tr><th style="width:2rem"></th><th class="d-none d-sm-table-cell" style="width:2.5rem">#</th><th>Problem</th><th class="d-none d-md-table-cell">Pattern</th><th>Level</th><th class="d-none d-sm-table-cell"></th></tr></thead>
+  <tbody>
+<tr data-slug="valid-parentheses" data-diff="Easy" data-text="valid parentheses stack matching 20">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="valid-parentheses" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">1</td>
+  <td><a href="001-valid-parentheses.html" class="fw-semibold">Valid Parentheses</a> <span class="text-body-secondary small">#20</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Stack matching</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/valid-parentheses/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="implement-queue-using-stacks" data-diff="Easy" data-text="implement queue using stacks two stacks 232">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="implement-queue-using-stacks" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">2</td>
+  <td><a href="002-implement-queue-using-stacks.html" class="fw-semibold">Implement Queue using Stacks</a> <span class="text-body-secondary small">#232</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Two stacks</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/implement-queue-using-stacks/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="implement-stack-using-queues" data-diff="Easy" data-text="implement stack using queues rotate on push 225">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="implement-stack-using-queues" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">3</td>
+  <td><a href="003-implement-stack-using-queues.html" class="fw-semibold">Implement Stack using Queues</a> <span class="text-body-secondary small">#225</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Rotate on push</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/implement-stack-using-queues/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="next-greater-element-i" data-diff="Easy" data-text="next greater element i monotonic stack 496">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="next-greater-element-i" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">4</td>
+  <td><a href="004-next-greater-element-i.html" class="fw-semibold">Next Greater Element I</a> <span class="text-body-secondary small">#496</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Monotonic stack</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/next-greater-element-i/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="backspace-string-compare" data-diff="Easy" data-text="backspace string compare stack / backwards scan 844">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="backspace-string-compare" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">5</td>
+  <td><a href="005-backspace-string-compare.html" class="fw-semibold">Backspace String Compare</a> <span class="text-body-secondary small">#844</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Stack / backwards scan</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/backspace-string-compare/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="min-stack" data-diff="Medium" data-text="min stack stack of (value, min) pairs 155">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="min-stack" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">6</td>
+  <td><a href="006-min-stack.html" class="fw-semibold">Min Stack</a> <span class="text-body-secondary small">#155</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Stack of (value, min) pairs</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/min-stack/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="evaluate-reverse-polish-notation" data-diff="Medium" data-text="evaluate reverse polish notation operand stack 150">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="evaluate-reverse-polish-notation" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">7</td>
+  <td><a href="007-evaluate-reverse-polish-notation.html" class="fw-semibold">Evaluate Reverse Polish Notation</a> <span class="text-body-secondary small">#150</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Operand stack</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/evaluate-reverse-polish-notation/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="daily-temperatures" data-diff="Medium" data-text="daily temperatures monotonic stack of indexes 739">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="daily-temperatures" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">8</td>
+  <td><a href="008-daily-temperatures.html" class="fw-semibold">Daily Temperatures</a> <span class="text-body-secondary small">#739</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Monotonic stack of indexes</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/daily-temperatures/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="next-greater-element-ii" data-diff="Medium" data-text="next greater element ii monotonic stack, circular 503">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="next-greater-element-ii" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">9</td>
+  <td><a href="009-next-greater-element-ii.html" class="fw-semibold">Next Greater Element II</a> <span class="text-body-secondary small">#503</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Monotonic stack, circular</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/next-greater-element-ii/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="online-stock-span" data-diff="Medium" data-text="online stock span monotonic stack with spans 901">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="online-stock-span" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">10</td>
+  <td><a href="010-online-stock-span.html" class="fw-semibold">Online Stock Span</a> <span class="text-body-secondary small">#901</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Monotonic stack with spans</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/online-stock-span/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="asteroid-collision" data-diff="Medium" data-text="asteroid collision stack simulation 735">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="asteroid-collision" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">11</td>
+  <td><a href="011-asteroid-collision.html" class="fw-semibold">Asteroid Collision</a> <span class="text-body-secondary small">#735</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Stack simulation</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/asteroid-collision/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="remove-k-digits" data-diff="Medium" data-text="remove k digits monotonic increasing stack 402">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="remove-k-digits" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">12</td>
+  <td><a href="012-remove-k-digits.html" class="fw-semibold">Remove K Digits</a> <span class="text-body-secondary small">#402</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Monotonic increasing stack</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/remove-k-digits/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="sum-of-subarray-minimums" data-diff="Medium" data-text="sum of subarray minimums monotonic stack contribution 907">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="sum-of-subarray-minimums" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">13</td>
+  <td><a href="013-sum-of-subarray-minimums.html" class="fw-semibold">Sum of Subarray Minimums</a> <span class="text-body-secondary small">#907</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Monotonic stack contribution</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/sum-of-subarray-minimums/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="design-circular-queue" data-diff="Medium" data-text="design circular queue array ring buffer 622">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="design-circular-queue" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">14</td>
+  <td><a href="014-design-circular-queue.html" class="fw-semibold">Design Circular Queue</a> <span class="text-body-secondary small">#622</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Array ring buffer</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/design-circular-queue/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="largest-rectangle-in-histogram" data-diff="Hard" data-text="largest rectangle in histogram monotonic stack 84">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="largest-rectangle-in-histogram" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">15</td>
+  <td><a href="015-largest-rectangle-in-histogram.html" class="fw-semibold">Largest Rectangle in Histogram</a> <span class="text-body-secondary small">#84</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Monotonic stack</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/largest-rectangle-in-histogram/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="maximal-rectangle" data-diff="Hard" data-text="maximal rectangle histogram per row 85">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="maximal-rectangle" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">16</td>
+  <td><a href="016-maximal-rectangle.html" class="fw-semibold">Maximal Rectangle</a> <span class="text-body-secondary small">#85</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Histogram per row</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/maximal-rectangle/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="sliding-window-maximum" data-diff="Hard" data-text="sliding window maximum monotonic deque 239">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="sliding-window-maximum" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">17</td>
+  <td><a href="017-sliding-window-maximum.html" class="fw-semibold">Sliding Window Maximum</a> <span class="text-body-secondary small">#239</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Monotonic deque</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/sliding-window-maximum/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="basic-calculator" data-diff="Hard" data-text="basic calculator stack for parentheses and signs 224">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="basic-calculator" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">18</td>
+  <td><a href="018-basic-calculator.html" class="fw-semibold">Basic Calculator</a> <span class="text-body-secondary small">#224</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Stack for parentheses and signs</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/basic-calculator/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+  </tbody>
+</table>
+</div>
+<p class="empty text-body-secondary" hidden>Nothing matches that filter.</p>
+<p class="small text-body-secondary mt-3">Work top to bottom — each list goes from easy to hard. Try a problem for at least 15 minutes before opening a hint. Ticks are saved in your browser.</p>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-0">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>
