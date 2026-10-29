@@ -49,18 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">1365. How Many Numbers Are Smaller Than the Current Number</h1>
     <p class="mb-3"><span class="badge text-bg-success">Easy</span> <span class="badge text-bg-light border">Counting array</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>For every element, report how many other elements in the array are strictly smaller than it. Values are between 0 and 100.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> for each number, how many others are strictly smaller? Values are only 0..100, which is the hint for a faster way.</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> for each number, how many others are strictly smaller? Values are only 0..100, which is the hint for a faster way.</p>
 <p><strong>Why this works:</strong> count how often each value appears, then a running total of those counts tells you &quot;how many values are below v&quot; for every v at once.</p>
 <p><strong>Example:</strong> nums = [8, 1, 2, 2, 3]</p>
-<pre class="trace border rounded">counts:   1→1, 2→2, 3→1, 8→1
-below 1 = 0, below 2 = 1, below 3 = 3, below 8 = 4
-answer:  8→4, 1→0, 2→1, 2→1, 3→3   →  [4, 0, 1, 1, 3]</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">counts:   1→1, 2→2, 3→1, 8→1</span><span class="tl" style="--i:1">below 1 = 0, below 2 = 1, below 3 = 3, below 8 = 4</span><span class="tl" style="--i:2">answer:  8→4, 1→0, 2→1, 2→1, 3→3   →  [4, 0, 1, 1, 3]</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -115,7 +116,13 @@ answer:  8→4, 1→0, 2→1, 2→1, 3→3   →  [4, 0, 1, 1, 3]</pre></div>
         <li class="list-group-item"><strong>Space:</strong> O(R).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Time &amp; Space Complexity</a><div class="mt-2"><a class="btn btn-sm btn-outline-danger me-1 mb-1" href="https://youtu.be/jZeS1tRzGs4" target="_blank" rel="noopener">▶ Watch Ep 2</a><a class="btn btn-sm btn-outline-danger me-1 mb-1" href="https://youtu.be/PxjhjjhEIqw" target="_blank" rel="noopener">▶ Watch Ep 3</a></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Time &amp; Space Complexity</a><div class="mt-2"><a class="video-cta" href="https://youtu.be/jZeS1tRzGs4" target="_blank" rel="noopener">
+  <span class="video-thumb"><img src="https://i.ytimg.com/vi/jZeS1tRzGs4/mqdefault.jpg" alt="" loading="lazy"><span class="play"><span></span></span></span>
+  <span class="video-text"><span class="video-kicker">▶ Watch the lesson first</span><strong>Episode 2: Time and Space Complexity (Big O made simple)</strong><small>Free on YouTube · Compiled Canvas</small></span>
+</a><a class="video-cta" href="https://youtu.be/PxjhjjhEIqw" target="_blank" rel="noopener">
+  <span class="video-thumb"><img src="https://i.ytimg.com/vi/PxjhjjhEIqw/mqdefault.jpg" alt="" loading="lazy"><span class="play"><span></span></span></span>
+  <span class="video-text"><span class="video-kicker">▶ Watch the lesson first</span><strong>Episode 3: How to calculate the complexity of any code</strong><small>Free on YouTube · Compiled Canvas</small></span>
+</a></div></div>
   </div>
 </div>
 <hr class="my-4">

@@ -49,17 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">1109. Corporate Flight Bookings</h1>
     <p class="mb-3"><span class="badge text-bg-warning">Medium</span> <span class="badge text-bg-light border">Difference array</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>There are n flights. Each booking [first, last, seats] reserves seats on every flight from first to last. Return the total seats for each flight.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/corporate-flight-bookings/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> many bookings each add seats to a range of flights; total per flight?</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> many bookings each add seats to a range of flights; total per flight?</p>
 <p><strong>Why this works:</strong> instead of updating every flight in a range, mark +seats where the range starts and -seats just after it ends. One running sum at the end spreads the marks.</p>
 <p><strong>Example:</strong> bookings [1,2,10], [2,3,20], [2,5,25], n = 5</p>
-<pre class="trace border rounded">marks: +10 at 1, -10 at 3; +20 at 2, -20 at 4; +25 at 2
-running: 10, 55, 45, 25, 25</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">marks: +10 at 1, -10 at 3; +20 at 2, -20 at 4; +25 at 2</span><span class="tl" style="--i:1">running: 10, 55, 45, 25, 25</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -115,7 +117,10 @@ running: 10, 55, 45, 25, 25</pre></div>
         <li class="list-group-item"><strong>Space:</strong> O(n).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Prefix Sum</a><div class="mt-2"><a class="btn btn-sm btn-outline-danger me-1 mb-1" href="https://youtu.be/liU6avyvXQM" target="_blank" rel="noopener">▶ Watch Ep 8</a></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Prefix Sum</a><div class="mt-2"><a class="video-cta" href="https://youtu.be/liU6avyvXQM" target="_blank" rel="noopener">
+  <span class="video-thumb"><img src="https://i.ytimg.com/vi/liU6avyvXQM/mqdefault.jpg" alt="" loading="lazy"><span class="play"><span></span></span></span>
+  <span class="video-text"><span class="video-kicker">▶ Watch the lesson first</span><strong>Episode 8: Prefix sum: range queries in O(1)</strong><small>Free on YouTube · Compiled Canvas</small></span>
+</a></div></div>
   </div>
 </div>
 <hr class="my-4">

@@ -49,18 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">69. Sqrt(x)</h1>
     <p class="mb-3"><span class="badge text-bg-success">Easy</span> <span class="badge text-bg-light border">Binary search on the answer</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Return the integer square root of x (rounded down) without using a built-in power or sqrt function.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/sqrtx/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> the biggest r with r × r ≤ x.</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> the biggest r with r × r ≤ x.</p>
 <p><strong>Why this works:</strong> &quot;r² ≤ x&quot; is true then false as r grows, so binary search r. Compare mid ≤ x / mid to avoid overflow.</p>
 <p><strong>Example:</strong> x = 8</p>
-<pre class="trace border rounded">mid 2: 2 ≤ 4 ✓ → ans 2, go right
-mid 3: 3 ≤ 2 ✗ → go left
-answer 2</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">mid 2: 2 ≤ 4 ✓ → ans 2, go right</span><span class="tl" style="--i:1">mid 3: 3 ≤ 2 ✗ → go left</span><span class="tl" style="--i:2">answer 2</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -117,7 +118,7 @@ answer 2</pre></div>
         <li class="list-group-item"><strong>Space:</strong> O(1).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Binary Search</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 21–23 coming soon</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Binary Search</a><div class="mt-2"><span class="badge rounded-pill text-bg-light border me-1 mb-1 py-2 px-3">🎬 Episodes 21–23: video coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

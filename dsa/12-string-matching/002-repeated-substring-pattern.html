@@ -49,17 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">459. Repeated Substring Pattern</h1>
     <p class="mb-3"><span class="badge text-bg-success">Easy</span> <span class="badge text-bg-light border">Doubling trick / LPS</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Decide whether s can be built by repeating one of its substrings two or more times.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/repeated-substring-pattern/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> is the string some block repeated 2+ times?</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> is the string some block repeated 2+ times?</p>
 <p><strong>Why this works:</strong> if it is, the leftover after removing the longest border (lps[n-1]) is the block length, and it divides n.</p>
 <p><strong>Example:</strong> &quot;abcabc&quot;</p>
-<pre class="trace border rounded">lps last = 3 → block length 6 - 3 = 3
-6 % 3 = 0 → true (&quot;abc&quot;)</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">lps last = 3 → block length 6 - 3 = 3</span><span class="tl" style="--i:1">6 % 3 = 0 → true (&quot;abc&quot;)</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -113,7 +115,7 @@
         <li class="list-group-item"><strong>Space:</strong> O(n).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">String Pattern Matching</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 18–19 coming soon</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">String Pattern Matching</a><div class="mt-2"><span class="badge rounded-pill text-bg-light border me-1 mb-1 py-2 px-3">🎬 Episodes 18–19: video coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

@@ -41,6 +41,8 @@
       var n = slugs.filter(function (s) { return done.has(s); }).length;
       var c = el.querySelector('.done-count'); if (c) c.textContent = n;
       var bar = el.querySelector('.progress-bar'); if (bar) bar.style.width = (100 * n / slugs.length) + '%';
+      var ring = el.querySelector('.ring-sm');
+      if (ring) { var pct = Math.round(100 * n / slugs.length); ring.style.setProperty('--p', pct); ring.querySelector('.done-pct').textContent = pct + '%'; }
     });
     var data = document.getElementById('all-problems');
     var cont = document.querySelector('.continue-btn');
@@ -55,7 +57,7 @@
   document.addEventListener('change', function (ev) {
     var box = ev.target;
     if (!box.classList || !box.classList.contains('done-box')) return;
-    if (box.checked) done.add(box.dataset.slug); else done.delete(box.dataset.slug);
+    if (box.checked) { done.add(box.dataset.slug); confetti(box); } else done.delete(box.dataset.slug);
     save(done);
     refresh();
   });
@@ -104,6 +106,7 @@
       btn.textContent = opening ? btn.dataset.label.replace('Show', 'Hide') : btn.dataset.label;
       btn.classList.toggle('active', opening);
       var hint = btn.closest('.hint');
+      if (opening) markStep(hint ? 'hints' : (body.classList.contains('code-block') ? 'solution' : 'approach'));
       var next = hint && hint.nextElementSibling;
       if (opening && next && next.classList.contains('hint')) next.hidden = false;
       var code = body.querySelector('code');
@@ -122,6 +125,55 @@
       });
     });
   });
+
+  // ---------- confetti when a problem is marked solved
+  function confetti(from) {
+    if (reduceMotion) return;
+    var r = from.getBoundingClientRect(), colors = ['#e8590c', '#ffc629', '#ff8a1f', '#198754', '#0d6efd'];
+    for (var i = 0; i < 26; i++) {
+      var c = document.createElement('span');
+      c.className = 'confetti';
+      c.style.left = (r.left + r.width / 2) + 'px';
+      c.style.top = (r.top + r.height / 2) + 'px';
+      c.style.background = colors[i % colors.length];
+      c.style.setProperty('--x', (Math.random() * 240 - 120) + 'px');
+      c.style.setProperty('--y', (Math.random() * -180 - 20) + 'px');
+      c.style.setProperty('--r', (Math.random() * 720 - 360) + 'deg');
+      document.body.appendChild(c);
+      setTimeout(function (el) { el.remove(); }, 1200, c);
+    }
+  }
+
+  // ---------- step tracker on problem pages
+  function markStep(name) {
+    var li = document.querySelector('.journey [data-step="' + name + '"]');
+    if (li) li.classList.add('done');
+  }
+  if (document.querySelector('.journey')) {
+    markStep('read');
+    var solvedBox = document.querySelector('.problem .done-box, #done');
+    if (solvedBox && solvedBox.checked) markStep('solved');
+    document.addEventListener('change', function (ev) {
+      if (ev.target.id === 'done') {
+        var li = document.querySelector('.journey [data-step="solved"]');
+        if (li) li.classList.toggle('done', ev.target.checked);
+      }
+    });
+  }
+
+  // ---------- 3D tilt (cards, bobblehead)
+  if (!reduceMotion && window.matchMedia('(hover: hover)').matches) {
+    document.querySelectorAll('[data-tilt]').forEach(function (el) {
+      var target = el.classList.contains('toon') ? el.querySelector('.toon-stage') : el;
+      el.addEventListener('pointermove', function (ev) {
+        var b = el.getBoundingClientRect();
+        var x = (ev.clientX - b.left) / b.width - 0.5, y = (ev.clientY - b.top) / b.height - 0.5;
+        var k = el.classList.contains('toon') ? 22 : 8;
+        target.style.transform = 'perspective(800px) rotateY(' + (x * k) + 'deg) rotateX(' + (-y * k) + 'deg) translateZ(0)';
+      });
+      el.addEventListener('pointerleave', function () { target.style.transform = ''; });
+    });
+  }
 
   // ---------- ← → between problems
   document.addEventListener('keydown', function (ev) {
@@ -145,7 +197,7 @@
     el.textContent = '0';
     requestAnimationFrame(step);
   }
-  var animated = document.querySelectorAll('.fade-up, .stagger, .path, [data-count]');
+  var animated = document.querySelectorAll('.fade-up, .stagger, .path, .trace, .diff-chart, .diff-bar, [data-step-watch], [data-count]');
   if ('IntersectionObserver' in window && !reduceMotion) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
@@ -155,13 +207,14 @@
           el.querySelectorAll('tbody tr').forEach(function (tr, i) { tr.style.transitionDelay = Math.min(i, 20) * 25 + 'ms'; });
         }
         el.classList.add('in');
+        if (el.dataset.stepWatch) markStep(el.dataset.stepWatch);
         if (el.dataset.count) countUp(el);
         io.unobserve(el);
       });
     }, { threshold: 0.12 });
     animated.forEach(function (el) { io.observe(el); });
   } else {
-    animated.forEach(function (el) { el.classList.add('in'); });
+    animated.forEach(function (el) { el.classList.add('in'); if (el.dataset.stepWatch) markStep(el.dataset.stepWatch); });
   }
 
   // ---------- hero: typed code + animated two-pointer bars

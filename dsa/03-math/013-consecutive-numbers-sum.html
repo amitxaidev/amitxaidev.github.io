@@ -49,20 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">829. Consecutive Numbers Sum</h1>
     <p class="mb-3"><span class="badge text-bg-danger">Hard</span> <span class="badge text-bg-light border">Number theory</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Count the ways to write n as a sum of one or more consecutive positive integers.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/consecutive-numbers-sum/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> in how many ways is n a sum of a run of consecutive positive numbers?</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> in how many ways is n a sum of a run of consecutive positive numbers?</p>
 <p><strong>Why this works:</strong> a run of length k starting at x sums to k·x + k(k-1)/2. For a fixed k, solve for x and check it&#x27;s a positive whole number. k only goes up to about √(2n).</p>
 <p><strong>Example:</strong> n = 9</p>
-<pre class="trace border rounded">k=1: 9 % 1 = 0 → [9]
-k=2: (9-1) % 2 = 0 → [4,5]
-k=3: (9-3) % 3 = 0 → [2,3,4]
-k=4: (9-6) % 4 ≠ 0
-answer: 3</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">k=1: 9 % 1 = 0 → [9]</span><span class="tl" style="--i:1">k=2: (9-1) % 2 = 0 → [4,5]</span><span class="tl" style="--i:2">k=3: (9-3) % 3 = 0 → [2,3,4]</span><span class="tl" style="--i:3">k=4: (9-6) % 4 ≠ 0</span><span class="tl" style="--i:4">answer: 3</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -116,7 +115,10 @@ answer: 3</pre></div>
         <li class="list-group-item"><strong>Space:</strong> O(1).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Basic Math</a><div class="mt-2"><a class="btn btn-sm btn-outline-danger me-1 mb-1" href="https://youtu.be/y1GZw3VByAU" target="_blank" rel="noopener">▶ Watch Ep 5</a></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Basic Math</a><div class="mt-2"><a class="video-cta" href="https://youtu.be/y1GZw3VByAU" target="_blank" rel="noopener">
+  <span class="video-thumb"><img src="https://i.ytimg.com/vi/y1GZw3VByAU/mqdefault.jpg" alt="" loading="lazy"><span class="play"><span></span></span></span>
+  <span class="video-text"><span class="video-kicker">▶ Watch the lesson first</span><strong>Episode 5: Basic math for DSA: primes, GCD, modulo, sieve</strong><small>Free on YouTube · Compiled Canvas</small></span>
+</a></div></div>
   </div>
 </div>
 <hr class="my-4">

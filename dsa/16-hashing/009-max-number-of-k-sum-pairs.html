@@ -49,18 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">1679. Max Number of K-Sum Pairs</h1>
     <p class="mb-3"><span class="badge text-bg-warning">Medium</span> <span class="badge text-bg-light border">HashMap pairing</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>In one operation you remove two numbers that sum to k. Return the most operations you can do.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/max-number-of-k-sum-pairs/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> how many disjoint pairs sum to k?</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> how many disjoint pairs sum to k?</p>
 <p><strong>Why this works:</strong> keep numbers waiting for a partner; when x arrives and k - x is waiting, use it up.</p>
 <p><strong>Example:</strong> [3, 1, 3, 4, 3], k = 6</p>
-<pre class="trace border rounded">3 waits, 1 waits
-3 pairs with 3 → 1 op
-4 waits, 3 waits → answer 1</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">3 waits, 1 waits</span><span class="tl" style="--i:1">3 pairs with 3 → 1 op</span><span class="tl" style="--i:2">4 waits, 3 waits → answer 1</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -120,7 +121,7 @@ class Solution {
         <li class="list-group-item"><strong>Space:</strong> O(n).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Hashing</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 37–39 coming soon</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Hashing</a><div class="mt-2"><span class="badge rounded-pill text-bg-light border me-1 mb-1 py-2 px-3">🎬 Episodes 37–39: video coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

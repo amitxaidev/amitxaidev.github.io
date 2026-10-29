@@ -49,16 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">290. Word Pattern</h1>
     <p class="mb-3"><span class="badge text-bg-success">Easy</span> <span class="badge text-bg-light border">Two-way HashMap</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Decide whether a sentence follows a pattern of letters, where each letter maps to exactly one word and each word to exactly one letter.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/word-pattern/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> does each letter stand for exactly one word, and each word for one letter?</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> does each letter stand for exactly one word, and each word for one letter?</p>
 <p><strong>Why this works:</strong> two maps, one per direction; any conflict fails.</p>
 <p><strong>Example:</strong> &quot;abba&quot; and &quot;dog cat cat dog&quot;</p>
-<pre class="trace border rounded">a→dog, b→cat, b→cat ✓, a→dog ✓ → true</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">a→dog, b→cat, b→cat ✓, a→dog ✓ → true</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -118,7 +121,7 @@ class Solution {
         <li class="list-group-item"><strong>Space:</strong> O(n).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Hashing</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 37–39 coming soon</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Hashing</a><div class="mt-2"><span class="badge rounded-pill text-bg-light border me-1 mb-1 py-2 px-3">🎬 Episodes 37–39: video coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

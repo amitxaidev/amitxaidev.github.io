@@ -49,17 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">173. Binary Search Tree Iterator</h1>
     <p class="mb-3"><span class="badge text-bg-warning">Medium</span> <span class="badge text-bg-light border">Controlled inorder with a stack</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Build an iterator over a BST that returns values in increasing order with next() and hasNext(), using O(h) memory.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/binary-search-tree-iterator/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> return values in sorted order one at a time using O(h) memory.</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> return values in sorted order one at a time using O(h) memory.</p>
 <p><strong>Why this works:</strong> keep only the left spine on a stack (a paused inorder traversal); after popping a node, push the left spine of its right child.</p>
 <p><strong>Example:</strong> 7 (3, 15 (9, 20))</p>
-<pre class="trace border rounded">stack [7, 3] → next 3
-next 7 → push 15, 9 → next 9, 15, 20</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">stack [7, 3] → next 3</span><span class="tl" style="--i:1">next 7 → push 15, 9 → next 9, 15, 20</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -129,7 +131,7 @@ class BSTIterator {
         <li class="list-group-item"><strong>Space:</strong> O(h).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Binary Search Trees</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 61–63 coming soon</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Binary Search Trees</a><div class="mt-2"><span class="badge rounded-pill text-bg-light border me-1 mb-1 py-2 px-3">🎬 Episodes 61–63: video coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

@@ -49,17 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">1074. Number of Submatrices That Sum to Target</h1>
     <p class="mb-3"><span class="badge text-bg-danger">Hard</span> <span class="badge text-bg-light border">2D → 1D prefix + HashMap</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Count all non-empty rectangles in a matrix whose elements sum to a target.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> count rectangles in a grid with a given sum.</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> count rectangles in a grid with a given sum.</p>
 <p><strong>Why this works:</strong> fix a top row and a bottom row; squash the columns between them into one array of column sums. Now it&#x27;s &quot;subarray sum equals k&quot; on that array.</p>
 <p><strong>Example:</strong> rows 0..1 of [[0,1],[1,0]] squashed → column sums [1, 1]</p>
-<pre class="trace border rounded">subarrays summing to 1: [1], [1] → 2
-repeat for every pair of rows and add up</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">subarrays summing to 1: [1], [1] → 2</span><span class="tl" style="--i:1">repeat for every pair of rows and add up</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -124,7 +126,10 @@ class Solution {
         <li class="list-group-item"><strong>Space:</strong> O(n).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Prefix Sum</a><div class="mt-2"><a class="btn btn-sm btn-outline-danger me-1 mb-1" href="https://youtu.be/liU6avyvXQM" target="_blank" rel="noopener">▶ Watch Ep 8</a></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Prefix Sum</a><div class="mt-2"><a class="video-cta" href="https://youtu.be/liU6avyvXQM" target="_blank" rel="noopener">
+  <span class="video-thumb"><img src="https://i.ytimg.com/vi/liU6avyvXQM/mqdefault.jpg" alt="" loading="lazy"><span class="play"><span></span></span></span>
+  <span class="video-text"><span class="video-kicker">▶ Watch the lesson first</span><strong>Episode 8: Prefix sum: range queries in O(1)</strong><small>Free on YouTube · Compiled Canvas</small></span>
+</a></div></div>
   </div>
 </div>
 <hr class="my-4">

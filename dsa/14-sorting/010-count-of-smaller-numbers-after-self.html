@@ -49,19 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">315. Count of Smaller Numbers After Self</h1>
     <p class="mb-3"><span class="badge text-bg-danger">Hard</span> <span class="badge text-bg-light border">Merge sort with indexes</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>For every element, count how many elements to its right are strictly smaller.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/count-of-smaller-numbers-after-self/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> for each number, how many to its right are smaller?</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> for each number, how many to its right are smaller?</p>
 <p><strong>Why this works:</strong> during merge sort, when a left element is placed, every right element already placed is smaller and was to its right. Add that count.</p>
 <p><strong>Example:</strong> [5, 2, 6, 1]</p>
-<pre class="trace border rounded">5 → (2, 1) = 2
-2 → (1) = 1
-6 → (1) = 1
-1 → 0 → [2, 1, 1, 0]</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">5 → (2, 1) = 2</span><span class="tl" style="--i:1">2 → (1) = 1</span><span class="tl" style="--i:2">6 → (1) = 1</span><span class="tl" style="--i:3">1 → 0 → [2, 1, 1, 0]</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -143,7 +143,7 @@ class Solution {
         <li class="list-group-item"><strong>Space:</strong> O(n).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Sorting</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 24–28 coming soon</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Sorting</a><div class="mt-2"><span class="badge rounded-pill text-bg-light border me-1 mb-1 py-2 px-3">🎬 Episodes 24–28: video coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

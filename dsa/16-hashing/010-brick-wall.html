@@ -49,17 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">554. Brick Wall</h1>
     <p class="mb-3"><span class="badge text-bg-warning">Medium</span> <span class="badge text-bg-light border">HashMap of edge positions</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>A wall is made of rows of bricks of different widths (all rows equally wide). Draw one vertical line top to bottom crossing the fewest bricks; lines along brick edges don&#x27;t cross them. Return the minimum crossed.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/brick-wall/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> where should a vertical line go to cross the fewest bricks?</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> where should a vertical line go to cross the fewest bricks?</p>
 <p><strong>Why this works:</strong> crossing fewest bricks = passing through the most brick edges. Count the edge positions across rows.</p>
 <p><strong>Example:</strong> rows [1,2,2,1], [3,1,2], [1,3,2] …</p>
-<pre class="trace border rounded">edge at position 4 appears in most rows
-answer = rows - that count</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">edge at position 4 appears in most rows</span><span class="tl" style="--i:1">answer = rows - that count</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -116,7 +118,7 @@ class Solution {
         <li class="list-group-item"><strong>Space:</strong> O(number of distinct edges).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Hashing</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 37–39 coming soon</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Hashing</a><div class="mt-2"><span class="badge rounded-pill text-bg-light border me-1 mb-1 py-2 px-3">🎬 Episodes 37–39: video coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

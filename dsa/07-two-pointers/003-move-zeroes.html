@@ -49,18 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">283. Move Zeroes</h1>
     <p class="mb-3"><span class="badge text-bg-success">Easy</span> <span class="badge text-bg-light border">Read/write pointers</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Move all zeros to the end of the array in place, keeping the order of the non-zero elements.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/move-zeroes/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> push zeros to the end, keep the other numbers in order.</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> push zeros to the end, keep the other numbers in order.</p>
 <p><strong>Why this works:</strong> swap every non-zero to the next write position. Zeros drift right automatically.</p>
 <p><strong>Example:</strong> [0, 1, 0, 3, 12]</p>
-<pre class="trace border rounded">1 → swap with index 0 → [1, 0, 0, 3, 12]
-3 → swap with index 1 → [1, 3, 0, 0, 12]
-12 → swap with index 2 → [1, 3, 12, 0, 0]</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">1 → swap with index 0 → [1, 0, 0, 3, 12]</span><span class="tl" style="--i:1">3 → swap with index 1 → [1, 3, 0, 0, 12]</span><span class="tl" style="--i:2">12 → swap with index 2 → [1, 3, 12, 0, 0]</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -113,7 +114,7 @@
         <li class="list-group-item"><strong>Space:</strong> O(1).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Two Pointers</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 9 coming soon</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Two Pointers</a><div class="mt-2"><span class="badge rounded-pill text-bg-light border me-1 mb-1 py-2 px-3">🎬 Episode 9: video coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

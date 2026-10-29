@@ -49,17 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">134. Gas Station</h1>
     <p class="mb-3"><span class="badge text-bg-warning">Medium</span> <span class="badge text-bg-light border">Reset start on deficit</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Stations form a circle. You get gas[i] at station i and spend cost[i] to reach the next. Return the starting station that lets you go all the way around once, or -1. The answer is unique if it exists.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/gas-station/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> from which station can you drive the full circle?</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> from which station can you drive the full circle?</p>
 <p><strong>Why this works:</strong> if you run out between start and i, none of those stations can work either, so restart at i + 1. If total gas ≥ total cost, the last start works.</p>
 <p><strong>Example:</strong> gas [1,2,3,4,5], cost [3,4,5,1,2]</p>
-<pre class="trace border rounded">tank goes negative at 0, 1, 2 → restart at 3
-from 3: +3, +3, … total ≥ 0 → answer 3</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">tank goes negative at 0, 1, 2 → restart at 3</span><span class="tl" style="--i:1">from 3: +3, +3, … total ≥ 0 → answer 3</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -115,7 +117,7 @@ from 3: +3, +3, … total ≥ 0 → answer 3</pre></div>
         <li class="list-group-item"><strong>Space:</strong> O(1).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Greedy</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 69–73 coming soon</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Greedy</a><div class="mt-2"><span class="badge rounded-pill text-bg-light border me-1 mb-1 py-2 px-3">🎬 Episodes 69–73: video coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

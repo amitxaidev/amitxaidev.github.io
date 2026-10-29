@@ -49,17 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">17. Letter Combinations of a Phone Number</h1>
     <p class="mb-3"><span class="badge text-bg-warning">Medium</span> <span class="badge text-bg-light border">Backtracking over choices</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Each digit 2–9 maps to letters as on a phone keypad. Return all letter strings the digit string could represent.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> every word the digits could spell on a phone keypad.</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> every word the digits could spell on a phone keypad.</p>
 <p><strong>Why this works:</strong> one recursion level per digit, one branch per letter on that key.</p>
 <p><strong>Example:</strong> &quot;23&quot;</p>
-<pre class="trace border rounded">2 → a, b, c ; 3 → d, e, f
-ad ae af bd be bf cd ce cf</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">2 → a, b, c ; 3 → d, e, f</span><span class="tl" style="--i:1">ad ae af bd be bf cd ce cf</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -124,7 +126,7 @@ class Solution {
         <li class="list-group-item"><strong>Space:</strong> O(n).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Recursion &amp; Backtracking</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 29–36 coming soon</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Recursion &amp; Backtracking</a><div class="mt-2"><span class="badge rounded-pill text-bg-light border me-1 mb-1 py-2 px-3">🎬 Episodes 29–36: video coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

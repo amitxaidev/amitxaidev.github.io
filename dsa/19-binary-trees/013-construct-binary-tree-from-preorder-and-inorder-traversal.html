@@ -49,17 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">105. Construct Binary Tree from Preorder and Inorder Traversal</h1>
     <p class="mb-3"><span class="badge text-bg-warning">Medium</span> <span class="badge text-bg-light border">Divide by root position</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Rebuild a binary tree (with unique values) from its preorder and inorder traversals.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> rebuild the tree from two traversals.</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> rebuild the tree from two traversals.</p>
 <p><strong>Why this works:</strong> preorder gives the root first; in inorder everything left of the root is the left subtree.</p>
 <p><strong>Example:</strong> pre [3, 9, 20, 15, 7], in [9, 3, 15, 20, 7]</p>
-<pre class="trace border rounded">root 3; left {9}; right {15, 20, 7}
-next root 20 → left 15, right 7</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">root 3; left {9}; right {15, 20, 7}</span><span class="tl" style="--i:1">next root 20 → left 15, right 7</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -129,7 +131,7 @@ class Solution {
         <li class="list-group-item"><strong>Space:</strong> O(n).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Binary Trees</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 53–60 coming soon</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Binary Trees</a><div class="mt-2"><span class="badge rounded-pill text-bg-light border me-1 mb-1 py-2 px-3">🎬 Episodes 53–60: video coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

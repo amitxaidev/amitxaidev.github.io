@@ -49,18 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">189. Rotate Array</h1>
     <p class="mb-3"><span class="badge text-bg-warning">Medium</span> <span class="badge text-bg-light border">Reversal trick</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Rotate an array to the right by k steps in place.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/rotate-array/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> shift every element k steps to the right, wrapping around.</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> shift every element k steps to the right, wrapping around.</p>
 <p><strong>Why this works:</strong> rotating = moving the last k elements to the front. Reversing everything, then reversing the two parts, achieves exactly that with no extra array.</p>
 <p><strong>Example:</strong> [1, 2, 3, 4, 5, 6, 7], k = 3</p>
-<pre class="trace border rounded">reverse all:   7 6 5 4 3 2 1
-reverse first 3: 5 6 7 4 3 2 1
-reverse rest:  5 6 7 1 2 3 4</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">reverse all:   7 6 5 4 3 2 1</span><span class="tl" style="--i:1">reverse first 3: 5 6 7 4 3 2 1</span><span class="tl" style="--i:2">reverse rest:  5 6 7 1 2 3 4</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -122,7 +123,10 @@ reverse rest:  5 6 7 1 2 3 4</pre></div>
         <li class="list-group-item"><strong>Space:</strong> O(1).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Arrays</a><div class="mt-2"><a class="btn btn-sm btn-outline-danger me-1 mb-1" href="https://youtu.be/4NdluWqUZ3c" target="_blank" rel="noopener">▶ Watch Ep 7</a><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 15 coming soon</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Arrays</a><div class="mt-2"><a class="video-cta" href="https://youtu.be/4NdluWqUZ3c" target="_blank" rel="noopener">
+  <span class="video-thumb"><img src="https://i.ytimg.com/vi/4NdluWqUZ3c/mqdefault.jpg" alt="" loading="lazy"><span class="play"><span></span></span></span>
+  <span class="video-text"><span class="video-kicker">▶ Watch the lesson first</span><strong>Episode 7: Arrays in depth: memory, indexing, operations</strong><small>Free on YouTube · Compiled Canvas</small></span>
+</a><span class="badge rounded-pill text-bg-light border me-1 mb-1 py-2 px-3">🎬 Episode 15: video coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

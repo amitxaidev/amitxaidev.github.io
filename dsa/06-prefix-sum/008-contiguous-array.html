@@ -49,19 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">525. Contiguous Array</h1>
     <p class="mb-3"><span class="badge text-bg-warning">Medium</span> <span class="badge text-bg-light border">Prefix sum + first index</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>In a binary array, find the length of the longest contiguous subarray with equally many 0s and 1s.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/contiguous-array/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> longest piece with equal 0s and 1s.</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> longest piece with equal 0s and 1s.</p>
 <p><strong>Why this works:</strong> count 0 as -1. Equal counts means the piece sums to 0, which happens when the same running sum appears twice. Remember where each sum first appeared.</p>
 <p><strong>Example:</strong> [0, 1, 0]</p>
-<pre class="trace border rounded">sums: -1, 0, -1   (start: 0 at index -1)
-index 1: sum 0 seen at -1 → length 2
-index 2: sum -1 seen at 0 → length 2
-answer 2</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">sums: -1, 0, -1   (start: 0 at index -1)</span><span class="tl" style="--i:1">index 1: sum 0 seen at -1 → length 2</span><span class="tl" style="--i:2">index 2: sum -1 seen at 0 → length 2</span><span class="tl" style="--i:3">answer 2</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -121,7 +121,10 @@ class Solution {
         <li class="list-group-item"><strong>Space:</strong> O(n).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Prefix Sum</a><div class="mt-2"><a class="btn btn-sm btn-outline-danger me-1 mb-1" href="https://youtu.be/liU6avyvXQM" target="_blank" rel="noopener">▶ Watch Ep 8</a></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Prefix Sum</a><div class="mt-2"><a class="video-cta" href="https://youtu.be/liU6avyvXQM" target="_blank" rel="noopener">
+  <span class="video-thumb"><img src="https://i.ytimg.com/vi/liU6avyvXQM/mqdefault.jpg" alt="" loading="lazy"><span class="play"><span></span></span></span>
+  <span class="video-text"><span class="video-kicker">▶ Watch the lesson first</span><strong>Episode 8: Prefix sum: range queries in O(1)</strong><small>Free on YouTube · Compiled Canvas</small></span>
+</a></div></div>
   </div>
 </div>
 <hr class="my-4">

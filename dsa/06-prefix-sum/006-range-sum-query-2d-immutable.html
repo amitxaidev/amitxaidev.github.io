@@ -49,17 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">304. Range Sum Query 2D - Immutable</h1>
     <p class="mb-3"><span class="badge text-bg-warning">Medium</span> <span class="badge text-bg-light border">2D prefix sum</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Answer many queries for the sum of a rectangle inside a fixed matrix.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/range-sum-query-2d-immutable/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> sum of any rectangle in a fixed grid, fast.</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> sum of any rectangle in a fixed grid, fast.</p>
 <p><strong>Why this works:</strong> P[r][c] holds the sum of everything above and to the left. A rectangle is the big corner sum minus the strip above and the strip to the left, plus the corner that got subtracted twice.</p>
 <p><strong>Example:</strong> rectangle rows 1..2, cols 1..2</p>
-<pre class="trace border rounded">answer = P[3][3] - P[1][3] - P[3][1] + P[1][1]
-(whole) - (top strip) - (left strip) + (top-left corner)</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">answer = P[3][3] - P[1][3] - P[3][1] + P[1][1]</span><span class="tl" style="--i:1">(whole) - (top strip) - (left strip) + (top-left corner)</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -119,7 +121,10 @@
         <li class="list-group-item"><strong>Space:</strong> O(m·n).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Prefix Sum</a><div class="mt-2"><a class="btn btn-sm btn-outline-danger me-1 mb-1" href="https://youtu.be/liU6avyvXQM" target="_blank" rel="noopener">▶ Watch Ep 8</a></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Prefix Sum</a><div class="mt-2"><a class="video-cta" href="https://youtu.be/liU6avyvXQM" target="_blank" rel="noopener">
+  <span class="video-thumb"><img src="https://i.ytimg.com/vi/liU6avyvXQM/mqdefault.jpg" alt="" loading="lazy"><span class="play"><span></span></span></span>
+  <span class="video-text"><span class="video-kicker">▶ Watch the lesson first</span><strong>Episode 8: Prefix sum: range queries in O(1)</strong><small>Free on YouTube · Compiled Canvas</small></span>
+</a></div></div>
   </div>
 </div>
 <hr class="my-4">

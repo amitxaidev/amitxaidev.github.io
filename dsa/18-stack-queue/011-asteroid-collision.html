@@ -49,17 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">735. Asteroid Collision</h1>
     <p class="mb-3"><span class="badge text-bg-warning">Medium</span> <span class="badge text-bg-light border">Stack simulation</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Asteroids move along a line: positive values go right, negative go left, absolute value is size. When two collide, the smaller explodes; equal sizes both explode. Return the survivors.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/asteroid-collision/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> right-moving and left-moving asteroids crash; what&#x27;s left?</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> right-moving and left-moving asteroids crash; what&#x27;s left?</p>
 <p><strong>Why this works:</strong> only a left-mover arriving after a right-mover collides. The stack holds survivors; the new left-mover fights the top.</p>
 <p><strong>Example:</strong> [5, 10, -5]</p>
-<pre class="trace border rounded">5, 10 on stack
--5 meets 10 → -5 explodes → [5, 10]</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">5, 10 on stack</span><span class="tl" style="--i:1">-5 meets 10 → -5 explodes → [5, 10]</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -120,7 +122,7 @@ class Solution {
         <li class="list-group-item"><strong>Space:</strong> O(n).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Stack &amp; Queue</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 46–52 coming soon</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Stack &amp; Queue</a><div class="mt-2"><span class="badge rounded-pill text-bg-light border me-1 mb-1 py-2 px-3">🎬 Episodes 46–52: video coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

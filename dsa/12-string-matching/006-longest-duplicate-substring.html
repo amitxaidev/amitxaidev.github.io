@@ -49,18 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">1044. Longest Duplicate Substring</h1>
     <p class="mb-3"><span class="badge text-bg-danger">Hard</span> <span class="badge text-bg-light border">Binary search + Rabin-Karp</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Return any longest substring that appears at least twice in s (occurrences may overlap), or &quot;&quot; if none.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/longest-duplicate-substring/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> the longest piece that appears at least twice.</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> the longest piece that appears at least twice.</p>
 <p><strong>Why this works:</strong> if a length-L duplicate exists, shorter ones do too, so binary search L. For each L, rolling hashes find repeated windows quickly.</p>
 <p><strong>Example:</strong> &quot;banana&quot;</p>
-<pre class="trace border rounded">L=3: &quot;ana&quot; appears at 1 and 3 ✓
-L=4: &quot;bana&quot;,&quot;anan&quot;,&quot;nana&quot; all different ✗
-answer &quot;ana&quot;</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">L=3: &quot;ana&quot; appears at 1 and 3 ✓</span><span class="tl" style="--i:1">L=4: &quot;bana&quot;,&quot;anan&quot;,&quot;nana&quot; all different ✗</span><span class="tl" style="--i:2">answer &quot;ana&quot;</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -148,7 +149,7 @@ class Solution {
         <li class="list-group-item"><strong>Space:</strong> O(n).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">String Pattern Matching</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 18–19 coming soon</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">String Pattern Matching</a><div class="mt-2"><span class="badge rounded-pill text-bg-light border me-1 mb-1 py-2 px-3">🎬 Episodes 18–19: video coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

@@ -49,17 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">37. Sudoku Solver</h1>
     <p class="mb-3"><span class="badge text-bg-danger">Hard</span> <span class="badge text-bg-light border">Backtracking on empty cells</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Fill the empty cells of a 9×9 Sudoku so every row, column and 3×3 box contains 1–9 exactly once. The puzzle has exactly one solution.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/sudoku-solver/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> fill the board so every row, column and box has 1–9.</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> fill the board so every row, column and box has 1–9.</p>
 <p><strong>Why this works:</strong> try each allowed digit in an empty cell, recurse, and undo when a later cell has no options.</p>
 <p><strong>Example:</strong> an empty cell where row, column and box already use 1–8</p>
-<pre class="trace border rounded">only 9 is allowed → place 9 and move on
-a dead end later → remove 9 and try the previous cell&#x27;s next digit</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">only 9 is allowed → place 9 and move on</span><span class="tl" style="--i:1">a dead end later → remove 9 and try the previous cell&#x27;s next digit</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -133,7 +135,7 @@ a dead end later → remove 9 and try the previous cell&#x27;s next digit</pre><
         <li class="list-group-item"><strong>Space:</strong> O(81).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Recursion &amp; Backtracking</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 29–36 coming soon</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Recursion &amp; Backtracking</a><div class="mt-2"><span class="badge rounded-pill text-bg-light border me-1 mb-1 py-2 px-3">🎬 Episodes 29–36: video coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

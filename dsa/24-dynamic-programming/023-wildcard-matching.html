@@ -49,16 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">44. Wildcard Matching</h1>
     <p class="mb-3"><span class="badge text-bg-danger">Hard</span> <span class="badge text-bg-light border">2D DP on string and pattern</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Decide whether a pattern with &#x27;?&#x27; (any one character) and &#x27;*&#x27; (any sequence, including empty) matches the whole string.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/wildcard-matching/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> does a pattern with ? and * match the whole string?</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> does a pattern with ? and * match the whole string?</p>
 <p><strong>Why this works:</strong> dp[i][j] for prefixes. &#x27;*&#x27; matches nothing (left cell) or one more letter (cell above).</p>
 <p><strong>Example:</strong> s &quot;adceb&quot;, p &quot;*a*b&quot;</p>
-<pre class="trace border rounded">&#x27;*&#x27; empty, &#x27;a&#x27; matches, &#x27;*&#x27; eats &quot;dce&quot;, &#x27;b&#x27; matches → true</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">&#x27;*&#x27; empty, &#x27;a&#x27; matches, &#x27;*&#x27; eats &quot;dce&quot;, &#x27;b&#x27; matches → true</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -119,7 +122,7 @@
         <li class="list-group-item"><strong>Space:</strong> O(n·m).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Dynamic Programming</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Eps 86–96 coming soon</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Dynamic Programming</a><div class="mt-2"><span class="badge rounded-pill text-bg-light border me-1 mb-1 py-2 px-3">🎬 Episodes 86–96: video coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

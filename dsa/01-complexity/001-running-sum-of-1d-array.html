@@ -49,19 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">1480. Running Sum of 1d Array</h1>
     <p class="mb-3"><span class="badge text-bg-success">Easy</span> <span class="badge text-bg-light border">Single pass</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Given an array, return a new array where each position holds the total of all elements from index 0 up to that position.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/running-sum-of-1d-array/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> for each position, what is the total of everything up to here? The answer for one position is just the answer for the position before it plus one more number.</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> for each position, what is the total of everything up to here? The answer for one position is just the answer for the position before it plus one more number.</p>
 <p><strong>Why this works:</strong> we reuse the total we already have instead of adding everything again. That turns O(n²) into O(n).</p>
 <p><strong>Example:</strong> nums = [1, 2, 3, 4]</p>
-<pre class="trace border rounded">i=0: total = 1                → [1, 2, 3, 4]
-i=1: total = 1 + 2 = 3        → [1, 3, 3, 4]
-i=2: total = 3 + 3 = 6        → [1, 3, 6, 4]
-i=3: total = 6 + 4 = 10       → [1, 3, 6, 10]</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">i=0: total = 1                → [1, 2, 3, 4]</span><span class="tl" style="--i:1">i=1: total = 1 + 2 = 3        → [1, 3, 3, 4]</span><span class="tl" style="--i:2">i=2: total = 3 + 3 = 6        → [1, 3, 6, 4]</span><span class="tl" style="--i:3">i=3: total = 6 + 4 = 10       → [1, 3, 6, 10]</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -111,7 +111,13 @@ i=3: total = 6 + 4 = 10       → [1, 3, 6, 10]</pre></div>
         <li class="list-group-item"><strong>Space:</strong> O(1) extra — we update the input in place.</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Time &amp; Space Complexity</a><div class="mt-2"><a class="btn btn-sm btn-outline-danger me-1 mb-1" href="https://youtu.be/jZeS1tRzGs4" target="_blank" rel="noopener">▶ Watch Ep 2</a><a class="btn btn-sm btn-outline-danger me-1 mb-1" href="https://youtu.be/PxjhjjhEIqw" target="_blank" rel="noopener">▶ Watch Ep 3</a></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Time &amp; Space Complexity</a><div class="mt-2"><a class="video-cta" href="https://youtu.be/jZeS1tRzGs4" target="_blank" rel="noopener">
+  <span class="video-thumb"><img src="https://i.ytimg.com/vi/jZeS1tRzGs4/mqdefault.jpg" alt="" loading="lazy"><span class="play"><span></span></span></span>
+  <span class="video-text"><span class="video-kicker">▶ Watch the lesson first</span><strong>Episode 2: Time and Space Complexity (Big O made simple)</strong><small>Free on YouTube · Compiled Canvas</small></span>
+</a><a class="video-cta" href="https://youtu.be/PxjhjjhEIqw" target="_blank" rel="noopener">
+  <span class="video-thumb"><img src="https://i.ytimg.com/vi/PxjhjjhEIqw/mqdefault.jpg" alt="" loading="lazy"><span class="play"><span></span></span></span>
+  <span class="video-text"><span class="video-kicker">▶ Watch the lesson first</span><strong>Episode 3: How to calculate the complexity of any code</strong><small>Free on YouTube · Compiled Canvas</small></span>
+</a></div></div>
   </div>
 </div>
 <hr class="my-4">

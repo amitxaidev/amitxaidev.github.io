@@ -49,21 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">1295. Find Numbers with Even Number of Digits</h1>
     <p class="mb-3"><span class="badge text-bg-success">Easy</span> <span class="badge text-bg-light border">Digit counting</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Count how many numbers in the array have an even count of digits (for example 12 and 4321 qualify, 7 and 123 do not).</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/find-numbers-with-even-number-of-digits/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> how many numbers have 2, 4, 6… digits?</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> how many numbers have 2, 4, 6… digits?</p>
 <p><strong>Why this works:</strong> dividing by 10 chops off one digit, so counting digits takes about log10(x) steps. This is your first logarithmic loop.</p>
 <p><strong>Example:</strong> nums = [12, 345, 2, 6, 7896]</p>
-<pre class="trace border rounded">12   → 1 → 0          2 digits  ✓
-345  → 34 → 3 → 0     3 digits
-2    → 0              1 digit
-6    → 0              1 digit
-7896 → 789 → 78 → 7 → 0   4 digits ✓
-answer: 2</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">12   → 1 → 0          2 digits  ✓</span><span class="tl" style="--i:1">345  → 34 → 3 → 0     3 digits</span><span class="tl" style="--i:2">2    → 0              1 digit</span><span class="tl" style="--i:3">6    → 0              1 digit</span><span class="tl" style="--i:4">7896 → 789 → 78 → 7 → 0   4 digits ✓</span><span class="tl" style="--i:5">answer: 2</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -118,7 +116,13 @@ answer: 2</pre></div>
         <li class="list-group-item"><strong>Space:</strong> O(1).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Time &amp; Space Complexity</a><div class="mt-2"><a class="btn btn-sm btn-outline-danger me-1 mb-1" href="https://youtu.be/jZeS1tRzGs4" target="_blank" rel="noopener">▶ Watch Ep 2</a><a class="btn btn-sm btn-outline-danger me-1 mb-1" href="https://youtu.be/PxjhjjhEIqw" target="_blank" rel="noopener">▶ Watch Ep 3</a></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Time &amp; Space Complexity</a><div class="mt-2"><a class="video-cta" href="https://youtu.be/jZeS1tRzGs4" target="_blank" rel="noopener">
+  <span class="video-thumb"><img src="https://i.ytimg.com/vi/jZeS1tRzGs4/mqdefault.jpg" alt="" loading="lazy"><span class="play"><span></span></span></span>
+  <span class="video-text"><span class="video-kicker">▶ Watch the lesson first</span><strong>Episode 2: Time and Space Complexity (Big O made simple)</strong><small>Free on YouTube · Compiled Canvas</small></span>
+</a><a class="video-cta" href="https://youtu.be/PxjhjjhEIqw" target="_blank" rel="noopener">
+  <span class="video-thumb"><img src="https://i.ytimg.com/vi/PxjhjjhEIqw/mqdefault.jpg" alt="" loading="lazy"><span class="play"><span></span></span></span>
+  <span class="video-text"><span class="video-kicker">▶ Watch the lesson first</span><strong>Episode 3: How to calculate the complexity of any code</strong><small>Free on YouTube · Compiled Canvas</small></span>
+</a></div></div>
   </div>
 </div>
 <hr class="my-4">

@@ -49,16 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">36. Valid Sudoku</h1>
     <p class="mb-3"><span class="badge text-bg-warning">Medium</span> <span class="badge text-bg-light border">Row/column/box sets</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Check whether a partially filled 9×9 Sudoku board breaks any rule: no digit repeats in a row, a column or a 3×3 box. The puzzle doesn&#x27;t need to be solvable.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/valid-sudoku/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> does any row, column or 3×3 box repeat a digit?</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> does any row, column or 3×3 box repeat a digit?</p>
 <p><strong>Why this works:</strong> remember which digits each row, column and box has seen. Box number = (r/3)·3 + c/3.</p>
 <p><strong>Example:</strong> a &#x27;5&#x27; at (0,0) and another &#x27;5&#x27; at (1,1)</p>
-<pre class="trace border rounded">both in box 0 → repeat → false</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">both in box 0 → repeat → false</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -114,7 +117,7 @@
         <li class="list-group-item"><strong>Space:</strong> O(1).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">2D Arrays &amp; Matrix</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 14 coming soon</span></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">2D Arrays &amp; Matrix</a><div class="mt-2"><span class="badge rounded-pill text-bg-light border me-1 mb-1 py-2 px-3">🎬 Episode 14: video coming soon</span></div></div>
   </div>
 </div>
 <hr class="my-4">

@@ -49,19 +49,19 @@
   <div class="col-lg-8">
     <h1 class="h3 mb-2">190. Reverse Bits</h1>
     <p class="mb-3"><span class="badge text-bg-success">Easy</span> <span class="badge text-bg-light border">Shifts</span></p>
+    <ol class="journey list-unstyled" aria-label="Your steps for this problem">
+      <li data-step="read">Read</li><li data-step="understand">Understand</li><li data-step="hints">Hints</li><li data-step="approach">Approach</li><li data-step="solution">Solution</li><li data-step="solved">Solved</li>
+    </ol>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
     <p>Reverse the order of the 32 bits of an integer.</p>
     <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode: <a href="https://leetcode.com/problems/reverse-bits/" target="_blank" rel="noopener">open problem ↗</a></p>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Understanding</h2>
-    <div class="understanding"><p><strong>Really asking:</strong> mirror the 32-bit pattern.</p>
+    <div class="understanding" data-step-watch="understand"><p><strong>Really asking:</strong> mirror the 32-bit pattern.</p>
 <p><strong>Why this works:</strong> take the last bit of n and push it onto the right of the result, 32 times. Leading zeros become trailing zeros.</p>
 <p>Example (4 bits for short): n = 0011</p>
-<pre class="trace border rounded">step1: result 1,    n 001
-step2: result 11,   n 00
-step3: result 110,  n 0
-step4: result 1100</pre></div>
+<pre class="trace border rounded"><span class="tl" style="--i:0">step1: result 1,    n 001</span><span class="tl" style="--i:1">step2: result 11,   n 00</span><span class="tl" style="--i:2">step3: result 110,  n 0</span><span class="tl" style="--i:3">step4: result 1100</span></pre></div>
 
     <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
     <div class="hint mb-2">
@@ -112,7 +112,10 @@ step4: result 1100</pre></div>
         <li class="list-group-item"><strong>Space:</strong> O(1).</li>
       </ul>
     </div>
-    <div class="small text-body-secondary">Topic: <a href="index.html">Bit Manipulation</a><div class="mt-2"><a class="btn btn-sm btn-outline-danger me-1 mb-1" href="https://youtu.be/ZzdK8SqvsGU" target="_blank" rel="noopener">▶ Watch Ep 6</a></div></div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Bit Manipulation</a><div class="mt-2"><a class="video-cta" href="https://youtu.be/ZzdK8SqvsGU" target="_blank" rel="noopener">
+  <span class="video-thumb"><img src="https://i.ytimg.com/vi/ZzdK8SqvsGU/mqdefault.jpg" alt="" loading="lazy"><span class="play"><span></span></span></span>
+  <span class="video-text"><span class="video-kicker">▶ Watch the lesson first</span><strong>Episode 6: Bit manipulation from scratch</strong><small>Free on YouTube · Compiled Canvas</small></span>
+</a></div></div>
   </div>
 </div>
 <hr class="my-4">
