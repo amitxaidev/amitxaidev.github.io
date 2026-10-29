@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trie – LeetCode problems in Java | Compiled Canvas</title>
+<meta name="description" content="8 Trie LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:title" content="Trie – LeetCode problems in Java | Compiled Canvas">
+<meta property="og:description" content="8 Trie LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:image" content="https://amitxaidev.github.io/assets/logo.png">
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="../index.html">DSA Sheet</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Trie</li>
+    </ol></nav>
+    <div class="row g-4 align-items-end">
+      <div class="col-lg-8">
+        <h1 class="h2 mb-1">25. Trie</h1>
+        <p class="text-body-secondary mb-2">Prefix trees for words, autocomplete and XOR tricks.</p>
+        <div><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 97 (coming soon)</span></div>
+      </div>
+      <div class="col-lg-4" data-slugs="implement-trie-prefix-tree,design-add-and-search-words-data-structure,search-suggestions-system,replace-words,longest-word-in-dictionary,maximum-xor-of-two-numbers-in-an-array,word-search-ii,maximum-xor-with-an-element-from-array">
+        <div class="d-flex justify-content-between small mb-1"><span>Your progress</span><span><span class="done-count">0</span> of 8</span></div>
+        <div class="progress" role="progressbar" aria-label="Topic progress" style="height: 8px"><div class="progress-bar bg-success" style="width: 0%"></div></div>
+        <div class="small text-body-secondary mt-1">0 easy · 6 medium · 2 hard</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="d-flex flex-wrap gap-2 mb-3">
+  <input type="search" class="form-control search" style="max-width: 320px" placeholder="Search problems…" aria-label="Search problems">
+  <div class="btn-group btn-group-sm flex-wrap" role="group" aria-label="Filter">
+    <button type="button" class="btn btn-outline-secondary active" data-filter="all">All</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Easy">Easy</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Medium">Medium</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Hard">Hard</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="todo">Unsolved</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="done">Solved</button>
+  </div>
+</div>
+<div class="table-responsive">
+<table class="table table-hover align-middle ptable stagger">
+  <thead><tr><th style="width:2rem"></th><th class="d-none d-sm-table-cell" style="width:2.5rem">#</th><th>Problem</th><th class="d-none d-md-table-cell">Pattern</th><th>Level</th><th class="d-none d-sm-table-cell"></th></tr></thead>
+  <tbody>
+<tr data-slug="implement-trie-prefix-tree" data-diff="Medium" data-text="implement trie (prefix tree) trie basics 208">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="implement-trie-prefix-tree" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">1</td>
+  <td><a href="001-implement-trie-prefix-tree.html" class="fw-semibold">Implement Trie (Prefix Tree)</a> <span class="text-body-secondary small">#208</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Trie basics</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/implement-trie-prefix-tree/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="design-add-and-search-words-data-structure" data-diff="Medium" data-text="design add and search words data structure trie + dfs for wildcards 211">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="design-add-and-search-words-data-structure" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">2</td>
+  <td><a href="002-design-add-and-search-words-data-structure.html" class="fw-semibold">Design Add and Search Words Data Structure</a> <span class="text-body-secondary small">#211</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Trie + DFS for wildcards</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/design-add-and-search-words-data-structure/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="search-suggestions-system" data-diff="Medium" data-text="search suggestions system trie with top-3 lists 1268">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="search-suggestions-system" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">3</td>
+  <td><a href="003-search-suggestions-system.html" class="fw-semibold">Search Suggestions System</a> <span class="text-body-secondary small">#1268</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Trie with top-3 lists</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/search-suggestions-system/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="replace-words" data-diff="Medium" data-text="replace words shortest root in a trie 648">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="replace-words" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">4</td>
+  <td><a href="004-replace-words.html" class="fw-semibold">Replace Words</a> <span class="text-body-secondary small">#648</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Shortest root in a trie</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/replace-words/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="longest-word-in-dictionary" data-diff="Medium" data-text="longest word in dictionary trie walk through complete words 720">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="longest-word-in-dictionary" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">5</td>
+  <td><a href="005-longest-word-in-dictionary.html" class="fw-semibold">Longest Word in Dictionary</a> <span class="text-body-secondary small">#720</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Trie walk through complete words</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/longest-word-in-dictionary/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="maximum-xor-of-two-numbers-in-an-array" data-diff="Medium" data-text="maximum xor of two numbers in an array binary trie 421">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="maximum-xor-of-two-numbers-in-an-array" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">6</td>
+  <td><a href="006-maximum-xor-of-two-numbers-in-an-array.html" class="fw-semibold">Maximum XOR of Two Numbers in an Array</a> <span class="text-body-secondary small">#421</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Binary trie</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="word-search-ii" data-diff="Hard" data-text="word search ii trie-guided grid dfs 212">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="word-search-ii" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">7</td>
+  <td><a href="007-word-search-ii.html" class="fw-semibold">Word Search II</a> <span class="text-body-secondary small">#212</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Trie-guided grid DFS</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/word-search-ii/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="maximum-xor-with-an-element-from-array" data-diff="Hard" data-text="maximum xor with an element from array offline queries + binary trie 1707">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="maximum-xor-with-an-element-from-array" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">8</td>
+  <td><a href="008-maximum-xor-with-an-element-from-array.html" class="fw-semibold">Maximum XOR With an Element From Array</a> <span class="text-body-secondary small">#1707</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Offline queries + binary trie</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/maximum-xor-with-an-element-from-array/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+  </tbody>
+</table>
+</div>
+<p class="empty text-body-secondary" hidden>Nothing matches that filter.</p>
+<p class="small text-body-secondary mt-3">Work top to bottom — each list goes from easy to hard. Try a problem for at least 15 minutes before opening a hint. Ticks are saved in your browser.</p>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-0">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>
