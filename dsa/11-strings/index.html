@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strings – LeetCode problems in Java | Compiled Canvas</title>
+<meta name="description" content="15 Strings LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:title" content="Strings – LeetCode problems in Java | Compiled Canvas">
+<meta property="og:description" content="15 Strings LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:image" content="https://amitxaidev.github.io/assets/logo.png">
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="../index.html">DSA Sheet</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Strings</li>
+    </ol></nav>
+    <div class="row g-4 align-items-end">
+      <div class="col-lg-8">
+        <h1 class="h2 mb-1">11. Strings</h1>
+        <p class="text-body-secondary mb-2">StringBuilder, palindromes, anagrams, frequency counting and top string questions.</p>
+        <div><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 16 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 17 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 20 (coming soon)</span></div>
+      </div>
+      <div class="col-lg-4" data-slugs="longest-common-prefix,valid-anagram,first-unique-character-in-a-string,roman-to-integer,isomorphic-strings,longest-palindrome,ransom-note,group-anagrams,reverse-words-in-a-string,longest-palindromic-substring,string-to-integer-atoi,palindromic-substrings,sort-characters-by-frequency,integer-to-roman,string-compression">
+        <div class="d-flex justify-content-between small mb-1"><span>Your progress</span><span><span class="done-count">0</span> of 15</span></div>
+        <div class="progress" role="progressbar" aria-label="Topic progress" style="height: 8px"><div class="progress-bar bg-success" style="width: 0%"></div></div>
+        <div class="small text-body-secondary mt-1">7 easy · 8 medium · 0 hard</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="d-flex flex-wrap gap-2 mb-3">
+  <input type="search" class="form-control search" style="max-width: 320px" placeholder="Search problems…" aria-label="Search problems">
+  <div class="btn-group btn-group-sm flex-wrap" role="group" aria-label="Filter">
+    <button type="button" class="btn btn-outline-secondary active" data-filter="all">All</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Easy">Easy</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Medium">Medium</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Hard">Hard</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="todo">Unsolved</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="done">Solved</button>
+  </div>
+</div>
+<div class="table-responsive">
+<table class="table table-hover align-middle ptable stagger">
+  <thead><tr><th style="width:2rem"></th><th class="d-none d-sm-table-cell" style="width:2.5rem">#</th><th>Problem</th><th class="d-none d-md-table-cell">Pattern</th><th>Level</th><th class="d-none d-sm-table-cell"></th></tr></thead>
+  <tbody>
+<tr data-slug="longest-common-prefix" data-diff="Easy" data-text="longest common prefix vertical scan 14">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="longest-common-prefix" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">1</td>
+  <td><a href="001-longest-common-prefix.html" class="fw-semibold">Longest Common Prefix</a> <span class="text-body-secondary small">#14</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Vertical scan</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/longest-common-prefix/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="valid-anagram" data-diff="Easy" data-text="valid anagram frequency count 242">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="valid-anagram" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">2</td>
+  <td><a href="002-valid-anagram.html" class="fw-semibold">Valid Anagram</a> <span class="text-body-secondary small">#242</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Frequency count</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/valid-anagram/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="first-unique-character-in-a-string" data-diff="Easy" data-text="first unique character in a string frequency count 387">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="first-unique-character-in-a-string" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">3</td>
+  <td><a href="003-first-unique-character-in-a-string.html" class="fw-semibold">First Unique Character in a String</a> <span class="text-body-secondary small">#387</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Frequency count</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/first-unique-character-in-a-string/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="roman-to-integer" data-diff="Easy" data-text="roman to integer look-ahead 13">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="roman-to-integer" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">4</td>
+  <td><a href="004-roman-to-integer.html" class="fw-semibold">Roman to Integer</a> <span class="text-body-secondary small">#13</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Look-ahead</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/roman-to-integer/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="isomorphic-strings" data-diff="Easy" data-text="isomorphic strings two-way mapping 205">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="isomorphic-strings" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">5</td>
+  <td><a href="005-isomorphic-strings.html" class="fw-semibold">Isomorphic Strings</a> <span class="text-body-secondary small">#205</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Two-way mapping</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/isomorphic-strings/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="longest-palindrome" data-diff="Easy" data-text="longest palindrome frequency count 409">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="longest-palindrome" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">6</td>
+  <td><a href="006-longest-palindrome.html" class="fw-semibold">Longest Palindrome</a> <span class="text-body-secondary small">#409</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Frequency count</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/longest-palindrome/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="ransom-note" data-diff="Easy" data-text="ransom note frequency count 383">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="ransom-note" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">7</td>
+  <td><a href="007-ransom-note.html" class="fw-semibold">Ransom Note</a> <span class="text-body-secondary small">#383</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Frequency count</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/ransom-note/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="group-anagrams" data-diff="Medium" data-text="group anagrams canonical key + hashmap 49">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="group-anagrams" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">8</td>
+  <td><a href="008-group-anagrams.html" class="fw-semibold">Group Anagrams</a> <span class="text-body-secondary small">#49</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Canonical key + HashMap</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/group-anagrams/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="reverse-words-in-a-string" data-diff="Medium" data-text="reverse words in a string split &amp; rebuild 151">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="reverse-words-in-a-string" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">9</td>
+  <td><a href="009-reverse-words-in-a-string.html" class="fw-semibold">Reverse Words in a String</a> <span class="text-body-secondary small">#151</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Split &amp; rebuild</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/reverse-words-in-a-string/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="longest-palindromic-substring" data-diff="Medium" data-text="longest palindromic substring expand around centre 5">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="longest-palindromic-substring" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">10</td>
+  <td><a href="010-longest-palindromic-substring.html" class="fw-semibold">Longest Palindromic Substring</a> <span class="text-body-secondary small">#5</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Expand around centre</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/longest-palindromic-substring/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="string-to-integer-atoi" data-diff="Medium" data-text="string to integer (atoi) parsing with overflow clamp 8">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="string-to-integer-atoi" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">11</td>
+  <td><a href="011-string-to-integer-atoi.html" class="fw-semibold">String to Integer (atoi)</a> <span class="text-body-secondary small">#8</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Parsing with overflow clamp</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/string-to-integer-atoi/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="palindromic-substrings" data-diff="Medium" data-text="palindromic substrings expand around centre 647">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="palindromic-substrings" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">12</td>
+  <td><a href="012-palindromic-substrings.html" class="fw-semibold">Palindromic Substrings</a> <span class="text-body-secondary small">#647</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Expand around centre</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/palindromic-substrings/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="sort-characters-by-frequency" data-diff="Medium" data-text="sort characters by frequency count + bucket 451">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="sort-characters-by-frequency" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">13</td>
+  <td><a href="013-sort-characters-by-frequency.html" class="fw-semibold">Sort Characters By Frequency</a> <span class="text-body-secondary small">#451</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Count + bucket</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/sort-characters-by-frequency/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="integer-to-roman" data-diff="Medium" data-text="integer to roman greedy table 12">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="integer-to-roman" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">14</td>
+  <td><a href="014-integer-to-roman.html" class="fw-semibold">Integer to Roman</a> <span class="text-body-secondary small">#12</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Greedy table</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/integer-to-roman/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="string-compression" data-diff="Medium" data-text="string compression read/write pointers 443">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="string-compression" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">15</td>
+  <td><a href="015-string-compression.html" class="fw-semibold">String Compression</a> <span class="text-body-secondary small">#443</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Read/write pointers</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/string-compression/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+  </tbody>
+</table>
+</div>
+<p class="empty text-body-secondary" hidden>Nothing matches that filter.</p>
+<p class="small text-body-secondary mt-3">Work top to bottom — each list goes from easy to hard. Try a problem for at least 15 minutes before opening a hint. Ticks are saved in your browser.</p>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-0">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>
