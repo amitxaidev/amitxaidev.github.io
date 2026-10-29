@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Greedy – LeetCode problems in Java | Compiled Canvas</title>
+<meta name="description" content="14 Greedy LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:title" content="Greedy – LeetCode problems in Java | Compiled Canvas">
+<meta property="og:description" content="14 Greedy LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:image" content="https://amitxaidev.github.io/assets/logo.png">
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="../index.html">DSA Sheet</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Greedy</li>
+    </ol></nav>
+    <div class="row g-4 align-items-end">
+      <div class="col-lg-8">
+        <h1 class="h2 mb-1">22. Greedy</h1>
+        <p class="text-body-secondary mb-2">Intervals, jump game, gas station and exchange arguments.</p>
+        <div><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 69 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 70 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 71 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 72 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 73 (coming soon)</span></div>
+      </div>
+      <div class="col-lg-4" data-slugs="assign-cookies,lemonade-change,maximum-units-on-a-truck,best-time-to-buy-and-sell-stock-ii,jump-game,jump-game-ii,gas-station,non-overlapping-intervals,minimum-number-of-arrows-to-burst-balloons,insert-interval,partition-labels,valid-parenthesis-string,hand-of-straights,candy">
+        <div class="d-flex justify-content-between small mb-1"><span>Your progress</span><span><span class="done-count">0</span> of 14</span></div>
+        <div class="progress" role="progressbar" aria-label="Topic progress" style="height: 8px"><div class="progress-bar bg-success" style="width: 0%"></div></div>
+        <div class="small text-body-secondary mt-1">3 easy · 10 medium · 1 hard</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="d-flex flex-wrap gap-2 mb-3">
+  <input type="search" class="form-control search" style="max-width: 320px" placeholder="Search problems…" aria-label="Search problems">
+  <div class="btn-group btn-group-sm flex-wrap" role="group" aria-label="Filter">
+    <button type="button" class="btn btn-outline-secondary active" data-filter="all">All</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Easy">Easy</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Medium">Medium</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Hard">Hard</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="todo">Unsolved</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="done">Solved</button>
+  </div>
+</div>
+<div class="table-responsive">
+<table class="table table-hover align-middle ptable stagger">
+  <thead><tr><th style="width:2rem"></th><th class="d-none d-sm-table-cell" style="width:2.5rem">#</th><th>Problem</th><th class="d-none d-md-table-cell">Pattern</th><th>Level</th><th class="d-none d-sm-table-cell"></th></tr></thead>
+  <tbody>
+<tr data-slug="assign-cookies" data-diff="Easy" data-text="assign cookies sort + match smallest 455">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="assign-cookies" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">1</td>
+  <td><a href="001-assign-cookies.html" class="fw-semibold">Assign Cookies</a> <span class="text-body-secondary small">#455</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Sort + match smallest</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/assign-cookies/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="lemonade-change" data-diff="Easy" data-text="lemonade change greedy change-making 860">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="lemonade-change" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">2</td>
+  <td><a href="002-lemonade-change.html" class="fw-semibold">Lemonade Change</a> <span class="text-body-secondary small">#860</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Greedy change-making</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/lemonade-change/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="maximum-units-on-a-truck" data-diff="Easy" data-text="maximum units on a truck fractional-knapsack style 1710">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="maximum-units-on-a-truck" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">3</td>
+  <td><a href="003-maximum-units-on-a-truck.html" class="fw-semibold">Maximum Units on a Truck</a> <span class="text-body-secondary small">#1710</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Fractional-knapsack style</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/maximum-units-on-a-truck/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="best-time-to-buy-and-sell-stock-ii" data-diff="Medium" data-text="best time to buy and sell stock ii collect every rise 122">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="best-time-to-buy-and-sell-stock-ii" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">4</td>
+  <td><a href="004-best-time-to-buy-and-sell-stock-ii.html" class="fw-semibold">Best Time to Buy and Sell Stock II</a> <span class="text-body-secondary small">#122</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Collect every rise</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="jump-game" data-diff="Medium" data-text="jump game furthest reach 55">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="jump-game" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">5</td>
+  <td><a href="005-jump-game.html" class="fw-semibold">Jump Game</a> <span class="text-body-secondary small">#55</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Furthest reach</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/jump-game/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="jump-game-ii" data-diff="Medium" data-text="jump game ii bfs by ranges 45">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="jump-game-ii" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">6</td>
+  <td><a href="006-jump-game-ii.html" class="fw-semibold">Jump Game II</a> <span class="text-body-secondary small">#45</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">BFS by ranges</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/jump-game-ii/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="gas-station" data-diff="Medium" data-text="gas station reset start on deficit 134">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="gas-station" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">7</td>
+  <td><a href="007-gas-station.html" class="fw-semibold">Gas Station</a> <span class="text-body-secondary small">#134</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Reset start on deficit</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/gas-station/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="non-overlapping-intervals" data-diff="Medium" data-text="non-overlapping intervals sort by end (activity selection) 435">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="non-overlapping-intervals" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">8</td>
+  <td><a href="008-non-overlapping-intervals.html" class="fw-semibold">Non-overlapping Intervals</a> <span class="text-body-secondary small">#435</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Sort by end (activity selection)</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/non-overlapping-intervals/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="minimum-number-of-arrows-to-burst-balloons" data-diff="Medium" data-text="minimum number of arrows to burst balloons sort by end 452">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="minimum-number-of-arrows-to-burst-balloons" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">9</td>
+  <td><a href="009-minimum-number-of-arrows-to-burst-balloons.html" class="fw-semibold">Minimum Number of Arrows to Burst Balloons</a> <span class="text-body-secondary small">#452</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Sort by end</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="insert-interval" data-diff="Medium" data-text="insert interval three phases 57">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="insert-interval" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">10</td>
+  <td><a href="010-insert-interval.html" class="fw-semibold">Insert Interval</a> <span class="text-body-secondary small">#57</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Three phases</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/insert-interval/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="partition-labels" data-diff="Medium" data-text="partition labels last occurrence 763">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="partition-labels" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">11</td>
+  <td><a href="011-partition-labels.html" class="fw-semibold">Partition Labels</a> <span class="text-body-secondary small">#763</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Last occurrence</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/partition-labels/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="valid-parenthesis-string" data-diff="Medium" data-text="valid parenthesis string range of open counts 678">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="valid-parenthesis-string" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">12</td>
+  <td><a href="012-valid-parenthesis-string.html" class="fw-semibold">Valid Parenthesis String</a> <span class="text-body-secondary small">#678</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Range of open counts</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/valid-parenthesis-string/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="hand-of-straights" data-diff="Medium" data-text="hand of straights smallest card starts a group 846">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="hand-of-straights" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">13</td>
+  <td><a href="013-hand-of-straights.html" class="fw-semibold">Hand of Straights</a> <span class="text-body-secondary small">#846</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Smallest card starts a group</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/hand-of-straights/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="candy" data-diff="Hard" data-text="candy two passes 135">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="candy" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">14</td>
+  <td><a href="014-candy.html" class="fw-semibold">Candy</a> <span class="text-body-secondary small">#135</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Two passes</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/candy/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+  </tbody>
+</table>
+</div>
+<p class="empty text-body-secondary" hidden>Nothing matches that filter.</p>
+<p class="small text-body-secondary mt-3">Work top to bottom — each list goes from easy to hard. Try a problem for at least 15 minutes before opening a hint. Ticks are saved in your browser.</p>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-0">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>
