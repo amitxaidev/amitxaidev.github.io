@@ -1,0 +1,99 @@
+/* Compiled Canvas – small additions on top of Bootstrap 5 */
+:root {
+  --brand: #e8590c;
+  --brand-dark: #c94c0a;
+  --gold: #f6b93b;
+}
+.text-brand { color: #ff7a2f; }
+.bg-brand { background: var(--brand) !important; }
+.btn-brand {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--brand-dark);
+  --bs-btn-hover-border-color: var(--brand-dark);
+  --bs-btn-active-bg: var(--brand-dark);
+  --bs-btn-active-border-color: var(--brand-dark);
+}
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+.btn:hover, .card:hover, .navbar-brand:hover { text-decoration: none; }
+
+/* ---------- hero with animated algorithm canvas */
+.hero { position: relative; background: #111; overflow: hidden; }
+.hero::after { /* soften the canvas behind the text */
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(17,17,17,.95) 0%, rgba(17,17,17,.75) 55%, rgba(17,17,17,.35) 100%);
+}
+#hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+@media (max-width: 767.98px) {
+  .hero::after { background: linear-gradient(180deg, rgba(17,17,17,.92) 0%, rgba(17,17,17,.8) 100%); }
+}
+.hero .container { z-index: 1; }
+
+.code-card { background: #1b1b1b; border: 1px solid #333; border-radius: .6rem; overflow: hidden; }
+.code-card-bar { display: flex; align-items: center; gap: 6px; padding: .5rem .75rem; background: #232323; border-bottom: 1px solid #333; }
+.code-card-bar span { width: 10px; height: 10px; border-radius: 50%; background: #555; }
+.code-card-bar span:nth-child(1) { background: #ff5f57; }
+.code-card-bar span:nth-child(2) { background: #febc2e; }
+.code-card-bar span:nth-child(3) { background: #28c840; }
+.code-card-bar small { margin-left: .5rem; color: #999; font-size: .75rem; }
+.code-card pre { padding: 1rem 1.1rem; color: #e9e3d8; font-size: .9rem; min-height: 11.5em; background: transparent; }
+.code-card .kw { color: #ff7a2f; }
+.code-card .num { color: #f6b93b; }
+.caret { display: inline-block; width: 8px; height: 1.1em; background: #ff7a2f; vertical-align: text-bottom; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ---------- course cards */
+.course-card { transition: transform .2s ease, box-shadow .2s ease; }
+.course-card:hover { transform: translateY(-4px); box-shadow: 0 .75rem 1.5rem rgba(0,0,0,.12) !important; }
+.course-card.soon { border-style: dashed; }
+.dsa-visual { background: #151515; min-height: 220px; }
+.bars { display: flex; align-items: flex-end; gap: 10px; height: 150px; }
+.bars span {
+  width: 22px; height: calc(var(--h) * 15px); border-radius: 4px 4px 0 0; background: #444;
+  animation: bar 3.2s ease-in-out infinite; animation-delay: calc(var(--i) * .18s);
+}
+@keyframes bar {
+  0%, 100% { background: #444; transform: scaleY(1); }
+  30% { background: var(--brand); transform: scaleY(1.12); }
+  60% { background: var(--gold); transform: scaleY(.9); }
+}
+.bars span { transform-origin: bottom; }
+
+.video-card img { transition: transform .3s ease; }
+.video-card:hover img { transform: scale(1.05); }
+.video-card .ratio { overflow: hidden; }
+
+.step-num {
+  width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; margin-bottom: .75rem;
+  background: var(--brand); color: #fff; font-weight: 700;
+}
+
+/* ---------- inner page header */
+.page-head { background: var(--bs-tertiary-bg); border-bottom: 1px solid var(--bs-border-color); }
+
+/* ---------- problem lists */
+.ptable tr.is-done a.fw-semibold { color: var(--bs-secondary-color); text-decoration: line-through; }
+pre { padding: 1rem; font-size: .875rem; background: var(--bs-tertiary-bg); }
+pre code.hljs { background: transparent; padding: 0; }
+.copy { font-size: .75rem; }
+.reveal-body:not([hidden]) { animation: drop .25s ease; }
+@keyframes drop { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+.progress-bar { transition: width .8s ease; }
+
+/* ---------- scroll motion */
+.js .fade-up { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.js .fade-up.in { opacity: 1; transform: none; }
+.js .stagger tbody tr { opacity: 0; transform: translateY(8px); transition: opacity .35s ease, transform .35s ease; }
+.js .stagger.in tbody tr { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .fade-up, .js .stagger tbody tr { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .bars span, .caret, .progress-bar-animated { animation: none !important; }
+}
+@media (max-width: 575.98px) {
+  .pager .btn { width: 100%; }
+  .bars span { width: 16px; }
+}
