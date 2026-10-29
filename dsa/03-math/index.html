@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basic Math – LeetCode problems in Java | Compiled Canvas</title>
+<meta name="description" content="13 Basic Math LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:title" content="Basic Math – LeetCode problems in Java | Compiled Canvas">
+<meta property="og:description" content="13 Basic Math LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:image" content="https://amitxaidev.github.io/assets/logo.png">
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="../index.html">DSA Sheet</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Basic Math</li>
+    </ol></nav>
+    <div class="row g-4 align-items-end">
+      <div class="col-lg-8">
+        <h1 class="h2 mb-1">3. Basic Math</h1>
+        <p class="text-body-secondary mb-2">Primes, GCD, modulo, digits and the Sieve of Eratosthenes.</p>
+        <div><a class="btn btn-sm btn-outline-danger me-1 mb-1" href="https://youtu.be/y1GZw3VByAU" target="_blank" rel="noopener">▶ Watch Ep 5</a></div>
+      </div>
+      <div class="col-lg-4" data-slugs="palindrome-number,subtract-the-product-and-sum-of-digits-of-an-integer,count-the-digits-that-divide-a-number,add-digits,find-greatest-common-divisor-of-array,greatest-common-divisor-of-strings,ugly-number,reverse-integer,count-primes,powx-n,factorial-trailing-zeroes,count-good-numbers,consecutive-numbers-sum">
+        <div class="d-flex justify-content-between small mb-1"><span>Your progress</span><span><span class="done-count">0</span> of 13</span></div>
+        <div class="progress" role="progressbar" aria-label="Topic progress" style="height: 8px"><div class="progress-bar bg-success" style="width: 0%"></div></div>
+        <div class="small text-body-secondary mt-1">7 easy · 5 medium · 1 hard</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="d-flex flex-wrap gap-2 mb-3">
+  <input type="search" class="form-control search" style="max-width: 320px" placeholder="Search problems…" aria-label="Search problems">
+  <div class="btn-group btn-group-sm flex-wrap" role="group" aria-label="Filter">
+    <button type="button" class="btn btn-outline-secondary active" data-filter="all">All</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Easy">Easy</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Medium">Medium</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Hard">Hard</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="todo">Unsolved</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="done">Solved</button>
+  </div>
+</div>
+<div class="table-responsive">
+<table class="table table-hover align-middle ptable stagger">
+  <thead><tr><th style="width:2rem"></th><th class="d-none d-sm-table-cell" style="width:2.5rem">#</th><th>Problem</th><th class="d-none d-md-table-cell">Pattern</th><th>Level</th><th class="d-none d-sm-table-cell"></th></tr></thead>
+  <tbody>
+<tr data-slug="palindrome-number" data-diff="Easy" data-text="palindrome number digit reversal 9">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="palindrome-number" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">1</td>
+  <td><a href="001-palindrome-number.html" class="fw-semibold">Palindrome Number</a> <span class="text-body-secondary small">#9</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Digit reversal</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/palindrome-number/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="subtract-the-product-and-sum-of-digits-of-an-integer" data-diff="Easy" data-text="subtract the product and sum of digits of an integer digit extraction 1281">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="subtract-the-product-and-sum-of-digits-of-an-integer" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">2</td>
+  <td><a href="002-subtract-the-product-and-sum-of-digits-of-an-integer.html" class="fw-semibold">Subtract the Product and Sum of Digits of an Integer</a> <span class="text-body-secondary small">#1281</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Digit extraction</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="count-the-digits-that-divide-a-number" data-diff="Easy" data-text="count the digits that divide a number digit extraction + modulo 2520">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="count-the-digits-that-divide-a-number" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">3</td>
+  <td><a href="003-count-the-digits-that-divide-a-number.html" class="fw-semibold">Count the Digits That Divide a Number</a> <span class="text-body-secondary small">#2520</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Digit extraction + modulo</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/count-the-digits-that-divide-a-number/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="add-digits" data-diff="Easy" data-text="add digits digital root 258">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="add-digits" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">4</td>
+  <td><a href="004-add-digits.html" class="fw-semibold">Add Digits</a> <span class="text-body-secondary small">#258</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Digital root</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/add-digits/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="find-greatest-common-divisor-of-array" data-diff="Easy" data-text="find greatest common divisor of array euclid&#x27;s gcd 1979">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="find-greatest-common-divisor-of-array" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">5</td>
+  <td><a href="005-find-greatest-common-divisor-of-array.html" class="fw-semibold">Find Greatest Common Divisor of Array</a> <span class="text-body-secondary small">#1979</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Euclid&#x27;s GCD</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/find-greatest-common-divisor-of-array/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="greatest-common-divisor-of-strings" data-diff="Easy" data-text="greatest common divisor of strings gcd on lengths 1071">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="greatest-common-divisor-of-strings" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">6</td>
+  <td><a href="006-greatest-common-divisor-of-strings.html" class="fw-semibold">Greatest Common Divisor of Strings</a> <span class="text-body-secondary small">#1071</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">GCD on lengths</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/greatest-common-divisor-of-strings/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="ugly-number" data-diff="Easy" data-text="ugly number prime factors 263">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="ugly-number" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">7</td>
+  <td><a href="007-ugly-number.html" class="fw-semibold">Ugly Number</a> <span class="text-body-secondary small">#263</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Prime factors</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/ugly-number/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="reverse-integer" data-diff="Medium" data-text="reverse integer overflow checks 7">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="reverse-integer" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">8</td>
+  <td><a href="008-reverse-integer.html" class="fw-semibold">Reverse Integer</a> <span class="text-body-secondary small">#7</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Overflow checks</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/reverse-integer/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="count-primes" data-diff="Medium" data-text="count primes sieve of eratosthenes 204">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="count-primes" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">9</td>
+  <td><a href="009-count-primes.html" class="fw-semibold">Count Primes</a> <span class="text-body-secondary small">#204</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Sieve of Eratosthenes</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/count-primes/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="powx-n" data-diff="Medium" data-text="pow(x, n) fast exponentiation 50">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="powx-n" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">10</td>
+  <td><a href="010-powx-n.html" class="fw-semibold">Pow(x, n)</a> <span class="text-body-secondary small">#50</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Fast exponentiation</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/powx-n/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="factorial-trailing-zeroes" data-diff="Medium" data-text="factorial trailing zeroes counting factors 172">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="factorial-trailing-zeroes" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">11</td>
+  <td><a href="011-factorial-trailing-zeroes.html" class="fw-semibold">Factorial Trailing Zeroes</a> <span class="text-body-secondary small">#172</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Counting factors</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/factorial-trailing-zeroes/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="count-good-numbers" data-diff="Medium" data-text="count good numbers modular exponentiation 1922">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="count-good-numbers" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">12</td>
+  <td><a href="012-count-good-numbers.html" class="fw-semibold">Count Good Numbers</a> <span class="text-body-secondary small">#1922</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Modular exponentiation</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/count-good-numbers/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="consecutive-numbers-sum" data-diff="Hard" data-text="consecutive numbers sum number theory 829">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="consecutive-numbers-sum" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">13</td>
+  <td><a href="013-consecutive-numbers-sum.html" class="fw-semibold">Consecutive Numbers Sum</a> <span class="text-body-secondary small">#829</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Number theory</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/consecutive-numbers-sum/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+  </tbody>
+</table>
+</div>
+<p class="empty text-body-secondary" hidden>Nothing matches that filter.</p>
+<p class="small text-body-secondary mt-3">Work top to bottom — each list goes from easy to hard. Try a problem for at least 15 minutes before opening a hint. Ticks are saved in your browser.</p>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-0">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>
