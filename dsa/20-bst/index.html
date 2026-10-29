@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Binary Search Trees – LeetCode problems in Java | Compiled Canvas</title>
+<meta name="description" content="12 Binary Search Trees LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:title" content="Binary Search Trees – LeetCode problems in Java | Compiled Canvas">
+<meta property="og:description" content="12 Binary Search Trees LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:image" content="https://amitxaidev.github.io/assets/logo.png">
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="../index.html">DSA Sheet</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Binary Search Trees</li>
+    </ol></nav>
+    <div class="row g-4 align-items-end">
+      <div class="col-lg-8">
+        <h1 class="h2 mb-1">20. Binary Search Trees</h1>
+        <p class="text-body-secondary mb-2">Insert, delete, validate, kth smallest and BST iterators.</p>
+        <div><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 61 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 62 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 63 (coming soon)</span></div>
+      </div>
+      <div class="col-lg-4" data-slugs="search-in-a-binary-search-tree,convert-sorted-array-to-binary-search-tree,minimum-absolute-difference-in-bst,range-sum-of-bst,insert-into-a-binary-search-tree,delete-node-in-a-bst,validate-binary-search-tree,kth-smallest-element-in-a-bst,lowest-common-ancestor-of-a-binary-search-tree,binary-search-tree-iterator,construct-binary-search-tree-from-preorder-traversal,recover-binary-search-tree">
+        <div class="d-flex justify-content-between small mb-1"><span>Your progress</span><span><span class="done-count">0</span> of 12</span></div>
+        <div class="progress" role="progressbar" aria-label="Topic progress" style="height: 8px"><div class="progress-bar bg-success" style="width: 0%"></div></div>
+        <div class="small text-body-secondary mt-1">4 easy · 8 medium · 0 hard</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="d-flex flex-wrap gap-2 mb-3">
+  <input type="search" class="form-control search" style="max-width: 320px" placeholder="Search problems…" aria-label="Search problems">
+  <div class="btn-group btn-group-sm flex-wrap" role="group" aria-label="Filter">
+    <button type="button" class="btn btn-outline-secondary active" data-filter="all">All</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Easy">Easy</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Medium">Medium</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Hard">Hard</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="todo">Unsolved</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="done">Solved</button>
+  </div>
+</div>
+<div class="table-responsive">
+<table class="table table-hover align-middle ptable stagger">
+  <thead><tr><th style="width:2rem"></th><th class="d-none d-sm-table-cell" style="width:2.5rem">#</th><th>Problem</th><th class="d-none d-md-table-cell">Pattern</th><th>Level</th><th class="d-none d-sm-table-cell"></th></tr></thead>
+  <tbody>
+<tr data-slug="search-in-a-binary-search-tree" data-diff="Easy" data-text="search in a binary search tree bst walk 700">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="search-in-a-binary-search-tree" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">1</td>
+  <td><a href="001-search-in-a-binary-search-tree.html" class="fw-semibold">Search in a Binary Search Tree</a> <span class="text-body-secondary small">#700</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">BST walk</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/search-in-a-binary-search-tree/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="convert-sorted-array-to-binary-search-tree" data-diff="Easy" data-text="convert sorted array to binary search tree middle as root 108">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="convert-sorted-array-to-binary-search-tree" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">2</td>
+  <td><a href="002-convert-sorted-array-to-binary-search-tree.html" class="fw-semibold">Convert Sorted Array to Binary Search Tree</a> <span class="text-body-secondary small">#108</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Middle as root</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="minimum-absolute-difference-in-bst" data-diff="Easy" data-text="minimum absolute difference in bst inorder = sorted 530">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="minimum-absolute-difference-in-bst" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">3</td>
+  <td><a href="003-minimum-absolute-difference-in-bst.html" class="fw-semibold">Minimum Absolute Difference in BST</a> <span class="text-body-secondary small">#530</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Inorder = sorted</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/minimum-absolute-difference-in-bst/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="range-sum-of-bst" data-diff="Easy" data-text="range sum of bst pruned dfs 938">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="range-sum-of-bst" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">4</td>
+  <td><a href="004-range-sum-of-bst.html" class="fw-semibold">Range Sum of BST</a> <span class="text-body-secondary small">#938</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Pruned DFS</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/range-sum-of-bst/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="insert-into-a-binary-search-tree" data-diff="Medium" data-text="insert into a binary search tree bst walk to a null slot 701">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="insert-into-a-binary-search-tree" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">5</td>
+  <td><a href="005-insert-into-a-binary-search-tree.html" class="fw-semibold">Insert into a Binary Search Tree</a> <span class="text-body-secondary small">#701</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">BST walk to a null slot</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/insert-into-a-binary-search-tree/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="delete-node-in-a-bst" data-diff="Medium" data-text="delete node in a bst three deletion cases 450">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="delete-node-in-a-bst" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">6</td>
+  <td><a href="006-delete-node-in-a-bst.html" class="fw-semibold">Delete Node in a BST</a> <span class="text-body-secondary small">#450</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Three deletion cases</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/delete-node-in-a-bst/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="validate-binary-search-tree" data-diff="Medium" data-text="validate binary search tree bounds passed down 98">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="validate-binary-search-tree" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">7</td>
+  <td><a href="007-validate-binary-search-tree.html" class="fw-semibold">Validate Binary Search Tree</a> <span class="text-body-secondary small">#98</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Bounds passed down</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/validate-binary-search-tree/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="kth-smallest-element-in-a-bst" data-diff="Medium" data-text="kth smallest element in a bst inorder with a counter 230">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="kth-smallest-element-in-a-bst" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">8</td>
+  <td><a href="008-kth-smallest-element-in-a-bst.html" class="fw-semibold">Kth Smallest Element in a BST</a> <span class="text-body-secondary small">#230</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Inorder with a counter</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="lowest-common-ancestor-of-a-binary-search-tree" data-diff="Medium" data-text="lowest common ancestor of a binary search tree split point 235">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="lowest-common-ancestor-of-a-binary-search-tree" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">9</td>
+  <td><a href="009-lowest-common-ancestor-of-a-binary-search-tree.html" class="fw-semibold">Lowest Common Ancestor of a Binary Search Tree</a> <span class="text-body-secondary small">#235</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Split point</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="binary-search-tree-iterator" data-diff="Medium" data-text="binary search tree iterator controlled inorder with a stack 173">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="binary-search-tree-iterator" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">10</td>
+  <td><a href="010-binary-search-tree-iterator.html" class="fw-semibold">Binary Search Tree Iterator</a> <span class="text-body-secondary small">#173</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Controlled inorder with a stack</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/binary-search-tree-iterator/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="construct-binary-search-tree-from-preorder-traversal" data-diff="Medium" data-text="construct binary search tree from preorder traversal upper-bound recursion 1008">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="construct-binary-search-tree-from-preorder-traversal" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">11</td>
+  <td><a href="011-construct-binary-search-tree-from-preorder-traversal.html" class="fw-semibold">Construct Binary Search Tree from Preorder Traversal</a> <span class="text-body-secondary small">#1008</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Upper-bound recursion</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="recover-binary-search-tree" data-diff="Medium" data-text="recover binary search tree inorder to find swapped pair 99">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="recover-binary-search-tree" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">12</td>
+  <td><a href="012-recover-binary-search-tree.html" class="fw-semibold">Recover Binary Search Tree</a> <span class="text-body-secondary small">#99</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Inorder to find swapped pair</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/recover-binary-search-tree/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+  </tbody>
+</table>
+</div>
+<p class="empty text-body-secondary" hidden>Nothing matches that filter.</p>
+<p class="small text-body-secondary mt-3">Work top to bottom — each list goes from easy to hard. Try a problem for at least 15 minutes before opening a hint. Ticks are saved in your browser.</p>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-0">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>
