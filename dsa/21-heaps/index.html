@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heaps &amp; Priority Queue – LeetCode problems in Java | Compiled Canvas</title>
+<meta name="description" content="13 Heaps &amp; Priority Queue LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:title" content="Heaps &amp; Priority Queue – LeetCode problems in Java | Compiled Canvas">
+<meta property="og:description" content="13 Heaps &amp; Priority Queue LeetCode problems in order, with hints, approach and Java solutions.">
+<meta property="og:image" content="https://amitxaidev.github.io/assets/logo.png">
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="../index.html">DSA Sheet</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Heaps &amp; Priority Queue</li>
+    </ol></nav>
+    <div class="row g-4 align-items-end">
+      <div class="col-lg-8">
+        <h1 class="h2 mb-1">21. Heaps &amp; Priority Queue</h1>
+        <p class="text-body-secondary mb-2">Top K, k-way merge and the two-heap median pattern.</p>
+        <div><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 64 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 65 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 66 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 67 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 68 (coming soon)</span></div>
+      </div>
+      <div class="col-lg-4" data-slugs="kth-largest-element-in-a-stream,last-stone-weight,kth-largest-element-in-an-array,top-k-frequent-elements,k-closest-points-to-origin,top-k-frequent-words,task-scheduler,reorganize-string,kth-smallest-element-in-a-sorted-matrix,furthest-building-you-can-reach,find-median-from-data-stream,ipo,smallest-range-covering-elements-from-k-lists">
+        <div class="d-flex justify-content-between small mb-1"><span>Your progress</span><span><span class="done-count">0</span> of 13</span></div>
+        <div class="progress" role="progressbar" aria-label="Topic progress" style="height: 8px"><div class="progress-bar bg-success" style="width: 0%"></div></div>
+        <div class="small text-body-secondary mt-1">2 easy · 8 medium · 3 hard</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="d-flex flex-wrap gap-2 mb-3">
+  <input type="search" class="form-control search" style="max-width: 320px" placeholder="Search problems…" aria-label="Search problems">
+  <div class="btn-group btn-group-sm flex-wrap" role="group" aria-label="Filter">
+    <button type="button" class="btn btn-outline-secondary active" data-filter="all">All</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Easy">Easy</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Medium">Medium</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="Hard">Hard</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="todo">Unsolved</button>
+    <button type="button" class="btn btn-outline-secondary" data-filter="done">Solved</button>
+  </div>
+</div>
+<div class="table-responsive">
+<table class="table table-hover align-middle ptable stagger">
+  <thead><tr><th style="width:2rem"></th><th class="d-none d-sm-table-cell" style="width:2.5rem">#</th><th>Problem</th><th class="d-none d-md-table-cell">Pattern</th><th>Level</th><th class="d-none d-sm-table-cell"></th></tr></thead>
+  <tbody>
+<tr data-slug="kth-largest-element-in-a-stream" data-diff="Easy" data-text="kth largest element in a stream min-heap of size k 703">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="kth-largest-element-in-a-stream" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">1</td>
+  <td><a href="001-kth-largest-element-in-a-stream.html" class="fw-semibold">Kth Largest Element in a Stream</a> <span class="text-body-secondary small">#703</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Min-heap of size k</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/kth-largest-element-in-a-stream/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="last-stone-weight" data-diff="Easy" data-text="last stone weight max-heap simulation 1046">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="last-stone-weight" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">2</td>
+  <td><a href="002-last-stone-weight.html" class="fw-semibold">Last Stone Weight</a> <span class="text-body-secondary small">#1046</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Max-heap simulation</td>
+  <td><span class="badge text-bg-success">Easy</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/last-stone-weight/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="kth-largest-element-in-an-array" data-diff="Medium" data-text="kth largest element in an array min-heap / quickselect 215">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="kth-largest-element-in-an-array" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">3</td>
+  <td><a href="003-kth-largest-element-in-an-array.html" class="fw-semibold">Kth Largest Element in an Array</a> <span class="text-body-secondary small">#215</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Min-heap / quickselect</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/kth-largest-element-in-an-array/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="top-k-frequent-elements" data-diff="Medium" data-text="top k frequent elements bucket sort by frequency 347">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="top-k-frequent-elements" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">4</td>
+  <td><a href="004-top-k-frequent-elements.html" class="fw-semibold">Top K Frequent Elements</a> <span class="text-body-secondary small">#347</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Bucket sort by frequency</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/top-k-frequent-elements/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="k-closest-points-to-origin" data-diff="Medium" data-text="k closest points to origin max-heap of size k 973">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="k-closest-points-to-origin" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">5</td>
+  <td><a href="005-k-closest-points-to-origin.html" class="fw-semibold">K Closest Points to Origin</a> <span class="text-body-secondary small">#973</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Max-heap of size k</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/k-closest-points-to-origin/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="top-k-frequent-words" data-diff="Medium" data-text="top k frequent words heap with a two-key comparator 692">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="top-k-frequent-words" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">6</td>
+  <td><a href="006-top-k-frequent-words.html" class="fw-semibold">Top K Frequent Words</a> <span class="text-body-secondary small">#692</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Heap with a two-key comparator</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/top-k-frequent-words/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="task-scheduler" data-diff="Medium" data-text="task scheduler greedy counting 621">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="task-scheduler" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">7</td>
+  <td><a href="007-task-scheduler.html" class="fw-semibold">Task Scheduler</a> <span class="text-body-secondary small">#621</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Greedy counting</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/task-scheduler/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="reorganize-string" data-diff="Medium" data-text="reorganize string max-heap, place two at a time 767">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="reorganize-string" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">8</td>
+  <td><a href="008-reorganize-string.html" class="fw-semibold">Reorganize String</a> <span class="text-body-secondary small">#767</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Max-heap, place two at a time</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/reorganize-string/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="kth-smallest-element-in-a-sorted-matrix" data-diff="Medium" data-text="kth smallest element in a sorted matrix k-way merge with a min-heap 378">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="kth-smallest-element-in-a-sorted-matrix" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">9</td>
+  <td><a href="009-kth-smallest-element-in-a-sorted-matrix.html" class="fw-semibold">Kth Smallest Element in a Sorted Matrix</a> <span class="text-body-secondary small">#378</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">K-way merge with a min-heap</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="furthest-building-you-can-reach" data-diff="Medium" data-text="furthest building you can reach min-heap of climbs given ladders 1642">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="furthest-building-you-can-reach" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">10</td>
+  <td><a href="010-furthest-building-you-can-reach.html" class="fw-semibold">Furthest Building You Can Reach</a> <span class="text-body-secondary small">#1642</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Min-heap of climbs given ladders</td>
+  <td><span class="badge text-bg-warning">Medium</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/furthest-building-you-can-reach/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="find-median-from-data-stream" data-diff="Hard" data-text="find median from data stream two heaps 295">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="find-median-from-data-stream" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">11</td>
+  <td><a href="011-find-median-from-data-stream.html" class="fw-semibold">Find Median from Data Stream</a> <span class="text-body-secondary small">#295</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Two heaps</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/find-median-from-data-stream/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="ipo" data-diff="Hard" data-text="ipo sort by capital + max-heap of profits 502">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="ipo" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">12</td>
+  <td><a href="012-ipo.html" class="fw-semibold">IPO</a> <span class="text-body-secondary small">#502</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Sort by capital + max-heap of profits</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/ipo/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+<tr data-slug="smallest-range-covering-elements-from-k-lists" data-diff="Hard" data-text="smallest range covering elements from k lists min-heap with running max 632">
+  <td><input class="form-check-input done-box" type="checkbox" data-slug="smallest-range-covering-elements-from-k-lists" aria-label="Solved"></td>
+  <td class="text-body-secondary d-none d-sm-table-cell">13</td>
+  <td><a href="013-smallest-range-covering-elements-from-k-lists.html" class="fw-semibold">Smallest Range Covering Elements from K Lists</a> <span class="text-body-secondary small">#632</span></td>
+  <td class="d-none d-md-table-cell small text-body-secondary">Min-heap with running max</td>
+  <td><span class="badge text-bg-danger">Hard</span></td>
+  <td class="d-none d-sm-table-cell text-end"><a href="https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/" target="_blank" rel="noopener" class="small">LeetCode&nbsp;↗</a></td>
+</tr>
+  </tbody>
+</table>
+</div>
+<p class="empty text-body-secondary" hidden>Nothing matches that filter.</p>
+<p class="small text-body-secondary mt-3">Work top to bottom — each list goes from easy to hard. Try a problem for at least 15 minutes before opening a hint. Ticks are saved in your browser.</p>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-0">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>
