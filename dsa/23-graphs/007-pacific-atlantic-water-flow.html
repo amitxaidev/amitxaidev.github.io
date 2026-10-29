@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>417. Pacific Atlantic Water Flow – hints and Java solution | Compiled Canvas</title>
+<meta name="description" content="Pacific Atlantic Water Flow (LeetCode 417): summary, hints, approach and a commented Java solution.">
+<meta property="og:title" content="417. Pacific Atlantic Water Flow – hints and Java solution | Compiled Canvas">
+<meta property="og:description" content="Pacific Atlantic Water Flow (LeetCode 417): summary, hints, approach and a commented Java solution.">
+<meta property="og:image" content="https://amitxaidev.github.io/assets/logo.png">
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" id="hl-light"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" id="hl-dark" disabled><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../../dsa/index.html">DSA Sheet</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<div class="container py-4">
+<nav aria-label="breadcrumb"><ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="../index.html">DSA Sheet</a></li>
+  <li class="breadcrumb-item"><a href="index.html">Graphs</a></li>
+  <li class="breadcrumb-item active" aria-current="page">Problem 7 of 21</li>
+</ol></nav>
+<div class="row g-4">
+  <div class="col-lg-8">
+    <h1 class="h3 mb-2">417. Pacific Atlantic Water Flow</h1>
+    <p class="mb-3"><span class="badge text-bg-warning">Medium</span> <span class="badge text-bg-light border">Reverse BFS/DFS from the oceans</span></p>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Problem</h2>
+    <p>Rain flows from a cell to neighbours with equal or lower height. The Pacific touches the top and left edges, the Atlantic the bottom and right. Return cells from which water can reach both oceans.</p>
+    <p class="small text-body-secondary">This is a short summary in our own words — read the full statement and examples on LeetCode.</p>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Hints</h2>
+    <div class="hint mb-2">
+  <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show hint 1">Show hint 1</button>
+  <div class="reveal-body border-start border-3 border-warning ps-3 mt-2" hidden>Checking every cell separately is slow. Flip it: start from each ocean and climb uphill.</div>
+</div>
+<div class="hint mb-2" hidden>
+  <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show hint 2">Show hint 2</button>
+  <div class="reveal-body border-start border-3 border-warning ps-3 mt-2" hidden>A cell reachable &quot;uphill&quot; from the Pacific edge can drain into the Pacific.</div>
+</div>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Approach</h2>
+    <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show approach">Show approach</button>
+    <div class="reveal-body mt-2" hidden><p>DFS from all Pacific edge cells moving to neighbours with height &gt;= current; same for the Atlantic. Cells marked by both are the answer.</p></div>
+
+    <h2 class="h6 text-uppercase text-body-secondary mt-4">Solution (Java)</h2>
+    <button class="btn btn-sm btn-outline-secondary reveal" type="button" data-label="Show solution">Show solution</button>
+    <div class="reveal-body mt-2 position-relative code-block" hidden>
+      <button class="btn btn-sm btn-light border copy position-absolute top-0 end-0 m-2" type="button">Copy</button>
+      <pre class="border rounded mb-0"><code class="language-java">import java.util.*;
+
+class Solution {
+    private int m, n;
+    private int[][] h;
+
+    public List&lt;List&lt;Integer&gt;&gt; pacificAtlantic(int[][] heights) {
+        h = heights;
+        m = h.length;
+        n = h[0].length;
+        boolean[][] pac = new boolean[m][n], atl = new boolean[m][n];
+        for (int r = 0; r &lt; m; r++) {
+            climb(r, 0, pac);
+            climb(r, n - 1, atl);
+        }
+        for (int c = 0; c &lt; n; c++) {
+            climb(0, c, pac);
+            climb(m - 1, c, atl);
+        }
+        List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;&gt;();
+        for (int r = 0; r &lt; m; r++)
+            for (int c = 0; c &lt; n; c++)
+                if (pac[r][c] &amp;&amp; atl[r][c]) res.add(Arrays.asList(r, c));
+        return res;
+    }
+
+    private void climb(int r, int c, boolean[][] seen) {
+        if (seen[r][c]) return;
+        seen[r][c] = true;
+        int[][] dirs = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+        for (int[] d : dirs) {
+            int nr = r + d[0], nc = c + d[1];
+            if (nr &gt;= 0 &amp;&amp; nc &gt;= 0 &amp;&amp; nr &lt; m &amp;&amp; nc &lt; n &amp;&amp; h[nr][nc] &gt;= h[r][c]) climb(nr, nc, seen);   // uphill only
+        }
+    }
+}</code></pre>
+    </div>
+
+    <div class="alert alert-warning mt-4 mb-0"><strong>Common mistake:</strong> Using &lt; instead of &gt;= when climbing — equal heights also let water flow.</div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card mb-3 shadow-sm">
+      <div class="card-body">
+        <a class="btn btn-brand w-100 mb-2" href="https://leetcode.com/problems/pacific-atlantic-water-flow/" target="_blank" rel="noopener">Solve on LeetCode ↗</a>
+        <div class="form-check">
+          <input class="form-check-input done-box" type="checkbox" id="done" data-slug="pacific-atlantic-water-flow">
+          <label class="form-check-label" for="done">I solved this</label>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3 shadow-sm">
+      <div class="card-header small fw-semibold">Complexity</div>
+      <ul class="list-group list-group-flush small">
+        <li class="list-group-item"><strong>Time:</strong> O(m·n).</li>
+        <li class="list-group-item"><strong>Space:</strong> O(m·n).</li>
+      </ul>
+    </div>
+    <div class="small text-body-secondary">Topic: <a href="index.html">Graphs</a><div class="mt-2"><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 74 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 75 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 76 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 77 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 78 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 79 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 80 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 81 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 82 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 83 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 84 (coming soon)</span><span class="btn btn-sm btn-outline-secondary disabled me-1 mb-1">Ep 85 (coming soon)</span></div></div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="006-rotting-oranges.html" data-key="ArrowLeft">← Rotting Oranges</a><a class="btn btn-outline-secondary" href="008-clone-graph.html" data-key="ArrowRight">Clone Graph →</a></div>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-0">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>
