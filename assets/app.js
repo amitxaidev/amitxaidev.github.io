@@ -214,7 +214,7 @@
     el.textContent = '0';
     requestAnimationFrame(step);
   }
-  var animated = document.querySelectorAll('.fade-up, .stagger, .path, .trace, .diff-chart, .diff-bar, [data-step-watch], [data-count]');
+  var animated = document.querySelectorAll('.fade-up, .slide-l, .slide-r, .zoom-in, .stagger, .path, .trace, .diff-chart, .diff-bar, [data-step-watch], [data-count]');
   if ('IntersectionObserver' in window && !reduceMotion) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
@@ -275,53 +275,82 @@
     }
   }
 
-  var canvas = document.getElementById('hero-canvas');
-  if (canvas && canvas.getContext) {
-    var ctx = canvas.getContext('2d');
-    var bars = [], n = 18, l = 0, r = n - 1, phase = 0, last = 0;
-    function reset() {
-      bars = [];
-      for (var k = 0; k < n; k++) bars.push(2 + Math.round(Math.random() * 10));
-      bars.sort(function (a, b) { return a - b; });
-      l = 0; r = n - 1;
+  // ---------- two pointers running live in the hero panel
+  var demo = document.getElementById('pointer-demo');
+  if (demo) {
+    var nums = demo.dataset.nums.split(',').map(Number), goal = +demo.dataset.target;
+    var row = demo.querySelector('.viz-row'), note = demo.querySelector('.viz-note');
+    row.innerHTML = nums.map(function (x) { return '<span>' + x + '</span>'; }).join('');
+    var cells = row.children, lo = 0, hi = nums.length - 1;
+    function paintDemo() {
+      var sum = nums[lo] + nums[hi], hit = sum === goal;
+      Array.prototype.forEach.call(cells, function (c, idx) {
+        c.className = idx === lo ? 'l' : idx === hi ? 'r' : (idx < lo || idx > hi) ? 'out' : '';
+        if (hit && (idx === lo || idx === hi)) c.classList.add('hit');
+      });
+      note.textContent = nums[lo] + ' + ' + nums[hi] + ' = ' + sum + (hit ? ', found it' : sum > goal ? ', too big' : ', too small');
+      return hit;
     }
-    function size() {
-      var dpr = window.devicePixelRatio || 1;
-      canvas.width = canvas.clientWidth * dpr;
-      canvas.height = canvas.clientHeight * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    }
-    function draw() {
-      var w = canvas.clientWidth, h = canvas.clientHeight;
-      ctx.clearRect(0, 0, w, h);
-      var narrow = w < 768;
-      var area = narrow ? w - 32 : Math.min(w * 0.55, 620), x0 = w - area - (narrow ? 16 : 24), gap = narrow ? 4 : 6;
-      var bw = (area - gap * (n - 1)) / n, unit = Math.min(h * 0.7, 300) / 12;
-      for (var k = 0; k < n; k++) {
-        var bh = bars[k] * unit, x = x0 + k * (bw + gap), y = h - 20 - bh;
-        ctx.fillStyle = (k === l || k === r) ? '#e8590c' : (k < l || k > r) ? '#3a3026' : '#3b3b3b';
-        ctx.fillRect(x, y, bw, bh);
-        if (k === l || k === r) {
-          ctx.fillStyle = '#f6b93b';
-          ctx.font = '600 12px ui-monospace, Menlo, monospace';
-          ctx.fillText(k === l ? 'l' : 'r', x + bw / 2 - 3, h - 4);
-        }
-      }
-    }
-    function tick(t) {
-      if (t - last > 650) {
-        last = t;
-        if (l >= r) { if (++phase > 2) { phase = 0; reset(); } }
-        else if ((bars[l] + bars[r]) % 2) l++; else r--;   // move one pointer each step
-      }
-      draw();
-      requestAnimationFrame(tick);
-    }
-    reset();
-    size();
-    window.addEventListener('resize', function () { size(); draw(); });
-    if (reduceMotion) draw(); else requestAnimationFrame(tick);
+    if (reduceMotion) { lo = 2; hi = 3; paintDemo(); }
+    else (function stepDemo() {
+      var hit = paintDemo();
+      setTimeout(function () {
+        if (hit) { lo = 0; hi = nums.length - 1; }
+        else if (nums[lo] + nums[hi] > goal) hi--;
+        else lo++;
+        stepDemo();
+      }, hit ? 2600 : 1250);
+    })();
   }
+
+  // ---------- step story: the graphic follows whichever step is in the middle of the screen
+  var steps = document.querySelectorAll('.story-step');
+  if (steps.length && 'IntersectionObserver' in window) {
+    var storyIo = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        steps.forEach(function (s) { s.classList.toggle('active', s === en.target); });
+        document.querySelectorAll('.story-scene').forEach(function (s) {
+          s.classList.toggle('active', s.dataset.scene === en.target.dataset.step);
+        });
+      });
+    }, { rootMargin: '-45% 0px -45% 0px' });
+    steps.forEach(function (s) { storyIo.observe(s); });
+  }
+
+  // ---------- scroll-linked motion: progress bar, nav, parallax, chart lines, ticker
+  var bar = document.querySelector('.scroll-progress span'), nav = document.querySelector('.site-nav');
+  var parallax = document.querySelectorAll('[data-parallax]'), lines = document.querySelectorAll('.scroll-draw');
+  var ticker = document.querySelector('[data-ticker]'), wide = window.matchMedia('(min-width: 992px)');
+  var queued = false;
+  lines.forEach(function (p) { if (!reduceMotion) p.style.strokeDasharray = '1'; });
+  function onScroll() {
+    queued = false;
+    var y = window.scrollY, vh = window.innerHeight, max = document.documentElement.scrollHeight - vh;
+    if (bar) bar.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
+    if (nav) nav.classList.toggle('scrolled', y > 12);
+    if (reduceMotion) return;
+    parallax.forEach(function (el) {
+      var k = +el.dataset.parallax;
+      if (!k) return;
+      var b = el.getBoundingClientRect();
+      el.style.transform = wide.matches ? 'translateY(' + ((b.top + b.height / 2 - vh / 2 - (+el.dataset.shift || 0)) * -k) + 'px)' : '';
+    });
+    lines.forEach(function (p) {
+      var b = p.ownerSVGElement.getBoundingClientRect();
+      var done = Math.max(0, Math.min(1, (vh * 0.95 - b.top) / (vh * 0.7)));
+      p.style.strokeDashoffset = 1 - done;
+    });
+    if (ticker) ticker.style.transform = 'translateX(' + (-y * 0.18) + 'px)';
+  }
+  function queueScroll() {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(onScroll);
+  }
+  window.addEventListener('scroll', queueScroll, { passive: true });
+  window.addEventListener('resize', queueScroll);
+  onScroll();
 
   refresh();
 })();
