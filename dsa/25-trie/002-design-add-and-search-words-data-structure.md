@@ -9,7 +9,7 @@ Support addWord(word) and search(pattern), where '.' in the pattern matches any 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/design-add-and-search-words-data-structure/](https://leetcode.com/problems/design-add-and-search-words-data-structure/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/002-design-add-and-search-words-data-structure.html](https://amitxaidev.github.io/dsa/25-trie/002-design-add-and-search-words-data-structure.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/25-trie/002-design-add-and-search-words-data-structure.html](https://compiledcanvas.com/dsa/25-trie/002-design-add-and-search-words-data-structure.html)
 
 ## Understanding
 

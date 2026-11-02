@@ -9,7 +9,7 @@ Return the longest prefix shared by every string in the array, or "" if there is
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/longest-common-prefix/](https://leetcode.com/problems/longest-common-prefix/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/001-longest-common-prefix.html](https://amitxaidev.github.io/dsa/11-strings/001-longest-common-prefix.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/11-strings/001-longest-common-prefix.html](https://compiledcanvas.com/dsa/11-strings/001-longest-common-prefix.html)
 
 ## Understanding
 

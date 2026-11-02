@@ -9,7 +9,7 @@ Compute x raised to an integer power n, where n can be negative and as large as 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/powx-n/](https://leetcode.com/problems/powx-n/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/010-powx-n.html](https://amitxaidev.github.io/dsa/03-math/010-powx-n.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/03-math/010-powx-n.html](https://compiledcanvas.com/dsa/03-math/010-powx-n.html)
 
 ## Understanding
 

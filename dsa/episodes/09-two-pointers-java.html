@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Two Pointers in Java: 5 Must-Know Patterns | DSA | Compiled Canvas</title>
+<meta name="description" content="The two pointers technique in Java: five must-know patterns that turn O(n²) into O(n), from reversing an array to pair sum and move zeroes.">
+<link rel="canonical" href="https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="video.other">
+<meta property="og:url" content="https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html">
+<meta property="og:title" content="Two Pointers in Java: 5 Must-Know Patterns | DSA | Compiled Canvas">
+<meta property="og:description" content="The two pointers technique in Java: five must-know patterns that turn O(n²) into O(n), from reversing an array to pair sum and move zeroes.">
+<meta property="og:image" content="https://i.ytimg.com/vi/nk0jXt4HEuA/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "Two Pointers in Java: 5 Must-Know Patterns | DSA", "description": "The two pointers technique in Java: five must-know patterns that turn O(n²) into O(n), from reversing an array to pair sum and move zeroes.", "thumbnailUrl": ["https://i.ytimg.com/vi/nk0jXt4HEuA/maxresdefault.jpg", "https://i.ytimg.com/vi/nk0jXt4HEuA/hqdefault.jpg"], "uploadDate": "2026-11-01T20:30:43-08:00", "duration": "PT9M59S", "embedUrl": "https://www.youtube.com/embed/nk0jXt4HEuA", "inLanguage": "en", "publisher": {"@type": "Organization", "name": "Compiled Canvas", "url": "https://compiledcanvas.com/", "logo": {"@type": "ImageObject", "url": "https://compiledcanvas.com/assets/logo.png"}, "sameAs": ["https://www.youtube.com/@compiledcanvas", "https://www.instagram.com/compiledcanvas", "https://github.com/amitxaidev"]}, "hasPart": [{"@type": "Clip", "name": "Half a trillion checks vs one million steps", "startOffset": 0, "endOffset": 25, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=0"}, {"@type": "Clip", "name": "Today's plan", "startOffset": 25, "endOffset": 60, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=25"}, {"@type": "Clip", "name": "What are two pointers?", "startOffset": 60, "endOffset": 85, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=60"}, {"@type": "Clip", "name": "Two friends and a bookshelf", "startOffset": 85, "endOffset": 97, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=85"}, {"@type": "Clip", "name": "Pattern 1: Reverse an array", "startOffset": 97, "endOffset": 127, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=97"}, {"@type": "Clip", "name": "Pattern 2: Palindrome check", "startOffset": 127, "endOffset": 156, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=127"}, {"@type": "Clip", "name": "Pattern 3: Pair sum (two sum sorted array)", "startOffset": 156, "endOffset": 200, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=156"}, {"@type": "Clip", "name": "The pair sum rule, and why it works", "startOffset": 200, "endOffset": 223, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=200"}, {"@type": "Clip", "name": "Your turn: try this one", "startOffset": 223, "endOffset": 250, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=223"}, {"@type": "Clip", "name": "Graph: O(n²) vs O(n)", "startOffset": 250, "endOffset": 282, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=250"}, {"@type": "Clip", "name": "Slow and fast pointers", "startOffset": 282, "endOffset": 298, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=282"}, {"@type": "Clip", "name": "Pattern 4: Remove duplicates", "startOffset": 298, "endOffset": 334, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=298"}, {"@type": "Clip", "name": "Pattern 5: Move zeroes to end", "startOffset": 334, "endOffset": 374, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=334"}, {"@type": "Clip", "name": "Pair sum in Java", "startOffset": 374, "endOffset": 392, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=374"}, {"@type": "Clip", "name": "Move zeroes in Java", "startOffset": 392, "endOffset": 413, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=392"}, {"@type": "Clip", "name": "The one mistake everyone makes", "startOffset": 413, "endOffset": 443, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=413"}, {"@type": "Clip", "name": "Cheat sheet", "startOffset": 443, "endOffset": 474, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=443"}, {"@type": "Clip", "name": "Quiz time", "startOffset": 474, "endOffset": 527, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=474"}, {"@type": "Clip", "name": "Recap", "startOffset": 527, "endOffset": 553, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=527"}, {"@type": "Clip", "name": "LeetCode homework", "startOffset": 553, "endOffset": 575, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=553"}, {"@type": "Clip", "name": "Next episode: Sliding Window", "startOffset": 575, "endOffset": 599, "url": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html?t=575"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "DSA in Java", "item": "https://compiledcanvas.com/dsa/"}, {"@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://compiledcanvas.com/dsa/episodes/"}, {"@type": "ListItem", "position": 4, "name": "Episode 9", "item": "https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">AI for Developers <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Episodes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Episode 9</li>
+    </ol></nav>
+    <span class="badge rounded-pill text-bg-dark mb-2">Episode 9 · 9:59 · 1 Nov 2026</span>
+    <h1 class="h2 fw-bold mb-3">Two Pointers in Java: 5 Must-Know Patterns | DSA</h1>
+    <div class="ep-player ratio ratio-16x9">
+      <iframe id="ep-video" src="https://www.youtube.com/embed/nk0jXt4HEuA?rel=0" data-video="nk0jXt4HEuA" title="Two Pointers in Java: 5 Must-Know Patterns | DSA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>What this episode covers</h2>
+      <p>You have a sorted list of one million numbers and need two that add up to a target. Checking every pair is about half a trillion checks. With two pointers it&#x27;s at most a million steps. This episode teaches the technique from zero, with pictures and worked examples.</p>
+<p>We cover five patterns. Three work from both ends of the array: reversing it, checking a palindrome, and pair sum, also known as Two Sum II. Two use slow and fast pointers moving in the same direction: removing duplicates and moving zeroes to the end.</p>
+<p>Pair sum comes down to one rule. If the sum is too big, move the right pointer back. If it&#x27;s too small, move the left pointer forward. If it matches, you&#x27;re done. That&#x27;s O(n) time and O(1) extra space. We show why it works, compare it with brute force on a graph, and write it in Java.</p>
+    </section>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>What you'll be able to do</h2>
+      <ul class="mb-0"><li>What two pointers are and when to use them</li>
+<li>Three patterns from both ends: reverse, palindrome, pair sum</li>
+<li>Two slow and fast patterns: remove duplicates, move zeroes</li>
+<li>Why pair sum works, and why it is O(n)</li>
+<li>Writing pair sum and move zeroes in Java</li></ul>
+    </section>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
+      <p class="mb-0">Pair sum with two pointers only works on a sorted list. Also use left &lt; right, not left &lt;= right, or both pointers can land on one box and you use a number twice.</p>
+    </section>
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Key moments <small>tap one to jump there</small></h2>
+      <ol class="ep-moments list-unstyled mb-0"><li><a href="?t=0" data-seek="0"><time>0:00</time><span>Half a trillion checks vs one million steps</span></a></li>
+<li><a href="?t=25" data-seek="25"><time>0:25</time><span>Today&#x27;s plan</span></a></li>
+<li><a href="?t=60" data-seek="60"><time>1:00</time><span>What are two pointers?</span></a></li>
+<li><a href="?t=85" data-seek="85"><time>1:25</time><span>Two friends and a bookshelf</span></a></li>
+<li><a href="?t=97" data-seek="97"><time>1:37</time><span>Pattern 1: Reverse an array</span></a></li>
+<li><a href="?t=127" data-seek="127"><time>2:07</time><span>Pattern 2: Palindrome check</span></a></li>
+<li><a href="?t=156" data-seek="156"><time>2:36</time><span>Pattern 3: Pair sum (two sum sorted array)</span></a></li>
+<li><a href="?t=200" data-seek="200"><time>3:20</time><span>The pair sum rule, and why it works</span></a></li>
+<li><a href="?t=223" data-seek="223"><time>3:43</time><span>Your turn: try this one</span></a></li>
+<li><a href="?t=250" data-seek="250"><time>4:10</time><span>Graph: O(n²) vs O(n)</span></a></li>
+<li><a href="?t=282" data-seek="282"><time>4:42</time><span>Slow and fast pointers</span></a></li>
+<li><a href="?t=298" data-seek="298"><time>4:58</time><span>Pattern 4: Remove duplicates</span></a></li>
+<li><a href="?t=334" data-seek="334"><time>5:34</time><span>Pattern 5: Move zeroes to end</span></a></li>
+<li><a href="?t=374" data-seek="374"><time>6:14</time><span>Pair sum in Java</span></a></li>
+<li><a href="?t=392" data-seek="392"><time>6:32</time><span>Move zeroes in Java</span></a></li>
+<li><a href="?t=413" data-seek="413"><time>6:53</time><span>The one mistake everyone makes</span></a></li>
+<li><a href="?t=443" data-seek="443"><time>7:23</time><span>Cheat sheet</span></a></li>
+<li><a href="?t=474" data-seek="474"><time>7:54</time><span>Quiz time</span></a></li>
+<li><a href="?t=527" data-seek="527"><time>8:47</time><span>Recap</span></a></li>
+<li><a href="?t=553" data-seek="553"><time>9:13</time><span>LeetCode homework</span></a></li>
+<li><a href="?t=575" data-seek="575"><time>9:35</time><span>Next episode: Sliding Window</span></a></li></ol>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Full transcript</h2>
+      <details class="ep-transcript"><summary>Read the whole lesson</summary>
+      <p>Here&#x27;s a question. You have a sorted list of one million numbers. Find two numbers that add up to a target.</p>
+<p>If you check every possible pair, that&#x27;s about half a trillion checks. Your program would run for hours.</p>
+<p>But with one simple trick, you need at most one million steps. In under a second.</p>
+<p>That trick is called two pointers. And by the end of this video, you&#x27;ll know five patterns that use it.</p>
+<p>Welcome back to Compiled Canvas. This is Episode Nine of our DSA series. Last time, we learned the prefix sum. Today, we learn the trick we used when we reversed an array. And it solves a whole family of problems.</p>
+<p>Here&#x27;s the plan. What two pointers are. Pattern one, reverse. Pattern two, palindrome. Pattern three, pair sum. Pattern four, remove duplicates. Pattern five, move zeroes. Real Java code. The one mistake everyone makes. A cheat sheet. And an easy quiz at the end.</p>
+<p>Let&#x27;s go.</p>
+<p>First, what are two pointers?</p>
+<p>A pointer is just an index. A number that says which box you&#x27;re looking at. Two pointers means we look at two boxes at the same time, and move them in a smart way.</p>
+<p>There are two kinds. In the first kind, the pointers start at both ends, and walk towards each other. In the second kind, both pointers start at the left, and walk in the same direction. One goes fast, one goes slow.</p>
+<p>Think of two friends cleaning a long bookshelf. One starts at the left end, one starts at the right end. They walk towards each other, and when they meet in the middle, the job is done. Nobody walks the whole shelf.</p>
+<p>Pattern one. Reverse an array.</p>
+<p>Take one, two, three, four, five. Left points at the first box. Right points at the last box.</p>
+<p>Swap them. Now it&#x27;s five, two, three, four, one. Move left forward, and move right back.</p>
+<p>Swap again. Two and four change places. Five, four, three, two, one.</p>
+<p>Now both pointers are at the middle box. They&#x27;ve met, so we stop. Two swaps, and the array is reversed.</p>
+<p>Pattern two. Is a word a palindrome? A palindrome reads the same from both ends. Like madam.</p>
+<p>Left points at the first letter, right points at the last. M and M. Same. Move both in. A and A. Same. Now both pointers meet at D. So madam is a palindrome.</p>
+<p>Now try mango. M and O. Different. We stop right there. Mango is not a palindrome. One check was enough.</p>
+<p>Pattern three. Pair sum. This is the big one.</p>
+<p>Imagine you&#x27;re in a shop with exactly eighty-five rupees. You want to buy two items, and spend all of it. The prices are sorted: ten, twenty-five, thirty-five, fifty, sixty, eighty-five.</p>
+<p>Left points at the cheapest item, ten. Right points at the costliest, eighty-five.</p>
+<p>Ten plus eighty-five is ninety-five. Too much. The total is too big, so we need a smaller number. Move right back, to sixty.</p>
+<p>Ten plus sixty is seventy. Too little. Now we need a bigger number. Move left forward, to twenty-five.</p>
+<p>Twenty-five plus sixty is eighty-five. Exactly our budget. Found it!</p>
+<p>So the rule is simple. If the sum is too big, move right back. If the sum is too small, move left forward. If it&#x27;s equal, you&#x27;re done.</p>
+<p>Why does it work? Because the list is sorted. Moving left forward always makes the sum bigger. Moving right back always makes the sum smaller. So every step throws away one number we never need again.</p>
+<p>Your turn. Pause the video and try this one. The sorted list is two, four, five, seven, nine. Find two numbers that add up to twelve.</p>
+<p>Ready? Two plus nine is eleven. Too small, move left. Four plus nine is thirteen. Too big, move right. Four plus seven is eleven. Too small, move left. Five plus seven is twelve. Found it! If you got five and seven, you&#x27;ve got it.</p>
+<p>Look at this graph. Along the bottom is the size of the list. Up the side is the number of steps. Checking every pair is a curve that shoots up, because it&#x27;s n times n. Two pointers is a straight, low line. Each step moves one pointer, so it&#x27;s just n steps.</p>
+<p>Quick pause, before we go further. If you&#x27;re finding this video valuable, hit subscribe to Compiled Canvas, and turn on the bell. It&#x27;s free, it takes one second, and it helps me keep making this complete DSA series for you. Alright, back to it.</p>
+<p>Now the second kind. Both pointers start at the left. We call them slow and fast.</p>
+<p>Think of packing a bag. One hand picks up every item, one by one. That&#x27;s fast. The other hand only puts the good items into the bag. That&#x27;s slow.</p>
+<p>Pattern four. Remove duplicates from a sorted array.</p>
+<p>Take one, one, two, two, three. Slow stays at the first box, and keeps the first one.</p>
+<p>Fast moves to the next box. It&#x27;s one again. Same as what slow has, so we skip it.</p>
+<p>Fast moves on, and finds two. That&#x27;s new! Slow moves forward one box, and writes two there.</p>
+<p>Fast finds two again. Same, so we skip it.</p>
+<p>Fast finds three. New again! Slow moves forward, and writes three.</p>
+<p>Now the first three boxes are one, two, three. Three unique numbers, in one pass.</p>
+<p>Pattern five. Move all the zeroes to the end.</p>
+<p>Take zero, one, zero, three, twelve. Slow waits at the first box. Fast walks every box.</p>
+<p>Fast sees zero. Skip it.</p>
+<p>Fast sees one. Not a zero! Swap it with the box at slow. Now it&#x27;s one, zero, zero, three, twelve. Slow moves forward.</p>
+<p>Fast sees zero. Skip it.</p>
+<p>Fast sees three. Swap it with the box at slow. One, three, zero, zero, twelve. Slow moves forward.</p>
+<p>Fast sees twelve. Swap again. One, three, twelve, zero, zero. All the zeroes are at the end, and the other numbers kept their order.</p>
+<p>Now let&#x27;s write it in Java.</p>
+<p>Here&#x27;s pair sum. Left starts at zero. Right starts at the last index.</p>
+<p>While left is less than right, we add the two numbers.</p>
+<p>If the sum equals the target, we found our pair.</p>
+<p>If the sum is too small, left plus plus. If it&#x27;s too big, right minus minus.</p>
+<p>And here&#x27;s move zeroes. Slow starts at zero. Fast walks every box in a for loop. If the number at fast is not zero, swap it with the number at slow, and move slow forward.</p>
+<p>Both of them visit every box at most once. So the time is O of n. And they only use two extra variables, so the extra space is O of one.</p>
+<p>Now, the one mistake everyone makes.</p>
+<p>Pair sum with two pointers only works on a sorted list. If the list is not sorted, moving left forward might make the sum smaller, and you&#x27;ll walk right past the answer.</p>
+<p>So if the list isn&#x27;t sorted, sort it first. Or use a hash map, which we&#x27;ll learn later in this series.</p>
+<p>One more small tip. Use left less than right, not less than or equal. Otherwise both pointers can land on the same box, and you&#x27;ll use one number twice.</p>
+<p>So, here&#x27;s the whole two pointers trick in one cheat sheet. Pause and screenshot this.</p>
+<p>A pointer is just an index. Two pointers move in a smart way.</p>
+<p>From both ends: reverse, palindrome, and pair sum.</p>
+<p>Same direction, slow and fast: remove duplicates, and move zeroes.</p>
+<p>Pair sum: too big, move right back. Too small, move left forward.</p>
+<p>Time: O of n. Extra space: O of one.</p>
+<p>And pair sum needs a sorted list.</p>
+<p>Okay, quiz time. Three easy questions. Pause the video, think, and then hit play.</p>
+<p>Question one. Is the word noon a palindrome?</p>
+<p>Question two. The sorted list is one, two, four, seven, eleven. Which two numbers add up to nine?</p>
+<p>Question three. What is the time, and the extra space, of two pointers?</p>
+<p>Ready?</p>
+<p>Question one: yes. N and N are the same. O and O are the same. Then the pointers cross, so noon is a palindrome.</p>
+<p>Question two: two and seven. One plus eleven is twelve, too big, so right moves back. One plus seven is eight, too small, so left moves forward. Two plus seven is nine.</p>
+<p>Question three: time is O of n, and extra space is O of one.</p>
+<p>How many did you get right? Tell me in the comments: three out of three, two, or one.</p>
+<p>Let&#x27;s recap. A pointer is just an index, and two pointers look at two boxes at once. From both ends: reverse, palindrome, and pair sum. Same direction, slow and fast: remove duplicates, and move zeroes. In pair sum, too big means move right back, and too small means move left forward. It needs a sorted list. Time is O of n, and extra space is O of one.</p>
+<p>Your homework. Solve Two Sum Two on LeetCode. It&#x27;s the exact pair sum from this video. Then try Move Zeroes, and Valid Palindrome. All of them, with hints and full Java answers, are on our free practice page. The link is in the description. And tell me in the comments: in the sorted list one, two, three, four, six, which two numbers add up to six?</p>
+<p>Next episode, we learn the sliding window. It&#x27;s like two pointers, but the two pointers carry a whole window between them, and it makes problems like the biggest sum of k numbers in a row super fast.</p>
+<p>And don&#x27;t forget to subscribe to Compiled Canvas, so you don&#x27;t miss anything new in tech and the job market. Keep coding, stay consistent, and I&#x27;ll see you in the next one.</p>
+      </details>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <div class="side-sticky">
+      <div class="card mb-3 shadow-sm solve-card"><div class="card-body">
+        <h2 class="h6 fw-bold">Practise this now</h2>
+        <div class="mb-3"><a class="ep-try" href="../07-two-pointers/007-two-sum-ii-input-array-is-sorted.html">Two Sum II - Input Array Is Sorted <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../07-two-pointers/003-move-zeroes.html">Move Zeroes <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../07-two-pointers/004-valid-palindrome.html">Valid Palindrome <span aria-hidden="true">→</span></a></div>
+        <a class="btn btn-brand w-100" href="../07-two-pointers/index.html">All Two Pointers problems</a>
+      </div></div>
+      <div class="card mb-3 shadow-sm"><div class="card-body small">
+        <a class="d-block mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch the full DSA series in order</a>
+        <a class="d-block" href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Compiled Canvas</a>
+      </div></div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="08-prefix-sum-java.html">← Episode 8</a><a class="btn btn-outline-secondary" href="index.html">All episodes →</a></div>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-1">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

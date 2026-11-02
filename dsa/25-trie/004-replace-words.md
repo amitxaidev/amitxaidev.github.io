@@ -9,7 +9,7 @@ Given a list of roots and a sentence, replace every word that starts with a root
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/replace-words/](https://leetcode.com/problems/replace-words/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/004-replace-words.html](https://amitxaidev.github.io/dsa/25-trie/004-replace-words.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/25-trie/004-replace-words.html](https://compiledcanvas.com/dsa/25-trie/004-replace-words.html)
 
 ## Understanding
 

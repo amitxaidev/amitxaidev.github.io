@@ -9,7 +9,7 @@ Return the sum of all node values in a BST that lie in the range [low, high].
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/range-sum-of-bst/](https://leetcode.com/problems/range-sum-of-bst/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/004-range-sum-of-bst.html](https://amitxaidev.github.io/dsa/20-bst/004-range-sum-of-bst.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/20-bst/004-range-sum-of-bst.html](https://compiledcanvas.com/dsa/20-bst/004-range-sum-of-bst.html)
 
 ## Understanding
 

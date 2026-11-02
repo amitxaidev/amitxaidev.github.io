@@ -3,7 +3,7 @@
 StringBuilder, palindromes, anagrams, frequency counting and top string questions.
 
 📺 **Watch first:** Ep 16, Ep 17, Ep 20 of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/11-strings/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/11-strings/  
 🧮 **15 problems** · 🟢 7 Easy · 🟡 8 Medium · 🔴 0 Hard
 
 ## Understand the topic

@@ -9,7 +9,7 @@ Mirror a binary tree by swapping every node's left and right children.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/invert-binary-tree/](https://leetcode.com/problems/invert-binary-tree/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/006-invert-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/006-invert-binary-tree.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/19-binary-trees/006-invert-binary-tree.html](https://compiledcanvas.com/dsa/19-binary-trees/006-invert-binary-tree.html)
 
 ## Understanding
 

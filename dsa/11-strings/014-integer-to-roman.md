@@ -9,7 +9,7 @@ Convert an integer from 1 to 3999 into a Roman numeral.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/integer-to-roman/](https://leetcode.com/problems/integer-to-roman/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/014-integer-to-roman.html](https://amitxaidev.github.io/dsa/11-strings/014-integer-to-roman.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/11-strings/014-integer-to-roman.html](https://compiledcanvas.com/dsa/11-strings/014-integer-to-roman.html)
 
 ## Understanding
 

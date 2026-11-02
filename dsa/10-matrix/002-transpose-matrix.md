@@ -9,7 +9,7 @@ Return the transpose of a matrix (rows become columns). The matrix may not be sq
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/transpose-matrix/](https://leetcode.com/problems/transpose-matrix/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/002-transpose-matrix.html](https://amitxaidev.github.io/dsa/10-matrix/002-transpose-matrix.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/10-matrix/002-transpose-matrix.html](https://compiledcanvas.com/dsa/10-matrix/002-transpose-matrix.html)
 
 ## Understanding
 

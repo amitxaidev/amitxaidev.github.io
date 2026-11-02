@@ -9,7 +9,7 @@ Reverse a char array in place without making a new array.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/reverse-string/](https://leetcode.com/problems/reverse-string/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/004-reverse-string.html](https://amitxaidev.github.io/dsa/02-java-basics/004-reverse-string.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/02-java-basics/004-reverse-string.html](https://compiledcanvas.com/dsa/02-java-basics/004-reverse-string.html)
 
 ## Understanding
 

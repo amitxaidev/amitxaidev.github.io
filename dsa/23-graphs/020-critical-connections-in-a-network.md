@@ -9,7 +9,7 @@ In an undirected connected network, return every connection whose removal discon
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/critical-connections-in-a-network/](https://leetcode.com/problems/critical-connections-in-a-network/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/020-critical-connections-in-a-network.html](https://amitxaidev.github.io/dsa/23-graphs/020-critical-connections-in-a-network.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/23-graphs/020-critical-connections-in-a-network.html](https://compiledcanvas.com/dsa/23-graphs/020-critical-connections-in-a-network.html)
 
 ## Understanding
 

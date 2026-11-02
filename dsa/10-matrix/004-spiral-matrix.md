@@ -9,7 +9,7 @@ Return all elements of an m × n matrix in clockwise spiral order.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/spiral-matrix/](https://leetcode.com/problems/spiral-matrix/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/004-spiral-matrix.html](https://amitxaidev.github.io/dsa/10-matrix/004-spiral-matrix.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/10-matrix/004-spiral-matrix.html](https://compiledcanvas.com/dsa/10-matrix/004-spiral-matrix.html)
 
 ## Understanding
 

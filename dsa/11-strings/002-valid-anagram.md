@@ -9,7 +9,7 @@ Decide whether t is a rearrangement of s.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/valid-anagram/](https://leetcode.com/problems/valid-anagram/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/002-valid-anagram.html](https://amitxaidev.github.io/dsa/11-strings/002-valid-anagram.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/11-strings/002-valid-anagram.html](https://compiledcanvas.com/dsa/11-strings/002-valid-anagram.html)
 
 ## Understanding
 

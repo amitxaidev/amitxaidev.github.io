@@ -9,7 +9,7 @@ Decide whether a word can be traced in a letter grid by moving up, down, left or
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/word-search/](https://leetcode.com/problems/word-search/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/013-word-search.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/013-word-search.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/15-recursion-backtracking/013-word-search.html](https://compiledcanvas.com/dsa/15-recursion-backtracking/013-word-search.html)
 
 ## Understanding
 

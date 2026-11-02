@@ -9,7 +9,7 @@ Count how many distinct ways t appears as a subsequence of s.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/distinct-subsequences/](https://leetcode.com/problems/distinct-subsequences/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/022-distinct-subsequences.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/022-distinct-subsequences.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/022-distinct-subsequences.html](https://compiledcanvas.com/dsa/24-dynamic-programming/022-distinct-subsequences.html)
 
 ## Understanding
 

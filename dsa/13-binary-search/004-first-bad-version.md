@@ -9,7 +9,7 @@ Versions 1..n are good up to some point and bad after it. Using an isBadVersion(
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/first-bad-version/](https://leetcode.com/problems/first-bad-version/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/004-first-bad-version.html](https://amitxaidev.github.io/dsa/13-binary-search/004-first-bad-version.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/13-binary-search/004-first-bad-version.html](https://compiledcanvas.com/dsa/13-binary-search/004-first-bad-version.html)
 
 ## Understanding
 

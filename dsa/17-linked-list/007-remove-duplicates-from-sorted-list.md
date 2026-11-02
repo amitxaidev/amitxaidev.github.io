@@ -9,7 +9,7 @@ Delete duplicate nodes from a sorted linked list so each value appears once.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/remove-duplicates-from-sorted-list/](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/007-remove-duplicates-from-sorted-list.html](https://amitxaidev.github.io/dsa/17-linked-list/007-remove-duplicates-from-sorted-list.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/17-linked-list/007-remove-duplicates-from-sorted-list.html](https://compiledcanvas.com/dsa/17-linked-list/007-remove-duplicates-from-sorted-list.html)
 
 ## Understanding
 

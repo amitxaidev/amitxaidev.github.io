@@ -9,7 +9,7 @@ Return the length of the longest subsequence of s that is a palindrome.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/longest-palindromic-subsequence/](https://leetcode.com/problems/longest-palindromic-subsequence/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/015-longest-palindromic-subsequence.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/015-longest-palindromic-subsequence.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/015-longest-palindromic-subsequence.html](https://compiledcanvas.com/dsa/24-dynamic-programming/015-longest-palindromic-subsequence.html)
 
 ## Understanding
 

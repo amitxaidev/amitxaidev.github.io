@@ -9,7 +9,7 @@ Design a fixed-capacity cache with get and put in O(1). When full, put evicts th
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/lru-cache/](https://leetcode.com/problems/lru-cache/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/015-lru-cache.html](https://amitxaidev.github.io/dsa/17-linked-list/015-lru-cache.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/17-linked-list/015-lru-cache.html](https://compiledcanvas.com/dsa/17-linked-list/015-lru-cache.html)
 
 ## Understanding
 

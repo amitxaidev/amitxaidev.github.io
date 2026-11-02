@@ -9,7 +9,7 @@ Decide whether a singly linked list reads the same forwards and backwards, ideal
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/palindrome-linked-list/](https://leetcode.com/problems/palindrome-linked-list/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/006-palindrome-linked-list.html](https://amitxaidev.github.io/dsa/17-linked-list/006-palindrome-linked-list.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/17-linked-list/006-palindrome-linked-list.html](https://compiledcanvas.com/dsa/17-linked-list/006-palindrome-linked-list.html)
 
 ## Understanding
 

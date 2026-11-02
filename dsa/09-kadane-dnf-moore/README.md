@@ -3,7 +3,7 @@
 Three famous one-pass array algorithms and their variations.
 
 📺 **Watch first:** Ep 11, Ep 12, Ep 13 of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/09-kadane-dnf-moore/  
 🧮 **9 problems** · 🟢 2 Easy · 🟡 7 Medium · 🔴 0 Hard
 
 ## Understand the topic

@@ -9,7 +9,7 @@ The permutations of 1..n are listed in sorted order. Return the k-th one as a st
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/permutation-sequence/](https://leetcode.com/problems/permutation-sequence/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/018-permutation-sequence.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/018-permutation-sequence.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/15-recursion-backtracking/018-permutation-sequence.html](https://compiledcanvas.com/dsa/15-recursion-backtracking/018-permutation-sequence.html)
 
 ## Understanding
 

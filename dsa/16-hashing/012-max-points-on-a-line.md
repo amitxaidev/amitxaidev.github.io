@@ -9,7 +9,7 @@ Given points on a plane, return the largest number of them that lie on one strai
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/max-points-on-a-line/](https://leetcode.com/problems/max-points-on-a-line/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/012-max-points-on-a-line.html](https://amitxaidev.github.io/dsa/16-hashing/012-max-points-on-a-line.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/16-hashing/012-max-points-on-a-line.html](https://compiledcanvas.com/dsa/16-hashing/012-max-points-on-a-line.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ Check whether a partially filled 9×9 Sudoku board breaks any rule: no digit rep
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/valid-sudoku/](https://leetcode.com/problems/valid-sudoku/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/009-valid-sudoku.html](https://amitxaidev.github.io/dsa/10-matrix/009-valid-sudoku.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/10-matrix/009-valid-sudoku.html](https://compiledcanvas.com/dsa/10-matrix/009-valid-sudoku.html)
 
 ## Understanding
 

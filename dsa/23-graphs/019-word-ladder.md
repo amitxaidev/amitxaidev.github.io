@@ -9,7 +9,7 @@ Transform beginWord into endWord by changing one letter at a time, where every i
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/word-ladder/](https://leetcode.com/problems/word-ladder/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/019-word-ladder.html](https://amitxaidev.github.io/dsa/23-graphs/019-word-ladder.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/23-graphs/019-word-ladder.html](https://compiledcanvas.com/dsa/23-graphs/019-word-ladder.html)
 
 ## Understanding
 

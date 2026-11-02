@@ -9,7 +9,7 @@ Return all distinct subsets of an array that may contain duplicates.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/subsets-ii/](https://leetcode.com/problems/subsets-ii/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/004-subsets-ii.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/004-subsets-ii.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/15-recursion-backtracking/004-subsets-ii.html](https://compiledcanvas.com/dsa/15-recursion-backtracking/004-subsets-ii.html)
 
 ## Understanding
 

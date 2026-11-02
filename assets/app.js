@@ -68,6 +68,23 @@
   });
   window.addEventListener('storage', function (ev) { if (ev.key === KEY) { done = load(); refresh(); } });
 
+  // ---------- key moments jump inside the episode player (also handles ?t=120 links)
+  var player = document.getElementById('ep-video');
+  function seek(at, play) {
+    player.src = 'https://www.youtube.com/embed/' + player.dataset.video + '?rel=0&start=' + at + (play ? '&autoplay=1' : '');
+  }
+  if (player) {
+    var startAt = parseInt(new URLSearchParams(location.search).get('t'), 10);
+    if (startAt > 0) seek(startAt, false);
+    document.querySelectorAll('[data-seek]').forEach(function (link) {
+      link.addEventListener('click', function (ev) {
+        ev.preventDefault();
+        seek(link.dataset.seek, true);
+        player.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+      });
+    });
+  }
+
   // ---------- filter + search on topic pages
   var filter = 'all';
   var search = document.querySelector('.search');

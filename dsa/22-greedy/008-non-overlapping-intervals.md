@@ -9,7 +9,7 @@ Return the minimum number of intervals to remove so the rest don't overlap (touc
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/non-overlapping-intervals/](https://leetcode.com/problems/non-overlapping-intervals/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/008-non-overlapping-intervals.html](https://amitxaidev.github.io/dsa/22-greedy/008-non-overlapping-intervals.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/22-greedy/008-non-overlapping-intervals.html](https://compiledcanvas.com/dsa/22-greedy/008-non-overlapping-intervals.html)
 
 ## Understanding
 

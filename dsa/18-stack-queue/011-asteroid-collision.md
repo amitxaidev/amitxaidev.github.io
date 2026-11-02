@@ -9,7 +9,7 @@ Asteroids move along a line: positive values go right, negative go left, absolut
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/asteroid-collision/](https://leetcode.com/problems/asteroid-collision/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/011-asteroid-collision.html](https://amitxaidev.github.io/dsa/18-stack-queue/011-asteroid-collision.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/18-stack-queue/011-asteroid-collision.html](https://compiledcanvas.com/dsa/18-stack-queue/011-asteroid-collision.html)
 
 ## Understanding
 

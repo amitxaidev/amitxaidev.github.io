@@ -9,7 +9,7 @@ citations[i] is how many citations paper i has. The h-index is the largest h suc
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/h-index/](https://leetcode.com/problems/h-index/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/013-h-index.html](https://amitxaidev.github.io/dsa/05-arrays/013-h-index.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/05-arrays/013-h-index.html](https://compiledcanvas.com/dsa/05-arrays/013-h-index.html)
 
 ## Understanding
 

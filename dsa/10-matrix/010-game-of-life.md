@@ -9,7 +9,7 @@ Compute the next generation of Conway's Game of Life on a grid, in place. All ce
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/game-of-life/](https://leetcode.com/problems/game-of-life/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/010-game-of-life.html](https://amitxaidev.github.io/dsa/10-matrix/010-game-of-life.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/10-matrix/010-game-of-life.html](https://compiledcanvas.com/dsa/10-matrix/010-game-of-life.html)
 
 ## Understanding
 

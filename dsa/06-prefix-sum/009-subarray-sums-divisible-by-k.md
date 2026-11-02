@@ -9,7 +9,7 @@ Count the non-empty subarrays whose sum is divisible by k.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/subarray-sums-divisible-by-k/](https://leetcode.com/problems/subarray-sums-divisible-by-k/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/009-subarray-sums-divisible-by-k.html](https://amitxaidev.github.io/dsa/06-prefix-sum/009-subarray-sums-divisible-by-k.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/06-prefix-sum/009-subarray-sums-divisible-by-k.html](https://compiledcanvas.com/dsa/06-prefix-sum/009-subarray-sums-divisible-by-k.html)
 
 ## Understanding
 

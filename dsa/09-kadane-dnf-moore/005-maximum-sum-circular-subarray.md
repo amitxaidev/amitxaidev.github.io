@@ -9,7 +9,7 @@ The array is circular (the end wraps to the start). Return the largest possible 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/maximum-sum-circular-subarray/](https://leetcode.com/problems/maximum-sum-circular-subarray/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/005-maximum-sum-circular-subarray.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/005-maximum-sum-circular-subarray.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/09-kadane-dnf-moore/005-maximum-sum-circular-subarray.html](https://compiledcanvas.com/dsa/09-kadane-dnf-moore/005-maximum-sum-circular-subarray.html)
 
 ## Understanding
 

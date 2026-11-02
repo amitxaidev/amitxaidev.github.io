@@ -9,7 +9,7 @@ Sort arr1 so its elements follow the order given by arr2. Elements not in arr2 g
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/relative-sort-array/](https://leetcode.com/problems/relative-sort-array/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/003-relative-sort-array.html](https://amitxaidev.github.io/dsa/14-sorting/003-relative-sort-array.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/14-sorting/003-relative-sort-array.html](https://compiledcanvas.com/dsa/14-sorting/003-relative-sort-array.html)
 
 ## Understanding
 

@@ -3,7 +3,7 @@
 Traversals, BFS, height/diameter, views, LCA, construction and serialization.
 
 📺 **Watch first:** Ep 53, Ep 54, Ep 55, Ep 56, Ep 57, Ep 58, Ep 59, Ep 60 of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/19-binary-trees/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/19-binary-trees/  
 🧮 **20 problems** · 🟢 8 Easy · 🟡 9 Medium · 🔴 3 Hard
 
 ## Understand the topic

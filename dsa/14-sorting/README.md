@@ -3,7 +3,7 @@
 Merge sort, quick sort, counting/bucket sort and custom comparators.
 
 📺 **Watch first:** Ep 24, Ep 25, Ep 26, Ep 27, Ep 28 of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/14-sorting/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/14-sorting/  
 🧮 **11 problems** · 🟢 3 Easy · 🟡 6 Medium · 🔴 2 Hard
 
 ## Understand the topic

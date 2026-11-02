@@ -9,7 +9,7 @@ cost[i] is paid when you step on stair i, and you can then climb 1 or 2 stairs. 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/min-cost-climbing-stairs/](https://leetcode.com/problems/min-cost-climbing-stairs/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/002-min-cost-climbing-stairs.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/002-min-cost-climbing-stairs.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/002-min-cost-climbing-stairs.html](https://compiledcanvas.com/dsa/24-dynamic-programming/002-min-cost-climbing-stairs.html)
 
 ## Understanding
 

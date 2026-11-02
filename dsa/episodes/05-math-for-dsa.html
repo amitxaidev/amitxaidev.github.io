@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basic Math for DSA: Primes, Sieve, GCD &amp; Modulo (Java) | Compiled Canvas</title>
+<meta name="description" content="Basic math for DSA in Java: digits, divisors, primes, the Sieve of Eratosthenes, GCD and LCM, modulo arithmetic and fast power, explained simply.">
+<link rel="canonical" href="https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="video.other">
+<meta property="og:url" content="https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html">
+<meta property="og:title" content="Basic Math for DSA: Primes, Sieve, GCD &amp; Modulo (Java) | Compiled Canvas">
+<meta property="og:description" content="Basic math for DSA in Java: digits, divisors, primes, the Sieve of Eratosthenes, GCD and LCM, modulo arithmetic and fast power, explained simply.">
+<meta property="og:image" content="https://i.ytimg.com/vi/y1GZw3VByAU/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "Basic Math for DSA: Primes, Sieve, GCD & Modulo (Java)", "description": "Basic math for DSA in Java: digits, divisors, primes, the Sieve of Eratosthenes, GCD and LCM, modulo arithmetic and fast power, explained simply.", "thumbnailUrl": ["https://i.ytimg.com/vi/y1GZw3VByAU/maxresdefault.jpg", "https://i.ytimg.com/vi/y1GZw3VByAU/hqdefault.jpg"], "uploadDate": "2026-10-27T23:30:36-07:00", "duration": "PT13M22S", "embedUrl": "https://www.youtube.com/embed/y1GZw3VByAU", "inLanguage": "en", "publisher": {"@type": "Organization", "name": "Compiled Canvas", "url": "https://compiledcanvas.com/", "logo": {"@type": "ImageObject", "url": "https://compiledcanvas.com/assets/logo.png"}, "sameAs": ["https://www.youtube.com/@compiledcanvas", "https://www.instagram.com/compiledcanvas", "https://github.com/amitxaidev"]}, "hasPart": [{"@type": "Clip", "name": "A billion steps vs 31,623", "startOffset": 0, "endOffset": 38, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=0"}, {"@type": "Clip", "name": "What this video covers", "startOffset": 38, "endOffset": 69, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=38"}, {"@type": "Clip", "name": "Digits: % 10 and / 10", "startOffset": 69, "endOffset": 108, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=69"}, {"@type": "Clip", "name": "Reverse a number and palindromes", "startOffset": 108, "endOffset": 128, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=108"}, {"@type": "Clip", "name": "Divisors: the slow way", "startOffset": 128, "endOffset": 146, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=128"}, {"@type": "Clip", "name": "Divisors come in pairs: O(√n)", "startOffset": 146, "endOffset": 190, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=146"}, {"@type": "Clip", "name": "Write i * i less than equal n, not sqrt", "startOffset": 190, "endOffset": 202, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=190"}, {"@type": "Clip", "name": "Prime numbers", "startOffset": 202, "endOffset": 217, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=202"}, {"@type": "Clip", "name": "Check if a number is prime in O(√n)", "startOffset": 217, "endOffset": 242, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=217"}, {"@type": "Clip", "name": "Sieve of Eratosthenes", "startOffset": 242, "endOffset": 266, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=242"}, {"@type": "Clip", "name": "Why the sieve starts at p × p", "startOffset": 266, "endOffset": 299, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=266"}, {"@type": "Clip", "name": "Prime factorization", "startOffset": 299, "endOffset": 362, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=299"}, {"@type": "Clip", "name": "GCD: greatest common divisor", "startOffset": 362, "endOffset": 389, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=362"}, {"@type": "Clip", "name": "Euclid's algorithm, step by step", "startOffset": 389, "endOffset": 421, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=389"}, {"@type": "Clip", "name": "LCM and the overflow trap", "startOffset": 421, "endOffset": 449, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=421"}, {"@type": "Clip", "name": "Modulo and the negative trap in Java", "startOffset": 449, "endOffset": 470, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=449"}, {"@type": "Clip", "name": "Why 10⁹ + 7?", "startOffset": 470, "endOffset": 493, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=470"}, {"@type": "Clip", "name": "Modulo rules: add, multiply, subtract", "startOffset": 493, "endOffset": 513, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=493"}, {"@type": "Clip", "name": "Division and the modular inverse", "startOffset": 513, "endOffset": 529, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=513"}, {"@type": "Clip", "name": "Fast power: binary exponentiation", "startOffset": 529, "endOffset": 562, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=529"}, {"@type": "Clip", "name": "3¹³ from the binary digits of 13", "startOffset": 562, "endOffset": 587, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=562"}, {"@type": "Clip", "name": "Sum from 1 to n and the missing number", "startOffset": 587, "endOffset": 606, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=587"}, {"@type": "Clip", "name": "Integer division and rounding up", "startOffset": 606, "endOffset": 619, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=606"}, {"@type": "Clip", "name": "Math.pow returns a double", "startOffset": 619, "endOffset": 628, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=619"}, {"@type": "Clip", "name": "Math.abs can return a negative!", "startOffset": 628, "endOffset": 641, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=628"}, {"@type": "Clip", "name": "Which tool to use (cheat sheet)", "startOffset": 641, "endOffset": 677, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=641"}, {"@type": "Clip", "name": "Quiz: 3 questions", "startOffset": 677, "endOffset": 731, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=677"}, {"@type": "Clip", "name": "Recap", "startOffset": 731, "endOffset": 766, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=731"}, {"@type": "Clip", "name": "Homework", "startOffset": 766, "endOffset": 781, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=766"}, {"@type": "Clip", "name": "Next episode", "startOffset": 781, "endOffset": 802, "url": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html?t=781"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "DSA in Java", "item": "https://compiledcanvas.com/dsa/"}, {"@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://compiledcanvas.com/dsa/episodes/"}, {"@type": "ListItem", "position": 4, "name": "Episode 5", "item": "https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">AI for Developers <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Episodes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Episode 5</li>
+    </ol></nav>
+    <span class="badge rounded-pill text-bg-dark mb-2">Episode 5 · 13:22 · 27 Oct 2026</span>
+    <h1 class="h2 fw-bold mb-3">Basic Math for DSA: Primes, Sieve, GCD &amp; Modulo (Java)</h1>
+    <div class="ep-player ratio ratio-16x9">
+      <iframe id="ep-video" src="https://www.youtube.com/embed/y1GZw3VByAU?rel=0" data-video="y1GZw3VByAU" title="Basic Math for DSA: Primes, Sieve, GCD &amp; Modulo (Java)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>What this episode covers</h2>
+      <p>Check if a number is prime by looping up to n, and for one billion that&#x27;s a billion steps. Stop at the square root and it&#x27;s about 31,623. Same answer. That&#x27;s the kind of math DSA needs: not school math, just a handful of ideas that keep coming back.</p>
+<p>We start with digits, using % 10 and / 10, then divisors and why they come in pairs. That leads to prime checks in O(√n), the Sieve of Eratosthenes for finding every prime up to n, and prime factorization.</p>
+<p>Then GCD with Euclid&#x27;s algorithm, LCM and its overflow trap, modulo rules, why so many problems say 10⁹ + 7, and fast power. We close with the small Java surprises, like Math.pow returning a double and Math.abs returning a negative number.</p>
+    </section>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>What you'll be able to do</h2>
+      <ul class="mb-0"><li>Digit tricks with % 10 and / 10</li>
+<li>Prime checks in O(√n) and the Sieve of Eratosthenes</li>
+<li>GCD with Euclid&#x27;s algorithm, and LCM without overflow</li>
+<li>Modulo rules and why 10⁹ + 7 shows up</li>
+<li>Fast power in O(log n)</li></ul>
+    </section>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
+      <p class="mb-0">In Java, -7 % 3 is -1, not 2. To get a positive result, use ((a % m) + m) % m.</p>
+    </section>
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Key moments <small>tap one to jump there</small></h2>
+      <ol class="ep-moments list-unstyled mb-0"><li><a href="?t=0" data-seek="0"><time>0:00</time><span>A billion steps vs 31,623</span></a></li>
+<li><a href="?t=38" data-seek="38"><time>0:38</time><span>What this video covers</span></a></li>
+<li><a href="?t=69" data-seek="69"><time>1:09</time><span>Digits: % 10 and / 10</span></a></li>
+<li><a href="?t=108" data-seek="108"><time>1:48</time><span>Reverse a number and palindromes</span></a></li>
+<li><a href="?t=128" data-seek="128"><time>2:08</time><span>Divisors: the slow way</span></a></li>
+<li><a href="?t=146" data-seek="146"><time>2:26</time><span>Divisors come in pairs: O(√n)</span></a></li>
+<li><a href="?t=190" data-seek="190"><time>3:10</time><span>Write i * i less than equal n, not sqrt</span></a></li>
+<li><a href="?t=202" data-seek="202"><time>3:22</time><span>Prime numbers</span></a></li>
+<li><a href="?t=217" data-seek="217"><time>3:37</time><span>Check if a number is prime in O(√n)</span></a></li>
+<li><a href="?t=242" data-seek="242"><time>4:02</time><span>Sieve of Eratosthenes</span></a></li>
+<li><a href="?t=266" data-seek="266"><time>4:26</time><span>Why the sieve starts at p × p</span></a></li>
+<li><a href="?t=299" data-seek="299"><time>4:59</time><span>Prime factorization</span></a></li>
+<li><a href="?t=362" data-seek="362"><time>6:02</time><span>GCD: greatest common divisor</span></a></li>
+<li><a href="?t=389" data-seek="389"><time>6:29</time><span>Euclid&#x27;s algorithm, step by step</span></a></li>
+<li><a href="?t=421" data-seek="421"><time>7:01</time><span>LCM and the overflow trap</span></a></li>
+<li><a href="?t=449" data-seek="449"><time>7:29</time><span>Modulo and the negative trap in Java</span></a></li>
+<li><a href="?t=470" data-seek="470"><time>7:50</time><span>Why 10⁹ + 7?</span></a></li>
+<li><a href="?t=493" data-seek="493"><time>8:13</time><span>Modulo rules: add, multiply, subtract</span></a></li>
+<li><a href="?t=513" data-seek="513"><time>8:33</time><span>Division and the modular inverse</span></a></li>
+<li><a href="?t=529" data-seek="529"><time>8:49</time><span>Fast power: binary exponentiation</span></a></li>
+<li><a href="?t=562" data-seek="562"><time>9:22</time><span>3¹³ from the binary digits of 13</span></a></li>
+<li><a href="?t=587" data-seek="587"><time>9:47</time><span>Sum from 1 to n and the missing number</span></a></li>
+<li><a href="?t=606" data-seek="606"><time>10:06</time><span>Integer division and rounding up</span></a></li>
+<li><a href="?t=619" data-seek="619"><time>10:19</time><span>Math.pow returns a double</span></a></li>
+<li><a href="?t=628" data-seek="628"><time>10:28</time><span>Math.abs can return a negative!</span></a></li>
+<li><a href="?t=641" data-seek="641"><time>10:41</time><span>Which tool to use (cheat sheet)</span></a></li>
+<li><a href="?t=677" data-seek="677"><time>11:17</time><span>Quiz: 3 questions</span></a></li>
+<li><a href="?t=731" data-seek="731"><time>12:11</time><span>Recap</span></a></li>
+<li><a href="?t=766" data-seek="766"><time>12:46</time><span>Homework</span></a></li>
+<li><a href="?t=781" data-seek="781"><time>13:01</time><span>Next episode</span></a></li></ol>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Full transcript</h2>
+      <details class="ep-transcript"><summary>Read the whole lesson</summary>
+      <p>Check if a number is prime. Easy, right? Loop from two to n, and test every number. For n equals one billion, that&#x27;s a billion steps. Your code times out.</p>
+<p>Now, the smart way. Stop at the square root. That&#x27;s about thirty-one thousand steps. Same answer, thirty thousand times faster. And that&#x27;s just one trick.</p>
+<p>Welcome back to Compiled Canvas. This is Episode Five of our DSA series. In Episode Four, we set up our Java toolkit. Today, we cover the math you need for DSA. Not school math. Just the handful of ideas that keep showing up in coding interviews.</p>
+<p>Here&#x27;s the plan. Digits, and how to pull a number apart. Divisors, in O of root n. Prime numbers, and the fast way to check them. The Sieve of Eratosthenes, to find every prime up to n. Prime factorization. GCD and LCM, with Euclid&#x27;s algorithm. Modulo arithmetic, and why every problem says ten to the nine plus seven. Fast power. A few formulas and Java math traps. A cheat sheet for which tool to use. And a quiz at the end.</p>
+<p>Let&#x27;s go.</p>
+<p>First, digits. Two operators do all the work. n modulo ten gives you the last digit. And n divided by ten removes the last digit.</p>
+<p>Take one two three four. Modulo ten gives four. Divide by ten, and you&#x27;re left with one two three. Repeat until n becomes zero, and you&#x27;ve visited every digit, from right to left.</p>
+<p>So how many steps is that? One step per digit. And a number n has about log base ten of n digits. So it&#x27;s O of log n. Even a number with eighteen digits takes only eighteen steps.</p>
+<p>With this one loop, you can count the digits, add them up, or reverse the number. To reverse, start with zero. At each step, multiply the result by ten, and add the last digit. One two three four becomes four three two one.</p>
+<p>And to check if a number is a palindrome, reverse it, and compare it with the original. Just watch out: reversing a big int can overflow. So keep the reversed value in a long.</p>
+<p>Next, divisors. A divisor of n is a number that divides it with no remainder. The slow way checks every number from one to n. That&#x27;s O of n.</p>
+<p>But here&#x27;s the key idea. Divisors come in pairs. If i divides n, then n divided by i divides n too. Take thirty-six. One and thirty-six. Two and eighteen. Three and twelve. Four and nine. And six and six.</p>
+<p>Look at the pairs. In every pair, one number is at most six, the square root of thirty-six. So you only need to check up to the square root. For every i that divides n, you get two divisors at once: i, and n divided by i.</p>
+<p>One detail: when i times i equals n, like six times six, the pair is the same number. Count it only once.</p>
+<p>That takes us from O of n to O of root n. For n equals one billion, that&#x27;s thirty-one thousand steps, instead of a billion.</p>
+<p>And in code, don&#x27;t write i less than or equal to the square root of n. Write i times i, less than or equal to n. It avoids decimal numbers completely. And if n is close to the int limit, make i a long, so i times i can&#x27;t overflow.</p>
+<p>Now, prime numbers. A prime is a number greater than one, whose only divisors are one and itself. Two, three, five, seven, eleven. And remember: one is not a prime. And two is the only even prime.</p>
+<p>To check one number, use the same trick. If n has a divisor, it has one at or below its square root. So loop i from two, while i times i is at most n. If any i divides n, it&#x27;s not prime. If none does, it is. That&#x27;s O of root n.</p>
+<p>But what if you need every prime up to n? Checking each one costs n times root n. Too slow. That&#x27;s where the Sieve of Eratosthenes comes in.</p>
+<p>Make a boolean array, and mark every number from two to n as prime. Then start at two. Two is prime, so cross out all its multiples: four, six, eight, ten, and so on. Move to three. It&#x27;s still marked, so it&#x27;s prime. Cross out its multiples. Four is already crossed out, so skip it. Five is prime. Cross out its multiples. Keep going.</p>
+<p>Here&#x27;s the clever part. For each prime p, start crossing out at p times p, not at two times p. Every smaller multiple was already crossed out by a smaller prime. And that&#x27;s why you can stop once p times p is bigger than n.</p>
+<p>Whatever is still marked at the end is prime. The time is O of n log log n, which is almost linear. The only cost is memory: one boolean for each number, so it works up to about ten million.</p>
+<p>So, one number? Check up to root n. Every prime up to n? Use the sieve.</p>
+<p>Next, prime factorization: writing a number as a product of primes. Take three hundred sixty. That&#x27;s two times two times two, times three times three, times five.</p>
+<p>Here&#x27;s how. Start with i equals two. While i divides n, record i, and divide n by i. When it stops dividing, move to the next i. And again, stop when i times i is bigger than n.</p>
+<p>If whatever is left at the end is bigger than one, it&#x27;s a prime factor too. That&#x27;s the one big prime that&#x27;s above the square root.</p>
+<p>You never need to check if i is prime. By the time you reach i, all its smaller factors have already been divided out. So only primes can divide what&#x27;s left.</p>
+<p>And it&#x27;s fast. The loop runs to the square root, so prime factorization is also in O of root n.</p>
+<p>Quick pause, before we go further. If you&#x27;re finding this video valuable, hit subscribe to Compiled Canvas, and turn on the bell. It&#x27;s free, it takes one second, and it helps me keep making this complete DSA series for you. Alright, back to it.</p>
+<p>Now, the GCD: the greatest common divisor. It&#x27;s the largest number that divides both a and b. The GCD of twelve and eighteen is six.</p>
+<p>You could list every divisor of both numbers. But there&#x27;s a two-thousand-year-old shortcut: Euclid&#x27;s algorithm. The GCD of a and b is the same as the GCD of b, and a modulo b. Keep going, until b becomes zero. Then a is the answer.</p>
+<p>Let&#x27;s try forty-eight and eighteen. Forty-eight modulo eighteen is twelve, so now we have eighteen and twelve. Eighteen modulo twelve is six: twelve and six. Twelve modulo six is zero: six and zero. b is zero, so the GCD is six.</p>
+<p>In Java, it&#x27;s a single line. If b is zero, return a. Otherwise, return gcd of b, and a modulo b. And it&#x27;s fast: O of log of the smaller number. Even for numbers in the billions, it&#x27;s done in a few dozen steps.</p>
+<p>Then there&#x27;s the LCM: the least common multiple, the smallest number that both a and b divide. The rule is: a times b, divided by their GCD.</p>
+<p>But here&#x27;s a trap. a times b can overflow before you divide. So divide first. Write a divided by the GCD, then times b. Same answer, no overflow.</p>
+<p>You&#x27;ll use GCD for simplifying fractions, for problems about equal groups, and anywhere two numbers have to line up.</p>
+<p>Next, modulo arithmetic. The percent sign gives the remainder. Seventeen modulo five is two.</p>
+<p>But here&#x27;s a Java trap. With a negative number, the result keeps the sign of the left side. So minus seven modulo three is not two. It&#x27;s minus one. If you need a result that&#x27;s never negative, add m, and take the modulo again.</p>
+<p>Now, why do so many problems say: return the answer modulo ten to the nine plus seven? Because the real answer is huge. It can have hundreds of digits, and no int or long can hold it. So you return only the remainder.</p>
+<p>And why that number? Ten to the nine plus seven is a prime. It fits in an int. And two numbers below it, multiplied together, still fit in a long.</p>
+<p>The rules are simple. For addition, take the modulo after every add. For multiplication, multiply in long, then take the modulo. Do it at every step, not just at the end. Wait until the end, and the number overflows long before you get there.</p>
+<p>Subtraction can go negative, so add m before you take the modulo. And division? You can&#x27;t just divide under a modulo. Instead, you multiply by the modular inverse. When m is prime, the inverse of b is b to the power m minus two. And to compute a power that big, you need our next tool.</p>
+<p>Fast power. Say you need x to the power n. The simple loop multiplies x, n times. That&#x27;s O of n. And when n is ten to the eighteen, that&#x27;s never going to finish.</p>
+<p>The fast way is called binary exponentiation. The idea: x to the power ten is x to the five, squared. So instead of making n one smaller each time, you cut it in half.</p>
+<p>Here&#x27;s the loop. Start with a result of one. If n is odd, multiply the result by x. Then square x, and halve n. Repeat until n is zero.</p>
+<p>Take three to the power thirteen. Thirteen is eight plus four plus one, so the answer is three to the eight, times three to the four, times three. The loop finds exactly those pieces, from the binary digits of thirteen.</p>
+<p>Each step halves n, so it&#x27;s O of log n. Even for n equals ten to the eighteen, that&#x27;s about sixty steps. And if you need the answer modulo m, take the modulo after every multiply.</p>
+<p>Now, a few formulas, and Java math traps.</p>
+<p>The sum from one to n is n times n plus one, divided by two. That&#x27;s O of one, not O of n. It solves problems like the missing number: subtract the sum of the array from the formula, and what&#x27;s left is the missing number. Just use long when n is big.</p>
+<p>Integer division drops the decimal part. Seven divided by two is three. And to round up, for positive numbers, write a plus b minus one, divided by b. You&#x27;ll use that for things like the number of pages, or trips.</p>
+<p>Math dot pow returns a double, not an int. Doubles can&#x27;t hold big numbers exactly, so for whole number powers, use a loop, or fast power.</p>
+<p>And here&#x27;s the strangest one. Math dot abs of the smallest int is still negative. Minus two point one billion has no positive twin in an int. So if a value can be that small, use long.</p>
+<p>So, which tool do you use? Here&#x27;s the cheat sheet. Pause and screenshot this.</p>
+<p>If the problem asks about the digits of a number, use modulo ten, and divide by ten.</p>
+<p>If it asks for all divisors, or whether one number is prime, check up to the square root.</p>
+<p>If it needs every prime up to n, use the sieve.</p>
+<p>If it talks about fractions, equal groups, or the LCM, think GCD.</p>
+<p>If it says return the answer modulo ten to the nine plus seven, use long, and take the modulo at every step.</p>
+<p>If it needs a huge power, use fast power.</p>
+<p>And if it asks for the sum from one to n, use the formula.</p>
+<p>Okay, quiz time. Three questions. Pause the video, work out each answer, and then hit play.</p>
+<p>Question one. In Java, what does minus seven modulo three print?</p>
+<p>Question two. Is one a prime number?</p>
+<p>Question three. What&#x27;s the GCD of forty-eight and eighteen, and how many steps does Euclid&#x27;s algorithm take?</p>
+<p>Ready?</p>
+<p>Question one: minus one. In Java, the result keeps the sign of the left side. Add three, and take the modulo again, to get two.</p>
+<p>Question two: no. A prime must be greater than one. The smallest prime is two.</p>
+<p>Question three: six, in three steps. Forty-eight and eighteen, then eighteen and twelve, then twelve and six, and then the remainder is zero.</p>
+<p>How many did you get right? Tell me in the comments: three out of three, two, or one.</p>
+<p>Let&#x27;s recap. Modulo ten and divide by ten take a number apart, digit by digit, in O of log n. Divisors come in pairs, so check up to the square root. The same goes for testing one prime. For every prime up to n, use the Sieve of Eratosthenes, in O of n log log n. For the GCD, use Euclid&#x27;s algorithm. And for the LCM, divide before you multiply. Under a modulo, take the remainder at every step, and watch out for negative results in Java. And for big powers, use fast power, in O of log n.</p>
+<p>Your homework. Solve Count Primes on LeetCode, first with a square root check, then with the sieve, and compare how fast they run. Then tell me in the comments: what&#x27;s the GCD of one thousand seventy-one and four hundred sixty-two?</p>
+<p>Next episode, we cover bit manipulation. AND, OR, XOR, shifts, and the tricks that turn hard problems into one line of code.</p>
+<p>And don&#x27;t forget to subscribe to Compiled Canvas, so you don&#x27;t miss anything new in tech and the job market. Keep coding, stay consistent, and I&#x27;ll see you in the next one.</p>
+      </details>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <div class="side-sticky">
+      <div class="card mb-3 shadow-sm solve-card"><div class="card-body">
+        <h2 class="h6 fw-bold">Practise this now</h2>
+        <div class="mb-3"><a class="ep-try" href="../03-math/009-count-primes.html">Count Primes <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../03-math/001-palindrome-number.html">Palindrome Number <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../03-math/005-find-greatest-common-divisor-of-array.html">Find Greatest Common Divisor of Array <span aria-hidden="true">→</span></a></div>
+        <a class="btn btn-brand w-100" href="../03-math/index.html">All Basic Math problems</a>
+      </div></div>
+      <div class="card mb-3 shadow-sm"><div class="card-body small">
+        <a class="d-block mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch the full DSA series in order</a>
+        <a class="d-block" href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Compiled Canvas</a>
+      </div></div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="04-java-for-dsa.html">← Episode 4</a><a class="btn btn-outline-secondary" href="06-bit-manipulation-java.html">Episode 6 →</a></div>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-1">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

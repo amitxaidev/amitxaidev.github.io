@@ -9,7 +9,7 @@ Bars of given heights stand side by side. Return how much rain water is trapped 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/trapping-rain-water/](https://leetcode.com/problems/trapping-rain-water/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/013-trapping-rain-water.html](https://amitxaidev.github.io/dsa/07-two-pointers/013-trapping-rain-water.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/07-two-pointers/013-trapping-rain-water.html](https://compiledcanvas.com/dsa/07-two-pointers/013-trapping-rain-water.html)
 
 ## Understanding
 

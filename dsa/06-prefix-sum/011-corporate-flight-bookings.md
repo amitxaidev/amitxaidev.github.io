@@ -9,7 +9,7 @@ There are n flights. Each booking [first, last, seats] reserves seats on every f
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/corporate-flight-bookings/](https://leetcode.com/problems/corporate-flight-bookings/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/011-corporate-flight-bookings.html](https://amitxaidev.github.io/dsa/06-prefix-sum/011-corporate-flight-bookings.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/06-prefix-sum/011-corporate-flight-bookings.html](https://compiledcanvas.com/dsa/06-prefix-sum/011-corporate-flight-bookings.html)
 
 ## Understanding
 

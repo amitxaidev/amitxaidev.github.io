@@ -9,7 +9,7 @@ For every subset of the array, take the XOR of its elements. Return the sum of a
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/sum-of-all-subset-xor-totals/](https://leetcode.com/problems/sum-of-all-subset-xor-totals/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/002-sum-of-all-subset-xor-totals.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/002-sum-of-all-subset-xor-totals.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/15-recursion-backtracking/002-sum-of-all-subset-xor-totals.html](https://compiledcanvas.com/dsa/15-recursion-backtracking/002-sum-of-all-subset-xor-totals.html)
 
 ## Understanding
 

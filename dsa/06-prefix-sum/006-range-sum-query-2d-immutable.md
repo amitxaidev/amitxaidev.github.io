@@ -9,7 +9,7 @@ Answer many queries for the sum of a rectangle inside a fixed matrix.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/range-sum-query-2d-immutable/](https://leetcode.com/problems/range-sum-query-2d-immutable/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/006-range-sum-query-2d-immutable.html](https://amitxaidev.github.io/dsa/06-prefix-sum/006-range-sum-query-2d-immutable.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/06-prefix-sum/006-range-sum-query-2d-immutable.html](https://compiledcanvas.com/dsa/06-prefix-sum/006-range-sum-query-2d-immutable.html)
 
 ## Understanding
 

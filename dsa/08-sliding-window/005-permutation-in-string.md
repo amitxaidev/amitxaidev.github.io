@@ -9,7 +9,7 @@ Decide whether some rearrangement of s1 appears as a contiguous substring of s2.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/permutation-in-string/](https://leetcode.com/problems/permutation-in-string/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/005-permutation-in-string.html](https://amitxaidev.github.io/dsa/08-sliding-window/005-permutation-in-string.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/08-sliding-window/005-permutation-in-string.html](https://compiledcanvas.com/dsa/08-sliding-window/005-permutation-in-string.html)
 
 ## Understanding
 

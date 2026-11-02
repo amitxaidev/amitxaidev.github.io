@@ -9,7 +9,7 @@ Reverse the nodes of a linked list k at a time. A final group with fewer than k 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/reverse-nodes-in-k-group/](https://leetcode.com/problems/reverse-nodes-in-k-group/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/018-reverse-nodes-in-k-group.html](https://amitxaidev.github.io/dsa/17-linked-list/018-reverse-nodes-in-k-group.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/17-linked-list/018-reverse-nodes-in-k-group.html](https://compiledcanvas.com/dsa/17-linked-list/018-reverse-nodes-in-k-group.html)
 
 ## Understanding
 

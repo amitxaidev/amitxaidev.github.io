@@ -9,7 +9,7 @@ Build a LIFO stack (push, pop, top, empty) using only queue operations.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/implement-stack-using-queues/](https://leetcode.com/problems/implement-stack-using-queues/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/003-implement-stack-using-queues.html](https://amitxaidev.github.io/dsa/18-stack-queue/003-implement-stack-using-queues.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/18-stack-queue/003-implement-stack-using-queues.html](https://compiledcanvas.com/dsa/18-stack-queue/003-implement-stack-using-queues.html)
 
 ## Understanding
 

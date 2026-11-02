@@ -9,7 +9,7 @@ Design a class that answers many queries "sum of nums from index left to right" 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/range-sum-query-immutable/](https://leetcode.com/problems/range-sum-query-immutable/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/002-range-sum-query-immutable.html](https://amitxaidev.github.io/dsa/06-prefix-sum/002-range-sum-query-immutable.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/06-prefix-sum/002-range-sum-query-immutable.html](https://compiledcanvas.com/dsa/06-prefix-sum/002-range-sum-query-immutable.html)
 
 ## Understanding
 

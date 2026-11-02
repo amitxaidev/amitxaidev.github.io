@@ -9,7 +9,7 @@ You climb a staircase of n steps, taking 1 or 2 steps at a time. Count the disti
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/climbing-stairs/](https://leetcode.com/problems/climbing-stairs/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/001-climbing-stairs.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/001-climbing-stairs.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/001-climbing-stairs.html](https://compiledcanvas.com/dsa/24-dynamic-programming/001-climbing-stairs.html)
 
 ## Understanding
 

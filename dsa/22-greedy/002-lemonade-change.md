@@ -9,7 +9,7 @@ Lemonade costs $5. Customers pay with $5, $10 or $20 bills in order, and you sta
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/lemonade-change/](https://leetcode.com/problems/lemonade-change/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/002-lemonade-change.html](https://amitxaidev.github.io/dsa/22-greedy/002-lemonade-change.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/22-greedy/002-lemonade-change.html](https://compiledcanvas.com/dsa/22-greedy/002-lemonade-change.html)
 
 ## Understanding
 

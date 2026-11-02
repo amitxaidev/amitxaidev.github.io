@@ -9,7 +9,7 @@ Sort a singly linked list in O(n log n) time.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/sort-list/](https://leetcode.com/problems/sort-list/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/005-sort-list.html](https://amitxaidev.github.io/dsa/14-sorting/005-sort-list.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/14-sorting/005-sort-list.html](https://compiledcanvas.com/dsa/14-sorting/005-sort-list.html)
 
 ## Understanding
 

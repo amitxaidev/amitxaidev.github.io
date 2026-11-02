@@ -3,7 +3,7 @@
 Parentheses, expression evaluation, monotonic stack and deque.
 
 📺 **Watch first:** Ep 46, Ep 47, Ep 48, Ep 49, Ep 50, Ep 51, Ep 52 of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/18-stack-queue/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/18-stack-queue/  
 🧮 **18 problems** · 🟢 5 Easy · 🟡 9 Medium · 🔴 4 Hard
 
 ## Understand the topic

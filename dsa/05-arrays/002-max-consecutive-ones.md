@@ -9,7 +9,7 @@ In a binary array, return the length of the longest run of consecutive 1s.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/max-consecutive-ones/](https://leetcode.com/problems/max-consecutive-ones/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/002-max-consecutive-ones.html](https://amitxaidev.github.io/dsa/05-arrays/002-max-consecutive-ones.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/05-arrays/002-max-consecutive-ones.html](https://compiledcanvas.com/dsa/05-arrays/002-max-consecutive-ones.html)
 
 ## Understanding
 

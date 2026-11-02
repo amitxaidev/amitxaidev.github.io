@@ -9,7 +9,7 @@ Decide whether s can be built by repeating one of its substrings two or more tim
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/repeated-substring-pattern/](https://leetcode.com/problems/repeated-substring-pattern/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/12-string-matching/002-repeated-substring-pattern.html](https://amitxaidev.github.io/dsa/12-string-matching/002-repeated-substring-pattern.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/12-string-matching/002-repeated-substring-pattern.html](https://compiledcanvas.com/dsa/12-string-matching/002-repeated-substring-pattern.html)
 
 ## Understanding
 

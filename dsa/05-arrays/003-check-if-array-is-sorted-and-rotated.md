@@ -9,7 +9,7 @@ Decide whether the array could be a non-decreasing array that was rotated some n
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/003-check-if-array-is-sorted-and-rotated.html](https://amitxaidev.github.io/dsa/05-arrays/003-check-if-array-is-sorted-and-rotated.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/05-arrays/003-check-if-array-is-sorted-and-rotated.html](https://compiledcanvas.com/dsa/05-arrays/003-check-if-array-is-sorted-and-rotated.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ Given a strictly increasing array of positive integers, return the k-th positive
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/kth-missing-positive-number/](https://leetcode.com/problems/kth-missing-positive-number/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/005-kth-missing-positive-number.html](https://amitxaidev.github.io/dsa/13-binary-search/005-kth-missing-positive-number.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/13-binary-search/005-kth-missing-positive-number.html](https://compiledcanvas.com/dsa/13-binary-search/005-kth-missing-positive-number.html)
 
 ## Understanding
 

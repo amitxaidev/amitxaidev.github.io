@@ -9,7 +9,7 @@ Decide whether a binary tree is a valid BST: every node is strictly greater than
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/validate-binary-search-tree/](https://leetcode.com/problems/validate-binary-search-tree/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/007-validate-binary-search-tree.html](https://amitxaidev.github.io/dsa/20-bst/007-validate-binary-search-tree.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/20-bst/007-validate-binary-search-tree.html](https://compiledcanvas.com/dsa/20-bst/007-validate-binary-search-tree.html)
 
 ## Understanding
 

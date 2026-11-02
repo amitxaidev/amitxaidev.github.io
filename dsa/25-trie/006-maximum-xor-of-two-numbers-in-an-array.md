@@ -9,7 +9,7 @@ Return the maximum value of nums[i] XOR nums[j] over all pairs.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/006-maximum-xor-of-two-numbers-in-an-array.html](https://amitxaidev.github.io/dsa/25-trie/006-maximum-xor-of-two-numbers-in-an-array.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/25-trie/006-maximum-xor-of-two-numbers-in-an-array.html](https://compiledcanvas.com/dsa/25-trie/006-maximum-xor-of-two-numbers-in-an-array.html)
 
 ## Understanding
 

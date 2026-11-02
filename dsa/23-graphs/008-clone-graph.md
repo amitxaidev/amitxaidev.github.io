@@ -9,7 +9,7 @@ Return a deep copy of a connected undirected graph, given a reference to one nod
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/clone-graph/](https://leetcode.com/problems/clone-graph/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/008-clone-graph.html](https://amitxaidev.github.io/dsa/23-graphs/008-clone-graph.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/23-graphs/008-clone-graph.html](https://compiledcanvas.com/dsa/23-graphs/008-clone-graph.html)
 
 ## Understanding
 

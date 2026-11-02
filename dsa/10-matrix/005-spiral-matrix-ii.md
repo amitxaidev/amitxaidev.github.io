@@ -9,7 +9,7 @@ Build an n × n matrix filled with 1 to n² in clockwise spiral order.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/spiral-matrix-ii/](https://leetcode.com/problems/spiral-matrix-ii/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/005-spiral-matrix-ii.html](https://amitxaidev.github.io/dsa/10-matrix/005-spiral-matrix-ii.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/10-matrix/005-spiral-matrix-ii.html](https://compiledcanvas.com/dsa/10-matrix/005-spiral-matrix-ii.html)
 
 ## Understanding
 

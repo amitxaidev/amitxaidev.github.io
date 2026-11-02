@@ -9,7 +9,7 @@ Find the cheapest price from src to dst using at most k stops (k + 1 flights), o
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/cheapest-flights-within-k-stops/](https://leetcode.com/problems/cheapest-flights-within-k-stops/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/014-cheapest-flights-within-k-stops.html](https://amitxaidev.github.io/dsa/23-graphs/014-cheapest-flights-within-k-stops.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/23-graphs/014-cheapest-flights-within-k-stops.html](https://compiledcanvas.com/dsa/23-graphs/014-cheapest-flights-within-k-stops.html)
 
 ## Understanding
 

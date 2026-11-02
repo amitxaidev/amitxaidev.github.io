@@ -9,7 +9,7 @@ In a binary matrix of '0' and '1', return the area of the largest rectangle cont
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/maximal-rectangle/](https://leetcode.com/problems/maximal-rectangle/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/016-maximal-rectangle.html](https://amitxaidev.github.io/dsa/18-stack-queue/016-maximal-rectangle.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/18-stack-queue/016-maximal-rectangle.html](https://compiledcanvas.com/dsa/18-stack-queue/016-maximal-rectangle.html)
 
 ## Understanding
 

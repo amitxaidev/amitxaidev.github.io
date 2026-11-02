@@ -9,7 +9,7 @@ Decide whether characters of s can be replaced one-to-one to get t (no two chara
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/isomorphic-strings/](https://leetcode.com/problems/isomorphic-strings/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/005-isomorphic-strings.html](https://amitxaidev.github.io/dsa/11-strings/005-isomorphic-strings.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/11-strings/005-isomorphic-strings.html](https://compiledcanvas.com/dsa/11-strings/005-isomorphic-strings.html)
 
 ## Understanding
 

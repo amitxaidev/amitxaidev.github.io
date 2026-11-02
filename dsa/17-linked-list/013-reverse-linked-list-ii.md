@@ -9,7 +9,7 @@ Reverse only the nodes from position left to position right (1-indexed) in one p
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/reverse-linked-list-ii/](https://leetcode.com/problems/reverse-linked-list-ii/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/013-reverse-linked-list-ii.html](https://amitxaidev.github.io/dsa/17-linked-list/013-reverse-linked-list-ii.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/17-linked-list/013-reverse-linked-list-ii.html](https://compiledcanvas.com/dsa/17-linked-list/013-reverse-linked-list-ii.html)
 
 ## Understanding
 

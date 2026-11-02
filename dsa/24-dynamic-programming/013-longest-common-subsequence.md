@@ -9,7 +9,7 @@ Return the length of the longest sequence of characters that appears in both str
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/longest-common-subsequence/](https://leetcode.com/problems/longest-common-subsequence/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/013-longest-common-subsequence.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/013-longest-common-subsequence.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/013-longest-common-subsequence.html](https://compiledcanvas.com/dsa/24-dynamic-programming/013-longest-common-subsequence.html)
 
 ## Understanding
 

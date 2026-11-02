@@ -9,7 +9,7 @@ Cards are in a row. Take exactly k cards, each from either the left or right end
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/011-maximum-points-you-can-obtain-from-cards.html](https://amitxaidev.github.io/dsa/08-sliding-window/011-maximum-points-you-can-obtain-from-cards.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/08-sliding-window/011-maximum-points-you-can-obtain-from-cards.html](https://compiledcanvas.com/dsa/08-sliding-window/011-maximum-points-you-can-obtain-from-cards.html)
 
 ## Understanding
 

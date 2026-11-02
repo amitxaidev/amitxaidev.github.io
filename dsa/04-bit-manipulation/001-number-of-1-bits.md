@@ -9,7 +9,7 @@ Count how many bits are set to 1 in the binary form of a number.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/number-of-1-bits/](https://leetcode.com/problems/number-of-1-bits/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/001-number-of-1-bits.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/001-number-of-1-bits.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/04-bit-manipulation/001-number-of-1-bits.html](https://compiledcanvas.com/dsa/04-bit-manipulation/001-number-of-1-bits.html)
 
 ## Understanding
 

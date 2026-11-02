@@ -9,7 +9,7 @@ Return the values of a binary tree in preorder (node, left subtree, right subtre
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/binary-tree-preorder-traversal/](https://leetcode.com/problems/binary-tree-preorder-traversal/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/002-binary-tree-preorder-traversal.html](https://amitxaidev.github.io/dsa/19-binary-trees/002-binary-tree-preorder-traversal.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/19-binary-trees/002-binary-tree-preorder-traversal.html](https://compiledcanvas.com/dsa/19-binary-trees/002-binary-tree-preorder-traversal.html)
 
 ## Understanding
 

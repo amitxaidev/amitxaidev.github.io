@@ -9,7 +9,7 @@ Same as House Robber, but the houses form a circle, so the first and last are ad
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/house-robber-ii/](https://leetcode.com/problems/house-robber-ii/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/005-house-robber-ii.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/005-house-robber-ii.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/005-house-robber-ii.html](https://compiledcanvas.com/dsa/24-dynamic-programming/005-house-robber-ii.html)
 
 ## Understanding
 

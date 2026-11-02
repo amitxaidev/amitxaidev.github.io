@@ -3,7 +3,7 @@
 AND, OR, XOR, shifts and the classic bit tricks.
 
 📺 **Watch first:** [Ep 6](https://youtu.be/ZzdK8SqvsGU) of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/04-bit-manipulation/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/04-bit-manipulation/  
 🧮 **12 problems** · 🟢 8 Easy · 🟡 4 Medium · 🔴 0 Hard
 
 ## Understand the topic

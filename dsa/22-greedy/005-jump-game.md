@@ -9,7 +9,7 @@ nums[i] is the maximum jump length from index i. Starting at index 0, decide whe
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/jump-game/](https://leetcode.com/problems/jump-game/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/005-jump-game.html](https://amitxaidev.github.io/dsa/22-greedy/005-jump-game.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/22-greedy/005-jump-game.html](https://compiledcanvas.com/dsa/22-greedy/005-jump-game.html)
 
 ## Understanding
 

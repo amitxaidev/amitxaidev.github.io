@@ -9,7 +9,7 @@ Sort numbers by how often they appear (rarest first). When two values are equall
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/sort-array-by-increasing-frequency/](https://leetcode.com/problems/sort-array-by-increasing-frequency/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/002-sort-array-by-increasing-frequency.html](https://amitxaidev.github.io/dsa/14-sorting/002-sort-array-by-increasing-frequency.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/14-sorting/002-sort-array-by-increasing-frequency.html](https://compiledcanvas.com/dsa/14-sorting/002-sort-array-by-increasing-frequency.html)
 
 ## Understanding
 

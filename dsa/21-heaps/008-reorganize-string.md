@@ -9,7 +9,7 @@ Rearrange the letters of a string so no two adjacent letters are equal. Return a
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/reorganize-string/](https://leetcode.com/problems/reorganize-string/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/008-reorganize-string.html](https://amitxaidev.github.io/dsa/21-heaps/008-reorganize-string.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/21-heaps/008-reorganize-string.html](https://compiledcanvas.com/dsa/21-heaps/008-reorganize-string.html)
 
 ## Understanding
 

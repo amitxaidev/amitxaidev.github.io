@@ -9,7 +9,7 @@ Decide whether a linked list has a cycle (some node's next points back to an ear
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/linked-list-cycle/](https://leetcode.com/problems/linked-list-cycle/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/003-linked-list-cycle.html](https://amitxaidev.github.io/dsa/17-linked-list/003-linked-list-cycle.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/17-linked-list/003-linked-list-cycle.html](https://compiledcanvas.com/dsa/17-linked-list/003-linked-list-cycle.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ Given four arrays of equal length, count tuples (i, j, k, l) with a[i] + b[j] + 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/4sum-ii/](https://leetcode.com/problems/4sum-ii/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/008-4sum-ii.html](https://amitxaidev.github.io/dsa/16-hashing/008-4sum-ii.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/16-hashing/008-4sum-ii.html](https://compiledcanvas.com/dsa/16-hashing/008-4sum-ii.html)
 
 ## Understanding
 

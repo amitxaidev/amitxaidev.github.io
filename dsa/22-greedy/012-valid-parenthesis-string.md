@@ -9,7 +9,7 @@ A string has '(', ')' and '*', where '*' can be '(', ')' or empty. Decide whethe
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/valid-parenthesis-string/](https://leetcode.com/problems/valid-parenthesis-string/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/012-valid-parenthesis-string.html](https://amitxaidev.github.io/dsa/22-greedy/012-valid-parenthesis-string.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/22-greedy/012-valid-parenthesis-string.html](https://compiledcanvas.com/dsa/22-greedy/012-valid-parenthesis-string.html)
 
 ## Understanding
 

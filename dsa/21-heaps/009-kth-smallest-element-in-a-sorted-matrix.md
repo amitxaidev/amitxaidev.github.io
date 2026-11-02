@@ -9,7 +9,7 @@ In an n×n matrix where every row and column is sorted ascending, return the k-t
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/009-kth-smallest-element-in-a-sorted-matrix.html](https://amitxaidev.github.io/dsa/21-heaps/009-kth-smallest-element-in-a-sorted-matrix.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/21-heaps/009-kth-smallest-element-in-a-sorted-matrix.html](https://compiledcanvas.com/dsa/21-heaps/009-kth-smallest-element-in-a-sorted-matrix.html)
 
 ## Understanding
 

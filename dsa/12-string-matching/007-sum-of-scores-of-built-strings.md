@@ -9,7 +9,7 @@ The string is built by adding characters to the front one at a time. Each interm
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/sum-of-scores-of-built-strings/](https://leetcode.com/problems/sum-of-scores-of-built-strings/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/12-string-matching/007-sum-of-scores-of-built-strings.html](https://amitxaidev.github.io/dsa/12-string-matching/007-sum-of-scores-of-built-strings.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/12-string-matching/007-sum-of-scores-of-built-strings.html](https://compiledcanvas.com/dsa/12-string-matching/007-sum-of-scores-of-built-strings.html)
 
 ## Understanding
 

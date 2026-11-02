@@ -3,7 +3,7 @@
 Warm-up problems where the point is to say the Big O of your own code before you submit it.
 
 📺 **Watch first:** [Ep 2](https://youtu.be/jZeS1tRzGs4), [Ep 3](https://youtu.be/PxjhjjhEIqw) of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/01-complexity/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/01-complexity/  
 🧮 **6 problems** · 🟢 6 Easy · 🟡 0 Medium · 🔴 0 Hard
 
 ## Understand the topic

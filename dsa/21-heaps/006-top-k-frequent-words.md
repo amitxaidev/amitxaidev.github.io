@@ -9,7 +9,7 @@ Return the k most frequent words, sorted by frequency (high to low) and alphabet
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/top-k-frequent-words/](https://leetcode.com/problems/top-k-frequent-words/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/006-top-k-frequent-words.html](https://amitxaidev.github.io/dsa/21-heaps/006-top-k-frequent-words.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/21-heaps/006-top-k-frequent-words.html](https://compiledcanvas.com/dsa/21-heaps/006-top-k-frequent-words.html)
 
 ## Understanding
 

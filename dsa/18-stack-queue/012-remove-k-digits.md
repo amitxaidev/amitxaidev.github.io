@@ -9,7 +9,7 @@ Remove k digits from a number string to make the smallest possible number. Retur
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/remove-k-digits/](https://leetcode.com/problems/remove-k-digits/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/012-remove-k-digits.html](https://amitxaidev.github.io/dsa/18-stack-queue/012-remove-k-digits.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/18-stack-queue/012-remove-k-digits.html](https://compiledcanvas.com/dsa/18-stack-queue/012-remove-k-digits.html)
 
 ## Understanding
 

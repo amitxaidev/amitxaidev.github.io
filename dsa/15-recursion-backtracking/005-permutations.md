@@ -9,7 +9,7 @@ Return all orderings of an array of distinct integers.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/permutations/](https://leetcode.com/problems/permutations/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/005-permutations.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/005-permutations.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/15-recursion-backtracking/005-permutations.html](https://compiledcanvas.com/dsa/15-recursion-backtracking/005-permutations.html)
 
 ## Understanding
 

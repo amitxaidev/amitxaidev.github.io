@@ -9,7 +9,7 @@ Find the contiguous subarray of length k with the largest average and return tha
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/maximum-average-subarray-i/](https://leetcode.com/problems/maximum-average-subarray-i/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/001-maximum-average-subarray-i.html](https://amitxaidev.github.io/dsa/08-sliding-window/001-maximum-average-subarray-i.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/08-sliding-window/001-maximum-average-subarray-i.html](https://compiledcanvas.com/dsa/08-sliding-window/001-maximum-average-subarray-i.html)
 
 ## Understanding
 

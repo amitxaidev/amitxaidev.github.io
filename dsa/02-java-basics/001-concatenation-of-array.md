@@ -9,7 +9,7 @@ Return an array of length 2n that is the input array followed by itself.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/concatenation-of-array/](https://leetcode.com/problems/concatenation-of-array/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/001-concatenation-of-array.html](https://amitxaidev.github.io/dsa/02-java-basics/001-concatenation-of-array.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/02-java-basics/001-concatenation-of-array.html](https://compiledcanvas.com/dsa/02-java-basics/001-concatenation-of-array.html)
 
 ## Understanding
 

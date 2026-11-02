@@ -9,7 +9,7 @@ A signal starts at node k in a directed weighted graph. Return how long until ev
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/network-delay-time/](https://leetcode.com/problems/network-delay-time/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/012-network-delay-time.html](https://amitxaidev.github.io/dsa/23-graphs/012-network-delay-time.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/23-graphs/012-network-delay-time.html](https://compiledcanvas.com/dsa/23-graphs/012-network-delay-time.html)
 
 ## Understanding
 

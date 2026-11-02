@@ -9,7 +9,7 @@ Split a string into as many parts as possible so each letter appears in at most 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/partition-labels/](https://leetcode.com/problems/partition-labels/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/011-partition-labels.html](https://amitxaidev.github.io/dsa/22-greedy/011-partition-labels.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/22-greedy/011-partition-labels.html](https://compiledcanvas.com/dsa/22-greedy/011-partition-labels.html)
 
 ## Understanding
 

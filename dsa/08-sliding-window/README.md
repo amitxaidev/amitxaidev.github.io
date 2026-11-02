@@ -3,7 +3,7 @@
 Fixed and variable windows over arrays and strings.
 
 📺 **Watch first:** Ep 10 of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/08-sliding-window/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/08-sliding-window/  
 🧮 **14 problems** · 🟢 2 Easy · 🟡 10 Medium · 🔴 2 Hard
 
 ## Understand the topic

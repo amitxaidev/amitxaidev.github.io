@@ -9,7 +9,7 @@ Flatten a binary tree into a "linked list" in place, using right pointers in pre
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/flatten-binary-tree-to-linked-list/](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/016-flatten-binary-tree-to-linked-list.html](https://amitxaidev.github.io/dsa/19-binary-trees/016-flatten-binary-tree-to-linked-list.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/19-binary-trees/016-flatten-binary-tree-to-linked-list.html](https://compiledcanvas.com/dsa/19-binary-trees/016-flatten-binary-tree-to-linked-list.html)
 
 ## Understanding
 

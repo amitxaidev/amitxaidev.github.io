@@ -9,7 +9,7 @@ Place m balls into baskets at given positions so that the minimum distance betwe
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/magnetic-force-between-two-balls/](https://leetcode.com/problems/magnetic-force-between-two-balls/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/015-magnetic-force-between-two-balls.html](https://amitxaidev.github.io/dsa/13-binary-search/015-magnetic-force-between-two-balls.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/13-binary-search/015-magnetic-force-between-two-balls.html](https://compiledcanvas.com/dsa/13-binary-search/015-magnetic-force-between-two-balls.html)
 
 ## Understanding
 

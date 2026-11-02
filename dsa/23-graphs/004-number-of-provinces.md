@@ -9,7 +9,7 @@ isConnected[i][j] = 1 means cities i and j are directly connected. A province is
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/number-of-provinces/](https://leetcode.com/problems/number-of-provinces/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/004-number-of-provinces.html](https://amitxaidev.github.io/dsa/23-graphs/004-number-of-provinces.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/23-graphs/004-number-of-provinces.html](https://compiledcanvas.com/dsa/23-graphs/004-number-of-provinces.html)
 
 ## Understanding
 

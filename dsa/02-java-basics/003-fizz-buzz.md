@@ -9,7 +9,7 @@ For numbers 1 to n, produce a list of strings: "FizzBuzz" for multiples of both 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/fizz-buzz/](https://leetcode.com/problems/fizz-buzz/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/003-fizz-buzz.html](https://amitxaidev.github.io/dsa/02-java-basics/003-fizz-buzz.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/02-java-basics/003-fizz-buzz.html](https://compiledcanvas.com/dsa/02-java-basics/003-fizz-buzz.html)
 
 ## Understanding
 

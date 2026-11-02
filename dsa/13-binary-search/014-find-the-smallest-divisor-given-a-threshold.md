@@ -9,7 +9,7 @@ Pick a positive divisor, divide every number by it rounding up, and sum the resu
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/014-find-the-smallest-divisor-given-a-threshold.html](https://amitxaidev.github.io/dsa/13-binary-search/014-find-the-smallest-divisor-given-a-threshold.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/13-binary-search/014-find-the-smallest-divisor-given-a-threshold.html](https://compiledcanvas.com/dsa/13-binary-search/014-find-the-smallest-divisor-given-a-threshold.html)
 
 ## Understanding
 

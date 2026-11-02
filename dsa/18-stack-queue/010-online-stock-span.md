@@ -9,7 +9,7 @@ Prices arrive one per day. For each new price, return its span: the number of co
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/online-stock-span/](https://leetcode.com/problems/online-stock-span/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/010-online-stock-span.html](https://amitxaidev.github.io/dsa/18-stack-queue/010-online-stock-span.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/18-stack-queue/010-online-stock-span.html](https://compiledcanvas.com/dsa/18-stack-queue/010-online-stock-span.html)
 
 ## Understanding
 

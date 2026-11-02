@@ -9,7 +9,7 @@ Return the length of the longest run of consecutive integers (like 4, 5, 6, 7) f
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/longest-consecutive-sequence/](https://leetcode.com/problems/longest-consecutive-sequence/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/007-longest-consecutive-sequence.html](https://amitxaidev.github.io/dsa/16-hashing/007-longest-consecutive-sequence.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/16-hashing/007-longest-consecutive-sequence.html](https://compiledcanvas.com/dsa/16-hashing/007-longest-consecutive-sequence.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ Return every possible subset of an array of distinct integers.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/subsets/](https://leetcode.com/problems/subsets/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/003-subsets.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/003-subsets.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/15-recursion-backtracking/003-subsets.html](https://compiledcanvas.com/dsa/15-recursion-backtracking/003-subsets.html)
 
 ## Understanding
 

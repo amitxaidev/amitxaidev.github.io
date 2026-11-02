@@ -9,7 +9,7 @@ Keep replacing a number with the sum of its digits until only one digit is left,
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/add-digits/](https://leetcode.com/problems/add-digits/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/004-add-digits.html](https://amitxaidev.github.io/dsa/03-math/004-add-digits.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/03-math/004-add-digits.html](https://compiledcanvas.com/dsa/03-math/004-add-digits.html)
 
 ## Understanding
 

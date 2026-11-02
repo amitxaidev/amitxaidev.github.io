@@ -9,7 +9,7 @@ Remove the n-th node from the end of a linked list in one pass and return the he
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/remove-nth-node-from-end-of-list/](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/008-remove-nth-node-from-end-of-list.html](https://amitxaidev.github.io/dsa/17-linked-list/008-remove-nth-node-from-end-of-list.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/17-linked-list/008-remove-nth-node-from-end-of-list.html](https://compiledcanvas.com/dsa/17-linked-list/008-remove-nth-node-from-end-of-list.html)
 
 ## Understanding
 

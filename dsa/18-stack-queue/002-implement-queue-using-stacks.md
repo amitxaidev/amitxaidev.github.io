@@ -9,7 +9,7 @@ Build a FIFO queue (push, pop, peek, empty) using only stack operations.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/implement-queue-using-stacks/](https://leetcode.com/problems/implement-queue-using-stacks/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/002-implement-queue-using-stacks.html](https://amitxaidev.github.io/dsa/18-stack-queue/002-implement-queue-using-stacks.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/18-stack-queue/002-implement-queue-using-stacks.html](https://compiledcanvas.com/dsa/18-stack-queue/002-implement-queue-using-stacks.html)
 
 ## Understanding
 

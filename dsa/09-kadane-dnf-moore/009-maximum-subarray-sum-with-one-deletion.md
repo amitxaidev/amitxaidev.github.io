@@ -9,7 +9,7 @@ Return the largest sum of a non-empty subarray when you are allowed to delete at
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/](https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/009-maximum-subarray-sum-with-one-deletion.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/009-maximum-subarray-sum-with-one-deletion.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/09-kadane-dnf-moore/009-maximum-subarray-sum-with-one-deletion.html](https://compiledcanvas.com/dsa/09-kadane-dnf-moore/009-maximum-subarray-sum-with-one-deletion.html)
 
 ## Understanding
 

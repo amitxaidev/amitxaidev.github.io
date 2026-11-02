@@ -9,7 +9,7 @@ Count pairs of indexes (i, j) with i &lt; j where nums[i] equals nums[j].
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/number-of-good-pairs/](https://leetcode.com/problems/number-of-good-pairs/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/01-complexity/006-number-of-good-pairs.html](https://amitxaidev.github.io/dsa/01-complexity/006-number-of-good-pairs.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/01-complexity/006-number-of-good-pairs.html](https://compiledcanvas.com/dsa/01-complexity/006-number-of-good-pairs.html)
 
 ## Understanding
 

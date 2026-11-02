@@ -9,7 +9,7 @@ Reverse the digits of a 32-bit signed integer. If the reversed value doesn't fit
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/reverse-integer/](https://leetcode.com/problems/reverse-integer/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/008-reverse-integer.html](https://amitxaidev.github.io/dsa/03-math/008-reverse-integer.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/03-math/008-reverse-integer.html](https://compiledcanvas.com/dsa/03-math/008-reverse-integer.html)
 
 ## Understanding
 

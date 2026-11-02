@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /*.md$
+
+Sitemap: https://compiledcanvas.com/sitemap.xml
+Sitemap: https://compiledcanvas.com/video-sitemap.xml

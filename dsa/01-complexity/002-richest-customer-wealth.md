@@ -9,7 +9,7 @@ A grid lists how much money each customer (row) has in each bank (column). A cus
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/richest-customer-wealth/](https://leetcode.com/problems/richest-customer-wealth/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/01-complexity/002-richest-customer-wealth.html](https://amitxaidev.github.io/dsa/01-complexity/002-richest-customer-wealth.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/01-complexity/002-richest-customer-wealth.html](https://compiledcanvas.com/dsa/01-complexity/002-richest-customer-wealth.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ Return the first and last index of target in a sorted array, or [-1, -1], in O(l
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/006-find-first-and-last-position-of-element-in-sorted-array.html](https://amitxaidev.github.io/dsa/13-binary-search/006-find-first-and-last-position-of-element-in-sorted-array.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/13-binary-search/006-find-first-and-last-position-of-element-in-sorted-array.html](https://compiledcanvas.com/dsa/13-binary-search/006-find-first-and-last-position-of-element-in-sorted-array.html)
 
 ## Understanding
 

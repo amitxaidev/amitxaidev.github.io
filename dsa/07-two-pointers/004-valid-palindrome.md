@@ -9,7 +9,7 @@ Ignoring case and every character that isn't a letter or digit, decide whether a
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/valid-palindrome/](https://leetcode.com/problems/valid-palindrome/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/004-valid-palindrome.html](https://amitxaidev.github.io/dsa/07-two-pointers/004-valid-palindrome.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/07-two-pointers/004-valid-palindrome.html](https://compiledcanvas.com/dsa/07-two-pointers/004-valid-palindrome.html)
 
 ## Understanding
 

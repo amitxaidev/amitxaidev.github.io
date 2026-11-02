@@ -9,7 +9,7 @@ Return all unique combinations of candidates (distinct numbers, each usable unli
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/combination-sum/](https://leetcode.com/problems/combination-sum/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/008-combination-sum.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/008-combination-sum.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/15-recursion-backtracking/008-combination-sum.html](https://compiledcanvas.com/dsa/15-recursion-backtracking/008-combination-sum.html)
 
 ## Understanding
 

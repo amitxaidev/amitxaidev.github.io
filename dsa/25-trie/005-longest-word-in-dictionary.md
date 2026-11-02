@@ -9,7 +9,7 @@ Return the longest word that can be built one letter at a time where every prefi
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/longest-word-in-dictionary/](https://leetcode.com/problems/longest-word-in-dictionary/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/005-longest-word-in-dictionary.html](https://amitxaidev.github.io/dsa/25-trie/005-longest-word-in-dictionary.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/25-trie/005-longest-word-in-dictionary.html](https://compiledcanvas.com/dsa/25-trie/005-longest-word-in-dictionary.html)
 
 ## Understanding
 

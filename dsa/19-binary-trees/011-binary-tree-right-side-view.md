@@ -9,7 +9,7 @@ Imagine standing to the right of the tree. Return the values you can see, from t
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/binary-tree-right-side-view/](https://leetcode.com/problems/binary-tree-right-side-view/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/011-binary-tree-right-side-view.html](https://amitxaidev.github.io/dsa/19-binary-trees/011-binary-tree-right-side-view.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/19-binary-trees/011-binary-tree-right-side-view.html](https://compiledcanvas.com/dsa/19-binary-trees/011-binary-tree-right-side-view.html)
 
 ## Understanding
 

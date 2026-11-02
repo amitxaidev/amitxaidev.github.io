@@ -9,7 +9,7 @@ Squares fall one by one onto a line; each lands on top of the highest square und
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/falling-squares/](https://leetcode.com/problems/falling-squares/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/26-segment-fenwick/005-falling-squares.html](https://amitxaidev.github.io/dsa/26-segment-fenwick/005-falling-squares.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/26-segment-fenwick/005-falling-squares.html](https://compiledcanvas.com/dsa/26-segment-fenwick/005-falling-squares.html)
 
 ## Understanding
 

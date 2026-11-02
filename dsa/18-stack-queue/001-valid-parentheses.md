@@ -9,7 +9,7 @@ Decide whether a string of ()[]{} brackets is balanced: every opener is closed b
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/valid-parentheses/](https://leetcode.com/problems/valid-parentheses/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/001-valid-parentheses.html](https://amitxaidev.github.io/dsa/18-stack-queue/001-valid-parentheses.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/18-stack-queue/001-valid-parentheses.html](https://compiledcanvas.com/dsa/18-stack-queue/001-valid-parentheses.html)
 
 ## Understanding
 

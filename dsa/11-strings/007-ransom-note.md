@@ -9,7 +9,7 @@ Decide whether the letters of magazine (each used at most once) are enough to wr
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/ransom-note/](https://leetcode.com/problems/ransom-note/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/007-ransom-note.html](https://amitxaidev.github.io/dsa/11-strings/007-ransom-note.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/11-strings/007-ransom-note.html](https://compiledcanvas.com/dsa/11-strings/007-ransom-note.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ You may buy and sell a stock many times (holding at most one share at a time). R
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/004-best-time-to-buy-and-sell-stock-ii.html](https://amitxaidev.github.io/dsa/22-greedy/004-best-time-to-buy-and-sell-stock-ii.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/22-greedy/004-best-time-to-buy-and-sell-stock-ii.html](https://compiledcanvas.com/dsa/22-greedy/004-best-time-to-buy-and-sell-stock-ii.html)
 
 ## Understanding
 

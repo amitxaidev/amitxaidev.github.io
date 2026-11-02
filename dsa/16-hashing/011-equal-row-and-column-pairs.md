@@ -9,7 +9,7 @@ In an n×n grid, count pairs (row r, column c) where the row and the column cont
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/equal-row-and-column-pairs/](https://leetcode.com/problems/equal-row-and-column-pairs/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/011-equal-row-and-column-pairs.html](https://amitxaidev.github.io/dsa/16-hashing/011-equal-row-and-column-pairs.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/16-hashing/011-equal-row-and-column-pairs.html](https://compiledcanvas.com/dsa/16-hashing/011-equal-row-and-column-pairs.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ Return how many zeros n! ends with.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/factorial-trailing-zeroes/](https://leetcode.com/problems/factorial-trailing-zeroes/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/011-factorial-trailing-zeroes.html](https://amitxaidev.github.io/dsa/03-math/011-factorial-trailing-zeroes.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/03-math/011-factorial-trailing-zeroes.html](https://compiledcanvas.com/dsa/03-math/011-factorial-trailing-zeroes.html)
 
 ## Understanding
 

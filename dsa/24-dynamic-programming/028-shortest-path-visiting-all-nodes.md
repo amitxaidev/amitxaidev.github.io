@@ -9,7 +9,7 @@ In a connected undirected graph with n ≤ 12 nodes, return the length of the sh
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/shortest-path-visiting-all-nodes/](https://leetcode.com/problems/shortest-path-visiting-all-nodes/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/028-shortest-path-visiting-all-nodes.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/028-shortest-path-visiting-all-nodes.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/028-shortest-path-visiting-all-nodes.html](https://compiledcanvas.com/dsa/24-dynamic-programming/028-shortest-path-visiting-all-nodes.html)
 
 ## Understanding
 

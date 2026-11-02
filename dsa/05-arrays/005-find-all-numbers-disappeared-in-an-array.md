@@ -9,7 +9,7 @@ An array of n numbers has values in 1..n, some repeated. Return all values in 1.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/005-find-all-numbers-disappeared-in-an-array.html](https://amitxaidev.github.io/dsa/05-arrays/005-find-all-numbers-disappeared-in-an-array.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/05-arrays/005-find-all-numbers-disappeared-in-an-array.html](https://compiledcanvas.com/dsa/05-arrays/005-find-all-numbers-disappeared-in-an-array.html)
 
 ## Understanding
 

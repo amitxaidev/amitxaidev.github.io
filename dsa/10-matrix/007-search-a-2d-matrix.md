@@ -9,7 +9,7 @@ Each row is sorted and each row starts with a value larger than the previous row
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/search-a-2d-matrix/](https://leetcode.com/problems/search-a-2d-matrix/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/007-search-a-2d-matrix.html](https://amitxaidev.github.io/dsa/10-matrix/007-search-a-2d-matrix.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/10-matrix/007-search-a-2d-matrix.html](https://compiledcanvas.com/dsa/10-matrix/007-search-a-2d-matrix.html)
 
 ## Understanding
 

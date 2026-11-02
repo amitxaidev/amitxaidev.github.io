@@ -9,7 +9,7 @@ Given an array, return a new array where each position holds the total of all el
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/running-sum-of-1d-array/](https://leetcode.com/problems/running-sum-of-1d-array/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/01-complexity/001-running-sum-of-1d-array.html](https://amitxaidev.github.io/dsa/01-complexity/001-running-sum-of-1d-array.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/01-complexity/001-running-sum-of-1d-array.html](https://compiledcanvas.com/dsa/01-complexity/001-running-sum-of-1d-array.html)
 
 ## Understanding
 

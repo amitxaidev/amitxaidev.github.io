@@ -9,7 +9,7 @@ Return the largest absolute value of any subarray sum (an empty subarray counts 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/](https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/006-maximum-absolute-sum-of-any-subarray.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/006-maximum-absolute-sum-of-any-subarray.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/09-kadane-dnf-moore/006-maximum-absolute-sum-of-any-subarray.html](https://compiledcanvas.com/dsa/09-kadane-dnf-moore/006-maximum-absolute-sum-of-any-subarray.html)
 
 ## Understanding
 

@@ -3,7 +3,7 @@
 Arrays, Strings, StringBuilder and Collections — the Java toolbox every later topic uses.
 
 📺 **Watch first:** [Ep 4](https://youtu.be/YvtYDDQgn9U) of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/02-java-basics/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/02-java-basics/  
 🧮 **10 problems** · 🟢 9 Easy · 🟡 1 Medium · 🔴 0 Hard
 
 ## Understand the topic

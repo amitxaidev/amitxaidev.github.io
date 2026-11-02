@@ -9,7 +9,7 @@ In a sorted (1-indexed) array, find the two positions whose values add up to tar
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/007-two-sum-ii-input-array-is-sorted.html](https://amitxaidev.github.io/dsa/07-two-pointers/007-two-sum-ii-input-array-is-sorted.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/07-two-pointers/007-two-sum-ii-input-array-is-sorted.html](https://compiledcanvas.com/dsa/07-two-pointers/007-two-sum-ii-input-array-is-sorted.html)
 
 ## Understanding
 

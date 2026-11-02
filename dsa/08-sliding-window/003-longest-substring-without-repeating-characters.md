@@ -9,7 +9,7 @@ Return the length of the longest substring with no repeated characters.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/longest-substring-without-repeating-characters/](https://leetcode.com/problems/longest-substring-without-repeating-characters/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/003-longest-substring-without-repeating-characters.html](https://amitxaidev.github.io/dsa/08-sliding-window/003-longest-substring-without-repeating-characters.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/08-sliding-window/003-longest-substring-without-repeating-characters.html](https://compiledcanvas.com/dsa/08-sliding-window/003-longest-substring-without-repeating-characters.html)
 
 ## Understanding
 

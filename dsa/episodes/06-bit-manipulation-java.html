@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bit Manipulation from Scratch: AND, OR, XOR, Shifts &amp; Tricks (Java) | Compiled Canvas</title>
+<meta name="description" content="Bit manipulation in Java from scratch: binary, AND, OR, XOR, NOT, shifts, masks, and classic tricks like Single Number, power of two and subsets.">
+<link rel="canonical" href="https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="video.other">
+<meta property="og:url" content="https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html">
+<meta property="og:title" content="Bit Manipulation from Scratch: AND, OR, XOR, Shifts &amp; Tricks (Java) | Compiled Canvas">
+<meta property="og:description" content="Bit manipulation in Java from scratch: binary, AND, OR, XOR, NOT, shifts, masks, and classic tricks like Single Number, power of two and subsets.">
+<meta property="og:image" content="https://i.ytimg.com/vi/ZzdK8SqvsGU/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "Bit Manipulation from Scratch: AND, OR, XOR, Shifts & Tricks (Java)", "description": "Bit manipulation in Java from scratch: binary, AND, OR, XOR, NOT, shifts, masks, and classic tricks like Single Number, power of two and subsets.", "thumbnailUrl": ["https://i.ytimg.com/vi/ZzdK8SqvsGU/maxresdefault.jpg", "https://i.ytimg.com/vi/ZzdK8SqvsGU/hqdefault.jpg"], "uploadDate": "2026-10-28T01:30:15-07:00", "duration": "PT13M32S", "embedUrl": "https://www.youtube.com/embed/ZzdK8SqvsGU", "inLanguage": "en", "publisher": {"@type": "Organization", "name": "Compiled Canvas", "url": "https://compiledcanvas.com/", "logo": {"@type": "ImageObject", "url": "https://compiledcanvas.com/assets/logo.png"}, "sameAs": ["https://www.youtube.com/@compiledcanvas", "https://www.instagram.com/compiledcanvas", "https://github.com/amitxaidev"]}, "hasPart": [{"@type": "Clip", "name": "One line of XOR vs a HashMap", "startOffset": 0, "endOffset": 39, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=0"}, {"@type": "Clip", "name": "What this video covers", "startOffset": 39, "endOffset": 69, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=39"}, {"@type": "Clip", "name": "Binary from scratch", "startOffset": 69, "endOffset": 89, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=69"}, {"@type": "Clip", "name": "13 in binary: 8 + 4 + 1", "startOffset": 89, "endOffset": 109, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=89"}, {"@type": "Clip", "name": "32 bits in an int, 64 in a long", "startOffset": 109, "endOffset": 129, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=109"}, {"@type": "Clip", "name": "The four bit operators", "startOffset": 129, "endOffset": 135, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=129"}, {"@type": "Clip", "name": "AND: the filter", "startOffset": 135, "endOffset": 156, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=135"}, {"@type": "Clip", "name": "OR: turn bits on", "startOffset": 156, "endOffset": 169, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=156"}, {"@type": "Clip", "name": "XOR: one or the other", "startOffset": 169, "endOffset": 183, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=169"}, {"@type": "Clip", "name": "NOT, and & vs &&", "startOffset": 183, "endOffset": 200, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=183"}, {"@type": "Clip", "name": "Why ~5 is -6", "startOffset": 200, "endOffset": 210, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=200"}, {"@type": "Clip", "name": "Two's complement and the sign bit", "startOffset": 210, "endOffset": 249, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=210"}, {"@type": "Clip", "name": "Left shift: × 2 and masks", "startOffset": 249, "endOffset": 278, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=249"}, {"@type": "Clip", "name": "Right shift: ÷ 2", "startOffset": 278, "endOffset": 289, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=278"}, {"@type": "Clip", "name": "Signed vs unsigned right shift", "startOffset": 289, "endOffset": 305, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=289"}, {"@type": "Clip", "name": "The safe middle in binary search", "startOffset": 305, "endOffset": 336, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=305"}, {"@type": "Clip", "name": "Check, set, clear and toggle a bit", "startOffset": 336, "endOffset": 383, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=336"}, {"@type": "Clip", "name": "One int = 32 true/false flags", "startOffset": 383, "endOffset": 396, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=383"}, {"@type": "Clip", "name": "Odd or even with n & 1", "startOffset": 396, "endOffset": 412, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=396"}, {"@type": "Clip", "name": "n & (n - 1): clear the lowest set bit", "startOffset": 412, "endOffset": 424, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=412"}, {"@type": "Clip", "name": "Power of two check", "startOffset": 424, "endOffset": 444, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=424"}, {"@type": "Clip", "name": "Count set bits: Brian Kernighan", "startOffset": 444, "endOffset": 471, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=444"}, {"@type": "Clip", "name": "The three rules of XOR", "startOffset": 471, "endOffset": 488, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=471"}, {"@type": "Clip", "name": "Single Number in O(1) space", "startOffset": 488, "endOffset": 502, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=488"}, {"@type": "Clip", "name": "Missing number with XOR", "startOffset": 502, "endOffset": 526, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=502"}, {"@type": "Clip", "name": "Generate all subsets with a bitmask", "startOffset": 526, "endOffset": 582, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=526"}, {"@type": "Clip", "name": "Java trap: operator precedence", "startOffset": 582, "endOffset": 604, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=582"}, {"@type": "Clip", "name": "Java trap: shifting by 32 gives 1", "startOffset": 604, "endOffset": 626, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=604"}, {"@type": "Clip", "name": "Java trap: a right shift that never reaches 0", "startOffset": 626, "endOffset": 642, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=626"}, {"@type": "Clip", "name": "Which trick to use (cheat sheet)", "startOffset": 642, "endOffset": 682, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=642"}, {"@type": "Clip", "name": "Quiz: 3 questions", "startOffset": 682, "endOffset": 742, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=682"}, {"@type": "Clip", "name": "Recap", "startOffset": 742, "endOffset": 779, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=742"}, {"@type": "Clip", "name": "Homework", "startOffset": 779, "endOffset": 789, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=779"}, {"@type": "Clip", "name": "Next episode", "startOffset": 789, "endOffset": 812, "url": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html?t=789"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "DSA in Java", "item": "https://compiledcanvas.com/dsa/"}, {"@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://compiledcanvas.com/dsa/episodes/"}, {"@type": "ListItem", "position": 4, "name": "Episode 6", "item": "https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">AI for Developers <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Episodes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Episode 6</li>
+    </ol></nav>
+    <span class="badge rounded-pill text-bg-dark mb-2">Episode 6 · 13:32 · 28 Oct 2026</span>
+    <h1 class="h2 fw-bold mb-3">Bit Manipulation from Scratch: AND, OR, XOR, Shifts &amp; Tricks (Java)</h1>
+    <div class="ep-player ratio ratio-16x9">
+      <iframe id="ep-video" src="https://www.youtube.com/embed/ZzdK8SqvsGU?rel=0" data-video="ZzdK8SqvsGU" title="Bit Manipulation from Scratch: AND, OR, XOR, Shifts &amp; Tricks (Java)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>What this episode covers</h2>
+      <p>Every number in an array appears twice except one. Most people reach for a HashMap and spend O(n) memory. XOR every number together and the pairs cancel out, leaving the single one in one loop with O(1) memory. That&#x27;s the kind of trick this episode teaches, starting from zero.</p>
+<p>First we look at how numbers are really stored: binary, 32 bits in an int, two&#x27;s complement and the sign bit. Then the operators AND, OR, XOR and NOT, and left, right and unsigned right shifts.</p>
+<p>With those in place we build the classics: checking, setting, clearing and toggling a bit, the odd or even test, clearing the lowest set bit, the power of two check, counting set bits, Single Number, Missing Number, and generating every subset with a bitmask. We finish with three Java traps and a cheat sheet.</p>
+    </section>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>What you'll be able to do</h2>
+      <ul class="mb-0"><li>How binary and two&#x27;s complement work</li>
+<li>The four bit operators and the three kinds of shift</li>
+<li>Check, set, clear and toggle a single bit</li>
+<li>Why n &amp; (n - 1) clears the lowest set bit</li>
+<li>Using XOR and bitmasks on real interview problems</li></ul>
+    </section>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
+      <p class="mb-0">In Java, shifting 1 left by 32 gives 1, not 0, because only the last 5 bits of the shift count are used. Use 1L for bit 31 and up.</p>
+    </section>
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Key moments <small>tap one to jump there</small></h2>
+      <ol class="ep-moments list-unstyled mb-0"><li><a href="?t=0" data-seek="0"><time>0:00</time><span>One line of XOR vs a HashMap</span></a></li>
+<li><a href="?t=39" data-seek="39"><time>0:39</time><span>What this video covers</span></a></li>
+<li><a href="?t=69" data-seek="69"><time>1:09</time><span>Binary from scratch</span></a></li>
+<li><a href="?t=89" data-seek="89"><time>1:29</time><span>13 in binary: 8 + 4 + 1</span></a></li>
+<li><a href="?t=109" data-seek="109"><time>1:49</time><span>32 bits in an int, 64 in a long</span></a></li>
+<li><a href="?t=129" data-seek="129"><time>2:09</time><span>The four bit operators</span></a></li>
+<li><a href="?t=135" data-seek="135"><time>2:15</time><span>AND: the filter</span></a></li>
+<li><a href="?t=156" data-seek="156"><time>2:36</time><span>OR: turn bits on</span></a></li>
+<li><a href="?t=169" data-seek="169"><time>2:49</time><span>XOR: one or the other</span></a></li>
+<li><a href="?t=183" data-seek="183"><time>3:03</time><span>NOT, and &amp; vs &amp;&amp;</span></a></li>
+<li><a href="?t=200" data-seek="200"><time>3:20</time><span>Why ~5 is -6</span></a></li>
+<li><a href="?t=210" data-seek="210"><time>3:30</time><span>Two&#x27;s complement and the sign bit</span></a></li>
+<li><a href="?t=249" data-seek="249"><time>4:09</time><span>Left shift: × 2 and masks</span></a></li>
+<li><a href="?t=278" data-seek="278"><time>4:38</time><span>Right shift: ÷ 2</span></a></li>
+<li><a href="?t=289" data-seek="289"><time>4:49</time><span>Signed vs unsigned right shift</span></a></li>
+<li><a href="?t=305" data-seek="305"><time>5:05</time><span>The safe middle in binary search</span></a></li>
+<li><a href="?t=336" data-seek="336"><time>5:36</time><span>Check, set, clear and toggle a bit</span></a></li>
+<li><a href="?t=383" data-seek="383"><time>6:23</time><span>One int = 32 true/false flags</span></a></li>
+<li><a href="?t=396" data-seek="396"><time>6:36</time><span>Odd or even with n &amp; 1</span></a></li>
+<li><a href="?t=412" data-seek="412"><time>6:52</time><span>n &amp; (n - 1): clear the lowest set bit</span></a></li>
+<li><a href="?t=424" data-seek="424"><time>7:04</time><span>Power of two check</span></a></li>
+<li><a href="?t=444" data-seek="444"><time>7:24</time><span>Count set bits: Brian Kernighan</span></a></li>
+<li><a href="?t=471" data-seek="471"><time>7:51</time><span>The three rules of XOR</span></a></li>
+<li><a href="?t=488" data-seek="488"><time>8:08</time><span>Single Number in O(1) space</span></a></li>
+<li><a href="?t=502" data-seek="502"><time>8:22</time><span>Missing number with XOR</span></a></li>
+<li><a href="?t=526" data-seek="526"><time>8:46</time><span>Generate all subsets with a bitmask</span></a></li>
+<li><a href="?t=582" data-seek="582"><time>9:42</time><span>Java trap: operator precedence</span></a></li>
+<li><a href="?t=604" data-seek="604"><time>10:04</time><span>Java trap: shifting by 32 gives 1</span></a></li>
+<li><a href="?t=626" data-seek="626"><time>10:26</time><span>Java trap: a right shift that never reaches 0</span></a></li>
+<li><a href="?t=642" data-seek="642"><time>10:42</time><span>Which trick to use (cheat sheet)</span></a></li>
+<li><a href="?t=682" data-seek="682"><time>11:22</time><span>Quiz: 3 questions</span></a></li>
+<li><a href="?t=742" data-seek="742"><time>12:22</time><span>Recap</span></a></li>
+<li><a href="?t=779" data-seek="779"><time>12:59</time><span>Homework</span></a></li>
+<li><a href="?t=789" data-seek="789"><time>13:09</time><span>Next episode</span></a></li></ol>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Full transcript</h2>
+      <details class="ep-transcript"><summary>Read the whole lesson</summary>
+      <p>Every number in this array appears twice. Except one. Find it.</p>
+<p>Most people reach for a HashMap. Count everything, then look for the count of one. That works, but it uses O of n extra memory.</p>
+<p>Now watch this. Take every number, and XOR them all together. The pairs cancel out, and the one that&#x27;s left is your answer. One loop. No extra memory. That&#x27;s bit manipulation.</p>
+<p>Welcome back to Compiled Canvas. This is Episode Six of our DSA series. In Episode Five, we covered the math you need for DSA. Today, we go one level deeper, to the bits inside every number.</p>
+<p>Here&#x27;s the plan. How numbers are stored in binary. The four operators: AND, OR, XOR and NOT. How negative numbers really work. Left and right shifts. How to check, set, clear and toggle any bit. The classic tricks, like checking for a power of two. The magic of XOR. Generating every subset with a bitmask. The Java traps that break bit code. A cheat sheet. And a quiz at the end.</p>
+<p>Let&#x27;s go.</p>
+<p>First, binary. Your computer stores every number as bits, ones and zeros.</p>
+<p>In normal numbers, each place is worth ten times the one to its right. Ones, tens, hundreds. In binary, each place is worth two times. One, two, four, eight, sixteen, and so on.</p>
+<p>Take thirteen. That&#x27;s eight, plus four, plus one. So in binary, it&#x27;s one, one, zero, one. The eight is on, the four is on, the two is off, and the one is on.</p>
+<p>To read a binary number, just add up the places that are on. One zero one zero is eight plus two, which is ten.</p>
+<p>In Java, an int has thirty-two bits, and a long has sixty-four. We number the bits from the right, starting at zero. So bit zero is the ones place, bit one is the twos place, and bit three is the eights place.</p>
+<p>And to see the bits of any number, use Integer dot toBinaryString. It&#x27;s perfect for debugging bit code.</p>
+<p>Now, the four operators. Each one works on the bits, one column at a time.</p>
+<p>AND, written with a single ampersand. A bit is one only if both bits are one. Twelve is one one zero zero. Ten is one zero one zero. Twelve AND ten keeps only the columns where both are on: one zero zero zero, which is eight. Think of AND as a filter. It keeps only what both numbers share.</p>
+<p>OR, written with a single vertical bar. A bit is one if at least one of the bits is one. Twelve OR ten is one one one zero, which is fourteen. Think of OR as a switch that turns bits on.</p>
+<p>XOR, written with a caret. A bit is one if the two bits are different. Twelve XOR ten is zero one one zero, which is six. Think of XOR as &quot;one or the other, but not both&quot;.</p>
+<p>And NOT, written with a tilde. It flips every bit. Every zero becomes one, and every one becomes zero.</p>
+<p>One small warning. Don&#x27;t mix these up with double ampersand and double bar. Those are for true and false conditions. The single ones work on bits.</p>
+<p>So what does NOT five give you? Not what you&#x27;d expect. It gives minus six.</p>
+<p>To understand why, you need to know how Java stores negative numbers. It&#x27;s called two&#x27;s complement. The leftmost bit is the sign bit. If it&#x27;s zero, the number is positive. If it&#x27;s one, the number is negative.</p>
+<p>And here&#x27;s the rule. To get minus x, flip all the bits of x, and add one. That&#x27;s why NOT x is always minus x, minus one.</p>
+<p>So minus one is thirty-two ones in a row. And the smallest int, minus two point one billion, is a one followed by thirty-one zeros.</p>
+<p>Why does Java do it this way? Because with two&#x27;s complement, adding and subtracting work exactly the same for positive and negative numbers. The computer doesn&#x27;t need special rules for the sign.</p>
+<p>Next, shifts. A left shift moves every bit to the left, and fills the right with zeros.</p>
+<p>Shifting left by one doubles the number. Five is one zero one. Shift it left by one, and you get one zero one zero, which is ten. Shift left by k, and you multiply by two to the power k.</p>
+<p>And one shifted left by k gives you a number with just bit k turned on. This is called a mask, and you&#x27;ll use it in almost every bit trick.</p>
+<p>A right shift moves the bits to the right. Shifting right by one halves the number, and rounds down. Twenty shifted right by one is ten. Twenty-one shifted right by one is also ten.</p>
+<p>Java has two right shifts. The normal one, with two arrows, keeps the sign. So minus eight, shifted right by one, is minus four. The unsigned one, with three arrows, always fills with zeros, so a negative number becomes a big positive one.</p>
+<p>And here&#x27;s where you&#x27;ve seen this before: binary search. low plus high, unsigned shifted right by one, is a safe middle, because even if the sum overflows, the three-arrow shift reads it as an unsigned number. So the middle always comes out right.</p>
+<p>Quick pause, before we go further. If you&#x27;re finding this video valuable, hit subscribe to Compiled Canvas, and turn on the bell. It&#x27;s free, it takes one second, and it helps me keep making this complete DSA series for you. Alright, back to it.</p>
+<p>Now, the four moves you&#x27;ll use on a single bit. All of them use a mask: one shifted left by i.</p>
+<p>To check bit i, AND the number with the mask. If the result isn&#x27;t zero, the bit is on. Or shift the number right by i, and AND it with one. You get exactly zero or one.</p>
+<p>To set bit i, turn it on: OR the number with the mask.</p>
+<p>To clear bit i, turn it off: AND the number with NOT mask. NOT mask has every bit on except bit i, so everything else stays the same.</p>
+<p>And to toggle bit i, flip it: XOR the number with the mask. If it was on, it turns off. If it was off, it turns on.</p>
+<p>All four are O of one. One operation each, no loops.</p>
+<p>And here&#x27;s why this matters. With these four moves, a single int can act like an array of thirty-two true or false values. That&#x27;s how you&#x27;ll track which letters you&#x27;ve seen, or which items you&#x27;ve picked, using almost no memory.</p>
+<p>Next, the classic tricks that come up in interviews again and again.</p>
+<p>Is a number odd? Check n AND one. If it&#x27;s one, the last bit is on, so the number is odd. That&#x27;s faster than modulo two, and it also works for negative numbers.</p>
+<p>Here&#x27;s the most famous one: n AND n minus one. Subtracting one flips the lowest bit that&#x27;s on, and every zero below it. So n AND n minus one clears the lowest set bit.</p>
+<p>That gives you the power of two check. A power of two has exactly one bit on. So if n is greater than zero, and n AND n minus one is zero, then n is a power of two. Sixteen is one zero zero zero zero. Fifteen is zero one one one one. AND them, and you get zero.</p>
+<p>You can also use it to count the bits that are on. Keep doing n equals n AND n minus one, and count the steps until n becomes zero. Each step removes one bit. That&#x27;s called Brian Kernighan&#x27;s algorithm, and it runs once per set bit, not once per bit. And in Java, Integer dot bitCount does it for you.</p>
+<p>And one more: n AND minus n keeps only the lowest set bit. Twelve AND minus twelve gives four.</p>
+<p>Now, the magic of XOR. Three rules make it special.</p>
+<p>A number XOR itself is zero. A number XOR zero is the number itself. And the order doesn&#x27;t matter, so you can XOR in any order you like.</p>
+<p>Put those together, and you get the hook of this video. In an array where every number appears twice except one, XOR everything. Every pair cancels to zero. Zero XOR the single number is the single number. That&#x27;s O of n time, and O of one space.</p>
+<p>The same idea finds a missing number. If an array holds every number from zero to n except one, XOR all the indices, and all the values. Every number that&#x27;s there cancels out, and the missing one is left.</p>
+<p>And you may see XOR used to swap two numbers without a temp variable. It works, but in real code, just use a temp. It&#x27;s clearer, and it&#x27;s just as fast.</p>
+<p>Next, one of the most useful tricks of all: generating subsets with a bitmask.</p>
+<p>Say you have three items: a, b and c. Every subset is a choice for each item: in, or out. That&#x27;s exactly what a bit is. So a three-bit number can describe any subset.</p>
+<p>Bit zero is a, bit one is b, and bit two is c. The mask five is one zero one in binary, so it means a and c. The mask seven is one one one, which means all three. And zero means the empty set.</p>
+<p>So to list every subset, loop the mask from zero up to one shifted left by n, minus one. For each mask, check each bit, and take the items whose bits are on.</p>
+<p>There are two to the n subsets, and each one takes n steps to read. So it&#x27;s O of two to the n, times n. That&#x27;s fine when n is up to about twenty. Beyond that, it&#x27;s too slow.</p>
+<p>Now, the Java traps that break bit code.</p>
+<p>Trap one: precedence. In Java, double equals is evaluated before the single ampersand. So if you write n AND one double equals zero, without brackets, it won&#x27;t even compile. Always put brackets around the bit operation: open bracket, n AND one, close bracket, double equals zero.</p>
+<p>Trap two: shifting too far. In an int, Java only uses the last five bits of the shift amount. So one shifted left by thirty-two is not zero. It&#x27;s one. And one shifted left by thirty-one is already negative, because it lands on the sign bit. When you need bit thirty-one or higher, use a long: write one L, shifted left by k.</p>
+<p>Trap three: two arrows or three. On negative numbers, the normal right shift keeps the sign, and the unsigned one doesn&#x27;t. If a loop shifts a negative number right with two arrows, waiting for it to reach zero, it never will. It gets stuck at minus one.</p>
+<p>So, which trick do you use? Here&#x27;s the cheat sheet. Pause and screenshot this.</p>
+<p>If every number appears twice except one, XOR everything.</p>
+<p>If you need to check, set, clear or toggle a bit, use a mask: one shifted left by i.</p>
+<p>If the problem asks whether n is a power of two, check that n is positive, and n AND n minus one is zero.</p>
+<p>If it asks you to count the set bits, use n AND n minus one in a loop, or Integer dot bitCount.</p>
+<p>If you need every subset of a small set, loop a bitmask from zero to two to the n.</p>
+<p>And if you need to multiply or divide by a power of two, shift.</p>
+<p>Okay, quiz time. Three questions. Pause the video, work out each answer, and then hit play.</p>
+<p>Question one. What is five XOR three?</p>
+<p>Question two. Is the check n AND n minus one equals zero enough, on its own, to test for a power of two?</p>
+<p>Question three. In Java, what is one shifted left by thirty-two, for an int?</p>
+<p>Ready?</p>
+<p>Question one: six. Five is one zero one. Three is zero one one. The bits that differ give one one zero, which is six.</p>
+<p>Question two: no. For n equals zero, the check also gives zero, but zero is not a power of two. You need n greater than zero too.</p>
+<p>Question three: one. Java only uses the last five bits of the shift amount, so shifting by thirty-two is the same as shifting by zero.</p>
+<p>How many did you get right? Tell me in the comments: three out of three, two, or one.</p>
+<p>Let&#x27;s recap. Every number is stored as bits, and each place is worth twice the one to its right. AND filters, OR turns bits on, XOR flips the bits that differ, and NOT flips them all. Negative numbers use two&#x27;s complement, so NOT x is minus x, minus one. A left shift multiplies by two, and a right shift divides by two. A mask of one shifted left by i lets you check, set, clear or toggle any bit, in O of one. n AND n minus one clears the lowest set bit, and XOR cancels out pairs.</p>
+<p>Your homework. Solve Single Number and Counting Bits on LeetCode, using only bit operations. Then tell me in the comments: what is six AND three?</p>
+<p>Next episode, we start Module One: arrays in depth. How arrays sit in memory, why indexing is O of one, and what every operation really costs.</p>
+<p>And don&#x27;t forget to subscribe to Compiled Canvas, so you don&#x27;t miss anything new in tech and the job market. Keep coding, stay consistent, and I&#x27;ll see you in the next one.</p>
+      </details>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <div class="side-sticky">
+      <div class="card mb-3 shadow-sm solve-card"><div class="card-body">
+        <h2 class="h6 fw-bold">Practise this now</h2>
+        <div class="mb-3"><a class="ep-try" href="../04-bit-manipulation/003-single-number.html">Single Number <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../04-bit-manipulation/004-counting-bits.html">Counting Bits <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../04-bit-manipulation/002-power-of-two.html">Power of Two <span aria-hidden="true">→</span></a></div>
+        <a class="btn btn-brand w-100" href="../04-bit-manipulation/index.html">All Bit Manipulation problems</a>
+      </div></div>
+      <div class="card mb-3 shadow-sm"><div class="card-body small">
+        <a class="d-block mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch the full DSA series in order</a>
+        <a class="d-block" href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Compiled Canvas</a>
+      </div></div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="05-math-for-dsa.html">← Episode 5</a><a class="btn btn-outline-secondary" href="07-arrays-in-java.html">Episode 7 →</a></div>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-1">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

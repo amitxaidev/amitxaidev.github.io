@@ -9,7 +9,7 @@ Give each node a (row, column): the root is (0, 0), a left child is (row + 1, co
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/020-vertical-order-traversal-of-a-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/020-vertical-order-traversal-of-a-binary-tree.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/19-binary-trees/020-vertical-order-traversal-of-a-binary-tree.html](https://compiledcanvas.com/dsa/19-binary-trees/020-vertical-order-traversal-of-a-binary-tree.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ Place n queens on an n×n board so that no two attack each other (same row, colu
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/n-queens/](https://leetcode.com/problems/n-queens/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/016-n-queens.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/016-n-queens.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/15-recursion-backtracking/016-n-queens.html](https://compiledcanvas.com/dsa/15-recursion-backtracking/016-n-queens.html)
 
 ## Understanding
 

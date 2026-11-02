@@ -9,7 +9,7 @@ A sorted array of distinct values was rotated at an unknown point. Find target's
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/search-in-rotated-sorted-array/](https://leetcode.com/problems/search-in-rotated-sorted-array/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/007-search-in-rotated-sorted-array.html](https://amitxaidev.github.io/dsa/13-binary-search/007-search-in-rotated-sorted-array.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/13-binary-search/007-search-in-rotated-sorted-array.html](https://compiledcanvas.com/dsa/13-binary-search/007-search-in-rotated-sorted-array.html)
 
 ## Understanding
 

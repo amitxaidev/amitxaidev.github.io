@@ -9,7 +9,7 @@ Return the largest difference between consecutive elements after sorting, in lin
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/maximum-gap/](https://leetcode.com/problems/maximum-gap/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/009-maximum-gap.html](https://amitxaidev.github.io/dsa/14-sorting/009-maximum-gap.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/14-sorting/009-maximum-gap.html](https://compiledcanvas.com/dsa/14-sorting/009-maximum-gap.html)
 
 ## Understanding
 

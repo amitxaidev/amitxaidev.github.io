@@ -9,7 +9,7 @@ Bursting balloon i earns nums[left] × nums[i] × nums[right], where left and ri
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/burst-balloons/](https://leetcode.com/problems/burst-balloons/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/026-burst-balloons.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/026-burst-balloons.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/026-burst-balloons.html](https://compiledcanvas.com/dsa/24-dynamic-programming/026-burst-balloons.html)
 
 ## Understanding
 

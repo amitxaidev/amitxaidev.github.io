@@ -9,7 +9,7 @@ Rearrange the array so all even numbers come before all odd numbers. Any order i
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/sort-array-by-parity/](https://leetcode.com/problems/sort-array-by-parity/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/002-sort-array-by-parity.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/002-sort-array-by-parity.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/09-kadane-dnf-moore/002-sort-array-by-parity.html](https://compiledcanvas.com/dsa/09-kadane-dnf-moore/002-sort-array-by-parity.html)
 
 ## Understanding
 

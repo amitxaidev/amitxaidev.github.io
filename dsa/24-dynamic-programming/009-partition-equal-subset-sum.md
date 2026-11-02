@@ -9,7 +9,7 @@ Decide whether the array can be split into two subsets with equal sums.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/partition-equal-subset-sum/](https://leetcode.com/problems/partition-equal-subset-sum/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/009-partition-equal-subset-sum.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/009-partition-equal-subset-sum.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/009-partition-equal-subset-sum.html](https://compiledcanvas.com/dsa/24-dynamic-programming/009-partition-equal-subset-sum.html)
 
 ## Understanding
 

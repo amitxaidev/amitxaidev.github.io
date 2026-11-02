@@ -9,7 +9,7 @@ In a 0/1 grid, return the area (number of cells) of the largest island, or 0.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/max-area-of-island/](https://leetcode.com/problems/max-area-of-island/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/005-max-area-of-island.html](https://amitxaidev.github.io/dsa/23-graphs/005-max-area-of-island.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/23-graphs/005-max-area-of-island.html](https://compiledcanvas.com/dsa/23-graphs/005-max-area-of-island.html)
 
 ## Understanding
 

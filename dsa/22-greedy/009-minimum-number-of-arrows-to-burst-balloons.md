@@ -9,7 +9,7 @@ Balloons span intervals on the x-axis. A vertical arrow at x bursts every balloo
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/009-minimum-number-of-arrows-to-burst-balloons.html](https://amitxaidev.github.io/dsa/22-greedy/009-minimum-number-of-arrows-to-burst-balloons.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/22-greedy/009-minimum-number-of-arrows-to-burst-balloons.html](https://compiledcanvas.com/dsa/22-greedy/009-minimum-number-of-arrows-to-burst-balloons.html)
 
 ## Understanding
 

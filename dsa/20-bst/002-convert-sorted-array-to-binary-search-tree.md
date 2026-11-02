@@ -9,7 +9,7 @@ Turn a sorted array into a height-balanced BST.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/002-convert-sorted-array-to-binary-search-tree.html](https://amitxaidev.github.io/dsa/20-bst/002-convert-sorted-array-to-binary-search-tree.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/20-bst/002-convert-sorted-array-to-binary-search-tree.html](https://compiledcanvas.com/dsa/20-bst/002-convert-sorted-array-to-binary-search-tree.html)
 
 ## Understanding
 

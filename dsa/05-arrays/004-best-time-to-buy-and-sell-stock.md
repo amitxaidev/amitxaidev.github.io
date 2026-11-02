@@ -9,7 +9,7 @@ prices[i] is a stock's price on day i. Buy on one day and sell on a later day fo
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/best-time-to-buy-and-sell-stock/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/004-best-time-to-buy-and-sell-stock.html](https://amitxaidev.github.io/dsa/05-arrays/004-best-time-to-buy-and-sell-stock.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/05-arrays/004-best-time-to-buy-and-sell-stock.html](https://compiledcanvas.com/dsa/05-arrays/004-best-time-to-buy-and-sell-stock.html)
 
 ## Understanding
 

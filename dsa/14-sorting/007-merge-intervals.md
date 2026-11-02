@@ -9,7 +9,7 @@ Merge all overlapping intervals and return the non-overlapping result.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/merge-intervals/](https://leetcode.com/problems/merge-intervals/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/007-merge-intervals.html](https://amitxaidev.github.io/dsa/14-sorting/007-merge-intervals.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/14-sorting/007-merge-intervals.html](https://compiledcanvas.com/dsa/14-sorting/007-merge-intervals.html)
 
 ## Understanding
 

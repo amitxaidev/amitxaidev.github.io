@@ -9,7 +9,7 @@ Sort an integer array in ascending order in O(n log n) without built-in sort fun
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/sort-an-array/](https://leetcode.com/problems/sort-an-array/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/004-sort-an-array.html](https://amitxaidev.github.io/dsa/14-sorting/004-sort-an-array.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/14-sorting/004-sort-an-array.html](https://compiledcanvas.com/dsa/14-sorting/004-sort-an-array.html)
 
 ## Understanding
 

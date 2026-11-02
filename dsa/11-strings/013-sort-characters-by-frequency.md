@@ -9,7 +9,7 @@ Rearrange a string so characters appear in decreasing order of frequency (equal 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/sort-characters-by-frequency/](https://leetcode.com/problems/sort-characters-by-frequency/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/013-sort-characters-by-frequency.html](https://amitxaidev.github.io/dsa/11-strings/013-sort-characters-by-frequency.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/11-strings/013-sort-characters-by-frequency.html](https://compiledcanvas.com/dsa/11-strings/013-sort-characters-by-frequency.html)
 
 ## Understanding
 

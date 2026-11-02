@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prefix Sum Explained: Any Range Sum in 1 Step | Java DSA | Compiled Canvas</title>
+<meta name="description" content="Prefix sum in Java explained simply: build a prefix array in O(n), then answer any range sum query in O(1) with one subtraction. Worked examples included.">
+<link rel="canonical" href="https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="video.other">
+<meta property="og:url" content="https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html">
+<meta property="og:title" content="Prefix Sum Explained: Any Range Sum in 1 Step | Java DSA | Compiled Canvas">
+<meta property="og:description" content="Prefix sum in Java explained simply: build a prefix array in O(n), then answer any range sum query in O(1) with one subtraction. Worked examples included.">
+<meta property="og:image" content="https://i.ytimg.com/vi/liU6avyvXQM/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "Prefix Sum Explained: Any Range Sum in 1 Step | Java DSA", "description": "Prefix sum in Java explained simply: build a prefix array in O(n), then answer any range sum query in O(1) with one subtraction. Worked examples included.", "thumbnailUrl": ["https://i.ytimg.com/vi/liU6avyvXQM/maxresdefault.jpg", "https://i.ytimg.com/vi/liU6avyvXQM/hqdefault.jpg"], "uploadDate": "2026-10-29T05:38:42-07:00", "duration": "PT10M55S", "embedUrl": "https://www.youtube.com/embed/liU6avyvXQM", "inLanguage": "en", "publisher": {"@type": "Organization", "name": "Compiled Canvas", "url": "https://compiledcanvas.com/", "logo": {"@type": "ImageObject", "url": "https://compiledcanvas.com/assets/logo.png"}, "sameAs": ["https://www.youtube.com/@compiledcanvas", "https://www.instagram.com/compiledcanvas", "https://github.com/amitxaidev"]}, "hasPart": [{"@type": "Clip", "name": "A trillion steps or 2 million?", "startOffset": 0, "endOffset": 36, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=0"}, {"@type": "Clip", "name": "What this video covers", "startOffset": 36, "endOffset": 70, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=36"}, {"@type": "Clip", "name": "The range sum problem", "startOffset": 70, "endOffset": 104, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=70"}, {"@type": "Clip", "name": "The slow way: O(n) per question", "startOffset": 104, "endOffset": 131, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=104"}, {"@type": "Clip", "name": "Kilometre stones: the whole trick", "startOffset": 131, "endOffset": 176, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=131"}, {"@type": "Clip", "name": "Building the prefix array", "startOffset": 176, "endOffset": 199, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=176"}, {"@type": "Clip", "name": "Step by step: 0, 2, 6, 7, 10, 15", "startOffset": 199, "endOffset": 236, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=199"}, {"@type": "Clip", "name": "Any range sum in one subtraction", "startOffset": 236, "endOffset": 266, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=236"}, {"@type": "Clip", "name": "Why it works", "startOffset": 266, "endOffset": 283, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=266"}, {"@type": "Clip", "name": "Two more examples", "startOffset": 283, "endOffset": 315, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=283"}, {"@type": "Clip", "name": "Your turn: pause and try", "startOffset": 315, "endOffset": 341, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=315"}, {"@type": "Clip", "name": "Graph: O(n) vs O(1) per question", "startOffset": 341, "endOffset": 361, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=341"}, {"@type": "Clip", "name": "Graph: total work for many questions", "startOffset": 361, "endOffset": 393, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=361"}, {"@type": "Clip", "name": "Prefix sum in Java", "startOffset": 393, "endOffset": 432, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=393"}, {"@type": "Clip", "name": "Real-life uses", "startOffset": 432, "endOffset": 452, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=432"}, {"@type": "Clip", "name": "The one mistake: the +1", "startOffset": 452, "endOffset": 488, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=452"}, {"@type": "Clip", "name": "The prefix sum cheat sheet", "startOffset": 488, "endOffset": 517, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=488"}, {"@type": "Clip", "name": "Quiz: 3 easy questions", "startOffset": 517, "endOffset": 583, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=517"}, {"@type": "Clip", "name": "Recap", "startOffset": 583, "endOffset": 611, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=583"}, {"@type": "Clip", "name": "Homework", "startOffset": 611, "endOffset": 630, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=611"}, {"@type": "Clip", "name": "Next episode", "startOffset": 630, "endOffset": 655, "url": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html?t=630"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "DSA in Java", "item": "https://compiledcanvas.com/dsa/"}, {"@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://compiledcanvas.com/dsa/episodes/"}, {"@type": "ListItem", "position": 4, "name": "Episode 8", "item": "https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">AI for Developers <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Episodes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Episode 8</li>
+    </ol></nav>
+    <span class="badge rounded-pill text-bg-dark mb-2">Episode 8 · 10:55 · 29 Oct 2026</span>
+    <h1 class="h2 fw-bold mb-3">Prefix Sum Explained: Any Range Sum in 1 Step | Java DSA</h1>
+    <div class="ep-player ratio ratio-16x9">
+      <iframe id="ep-video" src="https://www.youtube.com/embed/liU6avyvXQM?rel=0" data-video="liU6avyvXQM" title="Prefix Sum Explained: Any Range Sum in 1 Step | Java DSA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>What this episode covers</h2>
+      <p>A million numbers and a million &quot;what&#x27;s the sum from here to there?&quot; questions can take up to a trillion steps the slow way. With a prefix sum, each answer takes one subtraction.</p>
+<p>The idea is the kilometre stones on an Indian highway. Each stone shows the distance from the start, so the distance between any two stones is one subtraction. A prefix array does the same thing for an array.</p>
+<p>We build one step by step: for the array 2, 4, 1, 3, 5, the prefix array is 0, 2, 6, 7, 10, 15. So the sum from index 1 to 3 is prefix[4] − prefix[1], which is 10 − 2 = 8. Then we work through more examples, including one for you to try, compare the two approaches on graphs, write it in Java, and finish with a cheat sheet and a quiz.</p>
+    </section>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>What you'll be able to do</h2>
+      <ul class="mb-0"><li>Why adding up a range again for every question is slow</li>
+<li>How to build a prefix array that is one box longer than the input</li>
+<li>The formula: sum from L to R = prefix[R + 1] − prefix[L]</li>
+<li>The cost: O(n) to build, O(1) per query</li>
+<li>Writing it in Java</li></ul>
+    </section>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
+      <p class="mb-0">Forgetting the +1. prefix[R] − prefix[L] leaves out the last number of the range. Use long for the prefix array when values get big.</p>
+    </section>
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Key moments <small>tap one to jump there</small></h2>
+      <ol class="ep-moments list-unstyled mb-0"><li><a href="?t=0" data-seek="0"><time>0:00</time><span>A trillion steps or 2 million?</span></a></li>
+<li><a href="?t=36" data-seek="36"><time>0:36</time><span>What this video covers</span></a></li>
+<li><a href="?t=70" data-seek="70"><time>1:10</time><span>The range sum problem</span></a></li>
+<li><a href="?t=104" data-seek="104"><time>1:44</time><span>The slow way: O(n) per question</span></a></li>
+<li><a href="?t=131" data-seek="131"><time>2:11</time><span>Kilometre stones: the whole trick</span></a></li>
+<li><a href="?t=176" data-seek="176"><time>2:56</time><span>Building the prefix array</span></a></li>
+<li><a href="?t=199" data-seek="199"><time>3:19</time><span>Step by step: 0, 2, 6, 7, 10, 15</span></a></li>
+<li><a href="?t=236" data-seek="236"><time>3:56</time><span>Any range sum in one subtraction</span></a></li>
+<li><a href="?t=266" data-seek="266"><time>4:26</time><span>Why it works</span></a></li>
+<li><a href="?t=283" data-seek="283"><time>4:43</time><span>Two more examples</span></a></li>
+<li><a href="?t=315" data-seek="315"><time>5:15</time><span>Your turn: pause and try</span></a></li>
+<li><a href="?t=341" data-seek="341"><time>5:41</time><span>Graph: O(n) vs O(1) per question</span></a></li>
+<li><a href="?t=361" data-seek="361"><time>6:01</time><span>Graph: total work for many questions</span></a></li>
+<li><a href="?t=393" data-seek="393"><time>6:33</time><span>Prefix sum in Java</span></a></li>
+<li><a href="?t=432" data-seek="432"><time>7:12</time><span>Real-life uses</span></a></li>
+<li><a href="?t=452" data-seek="452"><time>7:32</time><span>The one mistake: the +1</span></a></li>
+<li><a href="?t=488" data-seek="488"><time>8:08</time><span>The prefix sum cheat sheet</span></a></li>
+<li><a href="?t=517" data-seek="517"><time>8:37</time><span>Quiz: 3 easy questions</span></a></li>
+<li><a href="?t=583" data-seek="583"><time>9:43</time><span>Recap</span></a></li>
+<li><a href="?t=611" data-seek="611"><time>10:11</time><span>Homework</span></a></li>
+<li><a href="?t=630" data-seek="630"><time>10:30</time><span>Next episode</span></a></li></ol>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Full transcript</h2>
+      <details class="ep-transcript"><summary>Read the whole lesson</summary>
+      <p>Here&#x27;s a question. You have an array of one million numbers. And someone asks you one million questions. Each question is: what&#x27;s the sum from this position to that position?</p>
+<p>If you add the numbers up again for every question, that&#x27;s up to a million million steps. A trillion. Your program would run for hours.</p>
+<p>But with one simple trick, every answer takes just one subtraction. The whole thing finishes in about two million steps. In under a second.</p>
+<p>That trick is called the prefix sum. And by the end of this video, you&#x27;ll be able to use it yourself.</p>
+<p>Welcome back to Compiled Canvas. This is Episode Eight of our DSA series. Last time, we learned how arrays work. Today, we learn our first real array trick. And it&#x27;s one of the easiest, and most useful, tricks in all of DSA.</p>
+<p>Here&#x27;s the plan. The problem we&#x27;re solving. The slow way. A picture that makes the trick obvious. Building the prefix array. Answering any question in one step. Real Java code. The one mistake everyone makes. A cheat sheet. And an easy quiz at the end.</p>
+<p>Let&#x27;s go.</p>
+<p>First, the problem.</p>
+<p>Here&#x27;s our array: two, four, one, three, five. Five numbers, at indexes zero to four.</p>
+<p>The question is: what is the sum from index one to index three?</p>
+<p>Let&#x27;s look. Index one is four. Index two is one. Index three is three. Four plus one plus three is eight. So the answer is eight.</p>
+<p>That&#x27;s called a range sum. A range is just &quot;from here to there&quot;. And range sum questions show up everywhere in coding interviews.</p>
+<p>Now, the slow way. For every question, we loop from the start of the range to the end, and add as we go. For a short range, that&#x27;s quick. But a range can cover the whole array. So one question can take n steps. That&#x27;s O of n.</p>
+<p>And if there are many questions, say q questions, the total work is n times q. With a million numbers and a million questions, that&#x27;s the trillion steps we started with.</p>
+<p>So we need a better idea. And the better idea comes from the road.</p>
+<p>If you&#x27;ve ever travelled on a highway in India, you&#x27;ve seen the small kilometre stones on the side of the road. Each stone tells you how far you are from the start. Zero. Two. Six. Seven. Ten. Fifteen.</p>
+<p>Now, here&#x27;s a question. How far is it from the stone that says six, to the stone that says fifteen?</p>
+<p>You don&#x27;t measure the road again. You just subtract. Fifteen minus six is nine kilometres. One subtraction.</p>
+<p>That&#x27;s the whole trick. Each stone stores the total distance so far. And the distance between any two stones is just one subtraction.</p>
+<p>The prefix sum does exactly the same thing, for an array.</p>
+<p>Let&#x27;s build the prefix array.</p>
+<p>A prefix array stores the running total. Each box holds the sum of everything before it.</p>
+<p>We&#x27;ll make it one box longer than the original array. And we put a zero at the very start, just like the first kilometre stone at the start of the road.</p>
+<p>Our array is two, four, one, three, five. Let&#x27;s build it, step by step.</p>
+<p>Box zero is zero. Nothing added yet.</p>
+<p>Box one: zero plus two. Two.</p>
+<p>Box two: two plus four. Six.</p>
+<p>Box three: six plus one. Seven.</p>
+<p>Box four: seven plus three. Ten.</p>
+<p>Box five: ten plus five. Fifteen.</p>
+<p>So the prefix array is: zero, two, six, seven, ten, fifteen. Look closely. Those are exactly the kilometre stones from our road.</p>
+<p>Building it means visiting every number once. So building the prefix array is O of n. But we only build it once.</p>
+<p>Now the magic part. Answering a question.</p>
+<p>To get the sum from index L to index R, we take the prefix at R plus one, and subtract the prefix at L.</p>
+<p>Let&#x27;s try it. Sum from index one to index three. R plus one is four, and the prefix at four is ten. L is one, and the prefix at one is two. Ten minus two is eight.</p>
+<p>And eight is exactly the answer we got by adding four, one and three. One subtraction instead of a loop.</p>
+<p>Why does it work? The prefix at four is the total of the first four numbers: two, four, one and three. The prefix at one is the total of just the first number: two. Take away the two, and you&#x27;re left with four, one and three. That&#x27;s our range.</p>
+<p>Let&#x27;s do another one. The sum of the whole array, from index zero to index four. The prefix at five is fifteen. The prefix at zero is zero. Fifteen minus zero is fifteen. Check: two plus four plus one plus three plus five is fifteen. Correct.</p>
+<p>One more. The sum from index two to index two. That&#x27;s just one box. The prefix at three is seven. The prefix at two is six. Seven minus six is one. And the value at index two is one. Correct again.</p>
+<p>Your turn. Pause the video and try this one. Using the prefix array zero, two, six, seven, ten, fifteen, what is the sum from index two to index four?</p>
+<p>Ready? R plus one is five, and the prefix at five is fifteen. L is two, and the prefix at two is six. Fifteen minus six is nine. Check: one plus three plus five is nine. If you got nine, you&#x27;ve got it.</p>
+<p>Look at this graph. Along the bottom is the length of the range. Up the side is the time to answer one question. The slow way is a line going up. The longer the range, the longer it takes. The prefix sum is a flat line. A range of five, or a range of five million, is still one subtraction.</p>
+<p>Now look at this second graph. This one shows the total work as the number of questions grows. The slow way climbs steeply, because every question loops again. The prefix sum pays once to build, and then barely moves. That&#x27;s the difference between hours and under a second.</p>
+<p>Quick pause, before we go further. If you&#x27;re finding this video valuable, hit subscribe to Compiled Canvas, and turn on the bell. It&#x27;s free, it takes one second, and it helps me keep making this complete DSA series for you. Alright, back to it.</p>
+<p>Now let&#x27;s write it in Java.</p>
+<p>First, we make the prefix array, one box bigger than the original: int array prefix, equals new int of n plus one. Every box starts at zero, so the first box is already zero.</p>
+<p>Then one loop. For i from zero to n: prefix of i plus one equals prefix of i, plus arr of i. Each box is the box before it, plus the next number.</p>
+<p>And to answer a question: return prefix of R plus one, minus prefix of L. That&#x27;s it. One line.</p>
+<p>So the whole technique is: one loop to build, and one subtraction per question.</p>
+<p>Where would you use this in real life? Think of a shop that writes down its sales every day. The owner asks: how much did we sell from day ten to day twenty? Or a fitness app that counts your steps every day, and shows your total for this week. Build the running total once, and every &quot;from here to there&quot; question is one subtraction.</p>
+<p>Now, the one mistake everyone makes.</p>
+<p>It&#x27;s the plus one. The sum from L to R is prefix of R plus one, minus prefix of L. Not prefix of R. Forget the plus one, and you&#x27;ll leave out the last number of your range.</p>
+<p>Here&#x27;s an easy way to remember it. The prefix at any box is the total of everything before that box. So to include index R, you need the box after it. That&#x27;s R plus one.</p>
+<p>One more small tip. If the numbers are big, the running total can get too big for an int. In that case, use a long for the prefix array.</p>
+<p>So, here&#x27;s the whole prefix sum in one cheat sheet. Pause and screenshot this.</p>
+<p>The prefix array is one box longer than the original, and starts with zero.</p>
+<p>Each box is the box before it, plus the next number.</p>
+<p>Building it: O of n, and you do it once.</p>
+<p>The sum from L to R: prefix of R plus one, minus prefix of L.</p>
+<p>Each question: O of one.</p>
+<p>And watch out for the plus one, and use long for big numbers.</p>
+<p>Okay, quiz time. Three easy questions. Pause the video, think, and then hit play.</p>
+<p>Question one. The array is five, two, seven. What is its prefix array?</p>
+<p>Question two. How long does it take to build the prefix array, and how long does each question take?</p>
+<p>Question three. The prefix array is zero, three, eight, ten, sixteen. What is the sum from index one to index three?</p>
+<p>Ready?</p>
+<p>Question one: zero, five, seven, fourteen. Start with zero. Then zero plus five is five. Five plus two is seven. Seven plus seven is fourteen.</p>
+<p>Question two: building takes O of n, because we visit every number once. Each question takes O of one, because it&#x27;s one subtraction.</p>
+<p>Question three: thirteen. R plus one is four, and the prefix at four is sixteen. The prefix at one is three. Sixteen minus three is thirteen.</p>
+<p>How many did you get right? Tell me in the comments: three out of three, two, or one.</p>
+<p>Let&#x27;s recap. A range sum is the sum from one index to another. The slow way loops for every question, so it&#x27;s O of n per question. The prefix array stores the running total, like kilometre stones on a highway. It starts with zero, and it&#x27;s one box longer than the original array. The sum from L to R is prefix of R plus one, minus prefix of L. Build once in O of n, then answer every question in O of one.</p>
+<p>Your homework. Solve Running Sum of 1d Array on LeetCode. It&#x27;s building the prefix array, exactly like we did today. Then try Range Sum Query, Immutable. It&#x27;s the exact problem from this video. And tell me in the comments: for the array one, two, three, four, what is the prefix array?</p>
+<p>Next episode, we learn the two pointers technique. It&#x27;s the trick you saw when we reversed an array, and it solves a whole family of problems, like finding a pair that adds up to a target, in just one pass.</p>
+<p>And don&#x27;t forget to subscribe to Compiled Canvas, so you don&#x27;t miss anything new in tech and the job market. Keep coding, stay consistent, and I&#x27;ll see you in the next one.</p>
+      </details>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <div class="side-sticky">
+      <div class="card mb-3 shadow-sm solve-card"><div class="card-body">
+        <h2 class="h6 fw-bold">Practise this now</h2>
+        <div class="mb-3"><a class="ep-try" href="../01-complexity/001-running-sum-of-1d-array.html">Running Sum of 1d Array <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../06-prefix-sum/002-range-sum-query-immutable.html">Range Sum Query - Immutable <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../06-prefix-sum/003-find-pivot-index.html">Find Pivot Index <span aria-hidden="true">→</span></a></div>
+        <a class="btn btn-brand w-100" href="../06-prefix-sum/index.html">All Prefix Sum problems</a>
+      </div></div>
+      <div class="card mb-3 shadow-sm"><div class="card-body small">
+        <a class="d-block mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch the full DSA series in order</a>
+        <a class="d-block" href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Compiled Canvas</a>
+      </div></div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="07-arrays-in-java.html">← Episode 7</a><a class="btn btn-outline-secondary" href="09-two-pointers-java.html">Episode 9 →</a></div>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-1">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

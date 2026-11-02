@@ -9,7 +9,7 @@ Decide whether there is a subarray of length at least 2 whose sum is a multiple 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/continuous-subarray-sum/](https://leetcode.com/problems/continuous-subarray-sum/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/010-continuous-subarray-sum.html](https://amitxaidev.github.io/dsa/06-prefix-sum/010-continuous-subarray-sum.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/06-prefix-sum/010-continuous-subarray-sum.html](https://compiledcanvas.com/dsa/06-prefix-sum/010-continuous-subarray-sum.html)
 
 ## Understanding
 

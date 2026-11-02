@@ -9,7 +9,7 @@ Starting from one pixel, repaint it and every 4-directionally connected pixel of
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/flood-fill/](https://leetcode.com/problems/flood-fill/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/002-flood-fill.html](https://amitxaidev.github.io/dsa/23-graphs/002-flood-fill.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/23-graphs/002-flood-fill.html](https://compiledcanvas.com/dsa/23-graphs/002-flood-fill.html)
 
 ## Understanding
 

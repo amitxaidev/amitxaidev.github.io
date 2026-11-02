@@ -9,7 +9,7 @@ A node is "good" if no node on the path from the root to it has a greater value.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/count-good-nodes-in-binary-tree/](https://leetcode.com/problems/count-good-nodes-in-binary-tree/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/017-count-good-nodes-in-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/017-count-good-nodes-in-binary-tree.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/19-binary-trees/017-count-good-nodes-in-binary-tree.html](https://compiledcanvas.com/dsa/19-binary-trees/017-count-good-nodes-in-binary-tree.html)
 
 ## Understanding
 

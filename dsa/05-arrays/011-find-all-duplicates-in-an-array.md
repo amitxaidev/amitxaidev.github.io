@@ -9,7 +9,7 @@ Values are in 1..n and each appears once or twice. Return every value that appea
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/find-all-duplicates-in-an-array/](https://leetcode.com/problems/find-all-duplicates-in-an-array/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/011-find-all-duplicates-in-an-array.html](https://amitxaidev.github.io/dsa/05-arrays/011-find-all-duplicates-in-an-array.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/05-arrays/011-find-all-duplicates-in-an-array.html](https://compiledcanvas.com/dsa/05-arrays/011-find-all-duplicates-in-an-array.html)
 
 ## Understanding
 

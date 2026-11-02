@@ -9,7 +9,7 @@ Decide whether a sentence follows a pattern of letters, where each letter maps t
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/word-pattern/](https://leetcode.com/problems/word-pattern/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/004-word-pattern.html](https://amitxaidev.github.io/dsa/16-hashing/004-word-pattern.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/16-hashing/004-word-pattern.html](https://compiledcanvas.com/dsa/16-hashing/004-word-pattern.html)
 
 ## Understanding
 

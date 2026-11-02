@@ -9,7 +9,7 @@ Find the contiguous subarray with the largest product and return the product.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/maximum-product-subarray/](https://leetcode.com/problems/maximum-product-subarray/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/004-maximum-product-subarray.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/004-maximum-product-subarray.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/09-kadane-dnf-moore/004-maximum-product-subarray.html](https://compiledcanvas.com/dsa/09-kadane-dnf-moore/004-maximum-product-subarray.html)
 
 ## Understanding
 

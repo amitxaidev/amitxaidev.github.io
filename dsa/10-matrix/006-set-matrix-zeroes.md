@@ -9,7 +9,7 @@ If a cell is 0, set its whole row and column to 0. Do it in place, ideally with 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/set-matrix-zeroes/](https://leetcode.com/problems/set-matrix-zeroes/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/006-set-matrix-zeroes.html](https://amitxaidev.github.io/dsa/10-matrix/006-set-matrix-zeroes.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/10-matrix/006-set-matrix-zeroes.html](https://compiledcanvas.com/dsa/10-matrix/006-set-matrix-zeroes.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ Delete the node with a given key from a BST and return the new root.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/delete-node-in-a-bst/](https://leetcode.com/problems/delete-node-in-a-bst/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/006-delete-node-in-a-bst.html](https://amitxaidev.github.io/dsa/20-bst/006-delete-node-in-a-bst.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/20-bst/006-delete-node-in-a-bst.html](https://compiledcanvas.com/dsa/20-bst/006-delete-node-in-a-bst.html)
 
 ## Understanding
 

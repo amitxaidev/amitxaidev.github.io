@@ -9,7 +9,7 @@ A tree with n nodes had one extra edge added. Return an edge that can be removed
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/redundant-connection/](https://leetcode.com/problems/redundant-connection/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/017-redundant-connection.html](https://amitxaidev.github.io/dsa/23-graphs/017-redundant-connection.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/23-graphs/017-redundant-connection.html](https://compiledcanvas.com/dsa/23-graphs/017-redundant-connection.html)
 
 ## Understanding
 

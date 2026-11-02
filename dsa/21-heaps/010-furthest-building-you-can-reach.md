@@ -9,7 +9,7 @@ Walk past buildings left to right. Climbing up costs bricks equal to the height 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/furthest-building-you-can-reach/](https://leetcode.com/problems/furthest-building-you-can-reach/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/010-furthest-building-you-can-reach.html](https://amitxaidev.github.io/dsa/21-heaps/010-furthest-building-you-can-reach.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/21-heaps/010-furthest-building-you-can-reach.html](https://compiledcanvas.com/dsa/21-heaps/010-furthest-building-you-can-reach.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ An array of n + 1 numbers has values in 1..n, so one value repeats (possibly man
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/find-the-duplicate-number/](https://leetcode.com/problems/find-the-duplicate-number/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/012-find-the-duplicate-number.html](https://amitxaidev.github.io/dsa/05-arrays/012-find-the-duplicate-number.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/05-arrays/012-find-the-duplicate-number.html](https://compiledcanvas.com/dsa/05-arrays/012-find-the-duplicate-number.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ Decide whether a string can be split into a sequence of words from a dictionary 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/word-break/](https://leetcode.com/problems/word-break/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/019-word-break.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/019-word-break.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/019-word-break.html](https://compiledcanvas.com/dsa/24-dynamic-programming/019-word-break.html)
 
 ## Understanding
 

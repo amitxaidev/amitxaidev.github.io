@@ -9,7 +9,7 @@ Decide whether a binary tree is a mirror image of itself around its centre.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/symmetric-tree/](https://leetcode.com/problems/symmetric-tree/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/005-symmetric-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/005-symmetric-tree.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/19-binary-trees/005-symmetric-tree.html](https://compiledcanvas.com/dsa/19-binary-trees/005-symmetric-tree.html)
 
 ## Understanding
 

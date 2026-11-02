@@ -3,7 +3,7 @@
 Top K, k-way merge and the two-heap median pattern.
 
 📺 **Watch first:** Ep 64, Ep 65, Ep 66, Ep 67, Ep 68 of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/21-heaps/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/21-heaps/  
 🧮 **13 problems** · 🟢 2 Easy · 🟡 8 Medium · 🔴 3 Hard
 
 ## Understand the topic

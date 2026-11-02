@@ -9,7 +9,7 @@ Each node has next and random pointers (random can point anywhere or be null). R
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/copy-list-with-random-pointer/](https://leetcode.com/problems/copy-list-with-random-pointer/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/014-copy-list-with-random-pointer.html](https://amitxaidev.github.io/dsa/17-linked-list/014-copy-list-with-random-pointer.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/17-linked-list/014-copy-list-with-random-pointer.html](https://compiledcanvas.com/dsa/17-linked-list/014-copy-list-with-random-pointer.html)
 
 ## Understanding
 

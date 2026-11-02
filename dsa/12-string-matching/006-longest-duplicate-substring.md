@@ -9,7 +9,7 @@ Return any longest substring that appears at least twice in s (occurrences may o
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/longest-duplicate-substring/](https://leetcode.com/problems/longest-duplicate-substring/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/12-string-matching/006-longest-duplicate-substring.html](https://amitxaidev.github.io/dsa/12-string-matching/006-longest-duplicate-substring.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/12-string-matching/006-longest-duplicate-substring.html](https://compiledcanvas.com/dsa/12-string-matching/006-longest-duplicate-substring.html)
 
 ## Understanding
 

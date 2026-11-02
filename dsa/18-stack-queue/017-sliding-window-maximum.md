@@ -9,7 +9,7 @@ For every window of size k sliding across the array, return the maximum.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/sliding-window-maximum/](https://leetcode.com/problems/sliding-window-maximum/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/017-sliding-window-maximum.html](https://amitxaidev.github.io/dsa/18-stack-queue/017-sliding-window-maximum.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/18-stack-queue/017-sliding-window-maximum.html](https://compiledcanvas.com/dsa/18-stack-queue/017-sliding-window-maximum.html)
 
 ## Understanding
 

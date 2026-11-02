@@ -9,7 +9,7 @@ Find every word from a list that can be traced in a letter grid by adjacent move
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/word-search-ii/](https://leetcode.com/problems/word-search-ii/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/007-word-search-ii.html](https://amitxaidev.github.io/dsa/25-trie/007-word-search-ii.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/25-trie/007-word-search-ii.html](https://compiledcanvas.com/dsa/25-trie/007-word-search-ii.html)
 
 ## Understanding
 

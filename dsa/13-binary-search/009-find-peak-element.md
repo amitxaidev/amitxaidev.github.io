@@ -9,7 +9,7 @@ Return the index of any element that is strictly greater than its neighbours (ou
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/find-peak-element/](https://leetcode.com/problems/find-peak-element/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/009-find-peak-element.html](https://amitxaidev.github.io/dsa/13-binary-search/009-find-peak-element.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/13-binary-search/009-find-peak-element.html](https://compiledcanvas.com/dsa/13-binary-search/009-find-peak-element.html)
 
 ## Understanding
 

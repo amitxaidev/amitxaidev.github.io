@@ -9,7 +9,7 @@ Count the contiguous subarrays whose elements add up to exactly k. Values can be
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/subarray-sum-equals-k/](https://leetcode.com/problems/subarray-sum-equals-k/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/007-subarray-sum-equals-k.html](https://amitxaidev.github.io/dsa/06-prefix-sum/007-subarray-sum-equals-k.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/06-prefix-sum/007-subarray-sum-equals-k.html](https://compiledcanvas.com/dsa/06-prefix-sum/007-subarray-sum-equals-k.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ Return the integer square root of x (rounded down) without using a built-in powe
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/sqrtx/](https://leetcode.com/problems/sqrtx/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/003-sqrtx.html](https://amitxaidev.github.io/dsa/13-binary-search/003-sqrtx.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/13-binary-search/003-sqrtx.html](https://compiledcanvas.com/dsa/13-binary-search/003-sqrtx.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ A doubly linked list's nodes may have a child pointer to another doubly linked l
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/016-flatten-a-multilevel-doubly-linked-list.html](https://amitxaidev.github.io/dsa/17-linked-list/016-flatten-a-multilevel-doubly-linked-list.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/17-linked-list/016-flatten-a-multilevel-doubly-linked-list.html](https://compiledcanvas.com/dsa/17-linked-list/016-flatten-a-multilevel-doubly-linked-list.html)
 
 ## Understanding
 

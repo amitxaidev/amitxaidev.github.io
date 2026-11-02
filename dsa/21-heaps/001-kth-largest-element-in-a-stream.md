@@ -9,7 +9,7 @@ Design a class that receives numbers one by one and, after each one, returns the
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/kth-largest-element-in-a-stream/](https://leetcode.com/problems/kth-largest-element-in-a-stream/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/001-kth-largest-element-in-a-stream.html](https://amitxaidev.github.io/dsa/21-heaps/001-kth-largest-element-in-a-stream.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/21-heaps/001-kth-largest-element-in-a-stream.html](https://compiledcanvas.com/dsa/21-heaps/001-kth-largest-element-in-a-stream.html)
 
 ## Understanding
 

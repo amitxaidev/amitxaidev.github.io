@@ -9,7 +9,7 @@ In a binary array you may flip at most k zeros to ones. Return the longest run o
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/max-consecutive-ones-iii/](https://leetcode.com/problems/max-consecutive-ones-iii/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/008-max-consecutive-ones-iii.html](https://amitxaidev.github.io/dsa/08-sliding-window/008-max-consecutive-ones-iii.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/08-sliding-window/008-max-consecutive-ones-iii.html](https://compiledcanvas.com/dsa/08-sliding-window/008-max-consecutive-ones-iii.html)
 
 ## Understanding
 

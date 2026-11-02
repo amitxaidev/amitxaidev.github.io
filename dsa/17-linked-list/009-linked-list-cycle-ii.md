@@ -9,7 +9,7 @@ Return the node where a linked list's cycle begins, or null if there is no cycle
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/linked-list-cycle-ii/](https://leetcode.com/problems/linked-list-cycle-ii/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/009-linked-list-cycle-ii.html](https://amitxaidev.github.io/dsa/17-linked-list/009-linked-list-cycle-ii.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/17-linked-list/009-linked-list-cycle-ii.html](https://compiledcanvas.com/dsa/17-linked-list/009-linked-list-cycle-ii.html)
 
 ## Understanding
 

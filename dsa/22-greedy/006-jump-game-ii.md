@@ -9,7 +9,7 @@ Same jumps as Jump Game, and the end is always reachable. Return the minimum num
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/jump-game-ii/](https://leetcode.com/problems/jump-game-ii/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/006-jump-game-ii.html](https://amitxaidev.github.io/dsa/22-greedy/006-jump-game-ii.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/22-greedy/006-jump-game-ii.html](https://compiledcanvas.com/dsa/22-greedy/006-jump-game-ii.html)
 
 ## Understanding
 

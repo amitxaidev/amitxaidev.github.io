@@ -9,7 +9,7 @@ Every minute, rotten oranges rot their fresh 4-directional neighbours. Return th
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/rotting-oranges/](https://leetcode.com/problems/rotting-oranges/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/006-rotting-oranges.html](https://amitxaidev.github.io/dsa/23-graphs/006-rotting-oranges.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/23-graphs/006-rotting-oranges.html](https://compiledcanvas.com/dsa/23-graphs/006-rotting-oranges.html)
 
 ## Understanding
 

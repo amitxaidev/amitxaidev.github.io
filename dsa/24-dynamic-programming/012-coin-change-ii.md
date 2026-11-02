@@ -9,7 +9,7 @@ Count the combinations of coins (unlimited supply) that add up to amount. Order 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/coin-change-ii/](https://leetcode.com/problems/coin-change-ii/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/012-coin-change-ii.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/012-coin-change-ii.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/012-coin-change-ii.html](https://compiledcanvas.com/dsa/24-dynamic-programming/012-coin-change-ii.html)
 
 ## Understanding
 

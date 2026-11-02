@@ -3,7 +3,7 @@
 Reverse, fast & slow pointers, merge, and LRU cache.
 
 📺 **Watch first:** Ep 40, Ep 41, Ep 42, Ep 43, Ep 44, Ep 45 of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/17-linked-list/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/17-linked-list/  
 🧮 **19 problems** · 🟢 7 Easy · 🟡 9 Medium · 🔴 3 Hard
 
 ## Understand the topic

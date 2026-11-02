@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Big O Notation Explained Simply | Time and Space Complexity in DSA | Compiled Canvas</title>
+<meta name="description" content="Big O notation from zero: why we count steps, not seconds, the seven complexities you will meet, four rules to simplify, and space complexity in Java.">
+<link rel="canonical" href="https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="video.other">
+<meta property="og:url" content="https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html">
+<meta property="og:title" content="Big O Notation Explained Simply | Time and Space Complexity in DSA | Compiled Canvas">
+<meta property="og:description" content="Big O notation from zero: why we count steps, not seconds, the seven complexities you will meet, four rules to simplify, and space complexity in Java.">
+<meta property="og:image" content="https://i.ytimg.com/vi/jZeS1tRzGs4/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "Big O Notation Explained Simply | Time and Space Complexity in DSA", "description": "Big O notation from zero: why we count steps, not seconds, the seven complexities you will meet, four rules to simplify, and space complexity in Java.", "thumbnailUrl": ["https://i.ytimg.com/vi/jZeS1tRzGs4/maxresdefault.jpg", "https://i.ytimg.com/vi/jZeS1tRzGs4/hqdefault.jpg"], "uploadDate": "2026-10-26T21:53:01-07:00", "duration": "PT12M30S", "embedUrl": "https://www.youtube.com/embed/jZeS1tRzGs4", "inLanguage": "en", "publisher": {"@type": "Organization", "name": "Compiled Canvas", "url": "https://compiledcanvas.com/", "logo": {"@type": "ImageObject", "url": "https://compiledcanvas.com/assets/logo.png"}, "sameAs": ["https://www.youtube.com/@compiledcanvas", "https://www.instagram.com/compiledcanvas", "https://github.com/amitxaidev"]}, "hasPart": [{"@type": "Clip", "name": "Same answer: one takes a blink, one takes 2 minutes", "startOffset": 0, "endOffset": 26, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=0"}, {"@type": "Clip", "name": "What this video covers", "startOffset": 26, "endOffset": 73, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=26"}, {"@type": "Clip", "name": "Why we don't measure code in seconds", "startOffset": 73, "endOffset": 102, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=73"}, {"@type": "Clip", "name": "What Big O really means", "startOffset": 102, "endOffset": 141, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=102"}, {"@type": "Clip", "name": "O(1): constant time", "startOffset": 141, "endOffset": 161, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=141"}, {"@type": "Clip", "name": "O(log n): logarithmic time", "startOffset": 161, "endOffset": 186, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=161"}, {"@type": "Clip", "name": "O(n): linear time", "startOffset": 186, "endOffset": 197, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=186"}, {"@type": "Clip", "name": "O(n log n): sorting", "startOffset": 197, "endOffset": 214, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=197"}, {"@type": "Clip", "name": "O(n²): nested loops", "startOffset": 214, "endOffset": 232, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=214"}, {"@type": "Clip", "name": "O(2ⁿ): exponential recursion", "startOffset": 232, "endOffset": 251, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=232"}, {"@type": "Clip", "name": "O(n!): factorial", "startOffset": 251, "endOffset": 265, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=251"}, {"@type": "Clip", "name": "The complexity ladder (screenshot this)", "startOffset": 265, "endOffset": 278, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=265"}, {"@type": "Clip", "name": "4 rules to simplify any Big O", "startOffset": 278, "endOffset": 357, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=278"}, {"@type": "Clip", "name": "Spot the Big O in 10 seconds", "startOffset": 357, "endOffset": 417, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=357"}, {"@type": "Clip", "name": "Space complexity", "startOffset": 417, "endOffset": 451, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=417"}, {"@type": "Clip", "name": "Trade memory for speed: Two Sum", "startOffset": 451, "endOffset": 497, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=451"}, {"@type": "Clip", "name": "Best, average and worst case", "startOffset": 497, "endOffset": 534, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=497"}, {"@type": "Clip", "name": "Hidden traps that fool beginners", "startOffset": 534, "endOffset": 589, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=534"}, {"@type": "Clip", "name": "The rule that ties it all together", "startOffset": 589, "endOffset": 613, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=589"}, {"@type": "Clip", "name": "Quiz time: 3 snippets", "startOffset": 613, "endOffset": 671, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=613"}, {"@type": "Clip", "name": "Recap", "startOffset": 671, "endOffset": 710, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=671"}, {"@type": "Clip", "name": "Your homework", "startOffset": 710, "endOffset": 720, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=710"}, {"@type": "Clip", "name": "Next episode", "startOffset": 720, "endOffset": 750, "url": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html?t=720"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "DSA in Java", "item": "https://compiledcanvas.com/dsa/"}, {"@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://compiledcanvas.com/dsa/episodes/"}, {"@type": "ListItem", "position": 4, "name": "Episode 2", "item": "https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">AI for Developers <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Episodes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Episode 2</li>
+    </ol></nav>
+    <span class="badge rounded-pill text-bg-dark mb-2">Episode 2 · 12:30 · 26 Oct 2026</span>
+    <h1 class="h2 fw-bold mb-3">Big O Notation Explained Simply | Time and Space Complexity in DSA</h1>
+    <div class="ep-player ratio ratio-16x9">
+      <iframe id="ep-video" src="https://www.youtube.com/embed/jZeS1tRzGs4?rel=0" data-video="jZeS1tRzGs4" title="Big O Notation Explained Simply | Time and Space Complexity in DSA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>What this episode covers</h2>
+      <p>Two programs can give the same answer while one finishes in a blink and the other takes minutes. Big O is how we talk about that difference, and this episode builds the idea from zero.</p>
+<p>We start with why code is measured in steps and not seconds. Then we go through the seven complexities you&#x27;ll see again and again, from O(1) up to O(n!), each with a Java example. After that come four rules that simplify any Big O, and a quick way to spot it in about ten seconds.</p>
+<p>Time is only half the story, so we also cover space complexity and the call stack, and use Two Sum to show how spending memory can buy speed. We finish with best, average and worst case, the hidden costs that fool beginners, like string concatenation and ArrayList.contains, and a three-question quiz.</p>
+    </section>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>What you'll be able to do</h2>
+      <ul class="mb-0"><li>What Big O really measures</li>
+<li>O(1), O(log n), O(n), O(n log n), O(n²), O(2ⁿ) and O(n!) with Java code</li>
+<li>Four rules to simplify any Big O</li>
+<li>Space complexity and the call stack</li>
+<li>Trading memory for speed, using Two Sum</li></ul>
+    </section>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
+      <p class="mb-0">Trusting the look of a line. String concatenation in a loop and ArrayList.contains both hide a loop inside a single line of code.</p>
+    </section>
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Key moments <small>tap one to jump there</small></h2>
+      <ol class="ep-moments list-unstyled mb-0"><li><a href="?t=0" data-seek="0"><time>0:00</time><span>Same answer: one takes a blink, one takes 2 minutes</span></a></li>
+<li><a href="?t=26" data-seek="26"><time>0:26</time><span>What this video covers</span></a></li>
+<li><a href="?t=73" data-seek="73"><time>1:13</time><span>Why we don&#x27;t measure code in seconds</span></a></li>
+<li><a href="?t=102" data-seek="102"><time>1:42</time><span>What Big O really means</span></a></li>
+<li><a href="?t=141" data-seek="141"><time>2:21</time><span>O(1): constant time</span></a></li>
+<li><a href="?t=161" data-seek="161"><time>2:41</time><span>O(log n): logarithmic time</span></a></li>
+<li><a href="?t=186" data-seek="186"><time>3:06</time><span>O(n): linear time</span></a></li>
+<li><a href="?t=197" data-seek="197"><time>3:17</time><span>O(n log n): sorting</span></a></li>
+<li><a href="?t=214" data-seek="214"><time>3:34</time><span>O(n²): nested loops</span></a></li>
+<li><a href="?t=232" data-seek="232"><time>3:52</time><span>O(2ⁿ): exponential recursion</span></a></li>
+<li><a href="?t=251" data-seek="251"><time>4:11</time><span>O(n!): factorial</span></a></li>
+<li><a href="?t=265" data-seek="265"><time>4:25</time><span>The complexity ladder (screenshot this)</span></a></li>
+<li><a href="?t=278" data-seek="278"><time>4:38</time><span>4 rules to simplify any Big O</span></a></li>
+<li><a href="?t=357" data-seek="357"><time>5:57</time><span>Spot the Big O in 10 seconds</span></a></li>
+<li><a href="?t=417" data-seek="417"><time>6:57</time><span>Space complexity</span></a></li>
+<li><a href="?t=451" data-seek="451"><time>7:31</time><span>Trade memory for speed: Two Sum</span></a></li>
+<li><a href="?t=497" data-seek="497"><time>8:17</time><span>Best, average and worst case</span></a></li>
+<li><a href="?t=534" data-seek="534"><time>8:54</time><span>Hidden traps that fool beginners</span></a></li>
+<li><a href="?t=589" data-seek="589"><time>9:49</time><span>The rule that ties it all together</span></a></li>
+<li><a href="?t=613" data-seek="613"><time>10:13</time><span>Quiz time: 3 snippets</span></a></li>
+<li><a href="?t=671" data-seek="671"><time>11:11</time><span>Recap</span></a></li>
+<li><a href="?t=710" data-seek="710"><time>11:50</time><span>Your homework</span></a></li>
+<li><a href="?t=720" data-seek="720"><time>12:00</time><span>Next episode</span></a></li></ol>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Full transcript</h2>
+      <details class="ep-transcript"><summary>Read the whole lesson</summary>
+      <p>Two programs. Same problem. Same correct answer. One finishes before you can blink. The other takes almost two minutes. And in a coding interview, that second one fails, even though it&#x27;s right.</p>
+<p>The difference has nothing to do with your laptop, or your programming language. It&#x27;s called time complexity. And by the end of this video, you&#x27;ll be able to look at almost any piece of code and tell how fast it is, in seconds.</p>
+<p>Welcome back to Compiled Canvas. This is Episode Two of our DSA series. In Episode One, we built the complete roadmap. Today, we start phase one, with the single most important idea in all of DSA: Big O.</p>
+<p>Here&#x27;s the plan. Why we don&#x27;t measure code in seconds. What Big O actually means. The seven complexities you&#x27;ll see again and again, each with real Java code. Four rules to simplify any Big O. A ten-second method to spot the Big O of any code. Space complexity, and the trade-off between time and memory. Best, average and worst case. The hidden traps that fool most beginners. And at the end, a quick quiz. So stay with me, and try to answer before I do.</p>
+<p>Let&#x27;s go.</p>
+<p>First question. Why not just time the code with a stopwatch?</p>
+<p>Because the same code runs at different speeds on different machines. A gaming laptop, an old phone, an online judge on a busy server. Even the same machine gives you a different time on every run. Seconds tell you about the computer, not about the code.</p>
+<p>So instead, we count steps. How many basic operations does the code do? And more importantly, how does that number grow as the input grows?</p>
+<p>That&#x27;s what Big O is. Big O describes how the work grows when the input size, which we call n, gets bigger. It doesn&#x27;t care whether one step takes a nanosecond or a microsecond. It cares about the shape of the growth.</p>
+<p>Picture a graph. Along the bottom, the input size. Going up, the number of steps. Some lines stay flat. Some climb slowly. Some shoot up like a rocket. Big O is simply the name of that line.</p>
+<p>And by default, Big O talks about the worst case: the maximum work your code could ever need for an input of size n. Because in an interview, and in production, the worst case is what breaks things.</p>
+<p>Now, the seven complexities you need to know, from fastest to slowest.</p>
+<p>Number one: O of one, constant time. The work doesn&#x27;t depend on the input at all. Reading an element from an array by its index. Getting a value from a HashMap by its key. Whether the array has ten items or ten million, it&#x27;s one step.</p>
+<p>Number two: O of log n, logarithmic time. Every step cuts the problem in half. The classic example is binary search. Look at the middle of a sorted array. If your target is bigger, throw away the left half. If it&#x27;s smaller, throw away the right half. Repeat. A million items? About twenty steps. A billion? About thirty. That&#x27;s the power of halving.</p>
+<p>Number three: O of n, linear time. You touch every element once, like adding up all the numbers in an array with a single loop. Double the input, and you double the work.</p>
+<p>Number four: O of n log n. This is the speed of good sorting, like merge sort, or Java&#x27;s own sort methods. It&#x27;s a little slower than linear, but much faster than what comes next. Whenever a solution says &quot;sort first&quot;, you&#x27;re probably at n log n.</p>
+<p>Number five: O of n squared, quadratic time. A loop inside a loop. For every element, you check every other element, like comparing every pair to find a duplicate. Ten thousand items? A hundred million steps. This is where most brute-force solutions live.</p>
+<p>Number six: O of two to the n, exponential time. Every step branches into two. The famous example is the simple recursive Fibonacci, where each call makes two more calls. Add just one to n, and the work almost doubles. At n equals fifty, that&#x27;s tens of billions of calls.</p>
+<p>Number seven: O of n factorial. Trying every possible ordering, like generating every permutation of a list. Just twenty items have over two billion billion orderings. This is as slow as it gets.</p>
+<p>Pause and screenshot this ladder. O of one, log n, n, n log n, n squared, two to the n, and n factorial. Every algorithm you learn in this series will land somewhere on it.</p>
+<p>Now, four rules to simplify any Big O.</p>
+<p>Rule one: drop the constants. If your code loops through the array twice, that&#x27;s two n steps. But Big O only cares about the shape, and two n grows the same way as n. So two n is just O of n.</p>
+<p>Rule two: drop the smaller terms. If your code has a nested loop, and then a single loop, that&#x27;s n squared plus n. When n is a million, n squared is a trillion, and the extra million barely matters. So it&#x27;s O of n squared. Keep only the biggest term.</p>
+<p>Rule three: steps in a row add, steps inside each other multiply. A loop, then another loop, is n plus n, which is O of n. A loop inside a loop is n times n, which is O of n squared.</p>
+<p>Rule four: different inputs, different letters. If you loop over one array of size a, and then another array of size b, that&#x27;s O of a plus b, not O of n. And if one loops inside the other, it&#x27;s O of a times b. Mixing these up is one of the most common interview mistakes.</p>
+<p>And one bonus fact. In Big O, the base of the logarithm doesn&#x27;t matter. Log base two and log base ten only differ by a constant. So we just write log n.</p>
+<p>So how do you spot the Big O of any code, in ten seconds? Ask four questions.</p>
+<p>One: find the loops. How does the loop variable change? If it goes up by one, that loop is O of n. If it doubles, or halves, that loop is O of log n.</p>
+<p>Two: are the loops nested, or one after another? Nested loops multiply. Loops in a row add, and you keep the biggest.</p>
+<p>Three: is there recursion? Count how many times the function calls itself, and how deep it goes. One call that goes n deep is O of n. Two calls that go n deep is O of two to the n. And if each call halves the input, think log n.</p>
+<p>Four: check the hidden costs. Sorting is n log n. HashMap get and put are O of one. Contains on a list, substring, and copying an array are all O of n. Count them like loops.</p>
+<p>Loops, nesting, recursion, and hidden costs. Four questions, and you can read the speed of almost any code.</p>
+<p>Time isn&#x27;t the only thing that grows. Memory does too. That&#x27;s space complexity: how much extra memory your code needs as the input grows.</p>
+<p>A few counters and variables? O of one space. A new array the same size as the input? O of n. A two-dimensional grid of n by n? O of n squared.</p>
+<p>And here&#x27;s the one that surprises people: recursion uses memory too. Every function call waits on the call stack until it returns. So a recursive function that goes n calls deep uses O of n space, even if it never creates a single array.</p>
+<p>Now, the big idea. Very often, you can trade memory for speed. Take the classic Two Sum problem: find two numbers in an array that add up to a target.</p>
+<p>The brute-force way checks every pair with two nested loops. That&#x27;s O of n squared time, but only O of one extra space.</p>
+<p>The smart way walks through the array once, and stores each number in a HashMap. For every new number, it asks the map: have I already seen the number I need? That&#x27;s O of n time, and O of n space.</p>
+<p>On a hundred thousand numbers, that&#x27;s the difference between almost two minutes and a few milliseconds. Remember the two programs from the start of this video? This is them. We spent a little memory, and saved a lot of time. That trade-off is the heart of so many interview solutions.</p>
+<p>Next, best, average and worst case.</p>
+<p>Take linear search: looking for a value in an unsorted array. If it&#x27;s the very first element, you&#x27;re done in one step. That&#x27;s the best case. If it&#x27;s the last one, or not there at all, you check all n. That&#x27;s the worst case. On average, about half. But we still say linear search is O of n, because Big O plans for the worst.</p>
+<p>Quick sort is a famous example where the cases differ. On average, it&#x27;s O of n log n. But if it keeps picking a bad pivot, it slows down to O of n squared. Interviewers love asking about that.</p>
+<p>Now, the traps. These are hidden costs that make code slower than it looks.</p>
+<p>Trap one: string concatenation in a loop. In Java, strings can&#x27;t change, so every plus creates a brand new string, and copies everything so far. Do that n times, and a loop that looks linear is actually O of n squared. Use a StringBuilder instead.</p>
+<p>Trap two: methods that hide a loop. Calling contains on an ArrayList scans the whole list, so it&#x27;s O of n. Put that inside a loop, and you&#x27;ve got O of n squared, without ever writing a second loop. The same goes for indexOf, remove, and substring.</p>
+<p>Trap three: adding to an ArrayList. Sometimes Java has to grow the array and copy everything, which costs O of n. But that happens so rarely that, averaged over many adds, each add is still O of one. That&#x27;s called amortized constant time.</p>
+<p>And here&#x27;s the rule that ties it all together, from Episode One. A computer does roughly a hundred million simple steps per second, and most judges give you about one second. So look at the input size. If n is around a hundred thousand, n squared is ten billion steps. Way too slow. You need n log n or better. The constraints in the problem are secretly telling you which complexity they expect.</p>
+<p>Okay, quiz time. Three snippets. Pause the video, work out the Big O, and write your answers in the comments.</p>
+<p>Question one. A loop where i starts at one, and doubles every time, until it reaches n. What&#x27;s the complexity?</p>
+<p>Question two. A loop from zero to n, and inside it, a second loop from zero to one hundred. What&#x27;s the complexity?</p>
+<p>Question three. A function that calls itself twice, each time with n minus one, and stops when n is zero. What&#x27;s the complexity?</p>
+<p>Ready? Here are the answers.</p>
+<p>Question one: O of log n. Doubling reaches n in log n steps, just like halving in binary search.</p>
+<p>Question two: O of n. The inner loop always runs exactly one hundred times. That&#x27;s a constant, and constants drop. One hundred n is just O of n.</p>
+<p>Question three: O of two to the n. Every call branches into two, so the calls double at every level.</p>
+<p>How many did you get right? Tell me in the comments: three out of three, two, or one. Be honest.</p>
+<p>Let&#x27;s recap. We measure code in steps, not seconds. Big O describes how those steps grow as the input grows, in the worst case. Know the ladder: one, log n, n, n log n, n squared, two to the n, and n factorial. Drop the constants, drop the smaller terms, add steps in a row, multiply the nested ones, and use different letters for different inputs. Space complexity counts extra memory, including the call stack. And you can often trade memory for speed.</p>
+<p>Your homework. Take three problems you&#x27;ve already solved, and write the time and space complexity next to each one. Then check your answer against the best solution.</p>
+<p>And don&#x27;t forget to subscribe to Compiled Canvas, so you don&#x27;t miss anything new in tech and the job market. Like the video, so it reaches more students. And hit the bell, so you catch the next episode the moment it drops.</p>
+<p>Next episode, we go one level deeper: how to calculate the complexity of any code. Loops, nested loops and recursion, step by step, so no interview question can catch you off guard.</p>
+<p>Keep coding, stay consistent, and I&#x27;ll see you in the next one.</p>
+      </details>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <div class="side-sticky">
+      <div class="card mb-3 shadow-sm solve-card"><div class="card-body">
+        <h2 class="h6 fw-bold">Practise this now</h2>
+        <div class="mb-3"><a class="ep-try" href="../01-complexity/001-running-sum-of-1d-array.html">Running Sum of 1d Array <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../01-complexity/006-number-of-good-pairs.html">Number of Good Pairs <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../01-complexity/002-richest-customer-wealth.html">Richest Customer Wealth <span aria-hidden="true">→</span></a></div>
+        <a class="btn btn-brand w-100" href="../01-complexity/index.html">All Time &amp; Space Complexity problems</a>
+      </div></div>
+      <div class="card mb-3 shadow-sm"><div class="card-body small">
+        <a class="d-block mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch the full DSA series in order</a>
+        <a class="d-block" href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Compiled Canvas</a>
+      </div></div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="01-dsa-roadmap-2026.html">← Episode 1</a><a class="btn btn-outline-secondary" href="03-calculate-time-complexity.html">Episode 3 →</a></div>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-1">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

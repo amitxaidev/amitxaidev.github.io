@@ -9,7 +9,7 @@ Each candidate may be used at most once and the list may contain duplicates. Ret
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/combination-sum-ii/](https://leetcode.com/problems/combination-sum-ii/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/009-combination-sum-ii.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/009-combination-sum-ii.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/15-recursion-backtracking/009-combination-sum-ii.html](https://compiledcanvas.com/dsa/15-recursion-backtracking/009-combination-sum-ii.html)
 
 ## Understanding
 

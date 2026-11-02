@@ -9,7 +9,7 @@ Rebuild a binary tree (with unique values) from its inorder and postorder traver
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/014-construct-binary-tree-from-inorder-and-postorder-traversal.html](https://amitxaidev.github.io/dsa/19-binary-trees/014-construct-binary-tree-from-inorder-and-postorder-traversal.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/19-binary-trees/014-construct-binary-tree-from-inorder-and-postorder-traversal.html](https://compiledcanvas.com/dsa/19-binary-trees/014-construct-binary-tree-from-inorder-and-postorder-traversal.html)
 
 ## Understanding
 

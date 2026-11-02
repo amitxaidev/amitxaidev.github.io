@@ -9,7 +9,7 @@ Return the number of nodes on the longest path from the root down to a leaf.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/maximum-depth-of-binary-tree/](https://leetcode.com/problems/maximum-depth-of-binary-tree/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/004-maximum-depth-of-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/004-maximum-depth-of-binary-tree.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/19-binary-trees/004-maximum-depth-of-binary-tree.html](https://compiledcanvas.com/dsa/19-binary-trees/004-maximum-depth-of-binary-tree.html)
 
 ## Understanding
 

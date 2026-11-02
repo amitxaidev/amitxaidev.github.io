@@ -3,7 +3,7 @@
 1D, grid, knapsack, subsequences, strings, stocks, partition, trees and bitmask DP.
 
 📺 **Watch first:** Ep 86, Ep 87, Ep 88, Ep 89, Ep 90, Ep 91, Ep 92, Ep 93, Ep 94, Ep 95, Ep 96 of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/24-dynamic-programming/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/24-dynamic-programming/  
 🧮 **28 problems** · 🟢 3 Easy · 🟡 18 Medium · 🔴 7 Hard
 
 ## Understand the topic

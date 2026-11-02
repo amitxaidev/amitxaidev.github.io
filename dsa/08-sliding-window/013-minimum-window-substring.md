@@ -9,7 +9,7 @@ Return the shortest substring of s that contains every character of t (with mult
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/minimum-window-substring/](https://leetcode.com/problems/minimum-window-substring/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/013-minimum-window-substring.html](https://amitxaidev.github.io/dsa/08-sliding-window/013-minimum-window-substring.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/08-sliding-window/013-minimum-window-substring.html](https://compiledcanvas.com/dsa/08-sliding-window/013-minimum-window-substring.html)
 
 ## Understanding
 

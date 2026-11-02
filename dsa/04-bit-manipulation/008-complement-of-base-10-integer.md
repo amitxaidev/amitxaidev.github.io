@@ -9,7 +9,7 @@ Flip every bit of n's binary form (only the bits that are actually used, no lead
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/complement-of-base-10-integer/](https://leetcode.com/problems/complement-of-base-10-integer/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/008-complement-of-base-10-integer.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/008-complement-of-base-10-integer.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/04-bit-manipulation/008-complement-of-base-10-integer.html](https://compiledcanvas.com/dsa/04-bit-manipulation/008-complement-of-base-10-integer.html)
 
 ## Understanding
 

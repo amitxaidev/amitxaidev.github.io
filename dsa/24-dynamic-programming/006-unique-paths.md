@@ -9,7 +9,7 @@ A robot at the top-left of an m × n grid moves only right or down. Count the pa
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/unique-paths/](https://leetcode.com/problems/unique-paths/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/006-unique-paths.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/006-unique-paths.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/006-unique-paths.html](https://compiledcanvas.com/dsa/24-dynamic-programming/006-unique-paths.html)
 
 ## Understanding
 

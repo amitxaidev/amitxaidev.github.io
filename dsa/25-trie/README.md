@@ -3,7 +3,7 @@
 Prefix trees for words, autocomplete and XOR tricks.
 
 📺 **Watch first:** Ep 97 of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/25-trie/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/25-trie/  
 🧮 **8 problems** · 🟢 0 Easy · 🟡 6 Medium · 🔴 2 Hard
 
 ## Understand the topic

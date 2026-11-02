@@ -9,7 +9,7 @@ Vertical lines stand at each index with given heights. Pick two lines that, with
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/container-with-most-water/](https://leetcode.com/problems/container-with-most-water/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/010-container-with-most-water.html](https://amitxaidev.github.io/dsa/07-two-pointers/010-container-with-most-water.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/07-two-pointers/010-container-with-most-water.html](https://compiledcanvas.com/dsa/07-two-pointers/010-container-with-most-water.html)
 
 ## Understanding
 

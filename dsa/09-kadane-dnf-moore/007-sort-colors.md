@@ -9,7 +9,7 @@ The array contains only 0, 1 and 2. Sort it in place in one pass without using a
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/sort-colors/](https://leetcode.com/problems/sort-colors/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/007-sort-colors.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/007-sort-colors.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/09-kadane-dnf-moore/007-sort-colors.html](https://compiledcanvas.com/dsa/09-kadane-dnf-moore/007-sort-colors.html)
 
 ## Understanding
 

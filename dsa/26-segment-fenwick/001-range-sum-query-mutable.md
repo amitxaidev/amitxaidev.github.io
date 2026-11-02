@@ -9,7 +9,7 @@ Support two operations on an array: update one element, and return the sum of a 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/range-sum-query-mutable/](https://leetcode.com/problems/range-sum-query-mutable/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/26-segment-fenwick/001-range-sum-query-mutable.html](https://amitxaidev.github.io/dsa/26-segment-fenwick/001-range-sum-query-mutable.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/26-segment-fenwick/001-range-sum-query-mutable.html](https://compiledcanvas.com/dsa/26-segment-fenwick/001-range-sum-query-mutable.html)
 
 ## Understanding
 

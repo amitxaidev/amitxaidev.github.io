@@ -9,7 +9,7 @@ Return the GCD of the smallest and largest numbers in the array.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/find-greatest-common-divisor-of-array/](https://leetcode.com/problems/find-greatest-common-divisor-of-array/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/005-find-greatest-common-divisor-of-array.html](https://amitxaidev.github.io/dsa/03-math/005-find-greatest-common-divisor-of-array.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/03-math/005-find-greatest-common-divisor-of-array.html](https://compiledcanvas.com/dsa/03-math/005-find-greatest-common-divisor-of-array.html)
 
 ## Understanding
 

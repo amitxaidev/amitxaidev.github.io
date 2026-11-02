@@ -9,7 +9,7 @@ Merge two sorted linked lists into one sorted list by splicing their nodes toget
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/merge-two-sorted-lists/](https://leetcode.com/problems/merge-two-sorted-lists/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/004-merge-two-sorted-lists.html](https://amitxaidev.github.io/dsa/17-linked-list/004-merge-two-sorted-lists.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/17-linked-list/004-merge-two-sorted-lists.html](https://compiledcanvas.com/dsa/17-linked-list/004-merge-two-sorted-lists.html)
 
 ## Understanding
 

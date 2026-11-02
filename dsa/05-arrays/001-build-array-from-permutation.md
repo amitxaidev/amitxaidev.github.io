@@ -9,7 +9,7 @@ Given a permutation nums of 0..n-1, return ans where ans[i] = nums[nums[i]].
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/build-array-from-permutation/](https://leetcode.com/problems/build-array-from-permutation/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/001-build-array-from-permutation.html](https://amitxaidev.github.io/dsa/05-arrays/001-build-array-from-permutation.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/05-arrays/001-build-array-from-permutation.html](https://compiledcanvas.com/dsa/05-arrays/001-build-array-from-permutation.html)
 
 ## Understanding
 

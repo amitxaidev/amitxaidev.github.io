@@ -3,7 +3,7 @@
 Intervals, jump game, gas station and exchange arguments.
 
 📺 **Watch first:** Ep 69, Ep 70, Ep 71, Ep 72, Ep 73 of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/22-greedy/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/22-greedy/  
 🧮 **14 problems** · 🟢 3 Easy · 🟡 10 Medium · 🔴 1 Hard
 
 ## Understand the topic

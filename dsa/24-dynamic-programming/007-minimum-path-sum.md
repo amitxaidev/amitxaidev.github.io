@@ -9,7 +9,7 @@ Move only right or down from the top-left to the bottom-right of a grid of non-n
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/minimum-path-sum/](https://leetcode.com/problems/minimum-path-sum/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/007-minimum-path-sum.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/007-minimum-path-sum.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/007-minimum-path-sum.html](https://compiledcanvas.com/dsa/24-dynamic-programming/007-minimum-path-sum.html)
 
 ## Understanding
 

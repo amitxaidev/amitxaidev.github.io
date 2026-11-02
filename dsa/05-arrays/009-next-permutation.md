@@ -9,7 +9,7 @@ Rearrange the array into the next larger ordering of its numbers in dictionary o
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/next-permutation/](https://leetcode.com/problems/next-permutation/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/009-next-permutation.html](https://amitxaidev.github.io/dsa/05-arrays/009-next-permutation.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/05-arrays/009-next-permutation.html](https://compiledcanvas.com/dsa/05-arrays/009-next-permutation.html)
 
 ## Understanding
 

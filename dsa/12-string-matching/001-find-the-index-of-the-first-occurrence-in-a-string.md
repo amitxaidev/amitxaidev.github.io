@@ -9,7 +9,7 @@ Return the index where needle first appears in haystack, or -1 if it doesn't app
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/12-string-matching/001-find-the-index-of-the-first-occurrence-in-a-string.html](https://amitxaidev.github.io/dsa/12-string-matching/001-find-the-index-of-the-first-occurrence-in-a-string.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/12-string-matching/001-find-the-index-of-the-first-occurrence-in-a-string.html](https://compiledcanvas.com/dsa/12-string-matching/001-find-the-index-of-the-first-occurrence-in-a-string.html)
 
 ## Understanding
 

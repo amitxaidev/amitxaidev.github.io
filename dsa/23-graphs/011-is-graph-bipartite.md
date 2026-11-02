@@ -9,7 +9,7 @@ Decide whether an undirected graph's nodes can be split into two groups so that 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/is-graph-bipartite/](https://leetcode.com/problems/is-graph-bipartite/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/011-is-graph-bipartite.html](https://amitxaidev.github.io/dsa/23-graphs/011-is-graph-bipartite.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/23-graphs/011-is-graph-bipartite.html](https://compiledcanvas.com/dsa/23-graphs/011-is-graph-bipartite.html)
 
 ## Understanding
 

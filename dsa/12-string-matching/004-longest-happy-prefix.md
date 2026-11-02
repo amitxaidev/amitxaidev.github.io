@@ -9,7 +9,7 @@ A "happy prefix" is a non-empty prefix that is also a suffix, but not the whole 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/longest-happy-prefix/](https://leetcode.com/problems/longest-happy-prefix/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/12-string-matching/004-longest-happy-prefix.html](https://amitxaidev.github.io/dsa/12-string-matching/004-longest-happy-prefix.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/12-string-matching/004-longest-happy-prefix.html](https://compiledcanvas.com/dsa/12-string-matching/004-longest-happy-prefix.html)
 
 ## Understanding
 

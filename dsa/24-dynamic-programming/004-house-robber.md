@@ -9,7 +9,7 @@ Houses in a row hold money. You can't rob two adjacent houses. Return the most m
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/house-robber/](https://leetcode.com/problems/house-robber/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/004-house-robber.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/004-house-robber.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/004-house-robber.html](https://compiledcanvas.com/dsa/24-dynamic-programming/004-house-robber.html)
 
 ## Understanding
 

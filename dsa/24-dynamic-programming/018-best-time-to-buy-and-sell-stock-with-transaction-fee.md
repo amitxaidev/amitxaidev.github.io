@@ -9,7 +9,7 @@ Trade as often as you like (one share at a time), paying a fee on every sale. Ma
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/018-best-time-to-buy-and-sell-stock-with-transaction-fee.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/018-best-time-to-buy-and-sell-stock-with-transaction-fee.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/018-best-time-to-buy-and-sell-stock-with-transaction-fee.html](https://compiledcanvas.com/dsa/24-dynamic-programming/018-best-time-to-buy-and-sell-stock-with-transaction-fee.html)
 
 ## Understanding
 

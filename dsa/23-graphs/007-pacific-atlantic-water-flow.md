@@ -9,7 +9,7 @@ Rain flows from a cell to neighbours with equal or lower height. The Pacific tou
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/pacific-atlantic-water-flow/](https://leetcode.com/problems/pacific-atlantic-water-flow/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/007-pacific-atlantic-water-flow.html](https://amitxaidev.github.io/dsa/23-graphs/007-pacific-atlantic-water-flow.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/23-graphs/007-pacific-atlantic-water-flow.html](https://compiledcanvas.com/dsa/23-graphs/007-pacific-atlantic-water-flow.html)
 
 ## Understanding
 

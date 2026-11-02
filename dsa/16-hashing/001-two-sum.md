@@ -9,7 +9,7 @@ Return the indexes of the two numbers that add up to target. Exactly one answer 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/two-sum/](https://leetcode.com/problems/two-sum/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/001-two-sum.html](https://amitxaidev.github.io/dsa/16-hashing/001-two-sum.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/16-hashing/001-two-sum.html](https://compiledcanvas.com/dsa/16-hashing/001-two-sum.html)
 
 ## Understanding
 

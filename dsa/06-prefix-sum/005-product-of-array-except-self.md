@@ -9,7 +9,7 @@ Return an array where each position holds the product of all other elements, wit
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/product-of-array-except-self/](https://leetcode.com/problems/product-of-array-except-self/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/005-product-of-array-except-self.html](https://amitxaidev.github.io/dsa/06-prefix-sum/005-product-of-array-except-self.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/06-prefix-sum/005-product-of-array-except-self.html](https://compiledcanvas.com/dsa/06-prefix-sum/005-product-of-array-except-self.html)
 
 ## Understanding
 

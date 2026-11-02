@@ -9,7 +9,7 @@ For each day, return how many days you must wait for a warmer temperature, or 0 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/daily-temperatures/](https://leetcode.com/problems/daily-temperatures/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/008-daily-temperatures.html](https://amitxaidev.github.io/dsa/18-stack-queue/008-daily-temperatures.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/18-stack-queue/008-daily-temperatures.html](https://compiledcanvas.com/dsa/18-stack-queue/008-daily-temperatures.html)
 
 ## Understanding
 

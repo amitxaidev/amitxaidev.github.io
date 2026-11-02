@@ -3,7 +3,7 @@
 Insert, delete, validate, kth smallest and BST iterators.
 
 📺 **Watch first:** Ep 61, Ep 62, Ep 63 of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/20-bst/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/20-bst/  
 🧮 **12 problems** · 🟢 4 Easy · 🟡 8 Medium · 🔴 0 Hard
 
 ## Understand the topic

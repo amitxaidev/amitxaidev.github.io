@@ -9,7 +9,7 @@ Evaluate a string expression with integers, + and -, unary minus, parentheses an
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/basic-calculator/](https://leetcode.com/problems/basic-calculator/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/018-basic-calculator.html](https://amitxaidev.github.io/dsa/18-stack-queue/018-basic-calculator.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/18-stack-queue/018-basic-calculator.html](https://compiledcanvas.com/dsa/18-stack-queue/018-basic-calculator.html)
 
 ## Understanding
 

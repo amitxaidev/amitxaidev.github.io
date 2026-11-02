@@ -9,7 +9,7 @@ Count the bit positions where two integers differ.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/hamming-distance/](https://leetcode.com/problems/hamming-distance/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/007-hamming-distance.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/007-hamming-distance.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/04-bit-manipulation/007-hamming-distance.html](https://compiledcanvas.com/dsa/04-bit-manipulation/007-hamming-distance.html)
 
 ## Understanding
 

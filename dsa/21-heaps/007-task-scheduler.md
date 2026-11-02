@@ -9,7 +9,7 @@ CPU tasks are letters; the same letter needs at least n intervals between runs. 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/task-scheduler/](https://leetcode.com/problems/task-scheduler/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/007-task-scheduler.html](https://amitxaidev.github.io/dsa/21-heaps/007-task-scheduler.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/21-heaps/007-task-scheduler.html](https://compiledcanvas.com/dsa/21-heaps/007-task-scheduler.html)
 
 ## Understanding
 

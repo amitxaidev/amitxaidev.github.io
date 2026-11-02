@@ -9,7 +9,7 @@ At time t the water level is t, and you can swim between adjacent cells whose he
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/swim-in-rising-water/](https://leetcode.com/problems/swim-in-rising-water/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/021-swim-in-rising-water.html](https://amitxaidev.github.io/dsa/23-graphs/021-swim-in-rising-water.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/23-graphs/021-swim-in-rising-water.html](https://compiledcanvas.com/dsa/23-graphs/021-swim-in-rising-water.html)
 
 ## Understanding
 

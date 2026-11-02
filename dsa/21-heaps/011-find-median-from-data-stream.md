@@ -9,7 +9,7 @@ Design a structure that adds numbers from a stream and returns the median of all
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/find-median-from-data-stream/](https://leetcode.com/problems/find-median-from-data-stream/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/011-find-median-from-data-stream.html](https://amitxaidev.github.io/dsa/21-heaps/011-find-median-from-data-stream.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/21-heaps/011-find-median-from-data-stream.html](https://compiledcanvas.com/dsa/21-heaps/011-find-median-from-data-stream.html)
 
 ## Understanding
 

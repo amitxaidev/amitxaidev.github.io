@@ -9,7 +9,7 @@ Return the smallest difference between the values of any two nodes in a BST.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/minimum-absolute-difference-in-bst/](https://leetcode.com/problems/minimum-absolute-difference-in-bst/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/20-bst/003-minimum-absolute-difference-in-bst.html](https://amitxaidev.github.io/dsa/20-bst/003-minimum-absolute-difference-in-bst.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/20-bst/003-minimum-absolute-difference-in-bst.html](https://compiledcanvas.com/dsa/20-bst/003-minimum-absolute-difference-in-bst.html)
 
 ## Understanding
 

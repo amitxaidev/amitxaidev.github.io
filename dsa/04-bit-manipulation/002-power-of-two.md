@@ -9,7 +9,7 @@ Decide whether n is a power of two.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/power-of-two/](https://leetcode.com/problems/power-of-two/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/002-power-of-two.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/002-power-of-two.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/04-bit-manipulation/002-power-of-two.html](https://compiledcanvas.com/dsa/04-bit-manipulation/002-power-of-two.html)
 
 ## Understanding
 

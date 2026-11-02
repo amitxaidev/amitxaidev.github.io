@@ -9,7 +9,7 @@ Reverse the order of the 32 bits of an integer.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/reverse-bits/](https://leetcode.com/problems/reverse-bits/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/006-reverse-bits.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/006-reverse-bits.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/04-bit-manipulation/006-reverse-bits.html](https://compiledcanvas.com/dsa/04-bit-manipulation/006-reverse-bits.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ Each kid has some candies. For each kid, say whether giving them all the extra c
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/007-kids-with-the-greatest-number-of-candies.html](https://amitxaidev.github.io/dsa/02-java-basics/007-kids-with-the-greatest-number-of-candies.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/02-java-basics/007-kids-with-the-greatest-number-of-candies.html](https://compiledcanvas.com/dsa/02-java-basics/007-kids-with-the-greatest-number-of-candies.html)
 
 ## Understanding
 

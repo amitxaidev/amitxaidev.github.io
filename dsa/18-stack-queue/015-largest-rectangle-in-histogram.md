@@ -9,7 +9,7 @@ Bars of width 1 have given heights. Return the area of the largest rectangle tha
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/largest-rectangle-in-histogram/](https://leetcode.com/problems/largest-rectangle-in-histogram/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/015-largest-rectangle-in-histogram.html](https://amitxaidev.github.io/dsa/18-stack-queue/015-largest-rectangle-in-histogram.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/18-stack-queue/015-largest-rectangle-in-histogram.html](https://compiledcanvas.com/dsa/18-stack-queue/015-largest-rectangle-in-histogram.html)
 
 ## Understanding
 

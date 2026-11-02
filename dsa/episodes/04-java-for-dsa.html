@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Complete Java for DSA: Collections, Arrays, Strings &amp; Traps | Compiled Canvas</title>
+<meta name="description" content="The Java you need for DSA: arrays, strings, wrapper classes and collections, the time complexity of each method, and the traps that fail correct logic.">
+<link rel="canonical" href="https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="video.other">
+<meta property="og:url" content="https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html">
+<meta property="og:title" content="Complete Java for DSA: Collections, Arrays, Strings &amp; Traps | Compiled Canvas">
+<meta property="og:description" content="The Java you need for DSA: arrays, strings, wrapper classes and collections, the time complexity of each method, and the traps that fail correct logic.">
+<meta property="og:image" content="https://i.ytimg.com/vi/YvtYDDQgn9U/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "Complete Java for DSA: Collections, Arrays, Strings & Traps", "description": "The Java you need for DSA: arrays, strings, wrapper classes and collections, the time complexity of each method, and the traps that fail correct logic.", "thumbnailUrl": ["https://i.ytimg.com/vi/YvtYDDQgn9U/maxresdefault.jpg", "https://i.ytimg.com/vi/YvtYDDQgn9U/hqdefault.jpg"], "uploadDate": "2026-10-27T21:30:13-07:00", "duration": "PT16M50S", "embedUrl": "https://www.youtube.com/embed/YvtYDDQgn9U", "inLanguage": "en", "publisher": {"@type": "Organization", "name": "Compiled Canvas", "url": "https://compiledcanvas.com/", "logo": {"@type": "ImageObject", "url": "https://compiledcanvas.com/assets/logo.png"}, "sameAs": ["https://www.youtube.com/@compiledcanvas", "https://www.instagram.com/compiledcanvas", "https://github.com/amitxaidev"]}, "hasPart": [{"@type": "Clip", "name": "Your code is right, Java still fails it", "startOffset": 0, "endOffset": 39, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=0"}, {"@type": "Clip", "name": "What this video covers", "startOffset": 39, "endOffset": 72, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=39"}, {"@type": "Clip", "name": "Primitive types: int, long, char, double", "startOffset": 72, "endOffset": 101, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=72"}, {"@type": "Clip", "name": "Integer overflow: the silent bug", "startOffset": 101, "endOffset": 146, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=101"}, {"@type": "Clip", "name": "char arithmetic", "startOffset": 146, "endOffset": 177, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=146"}, {"@type": "Clip", "name": "Arrays and their complexity", "startOffset": 177, "endOffset": 225, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=177"}, {"@type": "Clip", "name": "2D arrays", "startOffset": 225, "endOffset": 242, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=225"}, {"@type": "Clip", "name": "The Arrays class: sort, fill, toString", "startOffset": 242, "endOffset": 286, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=242"}, {"@type": "Clip", "name": "Strings are immutable", "startOffset": 286, "endOffset": 317, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=286"}, {"@type": "Clip", "name": "The equals trap: never use ==", "startOffset": 317, "endOffset": 337, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=317"}, {"@type": "Clip", "name": "StringBuilder: O(n) instead of O(n²)", "startOffset": 337, "endOffset": 394, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=337"}, {"@type": "Clip", "name": "Wrapper classes and autoboxing", "startOffset": 394, "endOffset": 428, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=394"}, {"@type": "Clip", "name": "The Integer cache trap (127 vs 128)", "startOffset": 428, "endOffset": 510, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=428"}, {"@type": "Clip", "name": "ArrayList: every method's complexity", "startOffset": 510, "endOffset": 596, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=510"}, {"@type": "Clip", "name": "HashMap: the most powerful DSA tool", "startOffset": 596, "endOffset": 646, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=596"}, {"@type": "Clip", "name": "HashSet", "startOffset": 646, "endOffset": 668, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=646"}, {"@type": "Clip", "name": "TreeMap and TreeSet: lookups with order", "startOffset": 668, "endOffset": 718, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=668"}, {"@type": "Clip", "name": "Stacks and queues with ArrayDeque", "startOffset": 718, "endOffset": 757, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=718"}, {"@type": "Clip", "name": "PriorityQueue (heap)", "startOffset": 757, "endOffset": 788, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=757"}, {"@type": "Clip", "name": "Custom sorting with comparators", "startOffset": 788, "endOffset": 831, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=788"}, {"@type": "Clip", "name": "Which collection to use (cheat sheet)", "startOffset": 831, "endOffset": 868, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=831"}, {"@type": "Clip", "name": "Quiz: 3 bugs that catch everyone", "startOffset": 868, "endOffset": 930, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=868"}, {"@type": "Clip", "name": "Recap", "startOffset": 930, "endOffset": 969, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=930"}, {"@type": "Clip", "name": "Homework", "startOffset": 969, "endOffset": 985, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=969"}, {"@type": "Clip", "name": "Next episode", "startOffset": 985, "endOffset": 1010, "url": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html?t=985"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "DSA in Java", "item": "https://compiledcanvas.com/dsa/"}, {"@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://compiledcanvas.com/dsa/episodes/"}, {"@type": "ListItem", "position": 4, "name": "Episode 4", "item": "https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">AI for Developers <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Episodes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Episode 4</li>
+    </ol></nav>
+    <span class="badge rounded-pill text-bg-dark mb-2">Episode 4 · 16:50 · 27 Oct 2026</span>
+    <h1 class="h2 fw-bold mb-3">Complete Java for DSA: Collections, Arrays, Strings &amp; Traps</h1>
+    <div class="ep-player ratio ratio-16x9">
+      <iframe id="ep-video" src="https://www.youtube.com/embed/YvtYDDQgn9U?rel=0" data-video="YvtYDDQgn9U" title="Complete Java for DSA: Collections, Arrays, Strings &amp; Traps" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>What this episode covers</h2>
+      <p>Your logic can be perfect and your code can still fail, because of Java. Two Integers that look equal but aren&#x27;t. A sum that suddenly turns negative. A loop that looks fast and takes forever. This episode goes through the Java you actually need for DSA, and the traps hiding in it.</p>
+<p>We start with primitive types and integer overflow, then arrays, the Arrays class and strings. From there we explain why == fails on objects, why StringBuilder beats string concatenation in a loop, and how the Integer cache makes 127 and 128 behave differently.</p>
+<p>The rest is collections: ArrayList, HashMap, HashSet, TreeMap, TreeSet, ArrayDeque and PriorityQueue, each with the time complexity of the methods you&#x27;ll call. We finish with custom comparators and a cheat sheet for picking the right collection.</p>
+    </section>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>What you'll be able to do</h2>
+      <ul class="mb-0"><li>When to use long instead of int</li>
+<li>Why .equals() and not == for Strings and Integers</li>
+<li>StringBuilder and why it turns O(n²) into O(n)</li>
+<li>The complexity of every common collection method</li>
+<li>Which collection to pick for lookup, order, stack, queue or heap</li></ul>
+    </section>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
+      <p class="mb-0">list.remove(1) removes the element at index 1, not the number 1.</p>
+    </section>
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Key moments <small>tap one to jump there</small></h2>
+      <ol class="ep-moments list-unstyled mb-0"><li><a href="?t=0" data-seek="0"><time>0:00</time><span>Your code is right, Java still fails it</span></a></li>
+<li><a href="?t=39" data-seek="39"><time>0:39</time><span>What this video covers</span></a></li>
+<li><a href="?t=72" data-seek="72"><time>1:12</time><span>Primitive types: int, long, char, double</span></a></li>
+<li><a href="?t=101" data-seek="101"><time>1:41</time><span>Integer overflow: the silent bug</span></a></li>
+<li><a href="?t=146" data-seek="146"><time>2:26</time><span>char arithmetic</span></a></li>
+<li><a href="?t=177" data-seek="177"><time>2:57</time><span>Arrays and their complexity</span></a></li>
+<li><a href="?t=225" data-seek="225"><time>3:45</time><span>2D arrays</span></a></li>
+<li><a href="?t=242" data-seek="242"><time>4:02</time><span>The Arrays class: sort, fill, toString</span></a></li>
+<li><a href="?t=286" data-seek="286"><time>4:46</time><span>Strings are immutable</span></a></li>
+<li><a href="?t=317" data-seek="317"><time>5:17</time><span>The equals trap: never use ==</span></a></li>
+<li><a href="?t=337" data-seek="337"><time>5:37</time><span>StringBuilder: O(n) instead of O(n²)</span></a></li>
+<li><a href="?t=394" data-seek="394"><time>6:34</time><span>Wrapper classes and autoboxing</span></a></li>
+<li><a href="?t=428" data-seek="428"><time>7:08</time><span>The Integer cache trap (127 vs 128)</span></a></li>
+<li><a href="?t=510" data-seek="510"><time>8:30</time><span>ArrayList: every method&#x27;s complexity</span></a></li>
+<li><a href="?t=596" data-seek="596"><time>9:56</time><span>HashMap: the most powerful DSA tool</span></a></li>
+<li><a href="?t=646" data-seek="646"><time>10:46</time><span>HashSet</span></a></li>
+<li><a href="?t=668" data-seek="668"><time>11:08</time><span>TreeMap and TreeSet: lookups with order</span></a></li>
+<li><a href="?t=718" data-seek="718"><time>11:58</time><span>Stacks and queues with ArrayDeque</span></a></li>
+<li><a href="?t=757" data-seek="757"><time>12:37</time><span>PriorityQueue (heap)</span></a></li>
+<li><a href="?t=788" data-seek="788"><time>13:08</time><span>Custom sorting with comparators</span></a></li>
+<li><a href="?t=831" data-seek="831"><time>13:51</time><span>Which collection to use (cheat sheet)</span></a></li>
+<li><a href="?t=868" data-seek="868"><time>14:28</time><span>Quiz: 3 bugs that catch everyone</span></a></li>
+<li><a href="?t=930" data-seek="930"><time>15:30</time><span>Recap</span></a></li>
+<li><a href="?t=969" data-seek="969"><time>16:09</time><span>Homework</span></a></li>
+<li><a href="?t=985" data-seek="985"><time>16:25</time><span>Next episode</span></a></li></ol>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Full transcript</h2>
+      <details class="ep-transcript"><summary>Read the whole lesson</summary>
+      <p>Your logic is perfect. Your code still fails. Not because of the algorithm, but because of Java. Two numbers that look equal, but aren&#x27;t. A sum that suddenly turns negative. A loop that looks fast, but takes forever.</p>
+<p>These bugs fail more coding interviews than hard algorithms do. And by the end of this video, you&#x27;ll know every one of them, and exactly how to avoid it.</p>
+<p>Welcome back to Compiled Canvas. This is Episode Four of our DSA series. In Episode Three, we learned to calculate the complexity of any code. Today, we set up our toolkit: Java, the way you actually use it in DSA.</p>
+<p>Here&#x27;s the plan. Primitive types, and the overflow bug. Arrays, and the methods you&#x27;ll use every day. Strings, and why they can&#x27;t change. Wrapper classes, and the equals trap. Then the collections: ArrayList, HashMap and HashSet, TreeMap and TreeSet, stacks and queues with ArrayDeque, and the PriorityQueue. Sorting with comparators. A cheat sheet for which collection to pick. And a quiz at the end, with three bugs that catch almost everyone. And for every method, I&#x27;ll tell you its time complexity.</p>
+<p>Let&#x27;s go.</p>
+<p>First, the primitive types. The ones you&#x27;ll use most are int, long, char, boolean and double.</p>
+<p>An int holds whole numbers up to about two point one billion. That sounds like a lot, until it isn&#x27;t. A long holds numbers up to about nine quintillion. Nine followed by eighteen zeros.</p>
+<p>Here&#x27;s the bug. Two billion plus two billion, in an int, does not give four billion. It gives a negative number. The value goes past the maximum, and wraps around to the bottom. That&#x27;s called integer overflow. And Java won&#x27;t warn you. No error, no crash. Just a wrong answer.</p>
+<p>So when do you use long? When you add up many numbers, when you multiply two big numbers, or when the problem says the answer can be very large. A simple rule: if two values can each be close to a billion, their sum or product needs a long.</p>
+<p>You&#x27;ll also see this in binary search. Writing low plus high, divided by two, can overflow when both are large. The safe way is low plus, high minus low, divided by two.</p>
+<p>And when a problem says return the answer modulo ten to the nine plus seven, that&#x27;s a hint that the real answer is huge. Use long, and take the modulo at every step.</p>
+<p>Now, char. A char is really a small number. So you can do arithmetic with it. The letter c minus the letter a gives two. That one trick turns any lowercase letter into an index from zero to twenty-five, and you&#x27;ll use it in hundreds of string problems.</p>
+<p>And double? Avoid it for exact answers. Decimal numbers can&#x27;t always be stored exactly, so zero point one plus zero point two is not exactly zero point three. Use int or long whenever you can.</p>
+<p>Next, arrays. An array is a fixed-size block of values, all of the same type, sitting next to each other in memory.</p>
+<p>You create one with new int, and the size. Every slot starts at a default value: zero for numbers, false for booleans, and null for objects. And the size can never change. If you need more space, you create a new, bigger array.</p>
+<p>Reading or writing any index is O of one, because Java can jump straight to it. Use an index outside the array, and you get the famous ArrayIndexOutOfBoundsException.</p>
+<p>One small detail that trips people up: for an array, length is a field, with no brackets. For a string, length is a method, with brackets. And for a list, it&#x27;s called size. Three different names for the same idea.</p>
+<p>A two-dimensional array is an array of arrays. Grid of r, c means row r, column c. The number of rows is grid dot length, and the number of columns is grid of zero dot length. You&#x27;ll use this for every matrix and grid problem.</p>
+<p>Now, the Arrays class gives you the tools. Arrays dot sort sorts the array in O of n log n. Arrays dot fill sets every slot to one value, in O of n. Arrays dot toString turns the array into readable text, which is perfect for debugging. And Arrays dot copyOf, and copyOfRange, copy part of an array, in O of the length you copy.</p>
+<p>And here&#x27;s a trap. If you write int array b equals a, you don&#x27;t get a copy. You get a second name for the same array. Change b, and a changes too. The same thing happens when you pass an array to a method: the method can change your original array. If you need a real copy, use Arrays dot copyOf, or clone.</p>
+<p>Now, strings. The most important fact about a Java string is this: it can never change. It&#x27;s immutable. Every method that seems to change a string actually creates a brand new one.</p>
+<p>Here are the methods you&#x27;ll use all the time. charAt gives you one character, in O of one. length gives the size. substring gives you a piece of the string, but it copies that piece, so it&#x27;s O of the length of the piece, not O of one. And indexOf and contains search the string, which takes linear time.</p>
+<p>Now, the equals trap. Never compare two strings with double equals. Double equals checks whether they&#x27;re the same object in memory, not whether they have the same text. Two strings with the same letters can still be different objects. Always use dot equals. This one bug has failed countless interviews.</p>
+<p>Next, building strings. Because strings can&#x27;t change, adding to a string with plus inside a loop copies everything so far, every single time. Do that n times, and it&#x27;s O of n squared. Instead, use a StringBuilder. Its append is O of one on average, so building the whole string is O of n. When you&#x27;re done, call toString. And StringBuilder has a reverse method too, which is handy for palindrome problems.</p>
+<p>Two more tools. To sort the letters of a word, turn it into a char array with toCharArray, sort that, and turn it back into a string. That&#x27;s the classic way to check if two words are anagrams, in O of n log n.</p>
+<p>And for counting letters, use a frequency array: an int array of size twenty-six. For each character, add one at index, character minus a. That counts every letter in a single pass, in O of n. And it&#x27;s faster than a HashMap.</p>
+<p>Now, wrapper classes. Collections like ArrayList and HashMap can only hold objects, not primitives. So Java gives every primitive an object version. int has Integer. long has Long. char has Character. boolean has Boolean.</p>
+<p>Java converts between them for you. Putting an int into a list turns it into an Integer automatically. That&#x27;s called autoboxing. Reading it back turns it into an int again. That&#x27;s unboxing.</p>
+<p>It&#x27;s convenient, but it hides three traps.</p>
+<p>Trap one: comparing Integers with double equals. Java caches small Integer values, from minus one twenty-eight to one twenty-seven. So two Integers holding one hundred are the same object, and double equals says true. But two Integers holding one thousand are different objects, and double equals says false. The same code, a different answer, just because the number got bigger. Always compare Integer objects with dot equals.</p>
+<p>Trap two: null. If a HashMap doesn&#x27;t have a key, get returns null. Store that in an int, and Java tries to unbox null, and throws a NullPointerException. Use getOrDefault instead.</p>
+<p>Trap three: speed. Every boxed Integer is an object, with extra memory. An int array is much faster than a list of Integers. So when you know the size, prefer a plain array.</p>
+<p>And a few helpers you&#x27;ll use constantly. Integer dot MAX VALUE and Integer dot MIN VALUE, as infinity, when you&#x27;re looking for a minimum or a maximum. Integer dot parseInt, to turn text into a number. And Character dot isDigit, isLetter, and toLowerCase, for string problems.</p>
+<p>Quick pause, before we go further. If you&#x27;re finding this video valuable, hit subscribe to Compiled Canvas, and turn on the bell. It&#x27;s free, it takes one second, and it helps me keep making this complete DSA series for you. Alright, back to it.</p>
+<p>Now, the collections. And we&#x27;ll start with the one you&#x27;ll use the most: ArrayList.</p>
+<p>Write it like this: List of Integer, list equals new ArrayList. The type on the left is the interface, List. The type on the right is the actual class. That&#x27;s the standard way to write it.</p>
+<p>An ArrayList is an array that grows by itself. Adding to the end is O of one on average. Every so often it has to grow and copy everything, but averaged out, it&#x27;s still constant time. Get and set by index are O of one.</p>
+<p>But some methods are slow. Adding or removing in the middle, or at the front, is O of n, because every element after it has to shift. And contains, indexOf, and remove by value all scan the list, so they&#x27;re O of n too.</p>
+<p>And here&#x27;s a trap that catches almost everyone. On a list of Integers, list dot remove of one does not remove the number one. It removes the element at index one. To remove the value one, you have to write list dot remove, Integer dot valueOf, one.</p>
+<p>And one more. Never add or remove elements from a list while you&#x27;re looping over it with a for-each loop. Java throws a ConcurrentModificationException. Loop over a copy, or use an index, or collect the changes and apply them afterwards.</p>
+<p>To sort a list, use Collections dot sort, which is O of n log n. And to reverse it, Collections dot reverse, in O of n.</p>
+<p>Next, the most powerful tool in all of DSA interviews: the HashMap.</p>
+<p>A HashMap stores key and value pairs. put adds or updates a pair. get reads the value for a key. containsKey checks if a key exists. And remove deletes it. All of them are O of one, on average. That&#x27;s why a HashMap turns so many O of n squared solutions into O of n.</p>
+<p>The most common use is counting. For each number, put the number, with getOrDefault of the number and zero, plus one. In one line, that counts how many times every value appears.</p>
+<p>To loop over a map, use entrySet. It gives you each key and its value together. But remember: a HashMap has no order. Don&#x27;t expect the keys to come out sorted, or in the order you added them. If you need insertion order, use a LinkedHashMap.</p>
+<p>A HashSet is a HashMap with only keys. add, contains and remove are all O of one on average. Use it to remove duplicates, or to answer &quot;have I seen this before?&quot; in constant time.</p>
+<p>And a tip. If your keys are small numbers, or lowercase letters, a plain array is even faster than a HashMap. That&#x27;s the frequency array trick again.</p>
+<p>Sometimes you need fast lookups, and order. That&#x27;s when you use a TreeMap or a TreeSet.</p>
+<p>A TreeMap keeps its keys sorted at all times. put, get, and remove are O of log n. A little slower than a HashMap, but now the keys are in order.</p>
+<p>And it gives you superpowers that a HashMap doesn&#x27;t have. firstKey and lastKey give you the smallest and the largest key. floorKey of x gives you the largest key less than or equal to x. And ceilingKey of x gives you the smallest key greater than or equal to x. All in O of log n.</p>
+<p>So whenever a problem says &quot;the closest value&quot;, &quot;the next larger&quot;, or &quot;the smallest one above&quot;, think TreeMap or TreeSet.</p>
+<p>A TreeSet is the same idea, with only keys. It keeps unique values in sorted order, with first, last, floor and ceiling.</p>
+<p>Now, stacks and queues. In Java, use one class for both: ArrayDeque.</p>
+<p>As a stack, last in, first out: push adds to the top, pop removes from the top, and peek looks at the top. All O of one. You&#x27;ll use stacks for brackets, undo operations, and for depth-first search.</p>
+<p>As a queue, first in, first out: offer adds to the back, poll removes from the front, and peek looks at the front. All O of one. You&#x27;ll use queues for breadth-first search, and level order traversal.</p>
+<p>Avoid the old Stack class. It&#x27;s slower, because it was built for multiple threads. ArrayDeque is the modern choice.</p>
+<p>And then there&#x27;s the PriorityQueue. It always gives you the smallest element first. offer adds an element in O of log n. poll removes the smallest in O of log n. And peek looks at the smallest in O of one.</p>
+<p>By default, it&#x27;s a min-heap. For a max-heap, pass Collections dot reverseOrder when you create it.</p>
+<p>Whenever a problem says &quot;top k&quot;, &quot;k largest&quot;, &quot;k smallest&quot;, or &quot;keep getting the minimum&quot;, think PriorityQueue. And building one from a whole list at once is just O of n.</p>
+<p>Next, custom sorting. Very often you&#x27;ll sort pairs, like intervals, by their start.</p>
+<p>For an array of int arrays, write Arrays dot sort, the array, and a comparator: a comma b, arrow, Integer dot compare, a of zero, b of zero. That sorts the intervals by their first value, in O of n log n.</p>
+<p>Notice we used Integer dot compare, and not a of zero minus b of zero. Subtracting can overflow when the numbers are large, and then your sort silently breaks. Integer dot compare is always safe.</p>
+<p>And one more limit. You can&#x27;t pass a custom comparator to a plain int array. To sort numbers in a custom order, like descending, use an Integer array, or a list.</p>
+<p>So, which one do you pick? Here&#x27;s the cheat sheet. Pause and screenshot this.</p>
+<p>Need fast access by index? An array, or an ArrayList. Need to look things up, or count them, fast? A HashMap, or a HashSet. Need the keys in sorted order, or the closest value? A TreeMap, or a TreeSet. Need last in, first out? An ArrayDeque, used as a stack. Need first in, first out? An ArrayDeque, used as a queue. Need the smallest or largest, again and again? A PriorityQueue.</p>
+<p>Picking the right collection is half of the solution. The algorithm is often just a loop around it.</p>
+<p>Okay, quiz time. Three snippets, three bugs. Pause the video, work out what each one prints, and then hit play.</p>
+<p>Question one. Integer a equals one thousand, Integer b equals one thousand. Print a, double equals, b.</p>
+<p>Question two. A list of Integers holding ten, twenty and thirty. Call list dot remove of one. What&#x27;s left in the list?</p>
+<p>Question three. int big equals two billion. Print big plus big.</p>
+<p>Ready?</p>
+<p>Question one: false. One thousand is outside the cache, so a and b are two different objects. Use a dot equals b.</p>
+<p>Question two: ten and thirty. remove of one removed the element at index one, which was twenty, not the number one.</p>
+<p>Question three: a negative number, minus two hundred ninety-four million, nine hundred sixty-seven thousand, two hundred ninety-six. The sum overflowed. Use long.</p>
+<p>How many did you get right? Tell me in the comments: three out of three, two, or one.</p>
+<p>Let&#x27;s recap. Use long when sums or products can get big, because int overflows silently. Arrays are fixed size, with O of one access, and the Arrays class to sort, fill and print them. Strings can&#x27;t change. Compare them with equals, and build them with a StringBuilder. Wrapper classes box your numbers. Compare Integers with equals, and watch out for null. ArrayList for lists, HashMap and HashSet for fast lookups, TreeMap and TreeSet for order, ArrayDeque for stacks and queues, and the PriorityQueue for the smallest or largest. And sort with Integer dot compare, never with subtraction.</p>
+<p>Your homework. Solve Valid Anagram twice. First by sorting both strings, then with a frequency array of size twenty-six. Write the time complexity of each. Then tell me in the comments: which collection would you use to find the k largest numbers in an array?</p>
+<p>Next episode, we cover the math you need for DSA. Primes, GCD, modulo arithmetic, and the Sieve of Eratosthenes, the fastest way to find every prime up to n.</p>
+<p>And don&#x27;t forget to subscribe to Compiled Canvas, so you don&#x27;t miss anything new in tech and the job market. Keep coding, stay consistent, and I&#x27;ll see you in the next one.</p>
+      </details>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <div class="side-sticky">
+      <div class="card mb-3 shadow-sm solve-card"><div class="card-body">
+        <h2 class="h6 fw-bold">Practise this now</h2>
+        <div class="mb-3"><a class="ep-try" href="../02-java-basics/001-concatenation-of-array.html">Concatenation of Array <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../02-java-basics/004-reverse-string.html">Reverse String <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../02-java-basics/003-fizz-buzz.html">Fizz Buzz <span aria-hidden="true">→</span></a></div>
+        <a class="btn btn-brand w-100" href="../02-java-basics/index.html">All Java Basics for DSA problems</a>
+      </div></div>
+      <div class="card mb-3 shadow-sm"><div class="card-body small">
+        <a class="d-block mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch the full DSA series in order</a>
+        <a class="d-block" href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Compiled Canvas</a>
+      </div></div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="03-calculate-time-complexity.html">← Episode 3</a><a class="btn btn-outline-secondary" href="05-math-for-dsa.html">Episode 5 →</a></div>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-1">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

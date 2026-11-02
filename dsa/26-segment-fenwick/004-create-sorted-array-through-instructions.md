@@ -9,7 +9,7 @@ Insert numbers one by one into a sorted container. Each insertion costs min(coun
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/create-sorted-array-through-instructions/](https://leetcode.com/problems/create-sorted-array-through-instructions/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/26-segment-fenwick/004-create-sorted-array-through-instructions.html](https://amitxaidev.github.io/dsa/26-segment-fenwick/004-create-sorted-array-through-instructions.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/26-segment-fenwick/004-create-sorted-array-through-instructions.html](https://compiledcanvas.com/dsa/26-segment-fenwick/004-create-sorted-array-through-instructions.html)
 
 ## Understanding
 

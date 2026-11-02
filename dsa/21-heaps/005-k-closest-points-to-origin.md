@@ -9,7 +9,7 @@ Return the k points closest to (0, 0), in any order.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/k-closest-points-to-origin/](https://leetcode.com/problems/k-closest-points-to-origin/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/005-k-closest-points-to-origin.html](https://amitxaidev.github.io/dsa/21-heaps/005-k-closest-points-to-origin.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/21-heaps/005-k-closest-points-to-origin.html](https://compiledcanvas.com/dsa/21-heaps/005-k-closest-points-to-origin.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ Trees in a row each give one fruit type. With two baskets (one type each), pick 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/fruit-into-baskets/](https://leetcode.com/problems/fruit-into-baskets/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/009-fruit-into-baskets.html](https://amitxaidev.github.io/dsa/08-sliding-window/009-fruit-into-baskets.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/08-sliding-window/009-fruit-into-baskets.html](https://compiledcanvas.com/dsa/08-sliding-window/009-fruit-into-baskets.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ Move all zeros to the end of the array in place, keeping the order of the non-ze
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/move-zeroes/](https://leetcode.com/problems/move-zeroes/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/003-move-zeroes.html](https://amitxaidev.github.io/dsa/07-two-pointers/003-move-zeroes.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/07-two-pointers/003-move-zeroes.html](https://compiledcanvas.com/dsa/07-two-pointers/003-move-zeroes.html)
 
 ## Understanding
 

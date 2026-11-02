@@ -9,7 +9,7 @@ Rotate an n × n matrix 90 degrees clockwise, in place.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/rotate-image/](https://leetcode.com/problems/rotate-image/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/003-rotate-image.html](https://amitxaidev.github.io/dsa/10-matrix/003-rotate-image.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/10-matrix/003-rotate-image.html](https://compiledcanvas.com/dsa/10-matrix/003-rotate-image.html)
 
 ## Understanding
 

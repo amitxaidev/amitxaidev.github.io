@@ -9,7 +9,7 @@ Find the minimum path sum from the top to the bottom of a number triangle, movin
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/triangle/](https://leetcode.com/problems/triangle/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/008-triangle.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/008-triangle.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/008-triangle.html](https://compiledcanvas.com/dsa/24-dynamic-programming/008-triangle.html)
 
 ## Understanding
 

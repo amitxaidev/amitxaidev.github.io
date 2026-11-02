@@ -9,7 +9,7 @@ Return the minimum number of single-character inserts, deletes and replacements 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/edit-distance/](https://leetcode.com/problems/edit-distance/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/016-edit-distance.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/016-edit-distance.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/016-edit-distance.html](https://compiledcanvas.com/dsa/24-dynamic-programming/016-edit-distance.html)
 
 ## Understanding
 

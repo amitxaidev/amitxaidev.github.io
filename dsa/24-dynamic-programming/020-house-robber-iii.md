@@ -9,7 +9,7 @@ Houses form a binary tree; robbing two directly linked houses triggers the alarm
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/house-robber-iii/](https://leetcode.com/problems/house-robber-iii/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/020-house-robber-iii.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/020-house-robber-iii.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/020-house-robber-iii.html](https://compiledcanvas.com/dsa/24-dynamic-programming/020-house-robber-iii.html)
 
 ## Understanding
 

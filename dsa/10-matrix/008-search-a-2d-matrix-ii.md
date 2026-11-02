@@ -9,7 +9,7 @@ Rows are sorted left to right and columns top to bottom (but rows don't continue
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/search-a-2d-matrix-ii/](https://leetcode.com/problems/search-a-2d-matrix-ii/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/10-matrix/008-search-a-2d-matrix-ii.html](https://amitxaidev.github.io/dsa/10-matrix/008-search-a-2d-matrix-ii.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/10-matrix/008-search-a-2d-matrix-ii.html](https://compiledcanvas.com/dsa/10-matrix/008-search-a-2d-matrix-ii.html)
 
 ## Understanding
 

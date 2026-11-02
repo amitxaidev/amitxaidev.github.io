@@ -9,7 +9,7 @@ Decide whether an integer reads the same forwards and backwards, without convert
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/palindrome-number/](https://leetcode.com/problems/palindrome-number/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/001-palindrome-number.html](https://amitxaidev.github.io/dsa/03-math/001-palindrome-number.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/03-math/001-palindrome-number.html](https://compiledcanvas.com/dsa/03-math/001-palindrome-number.html)
 
 ## Understanding
 

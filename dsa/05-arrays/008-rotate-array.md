@@ -9,7 +9,7 @@ Rotate an array to the right by k steps in place.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/rotate-array/](https://leetcode.com/problems/rotate-array/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/008-rotate-array.html](https://amitxaidev.github.io/dsa/05-arrays/008-rotate-array.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/05-arrays/008-rotate-array.html](https://compiledcanvas.com/dsa/05-arrays/008-rotate-array.html)
 
 ## Understanding
 

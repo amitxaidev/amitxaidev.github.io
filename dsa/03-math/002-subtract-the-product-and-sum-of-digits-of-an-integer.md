@@ -9,7 +9,7 @@ Return (product of the digits) minus (sum of the digits) of a positive integer.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/002-subtract-the-product-and-sum-of-digits-of-an-integer.html](https://amitxaidev.github.io/dsa/03-math/002-subtract-the-product-and-sum-of-digits-of-an-integer.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/03-math/002-subtract-the-product-and-sum-of-digits-of-an-integer.html](https://compiledcanvas.com/dsa/03-math/002-subtract-the-product-and-sum-of-digits-of-an-integer.html)
 
 ## Understanding
 

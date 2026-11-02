@@ -9,7 +9,7 @@ Return the fewest times you must repeat string a so that b becomes a substring o
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/repeated-string-match/](https://leetcode.com/problems/repeated-string-match/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/12-string-matching/003-repeated-string-match.html](https://amitxaidev.github.io/dsa/12-string-matching/003-repeated-string-match.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/12-string-matching/003-repeated-string-match.html](https://compiledcanvas.com/dsa/12-string-matching/003-repeated-string-match.html)
 
 ## Understanding
 

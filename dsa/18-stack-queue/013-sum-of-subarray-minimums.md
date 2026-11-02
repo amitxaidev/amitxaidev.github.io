@@ -9,7 +9,7 @@ Sum the minimum of every contiguous subarray, modulo 1e9+7.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/sum-of-subarray-minimums/](https://leetcode.com/problems/sum-of-subarray-minimums/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/013-sum-of-subarray-minimums.html](https://amitxaidev.github.io/dsa/18-stack-queue/013-sum-of-subarray-minimums.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/18-stack-queue/013-sum-of-subarray-minimums.html](https://compiledcanvas.com/dsa/18-stack-queue/013-sum-of-subarray-minimums.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ A large integer is stored as an array of digits, most significant first. Add one
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/plus-one/](https://leetcode.com/problems/plus-one/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/006-plus-one.html](https://amitxaidev.github.io/dsa/05-arrays/006-plus-one.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/05-arrays/006-plus-one.html](https://compiledcanvas.com/dsa/05-arrays/006-plus-one.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ Design a set that supports insert, remove and getRandom (each element equally li
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/insert-delete-getrandom-o1/](https://leetcode.com/problems/insert-delete-getrandom-o1/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/010-insert-delete-getrandom-o1.html](https://amitxaidev.github.io/dsa/02-java-basics/010-insert-delete-getrandom-o1.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/02-java-basics/010-insert-delete-getrandom-o1.html](https://compiledcanvas.com/dsa/02-java-basics/010-insert-delete-getrandom-o1.html)
 
 ## Understanding
 

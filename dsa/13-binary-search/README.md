@@ -3,7 +3,7 @@
 Lower/upper bound, rotated arrays and binary search on the answer.
 
 📺 **Watch first:** Ep 21, Ep 22, Ep 23 of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/13-binary-search/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/13-binary-search/  
 🧮 **17 problems** · 🟢 5 Easy · 🟡 10 Medium · 🔴 2 Hard
 
 ## Understand the topic

@@ -9,7 +9,7 @@ Connect all points on a plane so that every point can reach every other, where a
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/min-cost-to-connect-all-points/](https://leetcode.com/problems/min-cost-to-connect-all-points/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/23-graphs/016-min-cost-to-connect-all-points.html](https://amitxaidev.github.io/dsa/23-graphs/016-min-cost-to-connect-all-points.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/23-graphs/016-min-cost-to-connect-all-points.html](https://compiledcanvas.com/dsa/23-graphs/016-min-cost-to-connect-all-points.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ Count the prime numbers strictly less than n.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/count-primes/](https://leetcode.com/problems/count-primes/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/009-count-primes.html](https://amitxaidev.github.io/dsa/03-math/009-count-primes.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/03-math/009-count-primes.html](https://compiledcanvas.com/dsa/03-math/009-count-primes.html)
 
 ## Understanding
 

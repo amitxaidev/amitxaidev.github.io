@@ -9,7 +9,7 @@ In a sorted array of distinct values, return the index of target, or the index w
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/search-insert-position/](https://leetcode.com/problems/search-insert-position/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/002-search-insert-position.html](https://amitxaidev.github.io/dsa/13-binary-search/002-search-insert-position.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/13-binary-search/002-search-insert-position.html](https://compiledcanvas.com/dsa/13-binary-search/002-search-insert-position.html)
 
 ## Understanding
 

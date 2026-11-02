@@ -9,7 +9,7 @@ Stations form a circle. You get gas[i] at station i and spend cost[i] to reach t
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/gas-station/](https://leetcode.com/problems/gas-station/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/007-gas-station.html](https://amitxaidev.github.io/dsa/22-greedy/007-gas-station.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/22-greedy/007-gas-station.html](https://compiledcanvas.com/dsa/22-greedy/007-gas-station.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ Return all ways to choose k numbers from 1..n (order doesn't matter).
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/combinations/](https://leetcode.com/problems/combinations/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/007-combinations.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/007-combinations.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/15-recursion-backtracking/007-combinations.html](https://compiledcanvas.com/dsa/15-recursion-backtracking/007-combinations.html)
 
 ## Understanding
 

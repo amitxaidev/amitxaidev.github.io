@@ -9,7 +9,7 @@ A digit string is "good" if digits at even indexes are even (0,2,4,6,8) and digi
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/count-good-numbers/](https://leetcode.com/problems/count-good-numbers/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/012-count-good-numbers.html](https://amitxaidev.github.io/dsa/03-math/012-count-good-numbers.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/03-math/012-count-good-numbers.html](https://compiledcanvas.com/dsa/03-math/012-count-good-numbers.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ Return the number of edges on the longest path between any two nodes of a binary
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/diameter-of-binary-tree/](https://leetcode.com/problems/diameter-of-binary-tree/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/007-diameter-of-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/007-diameter-of-binary-tree.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/19-binary-trees/007-diameter-of-binary-tree.html](https://compiledcanvas.com/dsa/19-binary-trees/007-diameter-of-binary-tree.html)
 
 ## Understanding
 

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://compiledcanvas.com/dsa/episodes/01-dsa-roadmap-2026.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/z7LRqT8mBQ4/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>DSA Roadmap 2026: Zero to Hired in 6 Months (Complete Guide)</video:title>
+      <video:description>A full DSA roadmap for 2026: what to learn, in what order, how long each topic takes, and how to practise for coding interviews without quitting.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/z7LRqT8mBQ4</video:player_loc>
+      <video:duration>1055</video:duration>
+      <video:publication_date>2026-10-26T18:21:53-07:00</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://compiledcanvas.com/dsa/episodes/02-big-o-time-space-complexity.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/jZeS1tRzGs4/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Big O Notation Explained Simply | Time and Space Complexity in DSA</video:title>
+      <video:description>Big O notation from zero: why we count steps, not seconds, the seven complexities you will meet, four rules to simplify, and space complexity in Java.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/jZeS1tRzGs4</video:player_loc>
+      <video:duration>750</video:duration>
+      <video:publication_date>2026-10-26T21:53:01-07:00</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/PxjhjjhEIqw/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>How to Calculate Time Complexity of an Algorithm | Loops &amp; Recursion</video:title>
+      <video:description>A five-step method to calculate time and space complexity of any code: loops, nested loops, while loops and recursion trees, with Java examples.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/PxjhjjhEIqw</video:player_loc>
+      <video:duration>1272</video:duration>
+      <video:publication_date>2026-10-27T02:48:37-07:00</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://compiledcanvas.com/dsa/episodes/04-java-for-dsa.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/YvtYDDQgn9U/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Complete Java for DSA: Collections, Arrays, Strings &amp; Traps</video:title>
+      <video:description>The Java you need for DSA: arrays, strings, wrapper classes and collections, the time complexity of each method, and the traps that fail correct logic.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/YvtYDDQgn9U</video:player_loc>
+      <video:duration>1010</video:duration>
+      <video:publication_date>2026-10-27T21:30:13-07:00</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://compiledcanvas.com/dsa/episodes/05-math-for-dsa.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/y1GZw3VByAU/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Basic Math for DSA: Primes, Sieve, GCD &amp; Modulo (Java)</video:title>
+      <video:description>Basic math for DSA in Java: digits, divisors, primes, the Sieve of Eratosthenes, GCD and LCM, modulo arithmetic and fast power, explained simply.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/y1GZw3VByAU</video:player_loc>
+      <video:duration>802</video:duration>
+      <video:publication_date>2026-10-27T23:30:36-07:00</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://compiledcanvas.com/dsa/episodes/06-bit-manipulation-java.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/ZzdK8SqvsGU/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Bit Manipulation from Scratch: AND, OR, XOR, Shifts &amp; Tricks (Java)</video:title>
+      <video:description>Bit manipulation in Java from scratch: binary, AND, OR, XOR, NOT, shifts, masks, and classic tricks like Single Number, power of two and subsets.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/ZzdK8SqvsGU</video:player_loc>
+      <video:duration>812</video:duration>
+      <video:publication_date>2026-10-28T01:30:15-07:00</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/4NdluWqUZ3c/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Array Data Structure in Java Explained Simply | DSA for Beginners</video:title>
+      <video:description>Arrays in Java explained with pictures: why reading any index is O(1), why inserting at the front is O(n), how ArrayList grows, and reversing in place.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/4NdluWqUZ3c</video:player_loc>
+      <video:duration>686</video:duration>
+      <video:publication_date>2026-10-28T20:44:16-07:00</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://compiledcanvas.com/dsa/episodes/08-prefix-sum-java.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/liU6avyvXQM/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Prefix Sum Explained: Any Range Sum in 1 Step | Java DSA</video:title>
+      <video:description>Prefix sum in Java explained simply: build a prefix array in O(n), then answer any range sum query in O(1) with one subtraction. Worked examples included.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/liU6avyvXQM</video:player_loc>
+      <video:duration>655</video:duration>
+      <video:publication_date>2026-10-29T05:38:42-07:00</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://compiledcanvas.com/dsa/episodes/09-two-pointers-java.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/nk0jXt4HEuA/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Two Pointers in Java: 5 Must-Know Patterns | DSA</video:title>
+      <video:description>The two pointers technique in Java: five must-know patterns that turn O(n²) into O(n), from reversing an array to pair sum and move zeroes.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/nk0jXt4HEuA</video:player_loc>
+      <video:duration>599</video:duration>
+      <video:publication_date>2026-11-01T20:30:43-08:00</video:publication_date>
+    </video:video>
+  </url>
+</urlset>

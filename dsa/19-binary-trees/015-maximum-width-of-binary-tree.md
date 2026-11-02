@@ -9,7 +9,7 @@ The width of a level is the distance between its leftmost and rightmost non-null
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/maximum-width-of-binary-tree/](https://leetcode.com/problems/maximum-width-of-binary-tree/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/015-maximum-width-of-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/015-maximum-width-of-binary-tree.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/19-binary-trees/015-maximum-width-of-binary-tree.html](https://compiledcanvas.com/dsa/19-binary-trees/015-maximum-width-of-binary-tree.html)
 
 ## Understanding
 

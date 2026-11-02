@@ -9,7 +9,7 @@ Return true if every distinct value in the array appears a different number of t
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/unique-number-of-occurrences/](https://leetcode.com/problems/unique-number-of-occurrences/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/005-unique-number-of-occurrences.html](https://amitxaidev.github.io/dsa/16-hashing/005-unique-number-of-occurrences.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/16-hashing/005-unique-number-of-occurrences.html](https://compiledcanvas.com/dsa/16-hashing/005-unique-number-of-occurrences.html)
 
 ## Understanding
 

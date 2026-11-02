@@ -9,7 +9,7 @@ Count subarrays that contain exactly k distinct integers.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/subarrays-with-k-different-integers/](https://leetcode.com/problems/subarrays-with-k-different-integers/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/014-subarrays-with-k-different-integers.html](https://amitxaidev.github.io/dsa/08-sliding-window/014-subarrays-with-k-different-integers.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/08-sliding-window/014-subarrays-with-k-different-integers.html](https://compiledcanvas.com/dsa/08-sliding-window/014-subarrays-with-k-different-integers.html)
 
 ## Understanding
 

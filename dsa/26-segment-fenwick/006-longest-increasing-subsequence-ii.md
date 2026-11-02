@@ -9,7 +9,7 @@ Find the longest strictly increasing subsequence where each pair of neighbouring
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/longest-increasing-subsequence-ii/](https://leetcode.com/problems/longest-increasing-subsequence-ii/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/26-segment-fenwick/006-longest-increasing-subsequence-ii.html](https://amitxaidev.github.io/dsa/26-segment-fenwick/006-longest-increasing-subsequence-ii.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/26-segment-fenwick/006-longest-increasing-subsequence-ii.html](https://compiledcanvas.com/dsa/26-segment-fenwick/006-longest-increasing-subsequence-ii.html)
 
 ## Understanding
 

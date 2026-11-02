@@ -9,7 +9,7 @@ Arrange non-negative integers so that, written side by side, they form the large
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/largest-number/](https://leetcode.com/problems/largest-number/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/006-largest-number.html](https://amitxaidev.github.io/dsa/14-sorting/006-largest-number.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/14-sorting/006-largest-number.html](https://compiledcanvas.com/dsa/14-sorting/006-largest-number.html)
 
 ## Understanding
 

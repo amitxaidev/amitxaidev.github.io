@@ -9,7 +9,7 @@ Trade as many times as you like, holding at most one share, but after selling yo
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/017-best-time-to-buy-and-sell-stock-with-cooldown.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/017-best-time-to-buy-and-sell-stock-with-cooldown.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/017-best-time-to-buy-and-sell-stock-with-cooldown.html](https://compiledcanvas.com/dsa/24-dynamic-programming/017-best-time-to-buy-and-sell-stock-with-cooldown.html)
 
 ## Understanding
 

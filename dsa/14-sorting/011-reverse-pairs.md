@@ -9,7 +9,7 @@ Count pairs (i, j) with i &lt; j and nums[i] > 2 × nums[j].
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/reverse-pairs/](https://leetcode.com/problems/reverse-pairs/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/14-sorting/011-reverse-pairs.html](https://amitxaidev.github.io/dsa/14-sorting/011-reverse-pairs.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/14-sorting/011-reverse-pairs.html](https://compiledcanvas.com/dsa/14-sorting/011-reverse-pairs.html)
 
 ## Understanding
 

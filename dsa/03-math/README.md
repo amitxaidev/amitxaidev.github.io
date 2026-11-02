@@ -3,7 +3,7 @@
 Primes, GCD, modulo, digits and the Sieve of Eratosthenes.
 
 📺 **Watch first:** [Ep 5](https://youtu.be/y1GZw3VByAU) of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/03-math/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/03-math/  
 🧮 **13 problems** · 🟢 7 Easy · 🟡 5 Medium · 🔴 1 Hard
 
 ## Understand the topic

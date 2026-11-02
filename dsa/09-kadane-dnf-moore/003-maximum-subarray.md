@@ -9,7 +9,7 @@ Find the contiguous non-empty subarray with the largest sum and return the sum.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/maximum-subarray/](https://leetcode.com/problems/maximum-subarray/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/003-maximum-subarray.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/003-maximum-subarray.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/09-kadane-dnf-moore/003-maximum-subarray.html](https://compiledcanvas.com/dsa/09-kadane-dnf-moore/003-maximum-subarray.html)
 
 ## Understanding
 

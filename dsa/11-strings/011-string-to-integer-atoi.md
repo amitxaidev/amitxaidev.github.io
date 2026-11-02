@@ -9,7 +9,7 @@ Parse an integer from a string: skip leading spaces, read an optional sign, read
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/string-to-integer-atoi/](https://leetcode.com/problems/string-to-integer-atoi/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/11-strings/011-string-to-integer-atoi.html](https://amitxaidev.github.io/dsa/11-strings/011-string-to-integer-atoi.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/11-strings/011-string-to-integer-atoi.html](https://compiledcanvas.com/dsa/11-strings/011-string-to-integer-atoi.html)
 
 ## Understanding
 

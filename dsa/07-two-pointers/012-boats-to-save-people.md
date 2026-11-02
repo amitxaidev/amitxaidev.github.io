@@ -9,7 +9,7 @@ Each boat carries at most two people and has a weight limit. Return the minimum 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/boats-to-save-people/](https://leetcode.com/problems/boats-to-save-people/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/07-two-pointers/012-boats-to-save-people.html](https://amitxaidev.github.io/dsa/07-two-pointers/012-boats-to-save-people.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/07-two-pointers/012-boats-to-save-people.html](https://compiledcanvas.com/dsa/07-two-pointers/012-boats-to-save-people.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ Replace every "." in an IPv4 address with "[.]".
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/defanging-an-ip-address/](https://leetcode.com/problems/defanging-an-ip-address/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/005-defanging-an-ip-address.html](https://amitxaidev.github.io/dsa/02-java-basics/005-defanging-an-ip-address.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/02-java-basics/005-defanging-an-ip-address.html](https://compiledcanvas.com/dsa/02-java-basics/005-defanging-an-ip-address.html)
 
 ## Understanding
 

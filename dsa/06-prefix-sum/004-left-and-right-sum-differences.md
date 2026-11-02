@@ -9,7 +9,7 @@ For every index, return the absolute difference between the sum of elements to i
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/left-and-right-sum-differences/](https://leetcode.com/problems/left-and-right-sum-differences/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/06-prefix-sum/004-left-and-right-sum-differences.html](https://amitxaidev.github.io/dsa/06-prefix-sum/004-left-and-right-sum-differences.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/06-prefix-sum/004-left-and-right-sum-differences.html](https://compiledcanvas.com/dsa/06-prefix-sum/004-left-and-right-sum-differences.html)
 
 ## Understanding
 

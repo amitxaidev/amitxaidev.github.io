@@ -9,7 +9,7 @@ nums1 has m sorted values followed by n empty slots; nums2 has n sorted values. 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/merge-sorted-array/](https://leetcode.com/problems/merge-sorted-array/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/05-arrays/007-merge-sorted-array.html](https://amitxaidev.github.io/dsa/05-arrays/007-merge-sorted-array.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/05-arrays/007-merge-sorted-array.html](https://compiledcanvas.com/dsa/05-arrays/007-merge-sorted-array.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ Each digit 2–9 maps to letters as on a phone keypad. Return all letter strings
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/letter-combinations-of-a-phone-number/](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/15-recursion-backtracking/010-letter-combinations-of-a-phone-number.html](https://amitxaidev.github.io/dsa/15-recursion-backtracking/010-letter-combinations-of-a-phone-number.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/15-recursion-backtracking/010-letter-combinations-of-a-phone-number.html](https://compiledcanvas.com/dsa/15-recursion-backtracking/010-letter-combinations-of-a-phone-number.html)
 
 ## Understanding
 

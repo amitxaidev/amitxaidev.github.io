@@ -9,7 +9,7 @@ Split the array into k non-empty contiguous parts so that the largest part's sum
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/split-array-largest-sum/](https://leetcode.com/problems/split-array-largest-sum/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/016-split-array-largest-sum.html](https://amitxaidev.github.io/dsa/13-binary-search/016-split-array-largest-sum.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/13-binary-search/016-split-array-largest-sum.html](https://compiledcanvas.com/dsa/13-binary-search/016-split-array-largest-sum.html)
 
 ## Understanding
 

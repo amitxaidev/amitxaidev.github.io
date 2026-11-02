@@ -3,7 +3,7 @@
 HashMap and HashSet patterns: counting, grouping and prefix-sum maps.
 
 📺 **Watch first:** Ep 37, Ep 38, Ep 39 of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/16-hashing/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/16-hashing/  
 🧮 **12 problems** · 🟢 6 Easy · 🟡 5 Medium · 🔴 1 Hard
 
 ## Understand the topic

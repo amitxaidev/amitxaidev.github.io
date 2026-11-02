@@ -9,7 +9,7 @@ Two singly linked lists may merge at some node and share their tail. Return that
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/intersection-of-two-linked-lists/](https://leetcode.com/problems/intersection-of-two-linked-lists/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/17-linked-list/005-intersection-of-two-linked-lists.html](https://amitxaidev.github.io/dsa/17-linked-list/005-intersection-of-two-linked-lists.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/17-linked-list/005-intersection-of-two-linked-lists.html](https://compiledcanvas.com/dsa/17-linked-list/005-intersection-of-two-linked-lists.html)
 
 ## Understanding
 

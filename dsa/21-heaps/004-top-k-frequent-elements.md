@@ -9,7 +9,7 @@ Return the k most frequent values in the array (the answer is unique).
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/top-k-frequent-elements/](https://leetcode.com/problems/top-k-frequent-elements/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/21-heaps/004-top-k-frequent-elements.html](https://amitxaidev.github.io/dsa/21-heaps/004-top-k-frequent-elements.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/21-heaps/004-top-k-frequent-elements.html](https://compiledcanvas.com/dsa/21-heaps/004-top-k-frequent-elements.html)
 
 ## Understanding
 

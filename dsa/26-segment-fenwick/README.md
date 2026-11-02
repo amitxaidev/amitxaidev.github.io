@@ -3,7 +3,7 @@
 Range queries with point updates.
 
 📺 **Watch first:** Ep 98, Ep 99, Ep 100 of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/26-segment-fenwick/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/26-segment-fenwick/  
 🧮 **6 problems** · 🟢 0 Easy · 🟡 2 Medium · 🔴 4 Hard
 
 ## Understand the topic

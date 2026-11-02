@@ -3,7 +3,7 @@
 BFS/DFS, islands, cycles, topo sort, bipartite, shortest paths, MST, DSU, SCC and bridges.
 
 📺 **Watch first:** Ep 74, Ep 75, Ep 76, Ep 77, Ep 78, Ep 79, Ep 80, Ep 81, Ep 82, Ep 83, Ep 84, Ep 85 of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/23-graphs/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/23-graphs/  
 🧮 **21 problems** · 🟢 2 Easy · 🟡 16 Medium · 🔴 3 Hard
 
 ## Understand the topic

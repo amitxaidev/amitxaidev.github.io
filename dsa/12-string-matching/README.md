@@ -3,7 +3,7 @@
 KMP, Rabin-Karp and the Z-algorithm.
 
 📺 **Watch first:** Ep 18, Ep 19 of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/12-string-matching/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/12-string-matching/  
 🧮 **7 problems** · 🟢 2 Easy · 🟡 1 Medium · 🔴 4 Hard
 
 ## Understand the topic

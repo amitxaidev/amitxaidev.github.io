@@ -3,7 +3,7 @@
 Traversal, in-place updates, rotation and the top array interview questions.
 
 📺 **Watch first:** [Ep 7](https://youtu.be/4NdluWqUZ3c), Ep 15 of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
-🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/05-arrays/  
+🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://compiledcanvas.com/dsa/05-arrays/  
 🧮 **14 problems** · 🟢 7 Easy · 🟡 6 Medium · 🔴 1 Hard
 
 ## Understand the topic

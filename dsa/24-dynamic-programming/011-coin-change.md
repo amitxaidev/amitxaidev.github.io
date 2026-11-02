@@ -9,7 +9,7 @@ Return the fewest coins needed to make an amount using unlimited coins of given 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/coin-change/](https://leetcode.com/problems/coin-change/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/011-coin-change.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/011-coin-change.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/011-coin-change.html](https://compiledcanvas.com/dsa/24-dynamic-programming/011-coin-change.html)
 
 ## Understanding
 

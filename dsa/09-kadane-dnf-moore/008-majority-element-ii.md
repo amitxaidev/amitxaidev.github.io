@@ -9,7 +9,7 @@ Return every value that appears more than n/3 times.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/majority-element-ii/](https://leetcode.com/problems/majority-element-ii/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/008-majority-element-ii.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/008-majority-element-ii.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/09-kadane-dnf-moore/008-majority-element-ii.html](https://compiledcanvas.com/dsa/09-kadane-dnf-moore/008-majority-element-ii.html)
 
 ## Understanding
 

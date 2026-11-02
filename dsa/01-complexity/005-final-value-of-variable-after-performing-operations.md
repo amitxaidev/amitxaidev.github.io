@@ -9,7 +9,7 @@ A variable X starts at 0. You get a list of operations, each one of "++X", "X++"
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/final-value-of-variable-after-performing-operations/](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/01-complexity/005-final-value-of-variable-after-performing-operations.html](https://amitxaidev.github.io/dsa/01-complexity/005-final-value-of-variable-after-performing-operations.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/01-complexity/005-final-value-of-variable-after-performing-operations.html](https://compiledcanvas.com/dsa/01-complexity/005-final-value-of-variable-after-performing-operations.html)
 
 ## Understanding
 

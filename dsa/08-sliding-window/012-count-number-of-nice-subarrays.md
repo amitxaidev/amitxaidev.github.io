@@ -9,7 +9,7 @@ Count subarrays that contain exactly k odd numbers.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/count-number-of-nice-subarrays/](https://leetcode.com/problems/count-number-of-nice-subarrays/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/08-sliding-window/012-count-number-of-nice-subarrays.html](https://amitxaidev.github.io/dsa/08-sliding-window/012-count-number-of-nice-subarrays.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/08-sliding-window/012-count-number-of-nice-subarrays.html](https://compiledcanvas.com/dsa/08-sliding-window/012-count-number-of-nice-subarrays.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ Box types come as [count, unitsPerBox]. A truck holds at most truckSize boxes. M
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/maximum-units-on-a-truck/](https://leetcode.com/problems/maximum-units-on-a-truck/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/22-greedy/003-maximum-units-on-a-truck.html](https://amitxaidev.github.io/dsa/22-greedy/003-maximum-units-on-a-truck.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/22-greedy/003-maximum-units-on-a-truck.html](https://compiledcanvas.com/dsa/22-greedy/003-maximum-units-on-a-truck.html)
 
 ## Understanding
 

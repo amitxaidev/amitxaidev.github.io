@@ -9,7 +9,7 @@ Replace a number by the sum of the squares of its digits, again and again. It's 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/happy-number/](https://leetcode.com/problems/happy-number/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/006-happy-number.html](https://amitxaidev.github.io/dsa/16-hashing/006-happy-number.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/16-hashing/006-happy-number.html](https://compiledcanvas.com/dsa/16-hashing/006-happy-number.html)
 
 ## Understanding
 

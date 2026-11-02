@@ -9,7 +9,7 @@ Count the ways to write n as a sum of one or more consecutive positive integers.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/consecutive-numbers-sum/](https://leetcode.com/problems/consecutive-numbers-sum/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/013-consecutive-numbers-sum.html](https://amitxaidev.github.io/dsa/03-math/013-consecutive-numbers-sum.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/03-math/013-consecutive-numbers-sum.html](https://compiledcanvas.com/dsa/03-math/013-consecutive-numbers-sum.html)
 
 ## Understanding
 

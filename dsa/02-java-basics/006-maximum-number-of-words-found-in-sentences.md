@@ -9,7 +9,7 @@ Each sentence is words separated by single spaces. Return the largest word count
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/](https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/006-maximum-number-of-words-found-in-sentences.html](https://amitxaidev.github.io/dsa/02-java-basics/006-maximum-number-of-words-found-in-sentences.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/02-java-basics/006-maximum-number-of-words-found-in-sentences.html](https://compiledcanvas.com/dsa/02-java-basics/006-maximum-number-of-words-found-in-sentences.html)
 
 ## Understanding
 

@@ -9,7 +9,7 @@ A string t "divides" s if s is t repeated some number of times. Return the longe
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/greatest-common-divisor-of-strings/](https://leetcode.com/problems/greatest-common-divisor-of-strings/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/03-math/006-greatest-common-divisor-of-strings.html](https://amitxaidev.github.io/dsa/03-math/006-greatest-common-divisor-of-strings.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/03-math/006-greatest-common-divisor-of-strings.html](https://compiledcanvas.com/dsa/03-math/006-greatest-common-divisor-of-strings.html)
 
 ## Understanding
 

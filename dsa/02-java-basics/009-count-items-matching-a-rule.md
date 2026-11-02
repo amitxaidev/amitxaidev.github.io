@@ -9,7 +9,7 @@ Each item is a list [type, color, name]. Given a rule key ("type", "color" or "n
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/count-items-matching-a-rule/](https://leetcode.com/problems/count-items-matching-a-rule/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/02-java-basics/009-count-items-matching-a-rule.html](https://amitxaidev.github.io/dsa/02-java-basics/009-count-items-matching-a-rule.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/02-java-basics/009-count-items-matching-a-rule.html](https://compiledcanvas.com/dsa/02-java-basics/009-count-items-matching-a-rule.html)
 
 ## Understanding
 

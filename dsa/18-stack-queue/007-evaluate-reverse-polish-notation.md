@@ -9,7 +9,7 @@ Evaluate an arithmetic expression in Reverse Polish (postfix) notation with + - 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/evaluate-reverse-polish-notation/](https://leetcode.com/problems/evaluate-reverse-polish-notation/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/18-stack-queue/007-evaluate-reverse-polish-notation.html](https://amitxaidev.github.io/dsa/18-stack-queue/007-evaluate-reverse-polish-notation.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/18-stack-queue/007-evaluate-reverse-polish-notation.html](https://compiledcanvas.com/dsa/18-stack-queue/007-evaluate-reverse-polish-notation.html)
 
 ## Understanding
 

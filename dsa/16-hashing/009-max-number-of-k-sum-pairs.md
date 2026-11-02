@@ -9,7 +9,7 @@ In one operation you remove two numbers that sum to k. Return the most operation
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/max-number-of-k-sum-pairs/](https://leetcode.com/problems/max-number-of-k-sum-pairs/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/16-hashing/009-max-number-of-k-sum-pairs.html](https://amitxaidev.github.io/dsa/16-hashing/009-max-number-of-k-sum-pairs.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/16-hashing/009-max-number-of-k-sum-pairs.html](https://compiledcanvas.com/dsa/16-hashing/009-max-number-of-k-sum-pairs.html)
 
 ## Understanding
 

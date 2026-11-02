@@ -9,7 +9,7 @@ One value appears more than n/2 times. Return it, ideally in O(n) time and O(1) 
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/majority-element/](https://leetcode.com/problems/majority-element/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/001-majority-element.html](https://amitxaidev.github.io/dsa/09-kadane-dnf-moore/001-majority-element.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/09-kadane-dnf-moore/001-majority-element.html](https://compiledcanvas.com/dsa/09-kadane-dnf-moore/001-majority-element.html)
 
 ## Understanding
 

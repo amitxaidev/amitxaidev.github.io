@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Array Data Structure in Java Explained Simply | DSA for Beginners | Compiled Canvas</title>
+<meta name="description" content="Arrays in Java explained with pictures: why reading any index is O(1), why inserting at the front is O(n), how ArrayList grows, and reversing in place.">
+<link rel="canonical" href="https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="video.other">
+<meta property="og:url" content="https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html">
+<meta property="og:title" content="Array Data Structure in Java Explained Simply | DSA for Beginners | Compiled Canvas">
+<meta property="og:description" content="Arrays in Java explained with pictures: why reading any index is O(1), why inserting at the front is O(n), how ArrayList grows, and reversing in place.">
+<meta property="og:image" content="https://i.ytimg.com/vi/4NdluWqUZ3c/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "Array Data Structure in Java Explained Simply | DSA for Beginners", "description": "Arrays in Java explained with pictures: why reading any index is O(1), why inserting at the front is O(n), how ArrayList grows, and reversing in place.", "thumbnailUrl": ["https://i.ytimg.com/vi/4NdluWqUZ3c/maxresdefault.jpg", "https://i.ytimg.com/vi/4NdluWqUZ3c/hqdefault.jpg"], "uploadDate": "2026-10-28T20:44:16-07:00", "duration": "PT11M26S", "embedUrl": "https://www.youtube.com/embed/4NdluWqUZ3c", "inLanguage": "en", "publisher": {"@type": "Organization", "name": "Compiled Canvas", "url": "https://compiledcanvas.com/", "logo": {"@type": "ImageObject", "url": "https://compiledcanvas.com/assets/logo.png"}, "sameAs": ["https://www.youtube.com/@compiledcanvas", "https://www.instagram.com/compiledcanvas", "https://github.com/amitxaidev"]}, "hasPart": [{"@type": "Clip", "name": "1 step or 1 million?", "startOffset": 0, "endOffset": 46, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=0"}, {"@type": "Clip", "name": "What this video covers", "startOffset": 46, "endOffset": 67, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=46"}, {"@type": "Clip", "name": "What is an array? (school lockers)", "startOffset": 67, "endOffset": 98, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=67"}, {"@type": "Clip", "name": "Indexes start at 0", "startOffset": 98, "endOffset": 115, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=98"}, {"@type": "Clip", "name": "Why start at 0?", "startOffset": 115, "endOffset": 126, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=115"}, {"@type": "Clip", "name": "Why reading any box is instant", "startOffset": 126, "endOffset": 144, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=126"}, {"@type": "Clip", "name": "How Java finds a box in one jump", "startOffset": 144, "endOffset": 182, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=144"}, {"@type": "Clip", "name": "Graph: reading is a flat line, O(1)", "startOffset": 182, "endOffset": 201, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=182"}, {"@type": "Clip", "name": "Looping through an array", "startOffset": 201, "endOffset": 218, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=201"}, {"@type": "Clip", "name": "Example: adding up 3, 8 and 5", "startOffset": 218, "endOffset": 230, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=218"}, {"@type": "Clip", "name": "Finding the biggest number", "startOffset": 230, "endOffset": 259, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=230"}, {"@type": "Clip", "name": "Searching for a value (linear search)", "startOffset": 259, "endOffset": 282, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=259"}, {"@type": "Clip", "name": "Lucky vs unlucky: why it's O(n)", "startOffset": 282, "endOffset": 325, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=282"}, {"@type": "Clip", "name": "Adding and removing (cinema seats)", "startOffset": 325, "endOffset": 349, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=325"}, {"@type": "Clip", "name": "Inserting 15: watch everything shift", "startOffset": 349, "endOffset": 372, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=349"}, {"@type": "Clip", "name": "Removing: everything slides left", "startOffset": 372, "endOffset": 392, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=372"}, {"@type": "Clip", "name": "Graph: the end is cheap, the front is expensive", "startOffset": 392, "endOffset": 407, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=392"}, {"@type": "Clip", "name": "When the array is full", "startOffset": 407, "endOffset": 428, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=407"}, {"@type": "Clip", "name": "ArrayList: an array that grows", "startOffset": 428, "endOffset": 440, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=428"}, {"@type": "Clip", "name": "Graph: ArrayList capacity 10, 15, 22, 33", "startOffset": 440, "endOffset": 475, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=440"}, {"@type": "Clip", "name": "Reverse an array", "startOffset": 475, "endOffset": 491, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=475"}, {"@type": "Clip", "name": "The two pointer swap", "startOffset": 491, "endOffset": 508, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=491"}, {"@type": "Clip", "name": "Example: reversing 1 to 5", "startOffset": 508, "endOffset": 535, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=508"}, {"@type": "Clip", "name": "The array cheat sheet", "startOffset": 535, "endOffset": 565, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=535"}, {"@type": "Clip", "name": "Quiz: 3 easy questions", "startOffset": 565, "endOffset": 617, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=565"}, {"@type": "Clip", "name": "Recap", "startOffset": 617, "endOffset": 647, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=617"}, {"@type": "Clip", "name": "Homework", "startOffset": 647, "endOffset": 664, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=647"}, {"@type": "Clip", "name": "Next episode", "startOffset": 664, "endOffset": 686, "url": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html?t=664"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "DSA in Java", "item": "https://compiledcanvas.com/dsa/"}, {"@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://compiledcanvas.com/dsa/episodes/"}, {"@type": "ListItem", "position": 4, "name": "Episode 7", "item": "https://compiledcanvas.com/dsa/episodes/07-arrays-in-java.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">AI for Developers <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Episodes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Episode 7</li>
+    </ol></nav>
+    <span class="badge rounded-pill text-bg-dark mb-2">Episode 7 · 11:26 · 28 Oct 2026</span>
+    <h1 class="h2 fw-bold mb-3">Array Data Structure in Java Explained Simply | DSA for Beginners</h1>
+    <div class="ep-player ratio ratio-16x9">
+      <iframe id="ep-video" src="https://www.youtube.com/embed/4NdluWqUZ3c?rel=0" data-video="4NdluWqUZ3c" title="Array Data Structure in Java Explained Simply | DSA for Beginners" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>What this episode covers</h2>
+      <p>Reading the last box of a million-number array takes one step. Adding one number at the front makes Java move all one million. Same array, and one action is instant while the other is slow. This episode shows why, using lockers, house numbers and cinema seats instead of heavy theory.</p>
+<p>We start with what an array is, why indexes begin at 0, and how Java jumps straight to any box. Then we go through each operation with a time graph: reading, looping, searching, and adding or removing at the end, the front and the middle.</p>
+<p>After that we look at what happens when an array is full, and how ArrayList grows for you by copying to a bigger one. We finish by reversing an array in place using two pointers, which sets up later episodes in the series.</p>
+    </section>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>What you'll be able to do</h2>
+      <ul class="mb-0"><li>Why reading or changing arr[i] is O(1)</li>
+<li>Why linear search is O(n)</li>
+<li>Why the end of an array is cheap and the front is expensive</li>
+<li>How ArrayList grows</li>
+<li>Reversing an array in place with a two pointer swap</li></ul>
+    </section>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
+      <p class="mb-0">Forgetting that indexes start at 0. The last index is always the length minus 1, so an array of 10 boxes ends at index 9.</p>
+    </section>
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Key moments <small>tap one to jump there</small></h2>
+      <ol class="ep-moments list-unstyled mb-0"><li><a href="?t=0" data-seek="0"><time>0:00</time><span>1 step or 1 million?</span></a></li>
+<li><a href="?t=46" data-seek="46"><time>0:46</time><span>What this video covers</span></a></li>
+<li><a href="?t=67" data-seek="67"><time>1:07</time><span>What is an array? (school lockers)</span></a></li>
+<li><a href="?t=98" data-seek="98"><time>1:38</time><span>Indexes start at 0</span></a></li>
+<li><a href="?t=115" data-seek="115"><time>1:55</time><span>Why start at 0?</span></a></li>
+<li><a href="?t=126" data-seek="126"><time>2:06</time><span>Why reading any box is instant</span></a></li>
+<li><a href="?t=144" data-seek="144"><time>2:24</time><span>How Java finds a box in one jump</span></a></li>
+<li><a href="?t=182" data-seek="182"><time>3:02</time><span>Graph: reading is a flat line, O(1)</span></a></li>
+<li><a href="?t=201" data-seek="201"><time>3:21</time><span>Looping through an array</span></a></li>
+<li><a href="?t=218" data-seek="218"><time>3:38</time><span>Example: adding up 3, 8 and 5</span></a></li>
+<li><a href="?t=230" data-seek="230"><time>3:50</time><span>Finding the biggest number</span></a></li>
+<li><a href="?t=259" data-seek="259"><time>4:19</time><span>Searching for a value (linear search)</span></a></li>
+<li><a href="?t=282" data-seek="282"><time>4:42</time><span>Lucky vs unlucky: why it&#x27;s O(n)</span></a></li>
+<li><a href="?t=325" data-seek="325"><time>5:25</time><span>Adding and removing (cinema seats)</span></a></li>
+<li><a href="?t=349" data-seek="349"><time>5:49</time><span>Inserting 15: watch everything shift</span></a></li>
+<li><a href="?t=372" data-seek="372"><time>6:12</time><span>Removing: everything slides left</span></a></li>
+<li><a href="?t=392" data-seek="392"><time>6:32</time><span>Graph: the end is cheap, the front is expensive</span></a></li>
+<li><a href="?t=407" data-seek="407"><time>6:47</time><span>When the array is full</span></a></li>
+<li><a href="?t=428" data-seek="428"><time>7:08</time><span>ArrayList: an array that grows</span></a></li>
+<li><a href="?t=440" data-seek="440"><time>7:20</time><span>Graph: ArrayList capacity 10, 15, 22, 33</span></a></li>
+<li><a href="?t=475" data-seek="475"><time>7:55</time><span>Reverse an array</span></a></li>
+<li><a href="?t=491" data-seek="491"><time>8:11</time><span>The two pointer swap</span></a></li>
+<li><a href="?t=508" data-seek="508"><time>8:28</time><span>Example: reversing 1 to 5</span></a></li>
+<li><a href="?t=535" data-seek="535"><time>8:55</time><span>The array cheat sheet</span></a></li>
+<li><a href="?t=565" data-seek="565"><time>9:25</time><span>Quiz: 3 easy questions</span></a></li>
+<li><a href="?t=617" data-seek="617"><time>10:17</time><span>Recap</span></a></li>
+<li><a href="?t=647" data-seek="647"><time>10:47</time><span>Homework</span></a></li>
+<li><a href="?t=664" data-seek="664"><time>11:04</time><span>Next episode</span></a></li></ol>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Full transcript</h2>
+      <details class="ep-transcript"><summary>Read the whole lesson</summary>
+      <p>Here&#x27;s a question. You have an array with one million numbers. Reading the very first number takes one step. How many steps does it take to read the last one?</p>
+<p>Also one step. Not a million. Just one.</p>
+<p>But if you add a new number at the front of that same array, Java has to move all one million numbers. Same array. One action is instant, the other is slow.</p>
+<p>By the end of this video, you&#x27;ll know exactly why. And it&#x27;s simpler than you think.</p>
+<p>Welcome back to Compiled Canvas. This is Episode Seven of our DSA series, and the start of Module One: arrays. In Episode Six, we played with bits. Today, we slow down, and really understand the most important data structure of all.</p>
+<p>Here&#x27;s the plan. What an array really is. Why reading any position is instant. Looping through an array. Searching for a value. Adding and removing values. What happens when an array is full. Reversing an array in place. A simple cheat sheet. And an easy quiz at the end.</p>
+<p>Let&#x27;s go.</p>
+<p>First, what is an array?</p>
+<p>Think of a row of lockers in a school corridor. Every locker is the same size. They sit side by side, with no gaps. And every locker has a number on the door.</p>
+<p>An array is exactly that. A row of boxes, all the same size, sitting next to each other in memory. Each box holds one value.</p>
+<p>In Java, you create one like this: int array, equals new int of five. That gives you five boxes, and each one starts at zero.</p>
+<p>The number on each box is called the index. And here&#x27;s the part that confuses beginners: the first index is zero, not one. So five boxes have the indexes zero, one, two, three and four. The last index is always the length minus one.</p>
+<p>Why start at zero? Because the index means &quot;how many boxes to skip from the start&quot;. The first box needs zero skips. The second box needs one skip. That&#x27;s all it is.</p>
+<p>Now, the most important idea in this video.</p>
+<p>Imagine a street where every house is exactly ten metres wide. The first house is at the corner. Where is house number seven? You don&#x27;t need to walk past every house. You just do one sum: seven times ten metres. You go straight there.</p>
+<p>An array works the same way. Java knows where the first box starts. And it knows how big each box is. An int takes four bytes. So to find box number seven, it does one sum: start, plus seven times four. Then it jumps straight there.</p>
+<p>That&#x27;s why reading arr of zero, and reading arr of nine hundred thousand, take the same time. One sum, one jump. We call that O of one.</p>
+<p>The same goes for changing a value. arr of three equals fifty jumps straight to box three, and puts fifty inside. Also O of one.</p>
+<p>Look at this graph. Along the bottom, the array gets bigger and bigger. Up the side, the time it takes. Reading by index is a flat line. Ten boxes or ten million, it never goes up.</p>
+<p>So remember this: reading or writing by index is instant, no matter how big the array is.</p>
+<p>Next, looping. Very often you need to visit every box, one by one.</p>
+<p>The most common loop is a for loop. Start i at zero, keep going while i is less than the length, and add one to i each time. Inside the loop, arr of i is the current value.</p>
+<p>Let&#x27;s add up the numbers three, eight and five. Start with a sum of zero. Visit the first box: the sum becomes three. The second box: eleven. The third box: sixteen. Done.</p>
+<p>Finding the biggest number works the same way. Remember the biggest so far. Look at each box, and if the value is bigger, remember that one instead.</p>
+<p>If the array has n boxes, the loop visits n boxes. So the time is O of n. Twice as many boxes, twice as much work. On our graph, that&#x27;s a straight line going up.</p>
+<p>And when you don&#x27;t need the index, Java has a shorter loop: for int x, colon, arr. It gives you each value in order, one at a time.</p>
+<p>Now, searching. Say you want to know: is the number forty in this array?</p>
+<p>The array can&#x27;t tell you where forty is. It only knows positions, not values. So you check the boxes one by one, from the start. Is this forty? No. Is this forty? No. Is this forty? Yes! Found it at index two.</p>
+<p>This is called linear search. If you&#x27;re lucky, forty is in the first box, and you&#x27;re done in one step. If you&#x27;re unlucky, it&#x27;s in the last box, or it&#x27;s not there at all, and you check every box.</p>
+<p>We always plan for the unlucky case. So linear search is O of n.</p>
+<p>There&#x27;s a much faster way when the array is sorted. It&#x27;s called binary search, and it gets its own episode later in this series. For now, just remember: searching an unsorted array means checking every box, and it&#x27;s O of n.</p>
+<p>Quick pause, before we go further. If you&#x27;re finding this video valuable, hit subscribe to Compiled Canvas, and turn on the bell. It&#x27;s free, it takes one second, and it helps me keep making this complete DSA series for you. Alright, back to it.</p>
+<p>Now, adding and removing. This is where arrays get slow.</p>
+<p>Picture people sitting in a row of cinema seats, with no empty seats between them. A new person arrives, and wants to sit in the second seat. What happens? Everyone from the second seat onwards has to stand up and move one seat to the right. Only then can the new person sit down.</p>
+<p>An array works the same way. Say the array holds ten, twenty, thirty and forty, and you want to add fifteen at index one. First, forty moves right. Then thirty moves right. Then twenty moves right. Now index one is free, and fifteen goes in.</p>
+<p>The more values after the spot, the more moves. Adding at the front moves everything. So adding in the middle or at the front is O of n.</p>
+<p>Removing works the same way, in the other direction. Take out the value at index one, and everything after it slides one seat to the left, to close the gap. Also O of n.</p>
+<p>But here&#x27;s the good news. Adding or removing at the end moves nothing. There&#x27;s nobody to the right. So working at the end is O of one.</p>
+<p>Here&#x27;s the graph for both. Adding at the end stays flat, no matter how big the array gets. Adding at the front climbs, because every extra box is one more move.</p>
+<p>Simple rule: the end is cheap. The front and the middle are expensive.</p>
+<p>Next, a big limit of arrays. Their size is fixed. Once you create five boxes, you have five boxes forever.</p>
+<p>So what if you need a sixth? You have to make a brand new, bigger array, copy every value across, and then add the new one. Copying n values is O of n.</p>
+<p>That sounds painful. That&#x27;s why Java gives you ArrayList. It&#x27;s an array that grows by itself. When it fills up, it quietly makes a bigger array, about one and a half times the size, and copies everything across for you.</p>
+<p>Here&#x27;s what that looks like. The ArrayList starts with room for ten. When it&#x27;s full, it jumps to fifteen. Then twenty-two. Then thirty-three. Each jump is a copy, but the jumps get further and further apart.</p>
+<p>Does all that copying make ArrayList slow? Not really. The copies happen rarely, because each new array has lots of spare room. So on average, adding to the end of an ArrayList is still O of one.</p>
+<p>So here&#x27;s when to use which. If you know the size from the start, use a plain array. If the size changes as you go, use an ArrayList.</p>
+<p>Now let&#x27;s use what we&#x27;ve learned to solve a real problem: reverse an array.</p>
+<p>The easy way is to make a second array, and fill it from the back. That works, but it uses n extra boxes of memory.</p>
+<p>The smart way needs no extra array. Use two pointers. One starts at the first box, called left. The other starts at the last box, called right.</p>
+<p>Swap the two values. Then move left one step forward, and right one step back. Swap again. Keep going until the two pointers meet in the middle.</p>
+<p>Let&#x27;s try it on one, two, three, four, five. Swap one and five. Swap two and four. Now both pointers are on three, the middle, so we stop. The array is now five, four, three, two, one.</p>
+<p>Each value moves once, so it&#x27;s O of n time. And we used no extra array, so the extra memory is O of one. When you change an array without making a copy, we say you did it in place.</p>
+<p>So, here&#x27;s the whole array in one cheat sheet. Pause and screenshot this.</p>
+<p>Reading or changing a value by its index: O of one.</p>
+<p>Looping through every value: O of n.</p>
+<p>Searching for a value in an unsorted array: O of n.</p>
+<p>Adding or removing at the end: O of one.</p>
+<p>Adding or removing at the front or in the middle: O of n, because the other values have to shift.</p>
+<p>And growing a full array: O of n, because everything is copied. ArrayList does it for you.</p>
+<p>Okay, quiz time. Three easy questions. Pause the video, think, and then hit play.</p>
+<p>Question one. An array has ten boxes. What is the index of the last box?</p>
+<p>Question two. Which is faster: reading arr of zero, or reading arr of nine hundred thousand?</p>
+<p>Question three. Is adding a value at the front of an array O of one, or O of n?</p>
+<p>Ready?</p>
+<p>Question one: nine. Indexes start at zero, so the last one is the length minus one.</p>
+<p>Question two: neither. They take the same time. Java does one sum and jumps straight there. That&#x27;s O of one.</p>
+<p>Question three: O of n. Every value has to move one place to the right, to make room at the front.</p>
+<p>How many did you get right? Tell me in the comments: three out of three, two, or one.</p>
+<p>Let&#x27;s recap. An array is a row of same-size boxes, sitting side by side in memory. Indexes start at zero, and the last index is the length minus one. Reading or changing any box is O of one, because Java jumps straight there. Looping and searching visit every box, so they&#x27;re O of n. Adding or removing at the end is cheap. At the front or in the middle, values shift, so it&#x27;s O of n. And to reverse an array in place, use two pointers, and swap.</p>
+<p>Your homework. Solve Reverse String on LeetCode, using the two pointer swap from this video. Then try Concatenation of Array. Both are easy, and both use exactly what you learned today. And tell me in the comments: in an array of twenty boxes, what is the last index?</p>
+<p>Next episode, we learn the prefix sum. It&#x27;s a simple trick that answers &quot;what&#x27;s the sum from here to there?&quot; in just one step, instead of adding everything up again.</p>
+<p>And don&#x27;t forget to subscribe to Compiled Canvas, so you don&#x27;t miss anything new in tech and the job market. Keep coding, stay consistent, and I&#x27;ll see you in the next one.</p>
+      </details>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <div class="side-sticky">
+      <div class="card mb-3 shadow-sm solve-card"><div class="card-body">
+        <h2 class="h6 fw-bold">Practise this now</h2>
+        <div class="mb-3"><a class="ep-try" href="../02-java-basics/004-reverse-string.html">Reverse String <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../02-java-basics/001-concatenation-of-array.html">Concatenation of Array <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../05-arrays/002-max-consecutive-ones.html">Max Consecutive Ones <span aria-hidden="true">→</span></a></div>
+        <a class="btn btn-brand w-100" href="../05-arrays/index.html">All Arrays problems</a>
+      </div></div>
+      <div class="card mb-3 shadow-sm"><div class="card-body small">
+        <a class="d-block mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch the full DSA series in order</a>
+        <a class="d-block" href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Compiled Canvas</a>
+      </div></div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="06-bit-manipulation-java.html">← Episode 6</a><a class="btn btn-outline-secondary" href="08-prefix-sum-java.html">Episode 8 →</a></div>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-1">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Calculate Time Complexity of an Algorithm | Loops &amp; Recursion | Compiled Canvas</title>
+<meta name="description" content="A five-step method to calculate time and space complexity of any code: loops, nested loops, while loops and recursion trees, with Java examples.">
+<link rel="canonical" href="https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="video.other">
+<meta property="og:url" content="https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html">
+<meta property="og:title" content="How to Calculate Time Complexity of an Algorithm | Loops &amp; Recursion | Compiled Canvas">
+<meta property="og:description" content="A five-step method to calculate time and space complexity of any code: loops, nested loops, while loops and recursion trees, with Java examples.">
+<meta property="og:image" content="https://i.ytimg.com/vi/PxjhjjhEIqw/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "How to Calculate Time Complexity of an Algorithm | Loops & Recursion", "description": "A five-step method to calculate time and space complexity of any code: loops, nested loops, while loops and recursion trees, with Java examples.", "thumbnailUrl": ["https://i.ytimg.com/vi/PxjhjjhEIqw/maxresdefault.jpg", "https://i.ytimg.com/vi/PxjhjjhEIqw/hqdefault.jpg"], "uploadDate": "2026-10-27T02:48:37-07:00", "duration": "PT21M12S", "embedUrl": "https://www.youtube.com/embed/PxjhjjhEIqw", "inLanguage": "en", "publisher": {"@type": "Organization", "name": "Compiled Canvas", "url": "https://compiledcanvas.com/", "logo": {"@type": "ImageObject", "url": "https://compiledcanvas.com/assets/logo.png"}, "sameAs": ["https://www.youtube.com/@compiledcanvas", "https://www.instagram.com/compiledcanvas", "https://github.com/amitxaidev"]}, "hasPart": [{"@type": "Clip", "name": "\"What's the time complexity?\"", "startOffset": 0, "endOffset": 30, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=0"}, {"@type": "Clip", "name": "What this video covers", "startOffset": 30, "endOffset": 93, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=30"}, {"@type": "Clip", "name": "30-second Big O recap", "startOffset": 93, "endOffset": 110, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=93"}, {"@type": "Clip", "name": "The 5-step method for any code", "startOffset": 110, "endOffset": 164, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=110"}, {"@type": "Clip", "name": "Statements, if-else and code in sequence", "startOffset": 164, "endOffset": 225, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=164"}, {"@type": "Clip", "name": "Single loops: O(n) and O(1)", "startOffset": 225, "endOffset": 279, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=225"}, {"@type": "Clip", "name": "Doubling and halving loops: O(log n)", "startOffset": 279, "endOffset": 317, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=279"}, {"@type": "Clip", "name": "Square root loops: O(√n)", "startOffset": 317, "endOffset": 335, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=317"}, {"@type": "Clip", "name": "Nested loops and two inputs (n × m)", "startOffset": 335, "endOffset": 379, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=335"}, {"@type": "Clip", "name": "Dependent loops: why it's still O(n²)", "startOffset": 379, "endOffset": 445, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=379"}, {"@type": "Clip", "name": "The classic trap: O(n), not O(n log n)", "startOffset": 445, "endOffset": 487, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=445"}, {"@type": "Clip", "name": "While loops and two pointers", "startOffset": 487, "endOffset": 509, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=487"}, {"@type": "Clip", "name": "Sliding window and amortized analysis", "startOffset": 509, "endOffset": 577, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=509"}, {"@type": "Clip", "name": "Recursion trees: factorial and binary search", "startOffset": 577, "endOffset": 626, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=577"}, {"@type": "Clip", "name": "Fibonacci: O(2ⁿ) and memoization", "startOffset": 626, "endOffset": 678, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=626"}, {"@type": "Clip", "name": "Merge sort: O(n log n)", "startOffset": 678, "endOffset": 716, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=678"}, {"@type": "Clip", "name": "The 5 recurrences (screenshot this)", "startOffset": 716, "endOffset": 793, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=716"}, {"@type": "Clip", "name": "Hidden costs in Java library calls", "startOffset": 793, "endOffset": 849, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=793"}, {"@type": "Clip", "name": "Space complexity and the call stack", "startOffset": 849, "endOffset": 925, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=849"}, {"@type": "Clip", "name": "3 worked examples", "startOffset": 925, "endOffset": 1020, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=925"}, {"@type": "Clip", "name": "Read the constraints: which Big O you need", "startOffset": 1020, "endOffset": 1080, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=1020"}, {"@type": "Clip", "name": "How to say it in an interview", "startOffset": 1080, "endOffset": 1106, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=1080"}, {"@type": "Clip", "name": "Quiz: 3 snippets", "startOffset": 1106, "endOffset": 1192, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=1106"}, {"@type": "Clip", "name": "Recap and homework", "startOffset": 1192, "endOffset": 1246, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=1192"}, {"@type": "Clip", "name": "Next episode", "startOffset": 1246, "endOffset": 1272, "url": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html?t=1246"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "DSA in Java", "item": "https://compiledcanvas.com/dsa/"}, {"@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://compiledcanvas.com/dsa/episodes/"}, {"@type": "ListItem", "position": 4, "name": "Episode 3", "item": "https://compiledcanvas.com/dsa/episodes/03-calculate-time-complexity.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">AI for Developers <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Episodes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Episode 3</li>
+    </ol></nav>
+    <span class="badge rounded-pill text-bg-dark mb-2">Episode 3 · 21:12 · 27 Oct 2026</span>
+    <h1 class="h2 fw-bold mb-3">How to Calculate Time Complexity of an Algorithm | Loops &amp; Recursion</h1>
+    <div class="ep-player ratio ratio-16x9">
+      <iframe id="ep-video" src="https://www.youtube.com/embed/PxjhjjhEIqw?rel=0" data-video="PxjhjjhEIqw" title="How to Calculate Time Complexity of an Algorithm | Loops &amp; Recursion" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>What this episode covers</h2>
+      <p>&quot;What&#x27;s the time complexity?&quot; is the question that follows almost every coding interview answer. This episode gives you a method so you can work it out instead of guessing.</p>
+<p>The method has five steps: find n, find what repeats, count it, add or multiply, then simplify. We apply it to every loop you&#x27;ll meet, including loops that jump by two, double, halve or stop at a square root. Then nested loops, n × m loops, and the triangle-shaped dependent loop that is still O(n²).</p>
+<p>Recursion gets its own section. We draw recursion trees for factorial, binary search, Fibonacci and merge sort, and collect the five recurrences worth remembering. We also cover the hidden cost of Java library calls, how to use a problem&#x27;s constraints to tell which Big O you need, and how to say your answer out loud in an interview.</p>
+    </section>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>What you'll be able to do</h2>
+      <ul class="mb-0"><li>The five-step method for any piece of code</li>
+<li>Doubling, halving and square root loops</li>
+<li>Dependent nested loops and why they stay O(n²)</li>
+<li>Recursion trees and the five common recurrences</li>
+<li>Reading the constraints to see which Big O will pass</li></ul>
+    </section>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
+      <p class="mb-0">The halving trap. A loop that does n, then n/2, then n/4 of work adds up to O(n), not O(n log n).</p>
+    </section>
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Key moments <small>tap one to jump there</small></h2>
+      <ol class="ep-moments list-unstyled mb-0"><li><a href="?t=0" data-seek="0"><time>0:00</time><span>&quot;What&#x27;s the time complexity?&quot;</span></a></li>
+<li><a href="?t=30" data-seek="30"><time>0:30</time><span>What this video covers</span></a></li>
+<li><a href="?t=93" data-seek="93"><time>1:33</time><span>30-second Big O recap</span></a></li>
+<li><a href="?t=110" data-seek="110"><time>1:50</time><span>The 5-step method for any code</span></a></li>
+<li><a href="?t=164" data-seek="164"><time>2:44</time><span>Statements, if-else and code in sequence</span></a></li>
+<li><a href="?t=225" data-seek="225"><time>3:45</time><span>Single loops: O(n) and O(1)</span></a></li>
+<li><a href="?t=279" data-seek="279"><time>4:39</time><span>Doubling and halving loops: O(log n)</span></a></li>
+<li><a href="?t=317" data-seek="317"><time>5:17</time><span>Square root loops: O(√n)</span></a></li>
+<li><a href="?t=335" data-seek="335"><time>5:35</time><span>Nested loops and two inputs (n × m)</span></a></li>
+<li><a href="?t=379" data-seek="379"><time>6:19</time><span>Dependent loops: why it&#x27;s still O(n²)</span></a></li>
+<li><a href="?t=445" data-seek="445"><time>7:25</time><span>The classic trap: O(n), not O(n log n)</span></a></li>
+<li><a href="?t=487" data-seek="487"><time>8:07</time><span>While loops and two pointers</span></a></li>
+<li><a href="?t=509" data-seek="509"><time>8:29</time><span>Sliding window and amortized analysis</span></a></li>
+<li><a href="?t=577" data-seek="577"><time>9:37</time><span>Recursion trees: factorial and binary search</span></a></li>
+<li><a href="?t=626" data-seek="626"><time>10:26</time><span>Fibonacci: O(2ⁿ) and memoization</span></a></li>
+<li><a href="?t=678" data-seek="678"><time>11:18</time><span>Merge sort: O(n log n)</span></a></li>
+<li><a href="?t=716" data-seek="716"><time>11:56</time><span>The 5 recurrences (screenshot this)</span></a></li>
+<li><a href="?t=793" data-seek="793"><time>13:13</time><span>Hidden costs in Java library calls</span></a></li>
+<li><a href="?t=849" data-seek="849"><time>14:09</time><span>Space complexity and the call stack</span></a></li>
+<li><a href="?t=925" data-seek="925"><time>15:25</time><span>3 worked examples</span></a></li>
+<li><a href="?t=1020" data-seek="1020"><time>17:00</time><span>Read the constraints: which Big O you need</span></a></li>
+<li><a href="?t=1080" data-seek="1080"><time>18:00</time><span>How to say it in an interview</span></a></li>
+<li><a href="?t=1106" data-seek="1106"><time>18:26</time><span>Quiz: 3 snippets</span></a></li>
+<li><a href="?t=1192" data-seek="1192"><time>19:52</time><span>Recap and homework</span></a></li>
+<li><a href="?t=1246" data-seek="1246"><time>20:46</time><span>Next episode</span></a></li></ol>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Full transcript</h2>
+      <details class="ep-transcript"><summary>Read the whole lesson</summary>
+      <p>The interviewer looks at your code, and asks one question. &quot;What&#x27;s the time complexity?&quot; And most people freeze. They guess. &quot;O of n?&quot; &quot;Maybe n squared?&quot; And in an interview, a guess is a red flag.</p>
+<p>Today, that ends. By the end of this video, you&#x27;ll have a step-by-step method to calculate the time and space complexity of any code. Loops, nested loops, while loops, and recursion. No guessing. No memorising. Just counting.</p>
+<p>Welcome back to Compiled Canvas. This is Episode Three of our DSA series. In Episode Two, we learned what Big O means, and how to spot it quickly. Today, we go one level deeper: how to calculate it, and prove it, step by step.</p>
+<p>Here&#x27;s the plan. A five-step method that works on any code. Simple statements, if-else, and code in sequence. Every kind of loop: linear, logarithmic, and square root. Nested loops, including the tricky ones where the inner loop depends on the outer one. While loops and two pointers, and why some loops that look like n squared are actually linear. Recursion, with the recursion tree method, and the five recurrences you need to know. The hidden costs inside library calls. Space complexity, step by step. Three full worked examples. A trick to know the complexity you need, just from the problem&#x27;s constraints. How to say your answer in an interview. And a quiz at the end. So grab a pen and paper, and calculate along with me.</p>
+<p>Let&#x27;s go.</p>
+<p>First, a thirty-second recap. Big O describes how the work grows as the input size, n, grows. We care about the worst case. We drop constants, so two n becomes n. And we drop smaller terms, so n squared plus n becomes n squared.</p>
+<p>Now, the method. Five steps, and it works on any code.</p>
+<p>Step one: find the input size. What is n? The length of the array? The length of a string? The number itself? And if there are two inputs, like two different arrays, give them two names: n and m.</p>
+<p>Step two: find the work that repeats. Loops and recursive calls are where the time goes. A single line outside a loop barely matters.</p>
+<p>Step three: count how many times it repeats, in terms of n. This is the real work, and it&#x27;s what most of this video is about.</p>
+<p>Step four: combine the pieces. Code that runs one after another, you add. Code that&#x27;s nested inside other code, you multiply.</p>
+<p>Step five: simplify. Keep the biggest term, drop the constants, and that&#x27;s your Big O.</p>
+<p>Add for sequence, multiply for nesting. Remember that, and you&#x27;re already halfway there.</p>
+<p>Let&#x27;s start with the building blocks.</p>
+<p>A simple statement is O of one. Assigning a variable, doing arithmetic, comparing two numbers, reading an array element by its index. It takes the same time, no matter how big the input is.</p>
+<p>Ten simple statements in a row? Still O of one. Ten is a constant, and constants disappear.</p>
+<p>Now, if-else. Say the if branch runs a loop over the whole array, and the else branch just returns a value. Which one counts? In the worst case, we assume the more expensive branch runs. So this if-else is O of n. Always take the worse branch.</p>
+<p>And code in sequence. Suppose your method first runs a loop over the array. That&#x27;s O of n. Then it runs a nested loop. That&#x27;s O of n squared. One after the other, so we add: n plus n squared. Then we simplify. The smaller term disappears, and the answer is O of n squared. In sequence, the slowest part wins.</p>
+<p>Now, loops. For any loop, ask two questions. How many times does it run? And how much work happens inside, each time? Then multiply. Iterations, times the work per iteration.</p>
+<p>Loop one. For i from zero to n, i plus plus, with simple work inside. It runs n times, and each time is O of one. That&#x27;s O of n.</p>
+<p>Loop two. The same loop, but i goes up by two each time. Now it runs n over two times. But one half is a constant, so it&#x27;s still O of n. Going up by two, by three, or by ten: any constant step is still linear.</p>
+<p>Loop three. A loop that runs from zero to one hundred, no matter what n is. That&#x27;s a hundred steps, every time. A constant. So it&#x27;s O of one. If the loop&#x27;s limit doesn&#x27;t depend on n, the loop is constant.</p>
+<p>Loop four. i starts at one, and doubles every time: i times equals two. One, two, four, eight, sixteen, all the way up to n. How many steps is that? The number of times you can double one before you reach n. That&#x27;s log base two of n. So this loop is O of log n.</p>
+<p>The same is true when i starts at n, and halves every time. You can only halve n about log n times before you reach one. Doubling or halving means log n. And multiplying by three, or by ten, instead of two? Still log n. In Big O, the base of the log doesn&#x27;t matter.</p>
+<p>Loop five. i starts at one, and the loop runs while i times i is at most n. So i stops at the square root of n. This loop is O of square root of n. You&#x27;ll see it in prime checking. To test if a number is prime, you only need to try divisors up to its square root.</p>
+<p>Now, nested loops. This is where interviews are won and lost.</p>
+<p>The simple case first. An outer loop runs n times, and inside it, an inner loop runs n times. For each of the n outer steps, you do n inner steps. So we multiply: n times n. That&#x27;s O of n squared. Three loops nested, each up to n? n times n times n. O of n cubed.</p>
+<p>But careful. If the outer loop goes over an array of size n, and the inner loop goes over a different array of size m, the answer is O of n times m. Not n squared. Two different inputs get two different letters. This is a very common mistake, and interviewers notice it.</p>
+<p>Now, the tricky one. The inner loop depends on the outer one. The outer loop: i from zero to n. The inner loop: j from i plus one to n. This is how you compare every pair exactly once.</p>
+<p>So how many steps? When i is zero, the inner loop runs about n times. When i is one, n minus one times. Then n minus two, and so on, all the way down to one. Add them all up. n, plus n minus one, plus n minus two, down to one. That sum is n times n plus one, over two. Roughly n squared over two. Drop the half, and it&#x27;s still O of n squared.</p>
+<p>Here&#x27;s a picture that helps. Draw an n by n grid. The full grid is n squared. The dependent loop only fills half of it: a triangle. But half of n squared is still n squared.</p>
+<p>Next. An outer loop that runs n times, and an inner loop that doubles, j times equals two, up to n. The inner loop is log n. So the total is n times log n. O of n log n.</p>
+<p>And now, a classic trap. The outer loop halves: i starts at n, and divides by two each time. The inner loop runs from zero to i. Most people say: the outer loop is log n, the inner loop is n, so the answer is n log n. Wrong!</p>
+<p>Count the real work. The first time, the inner loop runs n times. Then n over two. Then n over four. Then n over eight. n, plus n over two, plus n over four, and so on. That adds up to less than two n. So the whole thing is O of n. Linear!</p>
+<p>The lesson: when the inner loop&#x27;s limit keeps changing, don&#x27;t just multiply. Add up the actual work.</p>
+<p>While loops follow the same rules. Ask: what changes on each step, and when does it stop?</p>
+<p>Take two pointers. Left starts at the beginning, and right starts at the end. On every step, either left moves forward, or right moves back. Once they meet, the loop stops. So there are at most n steps in total. That&#x27;s O of n.</p>
+<p>Now, here&#x27;s one that fools almost everyone: the sliding window. An outer loop moves the right pointer across the array. And inside it, a while loop moves the left pointer forward, to shrink the window. A loop inside a loop, so it must be n squared, right?</p>
+<p>No. Look at what the left pointer does. It only ever moves forward, and it can never go past the end. So across the whole run, the inner while loop moves at most n times in total. Not n times per outer step: n times overall. The right pointer moves n times, and the left pointer moves n times. n plus n. That&#x27;s O of n.</p>
+<p>This is called amortized analysis. Don&#x27;t count how many times the inner loop could run on one step. Count how many times it can run in total. Every element enters the window once, and leaves the window once. That&#x27;s linear.</p>
+<p>Quick pause, before we go further. If you&#x27;re finding this video valuable, hit subscribe to Compiled Canvas, and turn on the bell. It&#x27;s free, it takes one second, and it helps me keep making this complete DSA series for you. Alright, back to it.</p>
+<p>Now, recursion. For recursive code, there&#x27;s one formula. The total time is the number of calls, times the work done in each call.</p>
+<p>And to count the calls, draw a recursion tree. Each call is a box. The calls it makes are its children.</p>
+<p>Example one: factorial. Factorial of n calls factorial of n minus one, which calls factorial of n minus two, all the way down to one. The tree is a straight line, with n calls. Each call does O of one work, a single multiplication. So the time is O of n.</p>
+<p>Example two: recursive binary search. Each call looks at the middle, and makes one call on half the array. n, then n over two, then n over four. About log n calls, each doing O of one work. So it&#x27;s O of log n.</p>
+<p>Example three: simple Fibonacci. Fib of n calls fib of n minus one, and fib of n minus two. Two calls per call. Draw the tree. One call at the top. Then two. Then four. Then eight. The number of calls roughly doubles at every level, and there are about n levels. That&#x27;s about two to the n calls. So it&#x27;s O of two to the n. The exact growth is closer to one point six to the n, but in an interview, O of two to the n is the answer they expect.</p>
+<p>And here&#x27;s the magic. Store each answer the first time you compute it. That&#x27;s called memoization. Now, each Fibonacci value is computed only once. n different values, with O of one work each. Fibonacci drops from O of two to the n, to O of n. That&#x27;s the big idea behind dynamic programming, which we&#x27;ll cover later in this series.</p>
+<p>Example four: merge sort. It splits the array in half, sorts each half recursively, and then merges the two halves in linear time. Draw the tree. At the top, one call working on n elements. On the next level, two calls on n over two each. Still n in total. Next, four calls on n over four. Still n. Every level does n work. And how many levels are there? You keep halving, so there are log n levels. n work, times log n levels. O of n log n.</p>
+<p>That&#x27;s the recursion tree in one sentence: work per level, times the number of levels.</p>
+<p>You&#x27;ll often see the time of recursive code written as a recurrence. T of n means the time for an input of size n. Here are the five you need to know. Pause and screenshot this.</p>
+<p>One. T of n equals T of n minus one, plus constant work. One smaller call, and constant work. That&#x27;s O of n. Like factorial.</p>
+<p>Two. T of n equals T of n over two, plus constant work. One call on half the input. That&#x27;s O of log n. Like binary search.</p>
+<p>Three. T of n equals two T of n over two, plus n. Two calls on the halves, plus linear work to combine them. That&#x27;s O of n log n. Like merge sort.</p>
+<p>Four. T of n equals two T of n minus one, plus constant work. Two calls that only shrink by one. That&#x27;s O of two to the n. Like simple Fibonacci.</p>
+<p>Five. T of n equals T of n minus one, plus n. One smaller call, but linear work every time. n, plus n minus one, plus n minus two, and so on. That&#x27;s O of n squared. Like a recursive selection sort.</p>
+<p>For harder recurrences, there&#x27;s a formula called the Master Theorem. You won&#x27;t need it in most interviews. If you can draw the recursion tree, you can solve almost anything.</p>
+<p>One line of code is not always O of one. Library methods can hide a loop inside. So when you count, count these too.</p>
+<p>Arrays dot sort, and Collections dot sort: O of n log n. Contains, indexOf, or remove on an ArrayList: O of n, because they scan the list. Adding to the end of an ArrayList: O of one, on average. Removing from the front of an ArrayList: O of n, because everything shifts left. HashMap and HashSet get, put and contains: O of one, on average. TreeMap and TreeSet operations: O of log n. Substring, and joining two strings with plus: O of the length of the string. And copying an array: O of n.</p>
+<p>So a loop over n items, that calls contains on an ArrayList inside? That&#x27;s n times n. O of n squared. Swap the ArrayList for a HashSet, and it becomes O of n.</p>
+<p>Now, space. Space complexity measures the extra memory your code needs, as the input grows. Usually, we don&#x27;t count the input itself. We count what you add on top. That&#x27;s called auxiliary space.</p>
+<p>Use the same method, and look for three things.</p>
+<p>One: new data structures. A new array of size n, a HashMap that can hold n entries, a list you build up. Each one is O of n space. A two-dimensional n by n grid is O of n squared.</p>
+<p>Two: a fixed number of variables. A few counters and pointers are O of one space, however big the input gets.</p>
+<p>Three: the recursion stack. Every call that hasn&#x27;t finished yet is waiting on the call stack, and takes memory. So the space of recursion is the maximum depth of the recursion tree. Not the total number of calls.</p>
+<p>That&#x27;s an important difference. Simple Fibonacci makes about two to the n calls, but its deepest path is only n calls long. So its time is O of two to the n, but its space is only O of n. Recursive binary search goes log n deep, so it uses O of log n space, while the loop version uses O of one. And merge sort uses O of n extra space, for the temporary arrays it merges into.</p>
+<p>Let&#x27;s put it all together, with three full examples. Try each one yourself first.</p>
+<p>Example one. Find if any two numbers in an array add up to a target. The code sorts the array first, and then uses two pointers, one from each end. Step by step. The sort is O of n log n. The two-pointer loop is O of n. They run one after the other, so we add: n log n, plus n. Keep the bigger term. The time is O of n log n. And the space? Just two pointers, so O of one extra, apart from the sort itself.</p>
+<p>Example two. Count all the primes up to n. For each number i from two to n, try every divisor from two up to the square root of i. The outer loop runs n times. The inner loop runs up to the square root of i, which is at most the square root of n. Nested, so we multiply: n times the square root of n. The time is O of n root n, and the space is O of one. In Episode Five, we&#x27;ll make this much faster, with the Sieve of Eratosthenes.</p>
+<p>Example three. Generate all the subsets of an array with n elements. Each element is either in, or out. Two choices, n times. So there are two to the n subsets. And copying each subset into the answer takes up to n work. The time is O of n times two to the n. The answer itself holds all those subsets, so the output takes O of n times two to the n space, while the recursion only goes n deep.</p>
+<p>Here&#x27;s a trick that top competitive programmers use every day. You can often tell the complexity you need, just from the problem&#x27;s constraints.</p>
+<p>A computer does roughly ten to the eight, a hundred million, simple operations per second. And most judges give you about one second. So:</p>
+<p>If n is up to about ten, even O of n factorial can pass. Up to about twenty, O of two to the n is fine. Up to about five hundred, O of n cubed. Up to about five thousand, O of n squared. Up to about a million, you need O of n log n. Up to about a hundred million, only O of n. And beyond that, you need O of log n, or O of one. Think binary search, or a math formula.</p>
+<p>So when you see n up to ten to the five, you know instantly: n squared would be ten to the ten steps. Far too slow. You need n log n or better. That one line in the problem tells you which approach to look for, before you write a single line of code.</p>
+<p>And in an interview, don&#x27;t just say a letter. Say it like this.</p>
+<p>&quot;The time complexity is O of n log n, because the sort dominates. The two-pointer pass after it is only linear. And the extra space is O of one.&quot;</p>
+<p>Name the complexity. Say which part dominates. And mention the space, too. That one sentence tells the interviewer you really understand your code, and it earns points even when your solution isn&#x27;t the best one.</p>
+<p>Okay, quiz time. Three snippets. Pause the video, work out the time complexity, and then hit play.</p>
+<p>Question one. The outer loop starts i at one, and doubles it, up to n. Inside, the inner loop runs j from zero to n.</p>
+<p>Question two. A loop over an array of size n. Then, after it, a separate loop over a second array, of size m.</p>
+<p>Question three. A recursive function that does constant work, and then calls itself twice, each time on n over two.</p>
+<p>Ready?</p>
+<p>Question one: O of n log n. The outer loop doubles, so it runs log n times. And each time, the inner loop does n work. Log n, times n.</p>
+<p>Question two: O of n plus m. Two separate loops, one after the other, over two different inputs. So we add them. And we keep both letters, because we don&#x27;t know which one is bigger.</p>
+<p>Question three: O of n. This one&#x27;s sneaky. Two calls, each on half the input. The tree has one call, then two, then four, all the way down to about n calls at the bottom. One, plus two, plus four, up to n, adds up to about two n. Each call does only constant work, so there&#x27;s no n per level. It&#x27;s linear, not n log n.</p>
+<p>How many did you get right? Tell me in the comments: three out of three, two, or one.</p>
+<p>Let&#x27;s recap. Find n. Find what repeats. Count it. Add for sequence, and multiply for nesting. Then simplify. A constant step is linear. Doubling or halving is log n. A square root limit gives root n. For dependent loops, add up the real work. Don&#x27;t just multiply. For amortized loops, count the total moves, not the moves per step. For recursion, it&#x27;s the number of calls, times the work per call. Or, the work per level, times the number of levels. Space is the extra memory, plus the recursion depth. And the constraints tell you the complexity you need.</p>
+<p>Your homework. Pick five problems you&#x27;ve already solved. For each one, write the time and space complexity, line by line, with the five steps. Then check your answer against the official solution. Post your trickiest one in the comments, and I&#x27;ll check it.</p>
+<p>Next episode, we set up our toolkit: Java basics for DSA. Arrays, strings, wrapper classes, and the collections you&#x27;ll use in every single problem, with the complexity of every method you call.</p>
+<p>And don&#x27;t forget to subscribe to Compiled Canvas, so you don&#x27;t miss anything new in tech and the job market. Keep coding, stay consistent, and I&#x27;ll see you in the next one.</p>
+      </details>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <div class="side-sticky">
+      <div class="card mb-3 shadow-sm solve-card"><div class="card-body">
+        <h2 class="h6 fw-bold">Practise this now</h2>
+        <div class="mb-3"><a class="ep-try" href="../01-complexity/004-how-many-numbers-are-smaller-than-the-current-number.html">How Many Numbers Are Smaller Than the Current Number <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../01-complexity/003-find-numbers-with-even-number-of-digits.html">Find Numbers with Even Number of Digits <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../01-complexity/006-number-of-good-pairs.html">Number of Good Pairs <span aria-hidden="true">→</span></a></div>
+        <a class="btn btn-brand w-100" href="../01-complexity/index.html">All Time &amp; Space Complexity problems</a>
+      </div></div>
+      <div class="card mb-3 shadow-sm"><div class="card-body small">
+        <a class="d-block mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch the full DSA series in order</a>
+        <a class="d-block" href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Compiled Canvas</a>
+      </div></div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="02-big-o-time-space-complexity.html">← Episode 2</a><a class="btn btn-outline-secondary" href="04-java-for-dsa.html">Episode 4 →</a></div>
+</div>
+</main>
+<footer class="bg-dark text-white-50 py-4 small">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-2 text-white fw-bold"><img src="../../assets/logo.png" width="24" height="24" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-1">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="link-light me-3" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a class="link-light me-3" href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a class="link-light" href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+        <p class="mt-2 mb-0">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

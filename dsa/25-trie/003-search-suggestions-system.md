@@ -9,7 +9,7 @@ As each character of searchWord is typed, return up to three product names (alph
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/search-suggestions-system/](https://leetcode.com/problems/search-suggestions-system/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/25-trie/003-search-suggestions-system.html](https://amitxaidev.github.io/dsa/25-trie/003-search-suggestions-system.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/25-trie/003-search-suggestions-system.html](https://compiledcanvas.com/dsa/25-trie/003-search-suggestions-system.html)
 
 ## Understanding
 

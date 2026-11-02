@@ -9,7 +9,7 @@ Put + or − in front of every number. Count the sign choices that make the expr
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/target-sum/](https://leetcode.com/problems/target-sum/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/24-dynamic-programming/010-target-sum.html](https://amitxaidev.github.io/dsa/24-dynamic-programming/010-target-sum.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/24-dynamic-programming/010-target-sum.html](https://compiledcanvas.com/dsa/24-dynamic-programming/010-target-sum.html)
 
 ## Understanding
 

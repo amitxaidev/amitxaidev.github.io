@@ -9,7 +9,7 @@ Return the median of two sorted arrays in O(log(m + n)).
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/median-of-two-sorted-arrays/](https://leetcode.com/problems/median-of-two-sorted-arrays/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/13-binary-search/017-median-of-two-sorted-arrays.html](https://amitxaidev.github.io/dsa/13-binary-search/017-median-of-two-sorted-arrays.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/13-binary-search/017-median-of-two-sorted-arrays.html](https://compiledcanvas.com/dsa/13-binary-search/017-median-of-two-sorted-arrays.html)
 
 ## Understanding
 

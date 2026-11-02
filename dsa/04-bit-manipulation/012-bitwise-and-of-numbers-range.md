@@ -9,7 +9,7 @@ Return the bitwise AND of every integer from left to right inclusive.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/bitwise-and-of-numbers-range/](https://leetcode.com/problems/bitwise-and-of-numbers-range/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/04-bit-manipulation/012-bitwise-and-of-numbers-range.html](https://amitxaidev.github.io/dsa/04-bit-manipulation/012-bitwise-and-of-numbers-range.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/04-bit-manipulation/012-bitwise-and-of-numbers-range.html](https://compiledcanvas.com/dsa/04-bit-manipulation/012-bitwise-and-of-numbers-range.html)
 
 ## Understanding
 

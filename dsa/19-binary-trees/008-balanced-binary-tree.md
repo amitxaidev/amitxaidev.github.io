@@ -9,7 +9,7 @@ Decide whether every node's left and right subtree heights differ by at most 1.
 > This is our own short summary. Read the full statement and examples on LeetCode, then try it yourself before opening the hints.
 
 🔗 **Solve it here:** [https://leetcode.com/problems/balanced-binary-tree/](https://leetcode.com/problems/balanced-binary-tree/)  
-🌐 **Interactive version** (progress tracking, hints one by one): [https://amitxaidev.github.io/dsa/19-binary-trees/008-balanced-binary-tree.html](https://amitxaidev.github.io/dsa/19-binary-trees/008-balanced-binary-tree.html)
+🌐 **Interactive version** (progress tracking, hints one by one): [https://compiledcanvas.com/dsa/19-binary-trees/008-balanced-binary-tree.html](https://compiledcanvas.com/dsa/19-binary-trees/008-balanced-binary-tree.html)
 
 ## Understanding
 
