@@ -2,7 +2,7 @@
 
 Opposite ends, same direction, and merging — two indexes instead of nested loops.
 
-📺 **Watch first:** Ep 9 of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
+📺 **Watch first:** [Ep 9](https://youtu.be/nk0jXt4HEuA) of the Compiled Canvas DSA course ([full playlist](https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg)).  
 🌐 **Practise on the website** (tick problems, filter, reveal hints one by one): https://amitxaidev.github.io/dsa/07-two-pointers/  
 🧮 **13 problems** · 🟢 6 Easy · 🟡 6 Medium · 🔴 1 Hard
 
