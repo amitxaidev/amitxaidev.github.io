@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Is Generative AI? AI vs ML vs DL vs Gen AI Explained Simply | Compiled Canvas</title>
+<meta name="description" content="Generative AI explained in simple words: how it differs from AI, machine learning and deep learning, with pictures, runnable Python and a tiny text generator.">
+<link rel="canonical" href="https://compiledcanvas.com/gen-ai/01-what-is-generative-ai.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/gen-ai/01-what-is-generative-ai.html">
+<meta property="og:title" content="What Is Generative AI? AI vs ML vs DL vs Gen AI Explained Simply | Compiled Canvas">
+<meta property="og:description" content="Generative AI explained in simple words: how it differs from AI, machine learning and deep learning, with pictures, runnable Python and a tiny text generator.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/gen-ai/lesson-01.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script><script>addEventListener("DOMContentLoaded",function(){if(window.hljs)document.querySelectorAll("pre code").forEach(function(b){hljs.highlightElement(b)})})</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "What is generative AI? AI vs ML vs DL vs Gen AI", "author": {"@type": "Person", "name": "Amit Singh"}, "publisher": {"@type": "Organization", "name": "Compiled Canvas", "url": "https://compiledcanvas.com/", "logo": {"@type": "ImageObject", "url": "https://compiledcanvas.com/assets/logo.png"}, "sameAs": ["https://www.youtube.com/@compiledcanvas", "https://www.instagram.com/compiledcanvas", "https://github.com/amitxaidev"]}, "image": "https://compiledcanvas.com/assets/gen-ai/lesson-01.jpg", "mainEntityOfPage": "https://compiledcanvas.com/gen-ai/01-what-is-generative-ai.html"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "Generative AI", "item": "https://compiledcanvas.com/gen-ai/"}, {"@type": "ListItem", "position": 3, "name": "Lesson 1", "item": "https://compiledcanvas.com/gen-ai/01-what-is-generative-ai.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+      <img src="../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+<section class="ai-hero"><div class="container"><p class="ai-trail"><a href="../index.html">Home</a> / <a href="index.html">Generative AI</a> / Lesson 1</p>
+<span class="ai-pill">Lesson 1 · Foundations</span><h1>What is generative AI?</h1>
+<p class="lead">AI vs ML vs deep learning vs generative AI, in simple words, with moving pictures and code you can copy or download.</p></div></section><div class="container py-4"><div class="row g-4"><aside class="col-lg-3 d-none d-lg-block"><nav class="ai-toc"><a href="#s1">Four circles</a><a href="#s2">Rules</a><a href="#s3">Machine learning</a><a href="#s4">Deep learning</a><a href="#s5">Generative AI</a><a href="#s6">One word at a time</a><a href="#s7">Build it</a><a href="#s8">What it is not</a><a href="#s9">Quiz</a></nav></aside><div class="col-lg-9"><a class="ai-video video-card" href="https://youtu.be/PiPeKwAzh7w" target="_blank" rel="noopener"><div class="ratio ratio-16x9"><img src="../assets/gen-ai/lesson-01.jpg" alt="Lesson 1 video thumbnail" loading="lazy"></div><span>▶ Watch this lesson on YouTube</span></a><section class="ai-sec fade-up" id="s1"><h2><span>1</span>The four circles</h2><div class="row g-4 align-items-center"><div class="col-md-6"><svg class="ai-circles" viewBox="0 0 420 420" role="img" aria-label="Four circles, one inside the other: AI, machine learning, deep learning, generative AI">
+  <g class="ai-pop" style="--d:.1s"><circle cx="210" cy="210" r="200" fill="#3a2a1c"/><text x="210" y="50" text-anchor="middle" fill="#fff">AI</text></g>
+  <g class="ai-pop" style="--d:.7s"><circle cx="210" cy="250" r="155" fill="#6b3518"/><text x="210" y="134" text-anchor="middle" fill="#fff">Machine learning</text></g>
+  <g class="ai-pop" style="--d:1.3s"><circle cx="210" cy="288" r="112" fill="#c94c0a"/><text x="210" y="214" text-anchor="middle" fill="#fff">Deep learning</text></g>
+  <g class="ai-pop" style="--d:1.9s"><circle cx="210" cy="322" r="68" fill="#ffc629"/><text x="210" y="318" text-anchor="middle" fill="#0e0d0c">Generative</text><text x="210" y="342" text-anchor="middle" fill="#0e0d0c">AI</text></g>
+</svg></div><div class="col-md-6">
+<p>Think of your address. India holds Maharashtra, Maharashtra holds Mumbai, and Mumbai holds your street. These four words work the same way.</p>
+<ul class="ai-list"><li><strong>AI:</strong> any machine that does something that looks smart.</li><li><strong>Machine learning:</strong> it learns from examples.</li><li><strong>Deep learning:</strong> machine learning with many layers.</li><li><strong>Generative AI:</strong> it creates new things.</li></ul>
+<p class="ai-note">All generative AI you use today is AI. But not all AI is generative AI.</p></div></div></section><section class="ai-sec fade-up" id="s2"><h2><span>2</span>AI can be just rules</h2><p>AI doesn't have to learn. Here a developer wrote the rule by hand: if the email says "free money", it's spam.</p><div class="ai-code"><div class="ai-code-head"><span>spam_filter.py</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/spam_filter.py" download>Download</a></span></div><pre><code class="language-python">def is_spam(email):
+    email = email.lower()
+    if &quot;free money&quot; in email:
+        return True
+    return False
+
+print(is_spam(&quot;FREE MONEY now!&quot;))  # True
+print(is_spam(&quot;Fr33 m0ney now!&quot;))  # False</code></pre></div>
+<p class="ai-note">The rule works until a spammer writes <code>Fr33 m0ney</code>. Then you need another rule, and another, forever.</p></section><section class="ai-sec fade-up" id="s3"><h2><span>3</span>Machine learning finds the rules</h2><svg class="ai-flip" viewBox="0 0 640 210" role="img" aria-label="Normal programming turns rules and data into answers. Machine learning turns data and answers into rules.">
+  <g class="ai-step" style="--d:.1s"><rect x="10" y="20" width="110" height="60" rx="10"/><text x="65" y="56">Rules</text></g><text class="ai-plus" x="140" y="58">+</text>
+  <g class="ai-step" style="--d:.3s"><rect x="160" y="20" width="110" height="60" rx="10"/><text x="215" y="56">Data</text></g>
+  <path class="ai-arrow" pathLength="1" d="M285 50H415"/><path class="ai-head ai-step" style="--d:1s" d="M430 50l-18-11v22Z"/>
+  <g class="ai-step ai-out" style="--d:1.1s"><rect x="445" y="20" width="185" height="60" rx="10"/><text x="537" y="56">Answers</text></g>
+  <g class="ai-step" style="--d:1.5s"><rect x="10" y="130" width="110" height="60" rx="10"/><text x="65" y="166">Data</text></g><text class="ai-plus" x="140" y="168">+</text>
+  <g class="ai-step" style="--d:1.7s"><rect x="160" y="130" width="110" height="60" rx="10"/><text x="215" y="166">Answers</text></g>
+  <path class="ai-arrow ai-arrow2" pathLength="1" d="M285 160H415"/><path class="ai-head ai-step" style="--d:2.4s" d="M430 160l-18-11v22Z"/>
+  <g class="ai-step ai-win" style="--d:2.5s"><rect x="445" y="130" width="185" height="60" rx="10"/><text x="537" y="166">Rules</text></g>
+</svg>
+<p>Four students tell us how long they studied and what they scored. Nobody tells the machine the rule.</p>
+<div class="row g-4 align-items-center"><div class="col-lg-7"><figure class="ai-learn" id="aiLearn">
+<svg class="ai-graph" viewBox="0 0 520 320" role="img" aria-label="A line tilts until it fits four dots while the error falls to zero">
+  <path d="M50 20V280H500" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="500" y="308" text-anchor="end" fill="currentColor">Hours studied</text><text x="56" y="16" fill="currentColor">Marks</text>
+  <g data-gaps stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 5"></g>
+  <line data-line x1="50" y1="280" x2="490" y2="228" stroke="#e8590c" stroke-width="5" stroke-linecap="round"/>
+  <g fill="#d99e00"><circle cx="138" cy="228" r="8"/><circle cx="226" cy="176" r="8"/><circle cx="314" cy="124" r="8"/><circle cx="402" cy="72" r="8"/></g>
+</svg>
+<figcaption><span>marks = <b data-slope>4.0</b> × hours</span><span>Error: <b data-err>30.0</b></span><button class="btn btn-sm btn-outline-secondary" type="button" data-replay>Replay</button></figcaption>
+</figure></div><div class="col-lg-5"><ol class="ai-list"><li><strong>Guess</strong> a line.</li><li><strong>Check</strong> how far it is from the dots. That gap is the error.</li><li><strong>Fix</strong> the line a little.</li><li>Repeat until the error stops shrinking.</li></ol><p class="ai-note">It found the rule by itself: marks = 20 × hours.</p></div></div>
+<div class="ai-code"><div class="ai-code-head"><span>learn_marks.py</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/learn_marks.py" download>Download</a></span></div><pre><code class="language-python">from sklearn.linear_model import LinearRegression
+
+hours = [[1], [2], [3], [4]]
+marks = [20, 40, 60, 80]
+
+model = LinearRegression()
+model.fit(hours, marks)            # it learns here
+
+print(model.predict([[5]]))        # [100.]</code></pre></div></section><section class="ai-sec fade-up" id="s4"><h2><span>4</span>Deep learning is just many layers</h2><p>Hours and marks are easy. Now try writing rules for a cat in a photo: two ears, whiskers, lying down, half behind a sofa. It's impossible.</p><p>Deep learning passes the photo through layers, like a team on a factory line. Nobody tells each layer what to look for. It learns that from examples.</p><div class="ai-flow">
+  <div style="--d:.1s"><strong>Photo</strong><span>just numbers</span></div><b>→</b>
+  <div style="--d:.6s"><strong>Layer 1</strong><span>finds edges</span></div><b>→</b>
+  <div style="--d:1.1s"><strong>Layer 2</strong><span>finds ears and eyes</span></div><b>→</b>
+  <div class="ai-hot" style="--d:1.6s"><strong>Answer</strong><span>cat</span></div>
+</div></section><section class="ai-sec fade-up" id="s5"><h2><span>5</span>Generative AI creates</h2><svg class="ai-flip" viewBox="0 0 640 210" role="img" aria-label="Predictive AI turns a photo into the word cat. Generative AI turns the word cat into a new photo.">
+  <text class="ai-cap" x="10" y="14">Predictive AI</text>
+  <g class="ai-step" style="--d:.1s"><rect x="10" y="26" width="150" height="60" rx="10"/><text x="85" y="62">Photo</text></g>
+  <path class="ai-arrow" pathLength="1" d="M178 56H400"/><path class="ai-head ai-step" style="--d:1s" d="M416 56l-18-11v22Z"/>
+  <g class="ai-step ai-out" style="--d:1.1s"><rect x="430" y="26" width="200" height="60" rx="10"/><text x="530" y="62">"cat"</text></g>
+  <text class="ai-cap" x="10" y="124">Generative AI</text>
+  <g class="ai-step" style="--d:1.5s"><rect x="10" y="136" width="150" height="60" rx="10"/><text x="85" y="172">"cat"</text></g>
+  <path class="ai-arrow ai-arrow2" pathLength="1" d="M178 166H400"/><path class="ai-head ai-step" style="--d:2.4s" d="M416 166l-18-11v22Z"/>
+  <g class="ai-step ai-win" style="--d:2.5s"><rect x="430" y="136" width="200" height="60" rx="10"/><text x="530" y="172">New photo</text></g>
+</svg><p>It can create text, images, code, audio and video.</p></section><section class="ai-sec fade-up" id="s6"><h2><span>6</span>It writes one word at a time</h2><p>A chatbot keeps asking one question: <strong>what word is likely to come next?</strong> Press the button and watch a tiny model do it.</p><div class="ai-try" id="aiTry">
+  <p class="small text-body-secondary mb-2">Our tiny model has read only this: <em>the cat sat on the mat the cat ran to the mat</em></p>
+  <p class="ai-try-out" aria-live="polite">the</p>
+  <div class="d-flex flex-wrap gap-2 align-items-center">
+    <button class="btn btn-brand btn-sm" type="button" data-next>Add next word</button>
+    <button class="btn btn-outline-secondary btn-sm" type="button" data-reset>Start again</button>
+    <span class="small text-body-secondary" data-why></span>
+  </div>
+</div>
+<script>
+(function () {
+  var box = document.getElementById('aiTry'), out = box.querySelector('.ai-try-out'), why = box.querySelector('[data-why]');
+  var w = 'the cat sat on the mat the cat ran to the mat'.split(' '), next = {};
+  w.slice(0, -1).forEach(function (a, i) { (next[a] = next[a] || []).push(w[i + 1]); });
+  var line = ['the'];
+  box.querySelector('[data-next]').addEventListener('click', function () {
+    var last = line[line.length - 1], opts = next[last];
+    var pick = opts[Math.floor(Math.random() * opts.length)];
+    line.push(pick); out.textContent = line.join(' ');
+    why.textContent = 'After "' + last + '" it had seen: ' + Array.from(new Set(opts)).join(', ');
+  });
+  box.querySelector('[data-reset]').addEventListener('click', function () { line = ['the']; out.textContent = 'the'; why.textContent = ''; });
+})();
+</script><p class="mt-3">Press it a few times. You'll often get a sentence that was never in its text, like <em>the cat sat on the cat</em>. That's generating.</p></section><section class="ai-sec fade-up" id="s7"><h2><span>7</span>Build it yourself</h2><p>Here's that tiny generator in Python. Copy it, run it, then change the text to your own sentences.</p><div class="ai-code"><div class="ai-code-head"><span>tiny_generator.py</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/tiny_generator.py" download>Download</a></span></div><pre><code class="language-python">import random
+
+text = (&quot;the cat sat on the mat &quot;
+        &quot;the cat ran to the mat&quot;)
+words = text.split()
+
+# Training: write down which word came after which
+next_words = {}
+for a, b in zip(words, words[1:]):
+    next_words.setdefault(a, []).append(b)
+
+# Generating: keep picking a word that followed the last one
+random.seed(7)
+word = &quot;the&quot;
+output = [word]
+
+for _ in range(5):
+    word = random.choice(next_words[word])
+    output.append(word)
+
+print(&quot; &quot;.join(output))  # the cat sat on the cat</code></pre></div><p class="ai-note">A real chatbot uses the same idea at an enormous scale, with a large language model trained on huge amounts of text.</p></section><section class="ai-sec fade-up" id="s8"><h2><span>8</span>What it is not</h2><div class="ai-grid"><div><strong>Not a search engine</strong><p>It generates an answer. It doesn't look one up.</p></div><div><strong>Not always right</strong><p>It can sound sure and still invent things. That's a hallucination.</p></div><div><strong>Not a person</strong><p>It doesn't feel anything. It predicts likely words.</p></div><div><strong>Not always up to date</strong><p>It knows what it was trained on, unless it's connected to live tools.</p></div></div><p class="ai-note">Use it like a very fast junior: helpful, but check its work.</p></section><section class="ai-sec fade-up" id="s9"><h2><span>9</span>Quick quiz</h2><details class="ai-q"><summary>1. An app blocks emails using rules a developer wrote by hand. Is that machine learning?</summary><p>No. Nobody learned anything. It&#x27;s just rules.</p></details><details class="ai-q"><summary>2. Is all machine learning also AI?</summary><p>Yes. Machine learning sits inside AI.</p></details><details class="ai-q"><summary>3. One model says if a photo is a cat. Another draws a new cat. Which one is generative?</summary><p>The one that draws. It creates something new.</p></details></section>
+<div class="ai-next"><div><span>Up next</span><strong>How LLMs work: tokens, embeddings and how a model picks the next word</strong></div><a class="btn btn-brand" href="index.html">See all lessons</a></div></div></div></div><script>
+(function () {
+  // play each diagram when it scrolls into view
+  var play = function (el) { el.classList.add('ai-play'); if (el.id === 'aiLearn') learn(); };
+  var targets = document.querySelectorAll('.ai-circles, .ai-flip, .ai-flow, #aiLearn');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) { play(x.target); io.unobserve(x.target); } }); }, { threshold: .35 });
+    targets.forEach(function (t) { io.observe(t); });
+  } else targets.forEach(play);
+  // the line that learns: real error against the four students
+  var fig = document.getElementById('aiLearn'), line = fig.querySelector('[data-line]'), gaps = fig.querySelector('[data-gaps]');
+  var D = [[1, 20], [2, 40], [3, 60], [4, 80]], X = function (h) { return 50 + h * 88; }, Y = function (m) { return 280 - m * 2.6; }, raf;
+  var draw = function (s) {
+    line.setAttribute('y2', Y(5 * s)); var err = 0, g = '';
+    D.forEach(function (d) { err += Math.abs(d[1] - s * d[0]); g += '<line x1="' + X(d[0]) + '" x2="' + X(d[0]) + '" y1="' + Y(d[1]) + '" y2="' + Y(s * d[0]) + '"/>'; });
+    gaps.innerHTML = g; fig.querySelector('[data-slope]').textContent = s.toFixed(1); fig.querySelector('[data-err]').textContent = (err / 4).toFixed(1);
+  };
+  function learn() {
+    cancelAnimationFrame(raf); var t0 = null;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { draw(20); return; }
+    var step = function (t) { t0 = t0 || t; var k = Math.min(1, (t - t0) / 3500), q = 1 - Math.pow(1 - k, 3); draw(4 + 16 * q); if (k < 1) raf = requestAnimationFrame(step); };
+    raf = requestAnimationFrame(step);
+  }
+  draw(4);
+  fig.querySelector('[data-replay]').addEventListener('click', learn);
+  // one-click copy
+  document.querySelectorAll('.ai-copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var txt = b.closest('.ai-code').querySelector('code').textContent, done = function () { b.textContent = 'Copied!'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); },
+        old = function () { var a = document.createElement('textarea'); a.value = txt; a.style.position = 'fixed'; a.style.opacity = '0'; document.body.appendChild(a); a.select(); document.execCommand('copy'); a.remove(); done(); };
+      if (navigator.clipboard) navigator.clipboard.writeText(txt).then(done, old); else old();
+    });
+  });
+})();
+</script>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../dsa/index.html">DSA in Java</a>
+        <a href="../dsa/episodes/index.html">All episodes</a>
+        <a href="../gen-ai/index.html">Generative AI</a>
+        <a href="../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../index.html#how">How it works</a>
+        <a href="../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

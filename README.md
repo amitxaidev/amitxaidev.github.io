@@ -22,8 +22,8 @@ Short videos with motion graphics that show what the code is really doing, and a
 | Course | What you'll learn | Status | Start |
 |---|---|:-:|---|
 | **[DSA in Java](./dsa)** | Data structures and algorithms from Big O to dynamic programming, with LeetCode practice for every topic. | ![Live](https://img.shields.io/badge/-Live-198754) | [Open on GitHub →](./dsa) · [website](https://compiledcanvas.com/dsa/) |
+| **[Generative AI](./gen-ai)** | How AI works, then build chatbots, RAG apps and AI agents in Python, from zero. | ![Live](https://img.shields.io/badge/-Live-198754) | [Open on GitHub →](./gen-ai) · [website](https://compiledcanvas.com/gen-ai/) |
 | **Java** | Core Java from basics to collections, streams and multithreading. | ![Soon](https://img.shields.io/badge/-Coming%20soon-FF8A1F) | — |
-| **AI for Developers** | Use LLMs, prompts and AI tools in real coding work. | ![Soon](https://img.shields.io/badge/-Coming%20soon-FF8A1F) | — |
 | **Python** | Python from zero, written the way interviewers expect. | ![Soon](https://img.shields.io/badge/-Coming%20soon-FF8A1F) | — |
 | **SQL** | Queries, joins, indexes and the classic interview questions. | ![Soon](https://img.shields.io/badge/-Coming%20soon-FF8A1F) | — |
 | **Spring Boot** | Build and ship REST APIs the way companies do. | ![Soon](https://img.shields.io/badge/-Coming%20soon-FF8A1F) | — |
