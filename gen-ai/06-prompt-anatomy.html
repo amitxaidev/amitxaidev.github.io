@@ -64,7 +64,7 @@
 </nav>
 <main class="flex-grow-1">
 <section class="ai-hero"><div class="container"><p class="ai-trail"><a href="../index.html">Home</a> / <a href="index.html">Generative AI</a> / Lesson 6</p>
-<span class="ai-pill">Lesson 6 · Python</span><h1>Prompt Anatomy: The 5 Parts of a Great Prompt</h1><p class="lead">How to write a good prompt: the five parts of a great prompt (role, instructions, context, examples and output format), with a prompt builder in Python.</p></div></section><div class="container py-4"><div class="row g-4"><aside class="col-lg-3 d-none d-lg-block"><nav class="ai-toc"><a href="#s1">Same model, different result</a><a href="#s2">Why vague prompts fail</a><a href="#s3">The five parts</a><a href="#s4">Before and after</a><a href="#s5">A prompt builder in Python</a><a href="#s6">Mistakes to avoid</a></nav></aside><div class="col-lg-9"><div class="ai-video" id="ai-wait" data-out="2026-11-14T10:00:00+05:30" data-vid="9crw9ZEzzJs"><div class="ratio ratio-16x9"><img src="../assets/gen-ai/lesson-06.jpg" alt="Lesson 6 video thumbnail" loading="lazy"></div><span>🎬 The video comes out on 14 Nov at 10:00 AM IST. The notes and code are ready now.</span></div><script>(function(){var w=document.getElementById('ai-wait');if(!w.dataset.vid||Date.now()<new Date(w.dataset.out).getTime())return;var a=document.createElement('a');a.className='ai-video video-card';a.href='https://youtu.be/'+w.dataset.vid;a.target='_blank';a.rel='noopener';a.innerHTML=w.innerHTML;a.querySelector('span').textContent='▶ Watch this lesson on YouTube';w.replaceWith(a);})();</script><section class="ai-sec fade-up" id="s1"><h2><span>1</span>Same model, different result</h2><p>Two people ask the same AI for help with an interview.</p><p>One gets a vague, generic answer that helps nobody.</p><p>The other gets exactly what they need, in the right format, the first time. The difference isn&#x27;t the model. It&#x27;s the prompt.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">SAME AI, TWO PEOPLE</div><div class="ai-v-cards"><span class="ai-v-card c-ink2" style="--i:0">PERSON A</span><span class="ai-v-card c-ink2" style="--i:1">PERSON B</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">PERSON A</div><div class="ai-v-cards"><span class="ai-v-card c-signal" style="--i:0">&quot;Help me with Java.&quot;</span></div><div class="ai-v-note c-signal">VAGUE IN, VAGUE OUT</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">PERSON B</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">ROLE · TASK · CONTEXT · EXAMPLE · FORMAT</span></div><div class="ai-v-note c-acid">IT&#x27;S THE PROMPT</div></figure></div></section><section class="ai-sec fade-up" id="s2"><h2><span>2</span>Why vague prompts fail</h2><p>Take this prompt. Write about Java.</p><p>What level? How long? For whom? In what format? The model doesn&#x27;t know, so it guesses.</p><p>And when it guesses, you get the most average answer possible. A great prompt removes the guessing.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">IT HAS TO GUESS</div><div class="ai-v-cards"><span class="ai-v-card c-signal" style="--i:0">LEVEL?</span><span class="ai-v-card c-signal" style="--i:1">LENGTH?</span><span class="ai-v-card c-signal" style="--i:2">FOR WHOM?</span><span class="ai-v-card c-signal" style="--i:3">FORMAT?</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-big c-bone">REMOVE</div><div class="ai-v-big c-acid">THE GUESSING</div></figure></div></section><section class="ai-sec fade-up" id="s3"><h2><span>3</span>The five parts</h2><p>A great prompt has five parts. Role, instructions, context, examples, and output format.</p><p>Part one, the role. Tell it who to be. You are a senior Java interviewer. That sets the tone and the expertise.</p><p>Part two, the instructions. Say exactly what to do, with clear verbs. Ask me three questions on hash maps, one at a time.</p><p>Part three, the context. The background it can&#x27;t know. I&#x27;m a fresher with six months of Java, interviewing next week.</p><p>Part four, examples. Show one sample of what good looks like. The model copies the style. We&#x27;ll go deeper on this in the next episode.</p><p>Part five, the output format. Say exactly how the answer should look. A numbered list, a table, or JSON.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">5 PARTS</div><div class="ai-v-cards"><span class="ai-v-card c-ink2" style="--i:0">ROLE</span><span class="ai-v-card c-ink2" style="--i:1">INSTRUCTIONS</span><span class="ai-v-card c-ink2" style="--i:2">CONTEXT</span><span class="ai-v-card c-ink2" style="--i:3">EXAMPLES</span><span class="ai-v-card c-ink2" style="--i:4">OUTPUT FORMAT</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">1. ROLE</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">&quot;You are a senior Java interviewer.&quot;</span></div><div class="ai-v-note c-acid">WHO TO BE</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">2. INSTRUCTIONS</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">&quot;Ask me 3 HashMap questions, one at a time.&quot;</span></div><div class="ai-v-note c-acid">WHAT TO DO</div></figure></div></section><section class="ai-sec fade-up" id="s4"><h2><span>4</span>Before and after</h2><p>Here&#x27;s the before. Help me prepare for an interview.</p><p>And the after. All five parts, in five short lines. It&#x27;s longer, but it takes thirty seconds to write.</p><p>The first gives you a generic essay. The second gives you a practice interview, at your level, in the shape you wanted.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">BEFORE</div><div class="ai-v-cards"><span class="ai-v-card c-signal" style="--i:0">Help me prepare for an interview.</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">AFTER</div><div class="ai-v-cards"><span class="ai-v-card c-ink2" style="--i:0">Role: senior Java interviewer</span><span class="ai-v-card c-ink2" style="--i:1">Task: ask me 3 HashMap questions</span><span class="ai-v-card c-ink2" style="--i:2">Context: fresher, interview next week</span><span class="ai-v-card c-ink2" style="--i:3">Example: Q: What is a hash collision?</span><span class="ai-v-card c-ink2" style="--i:4">Format: numbered list, one line each</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">THE RESULT</div><div class="ai-v-cards"><span class="ai-v-card c-signal" style="--i:0">GENERIC ESSAY</span><span class="ai-v-card c-acid" style="--i:1">PRACTICE INTERVIEW</span></div></figure></div></section><section class="ai-sec fade-up" id="s5"><h2><span>5</span>A prompt builder in Python</h2><p class="ai-note">Type it out yourself, or copy it. It runs with <code>python3 prompt_builder.py</code>.</p><div class="ai-code"><div class="ai-code-head"><span>prompt_builder.py</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/prompt_builder.py" download>Download</a></span></div><pre><code class="language-python">def build_prompt(role, task, context, example, fmt):
+<span class="ai-pill">Lesson 6 · Python</span><h1>Prompt Anatomy: The 5 Parts of a Great Prompt</h1><p class="lead">How to write a good prompt: the five parts of a great prompt (role, instructions, context, examples and output format), with a prompt builder in Python.</p></div></section><div class="container py-4"><div class="row g-4"><aside class="col-lg-3 d-none d-lg-block"><nav class="ai-toc"><a href="#s1">Same model, different result</a><a href="#s2">Why vague prompts fail</a><a href="#s3">The five parts</a><a href="#s4">Before and after</a><a href="#s5">A prompt builder in Python</a><a href="#s6">Mistakes to avoid</a></nav></aside><div class="col-lg-9"><div class="ai-start"><div class="ai-video" id="ai-wait" data-out="2026-11-14T10:00:00+05:30" data-vid="9crw9ZEzzJs"><div class="ratio ratio-16x9"><img src="../assets/gen-ai/lesson-06.jpg" alt="Lesson 6 video thumbnail" loading="lazy"></div><span>🎬 Video out 14 Nov, 10:00 AM IST</span></div><div class="ai-plan"><p><b>1 hands-on demos</b> and <b>1 Python programs</b> you can run on this page. Nothing to install.</p><ol><li><a href="#s1">Same model, different result</a></li><li><a href="#s2">Why vague prompts fail</a></li><li><a href="#s3">The five parts</a> <b>try it</b></li><li><a href="#s4">Before and after</a></li><li><a href="#s5">A prompt builder in Python</a> <b class=py>run code</b></li><li><a href="#s6">Mistakes to avoid</a></li></ol></div></div><script>(function(){var w=document.getElementById('ai-wait');if(!w.dataset.vid||Date.now()<new Date(w.dataset.out).getTime())return;var a=document.createElement('a');a.className='ai-video video-card';a.href='https://youtu.be/'+w.dataset.vid;a.target='_blank';a.rel='noopener';a.innerHTML=w.innerHTML;a.querySelector('span').textContent='▶ Watch this lesson on YouTube';w.replaceWith(a);})();</script><section class="ai-sec fade-up" id="s1"><h2><span>1</span>Same model, different result</h2><p>Two people ask the same AI for help with an interview.</p><p>One gets a vague, generic answer that helps nobody.</p><p>The other gets exactly what they need, in the right format, the first time. The difference isn&#x27;t the model. It&#x27;s the prompt.</p><div class="ai-keys"><span style="--i:0">PERSON A</span><span style="--i:1">PERSON B</span><span style="--i:2">&quot;Help me with Java.&quot;</span><span style="--i:3">VAGUE IN, VAGUE OUT</span><span style="--i:4">ROLE · TASK · CONTEXT · EXAMPLE · FORMAT</span><span style="--i:5">IT&#x27;S THE PROMPT</span></div></section><section class="ai-sec fade-up" id="s2"><h2><span>2</span>Why vague prompts fail</h2><p>Take this prompt. Write about Java.</p><p>What level? How long? For whom? In what format? The model doesn&#x27;t know, so it guesses.</p><p>And when it guesses, you get the most average answer possible. A great prompt removes the guessing.</p><div class="ai-keys"><span style="--i:0">LEVEL?</span><span style="--i:1">LENGTH?</span><span style="--i:2">FOR WHOM?</span><span style="--i:3">FORMAT?</span><span style="--i:4">REMOVE</span><span style="--i:5">THE GUESSING</span></div></section><section class="ai-sec fade-up" id="s3"><h2><span>3</span>The five parts</h2><p>A great prompt has five parts. Role, instructions, context, examples, and output format.</p><p>Part one, the role. Tell it who to be. You are a senior Java interviewer. That sets the tone and the expertise.</p><p>Part two, the instructions. Say exactly what to do, with clear verbs. Ask me three questions on hash maps, one at a time.</p><p>Part three, the context. The background it can&#x27;t know. I&#x27;m a fresher with six months of Java, interviewing next week.</p><p>Part four, examples. Show one sample of what good looks like. The model copies the style. We&#x27;ll go deeper on this in the next episode.</p><p>Part five, the output format. Say exactly how the answer should look. A numbered list, a table, or JSON.</p><div class="lab" data-lab="prompt"><div class="lab-head"><span class="lab-tag">Try it</span>Build a prompt: switch parts on and off</div><div class="lab-parts"><label><input type="checkbox" checked data-p="Role"> <b>Role</b><input class="form-control form-control-sm" value="You are a senior Java interviewer."></label><label><input type="checkbox" checked data-p="Task"> <b>Instructions</b><input class="form-control form-control-sm" value="Ask me 3 questions on HashMap, one at a time."></label><label><input type="checkbox" checked data-p="Context"> <b>Context</b><input class="form-control form-control-sm" value="I am a fresher with 6 months of Java. My interview is next week."></label><label><input type="checkbox" data-p="Example"> <b>Example</b><input class="form-control form-control-sm" value="Q: What happens when two keys have the same hash?"></label><label><input type="checkbox" data-p="Format"> <b>Format</b><input class="form-control form-control-sm" value="A numbered list. Wait for my answer after each question."></label></div><div class="lab-meter"><span data-bar></span></div><div class="lab-result" data-score aria-live="polite"></div><div class="ai-code"><div class="ai-code-head"><span>your prompt</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button></span></div><pre><code data-prompt-out></code></pre></div></div></section><section class="ai-sec fade-up" id="s4"><h2><span>4</span>Before and after</h2><p>Here&#x27;s the before. Help me prepare for an interview.</p><p>And the after. All five parts, in five short lines. It&#x27;s longer, but it takes thirty seconds to write.</p><p>The first gives you a generic essay. The second gives you a practice interview, at your level, in the shape you wanted.</p><div class="ai-keys"><span style="--i:0">Help me prepare for an interview.</span><span style="--i:1">Role: senior Java interviewer</span><span style="--i:2">Task: ask me 3 HashMap questions</span><span style="--i:3">Context: fresher, interview next week</span><span style="--i:4">Example: Q: What is a hash collision?</span><span style="--i:5">Format: numbered list, one line each</span><span style="--i:6">GENERIC ESSAY</span><span style="--i:7">PRACTICE INTERVIEW</span></div></section><section class="ai-sec fade-up" id="s5"><h2><span>5</span>A prompt builder in Python</h2><p class="ai-note">Edit the code and press <b>Run</b> to try it right here, or copy it and run <code>python3 prompt_builder.py</code>.</p><div class="ai-code"><div class="ai-code-head"><span>prompt_builder.py <em>· click to edit</em></span><span class="ai-code-btns"><button type="button" class="ai-run">▶ Run</button><button type="button" class="ai-copy">Copy</button><a href="code/prompt_builder.py" download>Download</a></span></div><pre><code class="language-python" contenteditable="plaintext-only" spellcheck="false">def build_prompt(role, task, context, example, fmt):
     return (f&quot;Role: {role}\n&quot;
             f&quot;Task: {task}\n&quot;
             f&quot;Context: {context}\n&quot;
@@ -79,7 +79,7 @@ print(build_prompt(
 Task: ask me 3 HashMap questions
 Context: I am a fresher, ...
 Example: Q: What is a hash collision?
-Format: numbered list</pre></div><p>In a real app, you don&#x27;t type prompts by hand every time. You build them in code.</p><p>This function takes the five parts, and joins them into one clear prompt, one part per line.</p><p>Now every prompt your app sends has all five parts. You can&#x27;t forget one.</p></section><section class="ai-sec fade-up" id="s6"><h2><span>6</span>Mistakes to avoid</h2><p>Mistake one. Asking for five different things in one prompt. Split big jobs into steps.</p><p>Mistake two. Instructions that fight each other. Be brief, and explain everything in detail.</p><p>Mistake three. Pasting text with no clear edges. Wrap it in markers, like three quotes, so the model knows where it starts and ends.</p><p>Mistake four. Not giving it a way out. Tell it to say I don&#x27;t know when it isn&#x27;t sure. That cuts down on made-up answers.</p><p>Your turn. Pause. Here&#x27;s a prompt. Summarise this. Which two parts would you add first?</p><p>The output format, like three bullet points. And the context, like who the summary is for.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">1. TOO MANY TASKS</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">ONE JOB PER PROMPT</span></div><div class="ai-v-note c-acid">SPLIT INTO STEPS</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">2. CONTRADICTIONS</div><div class="ai-v-cards"><span class="ai-v-card c-signal" style="--i:0">&quot;Be brief&quot; + &quot;explain everything&quot;</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">3. NO EDGES</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">&quot;&quot;&quot; your pasted text &quot;&quot;&quot;</span></div><div class="ai-v-note c-acid">USE DELIMITERS</div></figure></div></section><section class="ai-sec fade-up" id="s7"><h2><span>7</span>Cheat sheet</h2><ul class="ai-list"><li>Vague in, vague out</li><li>Role: who to be</li><li>Instructions: what to do</li><li>Context: what it can&#x27;t know</li><li>Examples: show good</li><li>Format: how it looks</li><li>Allow &quot;I don&#x27;t know&quot;</li></ul></section><section class="ai-sec fade-up" id="s8"><h2><span>8</span>Quick quiz</h2><details class="ai-q"><summary>1. Name the five parts of a great prompt.</summary><p>Role, instructions, context, examples and output format.</p></details><details class="ai-q"><summary>2. Reply in JSON is which part?</summary><p>The output format.</p></details><details class="ai-q"><summary>3. Showing one sample answer is which part?</summary><p>Examples.</p></details></section><section class="ai-sec fade-up" id="s9"><h2><span>9</span>Homework</h2><p>Your homework. Take a prompt you used this week, and rewrite it with all five parts. Then run the prompt builder from this lesson. All the Python code is on this page, ready to copy. And tell me in the comments: what changed in the answer?</p></section>
+Format: numbered list</pre></div><p>In a real app, you don&#x27;t type prompts by hand every time. You build them in code.</p><p>This function takes the five parts, and joins them into one clear prompt, one part per line.</p><p>Now every prompt your app sends has all five parts. You can&#x27;t forget one.</p></section><section class="ai-sec fade-up" id="s6"><h2><span>6</span>Mistakes to avoid</h2><p>Mistake one. Asking for five different things in one prompt. Split big jobs into steps.</p><p>Mistake two. Instructions that fight each other. Be brief, and explain everything in detail.</p><p>Mistake three. Pasting text with no clear edges. Wrap it in markers, like three quotes, so the model knows where it starts and ends.</p><p>Mistake four. Not giving it a way out. Tell it to say I don&#x27;t know when it isn&#x27;t sure. That cuts down on made-up answers.</p><p>Your turn. Pause. Here&#x27;s a prompt. Summarise this. Which two parts would you add first?</p><p>The output format, like three bullet points. And the context, like who the summary is for.</p><div class="ai-keys"><span style="--i:0">ONE JOB PER PROMPT</span><span style="--i:1">SPLIT INTO STEPS</span><span style="--i:2">&quot;Be brief&quot; + &quot;explain everything&quot;</span><span style="--i:3">&quot;&quot;&quot; your pasted text &quot;&quot;&quot;</span><span style="--i:4">USE DELIMITERS</span></div></section><section class="ai-sec fade-up" id="s7"><h2><span>7</span>Cheat sheet</h2><ul class="ai-list"><li>Vague in, vague out</li><li>Role: who to be</li><li>Instructions: what to do</li><li>Context: what it can&#x27;t know</li><li>Examples: show good</li><li>Format: how it looks</li><li>Allow &quot;I don&#x27;t know&quot;</li></ul></section><section class="ai-sec fade-up" id="s8"><h2><span>8</span>Quick quiz</h2><details class="ai-q"><summary>1. Name the five parts of a great prompt.</summary><p>Role, instructions, context, examples and output format.</p></details><details class="ai-q"><summary>2. Reply in JSON is which part?</summary><p>The output format.</p></details><details class="ai-q"><summary>3. Showing one sample answer is which part?</summary><p>Examples.</p></details></section><section class="ai-sec fade-up" id="s9"><h2><span>9</span>Homework</h2><p>Your homework. Take a prompt you used this week, and rewrite it with all five parts. Then run the prompt builder from this lesson. All the Python code is on this page, ready to copy. And tell me in the comments: what changed in the answer?</p></section>
 <div class="ai-next"><div><span>Up next</span><strong>Zero-shot, few-shot, chain of thought</strong></div></div><div class="d-flex justify-content-between gap-2 my-4"><a class="btn btn-outline-secondary" href="05-context-temperature-cost.html">← Previous lesson</a><a class="btn btn-brand" href="index.html">See all lessons</a></div></div></div></div><script>
 document.querySelectorAll('.ai-copy').forEach(function (b) {
   b.addEventListener('click', function () {
@@ -88,6 +88,182 @@ document.querySelectorAll('.ai-copy').forEach(function (b) {
     if (navigator.clipboard) navigator.clipboard.writeText(t).then(d, o); else o();
   });
 });
+</script><script>
+(function () {
+  var $ = function (r, s) { return r.querySelector(s); }, $$ = function (r, s) { return Array.prototype.slice.call(r.querySelectorAll(s)); };
+  var softmax = function (s, t) { var m = Math.max.apply(null, s), x = s.map(function (v) { return Math.exp((v - m) / t); }), z = x.reduce(function (a, b) { return a + b; }, 0); return x.map(function (v) { return v / z; }); };
+  var bars = function (box, names, ps, hi) {
+    box.innerHTML = names.map(function (n, i) { return '<div class="lab-bar' + (i === hi ? ' hi' : '') + '"><span>' + n + '</span><i style="width:' + (ps[i] * 100).toFixed(1) + '%"></i><b>' + Math.round(ps[i] * 100) + '%</b></div>'; }).join('');
+  };
+  var draw = function (ps) { var r = Math.random(), a = 0; for (var i = 0; i < ps.length; i++) { a += ps[i]; if (r < a) return i; } return ps.length - 1; };
+  var esc = function (s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var L = {};
+
+  L.tok = function (el) {
+    var inp = $(el, 'input'), out = $(el, '[data-out]');
+    var keep = ' i a an the and or is am are to of in on it you we my love python java hello world code token tokens model learn ', pre = ['un', 're', 'dis', 'pre'], suf = ['able', 'ing', 'tion', 'ness', 'ment', 'ed', 'ly', 'er'];
+    var id = function (s) { var h = 7; for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) % 50257; return h; };
+    var split = function (w) {
+      var lead = w[0] === ' ' ? ' ' : '', core = w.trim(), low = core.toLowerCase(), parts = [];
+      if (!/^[a-z]+$/i.test(core) || core.length <= 6 || keep.indexOf(' ' + low + ' ') >= 0) return [w];
+      pre.forEach(function (p) { if (!parts.length && low.indexOf(p) === 0 && low.length > p.length + 3) { parts.push(core.slice(0, p.length)); core = core.slice(p.length); low = low.slice(p.length); } });
+      var tail = ''; suf.some(function (s) { if (low.length > s.length + 2 && low.slice(-s.length) === s) { tail = core.slice(-s.length); core = core.slice(0, -s.length); return true; } });
+      while (core.length > 6) { parts.push(core.slice(0, 4)); core = core.slice(4); }
+      parts.push(core); if (tail) parts.push(tail); parts[0] = lead + parts[0]; return parts;
+    };
+    var run = function () {
+      var txt = inp.value, words = txt.match(/ ?[A-Za-z]+| ?\d| ?[^\sA-Za-z\d]/g) || [], toks = [];
+      words.forEach(function (w) { toks = toks.concat(split(w)); });
+      out.innerHTML = toks.map(function (t, i) { return '<span class="lab-tk k' + (i % 5) + '">' + esc(t.replace(/^ /, '·')) + '<small>' + id(t) + '</small></span>'; }).join('') || '<span class="lab-hint">Type something above.</span>';
+      $(el, '[data-w]').textContent = (txt.match(/[A-Za-z0-9']+/g) || []).length; $(el, '[data-t]').textContent = toks.length; $(el, '[data-c]').textContent = txt.length;
+    };
+    inp.addEventListener('input', run); run();
+  };
+
+  L.emb = function (el) {
+    var W = { cat: [.9, .8], dog: [.8, .9], puppy: [.62, .98], kitten: [.98, .6], car: [.15, -.9], bus: [-.12, -.95], truck: [.32, -.85], apple: [-.86, .3], mango: [-.95, .1], banana: [-.75, .5] };
+    var svg = $(el, 'svg'), res = $(el, '[data-res]'), sel = [], X = function (v) { return 170 + v[0] * 135; }, Y = function (v) { return 125 - v[1] * 100; };
+    var cos = function (a, b) { return (a[0] * b[0] + a[1] * b[1]) / (Math.hypot(a[0], a[1]) * Math.hypot(b[0], b[1])); };
+    var paint = function () {
+      var g = '<line class="ax" x1="20" y1="125" x2="320" y2="125"/><line class="ax" x1="170" y1="15" x2="170" y2="235"/>';
+      if (sel.length === 2) g += '<line class="link" x1="' + X(W[sel[0]]) + '" y1="' + Y(W[sel[0]]) + '" x2="' + X(W[sel[1]]) + '" y2="' + Y(W[sel[1]]) + '"/>';
+      Object.keys(W).forEach(function (k) { var v = W[k], on = sel.indexOf(k) >= 0; g += '<g class="pt' + (on ? ' on' : '') + '" data-w="' + k + '" tabindex="0" role="button" aria-label="' + k + '"><circle cx="' + X(v) + '" cy="' + Y(v) + '" r="' + (on ? 8 : 6) + '"/><text x="' + (X(v) + 10) + '" y="' + (Y(v) + 4) + '">' + k + '</text></g>'; });
+      svg.innerHTML = g;
+      if (sel.length === 1) res.textContent = 'Now pick a second word.';
+      if (sel.length === 2) { var s = cos(W[sel[0]], W[sel[1]]); res.innerHTML = '<b>' + sel[0] + ' ↔ ' + sel[1] + '</b>: similarity <b>' + s.toFixed(2) + '</b> · ' + (s > .85 ? 'very close in meaning' : s > .3 ? 'a little related' : 'not related at all'); }
+    };
+    var pick = function (k) { if (sel.length === 2) sel = []; if (sel.indexOf(k) < 0) sel.push(k); paint(); };
+    svg.addEventListener('click', function (ev) { var g = ev.target.closest('[data-w]'); if (g) pick(g.getAttribute('data-w')); });
+    svg.addEventListener('keydown', function (ev) { var g = ev.target.closest('[data-w]'); if (g && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); pick(g.getAttribute('data-w')); } });
+    sel = ['cat', 'dog']; paint();
+  };
+
+  L.soft = function (el, c) {
+    var t = $(el, '[data-temp]'), box = $(el, '[data-bars]'), out = $(el, '[data-samples]'), ps = [];
+    var pr = $(el, '[data-prompt]'), last = '___';
+    var show = function () { pr.innerHTML = esc(c.prompt) + ' <mark>' + esc(last) + '</mark>'; };
+    var run = function (hi) { ps = softmax(c.scores, +t.value); $(el, '[data-tv]').textContent = (+t.value).toFixed(1); bars(box, c.words, ps, hi); };
+    t.addEventListener('input', function () { run(); out.innerHTML = ''; });
+    $(el, '[data-pick]').addEventListener('click', function () { var i = draw(ps); last = c.words[i]; show(); run(i); });
+    $(el, '[data-ten]').addEventListener('click', function () {
+      var got = []; for (var k = 0; k < 10; k++) got.push(c.words[draw(ps)]);
+      var uniq = got.filter(function (w, i) { return got.indexOf(w) === i; }).length;
+      out.innerHTML = got.map(function (w) { return '<span>' + esc(w) + '</span>'; }).join('') + '<em>' + uniq + ' different answer' + (uniq > 1 ? 's' : '') + ' at temperature ' + (+t.value).toFixed(1) + '</em>';
+    });
+    show(); run();
+  };
+
+  L.att = function (el) {
+    var base = ['The', 'animal', "didn't", 'cross', 'the', 'street', 'because', 'it', 'was'], end = 'tired', focus = 7;
+    var sent = $(el, '[data-sent]'), res = $(el, '[data-res]');
+    var weights = function (f) {
+      var w = base.concat([end]).map(function () { return .02; });
+      if (f === 7) { if (end === 'tired') { w[1] = .62; w[5] = .1; } else { w[5] = .6; w[1] = .12; } w[9] = .12; w[7] = .06; }
+      else if (f === 9) { if (end === 'tired') w[1] = .45; else w[5] = .45; w[7] = .3; w[8] = .1; }
+      else { w[f] = .35; if (f > 0) w[f - 1] = .2; if (f < 9) w[f + 1] = .2; if (f === 3) { w[1] = .2; w[5] = .2; } }
+      var z = w.reduce(function (a, b) { return a + b; }, 0); return w.map(function (v) { return v / z; });
+    };
+    var paint = function () {
+      var words = base.concat([end]), w = weights(focus), top = -1;
+      w.forEach(function (v, i) { if (i !== focus && (top < 0 || v > w[top])) top = i; });
+      sent.innerHTML = words.map(function (x, i) { return '<button type="button" class="lab-w' + (i === focus ? ' focus' : '') + '" data-i="' + i + '" style="--a:' + (i === focus ? 1 : Math.min(1, w[i] * 1.6)).toFixed(2) + '">' + esc(x) + '<small>' + (i === focus ? 'asking' : Math.round(w[i] * 100) + '%') + '</small></button>'; }).join('');
+      res.innerHTML = '<b>' + esc(words[focus]) + '</b> pays the most attention to <b>' + esc(words[top]) + '</b> (' + Math.round(w[top] * 100) + '%).';
+    };
+    sent.addEventListener('click', function (ev) { var b = ev.target.closest('[data-i]'); if (b) { focus = +b.getAttribute('data-i'); paint(); } });
+    $$(el, '[data-end]').forEach(function (b) { b.addEventListener('click', function () { end = b.getAttribute('data-end'); $$(el, '[data-end]').forEach(function (x) { x.classList.toggle('on', x === b); }); focus = 7; paint(); }); });
+    paint();
+  };
+
+  L.qkv = function (el) {
+    var K = [[.9, .1], [.1, .9], [.2, .2]], V = [[1, 0], [0, 1], [.5, .5]], a = $(el, '[data-q0]'), b = $(el, '[data-q1]');
+    var run = function () {
+      var q = [+a.value, +b.value]; $(el, '[data-v0]').textContent = q[0].toFixed(1); $(el, '[data-v1]').textContent = q[1].toFixed(1);
+      var s = K.map(function (k) { return (k[0] * q[0] + k[1] * q[1]) / Math.SQRT2; }), w = softmax(s, 1);
+      var o = [0, 1].map(function (j) { return w.reduce(function (acc, x, i) { return acc + x * V[i][j]; }, 0); });
+      var hi = w.indexOf(Math.max.apply(null, w)); bars($(el, '[data-bars]'), ['animal', 'street', 'tired'], w, hi);
+      $(el, '[data-res]').innerHTML = 'Weights <code>[' + w.map(function (x) { return x.toFixed(2); }).join(' ') + ']</code> · new meaning of <em>it</em> <code>[' + o.map(function (x) { return x.toFixed(2); }).join(' ') + ']</code> — mostly <b>' + ['animal', 'street', 'tired'][hi] + '</b>.';
+    };
+    a.addEventListener('input', run); b.addEventListener('input', run); run();
+  };
+
+  L.pick = function (el) {
+    var res = $(el, '[data-res]'), box = $$(el, 'input');
+    var run = function () {
+      var f = {}; box.forEach(function (x) { f[x.getAttribute('data-k')] = x.checked; });
+      var r = f.private ? ['open-weight model on your server', 'Private data never leaves your machines. You download the weights and run them yourself.']
+        : f.image ? ['multimodal model', 'It can take images or audio as input, not just text.']
+        : f.hard ? ['reasoning model', 'It thinks step by step first. Slower and costlier, but far better at hard problems.']
+        : ['small fast model', 'Cheap and quick. Most everyday tasks need nothing more.'];
+      var args = Object.keys(f).filter(function (k) { return f[k]; }).map(function (k) { return k + '=True'; }).join(', ');
+      res.innerHTML = '<span>Use a</span><strong>' + r[0] + '</strong><p>' + r[1] + '</p><code>pick_model(' + args + ')  # ' + r[0] + '</code>';
+    };
+    box.forEach(function (x) { x.addEventListener('change', run); }); run();
+  };
+
+  L.ctx = function (el, c) {
+    var n = 0, chat = $(el, '[data-chat]'), btn = $(el, '[data-send]');
+    var paint = function () {
+      var msgs = c.msgs.slice(0, n), used = 0, keep = [];
+      for (var i = msgs.length - 1; i >= 0; i--) { var k = msgs[i].split(' ').length; if (used + k > c.limit) break; used += k; keep.unshift(i); }
+      chat.innerHTML = msgs.map(function (m, i) { var on = keep.indexOf(i) >= 0; return '<li class="' + (i % 2 ? 'bot' : 'you') + (on ? '' : ' gone') + '"><span>' + esc(m) + '</span><small>' + m.split(' ').length + ' tokens' + (on ? '' : ' · forgotten') + '</small></li>'; }).join('') || '<li class="lab-hint">The chat is empty. Send a message.</li>';
+      $(el, '[data-fill]').style.width = (used / c.limit * 100) + '%'; $(el, '[data-used]').textContent = used + ' / ' + c.limit + ' tokens in the window';
+      btn.disabled = n >= c.msgs.length;
+      if (n === c.msgs.length && keep[0] > 0) chat.insertAdjacentHTML('beforeend', '<li class="lab-warn">The first message, with the name, fell out of the window. The model can\'t see it any more, so it has forgotten your name.</li>');
+    };
+    btn.addEventListener('click', function () { n++; paint(); });
+    $(el, '[data-reset]').addEventListener('click', function () { n = 0; paint(); });
+    paint();
+  };
+
+  L.cost = function (el) {
+    var get = function (k) { return Math.max(0, +$(el, '[data-k="' + k + '"]').value || 0); }, rs = function (v) { return '₹' + (v >= 100 ? Math.round(v).toLocaleString('en-IN') : v.toFixed(2)); };
+    var run = function () {
+      var inp = get('inp'), out = get('out'), turns = Math.min(40, Math.max(1, get('turns'))), users = get('users'), pin = get('pin'), pout = get('pout'), hist = $(el, '[data-k="hist"]').checked, per = [], tot = 0;
+      for (var k = 1; k <= turns; k++) { var sent = hist ? inp * k + out * (k - 1) : inp, c = sent / 1e6 * pin + out / 1e6 * pout; per.push(c); tot += c; }
+      var top = Math.max.apply(null, per) || 1;
+      $(el, '[data-bars]').innerHTML = per.map(function (v, i) { return '<i style="height:' + Math.max(4, v / top * 100) + '%" title="Message ' + (i + 1) + ': ' + rs(v) + '"></i>'; }).join('') + '<small>cost of message 1 → ' + turns + '</small>';
+      $(el, '[data-res]').innerHTML = '<span><b>' + rs(per[0]) + '</b> first message</span><span><b>' + rs(per[per.length - 1]) + '</b> last message</span><span><b>' + rs(tot * users) + '</b> per day</span><span><b>' + rs(tot * users * 30) + '</b> per month</span>';
+    };
+    $$(el, 'input').forEach(function (x) { x.addEventListener('input', run); }); run();
+  };
+
+  L.prompt = function (el) {
+    var rows = $$(el, '.lab-parts label'), out = $(el, '[data-prompt-out]'), miss = { Role: 'a generic tone', Task: 'it guessing what you want', Context: 'answers pitched at the wrong level', Example: 'a style that may not match yours', Format: 'a random answer shape' };
+    var run = function () {
+      var on = [], lack = [];
+      rows.forEach(function (r) { var c = $(r, 'input[type=checkbox]'), t = $(r, '.form-control'), k = c.getAttribute('data-p'); r.classList.toggle('off', !c.checked); if (c.checked && t.value.trim()) on.push(k + ': ' + t.value.trim()); else lack.push(k); });
+      out.textContent = on.join('\n') || '(empty prompt)';
+      $(el, '[data-bar]').style.width = (on.length / 5 * 100) + '%';
+      $(el, '[data-score]').innerHTML = '<b>' + on.length + ' of 5 parts.</b> ' + (lack.length ? 'Without ' + lack.join(' and ').toLowerCase() + ', expect ' + lack.map(function (k) { return miss[k]; }).join(' and ') + '.' : 'This prompt leaves the model very little to guess.');
+    };
+    $$(el, 'input').forEach(function (x) { x.addEventListener('input', run); x.addEventListener('change', run); }); run();
+  };
+
+  $$(document, '.lab').forEach(function (el) { var c = el.getAttribute('data-cfg'); try { L[el.getAttribute('data-lab')](el, c ? JSON.parse(c) : null); } catch (err) { console.error(err); } });
+
+  // Run the lesson's Python right here, with Pyodide loaded only when someone presses Run.
+  var py = null;
+  var boot = function () {
+    if (py) return py;
+    py = new Promise(function (ok, bad) { var s = document.createElement('script'); s.src = 'https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js'; s.onload = function () { loadPyodide().then(ok, bad); }; s.onerror = bad; document.head.appendChild(s); });
+    return py;
+  };
+  $$(document, '.ai-run').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var wrap = b.closest('.ai-code'), src = $(wrap, 'code').textContent, out = wrap.nextElementSibling;
+      if (!out || !out.classList.contains('ai-out')) { out = document.createElement('div'); out.className = 'ai-out'; out.innerHTML = '<span>▶ Output</span><pre></pre>'; wrap.after(out); }
+      var pre = $(out, 'pre'), lab = $(out, 'span'); b.disabled = true; b.textContent = 'Running…'; lab.textContent = py ? '▶ Running…' : '▶ Loading Python in your browser (first time takes a few seconds)…';
+      boot().then(function (p) {
+        return (/numpy/.test(src) ? p.loadPackage('numpy') : Promise.resolve()).then(function () {
+          var lines = []; p.setStdout({ batched: function (s) { lines.push(s); } }); p.setStderr({ batched: function (s) { lines.push(s); } });
+          return p.runPythonAsync(src).then(function () { return lines; }, function (err) { lines.push(String(err.message || err).trim().split('\n').slice(-1)[0]); out.classList.add('err'); return lines; });
+        });
+      }).then(function (lines) { pre.textContent = lines.join('\n') || '(no output)'; lab.textContent = out.classList.contains('err') ? '▶ Error (fix the code and run again)' : '▶ Output · ran in your browser'; },
+        function () { lab.textContent = '▶ Could not load Python. Check your connection, or run it with python3 on your computer.'; })
+        .then(function () { b.disabled = false; b.textContent = '▶ Run'; out.classList.remove('err'); });
+    });
+  });
+})();
 </script>
 </main>
 <footer class="site-footer">

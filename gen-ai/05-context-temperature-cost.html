@@ -64,7 +64,7 @@
 </nav>
 <main class="flex-grow-1">
 <section class="ai-hero"><div class="container"><p class="ai-trail"><a href="../index.html">Home</a> / <a href="index.html">Generative AI</a> / Lesson 5</p>
-<span class="ai-pill">Lesson 5 · Python</span><h1>LLM Context Window, Temperature and Cost Explained</h1><p class="lead">LLM temperature, context window, token cost and latency explained simply, with Python code for each one.</p></div></section><div class="container py-4"><div class="row g-4"><aside class="col-lg-3 d-none d-lg-block"><nav class="ai-toc"><a href="#s1">Three problems</a><a href="#s2">The context window</a><a href="#s3">Trim the history</a><a href="#s4">Temperature</a><a href="#s5">Temperature in Python</a><a href="#s6">How cost is counted</a><a href="#s7">Cost calculator</a><a href="#s8">Latency</a></nav></aside><div class="col-lg-9"><div class="ai-video" id="ai-wait" data-out="2026-11-12T10:00:00+05:30" data-vid="-HmWJx_9F0A"><div class="ratio ratio-16x9"><img src="../assets/gen-ai/lesson-05.jpg" alt="Lesson 5 video thumbnail" loading="lazy"></div><span>🎬 The video comes out on 12 Nov at 10:00 AM IST. The notes and code are ready now.</span></div><script>(function(){var w=document.getElementById('ai-wait');if(!w.dataset.vid||Date.now()<new Date(w.dataset.out).getTime())return;var a=document.createElement('a');a.className='ai-video video-card';a.href='https://youtu.be/'+w.dataset.vid;a.target='_blank';a.rel='noopener';a.innerHTML=w.innerHTML;a.querySelector('span').textContent='▶ Watch this lesson on YouTube';w.replaceWith(a);})();</script><section class="ai-sec fade-up" id="s1"><h2><span>1</span>Three problems</h2><p>Your chatbot forgot what you told it ten minutes ago.</p><p>Another time, it gave a wild, random answer to a simple question.</p><p>And your API bill doubled overnight. Three settings explain all of this. Context, temperature and cost.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">PROBLEM 1</div><div class="ai-v-cards"><span class="ai-v-card c-signal" style="--i:0">IT FORGOT YOUR NAME</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">PROBLEM 2</div><div class="ai-v-cards"><span class="ai-v-card c-signal" style="--i:0">A RANDOM ANSWER</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">PROBLEM 3</div><div class="ai-v-cards"><span class="ai-v-card c-signal" style="--i:0">THE BILL DOUBLED</span></div><div class="ai-v-note c-acid">CONTEXT · TEMPERATURE · COST</div></figure></div></section><section class="ai-sec fade-up" id="s2"><h2><span>2</span>The context window</h2><p>The context window is the model&#x27;s working memory. It&#x27;s the most tokens it can look at in one go.</p><p>Everything counts. Your instructions, every message, every reply, and any documents you paste in.</p><p>Sizes range from a few thousand tokens to more than a million in some models.</p><p>When a chat gets longer than the window, the oldest messages have to go. That&#x27;s why it forgot your name.</p><p>And bigger isn&#x27;t free. More context means slower, costlier answers, and models can miss details buried in the middle.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">WORKING MEMORY</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">MAX TOKENS IT CAN SEE AT ONCE</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">EVERYTHING COUNTS</div><div class="ai-v-bars"><span class="c-ember" style="--h:29%;--i:0"><b>10</b></span><span class="c-acid" style="--h:71%;--i:1"><b>25</b></span><span class="c-ink2" style="--h:86%;--i:2"><b>30</b></span><span class="c-signal" style="--h:100%;--i:3"><b>35</b></span></div><div class="ai-v-note c-acid">INSTRUCTIONS · MESSAGES · REPLIES · DOCUMENTS</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">SIZES VARY</div><div class="ai-v-bars"><span class="c-acid" style="--h:4%;--i:0"><b>8</b></span><span class="c-acid" style="--h:13%;--i:1"><b>128</b></span><span class="c-acid" style="--h:100%;--i:2"><b>1000</b></span></div><div class="ai-v-note c-acid">THOUSANDS OF TOKENS</div></figure></div></section><section class="ai-sec fade-up" id="s3"><h2><span>3</span>Trim the history</h2><p class="ai-note">Type it out yourself, or copy it. It runs with <code>python3 trim.py</code>.</p><div class="ai-code"><div class="ai-code-head"><span>trim.py</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/trim.py" download>Download</a></span></div><pre><code class="language-python">def trim(history, limit):
+<span class="ai-pill">Lesson 5 · Python</span><h1>LLM Context Window, Temperature and Cost Explained</h1><p class="lead">LLM temperature, context window, token cost and latency explained simply, with Python code for each one.</p></div></section><div class="container py-4"><div class="row g-4"><aside class="col-lg-3 d-none d-lg-block"><nav class="ai-toc"><a href="#s1">Three problems</a><a href="#s2">The context window</a><a href="#s3">Trim the history</a><a href="#s4">Temperature</a><a href="#s5">Temperature in Python</a><a href="#s6">How cost is counted</a><a href="#s7">Cost calculator</a><a href="#s8">Latency</a></nav></aside><div class="col-lg-9"><div class="ai-start"><div class="ai-video" id="ai-wait" data-out="2026-11-12T10:00:00+05:30" data-vid="-HmWJx_9F0A"><div class="ratio ratio-16x9"><img src="../assets/gen-ai/lesson-05.jpg" alt="Lesson 5 video thumbnail" loading="lazy"></div><span>🎬 Video out 12 Nov, 10:00 AM IST</span></div><div class="ai-plan"><p><b>3 hands-on demos</b> and <b>3 Python programs</b> you can run on this page. Nothing to install.</p><ol><li><a href="#s1">Three problems</a></li><li><a href="#s2">The context window</a> <b>try it</b></li><li><a href="#s3">Trim the history</a> <b class=py>run code</b></li><li><a href="#s4">Temperature</a> <b>try it</b></li><li><a href="#s5">Temperature in Python</a> <b class=py>run code</b></li><li><a href="#s6">How cost is counted</a> <b>try it</b></li><li><a href="#s7">Cost calculator</a> <b class=py>run code</b></li><li><a href="#s8">Latency</a></li></ol></div></div><script>(function(){var w=document.getElementById('ai-wait');if(!w.dataset.vid||Date.now()<new Date(w.dataset.out).getTime())return;var a=document.createElement('a');a.className='ai-video video-card';a.href='https://youtu.be/'+w.dataset.vid;a.target='_blank';a.rel='noopener';a.innerHTML=w.innerHTML;a.querySelector('span').textContent='▶ Watch this lesson on YouTube';w.replaceWith(a);})();</script><section class="ai-sec fade-up" id="s1"><h2><span>1</span>Three problems</h2><p>Your chatbot forgot what you told it ten minutes ago.</p><p>Another time, it gave a wild, random answer to a simple question.</p><p>And your API bill doubled overnight. Three settings explain all of this. Context, temperature and cost.</p><div class="ai-keys"><span style="--i:0">IT FORGOT YOUR NAME</span><span style="--i:1">A RANDOM ANSWER</span><span style="--i:2">THE BILL DOUBLED</span><span style="--i:3">CONTEXT · TEMPERATURE · COST</span></div></section><section class="ai-sec fade-up" id="s2"><h2><span>2</span>The context window</h2><p>The context window is the model&#x27;s working memory. It&#x27;s the most tokens it can look at in one go.</p><p>Everything counts. Your instructions, every message, every reply, and any documents you paste in.</p><p>Sizes range from a few thousand tokens to more than a million in some models.</p><p>When a chat gets longer than the window, the oldest messages have to go. That&#x27;s why it forgot your name.</p><p>And bigger isn&#x27;t free. More context means slower, costlier answers, and models can miss details buried in the middle.</p><div class="lab" data-lab="ctx" data-cfg="{&quot;limit&quot;: 24, &quot;msgs&quot;: [&quot;Hi, my name is Amit.&quot;, &quot;I am learning Java for interviews.&quot;, &quot;Can you explain what a HashMap is?&quot;, &quot;A HashMap stores key and value pairs.&quot;, &quot;Give me one example in code please.&quot;, &quot;Now, do you remember my name?&quot;]}"><div class="lab-head"><span class="lab-tag">Try it</span>Keep chatting and watch the oldest messages fall out</div><div class="lab-window"><div class="lab-fill" data-fill></div><span data-used></span></div><ol class="lab-chat" data-chat></ol><div class="d-flex flex-wrap gap-2"><button class="btn btn-brand btn-sm" type="button" data-send>Send the next message</button><button class="btn btn-outline-secondary btn-sm" type="button" data-reset>Start again</button></div><p class="lab-hint">This tiny window holds only 24 tokens (we count one per word). Real windows hold thousands or millions, but they fill up the same way.</p></div></section><section class="ai-sec fade-up" id="s3"><h2><span>3</span>Trim the history</h2><p class="ai-note">Edit the code and press <b>Run</b> to try it right here, or copy it and run <code>python3 trim.py</code>.</p><div class="ai-code"><div class="ai-code-head"><span>trim.py <em>· click to edit</em></span><span class="ai-code-btns"><button type="button" class="ai-run">▶ Run</button><button type="button" class="ai-copy">Copy</button><a href="code/trim.py" download>Download</a></span></div><pre><code class="language-python" contenteditable="plaintext-only" spellcheck="false">def trim(history, limit):
     kept, used = [], 0
     for msg in reversed(history):
         cost = len(msg.split())   # rough count
@@ -77,7 +77,7 @@
 chat = [&quot;hi there&quot;, &quot;tell me about java&quot;,
         &quot;and what about python then&quot;]
 print(trim(chat, 9))</code></pre></div><div class="ai-out"><span>▶ Output</span><pre>[&#x27;tell me about java&#x27;,
- &#x27;and what about python then&#x27;]</pre></div><p>Here&#x27;s how apps keep a chat inside the window. Walk backwards from the newest message.</p><p>Count each message, roughly, by its words. Keep adding while there&#x27;s room.</p><p>With a limit of nine, the last two messages fit. Hi there is dropped. Real apps often summarise old messages instead of dropping them.</p></section><section class="ai-sec fade-up" id="s4"><h2><span>4</span>Temperature</h2><p>Temperature controls how random the next token is. Remember the probabilities from softmax?</p><p>Low temperature makes the top token even more likely. Answers become focused and repeatable. Use it for code, facts and pulling data out of documents.</p><p>High temperature flattens the odds. You get variety and surprise. Good for brainstorming and stories.</p><p>Too high, and the answers fall apart into nonsense. That&#x27;s your wild, random answer.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">TEMPERATURE</div><div class="ai-v-bars"><span class="c-acid" style="--h:100%;--i:0"><b>67</b></span><span class="c-ash" style="--h:36%;--i:1"><b>24</b></span><span class="c-ash" style="--h:13%;--i:2"><b>9</b></span></div><div class="ai-v-note c-acid">RANDOMNESS CONTROL</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">LOW: FOCUSED</div><div class="ai-v-bars"><span class="c-acid" style="--h:100%;--i:0"><b>99</b></span><span class="c-ash" style="--h:4%;--i:1"><b>1</b></span><span class="c-ash" style="--h:4%;--i:2"><b>0</b></span></div><div class="ai-v-note c-acid">CODE · FACTS · EXTRACTION</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">HIGH: CREATIVE</div><div class="ai-v-bars"><span class="c-ember" style="--h:100%;--i:0"><b>51</b></span><span class="c-ember" style="--h:61%;--i:1"><b>31</b></span><span class="c-ember" style="--h:37%;--i:2"><b>19</b></span></div><div class="ai-v-note c-acid">IDEAS · STORIES</div></figure></div></section><section class="ai-sec fade-up" id="s5"><h2><span>5</span>Temperature in Python</h2><p class="ai-note">Type it out yourself, or copy it. It runs with <code>python3 temperature.py</code>.</p><div class="ai-code"><div class="ai-code-head"><span>temperature.py</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/temperature.py" download>Download</a></span></div><pre><code class="language-python">import numpy as np
+ &#x27;and what about python then&#x27;]</pre></div><p>Here&#x27;s how apps keep a chat inside the window. Walk backwards from the newest message.</p><p>Count each message, roughly, by its words. Keep adding while there&#x27;s room.</p><p>With a limit of nine, the last two messages fit. Hi there is dropped. Real apps often summarise old messages instead of dropping them.</p></section><section class="ai-sec fade-up" id="s4"><h2><span>4</span>Temperature</h2><p>Temperature controls how random the next token is. Remember the probabilities from softmax?</p><p>Low temperature makes the top token even more likely. Answers become focused and repeatable. Use it for code, facts and pulling data out of documents.</p><p>High temperature flattens the odds. You get variety and surprise. Good for brainstorming and stories.</p><p>Too high, and the answers fall apart into nonsense. That&#x27;s your wild, random answer.</p><div class="lab" data-lab="soft" data-cfg="{&quot;prompt&quot;: &quot;the sky is&quot;, &quot;words&quot;: [&quot;blue&quot;, &quot;grey&quot;, &quot;clear&quot;, &quot;orange&quot;], &quot;scores&quot;: [3.0, 2.0, 1.2, 0.4]}"><div class="lab-head"><span class="lab-tag">Try it</span>Slide the temperature and ask the same question ten times</div><div class="lab-prompt" data-prompt></div><div class="lab-bars" data-bars></div><label class="lab-slider">Temperature <b data-tv>1.0</b><input type="range" min="0.1" max="2" step="0.1" value="1" data-temp></label><div class="d-flex flex-wrap gap-2 align-items-center"><button class="btn btn-brand btn-sm" type="button" data-pick>Pick the next token</button><button class="btn btn-outline-secondary btn-sm" type="button" data-ten>Ask 10 times</button></div><div class="lab-samples" data-samples aria-live="polite"></div></div></section><section class="ai-sec fade-up" id="s5"><h2><span>5</span>Temperature in Python</h2><p class="ai-note">Edit the code and press <b>Run</b> to try it right here, or copy it and run <code>python3 temperature.py</code>.</p><div class="ai-code"><div class="ai-code-head"><span>temperature.py <em>· click to edit</em></span><span class="ai-code-btns"><button type="button" class="ai-run">▶ Run</button><button type="button" class="ai-copy">Copy</button><a href="code/temperature.py" download>Download</a></span></div><pre><code class="language-python" contenteditable="plaintext-only" spellcheck="false">import numpy as np
 
 scores = np.array([3.0, 2.0, 1.0])
 for t in [0.2, 1.0, 2.0]:
@@ -88,13 +88,13 @@ for t in [0.2, 1.0, 2.0]:
 # 1.0 [0.67 0.24 0.09]
 # 2.0 [0.51 0.31 0.19]</code></pre></div><div class="ai-out"><span>▶ Output</span><pre>0.2 [0.99 0.01 0.  ]
 1.0 [0.67 0.24 0.09]
-2.0 [0.51 0.31 0.19]</pre></div><p>Here it is in Python. Divide the scores by the temperature before softmax. That&#x27;s all temperature is.</p><p>At zero point two, the top token gets ninety nine percent.</p><p>At one, it&#x27;s sixty seven, twenty four and nine.</p><p>At two, it&#x27;s fifty one, thirty one and nineteen. Much more spread out.</p></section><section class="ai-sec fade-up" id="s6"><h2><span>6</span>How cost is counted</h2><p>APIs charge by the token, usually per million tokens. Input and output are priced separately.</p><p>Output tokens usually cost several times more than input tokens.</p><p>Here&#x27;s the sneaky part. In a chat, the whole history is sent again with every message. So each turn costs more than the last.</p><p>That&#x27;s how a bill doubles overnight. Trim the history, cache what repeats, and pick a smaller model where you can.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">PAY PER TOKEN</div><div class="ai-v-cards"><span class="ai-v-card c-ink2" style="--i:0">INPUT: WHAT YOU SEND</span><span class="ai-v-card c-ink2" style="--i:1">OUTPUT: WHAT IT WRITES</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">OUTPUT COSTS MORE</div><div class="ai-v-bars"><span class="c-ash" style="--h:25%;--i:0"><b>1</b></span><span class="c-signal" style="--h:100%;--i:1"><b>4</b></span></div><div class="ai-v-note c-acid">INPUT VS OUTPUT</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">HISTORY IS RE-SENT</div><div class="ai-v-bars"><span class="c-acid" style="--h:17%;--i:0"><b>1</b></span><span class="c-acid" style="--h:33%;--i:1"><b>2</b></span><span class="c-acid" style="--h:50%;--i:2"><b>3</b></span><span class="c-acid" style="--h:67%;--i:3"><b>4</b></span><span class="c-acid" style="--h:83%;--i:4"><b>5</b></span><span class="c-signal" style="--h:100%;--i:5"><b>6</b></span></div><div class="ai-v-note c-signal">EVERY TURN SENDS EVERYTHING AGAIN</div></figure></div></section><section class="ai-sec fade-up" id="s7"><h2><span>7</span>Cost calculator</h2><p class="ai-note">Type it out yourself, or copy it. It runs with <code>python3 cost.py</code>.</p><div class="ai-code"><div class="ai-code-head"><span>cost.py</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/cost.py" download>Download</a></span></div><pre><code class="language-python">def cost(inp, out, in_price=100, out_price=400):
+2.0 [0.51 0.31 0.19]</pre></div><p>Here it is in Python. Divide the scores by the temperature before softmax. That&#x27;s all temperature is.</p><p>At zero point two, the top token gets ninety nine percent.</p><p>At one, it&#x27;s sixty seven, twenty four and nine.</p><p>At two, it&#x27;s fifty one, thirty one and nineteen. Much more spread out.</p></section><section class="ai-sec fade-up" id="s6"><h2><span>6</span>How cost is counted</h2><p>APIs charge by the token, usually per million tokens. Input and output are priced separately.</p><p>Output tokens usually cost several times more than input tokens.</p><p>Here&#x27;s the sneaky part. In a chat, the whole history is sent again with every message. So each turn costs more than the last.</p><p>That&#x27;s how a bill doubles overnight. Trim the history, cache what repeats, and pick a smaller model where you can.</p><div class="lab" data-lab="cost"><div class="lab-head"><span class="lab-tag">Try it</span>Work out what your chatbot will really cost</div><div class="lab-form"><label>Input tokens per message<input class="form-control form-control-sm" type="number" min="0" value="2000" data-k="inp"></label><label>Output tokens per reply<input class="form-control form-control-sm" type="number" min="0" value="500" data-k="out"></label><label>Messages per chat<input class="form-control form-control-sm" type="number" min="1" max="40" value="10" data-k="turns"></label><label>Chats per day<input class="form-control form-control-sm" type="number" min="0" value="1000" data-k="users"></label><label>₹ per million input tokens<input class="form-control form-control-sm" type="number" min="0" value="100" data-k="pin"></label><label>₹ per million output tokens<input class="form-control form-control-sm" type="number" min="0" value="400" data-k="pout"></label></div><label class="lab-check"><input type="checkbox" checked data-k="hist"> Send the whole chat history again with every message (what chat apps do)</label><div class="lab-bars lab-bars-sm" data-bars></div><div class="lab-stats" data-res></div><p class="lab-hint">Prices are examples, same as <code>cost.py</code>. Turn the history off to see how much trimming it saves.</p></div></section><section class="ai-sec fade-up" id="s7"><h2><span>7</span>Cost calculator</h2><p class="ai-note">Edit the code and press <b>Run</b> to try it right here, or copy it and run <code>python3 cost.py</code>.</p><div class="ai-code"><div class="ai-code-head"><span>cost.py <em>· click to edit</em></span><span class="ai-code-btns"><button type="button" class="ai-run">▶ Run</button><button type="button" class="ai-copy">Copy</button><a href="code/cost.py" download>Download</a></span></div><pre><code class="language-python" contenteditable="plaintext-only" spellcheck="false">def cost(inp, out, in_price=100, out_price=400):
     # rupees per million tokens, example prices only
     return inp / 1e6 * in_price + out / 1e6 * out_price
 
 print(cost(2_000, 500))           # 0.4
 print(cost(2_000, 500) * 10_000)  # 4000.0</code></pre></div><div class="ai-out"><span>▶ Output</span><pre>0.4
-4000.0</pre></div><p>Here&#x27;s a cost calculator. These prices are made up for the example. Always check your provider&#x27;s real prices.</p><p>One chat turn, with two thousand tokens in and five hundred out, costs forty paise.</p><p>Ten thousand users doing that? Four thousand rupees. Small numbers add up fast.</p></section><section class="ai-sec fade-up" id="s8"><h2><span>8</span>Latency</h2><p>Latency is how long you wait. It has two parts.</p><p>Time to first token is how long until the answer starts. Tokens per second is how fast it keeps writing.</p><p>Streaming shows words as they arrive, so it feels fast. Long prompts, big models and reasoning all make it slower.</p><p>Your turn. Pause. You&#x27;re pulling invoice numbers out of PDFs. Low temperature or high?</p><p>Low. You want the same correct answer every single time.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">LATENCY</div><div class="ai-v-cards"><span class="ai-v-card c-ink2" style="--i:0">TIME TO FIRST TOKEN</span><span class="ai-v-card c-ink2" style="--i:1">TOKENS PER SECOND</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">TWO NUMBERS</div><div class="ai-v-bars"><span class="c-ember" style="--h:25%;--i:0"><b>2</b></span><span class="c-acid" style="--h:100%;--i:1"><b>8</b></span></div><div class="ai-v-note c-acid">WAIT TO START · SPEED AFTER</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">FASTER FEELING</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">STREAM THE ANSWER</span><span class="ai-v-card c-acid" style="--i:1">SHORTER PROMPTS</span><span class="ai-v-card c-acid" style="--i:2">SMALLER MODELS</span></div></figure></div></section><section class="ai-sec fade-up" id="s9"><h2><span>9</span>Cheat sheet</h2><ul class="ai-list"><li>Context: working memory</li><li>Full: oldest messages go</li><li>Low temp: focused</li><li>High temp: creative</li><li>Pay per token, output more</li><li>History re-sent every turn</li></ul></section><section class="ai-sec fade-up" id="s10"><h2><span>10</span>Quick quiz</h2><details class="ai-q"><summary>1. What happens when the chat is longer than the context window?</summary><p>The oldest messages are dropped or summarised.</p></details><details class="ai-q"><summary>2. Extracting data from invoices. Low or high temperature?</summary><p>Low.</p></details><details class="ai-q"><summary>3. Which usually costs more per token, input or output?</summary><p>Output.</p></details></section><section class="ai-sec fade-up" id="s11"><h2><span>11</span>Homework</h2><p>Your homework. Run the three Python programs from this lesson. All the Python code is on this page, ready to copy. Then change the temperature to five, and see what happens. And tell me in the comments: what temperature would you use for a story?</p></section>
+4000.0</pre></div><p>Here&#x27;s a cost calculator. These prices are made up for the example. Always check your provider&#x27;s real prices.</p><p>One chat turn, with two thousand tokens in and five hundred out, costs forty paise.</p><p>Ten thousand users doing that? Four thousand rupees. Small numbers add up fast.</p></section><section class="ai-sec fade-up" id="s8"><h2><span>8</span>Latency</h2><p>Latency is how long you wait. It has two parts.</p><p>Time to first token is how long until the answer starts. Tokens per second is how fast it keeps writing.</p><p>Streaming shows words as they arrive, so it feels fast. Long prompts, big models and reasoning all make it slower.</p><p>Your turn. Pause. You&#x27;re pulling invoice numbers out of PDFs. Low temperature or high?</p><p>Low. You want the same correct answer every single time.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">TWO NUMBERS</div><div class="ai-v-bars"><span class="c-ember" style="--h:25%;--i:0"><b>2</b></span><span class="c-acid" style="--h:100%;--i:1"><b>8</b></span></div><div class="ai-v-note c-acid">WAIT TO START · SPEED AFTER</div></figure></div><div class="ai-keys"><span style="--i:0">TIME TO FIRST TOKEN</span><span style="--i:1">TOKENS PER SECOND</span><span style="--i:2">STREAM THE ANSWER</span><span style="--i:3">SHORTER PROMPTS</span><span style="--i:4">SMALLER MODELS</span></div></section><section class="ai-sec fade-up" id="s9"><h2><span>9</span>Cheat sheet</h2><ul class="ai-list"><li>Context: working memory</li><li>Full: oldest messages go</li><li>Low temp: focused</li><li>High temp: creative</li><li>Pay per token, output more</li><li>History re-sent every turn</li></ul></section><section class="ai-sec fade-up" id="s10"><h2><span>10</span>Quick quiz</h2><details class="ai-q"><summary>1. What happens when the chat is longer than the context window?</summary><p>The oldest messages are dropped or summarised.</p></details><details class="ai-q"><summary>2. Extracting data from invoices. Low or high temperature?</summary><p>Low.</p></details><details class="ai-q"><summary>3. Which usually costs more per token, input or output?</summary><p>Output.</p></details></section><section class="ai-sec fade-up" id="s11"><h2><span>11</span>Homework</h2><p>Your homework. Run the three Python programs from this lesson. All the Python code is on this page, ready to copy. Then change the temperature to five, and see what happens. And tell me in the comments: what temperature would you use for a story?</p></section>
 <div class="ai-next"><div><span>Up next</span><strong>Prompt anatomy</strong></div></div><div class="d-flex justify-content-between gap-2 my-4"><a class="btn btn-outline-secondary" href="04-model-landscape.html">← Previous lesson</a><a class="btn btn-brand" href="06-prompt-anatomy.html">Next lesson →</a></div></div></div></div><script>
 document.querySelectorAll('.ai-copy').forEach(function (b) {
   b.addEventListener('click', function () {
@@ -103,6 +103,182 @@ document.querySelectorAll('.ai-copy').forEach(function (b) {
     if (navigator.clipboard) navigator.clipboard.writeText(t).then(d, o); else o();
   });
 });
+</script><script>
+(function () {
+  var $ = function (r, s) { return r.querySelector(s); }, $$ = function (r, s) { return Array.prototype.slice.call(r.querySelectorAll(s)); };
+  var softmax = function (s, t) { var m = Math.max.apply(null, s), x = s.map(function (v) { return Math.exp((v - m) / t); }), z = x.reduce(function (a, b) { return a + b; }, 0); return x.map(function (v) { return v / z; }); };
+  var bars = function (box, names, ps, hi) {
+    box.innerHTML = names.map(function (n, i) { return '<div class="lab-bar' + (i === hi ? ' hi' : '') + '"><span>' + n + '</span><i style="width:' + (ps[i] * 100).toFixed(1) + '%"></i><b>' + Math.round(ps[i] * 100) + '%</b></div>'; }).join('');
+  };
+  var draw = function (ps) { var r = Math.random(), a = 0; for (var i = 0; i < ps.length; i++) { a += ps[i]; if (r < a) return i; } return ps.length - 1; };
+  var esc = function (s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var L = {};
+
+  L.tok = function (el) {
+    var inp = $(el, 'input'), out = $(el, '[data-out]');
+    var keep = ' i a an the and or is am are to of in on it you we my love python java hello world code token tokens model learn ', pre = ['un', 're', 'dis', 'pre'], suf = ['able', 'ing', 'tion', 'ness', 'ment', 'ed', 'ly', 'er'];
+    var id = function (s) { var h = 7; for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) % 50257; return h; };
+    var split = function (w) {
+      var lead = w[0] === ' ' ? ' ' : '', core = w.trim(), low = core.toLowerCase(), parts = [];
+      if (!/^[a-z]+$/i.test(core) || core.length <= 6 || keep.indexOf(' ' + low + ' ') >= 0) return [w];
+      pre.forEach(function (p) { if (!parts.length && low.indexOf(p) === 0 && low.length > p.length + 3) { parts.push(core.slice(0, p.length)); core = core.slice(p.length); low = low.slice(p.length); } });
+      var tail = ''; suf.some(function (s) { if (low.length > s.length + 2 && low.slice(-s.length) === s) { tail = core.slice(-s.length); core = core.slice(0, -s.length); return true; } });
+      while (core.length > 6) { parts.push(core.slice(0, 4)); core = core.slice(4); }
+      parts.push(core); if (tail) parts.push(tail); parts[0] = lead + parts[0]; return parts;
+    };
+    var run = function () {
+      var txt = inp.value, words = txt.match(/ ?[A-Za-z]+| ?\d| ?[^\sA-Za-z\d]/g) || [], toks = [];
+      words.forEach(function (w) { toks = toks.concat(split(w)); });
+      out.innerHTML = toks.map(function (t, i) { return '<span class="lab-tk k' + (i % 5) + '">' + esc(t.replace(/^ /, '·')) + '<small>' + id(t) + '</small></span>'; }).join('') || '<span class="lab-hint">Type something above.</span>';
+      $(el, '[data-w]').textContent = (txt.match(/[A-Za-z0-9']+/g) || []).length; $(el, '[data-t]').textContent = toks.length; $(el, '[data-c]').textContent = txt.length;
+    };
+    inp.addEventListener('input', run); run();
+  };
+
+  L.emb = function (el) {
+    var W = { cat: [.9, .8], dog: [.8, .9], puppy: [.62, .98], kitten: [.98, .6], car: [.15, -.9], bus: [-.12, -.95], truck: [.32, -.85], apple: [-.86, .3], mango: [-.95, .1], banana: [-.75, .5] };
+    var svg = $(el, 'svg'), res = $(el, '[data-res]'), sel = [], X = function (v) { return 170 + v[0] * 135; }, Y = function (v) { return 125 - v[1] * 100; };
+    var cos = function (a, b) { return (a[0] * b[0] + a[1] * b[1]) / (Math.hypot(a[0], a[1]) * Math.hypot(b[0], b[1])); };
+    var paint = function () {
+      var g = '<line class="ax" x1="20" y1="125" x2="320" y2="125"/><line class="ax" x1="170" y1="15" x2="170" y2="235"/>';
+      if (sel.length === 2) g += '<line class="link" x1="' + X(W[sel[0]]) + '" y1="' + Y(W[sel[0]]) + '" x2="' + X(W[sel[1]]) + '" y2="' + Y(W[sel[1]]) + '"/>';
+      Object.keys(W).forEach(function (k) { var v = W[k], on = sel.indexOf(k) >= 0; g += '<g class="pt' + (on ? ' on' : '') + '" data-w="' + k + '" tabindex="0" role="button" aria-label="' + k + '"><circle cx="' + X(v) + '" cy="' + Y(v) + '" r="' + (on ? 8 : 6) + '"/><text x="' + (X(v) + 10) + '" y="' + (Y(v) + 4) + '">' + k + '</text></g>'; });
+      svg.innerHTML = g;
+      if (sel.length === 1) res.textContent = 'Now pick a second word.';
+      if (sel.length === 2) { var s = cos(W[sel[0]], W[sel[1]]); res.innerHTML = '<b>' + sel[0] + ' ↔ ' + sel[1] + '</b>: similarity <b>' + s.toFixed(2) + '</b> · ' + (s > .85 ? 'very close in meaning' : s > .3 ? 'a little related' : 'not related at all'); }
+    };
+    var pick = function (k) { if (sel.length === 2) sel = []; if (sel.indexOf(k) < 0) sel.push(k); paint(); };
+    svg.addEventListener('click', function (ev) { var g = ev.target.closest('[data-w]'); if (g) pick(g.getAttribute('data-w')); });
+    svg.addEventListener('keydown', function (ev) { var g = ev.target.closest('[data-w]'); if (g && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); pick(g.getAttribute('data-w')); } });
+    sel = ['cat', 'dog']; paint();
+  };
+
+  L.soft = function (el, c) {
+    var t = $(el, '[data-temp]'), box = $(el, '[data-bars]'), out = $(el, '[data-samples]'), ps = [];
+    var pr = $(el, '[data-prompt]'), last = '___';
+    var show = function () { pr.innerHTML = esc(c.prompt) + ' <mark>' + esc(last) + '</mark>'; };
+    var run = function (hi) { ps = softmax(c.scores, +t.value); $(el, '[data-tv]').textContent = (+t.value).toFixed(1); bars(box, c.words, ps, hi); };
+    t.addEventListener('input', function () { run(); out.innerHTML = ''; });
+    $(el, '[data-pick]').addEventListener('click', function () { var i = draw(ps); last = c.words[i]; show(); run(i); });
+    $(el, '[data-ten]').addEventListener('click', function () {
+      var got = []; for (var k = 0; k < 10; k++) got.push(c.words[draw(ps)]);
+      var uniq = got.filter(function (w, i) { return got.indexOf(w) === i; }).length;
+      out.innerHTML = got.map(function (w) { return '<span>' + esc(w) + '</span>'; }).join('') + '<em>' + uniq + ' different answer' + (uniq > 1 ? 's' : '') + ' at temperature ' + (+t.value).toFixed(1) + '</em>';
+    });
+    show(); run();
+  };
+
+  L.att = function (el) {
+    var base = ['The', 'animal', "didn't", 'cross', 'the', 'street', 'because', 'it', 'was'], end = 'tired', focus = 7;
+    var sent = $(el, '[data-sent]'), res = $(el, '[data-res]');
+    var weights = function (f) {
+      var w = base.concat([end]).map(function () { return .02; });
+      if (f === 7) { if (end === 'tired') { w[1] = .62; w[5] = .1; } else { w[5] = .6; w[1] = .12; } w[9] = .12; w[7] = .06; }
+      else if (f === 9) { if (end === 'tired') w[1] = .45; else w[5] = .45; w[7] = .3; w[8] = .1; }
+      else { w[f] = .35; if (f > 0) w[f - 1] = .2; if (f < 9) w[f + 1] = .2; if (f === 3) { w[1] = .2; w[5] = .2; } }
+      var z = w.reduce(function (a, b) { return a + b; }, 0); return w.map(function (v) { return v / z; });
+    };
+    var paint = function () {
+      var words = base.concat([end]), w = weights(focus), top = -1;
+      w.forEach(function (v, i) { if (i !== focus && (top < 0 || v > w[top])) top = i; });
+      sent.innerHTML = words.map(function (x, i) { return '<button type="button" class="lab-w' + (i === focus ? ' focus' : '') + '" data-i="' + i + '" style="--a:' + (i === focus ? 1 : Math.min(1, w[i] * 1.6)).toFixed(2) + '">' + esc(x) + '<small>' + (i === focus ? 'asking' : Math.round(w[i] * 100) + '%') + '</small></button>'; }).join('');
+      res.innerHTML = '<b>' + esc(words[focus]) + '</b> pays the most attention to <b>' + esc(words[top]) + '</b> (' + Math.round(w[top] * 100) + '%).';
+    };
+    sent.addEventListener('click', function (ev) { var b = ev.target.closest('[data-i]'); if (b) { focus = +b.getAttribute('data-i'); paint(); } });
+    $$(el, '[data-end]').forEach(function (b) { b.addEventListener('click', function () { end = b.getAttribute('data-end'); $$(el, '[data-end]').forEach(function (x) { x.classList.toggle('on', x === b); }); focus = 7; paint(); }); });
+    paint();
+  };
+
+  L.qkv = function (el) {
+    var K = [[.9, .1], [.1, .9], [.2, .2]], V = [[1, 0], [0, 1], [.5, .5]], a = $(el, '[data-q0]'), b = $(el, '[data-q1]');
+    var run = function () {
+      var q = [+a.value, +b.value]; $(el, '[data-v0]').textContent = q[0].toFixed(1); $(el, '[data-v1]').textContent = q[1].toFixed(1);
+      var s = K.map(function (k) { return (k[0] * q[0] + k[1] * q[1]) / Math.SQRT2; }), w = softmax(s, 1);
+      var o = [0, 1].map(function (j) { return w.reduce(function (acc, x, i) { return acc + x * V[i][j]; }, 0); });
+      var hi = w.indexOf(Math.max.apply(null, w)); bars($(el, '[data-bars]'), ['animal', 'street', 'tired'], w, hi);
+      $(el, '[data-res]').innerHTML = 'Weights <code>[' + w.map(function (x) { return x.toFixed(2); }).join(' ') + ']</code> · new meaning of <em>it</em> <code>[' + o.map(function (x) { return x.toFixed(2); }).join(' ') + ']</code> — mostly <b>' + ['animal', 'street', 'tired'][hi] + '</b>.';
+    };
+    a.addEventListener('input', run); b.addEventListener('input', run); run();
+  };
+
+  L.pick = function (el) {
+    var res = $(el, '[data-res]'), box = $$(el, 'input');
+    var run = function () {
+      var f = {}; box.forEach(function (x) { f[x.getAttribute('data-k')] = x.checked; });
+      var r = f.private ? ['open-weight model on your server', 'Private data never leaves your machines. You download the weights and run them yourself.']
+        : f.image ? ['multimodal model', 'It can take images or audio as input, not just text.']
+        : f.hard ? ['reasoning model', 'It thinks step by step first. Slower and costlier, but far better at hard problems.']
+        : ['small fast model', 'Cheap and quick. Most everyday tasks need nothing more.'];
+      var args = Object.keys(f).filter(function (k) { return f[k]; }).map(function (k) { return k + '=True'; }).join(', ');
+      res.innerHTML = '<span>Use a</span><strong>' + r[0] + '</strong><p>' + r[1] + '</p><code>pick_model(' + args + ')  # ' + r[0] + '</code>';
+    };
+    box.forEach(function (x) { x.addEventListener('change', run); }); run();
+  };
+
+  L.ctx = function (el, c) {
+    var n = 0, chat = $(el, '[data-chat]'), btn = $(el, '[data-send]');
+    var paint = function () {
+      var msgs = c.msgs.slice(0, n), used = 0, keep = [];
+      for (var i = msgs.length - 1; i >= 0; i--) { var k = msgs[i].split(' ').length; if (used + k > c.limit) break; used += k; keep.unshift(i); }
+      chat.innerHTML = msgs.map(function (m, i) { var on = keep.indexOf(i) >= 0; return '<li class="' + (i % 2 ? 'bot' : 'you') + (on ? '' : ' gone') + '"><span>' + esc(m) + '</span><small>' + m.split(' ').length + ' tokens' + (on ? '' : ' · forgotten') + '</small></li>'; }).join('') || '<li class="lab-hint">The chat is empty. Send a message.</li>';
+      $(el, '[data-fill]').style.width = (used / c.limit * 100) + '%'; $(el, '[data-used]').textContent = used + ' / ' + c.limit + ' tokens in the window';
+      btn.disabled = n >= c.msgs.length;
+      if (n === c.msgs.length && keep[0] > 0) chat.insertAdjacentHTML('beforeend', '<li class="lab-warn">The first message, with the name, fell out of the window. The model can\'t see it any more, so it has forgotten your name.</li>');
+    };
+    btn.addEventListener('click', function () { n++; paint(); });
+    $(el, '[data-reset]').addEventListener('click', function () { n = 0; paint(); });
+    paint();
+  };
+
+  L.cost = function (el) {
+    var get = function (k) { return Math.max(0, +$(el, '[data-k="' + k + '"]').value || 0); }, rs = function (v) { return '₹' + (v >= 100 ? Math.round(v).toLocaleString('en-IN') : v.toFixed(2)); };
+    var run = function () {
+      var inp = get('inp'), out = get('out'), turns = Math.min(40, Math.max(1, get('turns'))), users = get('users'), pin = get('pin'), pout = get('pout'), hist = $(el, '[data-k="hist"]').checked, per = [], tot = 0;
+      for (var k = 1; k <= turns; k++) { var sent = hist ? inp * k + out * (k - 1) : inp, c = sent / 1e6 * pin + out / 1e6 * pout; per.push(c); tot += c; }
+      var top = Math.max.apply(null, per) || 1;
+      $(el, '[data-bars]').innerHTML = per.map(function (v, i) { return '<i style="height:' + Math.max(4, v / top * 100) + '%" title="Message ' + (i + 1) + ': ' + rs(v) + '"></i>'; }).join('') + '<small>cost of message 1 → ' + turns + '</small>';
+      $(el, '[data-res]').innerHTML = '<span><b>' + rs(per[0]) + '</b> first message</span><span><b>' + rs(per[per.length - 1]) + '</b> last message</span><span><b>' + rs(tot * users) + '</b> per day</span><span><b>' + rs(tot * users * 30) + '</b> per month</span>';
+    };
+    $$(el, 'input').forEach(function (x) { x.addEventListener('input', run); }); run();
+  };
+
+  L.prompt = function (el) {
+    var rows = $$(el, '.lab-parts label'), out = $(el, '[data-prompt-out]'), miss = { Role: 'a generic tone', Task: 'it guessing what you want', Context: 'answers pitched at the wrong level', Example: 'a style that may not match yours', Format: 'a random answer shape' };
+    var run = function () {
+      var on = [], lack = [];
+      rows.forEach(function (r) { var c = $(r, 'input[type=checkbox]'), t = $(r, '.form-control'), k = c.getAttribute('data-p'); r.classList.toggle('off', !c.checked); if (c.checked && t.value.trim()) on.push(k + ': ' + t.value.trim()); else lack.push(k); });
+      out.textContent = on.join('\n') || '(empty prompt)';
+      $(el, '[data-bar]').style.width = (on.length / 5 * 100) + '%';
+      $(el, '[data-score]').innerHTML = '<b>' + on.length + ' of 5 parts.</b> ' + (lack.length ? 'Without ' + lack.join(' and ').toLowerCase() + ', expect ' + lack.map(function (k) { return miss[k]; }).join(' and ') + '.' : 'This prompt leaves the model very little to guess.');
+    };
+    $$(el, 'input').forEach(function (x) { x.addEventListener('input', run); x.addEventListener('change', run); }); run();
+  };
+
+  $$(document, '.lab').forEach(function (el) { var c = el.getAttribute('data-cfg'); try { L[el.getAttribute('data-lab')](el, c ? JSON.parse(c) : null); } catch (err) { console.error(err); } });
+
+  // Run the lesson's Python right here, with Pyodide loaded only when someone presses Run.
+  var py = null;
+  var boot = function () {
+    if (py) return py;
+    py = new Promise(function (ok, bad) { var s = document.createElement('script'); s.src = 'https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js'; s.onload = function () { loadPyodide().then(ok, bad); }; s.onerror = bad; document.head.appendChild(s); });
+    return py;
+  };
+  $$(document, '.ai-run').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var wrap = b.closest('.ai-code'), src = $(wrap, 'code').textContent, out = wrap.nextElementSibling;
+      if (!out || !out.classList.contains('ai-out')) { out = document.createElement('div'); out.className = 'ai-out'; out.innerHTML = '<span>▶ Output</span><pre></pre>'; wrap.after(out); }
+      var pre = $(out, 'pre'), lab = $(out, 'span'); b.disabled = true; b.textContent = 'Running…'; lab.textContent = py ? '▶ Running…' : '▶ Loading Python in your browser (first time takes a few seconds)…';
+      boot().then(function (p) {
+        return (/numpy/.test(src) ? p.loadPackage('numpy') : Promise.resolve()).then(function () {
+          var lines = []; p.setStdout({ batched: function (s) { lines.push(s); } }); p.setStderr({ batched: function (s) { lines.push(s); } });
+          return p.runPythonAsync(src).then(function () { return lines; }, function (err) { lines.push(String(err.message || err).trim().split('\n').slice(-1)[0]); out.classList.add('err'); return lines; });
+        });
+      }).then(function (lines) { pre.textContent = lines.join('\n') || '(no output)'; lab.textContent = out.classList.contains('err') ? '▶ Error (fix the code and run again)' : '▶ Output · ran in your browser'; },
+        function () { lab.textContent = '▶ Could not load Python. Check your connection, or run it with python3 on your computer.'; })
+        .then(function () { b.disabled = false; b.textContent = '▶ Run'; out.classList.remove('err'); });
+    });
+  });
+})();
 </script>
 </main>
 <footer class="site-footer">
