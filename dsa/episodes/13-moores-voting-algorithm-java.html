@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moore&#x27;s Voting Algorithm in Java | Majority Element | Compiled Canvas</title>
+<meta name="description" content="Moore&#x27;s voting algorithm in Java: find the majority element in O(n) time and O(1) space, explained simply. LeetCode 169.">
+<link rel="canonical" href="https://compiledcanvas.com/dsa/episodes/13-moores-voting-algorithm-java.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/dsa/episodes/13-moores-voting-algorithm-java.html">
+<meta property="og:title" content="Moore&#x27;s Voting Algorithm in Java | Majority Element | Compiled Canvas">
+<meta property="og:description" content="Moore&#x27;s voting algorithm in Java: find the majority element in O(n) time and O(1) space, explained simply. LeetCode 169.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/thumbs/13.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "DSA in Java", "item": "https://compiledcanvas.com/dsa/"}, {"@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://compiledcanvas.com/dsa/episodes/"}, {"@type": "ListItem", "position": 4, "name": "Episode 13", "item": "https://compiledcanvas.com/dsa/episodes/13-moores-voting-algorithm-java.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Episodes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Episode 13</li>
+    </ol></nav>
+    <span class="badge rounded-pill text-bg-dark mb-2">Episode 13 · 5:49 · video out 9 Nov 2026, 6:00 PM IST</span>
+    <h1 class="h2 fw-bold mb-3">Moore&#x27;s Voting Algorithm in Java | Majority Element</h1>
+    <div class="ep-player ratio ratio-16x9" id="ep-wait" data-out="2026-11-09T18:00:00+05:30">
+      <img src="../../assets/thumbs/13.jpg" alt="" class="object-fit-cover">
+    </div>
+    <p class="small text-body-secondary mt-2 mb-0" id="ep-wait-note">The video goes live on 9 Nov 2026 at 6:00 PM IST. The notes are ready now.</p>
+    <script>(function(){var w=document.getElementById('ep-wait');if(Date.now()>=new Date(w.dataset.out).getTime()){w.innerHTML="<iframe id=\"ep-video\" src=\"https://www.youtube.com/embed/nW9E9dSkZUM?rel=0\" data-video=\"nW9E9dSkZUM\" title=\"Moore&#x27;s Voting Algorithm in Java | Majority Element\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";document.getElementById('ep-wait-note').remove();}})();</script>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>What this episode covers</h2>
+      <p>A majority element appears more than half the time. A hash map finds it in O(n) time but uses O(n) memory, and sorting costs O(n log n). Moore&#x27;s voting algorithm needs one number and one counter.</p>
+<p>Think of a battle where each soldier knocks out one soldier from another team, and both leave. The majority team has more soldiers than everyone else combined, so someone from it is still standing. In code, a same vote adds one, a different vote takes one away, and at zero the next number becomes the candidate.</p>
+<p>We walk through a full example, write it in Java, and cover the trap: it only works when a majority is promised. Without that promise you need a second pass to verify. We finish with the harder version, more than one third of the time.</p>
+    </section>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>What you'll be able to do</h2>
+      <ul class="mb-0"><li>What majority means</li>
+<li>Two simple ways</li>
+<li>Cancelling votes</li>
+<li>The Java code</li>
+<li>The check people forget</li></ul>
+    </section>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
+      <p class="mb-0">It only works if a majority is promised. If it isn&#x27;t, do a second pass to count the candidate. Try 1, 2, 3 and see.</p>
+    </section>
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Key moments <small>tap one to jump there</small></h2>
+      <ol class="ep-moments list-unstyled mb-0"><li><a href="?t=0" data-seek="0"><time>0:00</time><span>The election</span></a></li>
+<li><a href="?t=23" data-seek="23"><time>0:23</time><span>Today&#x27;s plan</span></a></li>
+<li><a href="?t=48" data-seek="48"><time>0:48</time><span>What is majority?</span></a></li>
+<li><a href="?t=64" data-seek="64"><time>1:04</time><span>Two simple ways</span></a></li>
+<li><a href="?t=87" data-seek="87"><time>1:27</time><span>The idea: cancel votes</span></a></li>
+<li><a href="?t=113" data-seek="113"><time>1:53</time><span>Walk through it</span></a></li>
+<li><a href="?t=147" data-seek="147"><time>2:27</time><span>The Java code</span></a></li>
+<li><a href="?t=165" data-seek="165"><time>2:45</time><span>Subscribe break</span></a></li>
+<li><a href="?t=180" data-seek="180"><time>3:00</time><span>Your turn</span></a></li>
+<li><a href="?t=194" data-seek="194"><time>3:14</time><span>The check people forget</span></a></li>
+<li><a href="?t=209" data-seek="209"><time>3:29</time><span>The second pass</span></a></li>
+<li><a href="?t=224" data-seek="224"><time>3:44</time><span>The harder version</span></a></li>
+<li><a href="?t=240" data-seek="240"><time>4:00</time><span>Cheat sheet</span></a></li>
+<li><a href="?t=260" data-seek="260"><time>4:20</time><span>Quiz time</span></a></li>
+<li><a href="?t=299" data-seek="299"><time>4:59</time><span>Recap</span></a></li>
+<li><a href="?t=313" data-seek="313"><time>5:13</time><span>LeetCode homework</span></a></li>
+<li><a href="?t=330" data-seek="330"><time>5:30</time><span>Next episode: 2D arrays and matrix problems</span></a></li></ol>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Full transcript</h2>
+      <details class="ep-transcript"><summary>Read the whole lesson</summary>
+      <p>Seven people vote. Two candidates. Here are the votes.</p>
+<p>One candidate has more than half the votes. Who is it?</p>
+<p>Easy, you say, just count them with a hash map. But what if you&#x27;re told to use no extra memory at all?</p>
+<p>One number and one counter are enough. It&#x27;s called Moore&#x27;s voting algorithm, and it feels like magic until you see why it works.</p>
+<p>Welcome back to Compiled Canvas. This is Episode Thirteen of our DSA series. Last time, we sorted zeros, ones and twos with the Dutch National Flag.</p>
+<p>Here&#x27;s the plan. First, what a majority element is. Then the two simple ways. Then the idea of cancelling votes. The Java code. And the one check people forget. A cheat sheet. And an easy quiz at the end.</p>
+<p>Let&#x27;s go.</p>
+<p>A majority element appears more than half the time. Not half. More than half.</p>
+<p>In seven numbers, it must appear at least four times. In ten numbers, at least six.</p>
+<p>There can never be two of them. Two numbers can&#x27;t both take more than half.</p>
+<p>Way one, use a hash map. Count every number, and return the one above half.</p>
+<p>It&#x27;s O of n time, but the memory grows with the input.</p>
+<p>Way two, sort the numbers. The middle one must be the majority, because it covers more than half.</p>
+<p>It uses no map, but sorting costs O of n log n, and it changes the array. We can beat both of these.</p>
+<p>Here&#x27;s the idea, and it&#x27;s lovely. Imagine a battle. Each soldier can knock out one soldier from another team, and both leave the field.</p>
+<p>The majority team has more soldiers than all the other teams put together.</p>
+<p>So when everyone has cancelled out, someone from the majority team is still standing.</p>
+<p>That&#x27;s all the algorithm does. We keep one candidate and a count. A same vote adds one. A different vote cancels one.</p>
+<p>Let&#x27;s walk it. The count is zero, so the first two becomes our candidate. Count is one.</p>
+<p>Another two. Same vote, so the count is two.</p>
+<p>A one. Different vote, so one soldier from each side leaves. Count is one.</p>
+<p>Another one. Different again. The count is zero.</p>
+<p>The next one. The count is zero, so one becomes the new candidate. Count is one.</p>
+<p>A two. Different, so the count is zero.</p>
+<p>The last two. The count is zero, so two is the candidate again. Count is one.</p>
+<p>We&#x27;re done. The candidate is two, and two is the answer.</p>
+<p>Here&#x27;s the Java code. Just two variables, a candidate and a count.</p>
+<p>If the count is zero, the current number becomes the new candidate.</p>
+<p>Then, a same vote adds one, and a different vote takes one away.</p>
+<p>At the end, the candidate is the answer. It&#x27;s O of n time, and O of one space.</p>
+<p>Quick pause, before we go further. If you&#x27;re finding this video valuable, hit subscribe to Compiled Canvas, and turn on the bell. It&#x27;s free, it takes one second, and it helps me keep making this complete DSA series for you. Alright, back to it.</p>
+<p>Your turn. Pause, and run it on three, three, four, two, three, three, one.</p>
+<p>The count goes one, two, one, zero. Then three comes back: one, two, one. The candidate is three, and three is the majority.</p>
+<p>Now the trap. Moore&#x27;s only works if a majority is guaranteed. LeetCode one sixty nine promises this. Many interviewers don&#x27;t.</p>
+<p>Try one, two, three. Nobody has a majority. But the algorithm still returns three.</p>
+<p>So, if there&#x27;s no promise, do a second pass. Count how many times the candidate really appears.</p>
+<p>If it&#x27;s more than half, it&#x27;s the answer. If not, there&#x27;s no majority.</p>
+<p>Two passes, and it&#x27;s still O of n time and O of one space.</p>
+<p>Here&#x27;s a follow-up that companies ask. Find every number that appears more than one third of the time.</p>
+<p>At most two numbers can do that. So keep two candidates and two counters.</p>
+<p>A different vote now cancels one from both. And you always verify at the end.</p>
+<p>So, here&#x27;s the whole thing in one cheat sheet. Pause and screenshot this.</p>
+<p>Majority means more than half.</p>
+<p>Keep a candidate and a count.</p>
+<p>When the count is zero, take a new candidate.</p>
+<p>A same vote adds one.</p>
+<p>A different vote takes one away.</p>
+<p>Verify if there&#x27;s no promise.</p>
+<p>It&#x27;s O of n time and O of one space.</p>
+<p>Okay, quiz time. Three easy questions. Pause the video, think, and then hit play.</p>
+<p>Question one. In ten numbers, how many times must the majority appear, at least?</p>
+<p>Question two. The count is zero and the next number is five. What happens?</p>
+<p>Question three. What does the algorithm return for one, two, three, without a check?</p>
+<p>Ready?</p>
+<p>Question one: Six. It must be more than half.</p>
+<p>Question two: Five becomes the candidate.</p>
+<p>Question three: Three, which is wrong. So we verify.</p>
+<p>How many did you get right? Tell me in the comments: three out of three, two, or one.</p>
+<p>Let&#x27;s recap. Majority means more than half. Different votes cancel each other out. The majority always survives. One candidate, one count, one pass. If there&#x27;s no promise, verify with a second pass.</p>
+<p>Your homework. Solve LeetCode one sixty nine, majority element. Then try two twenty nine, the one third version. And then write the verify step yourself, and test it on one, two, three. Hints and Java answers are on compiled canvas dot com.</p>
+<p>Next episode, we move to two dimensions. Rotate a matrix, walk it in a spiral, and search it fast.</p>
+<p>And don&#x27;t forget to subscribe to Compiled Canvas, so you don&#x27;t miss anything new in tech and the job market. Keep coding, stay consistent, and I&#x27;ll see you in the next one.</p>
+      </details>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <div class="side-sticky">
+      <div class="card mb-3 shadow-sm solve-card"><div class="card-body">
+        <h2 class="h6 fw-bold">Practise this now</h2>
+        <div class="mb-3"><a class="ep-try" href="../09-kadane-dnf-moore/001-majority-element.html">Majority Element <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../09-kadane-dnf-moore/008-majority-element-ii.html">Majority Element II <span aria-hidden="true">→</span></a></div>
+        <a class="btn btn-brand w-100" href="../09-kadane-dnf-moore/index.html">All Kadane, Dutch Flag &amp; Moore&#x27;s Voting problems</a>
+      </div></div>
+      <div class="card mb-3 shadow-sm"><div class="card-body small">
+        <a class="d-block mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch the full DSA series in order</a>
+        <a class="d-block" href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Compiled Canvas</a>
+      </div></div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="12-dutch-national-flag-java.html">← Episode 12</a><a class="btn btn-outline-secondary" href="14-rotate-spiral-matrix-java.html">Episode 14 →</a></div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../../dsa/index.html">DSA in Java</a>
+        <a href="../../dsa/episodes/index.html">All episodes</a>
+        <a href="../../gen-ai/index.html">Generative AI</a>
+        <a href="../../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../../index.html#how">How it works</a>
+        <a href="../../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <p class="foot-note">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

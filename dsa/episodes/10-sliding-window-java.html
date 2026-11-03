@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sliding Window in Java: 2 Patterns | Fixed and Variable | Compiled Canvas</title>
+<meta name="description" content="The sliding window technique in Java: fixed and variable size windows that turn O(n × k) into O(n), with worked examples, a graph and Java code.">
+<link rel="canonical" href="https://compiledcanvas.com/dsa/episodes/10-sliding-window-java.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/dsa/episodes/10-sliding-window-java.html">
+<meta property="og:title" content="Sliding Window in Java: 2 Patterns | Fixed and Variable | Compiled Canvas">
+<meta property="og:description" content="The sliding window technique in Java: fixed and variable size windows that turn O(n × k) into O(n), with worked examples, a graph and Java code.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/thumbs/10.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "DSA in Java", "item": "https://compiledcanvas.com/dsa/"}, {"@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://compiledcanvas.com/dsa/episodes/"}, {"@type": "ListItem", "position": 4, "name": "Episode 10", "item": "https://compiledcanvas.com/dsa/episodes/10-sliding-window-java.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Episodes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Episode 10</li>
+    </ol></nav>
+    <span class="badge rounded-pill text-bg-dark mb-2">Episode 10 · 9:09 · video out 3 Nov 2026, 6:00 PM IST</span>
+    <h1 class="h2 fw-bold mb-3">Sliding Window in Java: 2 Patterns | Fixed and Variable</h1>
+    <div class="ep-player ratio ratio-16x9" id="ep-wait" data-out="2026-11-03T18:00:00+05:30">
+      <img src="../../assets/thumbs/10.jpg" alt="" class="object-fit-cover">
+    </div>
+    <p class="small text-body-secondary mt-2 mb-0" id="ep-wait-note">The video goes live on 3 Nov 2026 at 6:00 PM IST. The notes are ready now.</p>
+    <script>(function(){var w=document.getElementById('ep-wait');if(Date.now()>=new Date(w.dataset.out).getTime()){w.innerHTML="<iframe id=\"ep-video\" src=\"https://www.youtube.com/embed/MPqi3WLXj9w?rel=0\" data-video=\"MPqi3WLXj9w\" title=\"Sliding Window in Java: 2 Patterns | Fixed and Variable\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";document.getElementById('ep-wait-note').remove();}})();</script>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>What this episode covers</h2>
+      <p>You have a list of one million numbers and need the biggest sum of one thousand numbers in a row. Adding up every group from the start is about a billion additions. With a sliding window it&#x27;s about two million small steps.</p>
+<p>A window is a group of boxes in a row. A fixed window keeps its size, so each slide is one add and one subtract. A variable window grows on the right and shrinks on the left, and each box goes in once and comes out once, so it&#x27;s O(n) too.</p>
+<p>We work through the fixed window on 2, 1, 5, 1, 3, 2, and the variable window with a ₹7 snack budget. Then we write both in Java, and finish with how to spot a sliding window problem from the words in the question.</p>
+    </section>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>What you'll be able to do</h2>
+      <ul class="mb-0"><li>What a window is, and the two kinds</li>
+<li>The fixed window: add the new, drop the old</li>
+<li>The variable window: right grows, left shrinks</li>
+<li>Why both run in O(n) time and O(1) extra space</li>
+<li>Writing both windows in Java</li>
+<li>How to spot a sliding window problem</li></ul>
+    </section>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
+      <p class="mb-0">Shrinking a variable window with if instead of while. One drop may not be enough, so keep dropping until the window is valid. The shrinking trick also needs positive numbers: with negatives, adding a number can make the sum smaller.</p>
+    </section>
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Key moments <small>tap one to jump there</small></h2>
+      <ol class="ep-moments list-unstyled mb-0"><li><a href="?t=0" data-seek="0"><time>0:00</time><span>A billion additions vs two million steps</span></a></li>
+<li><a href="?t=40" data-seek="40"><time>0:40</time><span>Today&#x27;s plan</span></a></li>
+<li><a href="?t=56" data-seek="56"><time>0:56</time><span>What is a window?</span></a></li>
+<li><a href="?t=67" data-seek="67"><time>1:07</time><span>The train window</span></a></li>
+<li><a href="?t=84" data-seek="84"><time>1:24</time><span>Fixed vs variable window</span></a></li>
+<li><a href="?t=101" data-seek="101"><time>1:41</time><span>Fixed window: the slow way</span></a></li>
+<li><a href="?t=111" data-seek="111"><time>1:51</time><span>Fixed window: add one, drop one</span></a></li>
+<li><a href="?t=159" data-seek="159"><time>2:39</time><span>Your turn: try this one</span></a></li>
+<li><a href="?t=183" data-seek="183"><time>3:03</time><span>Graph: O(n × k) vs O(n)</span></a></li>
+<li><a href="?t=207" data-seek="207"><time>3:27</time><span>Subscribe break</span></a></li>
+<li><a href="?t=222" data-seek="222"><time>3:42</time><span>Variable size sliding window: the rubber band</span></a></li>
+<li><a href="?t=237" data-seek="237"><time>3:57</time><span>Worked example: snacks on a ₹7 budget</span></a></li>
+<li><a href="?t=298" data-seek="298"><time>4:58</time><span>Why the variable window is O(n)</span></a></li>
+<li><a href="?t=310" data-seek="310"><time>5:10</time><span>Your turn: try this one</span></a></li>
+<li><a href="?t=336" data-seek="336"><time>5:36</time><span>Fixed window in Java</span></a></li>
+<li><a href="?t=350" data-seek="350"><time>5:50</time><span>Variable window in Java</span></a></li>
+<li><a href="?t=370" data-seek="370"><time>6:10</time><span>The one mistake: if instead of while</span></a></li>
+<li><a href="?t=391" data-seek="391"><time>6:31</time><span>Negative numbers, and how to spot a sliding window</span></a></li>
+<li><a href="?t=412" data-seek="412"><time>6:52</time><span>Cheat sheet</span></a></li>
+<li><a href="?t=437" data-seek="437"><time>7:17</time><span>Quiz time</span></a></li>
+<li><a href="?t=485" data-seek="485"><time>8:05</time><span>Recap</span></a></li>
+<li><a href="?t=504" data-seek="504"><time>8:24</time><span>LeetCode homework</span></a></li>
+<li><a href="?t=528" data-seek="528"><time>8:48</time><span>Next episode: Kadane&#x27;s algorithm</span></a></li></ol>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Full transcript</h2>
+      <details class="ep-transcript"><summary>Read the whole lesson</summary>
+      <p>Here&#x27;s a question. You have a list of one million numbers. Find the biggest sum of one thousand numbers in a row.</p>
+<p>If you add up every group from the start, that&#x27;s about a billion additions. Your program crawls.</p>
+<p>But with one simple trick, you do about two million small steps. In a blink.</p>
+<p>That trick is called the sliding window. And by the end of this video, you&#x27;ll know both kinds of it.</p>
+<p>Welcome back to Compiled Canvas. This is Episode Ten of our DSA series. Last time, we learned two pointers. Today, those two pointers carry a whole window between them. And it&#x27;s one of the most asked patterns in coding interviews.</p>
+<p>Here&#x27;s the plan. What a window is. The fixed window. A graph of the speed. The variable window. Real Java code. The one mistake everyone makes. A cheat sheet. And an easy quiz at the end.</p>
+<p>Let&#x27;s go.</p>
+<p>First, what is a window?</p>
+<p>A window is just a group of boxes that sit next to each other, in a row. Not random boxes. Boxes in a row.</p>
+<p>Think of sitting on a train. Your window shows three houses at a time. When the train moves, one new house appears on the right, and one old house disappears on the left. The two houses in the middle stay.</p>
+<p>You don&#x27;t look at all three houses again. You only notice what changed.</p>
+<p>There are two kinds of windows. A fixed window always keeps the same size. A variable window grows and shrinks.</p>
+<p>Let&#x27;s start with the fixed window.</p>
+<p>Take two, one, five, one, three, two. Find the biggest sum of three numbers in a row.</p>
+<p>The slow way adds three numbers for every window. Two plus one plus five. Then one plus five plus one. Again and again.</p>
+<p>Now the smart way. The first window is two, one, five. Add them once. The sum is eight. So our best is eight.</p>
+<p>Slide one step. A new number comes in: one. An old number goes out: two. Eight plus one minus two is seven. Seven is not better. Best stays eight.</p>
+<p>Slide again. Three comes in. One goes out. Seven plus three minus one is nine. Nine is better. Best is nine.</p>
+<p>Slide again. Two comes in. Five goes out. Nine plus two minus five is six. Best stays nine.</p>
+<p>The window hit the end, so we stop. The answer is nine. That&#x27;s five, one, three.</p>
+<p>Every slide was just one add and one subtract.</p>
+<p>Your turn. Pause the video and try this one. The list is three, one, six, two, four. Find the biggest sum of three numbers in a row.</p>
+<p>Ready? The first window is three, one, six. That&#x27;s ten. Add two, drop three. Nine. Add four, drop one. Twelve. The biggest sum is twelve. If you got twelve, you&#x27;ve got it.</p>
+<p>Look at this graph. Along the bottom is the size of the list. Up the side is the number of steps. Adding every window again is a steep line, because each of the n windows costs k steps. The sliding window is a low line. Each slide costs just two steps, so it&#x27;s O of n.</p>
+<p>For a million numbers and a window of a thousand, that&#x27;s a billion steps against two million.</p>
+<p>Quick pause, before we go further. If you&#x27;re finding this video valuable, hit subscribe to Compiled Canvas, and turn on the bell. It&#x27;s free, it takes one second, and it helps me keep making this complete DSA series for you. Alright, back to it.</p>
+<p>Now the second kind. The variable window.</p>
+<p>Think of a rubber band around some boxes. You stretch the right side to take in more. If it gets too much, you pull in the left side.</p>
+<p>Two simple moves. Right grows. Left shrinks.</p>
+<p>Here&#x27;s our example. You have seven rupees. Snacks are in a row, and they cost four, two, one, six, one. You want the longest row of snacks you can buy, one after another.</p>
+<p>Right takes the first snack. Four. The total is four. That&#x27;s within seven. The length is one.</p>
+<p>Right takes the next. Two. The total is six. Still fine. The length is two.</p>
+<p>Right takes the next. One. The total is seven. Exactly our budget. The length is three. Best is three.</p>
+<p>Right takes the next. Six. The total is thirteen. Too much! So left has to shrink.</p>
+<p>Drop four. The total is nine. Still too much.</p>
+<p>Drop two. The total is seven. Fine again. The length is two.</p>
+<p>Right takes the last snack. One. The total is eight. Too much.</p>
+<p>Drop one. The total is seven. Fine. The length is two.</p>
+<p>Right reached the end, so we stop. The longest row is three snacks: four, two, one.</p>
+<p>Here&#x27;s why it&#x27;s fast. Right moves forward once for every box. Left also moves forward, and it never goes back. So each box goes in once, and comes out once. That&#x27;s O of n.</p>
+<p>Your turn. Pause again and try this one. You have seven rupees, and the snacks cost two, two, three, five, one. What&#x27;s the longest row you can buy?</p>
+<p>Ready for the answer? Two, two, three adds up to seven. That&#x27;s a length of three. Five makes it too much, so drop two, drop two, and drop three. Then five and one is six, a length of two. The longest row is three.</p>
+<p>Now let&#x27;s write it in Java.</p>
+<p>Here&#x27;s the fixed window. First, add the first k numbers. That sum is our best so far.</p>
+<p>Then loop from k to the end. Add the new number, and subtract the old number.</p>
+<p>Keep the bigger one in best.</p>
+<p>And here&#x27;s the variable window. Right walks every box in a for loop. Add the number at right to the sum.</p>
+<p>While the sum is too big, subtract the number at left, and move left forward.</p>
+<p>Then the window is valid again, so check its length: right minus left plus one.</p>
+<p>Both of them take O of n time, and O of one extra space.</p>
+<p>Now, the one mistake everyone makes.</p>
+<p>Using if, instead of while, to shrink the window.</p>
+<p>Remember our snacks. When the total hit thirteen, dropping one snack wasn&#x27;t enough. We had to drop two. With if, you drop only one, and the window stays too big.</p>
+<p>So always shrink with while. Keep dropping until the window is valid.</p>
+<p>One more small tip. This shrinking trick needs positive numbers. With negative numbers, adding a number can make the sum smaller, so the rule breaks.</p>
+<p>Here&#x27;s how to spot a sliding window. The question says in a row, or subarray, or substring. And it asks for the biggest, the smallest, or the longest.</p>
+<p>So, here&#x27;s the whole sliding window in one cheat sheet. Pause and screenshot this.</p>
+<p>A window is boxes in a row.</p>
+<p>Fixed window: add the new, drop the old.</p>
+<p>Variable window: right grows, left shrinks.</p>
+<p>Shrink with while, not if.</p>
+<p>Time: O of n. Extra space: O of one.</p>
+<p>And spot it by the words: in a row, subarray, substring.</p>
+<p>Okay, quiz time. Three easy questions. Pause the video, think, and then hit play.</p>
+<p>Question one. Find the biggest sum of exactly five numbers in a row. Is that a fixed window, or a variable window?</p>
+<p>Question two. The list is one, three, two, four. What is the biggest sum of two numbers in a row?</p>
+<p>Question three. Should you shrink a variable window with if, or with while?</p>
+<p>Ready?</p>
+<p>Question one: fixed. The size is always five.</p>
+<p>Question two: six. One plus three is four. Three plus two is five. Two plus four is six.</p>
+<p>Question three: while. One drop may not be enough.</p>
+<p>How many did you get right? Tell me in the comments: three out of three, two, or one.</p>
+<p>Let&#x27;s recap. A window is a group of boxes in a row. A fixed window keeps its size, so you add the new and drop the old. A variable window grows on the right, and shrinks on the left. Always shrink with while. Each box goes in once and comes out once, so it&#x27;s O of n.</p>
+<p>Your homework. Solve Maximum Average Subarray on LeetCode. It&#x27;s the fixed window. Then try Minimum Size Subarray Sum. It&#x27;s the variable window. All of them, with hints and full Java answers, are on our free practice page. The link is in the description. And tell me in the comments: in the list five, one, three, two, what is the biggest sum of two numbers in a row?</p>
+<p>Next episode, we learn Kadane&#x27;s algorithm. It finds the biggest sum of any length, in one single pass, and it&#x27;s a favourite in interviews.</p>
+<p>And don&#x27;t forget to subscribe to Compiled Canvas, so you don&#x27;t miss anything new in tech and the job market. Keep coding, stay consistent, and I&#x27;ll see you in the next one.</p>
+      </details>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <div class="side-sticky">
+      <div class="card mb-3 shadow-sm solve-card"><div class="card-body">
+        <h2 class="h6 fw-bold">Practise this now</h2>
+        <div class="mb-3"><a class="ep-try" href="../08-sliding-window/001-maximum-average-subarray-i.html">Maximum Average Subarray I <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../08-sliding-window/007-minimum-size-subarray-sum.html">Minimum Size Subarray Sum <span aria-hidden="true">→</span></a></div>
+        <a class="btn btn-brand w-100" href="../08-sliding-window/index.html">All Sliding Window problems</a>
+      </div></div>
+      <div class="card mb-3 shadow-sm"><div class="card-body small">
+        <a class="d-block mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch the full DSA series in order</a>
+        <a class="d-block" href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Compiled Canvas</a>
+      </div></div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="09-two-pointers-java.html">← Episode 9</a><a class="btn btn-outline-secondary" href="11-kadanes-algorithm-java.html">Episode 11 →</a></div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../../dsa/index.html">DSA in Java</a>
+        <a href="../../dsa/episodes/index.html">All episodes</a>
+        <a href="../../gen-ai/index.html">Generative AI</a>
+        <a href="../../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../../index.html#how">How it works</a>
+        <a href="../../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <p class="foot-note">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

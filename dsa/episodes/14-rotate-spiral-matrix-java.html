@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rotate Matrix and Spiral Matrix in Java | 2D Arrays | Compiled Canvas</title>
+<meta name="description" content="2D arrays in Java for DSA: rotate a matrix by 90 degrees, print a spiral matrix and search a sorted matrix, each with one simple trick.">
+<link rel="canonical" href="https://compiledcanvas.com/dsa/episodes/14-rotate-spiral-matrix-java.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/dsa/episodes/14-rotate-spiral-matrix-java.html">
+<meta property="og:title" content="Rotate Matrix and Spiral Matrix in Java | 2D Arrays | Compiled Canvas">
+<meta property="og:description" content="2D arrays in Java for DSA: rotate a matrix by 90 degrees, print a spiral matrix and search a sorted matrix, each with one simple trick.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/thumbs/14.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "DSA in Java", "item": "https://compiledcanvas.com/dsa/"}, {"@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://compiledcanvas.com/dsa/episodes/"}, {"@type": "ListItem", "position": 4, "name": "Episode 14", "item": "https://compiledcanvas.com/dsa/episodes/14-rotate-spiral-matrix-java.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Episodes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Episode 14</li>
+    </ol></nav>
+    <span class="badge rounded-pill text-bg-dark mb-2">Episode 14 · 6:47 · video out 11 Nov 2026, 6:00 PM IST</span>
+    <h1 class="h2 fw-bold mb-3">Rotate Matrix and Spiral Matrix in Java | 2D Arrays</h1>
+    <div class="ep-player ratio ratio-16x9" id="ep-wait" data-out="2026-11-11T18:00:00+05:30">
+      <img src="../../assets/thumbs/14.jpg" alt="" class="object-fit-cover">
+    </div>
+    <p class="small text-body-secondary mt-2 mb-0" id="ep-wait-note">The video goes live on 11 Nov 2026 at 6:00 PM IST. The notes are ready now.</p>
+    <script>(function(){var w=document.getElementById('ep-wait');if(Date.now()>=new Date(w.dataset.out).getTime()){w.innerHTML="<iframe id=\"ep-video\" src=\"https://www.youtube.com/embed/HMmdfgWvgWY?rel=0\" data-video=\"HMmdfgWvgWY\" title=\"Rotate Matrix and Spiral Matrix in Java | 2D Arrays\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";document.getElementById('ep-wait-note').remove();}})();</script>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>What this episode covers</h2>
+      <p>A 2D array in Java is an array of arrays, reached with row first, then column. This episode covers the three grid questions interviews love, each with one simple trick.</p>
+<p>To rotate a matrix 90 degrees clockwise in place, transpose it, then reverse each row. To print a spiral, think of four walls, top, bottom, left and right, that close in after each walk, with two extra checks for a single row or column.</p>
+<p>To search a sorted matrix, stand on the top right corner. Everything to the left is smaller and everything below is bigger, so each comparison removes a whole row or column. That makes it O(rows + cols), about two thousand steps on a thousand by thousand grid instead of a million.</p>
+    </section>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>What you'll be able to do</h2>
+      <ul class="mb-0"><li>2D array basics</li>
+<li>Rotate in place</li>
+<li>Spiral walk</li>
+<li>Fast search</li></ul>
+    </section>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
+      <p class="mb-0">Starting the transpose at j = 0 swaps every pair twice. Leaving out the two checks in spiral prints a single row twice.</p>
+    </section>
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Key moments <small>tap one to jump there</small></h2>
+      <ol class="ep-moments list-unstyled mb-0"><li><a href="?t=0" data-seek="0"><time>0:00</time><span>Three grid questions</span></a></li>
+<li><a href="?t=20" data-seek="20"><time>0:20</time><span>Today&#x27;s plan</span></a></li>
+<li><a href="?t=42" data-seek="42"><time>0:42</time><span>2D array basics</span></a></li>
+<li><a href="?t=68" data-seek="68"><time>1:08</time><span>Rotate: the slow way</span></a></li>
+<li><a href="?t=85" data-seek="85"><time>1:25</time><span>Rotate: the trick</span></a></li>
+<li><a href="?t=116" data-seek="116"><time>1:56</time><span>Rotate in Java</span></a></li>
+<li><a href="?t=139" data-seek="139"><time>2:19</time><span>Subscribe break</span></a></li>
+<li><a href="?t=154" data-seek="154"><time>2:34</time><span>Spiral: four walls</span></a></li>
+<li><a href="?t=195" data-seek="195"><time>3:15</time><span>Spiral in Java</span></a></li>
+<li><a href="?t=206" data-seek="206"><time>3:26</time><span>Two checks that matter</span></a></li>
+<li><a href="?t=228" data-seek="228"><time>3:48</time><span>Search: start at the corner</span></a></li>
+<li><a href="?t=263" data-seek="263"><time>4:23</time><span>Search in Java</span></a></li>
+<li><a href="?t=281" data-seek="281"><time>4:41</time><span>Your turn</span></a></li>
+<li><a href="?t=295" data-seek="295"><time>4:55</time><span>Cheat sheet</span></a></li>
+<li><a href="?t=322" data-seek="322"><time>5:22</time><span>Quiz time</span></a></li>
+<li><a href="?t=360" data-seek="360"><time>6:00</time><span>Recap</span></a></li>
+<li><a href="?t=376" data-seek="376"><time>6:16</time><span>LeetCode homework</span></a></li>
+<li><a href="?t=390" data-seek="390"><time>6:30</time><span>Next episode: Top 20 array interview questions</span></a></li></ol>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Full transcript</h2>
+      <details class="ep-transcript"><summary>Read the whole lesson</summary>
+      <p>An image on your phone is a grid of numbers. A game board is a grid. A spreadsheet is a grid.</p>
+<p>Interviews love three grid questions. Rotate it, walk it in a spiral, and search it fast.</p>
+<p>Each one looks scary. But each one has one simple trick, and you&#x27;ll know all three in a few minutes.</p>
+<p>Welcome back to Compiled Canvas. This is Episode Fourteen of our DSA series. Last time, we learned Moore&#x27;s voting algorithm.</p>
+<p>Here&#x27;s the plan. First, the basics of 2D arrays in Java. Then rotate a matrix in place. Then the spiral. And then a fast search. A cheat sheet. And an easy quiz at the end.</p>
+<p>Let&#x27;s go.</p>
+<p>In Java, a 2D array is an array of arrays. Each row is its own array.</p>
+<p>You reach one number with two indexes, row first, then column. Grid one two is six.</p>
+<p>Grid dot length gives the number of rows. Grid zero dot length gives the number of columns.</p>
+<p>To visit every cell, use two loops. Outer for rows, inner for columns. That&#x27;s rows times columns steps.</p>
+<p>Question one. Rotate this grid ninety degrees, clockwise.</p>
+<p>See what happens. The first row becomes the last column. One, two, three now stands on the right.</p>
+<p>The easy way is a new grid, and copy each number across. But that uses extra memory, and the question says in place.</p>
+<p>Here&#x27;s the trick. Rotate is just two easy moves. Move one, flip the grid across its diagonal.</p>
+<p>Rows become columns. Two swaps with four, three swaps with seven, six swaps with eight. The diagonal stays.</p>
+<p>Move two, reverse every row. One, four, seven becomes seven, four, one.</p>
+<p>And look, that&#x27;s the rotated grid. Two easy moves, and no extra grid at all.</p>
+<p>For counter clockwise, swap the order. Reverse each row first, and then transpose.</p>
+<p>Here&#x27;s the Java code. Two loops do the transpose.</p>
+<p>See this j, it starts at i plus one. We only touch the cells above the diagonal. If j started from zero, each pair would swap twice, and you&#x27;d get the same grid back.</p>
+<p>Then reverse each row, with the two pointers you already know.</p>
+<p>It&#x27;s O of n squared time, because we touch every cell. And O of one extra space.</p>
+<p>Quick pause, before we go further. If you&#x27;re finding this video valuable, hit subscribe to Compiled Canvas, and turn on the bell. It&#x27;s free, it takes one second, and it helps me keep making this complete DSA series for you. Alright, back to it.</p>
+<p>Question two. Print this grid in a spiral. Go right, down, left, up, and keep turning inward.</p>
+<p>Don&#x27;t think about turning. Think about four walls. Top, bottom, left and right.</p>
+<p>Walk along the top row, left to right. One, two, three. The top row is done, so the top wall moves down.</p>
+<p>Walk down the right side. Six, nine. The right wall moves in.</p>
+<p>Walk along the bottom, right to left. Eight, seven. The bottom wall moves up.</p>
+<p>Walk up the left side. Four. The left wall moves in.</p>
+<p>Now the walls have closed in on five. One more round, and every number is done.</p>
+<p>Here&#x27;s the Java code. Four walls, and the loop runs while they haven&#x27;t crossed.</p>
+<p>Walk the top row, then move the top wall down.</p>
+<p>Walk the right side, then move the right wall in.</p>
+<p>The bottom and the left need one extra check. Look at these two ifs.</p>
+<p>Take a grid with one row. One, two, three. After the top walk, the bottom row is the same row. Without the check, you&#x27;d print it again, backwards.</p>
+<p>The left walk has the same danger for a single column. Every cell is visited once, so it&#x27;s O of rows times columns.</p>
+<p>Question three. This grid is sorted. Every row goes up left to right, and every column goes up top to bottom. Find five.</p>
+<p>Checking every cell is too slow. So stand on the top right corner, on seven.</p>
+<p>Why there? Because everything to the left is smaller, and everything below is bigger. So one comparison throws away a whole row or column.</p>
+<p>Seven is bigger than five, so go left. The whole last column is gone.</p>
+<p>Four is smaller than five, so go down. The top row is gone.</p>
+<p>And here&#x27;s five, found in three looks.</p>
+<p>Here&#x27;s the Java code. Start at row zero, last column.</p>
+<p>Too big, go left. Too small, go down.</p>
+<p>Each step removes a row or a column, so it&#x27;s O of rows plus columns. For a thousand by thousand grid, that&#x27;s two thousand steps at most, instead of one million.</p>
+<p>Your turn. Pause. Rotate this two by two grid. One, two on top, three, four below.</p>
+<p>Transpose gives one, three, then two, four. Reverse each row, and you get three, one, then four, two.</p>
+<p>So, here&#x27;s the whole thing in one cheat sheet. Pause and screenshot this.</p>
+<p>Row first, then column.</p>
+<p>Grid dot length is rows.</p>
+<p>Rotate clockwise is transpose, then reverse each row.</p>
+<p>In the transpose, j starts at i plus one.</p>
+<p>Spiral means four walls that close in.</p>
+<p>Add two checks for one row or one column.</p>
+<p>Search from the top right corner.</p>
+<p>Search takes O of rows plus columns.</p>
+<p>Okay, quiz time. Three easy questions. Pause the video, think, and then hit play.</p>
+<p>Question one. What does this print?</p>
+<p>Question two. What are the two moves for a clockwise rotate?</p>
+<p>Question three. In the search, the number is bigger than the target. Which way do you go?</p>
+<p>Ready?</p>
+<p>Question one: Six. Row one, column two.</p>
+<p>Question two: Transpose, then reverse each row.</p>
+<p>Question three: Left. Everything to the left is smaller.</p>
+<p>How many did you get right? Tell me in the comments: three out of three, two, or one.</p>
+<p>Let&#x27;s recap. A 2D array is an array of arrays. Rotate is transpose, then reverse. Spiral is four walls closing in. Search starts at the top right corner. Every grid question has a simple trick.</p>
+<p>Your homework. Solve LeetCode forty eight, rotate image. Then try fifty four, spiral matrix. And then two forty, search a 2D matrix two. Hints and Java answers are on compiled canvas dot com.</p>
+<p>Next episode, the top twenty array interview questions, all in one video, sorted by pattern.</p>
+<p>And don&#x27;t forget to subscribe to Compiled Canvas, so you don&#x27;t miss anything new in tech and the job market. Keep coding, stay consistent, and I&#x27;ll see you in the next one.</p>
+      </details>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <div class="side-sticky">
+      <div class="card mb-3 shadow-sm solve-card"><div class="card-body">
+        <h2 class="h6 fw-bold">Practise this now</h2>
+        <div class="mb-3"><a class="ep-try" href="../10-matrix/003-rotate-image.html">Rotate Image <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../10-matrix/004-spiral-matrix.html">Spiral Matrix <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../10-matrix/008-search-a-2d-matrix-ii.html">Search a 2D Matrix II <span aria-hidden="true">→</span></a></div>
+        <a class="btn btn-brand w-100" href="../10-matrix/index.html">All 2D Arrays &amp; Matrix problems</a>
+      </div></div>
+      <div class="card mb-3 shadow-sm"><div class="card-body small">
+        <a class="d-block mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch the full DSA series in order</a>
+        <a class="d-block" href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Compiled Canvas</a>
+      </div></div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="13-moores-voting-algorithm-java.html">← Episode 13</a><a class="btn btn-outline-secondary" href="15-top-array-interview-questions-java.html">Episode 15 →</a></div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../../dsa/index.html">DSA in Java</a>
+        <a href="../../dsa/episodes/index.html">All episodes</a>
+        <a href="../../gen-ai/index.html">Generative AI</a>
+        <a href="../../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../../index.html#how">How it works</a>
+        <a href="../../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <p class="foot-note">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

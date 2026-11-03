@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dutch National Flag Algorithm in Java | Sort 0s, 1s, 2s | Compiled Canvas</title>
+<meta name="description" content="Dutch National Flag algorithm in Java: sort 0s, 1s and 2s in one pass with three pointers, with a full visualization. LeetCode 75 Sort Colors.">
+<link rel="canonical" href="https://compiledcanvas.com/dsa/episodes/12-dutch-national-flag-java.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/dsa/episodes/12-dutch-national-flag-java.html">
+<meta property="og:title" content="Dutch National Flag Algorithm in Java | Sort 0s, 1s, 2s | Compiled Canvas">
+<meta property="og:description" content="Dutch National Flag algorithm in Java: sort 0s, 1s and 2s in one pass with three pointers, with a full visualization. LeetCode 75 Sort Colors.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/thumbs/12.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "DSA in Java", "item": "https://compiledcanvas.com/dsa/"}, {"@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://compiledcanvas.com/dsa/episodes/"}, {"@type": "ListItem", "position": 4, "name": "Episode 12", "item": "https://compiledcanvas.com/dsa/episodes/12-dutch-national-flag-java.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Episodes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Episode 12</li>
+    </ol></nav>
+    <span class="badge rounded-pill text-bg-dark mb-2">Episode 12 · 5:55 · video out 7 Nov 2026, 6:00 PM IST</span>
+    <h1 class="h2 fw-bold mb-3">Dutch National Flag Algorithm in Java | Sort 0s, 1s, 2s</h1>
+    <div class="ep-player ratio ratio-16x9" id="ep-wait" data-out="2026-11-07T18:00:00+05:30">
+      <img src="../../assets/thumbs/12.jpg" alt="" class="object-fit-cover">
+    </div>
+    <p class="small text-body-secondary mt-2 mb-0" id="ep-wait-note">The video goes live on 7 Nov 2026 at 6:00 PM IST. The notes are ready now.</p>
+    <script>(function(){var w=document.getElementById('ep-wait');if(Date.now()>=new Date(w.dataset.out).getTime()){w.innerHTML="<iframe id=\"ep-video\" src=\"https://www.youtube.com/embed/HKqQf5uXE-E?rel=0\" data-video=\"HKqQf5uXE-E\" title=\"Dutch National Flag Algorithm in Java | Sort 0s, 1s, 2s\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";document.getElementById('ep-wait-note').remove();}})();</script>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>What this episode covers</h2>
+      <p>The Dutch National Flag algorithm sorts an array of only 0s, 1s and 2s in one pass with no extra array. Arrays.sort works but is O(n log n), and counting works but walks the array twice. Three pointers, low, mid and high, split the array into zones and shrink the unknown part until nothing is left.</p>
+<p>There are three rules. See a 0: swap with low and move both. See a 1: just move mid. See a 2: swap with high and move high back, but mid stays, because the number that came from the right has never been checked.</p>
+<p>We walk through 2, 0, 2, 1, 1, 0 in full, write it in Java, and look at the two bugs that catch almost everyone. The same idea powers three-way partitioning in quick sort.</p>
+    </section>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>What you'll be able to do</h2>
+      <ul class="mb-0"><li>Two simple ways</li>
+<li>Three zones</li>
+<li>The three rules</li>
+<li>A full walkthrough</li>
+<li>The Java code</li></ul>
+    </section>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
+      <p class="mb-0">Moving mid after swapping with high, and writing the loop with mid less than high. The last number needs checking too.</p>
+    </section>
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Key moments <small>tap one to jump there</small></h2>
+      <ol class="ep-moments list-unstyled mb-0"><li><a href="?t=0" data-seek="0"><time>0:00</time><span>Three colours</span></a></li>
+<li><a href="?t=18" data-seek="18"><time>0:18</time><span>Today&#x27;s plan</span></a></li>
+<li><a href="?t=41" data-seek="41"><time>0:41</time><span>Two simple ways</span></a></li>
+<li><a href="?t=70" data-seek="70"><time>1:10</time><span>Three zones</span></a></li>
+<li><a href="?t=92" data-seek="92"><time>1:32</time><span>The three rules</span></a></li>
+<li><a href="?t=117" data-seek="117"><time>1:57</time><span>Walk through it</span></a></li>
+<li><a href="?t=153" data-seek="153"><time>2:33</time><span>The Java code</span></a></li>
+<li><a href="?t=177" data-seek="177"><time>2:57</time><span>Subscribe break</span></a></li>
+<li><a href="?t=191" data-seek="191"><time>3:11</time><span>Two bugs to avoid</span></a></li>
+<li><a href="?t=216" data-seek="216"><time>3:36</time><span>Your turn</span></a></li>
+<li><a href="?t=244" data-seek="244"><time>4:04</time><span>Cheat sheet</span></a></li>
+<li><a href="?t=269" data-seek="269"><time>4:29</time><span>Quiz time</span></a></li>
+<li><a href="?t=305" data-seek="305"><time>5:05</time><span>Recap</span></a></li>
+<li><a href="?t=319" data-seek="319"><time>5:19</time><span>LeetCode homework</span></a></li>
+<li><a href="?t=336" data-seek="336"><time>5:36</time><span>Next episode: Moore&#x27;s voting algorithm</span></a></li></ol>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Full transcript</h2>
+      <details class="ep-transcript"><summary>Read the whole lesson</summary>
+      <p>Here&#x27;s a row of numbers. Only zeros, ones and twos, all mixed up.</p>
+<p>Your job is to sort them. But there&#x27;s a catch.</p>
+<p>One pass only. No extra array. And you can&#x27;t call the sort function.</p>
+<p>Three pointers can do this. And it&#x27;s one of the most asked array questions at big companies.</p>
+<p>Welcome back to Compiled Canvas. This is Episode Twelve of our DSA series. Last time, we learned Kadane&#x27;s algorithm.</p>
+<p>Here&#x27;s the plan. First, the two simple ways, and why they aren&#x27;t enough. Then the idea of three zones. The three rules. A full walkthrough. And the Java code. A cheat sheet. And an easy quiz at the end.</p>
+<p>Let&#x27;s go.</p>
+<p>The first way is to call arrays dot sort. It works, but it takes O of n log n, and it ignores that we only have three values.</p>
+<p>The second way is to count. Two zeros, two ones, two twos. Then write them back.</p>
+<p>That&#x27;s O of n, and it&#x27;s a good answer. But it walks the array twice. The interviewer will ask, can you do it in one pass?</p>
+<p>Yes. And the famous answer comes from Edsger Dijkstra. He named it after the flag of the Netherlands, which has three colour bands.</p>
+<p>Here&#x27;s the idea. We split the array into zones, and grow them as we walk.</p>
+<p>Zeros go on the far left. Everything before low is a zero.</p>
+<p>Twos go on the far right. Everything after high is a two.</p>
+<p>And mid is the one that walks. Everything from mid to high is still unknown. Our job is to shrink that unknown part to nothing.</p>
+<p>There are just three rules, one for each number. Rule one. If mid sees a zero, swap it with low, and move both forward.</p>
+<p>Rule two. If mid sees a one, it&#x27;s already in the right zone. Just move mid forward.</p>
+<p>Rule three. If mid sees a two, swap it with high, and move high back.</p>
+<p>But mid stays where it is. This is the trap. The number that just came from the right has never been checked.</p>
+<p>Let&#x27;s walk it. Two, zero, two, one, one, zero. Low and mid are at the start, high is at the end.</p>
+<p>Mid sees a two. Swap it with high. High moves back, mid stays.</p>
+<p>Mid sees a zero. Swap with low, which is itself. Both move forward.</p>
+<p>Another zero. Same rule, and both move forward again.</p>
+<p>Mid sees a two. Swap it with high, and high moves back.</p>
+<p>Now mid sees a one, then another one. Mid just walks forward, twice.</p>
+<p>Mid has passed high, so the unknown part is empty. And it&#x27;s sorted, in one pass.</p>
+<p>Here&#x27;s the Java code. Three pointers, and that&#x27;s all the memory we use.</p>
+<p>The loop runs while mid hasn&#x27;t passed high.</p>
+<p>A zero swaps with low, and both pointers move.</p>
+<p>A one just moves mid.</p>
+<p>A two swaps with high, and only high moves. Look, mid has no plus plus here.</p>
+<p>Every step shrinks the unknown part by one. So it&#x27;s O of n time, and O of one space.</p>
+<p>Quick pause, before we go further. If you&#x27;re finding this video valuable, hit subscribe to Compiled Canvas, and turn on the bell. It&#x27;s free, it takes one second, and it helps me keep making this complete DSA series for you. Alright, back to it.</p>
+<p>Two bugs catch almost everyone. Bug one is moving mid after swapping with high. The new number gets skipped.</p>
+<p>Bug two is writing mid less than high. Try it with one, zero.</p>
+<p>Mid sees the one, and moves to the last spot. Now mid equals high, so the loop stops. And the zero is still in the wrong place.</p>
+<p>With less than or equal to, mid checks that last number too. Use that.</p>
+<p>Your turn. Pause, and sort two, one, zero with the three rules.</p>
+<p>Mid sees a two, so swap it with high. Now it&#x27;s zero, one, two. High moves back.</p>
+<p>Mid sees a zero, so both move. Then mid sees a one, and moves past high. Done.</p>
+<p>Now, where else do you use this? Quick sort uses the same idea to split numbers into smaller, equal and bigger.</p>
+<p>Anytime you must group things into three kinds in place, think of this flag.</p>
+<p>So, here&#x27;s the whole thing in one cheat sheet. Pause and screenshot this.</p>
+<p>Use three pointers: low, mid and high.</p>
+<p>See a zero: swap with low, and both move.</p>
+<p>See a one: mid moves.</p>
+<p>See a two: swap with high, and high moves back.</p>
+<p>After that swap, mid stays.</p>
+<p>Loop while mid is less than or equal to high.</p>
+<p>It&#x27;s O of n time and O of one space.</p>
+<p>Okay, quiz time. Three easy questions. Pause the video, think, and then hit play.</p>
+<p>Question one. Mid sees a zero. Which pointers move?</p>
+<p>Question two. Mid sees a two. Does mid move?</p>
+<p>Question three. What&#x27;s the correct sign in the loop?</p>
+<p>Ready?</p>
+<p>Question one: Low and mid, both of them.</p>
+<p>Question two: No. The swapped number is unchecked, so mid stays.</p>
+<p>Question three: Less than or equal to. The last number must be checked too.</p>
+<p>How many did you get right? Tell me in the comments: three out of three, two, or one.</p>
+<p>Let&#x27;s recap. Counting works, but it takes two passes. Three pointers split the array into zones. Zeros go left, twos go right, ones stay. Mid stays after swapping with high. One pass, no extra memory.</p>
+<p>Your homework. Solve LeetCode seventy five, sort colors. Then try two eighty three, move zeroes, with the same idea. And then try three twenty four, wiggle sort, if you want a challenge. Hints and Java answers are on compiled canvas dot com.</p>
+<p>Next episode, Moore&#x27;s voting algorithm. We&#x27;ll find the majority element with one number and one counter.</p>
+<p>And don&#x27;t forget to subscribe to Compiled Canvas, so you don&#x27;t miss anything new in tech and the job market. Keep coding, stay consistent, and I&#x27;ll see you in the next one.</p>
+      </details>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <div class="side-sticky">
+      <div class="card mb-3 shadow-sm solve-card"><div class="card-body">
+        <h2 class="h6 fw-bold">Practise this now</h2>
+        <div class="mb-3"><a class="ep-try" href="../09-kadane-dnf-moore/007-sort-colors.html">Sort Colors <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../07-two-pointers/003-move-zeroes.html">Move Zeroes <span aria-hidden="true">→</span></a></div>
+        <a class="btn btn-brand w-100" href="../09-kadane-dnf-moore/index.html">All Kadane, Dutch Flag &amp; Moore&#x27;s Voting problems</a>
+      </div></div>
+      <div class="card mb-3 shadow-sm"><div class="card-body small">
+        <a class="d-block mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch the full DSA series in order</a>
+        <a class="d-block" href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Compiled Canvas</a>
+      </div></div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="11-kadanes-algorithm-java.html">← Episode 11</a><a class="btn btn-outline-secondary" href="13-moores-voting-algorithm-java.html">Episode 13 →</a></div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../../dsa/index.html">DSA in Java</a>
+        <a href="../../dsa/episodes/index.html">All episodes</a>
+        <a href="../../gen-ai/index.html">Generative AI</a>
+        <a href="../../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../../index.html#how">How it works</a>
+        <a href="../../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <p class="foot-note">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

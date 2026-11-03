@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>String vs StringBuilder vs StringBuffer in Java | Compiled Canvas</title>
+<meta name="description" content="String vs StringBuilder vs StringBuffer in Java: why strings can&#x27;t change, why + in a loop is O(n²), and which one to use for DSA.">
+<link rel="canonical" href="https://compiledcanvas.com/dsa/episodes/16-string-stringbuilder-stringbuffer-java.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/dsa/episodes/16-string-stringbuilder-stringbuffer-java.html">
+<meta property="og:title" content="String vs StringBuilder vs StringBuffer in Java | Compiled Canvas">
+<meta property="og:description" content="String vs StringBuilder vs StringBuffer in Java: why strings can&#x27;t change, why + in a loop is O(n²), and which one to use for DSA.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/thumbs/16.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "DSA in Java", "item": "https://compiledcanvas.com/dsa/"}, {"@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://compiledcanvas.com/dsa/episodes/"}, {"@type": "ListItem", "position": 4, "name": "Episode 16", "item": "https://compiledcanvas.com/dsa/episodes/16-string-stringbuilder-stringbuffer-java.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Episodes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Episode 16</li>
+    </ol></nav>
+    <span class="badge rounded-pill text-bg-dark mb-2">Episode 16 · 6:08 · video out 15 Nov 2026, 6:00 PM IST</span>
+    <h1 class="h2 fw-bold mb-3">String vs StringBuilder vs StringBuffer in Java</h1>
+    <div class="ep-player ratio ratio-16x9" id="ep-wait" data-out="2026-11-15T18:00:00+05:30">
+      <img src="../../assets/thumbs/16.jpg" alt="" class="object-fit-cover">
+    </div>
+    <p class="small text-body-secondary mt-2 mb-0" id="ep-wait-note">The video goes live on 15 Nov 2026 at 6:00 PM IST. The notes are ready now.</p>
+    <script>(function(){var w=document.getElementById('ep-wait');if(Date.now()>=new Date(w.dataset.out).getTime()){w.innerHTML="<iframe id=\"ep-video\" src=\"https://www.youtube.com/embed/6wqlB0STUEs?rel=0\" data-video=\"6wqlB0STUEs\" title=\"String vs StringBuilder vs StringBuffer in Java\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";document.getElementById('ep-wait-note').remove();}})();</script>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>What this episode covers</h2>
+      <p>One line that adds a letter in a loop can make Java code crawl. Adding one letter a lakh times copies about five billion characters, because a Java string is immutable. It can never change, so every plus makes a new string and copies all the old letters.</p>
+<p>StringBuilder fixes this. It&#x27;s a box of letters with spare room at the end, so adding is O(1) on average and the whole loop is O(n). StringBuffer has the same tools but its methods are synchronized, so it&#x27;s safe for threads and slower. For DSA you nearly always want StringBuilder.</p>
+<p>We also cover the string pool, why == compares objects while .equals() compares text, and the tools you&#x27;ll use all the time: length(), charAt, substring, toCharArray and counting letters with an array of 26. Then we solve LeetCode 151, reverse the words in a string.</p>
+    </section>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>What you'll be able to do</h2>
+      <ul class="mb-0"><li>Strings can&#x27;t change</li>
+<li>The string pool</li>
+<li>Why + is slow</li>
+<li>Builder vs Buffer</li>
+<li>DSA string tools</li></ul>
+    </section>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
+      <p class="mb-0">Comparing strings with ==. It compares objects, not text. Use .equals().</p>
+    </section>
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Key moments <small>tap one to jump there</small></h2>
+      <ol class="ep-moments list-unstyled mb-0"><li><a href="?t=0" data-seek="0"><time>0:00</time><span>The slow line</span></a></li>
+<li><a href="?t=23" data-seek="23"><time>0:23</time><span>Today&#x27;s plan</span></a></li>
+<li><a href="?t=51" data-seek="51"><time>0:51</time><span>Strings can&#x27;t change</span></a></li>
+<li><a href="?t=71" data-seek="71"><time>1:11</time><span>The String pool</span></a></li>
+<li><a href="?t=99" data-seek="99"><time>1:39</time><span>Why plus is slow</span></a></li>
+<li><a href="?t=125" data-seek="125"><time>2:05</time><span>StringBuilder</span></a></li>
+<li><a href="?t=146" data-seek="146"><time>2:26</time><span>StringBuilder in Java</span></a></li>
+<li><a href="?t=159" data-seek="159"><time>2:39</time><span>Subscribe break</span></a></li>
+<li><a href="?t=173" data-seek="173"><time>2:53</time><span>StringBuffer and the choice</span></a></li>
+<li><a href="?t=202" data-seek="202"><time>3:22</time><span>Dsa String tools</span></a></li>
+<li><a href="?t=228" data-seek="228"><time>3:48</time><span>Reverse the words</span></a></li>
+<li><a href="?t=260" data-seek="260"><time>4:20</time><span>Cheat sheet</span></a></li>
+<li><a href="?t=284" data-seek="284"><time>4:44</time><span>Quiz time</span></a></li>
+<li><a href="?t=316" data-seek="316"><time>5:16</time><span>Recap</span></a></li>
+<li><a href="?t=332" data-seek="332"><time>5:32</time><span>LeetCode homework</span></a></li>
+<li><a href="?t=349" data-seek="349"><time>5:49</time><span>Next episode: Palindromes and anagrams</span></a></li></ol>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Full transcript</h2>
+      <details class="ep-transcript"><summary>Read the whole lesson</summary>
+      <p>Look at this code. It adds one letter, one lakh times. It looks like it does one lakh steps.</p>
+<p>It actually copies about five billion characters. Your code crawls, and that plus sign is the reason.</p>
+<p>Change one thing, use string builder, and it&#x27;s about one lakh steps again.</p>
+<p>In this video, you&#x27;ll see exactly why. And you&#x27;ll never pick the wrong one again.</p>
+<p>Welcome back to Compiled Canvas. This is Episode Sixteen of our DSA series. Last time, we finished arrays with the top twenty questions. Today, we start strings.</p>
+<p>Here&#x27;s the plan. First, why a Java string can&#x27;t change. Then the string pool. Then why that plus sign is so slow. Then string builder and string buffer. And the string tools you need for DSA. A cheat sheet. And an easy quiz at the end.</p>
+<p>Let&#x27;s go.</p>
+<p>In Java, a string is immutable. That means once it&#x27;s made, it can never change.</p>
+<p>Look, we call to upper case, but when we print, it&#x27;s still cat. That call made a new string, and we threw it away.</p>
+<p>To keep it, point s at the new string. The old cat is still in memory, until Java cleans it up.</p>
+<p>Why make strings immutable? Because Java can share them. Text in quotes lives in a place called the string pool.</p>
+<p>A and b point to the same object in the pool. So a equals equals b is true.</p>
+<p>New string makes a separate object, even with the same text. So a equals equals c is false.</p>
+<p>Here&#x27;s the rule. Double equals compares where objects live. Dot equals compares the text. For strings, always use dot equals.</p>
+<p>Now, that slow plus sign. A string can&#x27;t change, so s plus a can&#x27;t add to s.</p>
+<p>Java makes a whole new string, and copies every old letter into it, and then adds one.</p>
+<p>The first time, it copies one letter. Next, two. Then three, and so on.</p>
+<p>Add those up, and for n letters it&#x27;s about n squared over two. For one lakh letters, that&#x27;s five billion copies.</p>
+<p>String builder fixes this. It&#x27;s a box of letters that you can change.</p>
+<p>It keeps spare room at the end. Adding a letter just drops it into the next empty slot. No copying.</p>
+<p>When the box is full, it makes a bigger box, about double the size, and copies once. That happens rarely, so adding stays O of one on average.</p>
+<p>So the whole loop is O of n.</p>
+<p>Here&#x27;s how you use it. Make a builder.</p>
+<p>Call append in the loop.</p>
+<p>And call to string at the end, once.</p>
+<p>It also has insert, delete char at, and reverse. These change the same object.</p>
+<p>Quick pause, before we go further. If you&#x27;re finding this video valuable, hit subscribe to Compiled Canvas, and turn on the bell. It&#x27;s free, it takes one second, and it helps me keep making this complete DSA series for you. Alright, back to it.</p>
+<p>So what&#x27;s string buffer? It&#x27;s the same as string builder, with one difference. Its methods are synchronized.</p>
+<p>That means only one thread can use it at a time. It&#x27;s safe when threads share it, but that lock costs time.</p>
+<p>Here&#x27;s the choice. Text that doesn&#x27;t change, use string.</p>
+<p>Building text, use string builder. That&#x27;s nearly always the right one in DSA.</p>
+<p>And many threads writing to the same object, that&#x27;s when you&#x27;d pick string buffer. In real code, that&#x27;s rare.</p>
+<p>Here are the tools you&#x27;ll use all the time. Length has brackets for strings, and no brackets for arrays. It catches everyone.</p>
+<p>Char at gives you one letter. It&#x27;s O of one.</p>
+<p>Substring looks cheap, but it copies. So calling it in a loop adds up.</p>
+<p>To edit letters, turn the string into a char array.</p>
+<p>And here&#x27;s a trick you&#x27;ll use a lot. Count letters with an array of twenty six. Char minus a gives the right slot.</p>
+<p>Let&#x27;s use all of this on a real question. LeetCode one fifty one, reverse the words in a string.</p>
+<p>First, cut off spaces at the ends, and split on spaces.</p>
+<p>Then walk from the last word to the first, appending to a builder.</p>
+<p>Add a space between words, and you&#x27;re done. It&#x27;s O of n, because we used a builder and not the plus sign.</p>
+<p>Your turn. Pause. What does this print? String s equals hi, then s dot concat with a question mark, then print s.</p>
+<p>It prints hi. Strings can&#x27;t change, and we threw away the new one.</p>
+<p>So, here&#x27;s the whole thing in one cheat sheet. Pause and screenshot this.</p>
+<p>A string can never change.</p>
+<p>Use dot equals to compare text.</p>
+<p>A plus sign in a loop is O of n squared.</p>
+<p>String builder appends in O of one on average.</p>
+<p>String buffer is the thread safe one.</p>
+<p>Length has brackets on strings.</p>
+<p>Substring copies.</p>
+<p>Count letters with an array of twenty six.</p>
+<p>Okay, quiz time. Three easy questions. Pause the video, think, and then hit play.</p>
+<p>Question one. What does this print?</p>
+<p>Question two. What&#x27;s the time for this loop?</p>
+<p>Question three. Building text in a single thread. Which one do you pick?</p>
+<p>Ready?</p>
+<p>Question one: False. They&#x27;re different objects.</p>
+<p>Question two: O of n squared. Each plus copies the whole string.</p>
+<p>Question three: String builder.</p>
+<p>How many did you get right? Tell me in the comments: three out of three, two, or one.</p>
+<p>Let&#x27;s recap. A string can&#x27;t change, so every change makes a new one. Same text in quotes is shared in the pool. Plus in a loop is slow. Use string builder to build text. String buffer is only for shared threads.</p>
+<p>Your homework. Solve LeetCode one fifty one, reverse words in a string. Then try three forty four, reverse string. And then try four one five, add strings, using a builder. Hints and Java answers are on compiled canvas dot com.</p>
+<p>Next episode, palindromes, anagrams and frequency counting. The string questions you&#x27;ll see everywhere.</p>
+<p>And don&#x27;t forget to subscribe to Compiled Canvas, so you don&#x27;t miss anything new in tech and the job market. Keep coding, stay consistent, and I&#x27;ll see you in the next one.</p>
+      </details>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <div class="side-sticky">
+      <div class="card mb-3 shadow-sm solve-card"><div class="card-body">
+        <h2 class="h6 fw-bold">Practise this now</h2>
+        <div class="mb-3"><a class="ep-try" href="../11-strings/009-reverse-words-in-a-string.html">Reverse Words in a String <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../02-java-basics/004-reverse-string.html">Reverse String <span aria-hidden="true">→</span></a></div>
+        <a class="btn btn-brand w-100" href="../11-strings/index.html">All Strings problems</a>
+      </div></div>
+      <div class="card mb-3 shadow-sm"><div class="card-body small">
+        <a class="d-block mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch the full DSA series in order</a>
+        <a class="d-block" href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Compiled Canvas</a>
+      </div></div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="15-top-array-interview-questions-java.html">← Episode 15</a><a class="btn btn-outline-secondary" href="index.html">All episodes →</a></div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../../dsa/index.html">DSA in Java</a>
+        <a href="../../dsa/episodes/index.html">All episodes</a>
+        <a href="../../gen-ai/index.html">Generative AI</a>
+        <a href="../../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../../index.html#how">How it works</a>
+        <a href="../../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <p class="foot-note">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

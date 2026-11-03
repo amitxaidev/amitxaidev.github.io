@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kadane&#x27;s Algorithm in Java: Maximum Subarray Sum | Compiled Canvas</title>
+<meta name="description" content="Kadane&#x27;s algorithm in Java: find the maximum subarray sum in one pass with two variables, explained simply with pictures.">
+<link rel="canonical" href="https://compiledcanvas.com/dsa/episodes/11-kadanes-algorithm-java.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/dsa/episodes/11-kadanes-algorithm-java.html">
+<meta property="og:title" content="Kadane&#x27;s Algorithm in Java: Maximum Subarray Sum | Compiled Canvas">
+<meta property="og:description" content="Kadane&#x27;s algorithm in Java: find the maximum subarray sum in one pass with two variables, explained simply with pictures.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/thumbs/11.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "DSA in Java", "item": "https://compiledcanvas.com/dsa/"}, {"@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://compiledcanvas.com/dsa/episodes/"}, {"@type": "ListItem", "position": 4, "name": "Episode 11", "item": "https://compiledcanvas.com/dsa/episodes/11-kadanes-algorithm-java.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Episodes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Episode 11</li>
+    </ol></nav>
+    <span class="badge rounded-pill text-bg-dark mb-2">Episode 11 · 6:25 · video out 5 Nov 2026, 6:00 PM IST</span>
+    <h1 class="h2 fw-bold mb-3">Kadane&#x27;s Algorithm in Java: Maximum Subarray Sum</h1>
+    <div class="ep-player ratio ratio-16x9" id="ep-wait" data-out="2026-11-05T18:00:00+05:30">
+      <img src="../../assets/thumbs/11.jpg" alt="" class="object-fit-cover">
+    </div>
+    <p class="small text-body-secondary mt-2 mb-0" id="ep-wait-note">The video goes live on 5 Nov 2026 at 6:00 PM IST. The notes are ready now.</p>
+    <script>(function(){var w=document.getElementById('ep-wait');if(Date.now()>=new Date(w.dataset.out).getTime()){w.innerHTML="<iframe id=\"ep-video\" src=\"https://www.youtube.com/embed/UNq6wyDhOjs?rel=0\" data-video=\"UNq6wyDhOjs\" title=\"Kadane&#x27;s Algorithm in Java: Maximum Subarray Sum\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";document.getElementById('ep-wait-note').remove();}})();</script>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>What this episode covers</h2>
+      <p>Kadane&#x27;s algorithm finds the biggest total of numbers in a row. The slow way tries every stretch with two loops, which is O(n²). Kadane&#x27;s walks once and asks one question at each number: join the old stretch, or start a new one here? It picks the bigger of the two.</p>
+<p>The reason it works is simple. A running total that has gone negative can only drag the next number down, so we drop it and restart. We walk through 3, -2, 5, -9, 4 step by step, write it in Java with two variables, then solve LeetCode 53.</p>
+<p>We also handle the follow-ups interviewers ask: all negative numbers, printing the subarray itself, and the circular version, where the answer is the total minus the smallest stretch.</p>
+    </section>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>What you'll be able to do</h2>
+      <ul class="mb-0"><li>What the problem asks</li>
+<li>The slow way</li>
+<li>Kadane&#x27;s one rule</li>
+<li>The Java code</li>
+<li>Tricky cases</li></ul>
+    </section>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
+      <p class="mb-0">Starting from 0 instead of nums[0]. With all negative numbers the answer is the largest one, because a subarray can&#x27;t be empty.</p>
+    </section>
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Key moments <small>tap one to jump there</small></h2>
+      <ol class="ep-moments list-unstyled mb-0"><li><a href="?t=0" data-seek="0"><time>0:00</time><span>The best stretch</span></a></li>
+<li><a href="?t=23" data-seek="23"><time>0:23</time><span>Today&#x27;s plan</span></a></li>
+<li><a href="?t=47" data-seek="47"><time>0:47</time><span>What is a subarray?</span></a></li>
+<li><a href="?t=64" data-seek="64"><time>1:04</time><span>The slow way</span></a></li>
+<li><a href="?t=83" data-seek="83"><time>1:23</time><span>Kadane&#x27;s one rule</span></a></li>
+<li><a href="?t=109" data-seek="109"><time>1:49</time><span>Walk through it</span></a></li>
+<li><a href="?t=150" data-seek="150"><time>2:30</time><span>The Java code</span></a></li>
+<li><a href="?t=172" data-seek="172"><time>2:52</time><span>Subscribe break</span></a></li>
+<li><a href="?t=187" data-seek="187"><time>3:07</time><span>The LeetCode example</span></a></li>
+<li><a href="?t=218" data-seek="218"><time>3:38</time><span>Tricky cases</span></a></li>
+<li><a href="?t=245" data-seek="245"><time>4:05</time><span>The circular version</span></a></li>
+<li><a href="?t=273" data-seek="273"><time>4:33</time><span>Cheat sheet</span></a></li>
+<li><a href="?t=295" data-seek="295"><time>4:55</time><span>Quiz time</span></a></li>
+<li><a href="?t=334" data-seek="334"><time>5:34</time><span>Recap</span></a></li>
+<li><a href="?t=350" data-seek="350"><time>5:50</time><span>LeetCode homework</span></a></li>
+<li><a href="?t=366" data-seek="366"><time>6:06</time><span>Next episode: Dutch National Flag</span></a></li></ol>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Full transcript</h2>
+      <details class="ep-transcript"><summary>Read the whole lesson</summary>
+      <p>Here are five days of a small shop. Some days it makes money, some days it loses money.</p>
+<p>Which days in a row made the most money?</p>
+<p>The answer is the first three days. Three, minus two, plus five. That&#x27;s six.</p>
+<p>One trick finds this in a single pass, with just two variables. It&#x27;s called Kadane&#x27;s algorithm, and interviewers love it.</p>
+<p>Welcome back to Compiled Canvas. This is Episode Eleven of our DSA series. Last time, we learned the sliding window.</p>
+<p>Here&#x27;s the plan. First, what the problem really asks. Then the slow way, and why it hurts. Then Kadane&#x27;s one simple rule. We&#x27;ll write it in Java. And we&#x27;ll handle the tricky cases. A cheat sheet. And an easy quiz at the end.</p>
+<p>Let&#x27;s go.</p>
+<p>A subarray means numbers that sit next to each other, in a row.</p>
+<p>You can&#x27;t skip a number. Three and five, without the minus two in between, is not allowed.</p>
+<p>So the maximum subarray sum is simple. Look at every possible stretch, and find the biggest total.</p>
+<p>The slow way is easy to think of. Start at every position.</p>
+<p>From there, keep walking to the end, adding as you go.</p>
+<p>And keep the best total you have ever seen.</p>
+<p>That&#x27;s two loops, one inside the other, so it&#x27;s O of n squared.</p>
+<p>With one lakh numbers, that&#x27;s about five billion additions. Way too slow.</p>
+<p>Now here&#x27;s the idea. Imagine you walk through the days, carrying your running total in a bag.</p>
+<p>If the bag holds a profit, carry it forward. It can only help tomorrow.</p>
+<p>But if the bag holds a loss, throw it away and start fresh. An old loss can only drag you down.</p>
+<p>So at every number, you ask just one question. Should I join the old stretch, or start a new one here?</p>
+<p>That&#x27;s it. That&#x27;s the whole algorithm.</p>
+<p>Let&#x27;s walk it, step by step. Start at three. Current is three, and best is three.</p>
+<p>Next, minus two. Joining gives one, starting fresh gives minus two. So we join. Current is one, best stays three.</p>
+<p>Next, five. One plus five is six. A new record, so best becomes six.</p>
+<p>Next, minus nine. Joining gives minus three, starting fresh gives minus nine. So we join, and current drops to minus three.</p>
+<p>Last, four. Joining gives one, but starting fresh gives four. So we drop the old loss, and start again here.</p>
+<p>The end. Best is six, the same answer, and we only walked once.</p>
+<p>Here&#x27;s the Java code. It&#x27;s short. Two variables, both starting from the first number.</p>
+<p>Then one loop, from the second number to the end.</p>
+<p>This line is the rule. Start fresh with this number, or join the old stretch. Take the bigger one.</p>
+<p>And this line keeps the record.</p>
+<p>One loop means O of n time. Two variables means O of one space.</p>
+<p>Quick pause, before we go further. If you&#x27;re finding this video valuable, hit subscribe to Compiled Canvas, and turn on the bell. It&#x27;s free, it takes one second, and it helps me keep making this complete DSA series for you. Alright, back to it.</p>
+<p>Now the famous one, LeetCode problem fifty three. These are the numbers.</p>
+<p>Here&#x27;s current at every step. Look at the four. Current was minus two, so we dropped it and restarted.</p>
+<p>Now look at it as a graph. Current climbs, and the highest point is six.</p>
+<p>That six comes from four, minus one, two and one.</p>
+<p>Your turn. Pause and try these numbers. One, minus two, three, four, minus one.</p>
+<p>The answer is seven. Three plus four.</p>
+<p>Tricky case one. Every number is negative. Minus three, minus one, minus two.</p>
+<p>The answer is minus one, not zero. A subarray can&#x27;t be empty. That&#x27;s why we start from the first number, and not from zero.</p>
+<p>Tricky case two. The interviewer asks, can you print the subarray too?</p>
+<p>Easy. Whenever you restart, remember where you started.</p>
+<p>And whenever you beat the record, save that start and this end.</p>
+<p>Tricky case three. A circular array, where the end joins back to the start. The best stretch can wrap around.</p>
+<p>Here&#x27;s the trick. If the best part wraps around, then the part left out is the worst stretch.</p>
+<p>So take the total, and subtract the smallest subarray. Seven minus minus three is ten.</p>
+<p>Run Kadane&#x27;s twice, once for the biggest and once for the smallest, and return the larger answer. If every number is negative, just use the normal answer.</p>
+<p>So, here&#x27;s the whole thing in one cheat sheet. Pause and screenshot this.</p>
+<p>A subarray means numbers in a row, with no skipping.</p>
+<p>At every number, join the old stretch or restart.</p>
+<p>Math dot max picks the bigger one.</p>
+<p>Best keeps the record.</p>
+<p>Start from the first number, not zero.</p>
+<p>It runs in O of n time and O of one space.</p>
+<p>Okay, quiz time. Three easy questions. Pause the video, think, and then hit play.</p>
+<p>Question one. What&#x27;s the answer for two, minus one, three?</p>
+<p>Question two. What&#x27;s the answer for minus five, minus two, minus eight?</p>
+<p>Question three. What&#x27;s the time and the extra space of Kadane&#x27;s?</p>
+<p>Ready?</p>
+<p>Question one: Four. Keep the whole stretch.</p>
+<p>Question two: Minus two. A subarray can&#x27;t be empty.</p>
+<p>Question three: O of n time, and O of one space.</p>
+<p>How many did you get right? Tell me in the comments: three out of three, two, or one.</p>
+<p>Let&#x27;s recap. The slow way is two loops, O of n squared. Kadane&#x27;s asks one question: join or restart? If the running total is a loss, drop it. One pass, two variables. Circular means total minus the smallest stretch.</p>
+<p>Your homework. Solve LeetCode fifty three, maximum subarray. Then try nine one eight, the circular version. And then one twenty one, best time to buy and sell stock. It&#x27;s Kadane&#x27;s in disguise. Hints and Java answers are on compiled canvas dot com.</p>
+<p>Next episode, the Dutch National Flag. We&#x27;ll sort zeros, ones and twos in one pass, with three pointers.</p>
+<p>And don&#x27;t forget to subscribe to Compiled Canvas, so you don&#x27;t miss anything new in tech and the job market. Keep coding, stay consistent, and I&#x27;ll see you in the next one.</p>
+      </details>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <div class="side-sticky">
+      <div class="card mb-3 shadow-sm solve-card"><div class="card-body">
+        <h2 class="h6 fw-bold">Practise this now</h2>
+        <div class="mb-3"><a class="ep-try" href="../09-kadane-dnf-moore/003-maximum-subarray.html">Maximum Subarray <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../09-kadane-dnf-moore/005-maximum-sum-circular-subarray.html">Maximum Sum Circular Subarray <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../05-arrays/004-best-time-to-buy-and-sell-stock.html">Best Time to Buy and Sell Stock <span aria-hidden="true">→</span></a></div>
+        <a class="btn btn-brand w-100" href="../09-kadane-dnf-moore/index.html">All Kadane, Dutch Flag &amp; Moore&#x27;s Voting problems</a>
+      </div></div>
+      <div class="card mb-3 shadow-sm"><div class="card-body small">
+        <a class="d-block mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch the full DSA series in order</a>
+        <a class="d-block" href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Compiled Canvas</a>
+      </div></div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="10-sliding-window-java.html">← Episode 10</a><a class="btn btn-outline-secondary" href="12-dutch-national-flag-java.html">Episode 12 →</a></div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../../dsa/index.html">DSA in Java</a>
+        <a href="../../dsa/episodes/index.html">All episodes</a>
+        <a href="../../gen-ai/index.html">Generative AI</a>
+        <a href="../../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../../index.html#how">How it works</a>
+        <a href="../../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <p class="foot-note">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>
