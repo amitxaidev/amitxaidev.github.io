@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How LLMs Work: Tokens and Embeddings Explained Simply | Compiled Canvas</title>
+<meta name="description" content="How LLMs work, explained simply: tokens, embeddings and next-token prediction, with each step built in Python.">
+<link rel="canonical" href="https://compiledcanvas.com/gen-ai/02-how-llms-work.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/gen-ai/02-how-llms-work.html">
+<meta property="og:title" content="How LLMs Work: Tokens and Embeddings Explained Simply | Compiled Canvas">
+<meta property="og:description" content="How LLMs work, explained simply: tokens, embeddings and next-token prediction, with each step built in Python.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/gen-ai/lesson-02.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script><script>window.addEventListener('load',function(){if(window.hljs)document.querySelectorAll('pre code').forEach(function(c){window.hljs.highlightElement(c);});});</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How LLMs Work: Tokens and Embeddings Explained Simply", "author": {"@type": "Person", "name": "Amit Singh"}, "publisher": {"@type": "Organization", "name": "Compiled Canvas", "url": "https://compiledcanvas.com/", "logo": {"@type": "ImageObject", "url": "https://compiledcanvas.com/assets/logo.png"}, "sameAs": ["https://www.youtube.com/@compiledcanvas", "https://www.instagram.com/compiledcanvas", "https://github.com/amitxaidev"]}, "image": "https://compiledcanvas.com/assets/gen-ai/lesson-02.jpg", "description": "How LLMs work, explained simply: tokens, embeddings and next-token prediction, with each step built in Python."}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "Generative AI", "item": "https://compiledcanvas.com/gen-ai/"}, {"@type": "ListItem", "position": 3, "name": "Lesson 2", "item": "https://compiledcanvas.com/gen-ai/02-how-llms-work.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+      <img src="../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+<section class="ai-hero"><div class="container"><p class="ai-trail"><a href="../index.html">Home</a> / <a href="index.html">Generative AI</a> / Lesson 2</p>
+<span class="ai-pill">Lesson 2 · Python</span><h1>How LLMs Work: Tokens, Embeddings, Next Token</h1><p class="lead">How LLMs work, explained simply: tokens, embeddings and next-token prediction, with each step built in Python.</p></div></section><div class="container py-4"><div class="row g-4"><aside class="col-lg-3 d-none d-lg-block"><nav class="ai-toc"><a href="#s1">It reads numbers</a><a href="#s2">What is an LLM?</a><a href="#s3">Tokens</a><a href="#s4">Tokens in Python</a><a href="#s5">Embeddings</a><a href="#s6">Similarity in Python</a><a href="#s7">Picking the next token</a><a href="#s8">Softmax in Python</a><a href="#s9">The whole loop</a></nav></aside><div class="col-lg-9"><div class="ai-video"><div class="ratio ratio-16x9"><img src="../assets/gen-ai/lesson-02.jpg" alt="Lesson 2 video thumbnail" loading="lazy"></div><span>🎬 The video comes out on 6 Nov at 10:00 AM IST. The notes and code are ready now.</span></div><section class="ai-sec fade-up" id="s1"><h2><span>1</span>It reads numbers</h2><p>When you type a question into a chatbot, it never sees your words. It sees numbers.</p><p>And under all the magic, it only ever answers one small question. What comes next?</p><p>By the end of this video, you&#x27;ll know exactly how that works. And you&#x27;ll build each step in Python.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">WORDS → NUMBERS</div><div class="ai-v-row"><small>you type</small><div><span class="ai-v-cell c-none" style="--i:0">I</span><span class="ai-v-cell c-none" style="--i:1">love</span><span class="ai-v-cell c-none" style="--i:2">Python</span></div></div><div class="ai-v-row"><small>it sees</small><div><span class="ai-v-cell c-acid" style="--i:0">40</span><span class="ai-v-cell c-acid" style="--i:1">3021</span><span class="ai-v-cell c-acid" style="--i:2">11034</span></div></div></figure><figure class="ai-v fade-up"><div class="ai-v-big c-bone">WHAT COMES</div><div class="ai-v-big c-signal">NEXT?</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">TODAY</div><div class="ai-v-cards"><span class="ai-v-card c-ink2" style="--i:0">TOKENS</span><span class="ai-v-card c-ink2" style="--i:1">EMBEDDINGS</span><span class="ai-v-card c-ink2" style="--i:2">NEXT TOKEN</span></div></figure></div></section><section class="ai-sec fade-up" id="s2"><h2><span>2</span>What is an LLM?</h2><p>LLM stands for large language model. Let&#x27;s take it one word at a time.</p><p>Language model means it predicts the next piece of text. Like the autocomplete on your phone keyboard.</p><p>Large means it has billions of numbers inside it, called parameters. It learned them by reading a huge amount of text.</p><p>So an LLM is your phone&#x27;s autocomplete, made enormously bigger and smarter.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-big c-bone">LARGE LANGUAGE</div><div class="ai-v-big c-signal">MODEL</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">LANGUAGE MODEL</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">&quot;See you&quot; → tomorrow?</span></div><div class="ai-v-note c-acid">PREDICTS WHAT COMES NEXT</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">LARGE</div><div class="ai-v-bars"><span class="c-acid" style="--h:4%;--i:0"><b>1</b></span><span class="c-acid" style="--h:4%;--i:1"><b>3</b></span><span class="c-acid" style="--h:10%;--i:2"><b>10</b></span><span class="c-acid" style="--h:40%;--i:3"><b>40</b></span><span class="c-signal" style="--h:100%;--i:4"><b>100</b></span></div><div class="ai-v-note c-acid">BILLIONS OF PARAMETERS</div></figure></div></section><section class="ai-sec fade-up" id="s3"><h2><span>3</span>Tokens</h2><p>Step one. The text is cut into small pieces called tokens.</p><p>A token can be a whole word, part of a word, or a symbol. A long word like unbelievable might be split into a few pieces.</p><p>A handy rule for English. One token is about three quarters of a word. So a hundred tokens is roughly seventy five words.</p><p>Each token has an ID number. The model only ever sees these numbers.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">STEP 1: TOKENS</div><div class="ai-v-row"><div><span class="ai-v-cell c-acid" style="--i:0">I</span><span class="ai-v-cell c-acid" style="--i:1"> love</span><span class="ai-v-cell c-acid" style="--i:2"> Python</span><span class="ai-v-cell c-acid" style="--i:3">!</span></div></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">PIECES OF WORDS</div><div class="ai-v-row"><div><span class="ai-v-cell c-ember" style="--i:0">un</span><span class="ai-v-cell c-acid" style="--i:1">believ</span><span class="ai-v-cell c-signal" style="--i:2">able</span></div></div><div class="ai-v-note c-acid">LONG WORDS SPLIT</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">RULE OF THUMB</div><div class="ai-v-big c-acid">100 TOKENS ≈ 75 WORDS</div></figure></div></section><section class="ai-sec fade-up" id="s4"><h2><span>4</span>Tokens in Python</h2><p class="ai-note">Type it out yourself, or copy it. It runs with <code>python3 tokens.py</code>.</p><div class="ai-code"><div class="ai-code-head"><span>tokens.py</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/tokens.py" download>Download</a></span></div><pre><code class="language-python">vocab = {&quot;i&quot;: 0, &quot;love&quot;: 1, &quot;java&quot;: 2, &quot;python&quot;: 3}
+
+def tokenize(text):
+    words = text.lower().split()
+    return [vocab.get(w, -1) for w in words]
+
+print(tokenize(&quot;I love Python&quot;))  # [0, 1, 3]
+print(tokenize(&quot;I love Rust&quot;))    # [0, 1, -1]</code></pre></div><div class="ai-out"><span>▶ Output</span><pre>[0, 1, 3]
+[0, 1, -1]</pre></div><p>Here&#x27;s a tiny tokenizer in Python. The vocabulary maps each word to an ID.</p><p>Tokenize lowercases the text, splits it, and looks up each word.</p><p>Rust isn&#x27;t in our vocabulary, so it gets minus one. Real tokenizers never get stuck like this. They break unknown words into smaller pieces they do know.</p></section><section class="ai-sec fade-up" id="s5"><h2><span>5</span>Embeddings</h2><p>Step two. An ID like three tells the model nothing about meaning. So each token is turned into a list of numbers, called an embedding.</p><p>Think of it as a position on a map of meaning. Words with similar meanings sit close together.</p><p>Cat sits near dog. Car sits far away from both. Real models use thousands of numbers for each token, not two.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">STEP 2: EMBEDDINGS</div><div class="ai-v-row"><small>token</small><div><span class="ai-v-cell c-none" style="--i:0">python</span></div></div><div class="ai-v-row"><small>embedding</small><div><span class="ai-v-cell c-none" style="--i:0">0.21</span><span class="ai-v-cell c-none" style="--i:1">-0.7</span><span class="ai-v-cell c-none" style="--i:2">0.53</span><span class="ai-v-cell c-none" style="--i:3">0.08</span><span class="ai-v-cell c-none" style="--i:4">…</span></div></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">A MAP OF MEANING</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">cat · dog · puppy</span><span class="ai-v-card c-ember" style="--i:1">car · bus · train</span><span class="ai-v-card c-ink2" style="--i:2">apple · mango</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">CLOSE = SIMILAR</div><div class="ai-v-row"><div><span class="ai-v-cell c-acid" style="--i:0">cat</span><span class="ai-v-cell c-acid" style="--i:1">dog</span></div></div><div class="ai-v-row"><div><span class="ai-v-cell c-signal" style="--i:0">car</span></div></div><div class="ai-v-note c-acid">REAL MODELS: THOUSANDS OF NUMBERS</div></figure></div></section><section class="ai-sec fade-up" id="s6"><h2><span>6</span>Similarity in Python</h2><p class="ai-note">Type it out yourself, or copy it. It runs with <code>python3 embeddings.py</code>.</p><div class="ai-code"><div class="ai-code-head"><span>embeddings.py</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/embeddings.py" download>Download</a></span></div><pre><code class="language-python">import numpy as np
+
+emb = {&quot;cat&quot;: np.array([0.9, 0.8]),
+       &quot;dog&quot;: np.array([0.8, 0.9]),
+       &quot;car&quot;: np.array([0.1, -0.9])}
+
+def similarity(a, b):
+    a, b = emb[a], emb[b]
+    return a @ b / (np.linalg.norm(a) * np.linalg.norm(b))
+
+print(round(similarity(&quot;cat&quot;, &quot;dog&quot;), 2))  # 0.99
+print(round(similarity(&quot;cat&quot;, &quot;car&quot;), 2))  # -0.58</code></pre></div><div class="ai-out"><span>▶ Output</span><pre>0.99
+-0.58</pre></div><p>Here are three tiny embeddings, each with just two numbers.</p><p>Cosine similarity measures how much two embeddings point the same way. One means the same direction. Minus one means opposite.</p><p>Cat and dog score zero point nine nine. Cat and car score minus zero point five eight. The numbers really do capture meaning.</p></section><section class="ai-sec fade-up" id="s7"><h2><span>7</span>Picking the next token</h2><p>Step three. The embeddings flow through the model&#x27;s layers. We&#x27;ll open those up in the next episode.</p><p>Out comes a score for every possible next token. Take the cat sat on the. Mat gets a high score. Moon gets a low one.</p><p>A function called softmax turns the scores into probabilities that add up to one.</p><p>The model picks a token, adds it to the text, and asks again. One token at a time, until it&#x27;s done.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">STEP 3: THE MODEL</div><div class="ai-v-cards"><span class="ai-v-card c-ink2" style="--i:0">EMBEDDINGS</span><span class="ai-v-card c-signal" style="--i:1">LAYERS</span><span class="ai-v-card c-ink2" style="--i:2">SCORES</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">&quot;THE CAT SAT ON THE …&quot;</div><div class="ai-v-row"><div><span class="ai-v-cell c-none" style="--i:0">mat</span><span class="ai-v-cell c-none" style="--i:1">floor</span><span class="ai-v-cell c-none" style="--i:2">sofa</span><span class="ai-v-cell c-none" style="--i:3">moon</span></div></div><div class="ai-v-row"><small>score</small><div><span class="ai-v-cell c-acid" style="--i:0">3.0</span><span class="ai-v-cell c-none" style="--i:1">2.1</span><span class="ai-v-cell c-none" style="--i:2">1.2</span><span class="ai-v-cell c-none" style="--i:3">0.5</span></div></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">SOFTMAX</div><div class="ai-v-bars"><span class="c-acid" style="--h:100%;--i:0"><b>60</b></span><span class="c-ash" style="--h:42%;--i:1"><b>25</b></span><span class="c-ash" style="--h:17%;--i:2"><b>10</b></span><span class="c-ash" style="--h:8%;--i:3"><b>5</b></span></div><div class="ai-v-note c-acid">MAT 60% · FLOOR 25% · SOFA 10% · MOON 5%</div></figure></div></section><section class="ai-sec fade-up" id="s8"><h2><span>8</span>Softmax in Python</h2><p class="ai-note">Type it out yourself, or copy it. It runs with <code>python3 next_token.py</code>.</p><div class="ai-code"><div class="ai-code-head"><span>next_token.py</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/next_token.py" download>Download</a></span></div><pre><code class="language-python">import numpy as np
+
+words = [&quot;mat&quot;, &quot;floor&quot;, &quot;sofa&quot;, &quot;moon&quot;]
+scores = np.array([3.0, 2.1, 1.2, 0.5])
+
+probs = np.exp(scores) / np.exp(scores).sum()
+for w, p in zip(words, probs):
+    print(w, round(p, 2))
+
+# mat 0.6  floor 0.25  sofa 0.1  moon 0.05</code></pre></div><div class="ai-out"><span>▶ Output</span><pre>mat 0.6
+floor 0.25
+sofa 0.1
+moon 0.05</pre></div><p>Here&#x27;s softmax in Python. Four words, and a score for each.</p><p>Raise e to each score, then divide by the total. Now they add up to one.</p><p>Mat gets zero point six. Moon gets just zero point zero five. That&#x27;s how a model chooses its next word.</p></section><section class="ai-sec fade-up" id="s9"><h2><span>9</span>The whole loop</h2><p>So here&#x27;s the whole loop. Text becomes tokens. Tokens become embeddings. The layers turn them into scores. Softmax turns scores into probabilities. Pick one, and go again.</p><p>How did it learn those billions of numbers? By guessing the next token in a huge amount of text, again and again, and adjusting itself every time it was wrong.</p><p>Your turn. Pause. If one token is about three quarters of a word, roughly how many tokens is a three hundred word essay?</p><p>About four hundred. Three hundred divided by three quarters.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">THE WHOLE LOOP</div><div class="ai-v-cards"><span class="ai-v-card c-ink2" style="--i:0">TEXT</span><span class="ai-v-card c-ink2" style="--i:1">TOKENS</span><span class="ai-v-card c-ink2" style="--i:2">EMBEDDINGS</span><span class="ai-v-card c-signal" style="--i:3">LAYERS</span><span class="ai-v-card c-ink2" style="--i:4">PROBABILITIES</span><span class="ai-v-card c-acid" style="--i:5">PICK &amp; REPEAT</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">HOW IT LEARNED</div><svg class="ai-v-graph" viewBox="0 0 400 210" role="img" aria-label="mistakes against training"><path d="M20 10V190H390"/><polyline class="c-acid" points="20.0,190.0 29.0,182.2 38.0,176.3 47.0,171.5 56.0,167.5 65.0,164.1 74.0,161.1 83.0,158.4 92.0,156.0 101.0,153.8 110.0,151.8 119.0,149.9 128.0,148.2 137.0,146.6 146.0,145.1 155.0,143.6 164.0,142.3 173.0,141.0 182.0,139.8 191.0,138.6 200.0,137.5 209.0,136.5 218.0,135.4 227.0,134.5 236.0,133.5 245.0,132.6 254.0,131.8 263.0,130.9 272.0,130.1 281.0,129.3 290.0,128.5 299.0,127.8 308.0,127.1 317.0,126.4 326.0,125.7 335.0,125.1 344.0,124.4 353.0,123.8 362.0,123.2 371.0,122.6 380.0,122.0"/><text class="c-acid" x="330" y="114">learning</text><text x="388" y="205" text-anchor="end">training →</text><text x="24" y="12">↑ mistakes</text></svg><div class="ai-v-note c-acid">GUESS, CHECK, ADJUST</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">YOUR TURN</div><div class="ai-v-big c-bone">300 WORDS = ? TOKENS</div><div class="ai-v-note c-signal">PAUSE AND TRY</div></figure></div></section><section class="ai-sec fade-up" id="s10"><h2><span>10</span>Cheat sheet</h2><ul class="ai-list"><li>LLM: predicts the next token</li><li>Token: a piece of a word</li><li>100 tokens ≈ 75 words</li><li>Embedding: meaning as numbers</li><li>Similar = close together</li><li>Softmax: scores → probabilities</li></ul></section><section class="ai-sec fade-up" id="s11"><h2><span>11</span>Quick quiz</h2><details class="ai-q"><summary>1. What does an LLM predict?</summary><p>The next token.</p></details><details class="ai-q"><summary>2. Words with similar meanings have embeddings that are what?</summary><p>Close together.</p></details><details class="ai-q"><summary>3. What do softmax probabilities add up to?</summary><p>One.</p></details></section><section class="ai-sec fade-up" id="s12"><h2><span>12</span>Homework</h2><p>Your homework. Run the three Python programs from this lesson. All the Python code is on this page, ready to copy. Then change the scores in the softmax program and watch the probabilities move. And tell me in the comments: which step surprised you most?</p></section>
+<div class="ai-next"><div><span>Up next</span><strong>Transformers and attention</strong></div></div><div class="d-flex justify-content-between gap-2 my-4"><a class="btn btn-outline-secondary" href="01-what-is-generative-ai.html">← Previous lesson</a><a class="btn btn-brand" href="03-transformers-attention.html">Next lesson →</a></div></div></div></div><script>
+document.querySelectorAll('.ai-copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var t = b.closest('.ai-code').querySelector('code').textContent, d = function () { b.textContent = 'Copied!'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); },
+      o = function () { var a = document.createElement('textarea'); a.value = t; a.style.position = 'fixed'; a.style.opacity = '0'; document.body.appendChild(a); a.select(); document.execCommand('copy'); a.remove(); d(); };
+    if (navigator.clipboard) navigator.clipboard.writeText(t).then(d, o); else o();
+  });
+});
+</script>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../dsa/index.html">DSA in Java</a>
+        <a href="../dsa/episodes/index.html">All episodes</a>
+        <a href="../gen-ai/index.html">Generative AI</a>
+        <a href="../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../index.html#how">How it works</a>
+        <a href="../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

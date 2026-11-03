@@ -73,11 +73,11 @@
     </ol></nav>
     <span class="badge rounded-pill text-bg-dark mb-2">Episode 13 · 5:49 · video out 9 Nov 2026, 6:00 PM IST</span>
     <h1 class="h2 fw-bold mb-3">Moore&#x27;s Voting Algorithm in Java | Majority Element</h1>
-    <div class="ep-player ratio ratio-16x9" id="ep-wait" data-out="2026-11-09T18:00:00+05:30">
+    <div class="ep-player ratio ratio-16x9" id="ep-wait" data-out="2026-11-09T18:00:00+05:30" data-vid="nW9E9dSkZUM">
       <img src="../../assets/thumbs/13.jpg" alt="" class="object-fit-cover">
     </div>
     <p class="small text-body-secondary mt-2 mb-0" id="ep-wait-note">The video goes live on 9 Nov 2026 at 6:00 PM IST. The notes are ready now.</p>
-    <script>(function(){var w=document.getElementById('ep-wait');if(Date.now()>=new Date(w.dataset.out).getTime()){w.innerHTML="<iframe id=\"ep-video\" src=\"https://www.youtube.com/embed/nW9E9dSkZUM?rel=0\" data-video=\"nW9E9dSkZUM\" title=\"Moore&#x27;s Voting Algorithm in Java | Majority Element\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";document.getElementById('ep-wait-note').remove();}})();</script>
+    <script>(function(){var w=document.getElementById('ep-wait');if(!w.dataset.vid)return;if(Date.now()>=new Date(w.dataset.out).getTime()){w.innerHTML="<iframe id=\"ep-video\" src=\"https://www.youtube.com/embed/nW9E9dSkZUM?rel=0\" data-video=\"nW9E9dSkZUM\" title=\"Moore&#x27;s Voting Algorithm in Java | Majority Element\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";document.getElementById('ep-wait-note').remove();}})();</script>
   </div>
 </section>
 <div class="container pb-4">
@@ -95,6 +95,7 @@
 <li>The Java code</li>
 <li>The check people forget</li></ul>
     </section>
+    
     <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
       <p class="mb-0">It only works if a majority is promised. If it isn&#x27;t, do a second pass to count the candidate. Try 1, 2, 3 and see.</p>
     </section>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prompt Anatomy: The 5 Parts of a Great Prompt | Compiled Canvas</title>
+<meta name="description" content="How to write a good prompt: the five parts of a great prompt (role, instructions, context, examples and output format), with a prompt builder in Python.">
+<link rel="canonical" href="https://compiledcanvas.com/gen-ai/06-prompt-anatomy.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/gen-ai/06-prompt-anatomy.html">
+<meta property="og:title" content="Prompt Anatomy: The 5 Parts of a Great Prompt | Compiled Canvas">
+<meta property="og:description" content="How to write a good prompt: the five parts of a great prompt (role, instructions, context, examples and output format), with a prompt builder in Python.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/gen-ai/lesson-06.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script><script>window.addEventListener('load',function(){if(window.hljs)document.querySelectorAll('pre code').forEach(function(c){window.hljs.highlightElement(c);});});</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Prompt Anatomy: The 5 Parts of a Great Prompt", "author": {"@type": "Person", "name": "Amit Singh"}, "publisher": {"@type": "Organization", "name": "Compiled Canvas", "url": "https://compiledcanvas.com/", "logo": {"@type": "ImageObject", "url": "https://compiledcanvas.com/assets/logo.png"}, "sameAs": ["https://www.youtube.com/@compiledcanvas", "https://www.instagram.com/compiledcanvas", "https://github.com/amitxaidev"]}, "image": "https://compiledcanvas.com/assets/gen-ai/lesson-06.jpg", "description": "How to write a good prompt: the five parts of a great prompt (role, instructions, context, examples and output format), with a prompt builder in Python."}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "Generative AI", "item": "https://compiledcanvas.com/gen-ai/"}, {"@type": "ListItem", "position": 3, "name": "Lesson 6", "item": "https://compiledcanvas.com/gen-ai/06-prompt-anatomy.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+      <img src="../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+<section class="ai-hero"><div class="container"><p class="ai-trail"><a href="../index.html">Home</a> / <a href="index.html">Generative AI</a> / Lesson 6</p>
+<span class="ai-pill">Lesson 6 · Python</span><h1>Prompt Anatomy: The 5 Parts of a Great Prompt</h1><p class="lead">How to write a good prompt: the five parts of a great prompt (role, instructions, context, examples and output format), with a prompt builder in Python.</p></div></section><div class="container py-4"><div class="row g-4"><aside class="col-lg-3 d-none d-lg-block"><nav class="ai-toc"><a href="#s1">Same model, different result</a><a href="#s2">Why vague prompts fail</a><a href="#s3">The five parts</a><a href="#s4">Before and after</a><a href="#s5">A prompt builder in Python</a><a href="#s6">Mistakes to avoid</a></nav></aside><div class="col-lg-9"><div class="ai-video"><div class="ratio ratio-16x9"><img src="../assets/gen-ai/lesson-06.jpg" alt="Lesson 6 video thumbnail" loading="lazy"></div><span>🎬 The video comes out on 14 Nov at 10:00 AM IST. The notes and code are ready now.</span></div><section class="ai-sec fade-up" id="s1"><h2><span>1</span>Same model, different result</h2><p>Two people ask the same AI for help with an interview.</p><p>One gets a vague, generic answer that helps nobody.</p><p>The other gets exactly what they need, in the right format, the first time. The difference isn&#x27;t the model. It&#x27;s the prompt.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">SAME AI, TWO PEOPLE</div><div class="ai-v-cards"><span class="ai-v-card c-ink2" style="--i:0">PERSON A</span><span class="ai-v-card c-ink2" style="--i:1">PERSON B</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">PERSON A</div><div class="ai-v-cards"><span class="ai-v-card c-signal" style="--i:0">&quot;Help me with Java.&quot;</span></div><div class="ai-v-note c-signal">VAGUE IN, VAGUE OUT</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">PERSON B</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">ROLE · TASK · CONTEXT · EXAMPLE · FORMAT</span></div><div class="ai-v-note c-acid">IT&#x27;S THE PROMPT</div></figure></div></section><section class="ai-sec fade-up" id="s2"><h2><span>2</span>Why vague prompts fail</h2><p>Take this prompt. Write about Java.</p><p>What level? How long? For whom? In what format? The model doesn&#x27;t know, so it guesses.</p><p>And when it guesses, you get the most average answer possible. A great prompt removes the guessing.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">IT HAS TO GUESS</div><div class="ai-v-cards"><span class="ai-v-card c-signal" style="--i:0">LEVEL?</span><span class="ai-v-card c-signal" style="--i:1">LENGTH?</span><span class="ai-v-card c-signal" style="--i:2">FOR WHOM?</span><span class="ai-v-card c-signal" style="--i:3">FORMAT?</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-big c-bone">REMOVE</div><div class="ai-v-big c-acid">THE GUESSING</div></figure></div></section><section class="ai-sec fade-up" id="s3"><h2><span>3</span>The five parts</h2><p>A great prompt has five parts. Role, instructions, context, examples, and output format.</p><p>Part one, the role. Tell it who to be. You are a senior Java interviewer. That sets the tone and the expertise.</p><p>Part two, the instructions. Say exactly what to do, with clear verbs. Ask me three questions on hash maps, one at a time.</p><p>Part three, the context. The background it can&#x27;t know. I&#x27;m a fresher with six months of Java, interviewing next week.</p><p>Part four, examples. Show one sample of what good looks like. The model copies the style. We&#x27;ll go deeper on this in the next episode.</p><p>Part five, the output format. Say exactly how the answer should look. A numbered list, a table, or JSON.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">5 PARTS</div><div class="ai-v-cards"><span class="ai-v-card c-ink2" style="--i:0">ROLE</span><span class="ai-v-card c-ink2" style="--i:1">INSTRUCTIONS</span><span class="ai-v-card c-ink2" style="--i:2">CONTEXT</span><span class="ai-v-card c-ink2" style="--i:3">EXAMPLES</span><span class="ai-v-card c-ink2" style="--i:4">OUTPUT FORMAT</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">1. ROLE</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">&quot;You are a senior Java interviewer.&quot;</span></div><div class="ai-v-note c-acid">WHO TO BE</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">2. INSTRUCTIONS</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">&quot;Ask me 3 HashMap questions, one at a time.&quot;</span></div><div class="ai-v-note c-acid">WHAT TO DO</div></figure></div></section><section class="ai-sec fade-up" id="s4"><h2><span>4</span>Before and after</h2><p>Here&#x27;s the before. Help me prepare for an interview.</p><p>And the after. All five parts, in five short lines. It&#x27;s longer, but it takes thirty seconds to write.</p><p>The first gives you a generic essay. The second gives you a practice interview, at your level, in the shape you wanted.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">BEFORE</div><div class="ai-v-cards"><span class="ai-v-card c-signal" style="--i:0">Help me prepare for an interview.</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">AFTER</div><div class="ai-v-cards"><span class="ai-v-card c-ink2" style="--i:0">Role: senior Java interviewer</span><span class="ai-v-card c-ink2" style="--i:1">Task: ask me 3 HashMap questions</span><span class="ai-v-card c-ink2" style="--i:2">Context: fresher, interview next week</span><span class="ai-v-card c-ink2" style="--i:3">Example: Q: What is a hash collision?</span><span class="ai-v-card c-ink2" style="--i:4">Format: numbered list, one line each</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">THE RESULT</div><div class="ai-v-cards"><span class="ai-v-card c-signal" style="--i:0">GENERIC ESSAY</span><span class="ai-v-card c-acid" style="--i:1">PRACTICE INTERVIEW</span></div></figure></div></section><section class="ai-sec fade-up" id="s5"><h2><span>5</span>A prompt builder in Python</h2><p class="ai-note">Type it out yourself, or copy it. It runs with <code>python3 prompt_builder.py</code>.</p><div class="ai-code"><div class="ai-code-head"><span>prompt_builder.py</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/prompt_builder.py" download>Download</a></span></div><pre><code class="language-python">def build_prompt(role, task, context, example, fmt):
+    return (f&quot;Role: {role}\n&quot;
+            f&quot;Task: {task}\n&quot;
+            f&quot;Context: {context}\n&quot;
+            f&quot;Example: {example}\n&quot;
+            f&quot;Format: {fmt}&quot;)
+
+print(build_prompt(
+    &quot;senior Java interviewer&quot;,
+    &quot;ask me 3 HashMap questions&quot;,
+    &quot;I am a fresher, interview next week&quot;,
+    &quot;Q: What is a hash collision?&quot;, &quot;numbered list&quot;))</code></pre></div><div class="ai-out"><span>▶ Output</span><pre>Role: senior Java interviewer
+Task: ask me 3 HashMap questions
+Context: I am a fresher, ...
+Example: Q: What is a hash collision?
+Format: numbered list</pre></div><p>In a real app, you don&#x27;t type prompts by hand every time. You build them in code.</p><p>This function takes the five parts, and joins them into one clear prompt, one part per line.</p><p>Now every prompt your app sends has all five parts. You can&#x27;t forget one.</p></section><section class="ai-sec fade-up" id="s6"><h2><span>6</span>Mistakes to avoid</h2><p>Mistake one. Asking for five different things in one prompt. Split big jobs into steps.</p><p>Mistake two. Instructions that fight each other. Be brief, and explain everything in detail.</p><p>Mistake three. Pasting text with no clear edges. Wrap it in markers, like three quotes, so the model knows where it starts and ends.</p><p>Mistake four. Not giving it a way out. Tell it to say I don&#x27;t know when it isn&#x27;t sure. That cuts down on made-up answers.</p><p>Your turn. Pause. Here&#x27;s a prompt. Summarise this. Which two parts would you add first?</p><p>The output format, like three bullet points. And the context, like who the summary is for.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">1. TOO MANY TASKS</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">ONE JOB PER PROMPT</span></div><div class="ai-v-note c-acid">SPLIT INTO STEPS</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">2. CONTRADICTIONS</div><div class="ai-v-cards"><span class="ai-v-card c-signal" style="--i:0">&quot;Be brief&quot; + &quot;explain everything&quot;</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">3. NO EDGES</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">&quot;&quot;&quot; your pasted text &quot;&quot;&quot;</span></div><div class="ai-v-note c-acid">USE DELIMITERS</div></figure></div></section><section class="ai-sec fade-up" id="s7"><h2><span>7</span>Cheat sheet</h2><ul class="ai-list"><li>Vague in, vague out</li><li>Role: who to be</li><li>Instructions: what to do</li><li>Context: what it can&#x27;t know</li><li>Examples: show good</li><li>Format: how it looks</li><li>Allow &quot;I don&#x27;t know&quot;</li></ul></section><section class="ai-sec fade-up" id="s8"><h2><span>8</span>Quick quiz</h2><details class="ai-q"><summary>1. Name the five parts of a great prompt.</summary><p>Role, instructions, context, examples and output format.</p></details><details class="ai-q"><summary>2. Reply in JSON is which part?</summary><p>The output format.</p></details><details class="ai-q"><summary>3. Showing one sample answer is which part?</summary><p>Examples.</p></details></section><section class="ai-sec fade-up" id="s9"><h2><span>9</span>Homework</h2><p>Your homework. Take a prompt you used this week, and rewrite it with all five parts. Then run the prompt builder from this lesson. All the Python code is on this page, ready to copy. And tell me in the comments: what changed in the answer?</p></section>
+<div class="ai-next"><div><span>Up next</span><strong>Zero-shot, few-shot, chain of thought</strong></div></div><div class="d-flex justify-content-between gap-2 my-4"><a class="btn btn-outline-secondary" href="05-context-temperature-cost.html">← Previous lesson</a><a class="btn btn-brand" href="index.html">See all lessons</a></div></div></div></div><script>
+document.querySelectorAll('.ai-copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var t = b.closest('.ai-code').querySelector('code').textContent, d = function () { b.textContent = 'Copied!'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); },
+      o = function () { var a = document.createElement('textarea'); a.value = t; a.style.position = 'fixed'; a.style.opacity = '0'; document.body.appendChild(a); a.select(); document.execCommand('copy'); a.remove(); d(); };
+    if (navigator.clipboard) navigator.clipboard.writeText(t).then(d, o); else o();
+  });
+});
+</script>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../dsa/index.html">DSA in Java</a>
+        <a href="../dsa/episodes/index.html">All episodes</a>
+        <a href="../gen-ai/index.html">Generative AI</a>
+        <a href="../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../index.html#how">How it works</a>
+        <a href="../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

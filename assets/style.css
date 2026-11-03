@@ -753,3 +753,42 @@ html { scroll-behavior: smooth; scroll-padding-top: 76px; }
 .ai-learn { scroll-margin-top: 5rem; }
 .ai-sec { scroll-margin-top: 4.5rem; }
 .ai-week li > .badge { flex: none; }
+
+/* Gen AI lessons 2+: diagrams built from the video's own steps */
+.ai-v-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1.25rem 0; }
+.ai-v { margin: 0; background: #15110e; color: #f2ede4; border-radius: 14px; padding: 1.1rem; display: flex; flex-direction: column; gap: .7rem; align-items: center; text-align: center; }
+.ai-v-head { color: #ff6a1a; font-weight: 800; letter-spacing: .02em; font-size: 1rem; }
+.ai-v-row { display: flex; flex-direction: column; align-items: center; gap: .25rem; }
+.ai-v-row small { color: #ffffff80; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; }
+.ai-v-row > div { display: flex; flex-wrap: wrap; justify-content: center; gap: .3rem; }
+.ai-v-cell { min-width: 2.2rem; padding: .35rem .5rem; border: 2px solid #ffffff55; border-radius: 8px; font-weight: 800; font-family: ui-monospace, Menlo, monospace; }
+.ai-v-cell.dim { opacity: .3; }
+.ai-v-bars { display: flex; align-items: flex-end; gap: .4rem; height: 120px; width: 100%; justify-content: center; border-bottom: 2px solid #ffffff40; }
+.ai-v-bars span { width: 2.2rem; height: var(--h); border-radius: 4px 4px 0 0; position: relative; }
+.ai-v-bars b { position: absolute; bottom: -1.4rem; left: 0; right: 0; font-size: .72rem; color: #ffffffb0; }
+.ai-v-bars { margin-bottom: 1.4rem; }
+.ai-v-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem; }
+.ai-v-card { padding: .4rem .75rem; border-radius: 8px; font-weight: 700; font-size: .85rem; }
+.ai-v-big { font-weight: 900; font-size: 1.5rem; line-height: 1.15; }
+.ai-v-note { padding: .3rem .8rem; border-radius: 999px; font-weight: 800; font-size: .75rem; text-transform: uppercase; }
+.ai-v-graph { width: 100%; max-width: 380px; }
+.ai-v-graph path { fill: none; stroke: #ffffff60; stroke-width: 2; }
+.ai-v-graph polyline { fill: none; stroke-width: 4; stroke-linecap: round; stroke-dasharray: 900; stroke-dashoffset: 900; }
+.ai-v-graph text { font-size: 12px; fill: #ffffff90; }
+.ai-v.in .ai-v-graph polyline { animation: aiDraw 1.6s ease forwards; }
+@keyframes aiDraw { to { stroke-dashoffset: 0; } }
+.js .ai-v .ai-v-cell, .js .ai-v .ai-v-card, .js .ai-v .ai-v-bars span { opacity: 0; transform: translateY(8px) scale(.9); transition: opacity .4s ease, transform .4s ease; transition-delay: calc(var(--i, 0) * 70ms + 200ms); }
+.js .ai-v.in .ai-v-cell, .js .ai-v.in .ai-v-card, .js .ai-v.in .ai-v-bars span { opacity: 1; transform: none; }
+.c-acid { background: #d8ff3c; color: #111; border-color: #d8ff3c !important; } svg .c-acid { stroke: #d8ff3c; fill: #d8ff3c; }
+.c-signal { background: #ff4d12; color: #111; border-color: #ff4d12 !important; } svg .c-signal { stroke: #ff4d12; fill: #ff4d12; }
+.c-ember { background: #ff8a3d; color: #111; border-color: #ff8a3d !important; } svg .c-ember { stroke: #ff8a3d; fill: #ff8a3d; }
+.c-bone { background: #eee9df; color: #111; } .c-ash { background: #9c978f; color: #111; } .c-ink2 { background: #ffffff14; color: #f2ede4; border: 1px solid #ffffff40; }
+.ai-v-big.c-acid, .ai-v-big.c-signal, .ai-v-big.c-ember, .ai-v-big.c-bone { background: none; }
+.ai-v-big.c-acid { color: #d8ff3c; } .ai-v-big.c-signal { color: #ff4d12; } .ai-v-big.c-ember { color: #ff8a3d; } .ai-v-big.c-bone { color: #eee9df; }
+.ai-out { background: #0b0f0b; border: 2px solid #d8ff3c80; border-radius: 12px; margin: -.4rem 0 1rem; padding: .6rem 1rem; }
+.ai-out span { color: #d8ff3c; font-weight: 800; font-size: .78rem; letter-spacing: .06em; }
+.ai-out pre { color: #eee9df; margin: .3rem 0 0; white-space: pre-wrap; }
+@media (prefers-reduced-motion: reduce) { .js .ai-v .ai-v-cell, .js .ai-v .ai-v-card, .js .ai-v .ai-v-bars span { opacity: 1; transform: none; transition: none; } .ai-v-graph polyline { stroke-dashoffset: 0; } }
+
+/* show code exactly as typed: no != to ≠ ligatures */
+.ai-code code, .ai-out pre, pre code { font-variant-ligatures: none; font-feature-settings: "liga" 0, "calt" 0; }

@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Valid Palindrome and Valid Anagram in Java | Strings DSA | Compiled Canvas</title>
+<meta name="description" content="Palindromes, anagrams and frequency counting in Java: solve valid palindrome, valid anagram and group anagrams with two pointers and one counting trick.">
+<link rel="canonical" href="https://compiledcanvas.com/dsa/episodes/17-palindromes-anagrams-java.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/dsa/episodes/17-palindromes-anagrams-java.html">
+<meta property="og:title" content="Valid Palindrome and Valid Anagram in Java | Strings DSA | Compiled Canvas">
+<meta property="og:description" content="Palindromes, anagrams and frequency counting in Java: solve valid palindrome, valid anagram and group anagrams with two pointers and one counting trick.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/thumbs/17.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "DSA in Java", "item": "https://compiledcanvas.com/dsa/"}, {"@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://compiledcanvas.com/dsa/episodes/"}, {"@type": "ListItem", "position": 4, "name": "Episode 17", "item": "https://compiledcanvas.com/dsa/episodes/17-palindromes-anagrams-java.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Episodes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Episode 17</li>
+    </ol></nav>
+    <span class="badge rounded-pill text-bg-dark mb-2">Episode 17 · 5:50 · video out 17 Nov 2026, 6:00 PM IST</span>
+    <h1 class="h2 fw-bold mb-3">Valid Palindrome and Valid Anagram in Java | Strings DSA</h1>
+    <div class="ep-player ratio ratio-16x9" id="ep-wait" data-out="2026-11-17T18:00:00+05:30" data-vid="">
+      <img src="../../assets/thumbs/17.jpg" alt="" class="object-fit-cover">
+    </div>
+    <p class="small text-body-secondary mt-2 mb-0" id="ep-wait-note">The video goes live on 17 Nov 2026 at 6:00 PM IST. The notes are ready now.</p>
+    <script>(function(){var w=document.getElementById('ep-wait');if(!w.dataset.vid)return;if(Date.now()>=new Date(w.dataset.out).getTime()){w.innerHTML="<iframe id=\"ep-video\" src=\"https://www.youtube.com/embed/None?rel=0\" data-video=\"None\" title=\"Valid Palindrome and Valid Anagram in Java | Strings DSA\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";document.getElementById('ep-wait-note').remove();}})();</script>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>What this episode covers</h2>
+      <p>Two ideas show up in string interviews again and again: palindromes, which read the same from both ends, and anagrams, which use exactly the same letters. One simple tool cracks most of them: counting.</p>
+<p>A palindrome check uses two pointers from both ends, skipping anything that isn&#x27;t a letter or digit and ignoring case. That&#x27;s LeetCode 125 in O(n) time and O(1) space.</p>
+<p>The frequency array is an int[26], where ch - &#x27;a&#x27; gives each letter&#x27;s slot. Two words are anagrams when adding for one and subtracting for the other leaves every count at zero. Group anagrams uses the sorted letters as a hash map key, and the first unique character is count first, then walk.</p>
+    </section>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>What you'll be able to do</h2>
+      <ul class="mb-0"><li>Palindromes, two pointers</li>
+<li>The frequency array</li>
+<li>Anagrams</li>
+<li>Group anagrams</li>
+<li>First unique character</li></ul>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">{ }</span>The Java code from the video</h2>
+      <p>Type it out yourself, or copy it. Each file runs on its own with <code>java FileName.java</code> and prints the examples from the video.</p><div class="ai-code"><div class="ai-code-head"><span>PalindromesAnagrams.java</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/PalindromesAnagrams.java" download>Download</a></span></div><pre><code class="language-java">import java.util.*;
+
+// Episode 17: palindromes, anagrams and frequency counting. Run: java PalindromesAnagrams.java
+public class PalindromesAnagrams {
+
+    // LeetCode 125: two pointers, skipping anything that isn&#x27;t a letter or digit
+    static boolean isPalindrome(String s) {
+        int l = 0, r = s.length() - 1;
+        while (l &lt; r) {
+            char a = Character.toLowerCase(s.charAt(l));
+            char b = Character.toLowerCase(s.charAt(r));
+            if (!Character.isLetterOrDigit(a)) l++;
+            else if (!Character.isLetterOrDigit(b)) r--;
+            else if (a != b) return false;
+            else { l++; r--; }
+        }
+        return true;
+    }
+
+    // LeetCode 242: +1 for s, -1 for t, then every count must be zero
+    static boolean isAnagram(String s, String t) {
+        if (s.length() != t.length()) return false;
+        int[] count = new int[26];
+        for (int i = 0; i &lt; s.length(); i++) {
+            count[s.charAt(i) - &#x27;a&#x27;]++;
+            count[t.charAt(i) - &#x27;a&#x27;]--;
+        }
+        for (int c : count)
+            if (c != 0) return false;
+        return true;
+    }
+
+    // LeetCode 49: the sorted letters are the key
+    static List&lt;List&lt;String&gt;&gt; groupAnagrams(String[] strs) {
+        Map&lt;String, List&lt;String&gt;&gt; map = new HashMap&lt;&gt;();
+        for (String w : strs) {
+            char[] c = w.toCharArray();
+            Arrays.sort(c);
+            String key = new String(c);
+            map.computeIfAbsent(key, k -&gt; new ArrayList&lt;&gt;()).add(w);
+        }
+        return new ArrayList&lt;&gt;(map.values());
+    }
+
+    // LeetCode 387: count, then walk again
+    static int firstUniqChar(String s) {
+        int[] count = new int[26];
+        for (char c : s.toCharArray()) count[c - &#x27;a&#x27;]++;
+        for (int i = 0; i &lt; s.length(); i++)
+            if (count[s.charAt(i) - &#x27;a&#x27;] == 1) return i;
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isPalindrome(&quot;A man, a plan, a canal: Panama&quot;));   // true
+        System.out.println(isPalindrome(&quot;rocket&quot;));                           // false
+        System.out.println(isAnagram(&quot;listen&quot;, &quot;silent&quot;));                    // true
+        System.out.println(isAnagram(&quot;rat&quot;, &quot;car&quot;));                          // false
+        System.out.println(groupAnagrams(new String[]{&quot;eat&quot;, &quot;tea&quot;, &quot;tan&quot;, &quot;ate&quot;, &quot;nat&quot;, &quot;bat&quot;}));
+        // three groups, in any order: [eat, tea, ate], [tan, nat], [bat]
+        System.out.println(firstUniqChar(&quot;loveleetcode&quot;));                    // 2
+    }
+}</code></pre></div>
+      <script>window.addEventListener('load',function(){if(window.hljs)document.querySelectorAll('.ai-code code').forEach(function(c){window.hljs.highlightElement(c);});});document.querySelectorAll('.ai-copy').forEach(function(b){b.addEventListener('click',function(){var t=b.closest('.ai-code').querySelector('code').textContent,d=function(){b.textContent='Copied!';setTimeout(function(){b.textContent='Copy';},1600);},o=function(){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();d();};if(navigator.clipboard)navigator.clipboard.writeText(t).then(d,o);else o();});});</script>
+    </section>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
+      <p class="mb-0">Forgetting to skip spaces and punctuation, or to ignore upper and lower case, in valid palindrome.</p>
+    </section>
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Key moments <small>tap one to jump there</small></h2>
+      <ol class="ep-moments list-unstyled mb-0"><li><a href="?t=0" data-seek="0"><time>0:00</time><span>Two questions everywhere</span></a></li>
+<li><a href="?t=20" data-seek="20"><time>0:20</time><span>Today&#x27;s plan</span></a></li>
+<li><a href="?t=44" data-seek="44"><time>0:44</time><span>Palindrome: two pointers</span></a></li>
+<li><a href="?t=72" data-seek="72"><time>1:12</time><span>Valid palindrome in Java</span></a></li>
+<li><a href="?t=94" data-seek="94"><time>1:34</time><span>The frequency array</span></a></li>
+<li><a href="?t=122" data-seek="122"><time>2:02</time><span>Anagrams</span></a></li>
+<li><a href="?t=152" data-seek="152"><time>2:32</time><span>Valid anagram in Java</span></a></li>
+<li><a href="?t=166" data-seek="166"><time>2:46</time><span>Subscribe break</span></a></li>
+<li><a href="?t=180" data-seek="180"><time>3:00</time><span>Group anagrams</span></a></li>
+<li><a href="?t=207" data-seek="207"><time>3:27</time><span>Group anagrams in Java</span></a></li>
+<li><a href="?t=221" data-seek="221"><time>3:41</time><span>First unique character</span></a></li>
+<li><a href="?t=248" data-seek="248"><time>4:08</time><span>Cheat sheet</span></a></li>
+<li><a href="?t=271" data-seek="271"><time>4:31</time><span>Quiz time</span></a></li>
+<li><a href="?t=304" data-seek="304"><time>5:04</time><span>Recap</span></a></li>
+<li><a href="?t=316" data-seek="316"><time>5:16</time><span>LeetCode homework</span></a></li>
+<li><a href="?t=330" data-seek="330"><time>5:30</time><span>Next episode: KMP algorithm</span></a></li></ol>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Full transcript</h2>
+      <details class="ep-transcript"><summary>Read the whole lesson</summary>
+      <p>Here are two words. Listen, and silent.</p>
+<p>Same letters, different order. That&#x27;s called an anagram.</p>
+<p>And here&#x27;s a word that reads the same backwards. Racecar. That&#x27;s a palindrome.</p>
+<p>These two ideas show up in interview after interview. And one simple tool cracks most of them: counting.</p>
+<p>Welcome back to Compiled Canvas. This is Episode Seventeen of our DSA series. Last time, we learned String versus StringBuilder.</p>
+<p>Here&#x27;s the plan. First, palindromes with two pointers. Then the frequency array. Then anagrams. Then grouping anagrams with a hash map. And the first unique character. A cheat sheet. And an easy quiz at the end.</p>
+<p>Let&#x27;s go.</p>
+<p>The slow way to check a palindrome is to reverse the string and compare. That builds a whole new string.</p>
+<p>The better way is two pointers. One at the start, one at the end.</p>
+<p>R and r match. Move both inward. A and a match.</p>
+<p>C and c match. Now the pointers meet in the middle. It&#x27;s a palindrome.</p>
+<p>If any pair doesn&#x27;t match, stop right there. Rocket starts with r and ends with t. Not a palindrome.</p>
+<p>LeetCode one twenty five is the real version. The sentence has spaces, commas and capital letters.</p>
+<p>If the left character isn&#x27;t a letter or a digit, skip it. Same on the right.</p>
+<p>Compare the two letters in lower case. If they&#x27;re different, it&#x27;s not a palindrome.</p>
+<p>Otherwise, move both pointers inward. It&#x27;s O of n time and O of one space.</p>
+<p>Now the tool behind half of all string questions. The frequency array.</p>
+<p>Make an array of twenty six counts, one slot for each letter, from a to z.</p>
+<p>For each letter, add one to its slot. Char minus a gives the slot. B minus a is one.</p>
+<p>Count the word banana. A is three, b is one, and n is two.</p>
+<p>It&#x27;s one pass, so O of n. And the array is always twenty six long, so the extra space is O of one.</p>
+<p>Two words are anagrams if they have exactly the same counts.</p>
+<p>The slow way is to sort both words and compare. Sorting costs O of n log n.</p>
+<p>The fast way uses one array. Add one for each letter of the first word, and take one away for each letter of the second.</p>
+<p>If every count comes back to zero, they&#x27;re anagrams. Listen and silent end with all zeros.</p>
+<p>Rat and car? The t is left at plus one, and the c at minus one. Not anagrams.</p>
+<p>Here&#x27;s LeetCode two forty two. Different lengths? They can&#x27;t be anagrams.</p>
+<p>One loop adds for s and subtracts for t, at the same time.</p>
+<p>Then check that every count is zero. O of n time, O of one space.</p>
+<p>Quick pause, before we go further. If you&#x27;re finding this video valuable, hit subscribe to Compiled Canvas, and turn on the bell. It&#x27;s free, it takes one second, and it helps me keep making this complete DSA series for you. Alright, back to it.</p>
+<p>Now a harder one. Group anagrams, LeetCode forty nine. Eat, tea, tan, ate, nat, bat.</p>
+<p>We need a label that&#x27;s the same for every anagram. Sort the letters. Eat, tea and ate all become a e t.</p>
+<p>Use that label as the key in a hash map. Each key holds a list of words.</p>
+<p>So we get three groups. Eat, tea and ate. Tan and nat. And bat on its own.</p>
+<p>In Java, turn the word into a char array and sort it. That&#x27;s the key.</p>
+<p>Compute if absent makes a new list the first time we see a key. Then we add the word.</p>
+<p>For n words of length k, it&#x27;s O of n times k log k.</p>
+<p>One more classic. Find the first letter that appears only once. LeetCode three eighty seven.</p>
+<p>Two passes. First, count every letter. Second, walk again and return the first letter whose count is one.</p>
+<p>In love leet code, l and o appear twice. V appears once. So the answer is index two.</p>
+<p>Your turn. Pause. Are night and thing anagrams?</p>
+<p>Yes. Same letters, same counts. Every slot ends at zero.</p>
+<p>So, here&#x27;s the whole thing in one cheat sheet. Pause and screenshot this.</p>
+<p>Palindrome: two pointers from both ends.</p>
+<p>Skip anything that isn&#x27;t a letter or digit.</p>
+<p>Frequency array: twenty six slots.</p>
+<p>Char minus a gives the slot.</p>
+<p>Anagram: plus one, minus one, all zero.</p>
+<p>Group anagrams: sorted letters as the key.</p>
+<p>First unique: count, then walk.</p>
+<p>Okay, quiz time. Three easy questions. Pause the video, think, and then hit play.</p>
+<p>Question one. What is c minus a?</p>
+<p>Question two. Are rat and tar anagrams?</p>
+<p>Question three. In group anagrams, what do we use as the key?</p>
+<p>Ready?</p>
+<p>Question one: Two. C sits two places after a.</p>
+<p>Question two: Yes. Same letters, same counts.</p>
+<p>Question three: The sorted letters of the word.</p>
+<p>How many did you get right? Tell me in the comments: three out of three, two, or one.</p>
+<p>Let&#x27;s recap. Palindromes use two pointers. Count letters with an array of twenty six. Anagrams end with every count at zero. Group anagrams by their sorted letters. Count first, then walk.</p>
+<p>Your homework. Solve LeetCode one twenty five, valid palindrome. Then try two forty two, valid anagram. And then forty nine, group anagrams. Hints and Java answers are on compiled canvas dot com.</p>
+<p>Next episode, pattern matching. The KMP algorithm, and how it never walks backwards in the text.</p>
+<p>And don&#x27;t forget to subscribe to Compiled Canvas, so you don&#x27;t miss anything new in tech and the job market. Keep coding, stay consistent, and I&#x27;ll see you in the next one.</p>
+      </details>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <div class="side-sticky">
+      <div class="card mb-3 shadow-sm solve-card"><div class="card-body">
+        <h2 class="h6 fw-bold">Practise this now</h2>
+        <div class="mb-3"><a class="ep-try" href="../07-two-pointers/004-valid-palindrome.html">Valid Palindrome <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../11-strings/002-valid-anagram.html">Valid Anagram <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../11-strings/008-group-anagrams.html">Group Anagrams <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../11-strings/003-first-unique-character-in-a-string.html">First Unique Character in a String <span aria-hidden="true">→</span></a></div>
+        <a class="btn btn-brand w-100" href="../11-strings/index.html">All Strings problems</a>
+      </div></div>
+      <div class="card mb-3 shadow-sm"><div class="card-body small">
+        <a class="d-block mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch the full DSA series in order</a>
+        <a class="d-block" href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Compiled Canvas</a>
+      </div></div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="16-string-stringbuilder-stringbuffer-java.html">← Episode 16</a><a class="btn btn-outline-secondary" href="18-kmp-algorithm-java.html">Episode 18 →</a></div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../../dsa/index.html">DSA in Java</a>
+        <a href="../../dsa/episodes/index.html">All episodes</a>
+        <a href="../../gen-ai/index.html">Generative AI</a>
+        <a href="../../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../../index.html#how">How it works</a>
+        <a href="../../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <p class="foot-note">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

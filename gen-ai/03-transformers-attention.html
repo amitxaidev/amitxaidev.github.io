@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transformers and Attention Explained Simply | Compiled Canvas</title>
+<meta name="description" content="Transformers and the attention mechanism explained simply: queries, keys and values, with attention built in a few lines of Python.">
+<link rel="canonical" href="https://compiledcanvas.com/gen-ai/03-transformers-attention.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/gen-ai/03-transformers-attention.html">
+<meta property="og:title" content="Transformers and Attention Explained Simply | Compiled Canvas">
+<meta property="og:description" content="Transformers and the attention mechanism explained simply: queries, keys and values, with attention built in a few lines of Python.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/gen-ai/lesson-03.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script><script>window.addEventListener('load',function(){if(window.hljs)document.querySelectorAll('pre code').forEach(function(c){window.hljs.highlightElement(c);});});</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Transformers and Attention Explained Simply", "author": {"@type": "Person", "name": "Amit Singh"}, "publisher": {"@type": "Organization", "name": "Compiled Canvas", "url": "https://compiledcanvas.com/", "logo": {"@type": "ImageObject", "url": "https://compiledcanvas.com/assets/logo.png"}, "sameAs": ["https://www.youtube.com/@compiledcanvas", "https://www.instagram.com/compiledcanvas", "https://github.com/amitxaidev"]}, "image": "https://compiledcanvas.com/assets/gen-ai/lesson-03.jpg", "description": "Transformers and the attention mechanism explained simply: queries, keys and values, with attention built in a few lines of Python."}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "Generative AI", "item": "https://compiledcanvas.com/gen-ai/"}, {"@type": "ListItem", "position": 3, "name": "Lesson 3", "item": "https://compiledcanvas.com/gen-ai/03-transformers-attention.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+      <img src="../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+<section class="ai-hero"><div class="container"><p class="ai-trail"><a href="../index.html">Home</a> / <a href="index.html">Generative AI</a> / Lesson 3</p>
+<span class="ai-pill">Lesson 3 · Python</span><h1>Transformers and Attention Explained Simply</h1><p class="lead">Transformers and the attention mechanism explained simply: queries, keys and values, with attention built in a few lines of Python.</p></div></section><div class="container py-4"><div class="row g-4"><aside class="col-lg-3 d-none d-lg-block"><nav class="ai-toc"><a href="#s1">What does it mean?</a><a href="#s2">The old way</a><a href="#s3">Attention</a><a href="#s4">Query, key, value</a><a href="#s5">Attention in Python</a><a href="#s6">The full transformer</a></nav></aside><div class="col-lg-9"><div class="ai-video"><div class="ratio ratio-16x9"><img src="../assets/gen-ai/lesson-03.jpg" alt="Lesson 3 video thumbnail" loading="lazy"></div><span>🎬 The video comes out on 8 Nov at 10:00 AM IST. The notes and code are ready now.</span></div><section class="ai-sec fade-up" id="s1"><h2><span>1</span>What does it mean?</h2><p>Read this. The animal didn&#x27;t cross the street because it was too tired.</p><p>What does it mean here? You knew instantly. The animal. A street can&#x27;t be tired.</p><p>For a computer, this is hard. The trick that solved it is called attention. And it&#x27;s the heart of every modern chatbot.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">READ THIS</div><div class="ai-v-row"><div><span class="ai-v-cell c-none" style="--i:0">The</span><span class="ai-v-cell c-none" style="--i:1">animal</span><span class="ai-v-cell c-none" style="--i:2">didn&#x27;t</span><span class="ai-v-cell c-none" style="--i:3">cross</span><span class="ai-v-cell c-none" style="--i:4">the</span><span class="ai-v-cell c-none" style="--i:5">street</span><span class="ai-v-cell c-none" style="--i:6">because</span><span class="ai-v-cell c-signal" style="--i:7">it</span><span class="ai-v-cell c-none" style="--i:8">was</span><span class="ai-v-cell c-none" style="--i:9">tired</span></div></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">&quot;it&quot; = ?</div><div class="ai-v-row"><div><span class="ai-v-cell c-none" style="--i:0">The</span><span class="ai-v-cell c-acid" style="--i:1">animal</span><span class="ai-v-cell c-none" style="--i:2">didn&#x27;t</span><span class="ai-v-cell c-none" style="--i:3">cross</span><span class="ai-v-cell c-none" style="--i:4">the</span><span class="ai-v-cell c-none" style="--i:5">street</span><span class="ai-v-cell c-none" style="--i:6">because</span><span class="ai-v-cell c-signal" style="--i:7">it</span><span class="ai-v-cell c-none" style="--i:8">was</span><span class="ai-v-cell c-none" style="--i:9">tired</span></div></div><div class="ai-v-note c-acid">IT = THE ANIMAL</div></figure><figure class="ai-v fade-up"><div class="ai-v-big c-signal">ATTENTION</div><div class="ai-v-big c-bone">THE HEART OF EVERY LLM</div></figure></div></section><section class="ai-sec fade-up" id="s2"><h2><span>2</span>The old way</h2><p>Older language models read text one word at a time, like reading through a straw, carrying a small memory forward.</p><p>In a long sentence, the early words fade from that memory. By the word it, the animal is a blur.</p><p>They were also slow to train, because each word had to wait for the one before it.</p><p>In twenty seventeen, researchers at Google published a paper called Attention Is All You Need. It introduced the transformer. Every word looks at every other word, all at once.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">ONE WORD AT A TIME</div><div class="ai-v-row"><div><span class="ai-v-cell c-ember" style="--i:0">The</span><span class="ai-v-cell c-none" style="--i:1">animal</span><span class="ai-v-cell c-none" style="--i:2">didn&#x27;t</span><span class="ai-v-cell c-none" style="--i:3">cross</span><span class="ai-v-cell c-none" style="--i:4">the</span><span class="ai-v-cell c-none" style="--i:5">street</span><span class="ai-v-cell c-none" style="--i:6">because</span><span class="ai-v-cell c-none" style="--i:7">it</span><span class="ai-v-cell c-none" style="--i:8">was</span><span class="ai-v-cell c-none" style="--i:9">tired</span></div></div><div class="ai-v-note c-acid">LIKE READING THROUGH A STRAW</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">EARLY WORDS FADE</div><div class="ai-v-row"><div><span class="ai-v-cell c-none dim" style="--i:0">The</span><span class="ai-v-cell c-none dim" style="--i:1">animal</span><span class="ai-v-cell c-none dim" style="--i:2">didn&#x27;t</span><span class="ai-v-cell c-none dim" style="--i:3">cross</span><span class="ai-v-cell c-none" style="--i:4">the</span><span class="ai-v-cell c-none" style="--i:5">street</span><span class="ai-v-cell c-none" style="--i:6">because</span><span class="ai-v-cell c-ember" style="--i:7">it</span><span class="ai-v-cell c-none" style="--i:8">was</span><span class="ai-v-cell c-none" style="--i:9">tired</span></div></div><div class="ai-v-note c-signal">THE ANIMAL IS A BLUR</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">2017: THE TRANSFORMER</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">&quot;ATTENTION IS ALL YOU NEED&quot;</span></div><div class="ai-v-note c-acid">EVERY WORD SEES EVERY WORD</div></figure></div></section><section class="ai-sec fade-up" id="s3"><h2><span>3</span>Attention</h2><p>Here&#x27;s the idea. Each word asks: which other words matter to me right now?</p><p>It gives every other word a score. For it, animal scores high, and street scores low.</p><p>Now change one word. The animal didn&#x27;t cross the street because it was too wide. Now it means the street.</p><p>Same word, different meaning, decided by context. That&#x27;s exactly what attention captures.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">WHO MATTERS TO ME?</div><div class="ai-v-row"><div><span class="ai-v-cell c-none" style="--i:0">The</span><span class="ai-v-cell c-none" style="--i:1">animal</span><span class="ai-v-cell c-none" style="--i:2">didn&#x27;t</span><span class="ai-v-cell c-none" style="--i:3">cross</span><span class="ai-v-cell c-none" style="--i:4">the</span><span class="ai-v-cell c-none" style="--i:5">street</span><span class="ai-v-cell c-none" style="--i:6">because</span><span class="ai-v-cell c-signal" style="--i:7">it</span><span class="ai-v-cell c-none" style="--i:8">was</span><span class="ai-v-cell c-none" style="--i:9">tired</span></div></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">ATTENTION SCORES FOR &quot;it&quot;</div><div class="ai-v-bars"><span class="c-ash" style="--h:4%;--i:0"><b>2</b></span><span class="c-acid" style="--h:100%;--i:1"><b>70</b></span><span class="c-ash" style="--h:6%;--i:2"><b>4</b></span><span class="c-ash" style="--h:4%;--i:3"><b>3</b></span><span class="c-ash" style="--h:4%;--i:4"><b>2</b></span><span class="c-ash" style="--h:11%;--i:5"><b>8</b></span><span class="c-ash" style="--h:4%;--i:6"><b>3</b></span><span class="c-ash" style="--h:4%;--i:7"><b>0</b></span><span class="c-ash" style="--h:4%;--i:8"><b>3</b></span><span class="c-ash" style="--h:7%;--i:9"><b>5</b></span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">&quot;…BECAUSE IT WAS TOO WIDE&quot;</div><div class="ai-v-row"><div><span class="ai-v-cell c-none" style="--i:0">The</span><span class="ai-v-cell c-none" style="--i:1">animal</span><span class="ai-v-cell c-none" style="--i:2">didn&#x27;t</span><span class="ai-v-cell c-none" style="--i:3">cross</span><span class="ai-v-cell c-none" style="--i:4">the</span><span class="ai-v-cell c-acid" style="--i:5">street</span><span class="ai-v-cell c-none" style="--i:6">because</span><span class="ai-v-cell c-signal" style="--i:7">it</span><span class="ai-v-cell c-none" style="--i:8">was</span><span class="ai-v-cell c-none" style="--i:9">wide</span></div></div><div class="ai-v-note c-acid">NOW IT = THE STREET</div></figure></div></section><section class="ai-sec fade-up" id="s4"><h2><span>4</span>Query, key, value</h2><p>Attention uses three vectors for every word. Think of searching for a video on YouTube.</p><p>The query is what you type in the search box. What am I looking for?</p><p>The key is like each video&#x27;s title. What do I contain?</p><p>The value is the video itself. What I hand over if I&#x27;m chosen.</p><p>Match the query against every key to get scores. Softmax turns them into weights. Then blend the values with those weights. The word&#x27;s meaning now includes its context.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">LIKE A YOUTUBE SEARCH</div><div class="ai-v-cards"><span class="ai-v-card c-signal" style="--i:0">QUERY</span><span class="ai-v-card c-ember" style="--i:1">KEY</span><span class="ai-v-card c-acid" style="--i:2">VALUE</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">QUERY</div><div class="ai-v-cards"><span class="ai-v-card c-signal" style="--i:0">what am I looking for?</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">KEY</div><div class="ai-v-cards"><span class="ai-v-card c-ember" style="--i:0">what do I contain?</span></div></figure></div></section><section class="ai-sec fade-up" id="s5"><h2><span>5</span>Attention in Python</h2><p class="ai-note">Type it out yourself, or copy it. It runs with <code>python3 attention.py</code>.</p><div class="ai-code"><div class="ai-code-head"><span>attention.py</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/attention.py" download>Download</a></span></div><pre><code class="language-python">import numpy as np
+
+q = np.array([3.0, 0.0])            # query for &quot;it&quot;
+K = np.array([[0.9, 0.1],           # animal
+              [0.1, 0.9],           # street
+              [0.2, 0.2]])          # tired
+V = np.array([[1, 0], [0, 1], [0.5, 0.5]])
+
+scores = K @ q / np.sqrt(2)
+w = np.exp(scores) / np.exp(scores).sum()
+print(w.round(2))          # [0.71 0.13 0.16]
+print((w @ V).round(2))    # [0.79 0.21]</code></pre></div><div class="ai-out"><span>▶ Output</span><pre>[0.71 0.13 0.16]
+[0.79 0.21]</pre></div><p>Here&#x27;s attention in a few lines of Python. One query, for the word it.</p><p>Three keys, for animal, street and tired. And a value for each.</p><p>Score each key against the query, and divide by the square root of the size. That keeps the numbers steady.</p><p>Softmax gives the weights. Animal gets seventy one percent. Street gets thirteen.</p><p>Blend the values with those weights, and it now carries mostly the meaning of animal.</p></section><section class="ai-sec fade-up" id="s6"><h2><span>6</span>The full transformer</h2><p>A real model runs many attention heads side by side. Each one looks for something different. One for grammar, one for who did what, one for what it refers to.</p><p>Attention alone doesn&#x27;t know word order, so each embedding also gets its position added in.</p><p>After attention, a small network refines each word. That pair is one layer, and big models stack dozens of layers.</p><p>And because every word is handled at the same time, transformers train fast on GPUs. That&#x27;s what made today&#x27;s huge models possible.</p><p>Your turn. Pause. I put the cup on the table because it was hot. Which word should it attend to most?</p><p>The cup. Tables aren&#x27;t usually hot.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">MANY HEADS</div><div class="ai-v-cards"><span class="ai-v-card c-ink2" style="--i:0">GRAMMAR</span><span class="ai-v-card c-ink2" style="--i:1">WHO DID WHAT</span><span class="ai-v-card c-acid" style="--i:2">WHAT &quot;IT&quot; MEANS</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">POSITION ADDED IN</div><div class="ai-v-row"><div><span class="ai-v-cell c-none" style="--i:0">The</span><span class="ai-v-cell c-none" style="--i:1">animal</span><span class="ai-v-cell c-none" style="--i:2">didn&#x27;t</span></div></div><div class="ai-v-row"><small>position</small><div><span class="ai-v-cell c-ember" style="--i:0">1</span><span class="ai-v-cell c-ember" style="--i:1">2</span><span class="ai-v-cell c-ember" style="--i:2">3</span></div></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">ONE LAYER, STACKED</div><div class="ai-v-cards"><span class="ai-v-card c-signal" style="--i:0">ATTENTION</span><span class="ai-v-card c-ink2" style="--i:1">FEED FORWARD</span></div><div class="ai-v-note c-acid">STACK DOZENS OF LAYERS</div></figure></div></section><section class="ai-sec fade-up" id="s7"><h2><span>7</span>Cheat sheet</h2><ul class="ai-list"><li>Old way: one word at a time</li><li>Transformer: all words at once</li><li>Attention: who matters to me?</li><li>Query, key, value</li><li>Scores → softmax → blend</li><li>Stack dozens of layers</li></ul></section><section class="ai-sec fade-up" id="s8"><h2><span>8</span>Quick quiz</h2><details class="ai-q"><summary>1. Which paper introduced the transformer?</summary><p>Attention Is All You Need, in twenty seventeen.</p></details><details class="ai-q"><summary>2. Query times key gives you what?</summary><p>A score for how much that word matters.</p></details><details class="ai-q"><summary>3. Why do transformers train faster than older models?</summary><p>They handle every word at the same time.</p></details></section><section class="ai-sec fade-up" id="s9"><h2><span>9</span>Homework</h2><p>Your homework. Run the attention program from this lesson. All the Python code is on this page, ready to copy. Then change the query, and make street win instead of animal. And tell me in the comments: which values did you use?</p></section>
+<div class="ai-next"><div><span>Up next</span><strong>The model landscape</strong></div></div><div class="d-flex justify-content-between gap-2 my-4"><a class="btn btn-outline-secondary" href="02-how-llms-work.html">← Previous lesson</a><a class="btn btn-brand" href="04-model-landscape.html">Next lesson →</a></div></div></div></div><script>
+document.querySelectorAll('.ai-copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var t = b.closest('.ai-code').querySelector('code').textContent, d = function () { b.textContent = 'Copied!'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); },
+      o = function () { var a = document.createElement('textarea'); a.value = t; a.style.position = 'fixed'; a.style.opacity = '0'; document.body.appendChild(a); a.select(); document.execCommand('copy'); a.remove(); d(); };
+    if (navigator.clipboard) navigator.clipboard.writeText(t).then(d, o); else o();
+  });
+});
+</script>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../dsa/index.html">DSA in Java</a>
+        <a href="../dsa/episodes/index.html">All episodes</a>
+        <a href="../gen-ai/index.html">Generative AI</a>
+        <a href="../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../index.html#how">How it works</a>
+        <a href="../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

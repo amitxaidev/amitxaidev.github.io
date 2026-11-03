@@ -73,11 +73,11 @@
     </ol></nav>
     <span class="badge rounded-pill text-bg-dark mb-2">Episode 10 · 9:09 · video out 3 Nov 2026, 6:00 PM IST</span>
     <h1 class="h2 fw-bold mb-3">Sliding Window in Java: 2 Patterns | Fixed and Variable</h1>
-    <div class="ep-player ratio ratio-16x9" id="ep-wait" data-out="2026-11-03T18:00:00+05:30">
+    <div class="ep-player ratio ratio-16x9" id="ep-wait" data-out="2026-11-03T18:00:00+05:30" data-vid="MPqi3WLXj9w">
       <img src="../../assets/thumbs/10.jpg" alt="" class="object-fit-cover">
     </div>
     <p class="small text-body-secondary mt-2 mb-0" id="ep-wait-note">The video goes live on 3 Nov 2026 at 6:00 PM IST. The notes are ready now.</p>
-    <script>(function(){var w=document.getElementById('ep-wait');if(Date.now()>=new Date(w.dataset.out).getTime()){w.innerHTML="<iframe id=\"ep-video\" src=\"https://www.youtube.com/embed/MPqi3WLXj9w?rel=0\" data-video=\"MPqi3WLXj9w\" title=\"Sliding Window in Java: 2 Patterns | Fixed and Variable\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";document.getElementById('ep-wait-note').remove();}})();</script>
+    <script>(function(){var w=document.getElementById('ep-wait');if(!w.dataset.vid)return;if(Date.now()>=new Date(w.dataset.out).getTime()){w.innerHTML="<iframe id=\"ep-video\" src=\"https://www.youtube.com/embed/MPqi3WLXj9w?rel=0\" data-video=\"MPqi3WLXj9w\" title=\"Sliding Window in Java: 2 Patterns | Fixed and Variable\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";document.getElementById('ep-wait-note').remove();}})();</script>
   </div>
 </section>
 <div class="container pb-4">
@@ -96,6 +96,7 @@
 <li>Writing both windows in Java</li>
 <li>How to spot a sliding window problem</li></ul>
     </section>
+    
     <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
       <p class="mb-0">Shrinking a variable window with if instead of while. One drop may not be enough, so keep dropping until the window is valid. The shrinking trick also needs positive numbers: with negatives, adding a number can make the sum smaller.</p>
     </section>

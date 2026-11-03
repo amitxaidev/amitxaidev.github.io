@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rabin-Karp Algorithm in Java: Rolling Hash Explained | Compiled Canvas</title>
+<meta name="description" content="Rabin-Karp algorithm in Java with a rolling hash, plus the Z algorithm for pattern matching, explained simply with pictures.">
+<link rel="canonical" href="https://compiledcanvas.com/dsa/episodes/19-rabin-karp-z-algorithm-java.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/dsa/episodes/19-rabin-karp-z-algorithm-java.html">
+<meta property="og:title" content="Rabin-Karp Algorithm in Java: Rolling Hash Explained | Compiled Canvas">
+<meta property="og:description" content="Rabin-Karp algorithm in Java with a rolling hash, plus the Z algorithm for pattern matching, explained simply with pictures.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/thumbs/19.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "DSA in Java", "item": "https://compiledcanvas.com/dsa/"}, {"@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://compiledcanvas.com/dsa/episodes/"}, {"@type": "ListItem", "position": 4, "name": "Episode 19", "item": "https://compiledcanvas.com/dsa/episodes/19-rabin-karp-z-algorithm-java.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Episodes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Episode 19</li>
+    </ol></nav>
+    <span class="badge rounded-pill text-bg-dark mb-2">Episode 19 · 5:55 · video out 21 Nov 2026, 6:00 PM IST</span>
+    <h1 class="h2 fw-bold mb-3">Rabin-Karp Algorithm in Java: Rolling Hash Explained</h1>
+    <div class="ep-player ratio ratio-16x9" id="ep-wait" data-out="2026-11-21T18:00:00+05:30" data-vid="">
+      <img src="../../assets/thumbs/19.jpg" alt="" class="object-fit-cover">
+    </div>
+    <p class="small text-body-secondary mt-2 mb-0" id="ep-wait-note">The video goes live on 21 Nov 2026 at 6:00 PM IST. The notes are ready now.</p>
+    <script>(function(){var w=document.getElementById('ep-wait');if(!w.dataset.vid)return;if(Date.now()>=new Date(w.dataset.out).getTime()){w.innerHTML="<iframe id=\"ep-video\" src=\"https://www.youtube.com/embed/None?rel=0\" data-video=\"None\" title=\"Rabin-Karp Algorithm in Java: Rolling Hash Explained\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";document.getElementById('ep-wait-note').remove();}})();</script>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>What this episode covers</h2>
+      <p>Comparing two strings takes many steps, but comparing two numbers takes one. Rabin-Karp turns every window of the text into a number, a hash, and compares hashes instead of letters.</p>
+<p>A simple sum hash shows the problem: abc and cab both hash to 6, a spurious hit. So you always check the letters when hashes match, and use a polynomial hash where order matters. The rolling hash updates each window in one step: remove the letter leaving, shift by the base, add the letter coming in, all modulo a big prime.</p>
+<p>The Z algorithm builds an array where z[i] is how many letters from i match the start of the string. Join pattern + $ + text, and every z equal to the pattern&#x27;s length is a match. Both run in linear time on average.</p>
+    </section>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>What you'll be able to do</h2>
+      <ul class="mb-0"><li>Hashing a window</li>
+<li>False matches</li>
+<li>The rolling hash</li>
+<li>Rabin-Karp in Java</li>
+<li>The Z algorithm</li></ul>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">{ }</span>The Java code from the video</h2>
+      <p>Type it out yourself, or copy it. Each file runs on its own with <code>java FileName.java</code> and prints the examples from the video.</p><div class="ai-code"><div class="ai-code-head"><span>StringMatching.java</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/StringMatching.java" download>Download</a></span></div><pre><code class="language-java">import java.util.*;
+
+// Episode 19: Rabin-Karp with a rolling hash, and the Z algorithm. Run: java StringMatching.java
+public class StringMatching {
+
+    // Rabin-Karp: compare hashes, and check the letters when they match
+    static int search(String t, String p) {
+        int n = t.length(), m = p.length();
+        if (m &gt; n) return -1;
+        long B = 256, M = 1_000_000_007L;
+        long hp = 0, ht = 0, pow = 1;
+        for (int i = 0; i &lt; m; i++) {
+            hp = (hp * B + p.charAt(i)) % M;
+            ht = (ht * B + t.charAt(i)) % M;
+            if (i &gt; 0) pow = pow * B % M;
+        }
+        for (int i = 0; ; i++) {
+            if (hp == ht &amp;&amp; t.startsWith(p, i)) return i;
+            if (i + m == n) return -1;
+            ht = (ht - t.charAt(i) * pow % M + M) % M;   // remove the letter leaving
+            ht = (ht * B + t.charAt(i + m)) % M;          // shift, add the letter coming in
+        }
+    }
+
+    // z[i] = how many letters from i match the start of s
+    static int[] zArray(String s) {
+        int n = s.length();
+        int[] z = new int[n];
+        char[] c = s.toCharArray();
+        for (int i = 1, l = 0, r = 0; i &lt; n; i++) {
+            if (i &lt; r) z[i] = Math.min(r - i, z[i - l]);
+            while (i + z[i] &lt; n &amp;&amp; c[z[i]] == c[i + z[i]])
+                z[i]++;
+            if (i + z[i] &gt; r) { l = i; r = i + z[i]; }
+        }
+        return z;
+    }
+
+    // every place p appears in t, using pattern + &quot;$&quot; + text
+    static List&lt;Integer&gt; zSearch(String t, String p) {
+        int[] z = zArray(p + &quot;$&quot; + t);
+        List&lt;Integer&gt; found = new ArrayList&lt;&gt;();
+        for (int i = p.length() + 1; i &lt; z.length; i++)
+            if (z[i] == p.length()) found.add(i - p.length() - 1);
+        return found;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(search(&quot;abcabd&quot;, &quot;abd&quot;));                  // 3
+        System.out.println(Arrays.toString(zArray(&quot;ab$xabab&quot;)));      // [0, 0, 0, 0, 2, 0, 2, 0]
+        System.out.println(zSearch(&quot;xabab&quot;, &quot;ab&quot;));                   // [1, 3]
+    }
+}</code></pre></div>
+      <script>window.addEventListener('load',function(){if(window.hljs)document.querySelectorAll('.ai-code code').forEach(function(c){window.hljs.highlightElement(c);});});document.querySelectorAll('.ai-copy').forEach(function(b){b.addEventListener('click',function(){var t=b.closest('.ai-code').querySelector('code').textContent,d=function(){b.textContent='Copied!';setTimeout(function(){b.textContent='Copy';},1600);},o=function(){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();d();};if(navigator.clipboard)navigator.clipboard.writeText(t).then(d,o);else o();});});</script>
+    </section>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
+      <p class="mb-0">Trusting a hash match without checking the letters.</p>
+    </section>
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Key moments <small>tap one to jump there</small></h2>
+      <ol class="ep-moments list-unstyled mb-0"><li><a href="?t=0" data-seek="0"><time>0:00</time><span>Compare numbers, not words</span></a></li>
+<li><a href="?t=19" data-seek="19"><time>0:19</time><span>Today&#x27;s plan</span></a></li>
+<li><a href="?t=44" data-seek="44"><time>0:44</time><span>Hash a window</span></a></li>
+<li><a href="?t=76" data-seek="76"><time>1:16</time><span>False matches</span></a></li>
+<li><a href="?t=105" data-seek="105"><time>1:45</time><span>The rolling hash</span></a></li>
+<li><a href="?t=134" data-seek="134"><time>2:14</time><span>Rabin-Karp: first hashes</span></a></li>
+<li><a href="?t=149" data-seek="149"><time>2:29</time><span>Rabin-Karp: slide</span></a></li>
+<li><a href="?t=166" data-seek="166"><time>2:46</time><span>Subscribe break</span></a></li>
+<li><a href="?t=181" data-seek="181"><time>3:01</time><span>The Z algorithm</span></a></li>
+<li><a href="?t=257" data-seek="257"><time>4:17</time><span>Cheat sheet</span></a></li>
+<li><a href="?t=270" data-seek="270"><time>4:30</time><span>Quiz time</span></a></li>
+<li><a href="?t=306" data-seek="306"><time>5:06</time><span>Recap</span></a></li>
+<li><a href="?t=319" data-seek="319"><time>5:19</time><span>LeetCode homework</span></a></li>
+<li><a href="?t=337" data-seek="337"><time>5:37</time><span>Next episode: Top 15 string interview questions</span></a></li></ol>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Full transcript</h2>
+      <details class="ep-transcript"><summary>Read the whole lesson</summary>
+      <p>Comparing two words means checking them letter by letter. Comparing two numbers takes one step.</p>
+<p>So what if we turned every window of the text into a number, and compared numbers instead?</p>
+<p>That&#x27;s Rabin-Karp. And then we&#x27;ll learn the Z algorithm, another clever way to match patterns in linear time.</p>
+<p>Welcome back to Compiled Canvas. This is Episode Nineteen of our DSA series. Last time, we learned the KMP algorithm.</p>
+<p>Here&#x27;s the plan. First, the idea of hashing a window. Then the problem of false matches. Then the rolling hash. Then Rabin-Karp in Java. And then the Z algorithm. A cheat sheet. And an easy quiz at the end.</p>
+<p>Let&#x27;s go.</p>
+<p>Let&#x27;s start with a very simple hash. Give each letter a number. A is one, b is two, c is three, d is four.</p>
+<p>The hash of a word is the sum. The pattern a b d is one plus two plus four. Seven.</p>
+<p>Now slide a window of three over the text. A b c is six. B c a is six. C a b is six.</p>
+<p>A b d is seven. The hashes match, so now we check the letters. They match too. Found at index three.</p>
+<p>But this hash has a problem. Search for c a b instead. Its hash is also six.</p>
+<p>So a b c matches the hash, but the letters are different. That&#x27;s a false match, called a spurious hit.</p>
+<p>Two rules fix this. Always check the letters when hashes match. And use a better hash, where the order of letters matters.</p>
+<p>The usual one treats the word like a number in a big base. Like reading the digits one two three as one hundred and twenty three.</p>
+<p>Computing each window&#x27;s hash from scratch costs m steps. The rolling hash updates it in one step.</p>
+<p>Think of digits again. The window is one two three. To slide to two three four, take away the one hundred, times by ten, and add four.</p>
+<p>Remove the letter leaving, shift, and add the letter coming in. One step, whatever the window size.</p>
+<p>The numbers get huge, so we keep them small with modulo a big prime, like ten to the nine plus seven.</p>
+<p>Here&#x27;s Rabin-Karp in Java. B is the base, and M is the big prime.</p>
+<p>First, hash the pattern, and the first window of the text.</p>
+<p>Pow is B to the power m minus one. We need it to remove the letter that leaves.</p>
+<p>If the hashes match, check the letters too. That stops spurious hits.</p>
+<p>Then roll. Remove the leaving letter, shift by B, and add the new letter.</p>
+<p>On average this is O of n plus m. In the rare worst case, with many false matches, it can be n times m.</p>
+<p>Quick pause, before we go further. If you&#x27;re finding this video valuable, hit subscribe to Compiled Canvas, and turn on the bell. It&#x27;s free, it takes one second, and it helps me keep making this complete DSA series for you. Alright, back to it.</p>
+<p>Now the Z algorithm. For each position, the Z array stores how many letters, starting there, match the start of the string.</p>
+<p>Here&#x27;s the trick for pattern matching. Join the pattern, a separator, and the text. A b, dollar, x a b a b.</p>
+<p>Now fill in the Z values. At index four, a b matches the start. Z is two. At index six, a b again. Two.</p>
+<p>Wherever Z equals the pattern length, two, we&#x27;ve found the pattern. The dollar sign makes sure a match can&#x27;t run past the pattern.</p>
+<p>It builds the Z array in O of n plus m, because it reuses a box of letters it already matched, a lot like KMP reuses LPS.</p>
+<p>Here&#x27;s the Z array in Java. L and r mark the box we&#x27;ve already matched.</p>
+<p>Inside the box, we start from a value we already know, instead of from zero.</p>
+<p>Then we extend as far as letters keep matching, and move the box if we went further.</p>
+<p>Your turn. Pause. Which one would you use to find many patterns of the same length?</p>
+<p>Rabin-Karp. Hash every pattern into a set, then roll one window across the text and check the set.</p>
+<p>So, here&#x27;s the whole thing in one cheat sheet. Pause and screenshot this.</p>
+<p>Rabin-Karp compares hashes instead of letters.</p>
+<p>Same hash? Check the letters.</p>
+<p>The rolling hash updates in one step.</p>
+<p>Use modulo a big prime.</p>
+<p>Z array: how much matches the start.</p>
+<p>Pattern, dollar, text. Z equals m means found.</p>
+<p>Okay, quiz time. Three easy questions. Pause the video, think, and then hit play.</p>
+<p>Question one. With the sum hash, what&#x27;s the hash of b a?</p>
+<p>Question two. Two windows have the same hash. Are they always equal?</p>
+<p>Question three. In the Z trick, what do we put between the pattern and the text?</p>
+<p>Ready?</p>
+<p>Question one: Three. Two plus one.</p>
+<p>Question two: No. It could be a spurious hit, so check the letters.</p>
+<p>Question three: A separator, like a dollar sign.</p>
+<p>How many did you get right? Tell me in the comments: three out of three, two, or one.</p>
+<p>Let&#x27;s recap. Turn windows into numbers. Roll the hash in one step. Always check letters on a hash match. The Z array measures matches with the start. Both run in linear time on average.</p>
+<p>Your homework. Solve LeetCode twenty eight again, this time with Rabin-Karp. Then try one eighty seven, repeated DNA sequences, with a rolling hash. And then fill in the Z array for a a b a a by hand. Hints and Java answers are on compiled canvas dot com.</p>
+<p>Next episode, the top fifteen string interview questions, sorted by pattern.</p>
+<p>And don&#x27;t forget to subscribe to Compiled Canvas, so you don&#x27;t miss anything new in tech and the job market. Keep coding, stay consistent, and I&#x27;ll see you in the next one.</p>
+      </details>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <div class="side-sticky">
+      <div class="card mb-3 shadow-sm solve-card"><div class="card-body">
+        <h2 class="h6 fw-bold">Practise this now</h2>
+        <div class="mb-3"><a class="ep-try" href="../12-string-matching/001-find-the-index-of-the-first-occurrence-in-a-string.html">Find the Index of the First Occurrence in a String <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../12-string-matching/002-repeated-substring-pattern.html">Repeated Substring Pattern <span aria-hidden="true">→</span></a></div>
+        <a class="btn btn-brand w-100" href="../12-string-matching/index.html">All String Pattern Matching problems</a>
+      </div></div>
+      <div class="card mb-3 shadow-sm"><div class="card-body small">
+        <a class="d-block mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch the full DSA series in order</a>
+        <a class="d-block" href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Compiled Canvas</a>
+      </div></div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="18-kmp-algorithm-java.html">← Episode 18</a><a class="btn btn-outline-secondary" href="20-top-string-interview-questions-java.html">Episode 20 →</a></div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../../dsa/index.html">DSA in Java</a>
+        <a href="../../dsa/episodes/index.html">All episodes</a>
+        <a href="../../gen-ai/index.html">Generative AI</a>
+        <a href="../../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../../index.html#how">How it works</a>
+        <a href="../../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <p class="foot-note">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

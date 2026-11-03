@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open Source vs Closed AI Models Explained Simply | Compiled Canvas</title>
+<meta name="description" content="Open vs closed AI models, open weight vs open source, reasoning models and multimodal models, explained simply, with a Python function to pick one.">
+<link rel="canonical" href="https://compiledcanvas.com/gen-ai/04-model-landscape.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/gen-ai/04-model-landscape.html">
+<meta property="og:title" content="Open Source vs Closed AI Models Explained Simply | Compiled Canvas">
+<meta property="og:description" content="Open vs closed AI models, open weight vs open source, reasoning models and multimodal models, explained simply, with a Python function to pick one.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/gen-ai/lesson-04.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script><script>window.addEventListener('load',function(){if(window.hljs)document.querySelectorAll('pre code').forEach(function(c){window.hljs.highlightElement(c);});});</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Open Source vs Closed AI Models Explained Simply", "author": {"@type": "Person", "name": "Amit Singh"}, "publisher": {"@type": "Organization", "name": "Compiled Canvas", "url": "https://compiledcanvas.com/", "logo": {"@type": "ImageObject", "url": "https://compiledcanvas.com/assets/logo.png"}, "sameAs": ["https://www.youtube.com/@compiledcanvas", "https://www.instagram.com/compiledcanvas", "https://github.com/amitxaidev"]}, "image": "https://compiledcanvas.com/assets/gen-ai/lesson-04.jpg", "description": "Open vs closed AI models, open weight vs open source, reasoning models and multimodal models, explained simply, with a Python function to pick one."}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "Generative AI", "item": "https://compiledcanvas.com/gen-ai/"}, {"@type": "ListItem", "position": 3, "name": "Lesson 4", "item": "https://compiledcanvas.com/gen-ai/04-model-landscape.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+      <img src="../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+<section class="ai-hero"><div class="container"><p class="ai-trail"><a href="../index.html">Home</a> / <a href="index.html">Generative AI</a> / Lesson 4</p>
+<span class="ai-pill">Lesson 4 · Python</span><h1>Open vs Closed AI Models, Reasoning and Multimodal</h1><p class="lead">Open vs closed AI models, open weight vs open source, reasoning models and multimodal models, explained simply, with a Python function to pick one.</p></div></section><div class="container py-4"><div class="row g-4"><aside class="col-lg-3 d-none d-lg-block"><nav class="ai-toc"><a href="#s1">Too many models</a><a href="#s2">Closed models</a><a href="#s3">Open models</a><a href="#s4">Open source vs open weight</a><a href="#s5">Reasoning models</a><a href="#s6">Multimodal and size</a><a href="#s7">Choose a model in Python</a></nav></aside><div class="col-lg-9"><div class="ai-video"><div class="ratio ratio-16x9"><img src="../assets/gen-ai/lesson-04.jpg" alt="Lesson 4 video thumbnail" loading="lazy"></div><span>🎬 The video comes out on 10 Nov at 10:00 AM IST. The notes and code are ready now.</span></div><section class="ai-sec fade-up" id="s1"><h2><span>1</span>Too many models</h2><p>There are hundreds of AI models now. Closed ones, open ones, ones that think before they answer, ones that can see.</p><p>Pick the wrong one, and you pay too much, wait too long, or get worse answers.</p><p>By the end of this video, you&#x27;ll pick the right kind in about ten seconds.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">HUNDREDS OF MODELS</div><div class="ai-v-cards"><span class="ai-v-card c-ink2" style="--i:0">CLOSED</span><span class="ai-v-card c-ink2" style="--i:1">OPEN</span><span class="ai-v-card c-ink2" style="--i:2">REASONING</span><span class="ai-v-card c-ink2" style="--i:3">MULTIMODAL</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">WRONG PICK?</div><div class="ai-v-cards"><span class="ai-v-card c-signal" style="--i:0">PAY TOO MUCH</span><span class="ai-v-card c-signal" style="--i:1">WAIT TOO LONG</span><span class="ai-v-card c-signal" style="--i:2">WORSE ANSWERS</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-big c-bone">PICK THE RIGHT KIND</div><div class="ai-v-big c-signal">IN 10 SECONDS</div></figure></div></section><section class="ai-sec fade-up" id="s2"><h2><span>2</span>Closed models</h2><p>Closed models live on the company&#x27;s servers. You use them through an app or an API, but you can&#x27;t download them.</p><p>OpenAI&#x27;s GPT models, Anthropic&#x27;s Claude and Google&#x27;s Gemini are all closed.</p><p>The good side. They&#x27;re usually among the strongest, and you need no hardware. One API call and you&#x27;re running.</p><p>The other side. You pay for every use, your data goes to their servers, and you depend on them.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">CLOSED MODELS</div><div class="ai-v-cards"><span class="ai-v-card c-ink2" style="--i:0">YOU → API → THEIR SERVERS</span></div><div class="ai-v-note c-acid">CAN&#x27;T DOWNLOAD THE MODEL</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">EXAMPLES</div><div class="ai-v-cards"><span class="ai-v-card c-ink2" style="--i:0">GPT · OpenAI</span><span class="ai-v-card c-ink2" style="--i:1">Claude · Anthropic</span><span class="ai-v-card c-ink2" style="--i:2">Gemini · Google</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">THE GOOD</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">OFTEN THE STRONGEST</span><span class="ai-v-card c-acid" style="--i:1">NO HARDWARE NEEDED</span></div></figure></div></section><section class="ai-sec fade-up" id="s3"><h2><span>3</span>Open models</h2><p>Open models let you download the model&#x27;s weights, the billions of numbers it learned, and run it yourself.</p><p>Meta&#x27;s Llama, Mistral, Alibaba&#x27;s Qwen, DeepSeek and Google&#x27;s Gemma are popular open families.</p><p>The good side. Your data stays with you, you can fine-tune it, and there&#x27;s no fee per token.</p><p>The other side. You need GPUs to run it, and you have to manage it all yourself.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">OPEN MODELS</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">DOWNLOAD → YOUR MACHINE</span></div><div class="ai-v-note c-acid">RUN IT YOURSELF</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">EXAMPLES</div><div class="ai-v-cards"><span class="ai-v-card c-ink2" style="--i:0">Llama</span><span class="ai-v-card c-ink2" style="--i:1">Mistral</span><span class="ai-v-card c-ink2" style="--i:2">Qwen</span><span class="ai-v-card c-ink2" style="--i:3">DeepSeek</span><span class="ai-v-card c-ink2" style="--i:4">Gemma</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">THE GOOD</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">PRIVATE</span><span class="ai-v-card c-acid" style="--i:1">FINE-TUNE IT</span><span class="ai-v-card c-acid" style="--i:2">NO PER-TOKEN FEE</span></div></figure></div></section><section class="ai-sec fade-up" id="s4"><h2><span>4</span>Open source vs open weight</h2><p>Here&#x27;s something many people get wrong. Most open models are really open weight, not fully open source.</p><p>Open weight means you get the finished model. Open source would also mean the training data and the code that made it.</p><p>Think of a cake. Open weight gives you the cake. Open source gives you the cake and the full recipe.</p><p>Always read the licence too. Some open models limit how you can use them commercially.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-big c-acid">OPEN WEIGHT</div><div class="ai-v-big c-signal">≠ OPEN SOURCE</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">WHAT YOU GET</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">OPEN WEIGHT: THE MODEL</span><span class="ai-v-card c-ink2" style="--i:1">OPEN SOURCE: + DATA + CODE</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">THE CAKE</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">THE CAKE</span><span class="ai-v-card c-ink2" style="--i:1">THE RECIPE</span></div></figure></div></section><section class="ai-sec fade-up" id="s5"><h2><span>5</span>Reasoning models</h2><p>Reasoning models think step by step before they answer. They write out working, a bit like you do on a maths exam.</p><p>They&#x27;re much better at maths, tricky code and planning.</p><p>But that thinking is made of tokens too. So they&#x27;re slower, and they cost more.</p><p>For a simple question, like translating a sentence, a quick model is better. Save reasoning for hard problems.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">REASONING MODELS</div><div class="ai-v-cards"><span class="ai-v-card c-ink2" style="--i:0">THINK</span><span class="ai-v-card c-acid" style="--i:1">THEN ANSWER</span></div><div class="ai-v-note c-acid">STEP BY STEP FIRST</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">GREAT AT</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">MATHS</span><span class="ai-v-card c-acid" style="--i:1">TRICKY CODE</span><span class="ai-v-card c-acid" style="--i:2">PLANNING</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">THE COST</div><div class="ai-v-bars"><span class="c-ash" style="--h:17%;--i:0"><b>1</b></span><span class="c-signal" style="--h:100%;--i:1"><b>6</b></span></div><div class="ai-v-note c-signal">QUICK MODEL VS REASONING: MORE TOKENS</div></figure></div></section><section class="ai-sec fade-up" id="s6"><h2><span>6</span>Multimodal and size</h2><p>Multimodal models understand more than text. Images, audio, and sometimes video.</p><p>You can show one a photo of a receipt and ask for the total. Or speak to it and hear it reply.</p><p>Models also come in sizes, counted in parameters. Small ones can run on a laptop. They&#x27;re fast and cheap.</p><p>Big ones are smarter, but slower and more expensive. Bigger isn&#x27;t always better. It&#x27;s about the job.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">MULTIMODAL</div><div class="ai-v-cards"><span class="ai-v-card c-ink2" style="--i:0">TEXT</span><span class="ai-v-card c-acid" style="--i:1">IMAGES</span><span class="ai-v-card c-acid" style="--i:2">AUDIO</span><span class="ai-v-card c-acid" style="--i:3">VIDEO</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">FOR EXAMPLE</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">RECEIPT PHOTO → TOTAL</span><span class="ai-v-card c-acid" style="--i:1">SPEAK → IT REPLIES</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">SMALL MODELS</div><div class="ai-v-bars"><span class="c-acid" style="--h:4%;--i:0"><b>3</b></span><span class="c-acid" style="--h:4%;--i:1"><b>8</b></span><span class="c-ash" style="--h:18%;--i:2"><b>70</b></span><span class="c-ash" style="--h:100%;--i:3"><b>400</b></span></div><div class="ai-v-note c-acid">BILLIONS OF PARAMETERS</div></figure></div></section><section class="ai-sec fade-up" id="s7"><h2><span>7</span>Choose a model in Python</h2><p class="ai-note">Type it out yourself, or copy it. It runs with <code>python3 pick_model.py</code>.</p><div class="ai-code"><div class="ai-code-head"><span>pick_model.py</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/pick_model.py" download>Download</a></span></div><pre><code class="language-python">def pick_model(private=False, image=False, hard=False):
+    if private:
+        return &quot;open-weight model on your server&quot;
+    if image:
+        return &quot;multimodal model&quot;
+    if hard:
+        return &quot;reasoning model&quot;
+    return &quot;small fast model&quot;
+
+print(pick_model())               # small fast model
+print(pick_model(hard=True))      # reasoning model
+print(pick_model(private=True))   # open-weight...
+print(pick_model(image=True))</code></pre></div><div class="ai-out"><span>▶ Output</span><pre>small fast model
+reasoning model
+open-weight model on your server</pre></div><p>Here&#x27;s the whole choice as a tiny Python function. First question. Must the data stay private? Use an open-weight model on your own server.</p><p>Second. Does it need to see images or hear audio? Use a multimodal model.</p><p>Third. Is it a hard maths or code problem? Use a reasoning model.</p><p>Otherwise, start with a small, fast model. It&#x27;s cheaper, and often good enough.</p><p>Your turn. Pause. You&#x27;re building a chatbot for a hospital, and patient data can&#x27;t leave the building. Which kind?</p><p>An open-weight model, running on the hospital&#x27;s own servers.</p></section><section class="ai-sec fade-up" id="s8"><h2><span>8</span>Cheat sheet</h2><ul class="ai-list"><li>Closed: API only</li><li>Open weight: run it yourself</li><li>Open weight ≠ open source</li><li>Reasoning: hard problems</li><li>Multimodal: images, audio</li><li>Small fast, big smart</li></ul></section><section class="ai-sec fade-up" id="s9"><h2><span>9</span>Quick quiz</h2><details class="ai-q"><summary>1. Can you download a closed model&#x27;s weights?</summary><p>No. You can only use it through their API or app.</p></details><details class="ai-q"><summary>2. What makes reasoning models slower?</summary><p>Their thinking is made of extra tokens.</p></details><details class="ai-q"><summary>3. A model that can read a photo is called what?</summary><p>Multimodal.</p></details></section><section class="ai-sec fade-up" id="s10"><h2><span>10</span>Homework</h2><p>Your homework. Run the pick model program from this lesson. All the Python code is on this page, ready to copy. Then add your own question to it, like whether it must work offline. And tell me in the comments: which model do you use most today?</p></section>
+<div class="ai-next"><div><span>Up next</span><strong>Context, temperature and cost</strong></div></div><div class="d-flex justify-content-between gap-2 my-4"><a class="btn btn-outline-secondary" href="03-transformers-attention.html">← Previous lesson</a><a class="btn btn-brand" href="05-context-temperature-cost.html">Next lesson →</a></div></div></div></div><script>
+document.querySelectorAll('.ai-copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var t = b.closest('.ai-code').querySelector('code').textContent, d = function () { b.textContent = 'Copied!'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); },
+      o = function () { var a = document.createElement('textarea'); a.value = t; a.style.position = 'fixed'; a.style.opacity = '0'; document.body.appendChild(a); a.select(); document.execCommand('copy'); a.remove(); d(); };
+    if (navigator.clipboard) navigator.clipboard.writeText(t).then(d, o); else o();
+  });
+});
+</script>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../dsa/index.html">DSA in Java</a>
+        <a href="../dsa/episodes/index.html">All episodes</a>
+        <a href="../gen-ai/index.html">Generative AI</a>
+        <a href="../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../index.html#how">How it works</a>
+        <a href="../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

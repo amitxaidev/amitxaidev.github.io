@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LLM Temperature Explained: Context Window and Cost | Compiled Canvas</title>
+<meta name="description" content="LLM temperature, context window, token cost and latency explained simply, with Python code for each one.">
+<link rel="canonical" href="https://compiledcanvas.com/gen-ai/05-context-temperature-cost.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/gen-ai/05-context-temperature-cost.html">
+<meta property="og:title" content="LLM Temperature Explained: Context Window and Cost | Compiled Canvas">
+<meta property="og:description" content="LLM temperature, context window, token cost and latency explained simply, with Python code for each one.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/gen-ai/lesson-05.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script><script>window.addEventListener('load',function(){if(window.hljs)document.querySelectorAll('pre code').forEach(function(c){window.hljs.highlightElement(c);});});</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "LLM Temperature Explained: Context Window and Cost", "author": {"@type": "Person", "name": "Amit Singh"}, "publisher": {"@type": "Organization", "name": "Compiled Canvas", "url": "https://compiledcanvas.com/", "logo": {"@type": "ImageObject", "url": "https://compiledcanvas.com/assets/logo.png"}, "sameAs": ["https://www.youtube.com/@compiledcanvas", "https://www.instagram.com/compiledcanvas", "https://github.com/amitxaidev"]}, "image": "https://compiledcanvas.com/assets/gen-ai/lesson-05.jpg", "description": "LLM temperature, context window, token cost and latency explained simply, with Python code for each one."}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "Generative AI", "item": "https://compiledcanvas.com/gen-ai/"}, {"@type": "ListItem", "position": 3, "name": "Lesson 5", "item": "https://compiledcanvas.com/gen-ai/05-context-temperature-cost.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+      <img src="../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Interviews, Resume &amp; LinkedIn <span>soon</span></span></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+<section class="ai-hero"><div class="container"><p class="ai-trail"><a href="../index.html">Home</a> / <a href="index.html">Generative AI</a> / Lesson 5</p>
+<span class="ai-pill">Lesson 5 · Python</span><h1>LLM Context Window, Temperature and Cost Explained</h1><p class="lead">LLM temperature, context window, token cost and latency explained simply, with Python code for each one.</p></div></section><div class="container py-4"><div class="row g-4"><aside class="col-lg-3 d-none d-lg-block"><nav class="ai-toc"><a href="#s1">Three problems</a><a href="#s2">The context window</a><a href="#s3">Trim the history</a><a href="#s4">Temperature</a><a href="#s5">Temperature in Python</a><a href="#s6">How cost is counted</a><a href="#s7">Cost calculator</a><a href="#s8">Latency</a></nav></aside><div class="col-lg-9"><div class="ai-video"><div class="ratio ratio-16x9"><img src="../assets/gen-ai/lesson-05.jpg" alt="Lesson 5 video thumbnail" loading="lazy"></div><span>🎬 The video comes out on 12 Nov at 10:00 AM IST. The notes and code are ready now.</span></div><section class="ai-sec fade-up" id="s1"><h2><span>1</span>Three problems</h2><p>Your chatbot forgot what you told it ten minutes ago.</p><p>Another time, it gave a wild, random answer to a simple question.</p><p>And your API bill doubled overnight. Three settings explain all of this. Context, temperature and cost.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">PROBLEM 1</div><div class="ai-v-cards"><span class="ai-v-card c-signal" style="--i:0">IT FORGOT YOUR NAME</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">PROBLEM 2</div><div class="ai-v-cards"><span class="ai-v-card c-signal" style="--i:0">A RANDOM ANSWER</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">PROBLEM 3</div><div class="ai-v-cards"><span class="ai-v-card c-signal" style="--i:0">THE BILL DOUBLED</span></div><div class="ai-v-note c-acid">CONTEXT · TEMPERATURE · COST</div></figure></div></section><section class="ai-sec fade-up" id="s2"><h2><span>2</span>The context window</h2><p>The context window is the model&#x27;s working memory. It&#x27;s the most tokens it can look at in one go.</p><p>Everything counts. Your instructions, every message, every reply, and any documents you paste in.</p><p>Sizes range from a few thousand tokens to more than a million in some models.</p><p>When a chat gets longer than the window, the oldest messages have to go. That&#x27;s why it forgot your name.</p><p>And bigger isn&#x27;t free. More context means slower, costlier answers, and models can miss details buried in the middle.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">WORKING MEMORY</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">MAX TOKENS IT CAN SEE AT ONCE</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">EVERYTHING COUNTS</div><div class="ai-v-bars"><span class="c-ember" style="--h:29%;--i:0"><b>10</b></span><span class="c-acid" style="--h:71%;--i:1"><b>25</b></span><span class="c-ink2" style="--h:86%;--i:2"><b>30</b></span><span class="c-signal" style="--h:100%;--i:3"><b>35</b></span></div><div class="ai-v-note c-acid">INSTRUCTIONS · MESSAGES · REPLIES · DOCUMENTS</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">SIZES VARY</div><div class="ai-v-bars"><span class="c-acid" style="--h:4%;--i:0"><b>8</b></span><span class="c-acid" style="--h:13%;--i:1"><b>128</b></span><span class="c-acid" style="--h:100%;--i:2"><b>1000</b></span></div><div class="ai-v-note c-acid">THOUSANDS OF TOKENS</div></figure></div></section><section class="ai-sec fade-up" id="s3"><h2><span>3</span>Trim the history</h2><p class="ai-note">Type it out yourself, or copy it. It runs with <code>python3 trim.py</code>.</p><div class="ai-code"><div class="ai-code-head"><span>trim.py</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/trim.py" download>Download</a></span></div><pre><code class="language-python">def trim(history, limit):
+    kept, used = [], 0
+    for msg in reversed(history):
+        cost = len(msg.split())   # rough count
+        if used + cost &gt; limit:
+            break
+        kept.append(msg)
+        used += cost
+    return list(reversed(kept))
+
+chat = [&quot;hi there&quot;, &quot;tell me about java&quot;,
+        &quot;and what about python then&quot;]
+print(trim(chat, 9))</code></pre></div><div class="ai-out"><span>▶ Output</span><pre>[&#x27;tell me about java&#x27;,
+ &#x27;and what about python then&#x27;]</pre></div><p>Here&#x27;s how apps keep a chat inside the window. Walk backwards from the newest message.</p><p>Count each message, roughly, by its words. Keep adding while there&#x27;s room.</p><p>With a limit of nine, the last two messages fit. Hi there is dropped. Real apps often summarise old messages instead of dropping them.</p></section><section class="ai-sec fade-up" id="s4"><h2><span>4</span>Temperature</h2><p>Temperature controls how random the next token is. Remember the probabilities from softmax?</p><p>Low temperature makes the top token even more likely. Answers become focused and repeatable. Use it for code, facts and pulling data out of documents.</p><p>High temperature flattens the odds. You get variety and surprise. Good for brainstorming and stories.</p><p>Too high, and the answers fall apart into nonsense. That&#x27;s your wild, random answer.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">TEMPERATURE</div><div class="ai-v-bars"><span class="c-acid" style="--h:100%;--i:0"><b>67</b></span><span class="c-ash" style="--h:36%;--i:1"><b>24</b></span><span class="c-ash" style="--h:13%;--i:2"><b>9</b></span></div><div class="ai-v-note c-acid">RANDOMNESS CONTROL</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">LOW: FOCUSED</div><div class="ai-v-bars"><span class="c-acid" style="--h:100%;--i:0"><b>99</b></span><span class="c-ash" style="--h:4%;--i:1"><b>1</b></span><span class="c-ash" style="--h:4%;--i:2"><b>0</b></span></div><div class="ai-v-note c-acid">CODE · FACTS · EXTRACTION</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">HIGH: CREATIVE</div><div class="ai-v-bars"><span class="c-ember" style="--h:100%;--i:0"><b>51</b></span><span class="c-ember" style="--h:61%;--i:1"><b>31</b></span><span class="c-ember" style="--h:37%;--i:2"><b>19</b></span></div><div class="ai-v-note c-acid">IDEAS · STORIES</div></figure></div></section><section class="ai-sec fade-up" id="s5"><h2><span>5</span>Temperature in Python</h2><p class="ai-note">Type it out yourself, or copy it. It runs with <code>python3 temperature.py</code>.</p><div class="ai-code"><div class="ai-code-head"><span>temperature.py</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/temperature.py" download>Download</a></span></div><pre><code class="language-python">import numpy as np
+
+scores = np.array([3.0, 2.0, 1.0])
+for t in [0.2, 1.0, 2.0]:
+    p = np.exp(scores / t)
+    print(t, (p / p.sum()).round(2))
+
+# 0.2 [0.99 0.01 0.  ]
+# 1.0 [0.67 0.24 0.09]
+# 2.0 [0.51 0.31 0.19]</code></pre></div><div class="ai-out"><span>▶ Output</span><pre>0.2 [0.99 0.01 0.  ]
+1.0 [0.67 0.24 0.09]
+2.0 [0.51 0.31 0.19]</pre></div><p>Here it is in Python. Divide the scores by the temperature before softmax. That&#x27;s all temperature is.</p><p>At zero point two, the top token gets ninety nine percent.</p><p>At one, it&#x27;s sixty seven, twenty four and nine.</p><p>At two, it&#x27;s fifty one, thirty one and nineteen. Much more spread out.</p></section><section class="ai-sec fade-up" id="s6"><h2><span>6</span>How cost is counted</h2><p>APIs charge by the token, usually per million tokens. Input and output are priced separately.</p><p>Output tokens usually cost several times more than input tokens.</p><p>Here&#x27;s the sneaky part. In a chat, the whole history is sent again with every message. So each turn costs more than the last.</p><p>That&#x27;s how a bill doubles overnight. Trim the history, cache what repeats, and pick a smaller model where you can.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">PAY PER TOKEN</div><div class="ai-v-cards"><span class="ai-v-card c-ink2" style="--i:0">INPUT: WHAT YOU SEND</span><span class="ai-v-card c-ink2" style="--i:1">OUTPUT: WHAT IT WRITES</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">OUTPUT COSTS MORE</div><div class="ai-v-bars"><span class="c-ash" style="--h:25%;--i:0"><b>1</b></span><span class="c-signal" style="--h:100%;--i:1"><b>4</b></span></div><div class="ai-v-note c-acid">INPUT VS OUTPUT</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">HISTORY IS RE-SENT</div><div class="ai-v-bars"><span class="c-acid" style="--h:17%;--i:0"><b>1</b></span><span class="c-acid" style="--h:33%;--i:1"><b>2</b></span><span class="c-acid" style="--h:50%;--i:2"><b>3</b></span><span class="c-acid" style="--h:67%;--i:3"><b>4</b></span><span class="c-acid" style="--h:83%;--i:4"><b>5</b></span><span class="c-signal" style="--h:100%;--i:5"><b>6</b></span></div><div class="ai-v-note c-signal">EVERY TURN SENDS EVERYTHING AGAIN</div></figure></div></section><section class="ai-sec fade-up" id="s7"><h2><span>7</span>Cost calculator</h2><p class="ai-note">Type it out yourself, or copy it. It runs with <code>python3 cost.py</code>.</p><div class="ai-code"><div class="ai-code-head"><span>cost.py</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/cost.py" download>Download</a></span></div><pre><code class="language-python">def cost(inp, out, in_price=100, out_price=400):
+    # rupees per million tokens, example prices only
+    return inp / 1e6 * in_price + out / 1e6 * out_price
+
+print(cost(2_000, 500))           # 0.4
+print(cost(2_000, 500) * 10_000)  # 4000.0</code></pre></div><div class="ai-out"><span>▶ Output</span><pre>0.4
+4000.0</pre></div><p>Here&#x27;s a cost calculator. These prices are made up for the example. Always check your provider&#x27;s real prices.</p><p>One chat turn, with two thousand tokens in and five hundred out, costs forty paise.</p><p>Ten thousand users doing that? Four thousand rupees. Small numbers add up fast.</p></section><section class="ai-sec fade-up" id="s8"><h2><span>8</span>Latency</h2><p>Latency is how long you wait. It has two parts.</p><p>Time to first token is how long until the answer starts. Tokens per second is how fast it keeps writing.</p><p>Streaming shows words as they arrive, so it feels fast. Long prompts, big models and reasoning all make it slower.</p><p>Your turn. Pause. You&#x27;re pulling invoice numbers out of PDFs. Low temperature or high?</p><p>Low. You want the same correct answer every single time.</p><div class="ai-v-grid"><figure class="ai-v fade-up"><div class="ai-v-head">LATENCY</div><div class="ai-v-cards"><span class="ai-v-card c-ink2" style="--i:0">TIME TO FIRST TOKEN</span><span class="ai-v-card c-ink2" style="--i:1">TOKENS PER SECOND</span></div></figure><figure class="ai-v fade-up"><div class="ai-v-head">TWO NUMBERS</div><div class="ai-v-bars"><span class="c-ember" style="--h:25%;--i:0"><b>2</b></span><span class="c-acid" style="--h:100%;--i:1"><b>8</b></span></div><div class="ai-v-note c-acid">WAIT TO START · SPEED AFTER</div></figure><figure class="ai-v fade-up"><div class="ai-v-head">FASTER FEELING</div><div class="ai-v-cards"><span class="ai-v-card c-acid" style="--i:0">STREAM THE ANSWER</span><span class="ai-v-card c-acid" style="--i:1">SHORTER PROMPTS</span><span class="ai-v-card c-acid" style="--i:2">SMALLER MODELS</span></div></figure></div></section><section class="ai-sec fade-up" id="s9"><h2><span>9</span>Cheat sheet</h2><ul class="ai-list"><li>Context: working memory</li><li>Full: oldest messages go</li><li>Low temp: focused</li><li>High temp: creative</li><li>Pay per token, output more</li><li>History re-sent every turn</li></ul></section><section class="ai-sec fade-up" id="s10"><h2><span>10</span>Quick quiz</h2><details class="ai-q"><summary>1. What happens when the chat is longer than the context window?</summary><p>The oldest messages are dropped or summarised.</p></details><details class="ai-q"><summary>2. Extracting data from invoices. Low or high temperature?</summary><p>Low.</p></details><details class="ai-q"><summary>3. Which usually costs more per token, input or output?</summary><p>Output.</p></details></section><section class="ai-sec fade-up" id="s11"><h2><span>11</span>Homework</h2><p>Your homework. Run the three Python programs from this lesson. All the Python code is on this page, ready to copy. Then change the temperature to five, and see what happens. And tell me in the comments: what temperature would you use for a story?</p></section>
+<div class="ai-next"><div><span>Up next</span><strong>Prompt anatomy</strong></div></div><div class="d-flex justify-content-between gap-2 my-4"><a class="btn btn-outline-secondary" href="04-model-landscape.html">← Previous lesson</a><a class="btn btn-brand" href="06-prompt-anatomy.html">Next lesson →</a></div></div></div></div><script>
+document.querySelectorAll('.ai-copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var t = b.closest('.ai-code').querySelector('code').textContent, d = function () { b.textContent = 'Copied!'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); },
+      o = function () { var a = document.createElement('textarea'); a.value = t; a.style.position = 'fixed'; a.style.opacity = '0'; document.body.appendChild(a); a.select(); document.execCommand('copy'); a.remove(); d(); };
+    if (navigator.clipboard) navigator.clipboard.writeText(t).then(d, o); else o();
+  });
+});
+</script>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free coding courses for tech careers, explained with motion graphics. Watch, practise, repeat.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../dsa/index.html">DSA in Java</a>
+        <a href="../dsa/episodes/index.html">All episodes</a>
+        <a href="../gen-ai/index.html">Generative AI</a>
+        <a href="../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../index.html#how">How it works</a>
+        <a href="../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
