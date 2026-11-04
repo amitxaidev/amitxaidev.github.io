@@ -1,0 +1,66 @@
+<!doctype html>
+<html ⚡ lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sliding Window in Java: Fixed and Variable Size</title>
+<link rel="canonical" href="https://compiledcanvas.com/stories/sliding-window-java/">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="description" content="The sliding window technique in Java: fixed-size and variable-size windows, explained with pictures.">
+<meta property="og:title" content="Sliding Window in Java: Fixed and Variable Size"><meta property="og:description" content="The sliding window technique in Java: fixed-size and variable-size windows, explained with pictures."><meta property="og:image" content="https://compiledcanvas.com/assets/stories/sliding-window-java-poster.jpg"><meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@500;700;800&family=JetBrains+Mono:wght@600;800&display=swap" rel="stylesheet">
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+<script async custom-element="amp-story-interactive" src="https://cdn.ampproject.org/v0/amp-story-interactive-0.1.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Sliding Window in Java: Fixed and Variable Size", "description": "The sliding window technique in Java: fixed-size and variable-size windows, explained with pictures.", "image": ["https://compiledcanvas.com/assets/stories/sliding-window-java-poster.jpg"], "author": {"@type": "Organization", "name": "Compiled Canvas", "url": "https://compiledcanvas.com"}, "publisher": {"@type": "Organization", "name": "Compiled Canvas", "logo": {"@type": "ImageObject", "url": "https://compiledcanvas.com/assets/logo.png"}}, "datePublished": "2026-11-04", "mainEntityOfPage": "https://compiledcanvas.com/stories/sliding-window-java/"}</script>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<style amp-custom>
+amp-story{font-family:'Inter',sans-serif;color:#F4EEE2}
+amp-story-page{background:#0E0C0B}
+.bg{background:radial-gradient(120% 80% at 50% 0%,#2a1408 0%,#0E0C0B 60%);}
+.grid{background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:32px 32px}
+.in{position:absolute;top:0;left:0;right:0;bottom:0}
+.box{position:absolute;left:24px;right:24px;top:50%;transform:translateY(-50%);max-height:calc(100% - 110px)}
+.top{justify-content:flex-start;padding-top:64px}
+.brand{font:800 15px 'Archivo Black','Inter',sans-serif;letter-spacing:.06em;margin-bottom:18px}
+.brand b{color:#FF5C1A}
+.kick{display:inline-block;background:#FF5C1A;color:#0E0C0B;font:800 14px 'Inter';letter-spacing:.08em;padding:6px 12px;border-radius:999px;margin-bottom:14px}
+h1{font:400 40px/1.05 'Archivo Black','Inter',sans-serif;margin:0 0 14px;text-transform:uppercase}
+h2{font:400 34px/1.08 'Archivo Black','Inter',sans-serif;margin:0 0 12px;text-transform:uppercase}
+.acid{color:#E6FF3D}.org{color:#FF5C1A}
+p{font:500 19px/1.4 'Inter';margin:0 0 12px;color:#E8E0D2}
+.sub{font-size:21px;font-weight:700}
+.cells{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.cells span{min-width:52px;padding:14px 10px;text-align:center;border:2px solid #4a423b;border-radius:12px;font:800 20px 'JetBrains Mono',monospace;background:#1b1714}
+.cells span.on{background:#E6FF3D;color:#0E0C0B;border-color:#E6FF3D;box-shadow:0 0 22px rgba(230,255,61,.45)}
+.code{background:#15110f;border:1px solid #3a322c;border-radius:14px;padding:14px 16px;margin:16px 0;font:600 15px/1.55 'JetBrains Mono',monospace;color:#F4EEE2;white-space:pre-wrap;word-break:break-word}
+.code i{font-style:normal;color:#FF5C1A}
+.vs{display:grid;gap:10px;margin:16px 0}
+.vs div{padding:14px 16px;border-radius:14px;font:800 19px 'Inter'}
+.vs .bad{background:rgba(255,92,26,.14);border:2px solid #FF5C1A}
+.vs .good{background:rgba(230,255,61,.12);border:2px solid #E6FF3D}
+.bars{margin:16px 0}
+.bars div{display:flex;align-items:center;gap:10px;margin:8px 0;font:700 15px 'Inter'}
+.bars em{font-style:normal;width:96px;flex:none}
+.bars s{display:block;height:22px;border-radius:6px;background:#FF5C1A;text-decoration:none}
+.bars div:last-child s{background:#E6FF3D}
+.big{font:400 30px/1.15 'Archivo Black','Inter',sans-serif;color:#E6FF3D;margin:18px 0;text-shadow:0 0 24px rgba(230,255,61,.35)}
+.thumb{width:100%;border-radius:16px;overflow:hidden;border:3px solid #FF5C1A;margin:12px 0 18px}
+.list{margin:6px 0 0;padding:0;list-style:none}
+.list li{font:700 19px/1.3 'Inter';padding:11px 0;border-bottom:1px solid #3a322c}
+.list li:before{content:'→ ';color:#FF5C1A}
+.miss{border-left:6px solid #FF5C1A;padding-left:14px}
+.cta{display:block;text-align:center;background:#FF5C1A;color:#0E0C0B;font:800 20px 'Inter';padding:16px;border-radius:999px;text-decoration:none;margin:10px 0}
+.cta2{background:transparent;color:#F4EEE2;border:2px solid #F4EEE2}
+.foot{position:absolute;left:26px;right:26px;bottom:26px;font:600 14px 'Inter';color:#a89f92}
+amp-story-interactive-quiz{margin:8px 0 18px;--interactive-accent-color:#FF5C1A;--interactive-prompt-text-color:#0E0C0B}
+</style>
+</head>
+<body>
+<amp-story standalone title="Sliding Window in Java: Fixed and Variable Size" publisher="Compiled Canvas" publisher-logo-src="https://compiledcanvas.com/assets/logo.png" poster-portrait-src="https://compiledcanvas.com/assets/stories/sliding-window-java-poster.jpg">
+<amp-story-page id="cover"><amp-story-grid-layer template="fill" class="bg grid"></amp-story-grid-layer><amp-story-grid-layer template="fill"><div class="in"><div class="box"><div class="brand" animate-in="fade-in">COMPILED <b>CANVAS</b></div><span class="kick" animate-in="fade-in" animate-in-delay="0.2s">DSA IN JAVA</span><h1 animate-in="fly-in-bottom" animate-in-delay="0.3s">1 billion steps → 2 million</h1><p class="sub acid" animate-in="fade-in" animate-in-delay="0.8s">The sliding window trick</p><div class="thumb" animate-in="fly-in-bottom" animate-in-delay="1s"><amp-img src="../../assets/stories/sliding-window-java.jpg" width="1280" height="720" layout="responsive" alt="Sliding Window in Java: Fixed and Variable Size"></amp-img></div><p animate-in="fade-in" animate-in-delay="1.4s">Tap to start →</p></div></div></amp-story-grid-layer></amp-story-page><amp-story-page id="tip1"><amp-story-grid-layer template="fill" class="bg grid"></amp-story-grid-layer><amp-story-grid-layer template="fill"><div class="in"><div class="box"><span class="kick" animate-in="fade-in">IDEA</span><h2 animate-in="fly-in-left" animate-in-delay="0.15s">Don&#x27;t start over</h2><div animate-in="fade-in" animate-in-delay="0.45s"><div class="cells"><span class="">1</span><span class="on">3</span><span class="on">2</span><span class="on">4</span><span class="">6</span></div></div><p animate-in="fly-in-bottom" animate-in-delay="0.7s">Slide the window: add the new number, drop the old one.</p></div><div class="foot">1 of 4 · keep tapping →</div></div></amp-story-grid-layer></amp-story-page><amp-story-page id="tip2"><amp-story-grid-layer template="fill" class="bg grid"></amp-story-grid-layer><amp-story-grid-layer template="fill"><div class="in"><div class="box"><span class="kick" animate-in="fade-in">FIXED</span><h2 animate-in="fly-in-left" animate-in-delay="0.15s">Size never changes</h2><div animate-in="fade-in" animate-in-delay="0.45s"><div class="code">sum += a[i];
+if (i &gt;= k) sum -= a[i - k];
+if (i &gt;= k - 1) best = max(best, sum);</div></div><p animate-in="fly-in-bottom" animate-in-delay="0.7s">Biggest sum of exactly k numbers in a row.</p></div><div class="foot">2 of 4 · keep tapping →</div></div></amp-story-grid-layer></amp-story-page><amp-story-page id="tip3"><amp-story-grid-layer template="fill" class="bg grid"></amp-story-grid-layer><amp-story-grid-layer template="fill"><div class="in"><div class="box"><span class="kick" animate-in="fade-in">VARIABLE</span><h2 animate-in="fly-in-left" animate-in-delay="0.15s">Grow, then shrink</h2><div animate-in="fade-in" animate-in-delay="0.45s"><div class="vs"><div class="bad">shrink with if ✗</div><div class="good">shrink with while ✓</div></div></div><p animate-in="fly-in-bottom" animate-in-delay="0.7s">Grow the right side. While the rule breaks, shrink the left.</p></div><div class="foot">3 of 4 · keep tapping →</div></div></amp-story-grid-layer></amp-story-page><amp-story-page id="tip4"><amp-story-grid-layer template="fill" class="bg grid"></amp-story-grid-layer><amp-story-grid-layer template="fill"><div class="in"><div class="box"><span class="kick" animate-in="fade-in">WHY</span><h2 animate-in="fly-in-left" animate-in-delay="0.15s">O(n)</h2><div animate-in="fade-in" animate-in-delay="0.45s"><div class="bars"><div><em>Restart each window</em><s style="width:150px"></s></div><div><em>Sliding</em><s style="width:6px"></s></div></div></div><p animate-in="fly-in-bottom" animate-in-delay="0.7s">Each number enters once and leaves once.</p></div><div class="foot">4 of 4 · keep tapping →</div></div></amp-story-grid-layer></amp-story-page><amp-story-page id="mistake"><amp-story-grid-layer template="fill" class="bg grid"></amp-story-grid-layer><amp-story-grid-layer template="fill"><div class="in"><div class="box"><span class="kick">⚠ MOST PEOPLE MISS THIS</span><h2 class="org" animate-in="fly-in-bottom">The mistake</h2><p class="sub miss" animate-in="fade-in" animate-in-delay="0.4s">Shrinking a variable window with if. It may need to shrink more than once: use while.</p></div></div></amp-story-grid-layer></amp-story-page><amp-story-page id="quiz"><amp-story-grid-layer template="fill" class="bg grid"></amp-story-grid-layer><amp-story-grid-layer template="fill"><div class="in"><div class="box"><span class="kick">QUICK QUIZ</span><h2>Can you get it?</h2><amp-story-interactive-quiz id="q-sliding-window-java" endpoint="https://webstoriesinteractivity-beta.web.app/api/v1" theme="dark" prompt-text="Biggest sum of exactly 5 numbers in a row. Which window?" option-1-text="Variable" option-2-text="Fixed" option-3-text="Neither" option-2-correct></amp-story-interactive-quiz><p>Tap an answer. The full video explains why.</p></div></div></amp-story-grid-layer></amp-story-page><amp-story-page id="cheat"><amp-story-grid-layer template="fill" class="bg grid"></amp-story-grid-layer><amp-story-grid-layer template="fill"><div class="in"><div class="box"><span class="kick">📸 SCREENSHOT THIS</span><h2>Cheat sheet</h2><ul class="list"><li animate-in="fly-in-right" animate-in-delay="0.10s">Add new, drop old</li><li animate-in="fly-in-right" animate-in-delay="0.25s">Fixed: size k</li><li animate-in="fly-in-right" animate-in-delay="0.40s">Variable: grow then shrink</li><li animate-in="fly-in-right" animate-in-delay="0.55s">Shrink with while</li><li animate-in="fly-in-right" animate-in-delay="0.70s">O(n) time</li></ul></div></div></amp-story-grid-layer></amp-story-page><amp-story-page id="watch"><amp-story-grid-layer template="fill" class="bg grid"></amp-story-grid-layer><amp-story-grid-layer template="fill"><div class="in"><div class="box"><div class="brand" animate-in="fade-in">COMPILED <b>CANVAS</b></div><h2 animate-in="fly-in-bottom">Want the full lesson?</h2><div class="thumb" animate-in="fly-in-bottom" animate-in-delay="0.3s"><amp-img src="../../assets/stories/sliding-window-java.jpg" width="1280" height="720" layout="responsive" alt="Sliding Window in Java: Fixed and Variable Size"></amp-img></div><a class="cta" href="https://www.youtube.com/watch?v=MPqi3WLXj9w">▶ Watch the full video</a><a class="cta cta2" href="https://compiledcanvas.com/dsa/08-sliding-window/">Practice + free notes</a><p>Free DSA in Java course. Subscribe to Compiled Canvas on YouTube.</p></div></div></amp-story-grid-layer><amp-story-page-outlink layout="nodisplay" theme="custom" cta-accent-color="#FF5C1A" cta-accent-element="background"><a href="https://www.youtube.com/watch?v=MPqi3WLXj9w">Watch the full video</a></amp-story-page-outlink></amp-story-page>
+</amp-story>
+</body>
+</html>

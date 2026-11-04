@@ -1,0 +1,66 @@
+<!doctype html>
+<html ⚡ lang="en">
+<head>
+<meta charset="utf-8">
+<title>How to Calculate Time Complexity of Any Code</title>
+<link rel="canonical" href="https://compiledcanvas.com/stories/time-complexity-calculation/">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="description" content="Calculate the time complexity of loops, nested loops and recursion in a few simple steps, with Java examples.">
+<meta property="og:title" content="How to Calculate Time Complexity of Any Code"><meta property="og:description" content="Calculate the time complexity of loops, nested loops and recursion in a few simple steps, with Java examples."><meta property="og:image" content="https://compiledcanvas.com/assets/stories/time-complexity-calculation-poster.jpg"><meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@500;700;800&family=JetBrains+Mono:wght@600;800&display=swap" rel="stylesheet">
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+<script async custom-element="amp-story-interactive" src="https://cdn.ampproject.org/v0/amp-story-interactive-0.1.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Calculate Time Complexity of Any Code", "description": "Calculate the time complexity of loops, nested loops and recursion in a few simple steps, with Java examples.", "image": ["https://compiledcanvas.com/assets/stories/time-complexity-calculation-poster.jpg"], "author": {"@type": "Organization", "name": "Compiled Canvas", "url": "https://compiledcanvas.com"}, "publisher": {"@type": "Organization", "name": "Compiled Canvas", "logo": {"@type": "ImageObject", "url": "https://compiledcanvas.com/assets/logo.png"}}, "datePublished": "2026-11-04", "mainEntityOfPage": "https://compiledcanvas.com/stories/time-complexity-calculation/"}</script>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<style amp-custom>
+amp-story{font-family:'Inter',sans-serif;color:#F4EEE2}
+amp-story-page{background:#0E0C0B}
+.bg{background:radial-gradient(120% 80% at 50% 0%,#2a1408 0%,#0E0C0B 60%);}
+.grid{background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:32px 32px}
+.in{position:absolute;top:0;left:0;right:0;bottom:0}
+.box{position:absolute;left:24px;right:24px;top:50%;transform:translateY(-50%);max-height:calc(100% - 110px)}
+.top{justify-content:flex-start;padding-top:64px}
+.brand{font:800 15px 'Archivo Black','Inter',sans-serif;letter-spacing:.06em;margin-bottom:18px}
+.brand b{color:#FF5C1A}
+.kick{display:inline-block;background:#FF5C1A;color:#0E0C0B;font:800 14px 'Inter';letter-spacing:.08em;padding:6px 12px;border-radius:999px;margin-bottom:14px}
+h1{font:400 40px/1.05 'Archivo Black','Inter',sans-serif;margin:0 0 14px;text-transform:uppercase}
+h2{font:400 34px/1.08 'Archivo Black','Inter',sans-serif;margin:0 0 12px;text-transform:uppercase}
+.acid{color:#E6FF3D}.org{color:#FF5C1A}
+p{font:500 19px/1.4 'Inter';margin:0 0 12px;color:#E8E0D2}
+.sub{font-size:21px;font-weight:700}
+.cells{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.cells span{min-width:52px;padding:14px 10px;text-align:center;border:2px solid #4a423b;border-radius:12px;font:800 20px 'JetBrains Mono',monospace;background:#1b1714}
+.cells span.on{background:#E6FF3D;color:#0E0C0B;border-color:#E6FF3D;box-shadow:0 0 22px rgba(230,255,61,.45)}
+.code{background:#15110f;border:1px solid #3a322c;border-radius:14px;padding:14px 16px;margin:16px 0;font:600 15px/1.55 'JetBrains Mono',monospace;color:#F4EEE2;white-space:pre-wrap;word-break:break-word}
+.code i{font-style:normal;color:#FF5C1A}
+.vs{display:grid;gap:10px;margin:16px 0}
+.vs div{padding:14px 16px;border-radius:14px;font:800 19px 'Inter'}
+.vs .bad{background:rgba(255,92,26,.14);border:2px solid #FF5C1A}
+.vs .good{background:rgba(230,255,61,.12);border:2px solid #E6FF3D}
+.bars{margin:16px 0}
+.bars div{display:flex;align-items:center;gap:10px;margin:8px 0;font:700 15px 'Inter'}
+.bars em{font-style:normal;width:96px;flex:none}
+.bars s{display:block;height:22px;border-radius:6px;background:#FF5C1A;text-decoration:none}
+.bars div:last-child s{background:#E6FF3D}
+.big{font:400 30px/1.15 'Archivo Black','Inter',sans-serif;color:#E6FF3D;margin:18px 0;text-shadow:0 0 24px rgba(230,255,61,.35)}
+.thumb{width:100%;border-radius:16px;overflow:hidden;border:3px solid #FF5C1A;margin:12px 0 18px}
+.list{margin:6px 0 0;padding:0;list-style:none}
+.list li{font:700 19px/1.3 'Inter';padding:11px 0;border-bottom:1px solid #3a322c}
+.list li:before{content:'→ ';color:#FF5C1A}
+.miss{border-left:6px solid #FF5C1A;padding-left:14px}
+.cta{display:block;text-align:center;background:#FF5C1A;color:#0E0C0B;font:800 20px 'Inter';padding:16px;border-radius:999px;text-decoration:none;margin:10px 0}
+.cta2{background:transparent;color:#F4EEE2;border:2px solid #F4EEE2}
+.foot{position:absolute;left:26px;right:26px;bottom:26px;font:600 14px 'Inter';color:#a89f92}
+amp-story-interactive-quiz{margin:8px 0 18px;--interactive-accent-color:#FF5C1A;--interactive-prompt-text-color:#0E0C0B}
+</style>
+</head>
+<body>
+<amp-story standalone title="How to Calculate Time Complexity of Any Code" publisher="Compiled Canvas" publisher-logo-src="https://compiledcanvas.com/assets/logo.png" poster-portrait-src="https://compiledcanvas.com/assets/stories/time-complexity-calculation-poster.jpg">
+<amp-story-page id="cover"><amp-story-grid-layer template="fill" class="bg grid"></amp-story-grid-layer><amp-story-grid-layer template="fill"><div class="in"><div class="box"><div class="brand" animate-in="fade-in">COMPILED <b>CANVAS</b></div><span class="kick" animate-in="fade-in" animate-in-delay="0.2s">DSA IN JAVA</span><h1 animate-in="fly-in-bottom" animate-in-delay="0.3s">Find the Big O of ANY code in 10 seconds</h1><p class="sub acid" animate-in="fade-in" animate-in-delay="0.8s">4 rules. That&#x27;s all.</p><div class="thumb" animate-in="fly-in-bottom" animate-in-delay="1s"><amp-img src="../../assets/stories/time-complexity-calculation.jpg" width="1280" height="720" layout="responsive" alt="How to Calculate Time Complexity of Any Code"></amp-img></div><p animate-in="fade-in" animate-in-delay="1.4s">Tap to start →</p></div></div></amp-story-grid-layer></amp-story-page><amp-story-page id="tip1"><amp-story-grid-layer template="fill" class="bg grid"></amp-story-grid-layer><amp-story-grid-layer template="fill"><div class="in"><div class="box"><span class="kick" animate-in="fade-in">RULE 1</span><h2 animate-in="fly-in-left" animate-in-delay="0.15s">Loops multiply</h2><div animate-in="fade-in" animate-in-delay="0.45s"><div class="code">for (i = 0; i &lt; n; i++)
+  for (j = 0; j &lt; n; j++)
+    count++;  <i>// n × n</i></div></div><p animate-in="fly-in-bottom" animate-in-delay="0.7s">A loop inside a loop: multiply their counts. n × n = O(n²).</p></div><div class="foot">1 of 4 · keep tapping →</div></div></amp-story-grid-layer></amp-story-page><amp-story-page id="tip2"><amp-story-grid-layer template="fill" class="bg grid"></amp-story-grid-layer><amp-story-grid-layer template="fill"><div class="in"><div class="box"><span class="kick" animate-in="fade-in">RULE 2</span><h2 animate-in="fly-in-left" animate-in-delay="0.15s">Steps in a row add</h2><div animate-in="fade-in" animate-in-delay="0.45s"><div class="big">n + n = O(n)</div></div><p animate-in="fly-in-bottom" animate-in-delay="0.7s">One loop, then another loop: n + n = 2n, which is still O(n).</p></div><div class="foot">2 of 4 · keep tapping →</div></div></amp-story-grid-layer></amp-story-page><amp-story-page id="tip3"><amp-story-grid-layer template="fill" class="bg grid"></amp-story-grid-layer><amp-story-grid-layer template="fill"><div class="in"><div class="box"><span class="kick" animate-in="fade-in">RULE 3</span><h2 animate-in="fly-in-left" animate-in-delay="0.15s">Doubling or halving = log n</h2><div animate-in="fade-in" animate-in-delay="0.45s"><div class="cells"><span class="on">1</span><span class="on">2</span><span class="on">4</span><span class="on">8</span><span class="on">16</span></div></div><p animate-in="fly-in-bottom" animate-in-delay="0.7s">If i doubles or n halves each step, that loop is O(log n).</p></div><div class="foot">3 of 4 · keep tapping →</div></div></amp-story-grid-layer></amp-story-page><amp-story-page id="tip4"><amp-story-grid-layer template="fill" class="bg grid"></amp-story-grid-layer><amp-story-grid-layer template="fill"><div class="in"><div class="box"><span class="kick" animate-in="fade-in">RULE 4</span><h2 animate-in="fly-in-left" animate-in-delay="0.15s">Recursion: count the calls</h2><div animate-in="fade-in" animate-in-delay="0.45s"><div class="bars"><div><em>n=10</em><s style="width:15px"></s></div><div><em>n=20</em><s style="width:60px"></s></div><div><em>n=30</em><s style="width:150px"></s></div></div></div><p animate-in="fly-in-bottom" animate-in-delay="0.7s">Calls × work per call. Fibonacci with two calls each time grows like 2ⁿ.</p></div><div class="foot">4 of 4 · keep tapping →</div></div></amp-story-grid-layer></amp-story-page><amp-story-page id="mistake"><amp-story-grid-layer template="fill" class="bg grid"></amp-story-grid-layer><amp-story-grid-layer template="fill"><div class="in"><div class="box"><span class="kick">⚠ MOST PEOPLE MISS THIS</span><h2 class="org" animate-in="fly-in-bottom">The mistake</h2><p class="sub miss" animate-in="fade-in" animate-in-delay="0.4s">Calling a loop O(n) when its counter doubles. That&#x27;s O(log n).</p></div></div></amp-story-grid-layer></amp-story-page><amp-story-page id="quiz"><amp-story-grid-layer template="fill" class="bg grid"></amp-story-grid-layer><amp-story-grid-layer template="fill"><div class="in"><div class="box"><span class="kick">QUICK QUIZ</span><h2>Can you get it?</h2><amp-story-interactive-quiz id="q-time-complexity-calculation" endpoint="https://webstoriesinteractivity-beta.web.app/api/v1" theme="dark" prompt-text="Outer loop doubles to n, inner loop runs n times. Big O?" option-1-text="O(n²)" option-2-text="O(n log n)" option-3-text="O(log n)" option-2-correct></amp-story-interactive-quiz><p>Tap an answer. The full video explains why.</p></div></div></amp-story-grid-layer></amp-story-page><amp-story-page id="cheat"><amp-story-grid-layer template="fill" class="bg grid"></amp-story-grid-layer><amp-story-grid-layer template="fill"><div class="in"><div class="box"><span class="kick">📸 SCREENSHOT THIS</span><h2>Cheat sheet</h2><ul class="list"><li animate-in="fly-in-right" animate-in-delay="0.10s">Nested loops: multiply</li><li animate-in="fly-in-right" animate-in-delay="0.25s">Loops in a row: add</li><li animate-in="fly-in-right" animate-in-delay="0.40s">Doubling/halving: log n</li><li animate-in="fly-in-right" animate-in-delay="0.55s">Drop constants</li><li animate-in="fly-in-right" animate-in-delay="0.70s">Recursion: calls × work</li></ul></div></div></amp-story-grid-layer></amp-story-page><amp-story-page id="watch"><amp-story-grid-layer template="fill" class="bg grid"></amp-story-grid-layer><amp-story-grid-layer template="fill"><div class="in"><div class="box"><div class="brand" animate-in="fade-in">COMPILED <b>CANVAS</b></div><h2 animate-in="fly-in-bottom">Want the full lesson?</h2><div class="thumb" animate-in="fly-in-bottom" animate-in-delay="0.3s"><amp-img src="../../assets/stories/time-complexity-calculation.jpg" width="1280" height="720" layout="responsive" alt="How to Calculate Time Complexity of Any Code"></amp-img></div><a class="cta" href="https://www.youtube.com/watch?v=PxjhjjhEIqw">▶ Watch the full video</a><a class="cta cta2" href="https://compiledcanvas.com/dsa/01-complexity/">Practice + free notes</a><p>Free DSA in Java course. Subscribe to Compiled Canvas on YouTube.</p></div></div></amp-story-grid-layer><amp-story-page-outlink layout="nodisplay" theme="custom" cta-accent-color="#FF5C1A" cta-accent-element="background"><a href="https://www.youtube.com/watch?v=PxjhjjhEIqw">Watch the full video</a></amp-story-page-outlink></amp-story-page>
+</amp-story>
+</body>
+</html>
