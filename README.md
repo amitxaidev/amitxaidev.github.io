@@ -13,7 +13,7 @@
 
 # Compiled Canvas — free coding courses for tech careers
 
-Short videos with motion graphics that show what the code is really doing, and a practice sheet for every course with hints, explanations and solutions, so you never need to jump to another site.
+Short, clear videos that show what the code is really doing, and a practice sheet for every course with hints, explanations and solutions, so you never need to jump to another site.
 
 🌐 **Website (progress tracking, interactive lessons):** https://compiledcanvas.com/
 
@@ -29,7 +29,7 @@ Short videos with motion graphics that show what the code is really doing, and a
 | **Spring Boot** | Build and ship REST APIs the way companies do. | ![Soon](https://img.shields.io/badge/-Coming%20soon-FF8A1F) | — |
 | **OOPS** | Classes, inheritance, SOLID and design patterns with examples. | ![Soon](https://img.shields.io/badge/-Coming%20soon-FF8A1F) | — |
 | **System Design** | Scaling, caching, queues and real design walkthroughs. | ![Soon](https://img.shields.io/badge/-Coming%20soon-FF8A1F) | — |
-| **Interviews, Resume & LinkedIn** | Get shortlisted and handle every round. | ![Soon](https://img.shields.io/badge/-Coming%20soon-FF8A1F) | — |
+| **[Resume & LinkedIn](./career)** | Write an ATS-friendly resume with 12 free templates and set up a LinkedIn profile recruiters find. | ![Live](https://img.shields.io/badge/-Live-198754) | [Open on GitHub →](./career) · [website](https://compiledcanvas.com/career/) |
 
 Want a course sooner? Tell us in the YouTube comments; the most requested topics go first.
 

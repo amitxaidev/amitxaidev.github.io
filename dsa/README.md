@@ -69,7 +69,7 @@ Episodes 101–105 (patterns, mock interviews and common mistakes) use the whole
 
 ## More courses are coming
 
-DSA in Java is live. Next on the plan: Java, Python, SQL, Spring Boot, OOPS, System Design, and Interviews, Resume & LinkedIn. [Subscribe on YouTube](https://www.youtube.com/@compiledcanvas?sub_confirmation=1) so you don't miss them.
+DSA in Java is live. Next on the plan: Java, Python, SQL, Spring Boot, OOPS, System Design. Resume & LinkedIn guidance and a free resume builder are live at the website. [Subscribe on YouTube](https://www.youtube.com/@compiledcanvas?sub_confirmation=1) so you don't miss them.
 
 ## Notes
 
