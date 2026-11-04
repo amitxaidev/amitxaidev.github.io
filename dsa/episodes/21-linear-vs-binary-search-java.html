@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Linear Search vs Binary Search in Java | 20 Checks for 1M | Compiled Canvas</title>
+<meta name="description" content="Linear search vs binary search in Java: why a million numbers need only about 20 checks, the full Java program, and the mid overflow bug. LeetCode 704 and 35.">
+<link rel="canonical" href="https://compiledcanvas.com/dsa/episodes/21-linear-vs-binary-search-java.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/dsa/episodes/21-linear-vs-binary-search-java.html">
+<meta property="og:title" content="Linear Search vs Binary Search in Java | 20 Checks for 1M | Compiled Canvas">
+<meta property="og:description" content="Linear search vs binary search in Java: why a million numbers need only about 20 checks, the full Java program, and the mid overflow bug. LeetCode 704 and 35.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/thumbs/21.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "DSA in Java", "item": "https://compiledcanvas.com/dsa/"}, {"@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://compiledcanvas.com/dsa/episodes/"}, {"@type": "ListItem", "position": 4, "name": "Episode 21", "item": "https://compiledcanvas.com/dsa/episodes/21-linear-vs-binary-search-java.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../career/index.html">Resume &amp; LinkedIn <span class="badge text-bg-success">Live</span></a></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Episodes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Episode 21</li>
+    </ol></nav>
+    <span class="badge rounded-pill text-bg-dark mb-2">Episode 21 · 6:14 · video out 25 Nov 2026, 6:00 PM IST</span>
+    <h1 class="h2 fw-bold mb-3">Linear Search vs Binary Search in Java | 20 Checks for 1M</h1>
+    <div class="ep-player ratio ratio-16x9" id="ep-wait" data-out="2026-11-25T18:00:00+05:30" data-vid="">
+      <img src="../../assets/thumbs/21.jpg" alt="" class="object-fit-cover">
+    </div>
+    <p class="small text-body-secondary mt-2 mb-0" id="ep-wait-note">The video goes live on 25 Nov 2026 at 6:00 PM IST. The notes are ready now.</p>
+    <script>(function(){var w=document.getElementById('ep-wait');if(!w.dataset.vid)return;if(Date.now()>=new Date(w.dataset.out).getTime()){w.innerHTML="<iframe id=\"ep-video\" src=\"https://www.youtube.com/embed/?rel=0\" data-video=\"\" title=\"Linear Search vs Binary Search in Java | 20 Checks for 1M\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";document.getElementById('ep-wait-note').remove();}})();</script>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>What this episode covers</h2>
+      <p>Linear search checks every box from left to right. It works on any array, sorted or not, but on a million numbers it can take a million checks. That&#x27;s O(n).</p>
+<p>Binary search only works on sorted data, and it plays the guess-the-number game: look at the middle, throw away the half that can&#x27;t hold the answer, repeat. A million numbers need about twenty checks. That&#x27;s O(log n). We walk it through 1, 3, 5, 7, 9, 11, 13 looking for 9 and find it in three checks.</p>
+<p>The classic bug is mid = (low + high) / 2. When both are near two billion, the sum overflows int and goes negative. Write low + (high - low) / 2 every time. Unsorted and searching once? Linear search wins, because sorting first costs O(n log n).</p>
+    </section>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>What you'll be able to do</h2>
+      <ul class="mb-0"><li>Linear search</li>
+<li>Why sorted helps</li>
+<li>Binary search</li>
+<li>Java code + the bug</li>
+<li>Which one when</li></ul>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">{ }</span>The Java code from the video</h2>
+      <p>Type it out yourself, or copy it. Each file runs on its own with <code>java FileName.java</code> and prints the examples from the video.</p><div class="ai-code"><div class="ai-code-head"><span>SearchBasics.java</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/SearchBasics.java" download>Download</a></span></div><pre><code class="language-java">import java.util.*;
+
+// Episode 21: linear search vs binary search. Run: java SearchBasics.java
+public class SearchBasics {
+
+    // O(n): check every box from left to right. Works on ANY array.
+    static int linearSearch(int[] a, int x) {
+        for (int i = 0; i &lt; a.length; i++) {
+            if (a[i] == x) return i;
+        }
+        return -1; // not found
+    }
+
+    // O(log n): halve the range each step. Needs a SORTED array.
+    static int binarySearch(int[] a, int x) {
+        int lo = 0, hi = a.length - 1;
+        while (lo &lt;= hi) {
+            int mid = lo + (hi - lo) / 2; // safe: (lo + hi) / 2 can overflow
+            if (a[mid] == x) return mid;
+            if (a[mid] &lt; x) lo = mid + 1;
+            else hi = mid - 1;
+        }
+        return -1;
+    }
+
+    // Same search, printing every check so you can follow it
+    static int binarySearchTrace(int[] a, int x) {
+        int lo = 0, hi = a.length - 1, checks = 0;
+        while (lo &lt;= hi) {
+            int mid = lo + (hi - lo) / 2;
+            checks++;
+            System.out.println(&quot;  check &quot; + checks + &quot;: lo=&quot; + lo + &quot; hi=&quot; + hi + &quot; mid=&quot; + mid + &quot; a[mid]=&quot; + a[mid]);
+            if (a[mid] == x) return mid;
+            if (a[mid] &lt; x) lo = mid + 1;
+            else hi = mid - 1;
+        }
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        int[] unsorted = {4, 8, 2, 9, 5};
+        System.out.println(&quot;linearSearch(&quot; + Arrays.toString(unsorted) + &quot;, 9) → &quot; + linearSearch(unsorted, 9));
+        System.out.println(&quot;linearSearch(&quot; + Arrays.toString(unsorted) + &quot;, 7) → &quot; + linearSearch(unsorted, 7));
+
+        int[] sorted = {1, 3, 5, 7, 9, 11, 13};
+        System.out.println(&quot;binarySearch(&quot; + Arrays.toString(sorted) + &quot;, 9):&quot;);
+        System.out.println(&quot;  → index &quot; + binarySearchTrace(sorted, 9));
+
+        // the overflow bug, made visible
+        int lo = 2_000_000_000, hi = 2_100_000_000;
+        System.out.println(&quot;(lo + hi) / 2      = &quot; + (lo + hi) / 2 + &quot;   ← overflow!&quot;);
+        System.out.println(&quot;lo + (hi - lo) / 2 = &quot; + (lo + (hi - lo) / 2));
+
+        // how many checks for a million numbers?
+        int n = 1_000_000;
+        int[] big = new int[n];
+        for (int i = 0; i &lt; n; i++) big[i] = 2 * i;
+        int steps = 0, l = 0, h = n - 1, target = big[n - 1];
+        while (l &lt;= h) { steps++; int m = l + (h - l) / 2; if (big[m] == target) break; if (big[m] &lt; target) l = m + 1; else h = m - 1; }
+        System.out.println(&quot;1,000,000 sorted numbers: found the last one in &quot; + steps + &quot; checks&quot;);
+    }
+}</code></pre></div>
+      <script>window.addEventListener('load',function(){if(window.hljs)document.querySelectorAll('.ai-code code').forEach(function(c){window.hljs.highlightElement(c);});});document.querySelectorAll('.ai-copy').forEach(function(b){b.addEventListener('click',function(){var t=b.closest('.ai-code').querySelector('code').textContent,d=function(){b.textContent='Copied!';setTimeout(function(){b.textContent='Copy';},1600);},o=function(){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();d();};if(navigator.clipboard)navigator.clipboard.writeText(t).then(d,o);else o();});});</script>
+    </section>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
+      <p class="mb-0">Writing (low + high) / 2. When both are near 2 billion, the sum overflows int and goes negative.</p>
+    </section>
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Key moments <small>tap one to jump there</small></h2>
+      <ol class="ep-moments list-unstyled mb-0"><li><a href="?t=0" data-seek="0"><time>0:00</time><span>1 million or 20?</span></a></li>
+<li><a href="?t=20" data-seek="20"><time>0:20</time><span>Today&#x27;s plan</span></a></li>
+<li><a href="?t=49" data-seek="49"><time>0:49</time><span>Linear search</span></a></li>
+<li><a href="?t=80" data-seek="80"><time>1:20</time><span>Linear search in Java</span></a></li>
+<li><a href="?t=91" data-seek="91"><time>1:31</time><span>Binary search</span></a></li>
+<li><a href="?t=123" data-seek="123"><time>2:03</time><span>Step by step</span></a></li>
+<li><a href="?t=163" data-seek="163"><time>2:43</time><span>Binary search in Java</span></a></li>
+<li><a href="?t=184" data-seek="184"><time>3:04</time><span>Subscribe break</span></a></li>
+<li><a href="?t=198" data-seek="198"><time>3:18</time><span>The bug</span></a></li>
+<li><a href="?t=231" data-seek="231"><time>3:51</time><span>Which one when</span></a></li>
+<li><a href="?t=264" data-seek="264"><time>4:24</time><span>Cheat sheet</span></a></li>
+<li><a href="?t=287" data-seek="287"><time>4:47</time><span>Quiz time</span></a></li>
+<li><a href="?t=321" data-seek="321"><time>5:21</time><span>Recap</span></a></li>
+<li><a href="?t=337" data-seek="337"><time>5:37</time><span>LeetCode homework</span></a></li>
+<li><a href="?t=354" data-seek="354"><time>5:54</time><span>Next episode: Lower bound and upper bound</span></a></li></ol>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Full transcript</h2>
+      <details class="ep-transcript"><summary>Read the whole lesson</summary>
+      <p>You check a million boxes one by one and fail the time limit. But binary search needs just twenty checks. Here&#x27;s why.</p>
+<p>Same array. Same number to find. One way is a million times slower than the other.</p>
+<p>By the end of this video you&#x27;ll write both in Java, and you&#x27;ll know the one bug that breaks binary search.</p>
+<p>Welcome back to Compiled Canvas. This is Episode Twenty One of our DSA series. Last time, we finished strings with the top fifteen string interview questions. Today we start searching.</p>
+<p>Here&#x27;s the plan. First, linear search, the way everyone starts. Then why sorted data changes everything. Then binary search, step by step. Then the Java code, and the bug. And when to use which. A cheat sheet. And an easy quiz at the end.</p>
+<p>Let&#x27;s go.</p>
+<p>First, the way everyone starts. It&#x27;s not wrong. It just doesn&#x27;t scale.</p>
+<p>Linear search checks every box, from left to right, until it finds the number. Looking for nine. Four, no. Eight, no. Two, no.</p>
+<p>Nine. Found it, at index three.</p>
+<p>If the number is at the end, or not there at all, you check every single box. That&#x27;s O of n.</p>
+<p>The good part? It works on any array. Sorted or not. Keep that in mind, because binary search can&#x27;t do that.</p>
+<p>Here it is in Java. One loop over the array.</p>
+<p>If the box holds our number, return its index straight away.</p>
+<p>If the loop ends, the number isn&#x27;t there. Return minus one.</p>
+<p>Now the trick. I&#x27;m thinking of a number between one and a hundred. You can guess, and I&#x27;ll say higher or lower. How many guesses do you need?</p>
+<p>Always guess the middle. Fifty. Lower. Twenty five. Higher. Thirty seven. Every guess throws away half of what&#x27;s left.</p>
+<p>A hundred, fifty, twenty five, about twelve, six, three, one. Seven guesses, every time.</p>
+<p>That&#x27;s binary search. But it only works because the numbers are in order. On a sorted array, it&#x27;s the same game.</p>
+<p>Let&#x27;s run it on a real array. One, three, five, seven, nine, eleven, thirteen. Find nine.</p>
+<p>Low is index zero, high is index six. The middle is index three, which holds seven. Seven is smaller than nine.</p>
+<p>So nine can&#x27;t be on the left. Throw the left half away. Low moves to four.</p>
+<p>The new middle is index five, which holds eleven. Too big. High moves to four.</p>
+<p>Now low and high are both four. Index four holds nine. Found, in three checks instead of five.</p>
+<p>Look at this graph. Every step halves the array, so a million boxes take about twenty steps. That&#x27;s O of log n.</p>
+<p>Here&#x27;s binary search in Java. Low starts at zero, high at the last index.</p>
+<p>Keep going while low is less than or equal to high. Find the middle.</p>
+<p>Found it? Return. Too small? Move low past the middle. Too big? Move high before it.</p>
+<p>If low passes high, the number isn&#x27;t there. Return minus one.</p>
+<p>Quick pause, before we go further. If you&#x27;re finding this video valuable, hit subscribe to Compiled Canvas, and turn on the bell. It&#x27;s free, it takes one second, and it helps me keep making this complete DSA series for you. Alright, back to it.</p>
+<p>Now the bug. It hid in real, widely used code for years. And you might be writing it right now.</p>
+<p>Most people write mid equals low plus high, divided by two. It looks fine.</p>
+<p>But if low and high are both around two billion, low plus high is bigger than an int can hold. It overflows into a negative number, and your search crashes.</p>
+<p>The fix is low plus, high minus low, divided by two. Same middle, and it never overflows.</p>
+<p>One line. Write it this way every time, and interviewers notice.</p>
+<p>So which one should you use? It depends on one question. Is the array sorted?</p>
+<p>Unsorted, and you search once? Linear search. Sorting first would cost O of n log n, which is slower than one pass.</p>
+<p>Sorted already, or you&#x27;ll search many times? Binary search. Sort once, then every search is O of log n.</p>
+<p>Your turn. Pause. A sorted array has a thousand numbers. At most how many checks does binary search need?</p>
+<p>About ten. Two to the power ten is one thousand and twenty four, so ten halvings are enough.</p>
+<p>So, here&#x27;s the whole thing in one cheat sheet. Pause and screenshot this.</p>
+<p>Linear search checks every box: O of n.</p>
+<p>Binary search halves the range: O of log n.</p>
+<p>Binary search needs a sorted array.</p>
+<p>A million boxes take about twenty checks.</p>
+<p>Compute mid as low plus, high minus low, over two.</p>
+<p>Unsorted and searching once? Use linear.</p>
+<p>Okay, quiz time. Three easy questions. Pause the video, think, and then hit play.</p>
+<p>Question one. What does binary search need that linear search doesn&#x27;t?</p>
+<p>Question two. About how many checks does binary search need for a million numbers?</p>
+<p>Question three. Why write low plus, high minus low, over two?</p>
+<p>Ready?</p>
+<p>Question one: A sorted array.</p>
+<p>Question two: About twenty.</p>
+<p>Question three: To stop low plus high from overflowing.</p>
+<p>How many did you get right? Tell me in the comments: three out of three, two, or one.</p>
+<p>Let&#x27;s recap. Linear search checks every box. Binary search halves the sorted range. Twenty checks for a million. Use the safe middle formula. Sorted? Binary. Unsorted, once? Linear.</p>
+<p>Your homework. Solve LeetCode seven oh four, Binary Search, and LeetCode thirty five, Search Insert Position. Both are easy. Practice problems with hints and Java answers are on compiled canvas dot com. And tell me in the comments: how many checks for two thousand numbers?</p>
+<p>Next episode, the binary search masterclass. Lower bound, upper bound, and the first and last copy of any number.</p>
+<p>And don&#x27;t forget to subscribe to Compiled Canvas, so you don&#x27;t miss anything new in tech and the job market. Keep coding, stay consistent, and I&#x27;ll see you in the next one.</p>
+      </details>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <div class="side-sticky">
+      <div class="card mb-3 shadow-sm solve-card"><div class="card-body">
+        <h2 class="h6 fw-bold">Practise this now</h2>
+        <div class="mb-3"><a class="ep-try" href="../13-binary-search/001-binary-search.html">Binary Search <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../13-binary-search/002-search-insert-position.html">Search Insert Position <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../13-binary-search/003-sqrtx.html">Sqrt(x) <span aria-hidden="true">→</span></a></div>
+        <a class="btn btn-brand w-100" href="../13-binary-search/index.html">All Binary Search problems</a>
+      </div></div>
+      <div class="card mb-3 shadow-sm"><div class="card-body small">
+        <a class="d-block mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch the full DSA series in order</a>
+        <a class="d-block" href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Compiled Canvas</a>
+      </div></div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="20-top-string-interview-questions-java.html">← Episode 20</a><a class="btn btn-outline-secondary" href="22-lower-upper-bound-java.html">Episode 22 →</a></div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free courses for software careers: DSA in Java, Generative AI, and resume and LinkedIn guidance.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../../dsa/index.html">DSA in Java</a>
+        <a href="../../dsa/episodes/index.html">All episodes</a>
+        <a href="../../gen-ai/index.html">Generative AI</a>
+        <a href="../../career/resume-builder.html">Free resume builder</a>
+        <a href="../../stories/index.html">Web Stories</a>
+        <a href="../../blog/index.html">Guides</a>
+        <a href="../../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../../index.html#how">How it works</a>
+        <a href="../../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <p class="foot-note">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

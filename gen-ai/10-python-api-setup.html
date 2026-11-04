@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Python API Key Setup: .env, venv and Safe Keys | Compiled Canvas</title>
+<meta name="description" content="Python setup for AI APIs: a virtual environment, an API key, a .env file and .gitignore, and loading the key safely with python-dotenv.">
+<link rel="canonical" href="https://compiledcanvas.com/gen-ai/10-python-api-setup.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/gen-ai/10-python-api-setup.html">
+<meta property="og:title" content="Python API Key Setup: .env, venv and Safe Keys | Compiled Canvas">
+<meta property="og:description" content="Python setup for AI APIs: a virtual environment, an API key, a .env file and .gitignore, and loading the key safely with python-dotenv.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/gen-ai/lesson-10.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script><script>window.addEventListener('load',function(){if(window.hljs)document.querySelectorAll('pre code').forEach(function(c){window.hljs.highlightElement(c);});});</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Python API Key Setup: .env, venv and Safe Keys", "author": {"@type": "Person", "name": "Amit Singh"}, "publisher": {"@type": "Organization", "name": "Compiled Canvas", "url": "https://compiledcanvas.com/", "logo": {"@type": "ImageObject", "url": "https://compiledcanvas.com/assets/logo.png"}, "sameAs": ["https://www.youtube.com/@compiledcanvas", "https://www.instagram.com/compiledcanvas", "https://github.com/amitxaidev"]}, "image": "https://compiledcanvas.com/assets/gen-ai/lesson-10.jpg", "description": "Python setup for AI APIs: a virtual environment, an API key, a .env file and .gitignore, and loading the key safely with python-dotenv."}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "Generative AI", "item": "https://compiledcanvas.com/gen-ai/"}, {"@type": "ListItem", "position": 3, "name": "Lesson 10", "item": "https://compiledcanvas.com/gen-ai/10-python-api-setup.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+      <img src="../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../career/index.html">Resume &amp; LinkedIn <span class="badge text-bg-success">Live</span></a></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+<section class="ai-hero"><div class="container"><p class="ai-trail"><a href="../index.html">Home</a> / <a href="index.html">Generative AI</a> / Lesson 10</p>
+<span class="ai-pill">Lesson 10 · Python</span><h1>Python Setup for AI: API Keys and Environment Variables (.env)</h1><p class="lead">Python setup for AI APIs: a virtual environment, an API key, a .env file and .gitignore, and loading the key safely with python-dotenv.</p></div></section><div class="container py-4"><div class="row g-4"><aside class="col-lg-3 d-none d-lg-block"><nav class="ai-toc"><a href="#s1">Don&#x27;t lose your money</a><a href="#s2">Virtual environment</a><a href="#s3">The api key</a><a href="#s4">The .env file</a><a href="#s5">Load the key in Python</a><a href="#s6">Checklist</a></nav></aside><div class="col-lg-9"><div class="ai-start"><div class="ai-video" id="ai-wait" data-out="2026-11-09T10:00:00+05:30" data-vid=""><div class="ratio ratio-16x9"><img src="../assets/gen-ai/lesson-10.jpg" alt="Lesson 10 video thumbnail" loading="lazy"></div><span>🎬 Video out 9 Nov, 10:00 AM IST</span></div><div class="ai-plan"><p><b>0 hands-on demos</b> and <b>1 Python programs</b> you can run on this page. Nothing to install.</p><ol><li><a href="#s1">Don&#x27;t lose your money</a></li><li><a href="#s2">Virtual environment</a></li><li><a href="#s3">The api key</a></li><li><a href="#s4">The .env file</a></li><li><a href="#s5">Load the key in Python</a> <b class=py>run code</b></li><li><a href="#s6">Checklist</a></li></ol></div></div><script>(function(){var w=document.getElementById('ai-wait');if(!w.dataset.vid||Date.now()<new Date(w.dataset.out).getTime())return;var a=document.createElement('a');a.className='ai-video video-card';a.href='https://youtu.be/'+w.dataset.vid;a.target='_blank';a.rel='noopener';a.innerHTML=w.innerHTML;a.querySelector('span').textContent='▶ Watch this lesson on YouTube';w.replaceWith(a);})();</script><section class="ai-sec fade-up" id="s1"><h2><span>1</span>Don&#x27;t lose your money</h2><p>You paste your API key into your code, push it to GitHub, and lose money before lunch. Here&#x27;s how to stop that.</p><p>Bots scan public code for keys all day. A leaked key lets a stranger run AI calls on your bill.</p><p>Today, the setup companies use. A virtual environment, an API key, and a dot env file nobody else can see. About ten minutes.</p><div class="ai-keys"><span style="--i:0">key = &quot;sk-…&quot;  # in your code</span><span style="--i:1">PUSHED TO GITHUB → STOLEN</span><span style="--i:2">VIRTUAL ENV</span><span style="--i:3">API KEY</span><span style="--i:4">.env FILE</span></div></section><section class="ai-sec fade-up" id="s2"><h2><span>2</span>Virtual environment</h2><p>Step one. And skipping it is why so many projects break a month later.</p><p>A virtual environment is a private box of libraries for one project. Like a separate pencil box for each subject.</p><p>Make one with python dash m venv dot venv. Then activate it. On Mac and Linux, source dot venv slash bin slash activate.</p><p>On Windows, it&#x27;s dot venv backslash scripts backslash activate. You&#x27;ll see dot venv in brackets at the start of your terminal line.</p><p>Now install two libraries. The official Anthropic library, and python dot env.</p><div class="ai-keys"><span style="--i:0">project A: its own libraries</span><span style="--i:1">project B: its own libraries</span><span style="--i:2">python -m venv .venv</span><span style="--i:3">source .venv/bin/activate</span><span style="--i:4">.venv\Scripts\activate</span><span style="--i:5">(.venv) APPEARS IN YOUR TERMINAL</span></div></section><section class="ai-sec fade-up" id="s3"><h2><span>3</span>The api key</h2><p>Your API key is a password to your wallet. Here&#x27;s what it actually does.</p><p>Every call to an AI API sends your key. The provider uses it to know who&#x27;s asking, and who pays.</p><p>You create one in your provider&#x27;s console. For Claude, that&#x27;s console dot anthropic dot com. You see the full key only once, so save it somewhere safe.</p><p>Treat it like your bank PIN. Never in your code, never in a screenshot, never in a chat message.</p><div class="ai-keys"><span style="--i:0">API KEY</span><span style="--i:1">= WALLET PASSWORD</span><span style="--i:2">your code + key → provider</span><span style="--i:3">provider → bill to you</span><span style="--i:4">console.anthropic.com</span><span style="--i:5">shown only once!</span></div></section><section class="ai-sec fade-up" id="s4"><h2><span>4</span>The .env file</h2><p>So if the key can&#x27;t live in your code, where does it live? In a tiny file called dot env.</p><p>One line. The name, an equals sign, your key. No quotes, no spaces.</p><p>Then the most important step. Add dot env to a file called dot gitignore. Now git never uploads it.</p><p>Your code stays public and shareable. Your key stays on your machine. That&#x27;s the whole idea.</p><div class="ai-keys"><span style="--i:0">ANTHROPIC_API_KEY=your-key-here</span><span style="--i:1">NAME=value</span><span style="--i:2">NO QUOTES, NO SPACES</span><span style="--i:3">.env</span><span style="--i:4">.venv/</span><span style="--i:5">GIT NEVER UPLOADS THESE</span></div></section><section class="ai-sec fade-up" id="s5"><h2><span>5</span>Load the key in Python</h2><p class="ai-note">Edit the code and press <b>Run</b> to try it right here, or copy it and run <code>python3 load_key.py</code>.</p><div class="ai-code"><div class="ai-code-head"><span>load_key.py <em>· click to edit</em></span><span class="ai-code-btns"><button type="button" class="ai-run">▶ Run</button><button type="button" class="ai-copy">Copy</button><a href="code/load_key.py" download>Download</a></span></div><pre><code class="language-python" contenteditable="plaintext-only" spellcheck="false"># Lesson 10: load your API key from a .env file, never from the code.
+#   1. python -m venv .venv            (then: source .venv/bin/activate   or   .venv\Scripts\activate on Windows)
+#   2. pip install anthropic python-dotenv
+#   3. create a file named .env with one line:   ANTHROPIC_API_KEY=your-key-here
+#   4. add .env to .gitignore so it never reaches GitHub
+import os
+from dotenv import load_dotenv
+
+load_dotenv()                                   # reads .env into the environment
+key = os.getenv(&quot;ANTHROPIC_API_KEY&quot;)
+
+if not key:
+    raise SystemExit(&quot;No key found. Add ANTHROPIC_API_KEY=... to your .env file.&quot;)
+
+print(&quot;Key loaded:&quot;, key[:7] + &quot;...&quot; + key[-4:])   # never print the whole key
+print(&quot;.env in .gitignore:&quot;, os.path.exists(&quot;.gitignore&quot;) and &quot;.env&quot; in open(&quot;.gitignore&quot;).read())</code></pre></div><div class="ai-out"><span>▶ Output</span><pre>Key loaded: sk-ant-...abcd</pre></div><p>Here&#x27;s how your code reads it. Load dot env reads the file into the environment.</p><p>Then os get env fetches the key by name. Your code never contains the key itself.</p><p>If it&#x27;s missing, stop with a clear message. And when you print it, show only the first and last few characters. All the Python code is on compiled canvas dot com, ready to copy.</p></section><section class="ai-sec fade-up" id="s6"><h2><span>6</span>Checklist</h2><p>Before you write any AI code, run this checklist. It takes one minute, and it saves you from the costly mistake.</p><p>Virtual environment active. Libraries installed. Key in dot env. Dot env in dot gitignore. Key loaded with get env.</p><p>Leaked one anyway? Delete that key in the console right away, and make a new one. Deleting it stops it working.</p><p>Your turn. Pause. You type git status, and dot env shows up as a new file. What did you forget?</p><p>Adding dot env to dot gitignore. Do it before your first commit.</p><div class="ai-keys"><span style="--i:0">(.venv) active</span><span style="--i:1">pip install done</span><span style="--i:2">key in .env</span><span style="--i:3">.env in .gitignore</span><span style="--i:4">os.getenv in code</span><span style="--i:5">delete the key in the console</span><span style="--i:6">create a new one</span><span style="--i:7">git status → .env (new file)</span><span style="--i:8">PAUSE AND TRY</span></div></section><section class="ai-sec fade-up" id="s7"><h2><span>7</span>Cheat sheet</h2><ul class="ai-list"><li>One venv per project</li><li>pip install anthropic python-dotenv</li><li>Key = wallet password</li><li>Key → .env</li><li>.env → .gitignore</li><li>os.getenv(...)</li></ul></section><section class="ai-sec fade-up" id="s8"><h2><span>8</span>Quick quiz</h2><details class="ai-q"><summary>1. Which file holds your API key?</summary><p>The dot env file.</p></details><details class="ai-q"><summary>2. How do you stop git from uploading it?</summary><p>Add it to dot gitignore.</p></details><details class="ai-q"><summary>3. Your key leaked. What&#x27;s the first thing to do?</summary><p>Delete it in the console and make a new one.</p></details></section><section class="ai-sec fade-up" id="s9"><h2><span>9</span>Homework</h2><p>Your homework. Set up a virtual environment, create a dot env file, and run the load key program until it prints your masked key. All the Python code is on this page, ready to copy. And tell me in the comments: Mac, Windows or Linux?</p></section>
+<div class="ai-next"><div><span>Up next</span><strong>Your first API call</strong></div></div><div class="d-flex justify-content-between gap-2 my-4"><a class="btn btn-outline-secondary" href="09-hallucination-injection.html">← Previous lesson</a><a class="btn btn-brand" href="11-first-api-call.html">Next lesson →</a></div></div></div></div><script>
+document.querySelectorAll('.ai-copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var t = b.closest('.ai-code').querySelector('code').textContent, d = function () { b.textContent = 'Copied!'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); },
+      o = function () { var a = document.createElement('textarea'); a.value = t; a.style.position = 'fixed'; a.style.opacity = '0'; document.body.appendChild(a); a.select(); document.execCommand('copy'); a.remove(); d(); };
+    if (navigator.clipboard) navigator.clipboard.writeText(t).then(d, o); else o();
+  });
+});
+</script><script>
+(function () {
+  var $ = function (r, s) { return r.querySelector(s); }, $$ = function (r, s) { return Array.prototype.slice.call(r.querySelectorAll(s)); };
+  var softmax = function (s, t) { var m = Math.max.apply(null, s), x = s.map(function (v) { return Math.exp((v - m) / t); }), z = x.reduce(function (a, b) { return a + b; }, 0); return x.map(function (v) { return v / z; }); };
+  var bars = function (box, names, ps, hi) {
+    box.innerHTML = names.map(function (n, i) { return '<div class="lab-bar' + (i === hi ? ' hi' : '') + '"><span>' + n + '</span><i style="width:' + (ps[i] * 100).toFixed(1) + '%"></i><b>' + Math.round(ps[i] * 100) + '%</b></div>'; }).join('');
+  };
+  var draw = function (ps) { var r = Math.random(), a = 0; for (var i = 0; i < ps.length; i++) { a += ps[i]; if (r < a) return i; } return ps.length - 1; };
+  var esc = function (s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var L = {};
+
+  L.tok = function (el) {
+    var inp = $(el, 'input'), out = $(el, '[data-out]');
+    var keep = ' i a an the and or is am are to of in on it you we my love python java hello world code token tokens model learn ', pre = ['un', 're', 'dis', 'pre'], suf = ['able', 'ing', 'tion', 'ness', 'ment', 'ed', 'ly', 'er'];
+    var id = function (s) { var h = 7; for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) % 50257; return h; };
+    var split = function (w) {
+      var lead = w[0] === ' ' ? ' ' : '', core = w.trim(), low = core.toLowerCase(), parts = [];
+      if (!/^[a-z]+$/i.test(core) || core.length <= 6 || keep.indexOf(' ' + low + ' ') >= 0) return [w];
+      pre.forEach(function (p) { if (!parts.length && low.indexOf(p) === 0 && low.length > p.length + 3) { parts.push(core.slice(0, p.length)); core = core.slice(p.length); low = low.slice(p.length); } });
+      var tail = ''; suf.some(function (s) { if (low.length > s.length + 2 && low.slice(-s.length) === s) { tail = core.slice(-s.length); core = core.slice(0, -s.length); return true; } });
+      while (core.length > 6) { parts.push(core.slice(0, 4)); core = core.slice(4); }
+      parts.push(core); if (tail) parts.push(tail); parts[0] = lead + parts[0]; return parts;
+    };
+    var run = function () {
+      var txt = inp.value, words = txt.match(/ ?[A-Za-z]+| ?\d| ?[^\sA-Za-z\d]/g) || [], toks = [];
+      words.forEach(function (w) { toks = toks.concat(split(w)); });
+      out.innerHTML = toks.map(function (t, i) { return '<span class="lab-tk k' + (i % 5) + '">' + esc(t.replace(/^ /, '·')) + '<small>' + id(t) + '</small></span>'; }).join('') || '<span class="lab-hint">Type something above.</span>';
+      $(el, '[data-w]').textContent = (txt.match(/[A-Za-z0-9']+/g) || []).length; $(el, '[data-t]').textContent = toks.length; $(el, '[data-c]').textContent = txt.length;
+    };
+    inp.addEventListener('input', run); run();
+  };
+
+  L.emb = function (el) {
+    var W = { cat: [.9, .8], dog: [.8, .9], puppy: [.62, .98], kitten: [.98, .6], car: [.15, -.9], bus: [-.12, -.95], truck: [.32, -.85], apple: [-.86, .3], mango: [-.95, .1], banana: [-.75, .5] };
+    var svg = $(el, 'svg'), res = $(el, '[data-res]'), sel = [], X = function (v) { return 170 + v[0] * 135; }, Y = function (v) { return 125 - v[1] * 100; };
+    var cos = function (a, b) { return (a[0] * b[0] + a[1] * b[1]) / (Math.hypot(a[0], a[1]) * Math.hypot(b[0], b[1])); };
+    var paint = function () {
+      var g = '<line class="ax" x1="20" y1="125" x2="320" y2="125"/><line class="ax" x1="170" y1="15" x2="170" y2="235"/>';
+      if (sel.length === 2) g += '<line class="link" x1="' + X(W[sel[0]]) + '" y1="' + Y(W[sel[0]]) + '" x2="' + X(W[sel[1]]) + '" y2="' + Y(W[sel[1]]) + '"/>';
+      Object.keys(W).forEach(function (k) { var v = W[k], on = sel.indexOf(k) >= 0; g += '<g class="pt' + (on ? ' on' : '') + '" data-w="' + k + '" tabindex="0" role="button" aria-label="' + k + '"><circle cx="' + X(v) + '" cy="' + Y(v) + '" r="' + (on ? 8 : 6) + '"/><text x="' + (X(v) + 10) + '" y="' + (Y(v) + 4) + '">' + k + '</text></g>'; });
+      svg.innerHTML = g;
+      if (sel.length === 1) res.textContent = 'Now pick a second word.';
+      if (sel.length === 2) { var s = cos(W[sel[0]], W[sel[1]]); res.innerHTML = '<b>' + sel[0] + ' ↔ ' + sel[1] + '</b>: similarity <b>' + s.toFixed(2) + '</b> · ' + (s > .85 ? 'very close in meaning' : s > .3 ? 'a little related' : 'not related at all'); }
+    };
+    var pick = function (k) { if (sel.length === 2) sel = []; if (sel.indexOf(k) < 0) sel.push(k); paint(); };
+    svg.addEventListener('click', function (ev) { var g = ev.target.closest('[data-w]'); if (g) pick(g.getAttribute('data-w')); });
+    svg.addEventListener('keydown', function (ev) { var g = ev.target.closest('[data-w]'); if (g && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); pick(g.getAttribute('data-w')); } });
+    sel = ['cat', 'dog']; paint();
+  };
+
+  L.soft = function (el, c) {
+    var t = $(el, '[data-temp]'), box = $(el, '[data-bars]'), out = $(el, '[data-samples]'), ps = [];
+    var pr = $(el, '[data-prompt]'), last = '___';
+    var show = function () { pr.innerHTML = esc(c.prompt) + ' <mark>' + esc(last) + '</mark>'; };
+    var run = function (hi) { ps = softmax(c.scores, +t.value); $(el, '[data-tv]').textContent = (+t.value).toFixed(1); bars(box, c.words, ps, hi); };
+    t.addEventListener('input', function () { run(); out.innerHTML = ''; });
+    $(el, '[data-pick]').addEventListener('click', function () { var i = draw(ps); last = c.words[i]; show(); run(i); });
+    $(el, '[data-ten]').addEventListener('click', function () {
+      var got = []; for (var k = 0; k < 10; k++) got.push(c.words[draw(ps)]);
+      var uniq = got.filter(function (w, i) { return got.indexOf(w) === i; }).length;
+      out.innerHTML = got.map(function (w) { return '<span>' + esc(w) + '</span>'; }).join('') + '<em>' + uniq + ' different answer' + (uniq > 1 ? 's' : '') + ' at temperature ' + (+t.value).toFixed(1) + '</em>';
+    });
+    show(); run();
+  };
+
+  L.att = function (el) {
+    var base = ['The', 'animal', "didn't", 'cross', 'the', 'street', 'because', 'it', 'was'], end = 'tired', focus = 7;
+    var sent = $(el, '[data-sent]'), res = $(el, '[data-res]');
+    var weights = function (f) {
+      var w = base.concat([end]).map(function () { return .02; });
+      if (f === 7) { if (end === 'tired') { w[1] = .62; w[5] = .1; } else { w[5] = .6; w[1] = .12; } w[9] = .12; w[7] = .06; }
+      else if (f === 9) { if (end === 'tired') w[1] = .45; else w[5] = .45; w[7] = .3; w[8] = .1; }
+      else { w[f] = .35; if (f > 0) w[f - 1] = .2; if (f < 9) w[f + 1] = .2; if (f === 3) { w[1] = .2; w[5] = .2; } }
+      var z = w.reduce(function (a, b) { return a + b; }, 0); return w.map(function (v) { return v / z; });
+    };
+    var paint = function () {
+      var words = base.concat([end]), w = weights(focus), top = -1;
+      w.forEach(function (v, i) { if (i !== focus && (top < 0 || v > w[top])) top = i; });
+      sent.innerHTML = words.map(function (x, i) { return '<button type="button" class="lab-w' + (i === focus ? ' focus' : '') + '" data-i="' + i + '" style="--a:' + (i === focus ? 1 : Math.min(1, w[i] * 1.6)).toFixed(2) + '">' + esc(x) + '<small>' + (i === focus ? 'asking' : Math.round(w[i] * 100) + '%') + '</small></button>'; }).join('');
+      res.innerHTML = '<b>' + esc(words[focus]) + '</b> pays the most attention to <b>' + esc(words[top]) + '</b> (' + Math.round(w[top] * 100) + '%).';
+    };
+    sent.addEventListener('click', function (ev) { var b = ev.target.closest('[data-i]'); if (b) { focus = +b.getAttribute('data-i'); paint(); } });
+    $$(el, '[data-end]').forEach(function (b) { b.addEventListener('click', function () { end = b.getAttribute('data-end'); $$(el, '[data-end]').forEach(function (x) { x.classList.toggle('on', x === b); }); focus = 7; paint(); }); });
+    paint();
+  };
+
+  L.qkv = function (el) {
+    var K = [[.9, .1], [.1, .9], [.2, .2]], V = [[1, 0], [0, 1], [.5, .5]], a = $(el, '[data-q0]'), b = $(el, '[data-q1]');
+    var run = function () {
+      var q = [+a.value, +b.value]; $(el, '[data-v0]').textContent = q[0].toFixed(1); $(el, '[data-v1]').textContent = q[1].toFixed(1);
+      var s = K.map(function (k) { return (k[0] * q[0] + k[1] * q[1]) / Math.SQRT2; }), w = softmax(s, 1);
+      var o = [0, 1].map(function (j) { return w.reduce(function (acc, x, i) { return acc + x * V[i][j]; }, 0); });
+      var hi = w.indexOf(Math.max.apply(null, w)); bars($(el, '[data-bars]'), ['animal', 'street', 'tired'], w, hi);
+      $(el, '[data-res]').innerHTML = 'Weights <code>[' + w.map(function (x) { return x.toFixed(2); }).join(' ') + ']</code> · new meaning of <em>it</em> <code>[' + o.map(function (x) { return x.toFixed(2); }).join(' ') + ']</code> — mostly <b>' + ['animal', 'street', 'tired'][hi] + '</b>.';
+    };
+    a.addEventListener('input', run); b.addEventListener('input', run); run();
+  };
+
+  L.pick = function (el) {
+    var res = $(el, '[data-res]'), box = $$(el, 'input');
+    var run = function () {
+      var f = {}; box.forEach(function (x) { f[x.getAttribute('data-k')] = x.checked; });
+      var r = f.private ? ['open-weight model on your server', 'Private data never leaves your machines. You download the weights and run them yourself.']
+        : f.image ? ['multimodal model', 'It can take images or audio as input, not just text.']
+        : f.hard ? ['reasoning model', 'It thinks step by step first. Slower and costlier, but far better at hard problems.']
+        : ['small fast model', 'Cheap and quick. Most everyday tasks need nothing more.'];
+      var args = Object.keys(f).filter(function (k) { return f[k]; }).map(function (k) { return k + '=True'; }).join(', ');
+      res.innerHTML = '<span>Use a</span><strong>' + r[0] + '</strong><p>' + r[1] + '</p><code>pick_model(' + args + ')  # ' + r[0] + '</code>';
+    };
+    box.forEach(function (x) { x.addEventListener('change', run); }); run();
+  };
+
+  L.ctx = function (el, c) {
+    var n = 0, chat = $(el, '[data-chat]'), btn = $(el, '[data-send]');
+    var paint = function () {
+      var msgs = c.msgs.slice(0, n), used = 0, keep = [];
+      for (var i = msgs.length - 1; i >= 0; i--) { var k = msgs[i].split(' ').length; if (used + k > c.limit) break; used += k; keep.unshift(i); }
+      chat.innerHTML = msgs.map(function (m, i) { var on = keep.indexOf(i) >= 0; return '<li class="' + (i % 2 ? 'bot' : 'you') + (on ? '' : ' gone') + '"><span>' + esc(m) + '</span><small>' + m.split(' ').length + ' tokens' + (on ? '' : ' · forgotten') + '</small></li>'; }).join('') || '<li class="lab-hint">The chat is empty. Send a message.</li>';
+      $(el, '[data-fill]').style.width = (used / c.limit * 100) + '%'; $(el, '[data-used]').textContent = used + ' / ' + c.limit + ' tokens in the window';
+      btn.disabled = n >= c.msgs.length;
+      if (n === c.msgs.length && keep[0] > 0) chat.insertAdjacentHTML('beforeend', '<li class="lab-warn">The first message, with the name, fell out of the window. The model can\'t see it any more, so it has forgotten your name.</li>');
+    };
+    btn.addEventListener('click', function () { n++; paint(); });
+    $(el, '[data-reset]').addEventListener('click', function () { n = 0; paint(); });
+    paint();
+  };
+
+  L.cost = function (el) {
+    var get = function (k) { return Math.max(0, +$(el, '[data-k="' + k + '"]').value || 0); }, rs = function (v) { return '₹' + (v >= 100 ? Math.round(v).toLocaleString('en-IN') : v.toFixed(2)); };
+    var run = function () {
+      var inp = get('inp'), out = get('out'), turns = Math.min(40, Math.max(1, get('turns'))), users = get('users'), pin = get('pin'), pout = get('pout'), hist = $(el, '[data-k="hist"]').checked, per = [], tot = 0;
+      for (var k = 1; k <= turns; k++) { var sent = hist ? inp * k + out * (k - 1) : inp, c = sent / 1e6 * pin + out / 1e6 * pout; per.push(c); tot += c; }
+      var top = Math.max.apply(null, per) || 1;
+      $(el, '[data-bars]').innerHTML = per.map(function (v, i) { return '<i style="height:' + Math.max(4, v / top * 100) + '%" title="Message ' + (i + 1) + ': ' + rs(v) + '"></i>'; }).join('') + '<small>cost of message 1 → ' + turns + '</small>';
+      $(el, '[data-res]').innerHTML = '<span><b>' + rs(per[0]) + '</b> first message</span><span><b>' + rs(per[per.length - 1]) + '</b> last message</span><span><b>' + rs(tot * users) + '</b> per day</span><span><b>' + rs(tot * users * 30) + '</b> per month</span>';
+    };
+    $$(el, 'input').forEach(function (x) { x.addEventListener('input', run); }); run();
+  };
+
+  L.prompt = function (el) {
+    var rows = $$(el, '.lab-parts label'), out = $(el, '[data-prompt-out]'), miss = { Role: 'a generic tone', Task: 'it guessing what you want', Context: 'answers pitched at the wrong level', Example: 'a style that may not match yours', Format: 'a random answer shape' };
+    var run = function () {
+      var on = [], lack = [];
+      rows.forEach(function (r) { var c = $(r, 'input[type=checkbox]'), t = $(r, '.form-control'), k = c.getAttribute('data-p'); r.classList.toggle('off', !c.checked); if (c.checked && t.value.trim()) on.push(k + ': ' + t.value.trim()); else lack.push(k); });
+      out.textContent = on.join('\n') || '(empty prompt)';
+      $(el, '[data-bar]').style.width = (on.length / 5 * 100) + '%';
+      $(el, '[data-score]').innerHTML = '<b>' + on.length + ' of 5 parts.</b> ' + (lack.length ? 'Without ' + lack.join(' and ').toLowerCase() + ', expect ' + lack.map(function (k) { return miss[k]; }).join(' and ') + '.' : 'This prompt leaves the model very little to guess.');
+    };
+    $$(el, 'input').forEach(function (x) { x.addEventListener('input', run); x.addEventListener('change', run); }); run();
+  };
+
+  $$(document, '.lab').forEach(function (el) { var c = el.getAttribute('data-cfg'); try { L[el.getAttribute('data-lab')](el, c ? JSON.parse(c) : null); } catch (err) { console.error(err); } });
+
+  // Run the lesson's Python right here, with Pyodide loaded only when someone presses Run.
+  var py = null;
+  var boot = function () {
+    if (py) return py;
+    py = new Promise(function (ok, bad) { var s = document.createElement('script'); s.src = 'https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js'; s.onload = function () { loadPyodide().then(ok, bad); }; s.onerror = bad; document.head.appendChild(s); });
+    return py;
+  };
+  $$(document, '.ai-run').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var wrap = b.closest('.ai-code'), src = $(wrap, 'code').textContent, out = wrap.nextElementSibling;
+      if (!out || !out.classList.contains('ai-out')) { out = document.createElement('div'); out.className = 'ai-out'; out.innerHTML = '<span>▶ Output</span><pre></pre>'; wrap.after(out); }
+      var pre = $(out, 'pre'), lab = $(out, 'span'); b.disabled = true; b.textContent = 'Running…'; lab.textContent = py ? '▶ Running…' : '▶ Loading Python in your browser (first time takes a few seconds)…';
+      boot().then(function (p) {
+        return (/numpy/.test(src) ? p.loadPackage('numpy') : Promise.resolve()).then(function () {
+          var lines = []; p.setStdout({ batched: function (s) { lines.push(s); } }); p.setStderr({ batched: function (s) { lines.push(s); } });
+          return p.runPythonAsync(src).then(function () { return lines; }, function (err) { lines.push(String(err.message || err).trim().split('\n').slice(-1)[0]); out.classList.add('err'); return lines; });
+        });
+      }).then(function (lines) { pre.textContent = lines.join('\n') || '(no output)'; lab.textContent = out.classList.contains('err') ? '▶ Error (fix the code and run again)' : '▶ Output · ran in your browser'; },
+        function () { lab.textContent = '▶ Could not load Python. Check your connection, or run it with python3 on your computer.'; })
+        .then(function () { b.disabled = false; b.textContent = '▶ Run'; out.classList.remove('err'); });
+    });
+  });
+})();
+</script>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free courses for software careers: DSA in Java, Generative AI, and resume and LinkedIn guidance.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../dsa/index.html">DSA in Java</a>
+        <a href="../dsa/episodes/index.html">All episodes</a>
+        <a href="../gen-ai/index.html">Generative AI</a>
+        <a href="../career/resume-builder.html">Free resume builder</a>
+        <a href="../stories/index.html">Web Stories</a>
+        <a href="../blog/index.html">Guides</a>
+        <a href="../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../index.html#how">How it works</a>
+        <a href="../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

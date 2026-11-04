@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Merge Sort in Java: Implementation Explained Simply | Compiled Canvas</title>
+<meta name="description" content="Merge sort in Java: divide and conquer, the merge step with two pointers, the full implementation, and why it&#x27;s always O(n log n). LeetCode 88 and 912.">
+<link rel="canonical" href="https://compiledcanvas.com/dsa/episodes/25-merge-sort-java.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/dsa/episodes/25-merge-sort-java.html">
+<meta property="og:title" content="Merge Sort in Java: Implementation Explained Simply | Compiled Canvas">
+<meta property="og:description" content="Merge sort in Java: divide and conquer, the merge step with two pointers, the full implementation, and why it&#x27;s always O(n log n). LeetCode 88 and 912.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/thumbs/25.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "DSA in Java", "item": "https://compiledcanvas.com/dsa/"}, {"@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://compiledcanvas.com/dsa/episodes/"}, {"@type": "ListItem", "position": 4, "name": "Episode 25", "item": "https://compiledcanvas.com/dsa/episodes/25-merge-sort-java.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../career/index.html">Resume &amp; LinkedIn <span class="badge text-bg-success">Live</span></a></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Episodes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Episode 25</li>
+    </ol></nav>
+    <span class="badge rounded-pill text-bg-dark mb-2">Episode 25 · 5:30 · video out 3 Dec 2026, 6:00 PM IST</span>
+    <h1 class="h2 fw-bold mb-3">Merge Sort in Java: Implementation Explained Simply</h1>
+    <div class="ep-player ratio ratio-16x9" id="ep-wait" data-out="2026-12-03T18:00:00+05:30" data-vid="">
+      <img src="../../assets/thumbs/25.jpg" alt="" class="object-fit-cover">
+    </div>
+    <p class="small text-body-secondary mt-2 mb-0" id="ep-wait-note">The video goes live on 3 Dec 2026 at 6:00 PM IST. The notes are ready now.</p>
+    <script>(function(){var w=document.getElementById('ep-wait');if(!w.dataset.vid)return;if(Date.now()>=new Date(w.dataset.out).getTime()){w.innerHTML="<iframe id=\"ep-video\" src=\"https://www.youtube.com/embed/?rel=0\" data-video=\"\" title=\"Merge Sort in Java: Implementation Explained Simply\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";document.getElementById('ep-wait-note').remove();}})();</script>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>What this episode covers</h2>
+      <p>Merge sort splits the array in half until every piece has one number, then merges the pieces back together in order. A single number is already sorted.</p>
+<p>The merge step uses two pointers, one at the start of each sorted half. Take the smaller value, move that pointer on, and repeat. Using less than or equal keeps equal values in order, so the sort is stable. When one half runs out, copy whatever is left in the other. Forget those leftover loops and the last numbers silently disappear.</p>
+<p>Every level of merging touches all n numbers, and halving gives about log n levels, so merge sort is O(n log n) in the best, average and worst case. A million numbers take about twenty million steps instead of the half a trillion bubble sort needs. The cost is O(n) extra space for the temporary array.</p>
+    </section>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>What you'll be able to do</h2>
+      <ul class="mb-0"><li>Divide and conquer</li>
+<li>The merge step</li>
+<li>Merge sort in Java</li>
+<li>Why O(n log n)</li>
+<li>The lost-number bug</li></ul>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">{ }</span>The Java code from the video</h2>
+      <p>Type it out yourself, or copy it. Each file runs on its own with <code>java FileName.java</code> and prints the examples from the video.</p><div class="ai-code"><div class="ai-code-head"><span>MergeSort.java</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/MergeSort.java" download>Download</a></span></div><pre><code class="language-java">import java.util.*;
+
+// Episode 25: merge sort, divide and conquer. Run: java MergeSort.java
+public class MergeSort {
+
+    static void mergeSort(int[] a, int lo, int hi) {
+        if (lo &gt;= hi) return;                 // 0 or 1 number: already sorted
+        int mid = lo + (hi - lo) / 2;
+        mergeSort(a, lo, mid);                // sort the left half
+        mergeSort(a, mid + 1, hi);            // sort the right half
+        merge(a, lo, mid, hi);                // merge the two sorted halves
+    }
+
+    // two pointers over a[lo..mid] and a[mid+1..hi]
+    static void merge(int[] a, int lo, int mid, int hi) {
+        int[] t = new int[hi - lo + 1];
+        int i = lo, j = mid + 1, k = 0;
+        while (i &lt;= mid &amp;&amp; j &lt;= hi)
+            t[k++] = a[i] &lt;= a[j] ? a[i++] : a[j++];  // &lt;= keeps equal values in order (stable)
+        while (i &lt;= mid) t[k++] = a[i++];              // leftovers from the left half
+        while (j &lt;= hi) t[k++] = a[j++];               // leftovers from the right half
+        System.arraycopy(t, 0, a, lo, t.length);
+    }
+
+    // the bug: no leftover loops, so numbers go missing
+    static int[] buggyMerge(int[] left, int[] right) {
+        int[] t = new int[left.length + right.length];
+        int i = 0, j = 0, k = 0;
+        while (i &lt; left.length &amp;&amp; j &lt; right.length)
+            t[k++] = left[i] &lt;= right[j] ? left[i++] : right[j++];
+        return t; // missing leftovers! empty slots stay 0
+    }
+
+    public static void main(String[] args) {
+        int[] a = {8, 3, 5, 1, 7, 2, 6, 4};
+        System.out.println(&quot;before: &quot; + Arrays.toString(a));
+        mergeSort(a, 0, a.length - 1);
+        System.out.println(&quot;after:  &quot; + Arrays.toString(a));
+
+        int[] left = {1, 3, 5, 8}, right = {2, 4, 6, 7};
+        System.out.println(&quot;buggy merge loses the 8: &quot; + Arrays.toString(buggyMerge(left, right)));
+
+        int n = 1_000_000;
+        int[] big = new int[n];
+        Random r = new Random(1);
+        for (int i = 0; i &lt; n; i++) big[i] = r.nextInt();
+        long t0 = System.nanoTime();
+        mergeSort(big, 0, n - 1);
+        System.out.println(&quot;sorted 1,000,000 random numbers in &quot; + (System.nanoTime() - t0) / 1_000_000 + &quot; ms&quot;);
+    }
+}</code></pre></div>
+      <script>window.addEventListener('load',function(){if(window.hljs)document.querySelectorAll('.ai-code code').forEach(function(c){window.hljs.highlightElement(c);});});document.querySelectorAll('.ai-copy').forEach(function(b){b.addEventListener('click',function(){var t=b.closest('.ai-code').querySelector('code').textContent,d=function(){b.textContent='Copied!';setTimeout(function(){b.textContent='Copy';},1600);},o=function(){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();d();};if(navigator.clipboard)navigator.clipboard.writeText(t).then(d,o);else o();});});</script>
+    </section>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
+      <p class="mb-0">Stopping when one half runs out. The numbers left in the other half are never copied.</p>
+    </section>
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Key moments <small>tap one to jump there</small></h2>
+      <ol class="ep-moments list-unstyled mb-0"><li><a href="?t=0" data-seek="0"><time>0:00</time><span>Half a trillion steps</span></a></li>
+<li><a href="?t=20" data-seek="20"><time>0:20</time><span>Today&#x27;s plan</span></a></li>
+<li><a href="?t=46" data-seek="46"><time>0:46</time><span>Divide and conquer</span></a></li>
+<li><a href="?t=83" data-seek="83"><time>1:23</time><span>The merge step</span></a></li>
+<li><a href="?t=114" data-seek="114"><time>1:54</time><span>Merge in Java</span></a></li>
+<li><a href="?t=131" data-seek="131"><time>2:11</time><span>Merge sort in Java</span></a></li>
+<li><a href="?t=145" data-seek="145"><time>2:25</time><span>Subscribe break</span></a></li>
+<li><a href="?t=160" data-seek="160"><time>2:40</time><span>Why n log n</span></a></li>
+<li><a href="?t=192" data-seek="192"><time>3:12</time><span>The lost number</span></a></li>
+<li><a href="?t=228" data-seek="228"><time>3:48</time><span>Cheat sheet</span></a></li>
+<li><a href="?t=248" data-seek="248"><time>4:08</time><span>Quiz time</span></a></li>
+<li><a href="?t=281" data-seek="281"><time>4:41</time><span>Recap</span></a></li>
+<li><a href="?t=293" data-seek="293"><time>4:53</time><span>LeetCode homework</span></a></li>
+<li><a href="?t=313" data-seek="313"><time>5:13</time><span>Next episode: Quick sort</span></a></li></ol>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Full transcript</h2>
+      <details class="ep-transcript"><summary>Read the whole lesson</summary>
+      <p>You sort a million numbers with bubble sort and lose about half a trillion steps. Merge sort needs about twenty million. Here&#x27;s how.</p>
+<p>The idea fits in one sentence. Split it in half, sort each half, and merge them back together.</p>
+<p>The merge step is where everyone gets stuck. By the end of this video, it&#x27;ll feel easy.</p>
+<p>Welcome back to Compiled Canvas. This is Episode Twenty Five of our DSA series. Last time, we learned bubble, selection and insertion sort.</p>
+<p>Here&#x27;s the plan. First, divide and conquer. Then the merge step, with two pointers. Then the full sort in Java. Then why it&#x27;s O of n log n. And the bug that loses your last number. A cheat sheet. And an easy quiz at the end.</p>
+<p>Let&#x27;s go.</p>
+<p>Here&#x27;s an idea that powers half of all fast algorithms. And it starts by making the problem smaller.</p>
+<p>Eight numbers. Eight, three, five, one, seven, two, six, four. Split them in half.</p>
+<p>Keep splitting until every piece has one number. A single number is already sorted.</p>
+<p>Now merge them back up, two at a time, in order. Three and eight. One and five. Two and seven. Four and six.</p>
+<p>Then fours. One, three, five, eight. And two, four, six, seven. Then the final merge gives the whole sorted array.</p>
+<p>The merge step. Two sorted lists into one sorted list. It&#x27;s simpler than it looks.</p>
+<p>Put one pointer at the start of each list. Compare. One is smaller than two, so one goes first.</p>
+<p>Move that pointer on. Three against two. Two is smaller. Take two.</p>
+<p>Keep going. Three, four, five, six, seven. The right list runs out, and eight is left over. Copy it across.</p>
+<p>Each number is looked at once. So merging is O of n. Two pointers, one pass.</p>
+<p>Here&#x27;s merge in Java. A temporary array, and two pointers, i and j.</p>
+<p>While both halves have numbers, take the smaller one. Less than or equal keeps equal values in order. That makes it stable.</p>
+<p>Then copy whatever is left in either half, and copy the result back.</p>
+<p>And the whole sort is just six lines. If the piece has one number or none, it&#x27;s already sorted.</p>
+<p>Sort the left half. Sort the right half. Recursion does the splitting for us.</p>
+<p>Then merge them. That&#x27;s merge sort.</p>
+<p>Quick pause, before we go further. If you&#x27;re finding this video valuable, hit subscribe to Compiled Canvas, and turn on the bell. It&#x27;s free, it takes one second, and it helps me keep making this complete DSA series for you. Alright, back to it.</p>
+<p>Now the part interviewers always ask. Why is it O of n log n?</p>
+<p>Every level of merging touches all n numbers once. That&#x27;s n work per level.</p>
+<p>And how many levels? Halving eight gives four, two, one. Three levels. That&#x27;s log of n.</p>
+<p>n work times log n levels. A million numbers, about twenty levels, about twenty million steps.</p>
+<p>Best, average or worst, it&#x27;s always n log n. The catch? The temporary array costs O of n extra memory.</p>
+<p>Here&#x27;s the bug that makes merge sort silently lose your last number. I&#x27;ve seen it in so many first attempts.</p>
+<p>You write the main loop, while both halves have numbers, and you stop there.</p>
+<p>Merge one, three, five, eight with two, four, six, seven. The right half runs out first, and eight is never copied.</p>
+<p>The fix is the two leftover loops. Always copy what&#x27;s left from both halves.</p>
+<p>Your turn. Pause. How many levels of splitting does merge sort need for sixteen numbers?</p>
+<p>Four. Sixteen, eight, four, two, one. Log two of sixteen is four.</p>
+<p>So, here&#x27;s the whole thing in one cheat sheet. Pause and screenshot this.</p>
+<p>Split in half until each piece has one number.</p>
+<p>Merge two sorted halves with two pointers.</p>
+<p>Always copy the leftovers.</p>
+<p>Merge sort is always O of n log n.</p>
+<p>It needs O of n extra space.</p>
+<p>Less than or equal keeps it stable.</p>
+<p>Okay, quiz time. Three easy questions. Pause the video, think, and then hit play.</p>
+<p>Question one. What&#x27;s the time complexity of merge sort, in the worst case?</p>
+<p>Question two. How much extra space does merge sort use?</p>
+<p>Question three. You forget the leftover loops. What goes wrong?</p>
+<p>Ready?</p>
+<p>Question one: O of n log n.</p>
+<p>Question two: O of n, for the temporary array.</p>
+<p>Question three: Numbers left in one half are lost.</p>
+<p>How many did you get right? Tell me in the comments: three out of three, two, or one.</p>
+<p>Let&#x27;s recap. Divide the array into halves. Merge sorted halves with two pointers. Copy the leftovers. Always O of n log n. Costs O of n extra space.</p>
+<p>Your homework. Code merge sort and run it on eight, three, five, one, seven, two, six, four. Then solve LeetCode eighty eight, Merge Sorted Array, and LeetCode nine twelve, Sort an Array. Java answers are on compiled canvas dot com. And tell me in the comments: how many levels for a thousand numbers?</p>
+<p>Next episode, quick sort. Partitioning, pivots, and why it&#x27;s usually the fastest.</p>
+<p>And don&#x27;t forget to subscribe to Compiled Canvas, so you don&#x27;t miss anything new in tech and the job market. Keep coding, stay consistent, and I&#x27;ll see you in the next one.</p>
+      </details>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <div class="side-sticky">
+      <div class="card mb-3 shadow-sm solve-card"><div class="card-body">
+        <h2 class="h6 fw-bold">Practise this now</h2>
+        <div class="mb-3"><a class="ep-try" href="../14-sorting/004-sort-an-array.html">Sort an Array <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../14-sorting/005-sort-list.html">Sort List <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../14-sorting/010-count-of-smaller-numbers-after-self.html">Count of Smaller Numbers After Self <span aria-hidden="true">→</span></a></div>
+        <a class="btn btn-brand w-100" href="../14-sorting/index.html">All Sorting problems</a>
+      </div></div>
+      <div class="card mb-3 shadow-sm"><div class="card-body small">
+        <a class="d-block mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch the full DSA series in order</a>
+        <a class="d-block" href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Compiled Canvas</a>
+      </div></div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="24-bubble-selection-insertion-sort-java.html">← Episode 24</a><a class="btn btn-outline-secondary" href="index.html">All episodes →</a></div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free courses for software careers: DSA in Java, Generative AI, and resume and LinkedIn guidance.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../../dsa/index.html">DSA in Java</a>
+        <a href="../../dsa/episodes/index.html">All episodes</a>
+        <a href="../../gen-ai/index.html">Generative AI</a>
+        <a href="../../career/resume-builder.html">Free resume builder</a>
+        <a href="../../stories/index.html">Web Stories</a>
+        <a href="../../blog/index.html">Guides</a>
+        <a href="../../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../../index.html#how">How it works</a>
+        <a href="../../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <p class="foot-note">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

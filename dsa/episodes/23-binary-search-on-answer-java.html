@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Binary Search on Answer in Java: Koko, Books, Cows | Compiled Canvas</title>
+<meta name="description" content="Binary search on answer in Java: one template for Koko eating bananas (LeetCode 875), book allocation and aggressive cows, with a yes or no check for each guess.">
+<link rel="canonical" href="https://compiledcanvas.com/dsa/episodes/23-binary-search-on-answer-java.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/dsa/episodes/23-binary-search-on-answer-java.html">
+<meta property="og:title" content="Binary Search on Answer in Java: Koko, Books, Cows | Compiled Canvas">
+<meta property="og:description" content="Binary search on answer in Java: one template for Koko eating bananas (LeetCode 875), book allocation and aggressive cows, with a yes or no check for each guess.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/thumbs/23.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "DSA in Java", "item": "https://compiledcanvas.com/dsa/"}, {"@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://compiledcanvas.com/dsa/episodes/"}, {"@type": "ListItem", "position": 4, "name": "Episode 23", "item": "https://compiledcanvas.com/dsa/episodes/23-binary-search-on-answer-java.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../career/index.html">Resume &amp; LinkedIn <span class="badge text-bg-success">Live</span></a></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Episodes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Episode 23</li>
+    </ol></nav>
+    <span class="badge rounded-pill text-bg-dark mb-2">Episode 23 · 5:48 · video out 29 Nov 2026, 6:00 PM IST</span>
+    <h1 class="h2 fw-bold mb-3">Binary Search on Answer in Java: Koko, Books, Cows</h1>
+    <div class="ep-player ratio ratio-16x9" id="ep-wait" data-out="2026-11-29T18:00:00+05:30" data-vid="">
+      <img src="../../assets/thumbs/23.jpg" alt="" class="object-fit-cover">
+    </div>
+    <p class="small text-body-secondary mt-2 mb-0" id="ep-wait-note">The video goes live on 29 Nov 2026 at 6:00 PM IST. The notes are ready now.</p>
+    <script>(function(){var w=document.getElementById('ep-wait');if(!w.dataset.vid)return;if(Date.now()>=new Date(w.dataset.out).getTime()){w.innerHTML="<iframe id=\"ep-video\" src=\"https://www.youtube.com/embed/?rel=0\" data-video=\"\" title=\"Binary Search on Answer in Java: Koko, Books, Cows\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";document.getElementById('ep-wait-note').remove();}})();</script>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>What this episode covers</h2>
+      <p>Some of the hardest binary search problems have no sorted array at all. Koko has piles of 3, 6, 7 and 11 bananas and 8 hours. What&#x27;s the slowest eating speed that still finishes?</p>
+<p>Line up every possible speed and ask one yes or no question for each: can she finish in time? The answers go no, no, no, then yes forever. They flip only once, so we binary search for the first yes. Hours per pile round up with (p + k - 1) / k. Speed 4 takes 1 + 2 + 2 + 3 = 8 hours, so the answer is 4.</p>
+<p>The same template solves book allocation (the smallest possible biggest share, 113 for books of 12, 34, 67 and 90 pages and two students) and aggressive cows, where we want the last yes: the biggest smallest gap, 3 for stalls 1, 2, 4, 8, 9 and three cows.</p>
+    </section>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>What you'll be able to do</h2>
+      <ul class="mb-0"><li>Koko eating bananas</li>
+<li>Search the answer</li>
+<li>The template in Java</li>
+<li>Book allocation</li>
+<li>Aggressive cows</li></ul>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">{ }</span>The Java code from the video</h2>
+      <p>Type it out yourself, or copy it. Each file runs on its own with <code>java FileName.java</code> and prints the examples from the video.</p><div class="ai-code"><div class="ai-code-head"><span>BinarySearchOnAnswer.java</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/BinarySearchOnAnswer.java" download>Download</a></span></div><pre><code class="language-java">import java.util.*;
+
+// Episode 23: binary search on the answer. Koko, book allocation, aggressive cows. Run: java BinarySearchOnAnswer.java
+public class BinarySearchOnAnswer {
+
+    // LeetCode 875: slowest speed that finishes all piles in h hours (minimise → first yes)
+    static int minEatingSpeed(int[] piles, int h) {
+        int lo = 1, hi = 0;
+        for (int p : piles) hi = Math.max(hi, p);
+        while (lo &lt; hi) {
+            int mid = lo + (hi - lo) / 2;
+            if (hoursAt(piles, mid) &lt;= h) hi = mid;   // fast enough: answer is mid or smaller
+            else lo = mid + 1;                        // too slow
+        }
+        return lo;
+    }
+
+    static long hoursAt(int[] piles, int k) {
+        long hours = 0;
+        for (int p : piles) hours += (p + k - 1) / k; // rounds up p / k
+        return hours;
+    }
+
+    // Book allocation: give books in order to m students, minimise the biggest share (first yes)
+    static int allocateBooks(int[] pages, int m) {
+        if (m &gt; pages.length) return -1;
+        int lo = 0, hi = 0;
+        for (int p : pages) { lo = Math.max(lo, p); hi += p; }
+        while (lo &lt; hi) {
+            int mid = lo + (hi - lo) / 2;
+            if (studentsNeeded(pages, mid) &lt;= m) hi = mid;
+            else lo = mid + 1;
+        }
+        return lo;
+    }
+
+    static int studentsNeeded(int[] pages, int limit) {
+        int students = 1, sum = 0;
+        for (int p : pages) {
+            if (sum + p &gt; limit) { students++; sum = 0; }
+            sum += p;
+        }
+        return students;
+    }
+
+    // Aggressive cows: place c cows, maximise the smallest gap (last yes)
+    static int aggressiveCows(int[] stalls, int c) {
+        int[] s = stalls.clone();
+        Arrays.sort(s);
+        int lo = 1, hi = s[s.length - 1] - s[0];
+        while (lo &lt; hi) {
+            int mid = lo + (hi - lo + 1) / 2;         // round UP when searching for the last yes
+            if (canPlace(s, c, mid)) lo = mid;
+            else hi = mid - 1;
+        }
+        return lo;
+    }
+
+    static boolean canPlace(int[] s, int c, int gap) {
+        int placed = 1, last = s[0];
+        for (int i = 1; i &lt; s.length; i++) {
+            if (s[i] - last &gt;= gap) { placed++; last = s[i]; }
+        }
+        return placed &gt;= c;
+    }
+
+    public static void main(String[] args) {
+        int[] piles = {3, 6, 7, 11};
+        System.out.println(&quot;hoursAt(piles, 4) = &quot; + hoursAt(piles, 4) + &quot;, hoursAt(piles, 3) = &quot; + hoursAt(piles, 3));
+        System.out.println(&quot;minEatingSpeed([3, 6, 7, 11], 8) → &quot; + minEatingSpeed(piles, 8));
+        System.out.println(&quot;minEatingSpeed([4, 8], 4) → &quot; + minEatingSpeed(new int[]{4, 8}, 4) + &quot;   (your turn)&quot;);
+        System.out.println(&quot;allocateBooks([12, 34, 67, 90], 2) → &quot; + allocateBooks(new int[]{12, 34, 67, 90}, 2));
+        System.out.println(&quot;aggressiveCows([1, 2, 4, 8, 9], 3) → &quot; + aggressiveCows(new int[]{1, 2, 4, 8, 9}, 3));
+    }
+}</code></pre></div>
+      <script>window.addEventListener('load',function(){if(window.hljs)document.querySelectorAll('.ai-code code').forEach(function(c){window.hljs.highlightElement(c);});});document.querySelectorAll('.ai-copy').forEach(function(b){b.addEventListener('click',function(){var t=b.closest('.ai-code').querySelector('code').textContent,d=function(){b.textContent='Copied!';setTimeout(function(){b.textContent='Copy';},1600);},o=function(){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();d();};if(navigator.clipboard)navigator.clipboard.writeText(t).then(d,o);else o();});});</script>
+    </section>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
+      <p class="mb-0">Searching from 0, or rounding hours down. Use (p + k - 1) / k to round up.</p>
+    </section>
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Key moments <small>tap one to jump there</small></h2>
+      <ol class="ep-moments list-unstyled mb-0"><li><a href="?t=0" data-seek="0"><time>0:00</time><span>30 tries, not a billion</span></a></li>
+<li><a href="?t=23" data-seek="23"><time>0:23</time><span>Today&#x27;s plan</span></a></li>
+<li><a href="?t=47" data-seek="47"><time>0:47</time><span>Koko&#x27;s bananas</span></a></li>
+<li><a href="?t=86" data-seek="86"><time>1:26</time><span>Search the answer</span></a></li>
+<li><a href="?t=121" data-seek="121"><time>2:01</time><span>Koko in Java</span></a></li>
+<li><a href="?t=144" data-seek="144"><time>2:24</time><span>Subscribe break</span></a></li>
+<li><a href="?t=158" data-seek="158"><time>2:38</time><span>Book allocation</span></a></li>
+<li><a href="?t=196" data-seek="196"><time>3:16</time><span>Aggressive cows</span></a></li>
+<li><a href="?t=245" data-seek="245"><time>4:05</time><span>Cheat sheet</span></a></li>
+<li><a href="?t=265" data-seek="265"><time>4:25</time><span>Quiz time</span></a></li>
+<li><a href="?t=298" data-seek="298"><time>4:58</time><span>Recap</span></a></li>
+<li><a href="?t=312" data-seek="312"><time>5:12</time><span>LeetCode homework</span></a></li>
+<li><a href="?t=329" data-seek="329"><time>5:29</time><span>Next episode: Bubble, selection, insertion sort</span></a></li></ol>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Full transcript</h2>
+      <details class="ep-transcript"><summary>Read the whole lesson</summary>
+      <p>You try every speed from one to a billion and fail the time limit. But you only need thirty tries. Here&#x27;s how.</p>
+<p>The hardest binary search questions don&#x27;t have a sorted array at all. There&#x27;s nothing to search. Or so it seems.</p>
+<p>Today, one template that solves three famous problems. Koko eating bananas, book allocation, and aggressive cows.</p>
+<p>Welcome back to Compiled Canvas. This is Episode Twenty Three of our DSA series. Last time, we learned lower bound and upper bound.</p>
+<p>Here&#x27;s the plan. First, the Koko problem. Then the idea: search the answer, not the array. Then the template in Java. Then book allocation. And aggressive cows. A cheat sheet. And an easy quiz at the end.</p>
+<p>Let&#x27;s go.</p>
+<p>Koko has four piles of bananas. Three, six, seven and eleven. She has eight hours. How slowly can she eat and still finish?</p>
+<p>Each hour she picks one pile and eats up to k bananas from it. If the pile is smaller, she finishes it and waits.</p>
+<p>At speed four, the piles take one, two, two and three hours. Eight hours. She just makes it.</p>
+<p>At speed three, it&#x27;s one, two, three and four. Ten hours. Too slow. So the answer is four.</p>
+<p>And you don&#x27;t try every speed. You binary search them. That&#x27;s the trick behind this whole video.</p>
+<p>Here&#x27;s the idea, and once you see it, you&#x27;ll spot it everywhere.</p>
+<p>Line up every possible speed. One, two, three, all the way to eleven, the biggest pile. Faster than that never helps.</p>
+<p>For each speed, ask one yes or no question. Can she finish in eight hours?</p>
+<p>The answers go no, no, no, then yes, yes, yes, forever. They flip only once. That&#x27;s the sorted thing we binary search.</p>
+<p>So we&#x27;re doing lower bound again. Not on numbers, but on yes and no. A billion speeds take about thirty checks.</p>
+<p>Here&#x27;s the template. Low is one, high is the biggest pile.</p>
+<p>For the middle speed, add up the hours. P plus mid minus one, over mid, rounds up. Seven bananas at speed four is two hours.</p>
+<p>Finishes in time? The answer is mid or smaller, so high equals mid. Too slow? Low moves past mid. It&#x27;s lower bound.</p>
+<p>Quick pause, before we go further. If you&#x27;re finding this video valuable, hit subscribe to Compiled Canvas, and turn on the bell. It&#x27;s free, it takes one second, and it helps me keep making this complete DSA series for you. Alright, back to it.</p>
+<p>Same template, new story. This one is asked a lot in Indian product company interviews.</p>
+<p>Four books with twelve, thirty four, sixty seven and ninety pages. Two students. Each gets books in order. Keep the biggest pile of pages as small as possible.</p>
+<p>The answer is somewhere between the biggest book, ninety, and all the pages together, two hundred and three.</p>
+<p>For a limit, ask the yes or no question. Can two students read everything without anyone going over it?</p>
+<p>The first yes is one hundred and thirteen. Twelve, thirty four and sixty seven for one student, ninety for the other.</p>
+<p>Aggressive cows sounds like a joke. It&#x27;s one of the most asked binary search problems.</p>
+<p>Stalls at positions one, two, four, eight and nine. Three cows. Place them so the closest two are as far apart as possible.</p>
+<p>Now we want the biggest gap that still works. The answers go yes, yes, yes, then no. We look for the last yes.</p>
+<p>The answer is three. Cows at one, four and eight. Same template, just flipped to find the last yes instead of the first.</p>
+<p>Your turn. Pause. Koko has piles of four and eight, and four hours. What&#x27;s the slowest speed that works?</p>
+<p>Speed three. Four bananas take two hours and eight take three, which is five, too many. Speed four takes one and two, three hours. So four. Did you get it?</p>
+<p>So, here&#x27;s the whole thing in one cheat sheet. Pause and screenshot this.</p>
+<p>Search the answer, not the array.</p>
+<p>Write a yes or no check for one guess.</p>
+<p>The yes and no answers flip only once.</p>
+<p>Minimise: find the first yes.</p>
+<p>Maximise: find the last yes.</p>
+<p>A billion answers take about thirty checks.</p>
+<p>Okay, quiz time. Three easy questions. Pause the video, think, and then hit play.</p>
+<p>Question one. For Koko, what&#x27;s the highest speed we ever need to try?</p>
+<p>Question two. Seven bananas at speed three. How many hours?</p>
+<p>Question three. Aggressive cows: first yes or last yes?</p>
+<p>Ready?</p>
+<p>Question one: The biggest pile.</p>
+<p>Question two: Three hours.</p>
+<p>Question three: The last yes. We want the biggest gap.</p>
+<p>How many did you get right? Tell me in the comments: three out of three, two, or one.</p>
+<p>Let&#x27;s recap. Some answers can be binary searched. Check one guess with yes or no. Koko: the slowest speed that works. Books: the smallest biggest share. Cows: the biggest smallest gap.</p>
+<p>Your homework. Solve LeetCode eight seventy five, Koko Eating Bananas, then try LeetCode ten eleven, Capacity To Ship Packages, with the same template. Hints and Java answers are on compiled canvas dot com. And tell me in the comments: first yes or last yes for capacity?</p>
+<p>Next episode, sorting. Bubble, selection and insertion sort, with every swap shown.</p>
+<p>And don&#x27;t forget to subscribe to Compiled Canvas, so you don&#x27;t miss anything new in tech and the job market. Keep coding, stay consistent, and I&#x27;ll see you in the next one.</p>
+      </details>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <div class="side-sticky">
+      <div class="card mb-3 shadow-sm solve-card"><div class="card-body">
+        <h2 class="h6 fw-bold">Practise this now</h2>
+        <div class="mb-3"><a class="ep-try" href="../13-binary-search/011-koko-eating-bananas.html">Koko Eating Bananas <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../13-binary-search/012-capacity-to-ship-packages-within-d-days.html">Capacity To Ship Packages Within D Days <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../13-binary-search/016-split-array-largest-sum.html">Split Array Largest Sum <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../13-binary-search/015-magnetic-force-between-two-balls.html">Magnetic Force Between Two Balls <span aria-hidden="true">→</span></a></div>
+        <a class="btn btn-brand w-100" href="../13-binary-search/index.html">All Binary Search problems</a>
+      </div></div>
+      <div class="card mb-3 shadow-sm"><div class="card-body small">
+        <a class="d-block mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch the full DSA series in order</a>
+        <a class="d-block" href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Compiled Canvas</a>
+      </div></div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="22-lower-upper-bound-java.html">← Episode 22</a><a class="btn btn-outline-secondary" href="24-bubble-selection-insertion-sort-java.html">Episode 24 →</a></div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free courses for software careers: DSA in Java, Generative AI, and resume and LinkedIn guidance.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../../dsa/index.html">DSA in Java</a>
+        <a href="../../dsa/episodes/index.html">All episodes</a>
+        <a href="../../gen-ai/index.html">Generative AI</a>
+        <a href="../../career/resume-builder.html">Free resume builder</a>
+        <a href="../../stories/index.html">Web Stories</a>
+        <a href="../../blog/index.html">Guides</a>
+        <a href="../../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../../index.html#how">How it works</a>
+        <a href="../../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <p class="foot-note">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

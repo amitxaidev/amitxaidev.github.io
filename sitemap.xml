@@ -399,6 +399,11 @@
   <url><loc>https://compiledcanvas.com/dsa/episodes/18-kmp-algorithm-java.html</loc></url>
   <url><loc>https://compiledcanvas.com/dsa/episodes/19-rabin-karp-z-algorithm-java.html</loc></url>
   <url><loc>https://compiledcanvas.com/dsa/episodes/20-top-string-interview-questions-java.html</loc></url>
+  <url><loc>https://compiledcanvas.com/dsa/episodes/21-linear-vs-binary-search-java.html</loc></url>
+  <url><loc>https://compiledcanvas.com/dsa/episodes/22-lower-upper-bound-java.html</loc></url>
+  <url><loc>https://compiledcanvas.com/dsa/episodes/23-binary-search-on-answer-java.html</loc></url>
+  <url><loc>https://compiledcanvas.com/dsa/episodes/24-bubble-selection-insertion-sort-java.html</loc></url>
+  <url><loc>https://compiledcanvas.com/dsa/episodes/25-merge-sort-java.html</loc></url>
   <url><loc>https://compiledcanvas.com/dsa/episodes/</loc></url>
   <url><loc>https://compiledcanvas.com/</loc></url>
   <url><loc>https://compiledcanvas.com/gen-ai/</loc></url>
@@ -408,6 +413,11 @@
   <url><loc>https://compiledcanvas.com/gen-ai/04-model-landscape.html</loc></url>
   <url><loc>https://compiledcanvas.com/gen-ai/05-context-temperature-cost.html</loc></url>
   <url><loc>https://compiledcanvas.com/gen-ai/06-prompt-anatomy.html</loc></url>
+  <url><loc>https://compiledcanvas.com/gen-ai/07-prompting-styles.html</loc></url>
+  <url><loc>https://compiledcanvas.com/gen-ai/08-structured-outputs.html</loc></url>
+  <url><loc>https://compiledcanvas.com/gen-ai/09-hallucination-injection.html</loc></url>
+  <url><loc>https://compiledcanvas.com/gen-ai/10-python-api-setup.html</loc></url>
+  <url><loc>https://compiledcanvas.com/gen-ai/11-first-api-call.html</loc></url>
   <url><loc>https://compiledcanvas.com/career/</loc></url>
   <url><loc>https://compiledcanvas.com/career/resume-guide.html</loc></url>
   <url><loc>https://compiledcanvas.com/career/resume-builder.html</loc></url>

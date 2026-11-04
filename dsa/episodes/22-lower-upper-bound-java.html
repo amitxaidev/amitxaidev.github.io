@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lower Bound and Upper Bound in Java | Binary Search | Compiled Canvas</title>
+<meta name="description" content="Lower bound and upper bound in Java: find the first and last position of a number and count copies in O(log n), without infinite loops. LeetCode 34 and 35.">
+<link rel="canonical" href="https://compiledcanvas.com/dsa/episodes/22-lower-upper-bound-java.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/dsa/episodes/22-lower-upper-bound-java.html">
+<meta property="og:title" content="Lower Bound and Upper Bound in Java | Binary Search | Compiled Canvas">
+<meta property="og:description" content="Lower bound and upper bound in Java: find the first and last position of a number and count copies in O(log n), without infinite loops. LeetCode 34 and 35.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/thumbs/22.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "DSA in Java", "item": "https://compiledcanvas.com/dsa/"}, {"@type": "ListItem", "position": 3, "name": "Episodes", "item": "https://compiledcanvas.com/dsa/episodes/"}, {"@type": "ListItem", "position": 4, "name": "Episode 22", "item": "https://compiledcanvas.com/dsa/episodes/22-lower-upper-bound-java.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../../index.html">
+      <img src="../../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../../career/index.html">Resume &amp; LinkedIn <span class="badge text-bg-success">Live</span></a></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+
+<section class="page-head py-4 mb-4">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="../index.html">DSA in Java</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Episodes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Episode 22</li>
+    </ol></nav>
+    <span class="badge rounded-pill text-bg-dark mb-2">Episode 22 · 5:19 · video out 27 Nov 2026, 6:00 PM IST</span>
+    <h1 class="h2 fw-bold mb-3">Lower Bound and Upper Bound in Java | Binary Search</h1>
+    <div class="ep-player ratio ratio-16x9" id="ep-wait" data-out="2026-11-27T18:00:00+05:30" data-vid="">
+      <img src="../../assets/thumbs/22.jpg" alt="" class="object-fit-cover">
+    </div>
+    <p class="small text-body-secondary mt-2 mb-0" id="ep-wait-note">The video goes live on 27 Nov 2026 at 6:00 PM IST. The notes are ready now.</p>
+    <script>(function(){var w=document.getElementById('ep-wait');if(!w.dataset.vid)return;if(Date.now()>=new Date(w.dataset.out).getTime()){w.innerHTML="<iframe id=\"ep-video\" src=\"https://www.youtube.com/embed/?rel=0\" data-video=\"\" title=\"Lower Bound and Upper Bound in Java | Binary Search\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";document.getElementById('ep-wait-note').remove();}})();</script>
+  </div>
+</section>
+<div class="container pb-4">
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="sec sec-problem fade-up"><h2 class="sec-title"><span class="sec-ico">?</span>What this episode covers</h2>
+      <p>Plain binary search stops at whichever copy of a number it hits first. Interview questions usually want the first copy, the last copy, or how many there are.</p>
+<p>Lower bound is the first index whose value is at least x. Upper bound is the first index whose value is more than x. They differ by one comparison. In 1, 2, 2, 2, 3, 5 the lower bound of 2 is index 1 and the upper bound is index 4, so the twos live from 1 to 3 and there are three of them.</p>
+<p>The loop rule that prevents infinite loops: high starts at n, loop while low is less than high, and set high = mid when mid could be the answer. First and last position (LeetCode 34) is two binary searches, and the count is upper bound minus lower bound, all in O(log n).</p>
+    </section>
+    <section class="sec sec-understand fade-up"><h2 class="sec-title"><span class="sec-ico">◎</span>What you'll be able to do</h2>
+      <ul class="mb-0"><li>Lower bound</li>
+<li>Upper bound</li>
+<li>The loop rule</li>
+<li>First and last position</li>
+<li>Count in O(log n)</li></ul>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">{ }</span>The Java code from the video</h2>
+      <p>Type it out yourself, or copy it. Each file runs on its own with <code>java FileName.java</code> and prints the examples from the video.</p><div class="ai-code"><div class="ai-code-head"><span>Bounds.java</span><span class="ai-code-btns"><button type="button" class="ai-copy">Copy</button><a href="code/Bounds.java" download>Download</a></span></div><pre><code class="language-java">import java.util.*;
+
+// Episode 22: lower bound, upper bound, first and last position. Run: java Bounds.java
+public class Bounds {
+
+    // first index with a[i] &gt;= x (a.length if none). Also = Search Insert Position (LeetCode 35).
+    static int lowerBound(int[] a, int x) {
+        int lo = 0, hi = a.length;           // hi = n: the answer can be n
+        while (lo &lt; hi) {                    // lo &lt; hi goes with hi = mid
+            int mid = lo + (hi - lo) / 2;
+            if (a[mid] &lt; x) lo = mid + 1;
+            else hi = mid;                   // mid might be the answer: keep it
+        }
+        return lo;
+    }
+
+    // first index with a[i] &gt; x. One character different: &lt;=
+    static int upperBound(int[] a, int x) {
+        int lo = 0, hi = a.length;
+        while (lo &lt; hi) {
+            int mid = lo + (hi - lo) / 2;
+            if (a[mid] &lt;= x) lo = mid + 1;
+            else hi = mid;
+        }
+        return lo;
+    }
+
+    // LeetCode 34: first and last position of x
+    static int[] searchRange(int[] a, int x) {
+        int first = lowerBound(a, x);
+        if (first == a.length || a[first] != x) return new int[]{-1, -1};
+        int last = upperBound(a, x) - 1;
+        return new int[]{first, last};
+    }
+
+    // how many times x appears, in O(log n)
+    static int count(int[] a, int x) {
+        return upperBound(a, x) - lowerBound(a, x);
+    }
+
+    public static void main(String[] args) {
+        int[] a = {1, 2, 2, 2, 3, 5};
+        System.out.println(&quot;a = &quot; + Arrays.toString(a));
+        System.out.println(&quot;lowerBound(a, 2) = &quot; + lowerBound(a, 2));
+        System.out.println(&quot;upperBound(a, 2) = &quot; + upperBound(a, 2));
+        System.out.println(&quot;lowerBound(a, 4) = &quot; + lowerBound(a, 4) + &quot;   (where 4 would go)&quot;);
+        System.out.println(&quot;searchRange(a, 2) = &quot; + Arrays.toString(searchRange(a, 2)));
+        System.out.println(&quot;searchRange(a, 4) = &quot; + Arrays.toString(searchRange(a, 4)));
+        System.out.println(&quot;count(a, 2) = &quot; + count(a, 2));
+
+        int[] b = {1, 3, 3, 3, 3, 8}; // your turn
+        System.out.println(&quot;b = &quot; + Arrays.toString(b) + &quot;: lb(3)=&quot; + lowerBound(b, 3) + &quot; ub(3)=&quot; + upperBound(b, 3) + &quot; count=&quot; + count(b, 3));
+    }
+}</code></pre></div>
+      <script>window.addEventListener('load',function(){if(window.hljs)document.querySelectorAll('.ai-code code').forEach(function(c){window.hljs.highlightElement(c);});});document.querySelectorAll('.ai-copy').forEach(function(b){b.addEventListener('click',function(){var t=b.closest('.ai-code').querySelector('code').textContent,d=function(){b.textContent='Copied!';setTimeout(function(){b.textContent='Copy';},1600);},o=function(){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();d();};if(navigator.clipboard)navigator.clipboard.writeText(t).then(d,o);else o();});});</script>
+    </section>
+    <section class="sec sec-mistake fade-up"><h2 class="sec-title"><span class="sec-ico">!</span>The mistake to watch for</h2>
+      <p class="mb-0">Mixing low less than or equal to high with high = mid. Once low equals high, nothing changes, and the loop runs forever.</p>
+    </section>
+    <section class="sec sec-hints fade-up"><h2 class="sec-title"><span class="sec-ico">✦</span>Key moments <small>tap one to jump there</small></h2>
+      <ol class="ep-moments list-unstyled mb-0"><li><a href="?t=0" data-seek="0"><time>0:00</time><span>Find the first 7</span></a></li>
+<li><a href="?t=21" data-seek="21"><time>0:21</time><span>Today&#x27;s plan</span></a></li>
+<li><a href="?t=46" data-seek="46"><time>0:46</time><span>Lower bound</span></a></li>
+<li><a href="?t=80" data-seek="80"><time>1:20</time><span>Upper bound</span></a></li>
+<li><a href="?t=102" data-seek="102"><time>1:42</time><span>The loop rule</span></a></li>
+<li><a href="?t=137" data-seek="137"><time>2:17</time><span>Lower and upper bound in Java</span></a></li>
+<li><a href="?t=154" data-seek="154"><time>2:34</time><span>Subscribe break</span></a></li>
+<li><a href="?t=168" data-seek="168"><time>2:48</time><span>First and last position</span></a></li>
+<li><a href="?t=185" data-seek="185"><time>3:05</time><span>Count in log n</span></a></li>
+<li><a href="?t=214" data-seek="214"><time>3:34</time><span>Cheat sheet</span></a></li>
+<li><a href="?t=235" data-seek="235"><time>3:55</time><span>Quiz time</span></a></li>
+<li><a href="?t=267" data-seek="267"><time>4:27</time><span>Recap</span></a></li>
+<li><a href="?t=281" data-seek="281"><time>4:41</time><span>LeetCode homework</span></a></li>
+<li><a href="?t=298" data-seek="298"><time>4:58</time><span>Next episode: Binary search on answer</span></a></li></ol>
+    </section>
+    <section class="sec sec-approach fade-up"><h2 class="sec-title"><span class="sec-ico">↗</span>Full transcript</h2>
+      <details class="ep-transcript"><summary>Read the whole lesson</summary>
+      <p>Your binary search finds a seven, but the interviewer wants the first seven. Almost everyone fails this. Here&#x27;s why.</p>
+<p>Plain binary search stops at whichever seven it hits first. That might be the middle one.</p>
+<p>Two tiny changes fix it. They&#x27;re called lower bound and upper bound, and they solve a whole family of LeetCode problems.</p>
+<p>Welcome back to Compiled Canvas. This is Episode Twenty Two of our DSA series. Last time, we learned linear search and binary search.</p>
+<p>Here&#x27;s the plan. First, what lower bound means. Then upper bound. Then the one rule that stops infinite loops. Then first and last position in Java. And counting copies in O of log n. A cheat sheet. And an easy quiz at the end.</p>
+<p>Let&#x27;s go.</p>
+<p>Lower bound is the first place where a number could go, without breaking the order. And it&#x27;s the key to this whole video.</p>
+<p>In other words, the first index whose value is greater than or equal to the target.</p>
+<p>Array one, two, two, two, three, five. Lower bound of two is index one, the very first two.</p>
+<p>Lower bound of four? There&#x27;s no four. The first value bigger than four is five, at index five. So four would go there.</p>
+<p>That&#x27;s why lower bound also answers Search Insert Position, LeetCode thirty five, for free.</p>
+<p>Upper bound is almost the same, with one character changed. And that one character is where most bugs come from.</p>
+<p>Upper bound is the first index whose value is strictly greater than the target.</p>
+<p>Upper bound of two is index four, the three, just after the last two.</p>
+<p>So the twos live from lower bound, up to just before upper bound. Index one to index three.</p>
+<p>Now the rule that stops your binary search from looping forever. Get this wrong, and your program never stops.</p>
+<p>For lower and upper bound, high starts at n, one past the end. Because the answer can be n, when every number is smaller.</p>
+<p>Loop while low is less than high. When the middle is a possible answer, set high to mid, not mid minus one.</p>
+<p>Mix them up, with low less than or equal to high and high equals mid, and once low equals high, nothing changes. Infinite loop.</p>
+<p>Simple rule. High equals mid always goes with low less than high.</p>
+<p>Here&#x27;s lower bound. High starts at n, and we loop while low is less than high.</p>
+<p>If the middle is too small, the answer is to its right. Otherwise mid could be the answer, so keep it.</p>
+<p>Upper bound is the same code with less than or equal. That&#x27;s the one character.</p>
+<p>Quick pause, before we go further. If you&#x27;re finding this video valuable, hit subscribe to Compiled Canvas, and turn on the bell. It&#x27;s free, it takes one second, and it helps me keep making this complete DSA series for you. Alright, back to it.</p>
+<p>Now LeetCode thirty four. Find the first and last position of a number.</p>
+<p>First is just lower bound. But check it really holds our number. If not, return minus one, minus one.</p>
+<p>Last is upper bound, minus one. Two binary searches, so O of log n.</p>
+<p>One more trick, and it&#x27;s a favourite in interviews. How many times does a number appear?</p>
+<p>Upper bound minus lower bound. Four minus one is three. Three twos, without counting them one by one.</p>
+<p>On a sorted array of a million numbers, that&#x27;s about forty checks instead of a million.</p>
+<p>Your turn. Pause. Array one, three, three, three, three, eight. What are lower bound and upper bound of three?</p>
+<p>Lower bound is one, upper bound is five. So there are four threes.</p>
+<p>So, here&#x27;s the whole thing in one cheat sheet. Pause and screenshot this.</p>
+<p>Lower bound: first index with value at least x.</p>
+<p>Upper bound: first index with value more than x.</p>
+<p>High starts at n.</p>
+<p>High equals mid goes with low less than high.</p>
+<p>Last position is upper bound minus one.</p>
+<p>Count is upper bound minus lower bound.</p>
+<p>Okay, quiz time. Three easy questions. Pause the video, think, and then hit play.</p>
+<p>Question one. In one, two, two, five, what&#x27;s the lower bound of two?</p>
+<p>Question two. Same array. What&#x27;s the upper bound of two?</p>
+<p>Question three. Low less than or equal to high, with high equals mid. What happens?</p>
+<p>Ready?</p>
+<p>Question one: Index one.</p>
+<p>Question two: Index three.</p>
+<p>Question three: It can loop forever.</p>
+<p>How many did you get right? Tell me in the comments: three out of three, two, or one.</p>
+<p>Let&#x27;s recap. Lower bound finds the first copy. Upper bound finds just past the last. Use low less than high with high equals mid. First and last are two binary searches. Count with upper minus lower.</p>
+<p>Your homework. Solve LeetCode thirty four, First and Last Position, and LeetCode two seventy eight, First Bad Version. Practice problems with hints and Java answers are on compiled canvas dot com. And tell me in the comments: how many fives are in one, five, five, five, nine?</p>
+<p>Next episode, binary search on the answer. Koko eating bananas, book allocation and aggressive cows, with one template.</p>
+<p>And don&#x27;t forget to subscribe to Compiled Canvas, so you don&#x27;t miss anything new in tech and the job market. Keep coding, stay consistent, and I&#x27;ll see you in the next one.</p>
+      </details>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <div class="side-sticky">
+      <div class="card mb-3 shadow-sm solve-card"><div class="card-body">
+        <h2 class="h6 fw-bold">Practise this now</h2>
+        <div class="mb-3"><a class="ep-try" href="../13-binary-search/006-find-first-and-last-position-of-element-in-sorted-array.html">Find First and Last Position of Element in Sorted Array <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../13-binary-search/004-first-bad-version.html">First Bad Version <span aria-hidden="true">→</span></a>
+<a class="ep-try" href="../13-binary-search/002-search-insert-position.html">Search Insert Position <span aria-hidden="true">→</span></a></div>
+        <a class="btn btn-brand w-100" href="../13-binary-search/index.html">All Binary Search problems</a>
+      </div></div>
+      <div class="card mb-3 shadow-sm"><div class="card-body small">
+        <a class="d-block mb-2" href="https://www.youtube.com/playlist?list=PLUDfZ2cL52Lg" target="_blank" rel="noopener">▶ Watch the full DSA series in order</a>
+        <a class="d-block" href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Compiled Canvas</a>
+      </div></div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="d-flex justify-content-between gap-2 flex-wrap pager"><a class="btn btn-outline-secondary" href="21-linear-vs-binary-search-java.html">← Episode 21</a><a class="btn btn-outline-secondary" href="23-binary-search-on-answer-java.html">Episode 23 →</a></div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free courses for software careers: DSA in Java, Generative AI, and resume and LinkedIn guidance.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../../dsa/index.html">DSA in Java</a>
+        <a href="../../dsa/episodes/index.html">All episodes</a>
+        <a href="../../gen-ai/index.html">Generative AI</a>
+        <a href="../../career/resume-builder.html">Free resume builder</a>
+        <a href="../../stories/index.html">Web Stories</a>
+        <a href="../../blog/index.html">Guides</a>
+        <a href="../../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../../index.html#how">How it works</a>
+        <a href="../../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <p class="foot-note">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

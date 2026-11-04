@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your First LLM API Call in Python, With Streaming | Compiled Canvas</title>
+<meta name="description" content="Your first LLM API call in Python: messages, roles, model, max tokens and temperature, and streaming the reply word by word with the Anthropic SDK.">
+<link rel="canonical" href="https://compiledcanvas.com/gen-ai/11-first-api-call.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/gen-ai/11-first-api-call.html">
+<meta property="og:title" content="Your First LLM API Call in Python, With Streaming | Compiled Canvas">
+<meta property="og:description" content="Your first LLM API call in Python: messages, roles, model, max tokens and temperature, and streaming the reply word by word with the Anthropic SDK.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/gen-ai/lesson-11.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script><script>window.addEventListener('load',function(){if(window.hljs)document.querySelectorAll('pre code').forEach(function(c){window.hljs.highlightElement(c);});});</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Your First LLM API Call in Python, With Streaming", "author": {"@type": "Person", "name": "Amit Singh"}, "publisher": {"@type": "Organization", "name": "Compiled Canvas", "url": "https://compiledcanvas.com/", "logo": {"@type": "ImageObject", "url": "https://compiledcanvas.com/assets/logo.png"}, "sameAs": ["https://www.youtube.com/@compiledcanvas", "https://www.instagram.com/compiledcanvas", "https://github.com/amitxaidev"]}, "image": "https://compiledcanvas.com/assets/gen-ai/lesson-11.jpg", "description": "Your first LLM API call in Python: messages, roles, model, max tokens and temperature, and streaming the reply word by word with the Anthropic SDK."}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "Generative AI", "item": "https://compiledcanvas.com/gen-ai/"}, {"@type": "ListItem", "position": 3, "name": "Lesson 11", "item": "https://compiledcanvas.com/gen-ai/11-first-api-call.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+      <img src="../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../career/index.html">Resume &amp; LinkedIn <span class="badge text-bg-success">Live</span></a></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+<section class="ai-hero"><div class="container"><p class="ai-trail"><a href="../index.html">Home</a> / <a href="index.html">Generative AI</a> / Lesson 11</p>
+<span class="ai-pill">Lesson 11 · Python</span><h1>Your First LLM API Call in Python: Messages, Parameters, Streaming</h1><p class="lead">Your first LLM API call in Python: messages, roles, model, max tokens and temperature, and streaming the reply word by word with the Anthropic SDK.</p></div></section><div class="container py-4"><div class="row g-4"><aside class="col-lg-3 d-none d-lg-block"><nav class="ai-toc"><a href="#s1">10 lines of Python</a><a href="#s2">What a call sends</a><a href="#s3">The 3 roles</a><a href="#s4">Your first call</a><a href="#s5">Parameters that matter</a><a href="#s6">Streaming</a></nav></aside><div class="col-lg-9"><div class="ai-start"><div class="ai-video" id="ai-wait" data-out="2026-11-10T10:00:00+05:30" data-vid=""><div class="ratio ratio-16x9"><img src="../assets/gen-ai/lesson-11.jpg" alt="Lesson 11 video thumbnail" loading="lazy"></div><span>🎬 Video out 10 Nov, 10:00 AM IST</span></div><div class="ai-plan"><p><b>0 hands-on demos</b> and <b>1 Python programs</b> you can run on this page. Nothing to install.</p><ol><li><a href="#s1">10 lines of Python</a></li><li><a href="#s2">What a call sends</a></li><li><a href="#s3">The 3 roles</a></li><li><a href="#s4">Your first call</a> <b class=py>run code</b></li><li><a href="#s5">Parameters that matter</a></li><li><a href="#s6">Streaming</a></li></ol></div></div><script>(function(){var w=document.getElementById('ai-wait');if(!w.dataset.vid||Date.now()<new Date(w.dataset.out).getTime())return;var a=document.createElement('a');a.className='ai-video video-card';a.href='https://youtu.be/'+w.dataset.vid;a.target='_blank';a.rel='noopener';a.innerHTML=w.innerHTML;a.querySelector('span').textContent='▶ Watch this lesson on YouTube';w.replaceWith(a);})();</script><section class="ai-sec fade-up" id="s1"><h2><span>1</span>10 lines of Python</h2><p>You can build your own ChatGPT in ten lines of Python. But most tutorials skip the part that makes it feel fast. Here&#x27;s how.</p><p>Today you&#x27;ll send a real message to a real model, read the reply, and then stream it word by word, the way chat apps do.</p><p>You&#x27;ll need the setup from the last lesson. A virtual environment, the library, and your key in dot env.</p><div class="ai-keys"><span style="--i:0">YOUR OWN</span><span style="--i:1">CHATBOT</span><span style="--i:2">SEND</span><span style="--i:3">READ</span><span style="--i:4">STREAM</span><span style="--i:5">(.venv)</span><span style="--i:6">pip install anthropic</span><span style="--i:7">.env with your key</span></div></section><section class="ai-sec fade-up" id="s2"><h2><span>2</span>What a call sends</h2><p>First, what actually travels to the model. Once you see this, every AI library makes sense.</p><p>Your program sends a request over the internet. It carries your key, the model&#x27;s name, the messages, and some settings.</p><p>The provider runs the model and sends back a response. The text, plus how many tokens you used.</p><p>Like ordering food on an app. You send the order with your account. The kitchen sends back the food, and the bill.</p><div class="ai-keys"><span style="--i:0">key</span><span style="--i:1">model</span><span style="--i:2">messages</span><span style="--i:3">settings</span><span style="--i:4">the reply text</span><span style="--i:5">tokens in / out</span><span style="--i:6">order + account → kitchen</span><span style="--i:7">food + bill → you</span></div></section><section class="ai-sec fade-up" id="s3"><h2><span>3</span>The 3 roles</h2><p>Every chatbot conversation, from any company, is built from just three roles.</p><p>System sets the rules. You&#x27;re a friendly Java tutor. Answer in two sentences.</p><p>User is the person asking. What is a HashMap?</p><p>Assistant is the model&#x27;s reply. To continue a chat, you send the earlier user and assistant messages back each time. The model doesn&#x27;t remember on its own.</p><div class="ai-keys"><span style="--i:0">3 ROLES</span><span style="--i:1">&quot;You are a friendly Java tutor.&quot;</span><span style="--i:2">&quot;What is a HashMap?&quot;</span></div></section><section class="ai-sec fade-up" id="s4"><h2><span>4</span>Your first call</h2><p class="ai-note">Edit the code and press <b>Run</b> to try it right here, or copy it and run <code>python3 first_call.py</code>.</p><div class="ai-code"><div class="ai-code-head"><span>first_call.py <em>· click to edit</em></span><span class="ai-code-btns"><button type="button" class="ai-run">▶ Run</button><button type="button" class="ai-copy">Copy</button><a href="code/first_call.py" download>Download</a></span></div><pre><code class="language-python" contenteditable="plaintext-only" spellcheck="false"># Lesson 11: your first LLM API call, then the same call streamed word by word.
+# Needs the setup from lesson 10: pip install anthropic python-dotenv, and ANTHROPIC_API_KEY in .env
+from dotenv import load_dotenv
+import anthropic
+
+load_dotenv()
+client = anthropic.Anthropic()                  # reads ANTHROPIC_API_KEY from the environment
+MODEL = &quot;claude-haiku-5-5&quot;                      # a small, fast model
+
+reply = client.messages.create(
+    model=MODEL,
+    max_tokens=200,                             # upper limit on the answer&#x27;s length
+    temperature=0.3,                            # low = focused, high = creative
+    system=&quot;You are a friendly Java tutor. Answer in two short sentences.&quot;,
+    messages=[{&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;What is a HashMap?&quot;}],
+)
+print(reply.content[0].text)
+print(&quot;tokens in/out:&quot;, reply.usage.input_tokens, reply.usage.output_tokens)
+
+print(&quot;\nStreaming:&quot;)
+with client.messages.stream(
+    model=MODEL,
+    max_tokens=200,
+    messages=[{&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;Explain recursion in one line.&quot;}],
+) as stream:
+    for text in stream.text_stream:              # pieces arrive as they&#x27;re generated
+        print(text, end=&quot;&quot;, flush=True)
+print()</code></pre></div><div class="ai-out"><span>▶ Output</span><pre>A HashMap stores key-value pairs...
+(your reply will be worded differently)</pre></div><p>Here it is. Create a client. It reads the key from the environment, so it&#x27;s not in your code.</p><p>Messages create sends the request. The model, a length limit, the system rules, and the user&#x27;s message.</p><p>Then print the text of the reply. That&#x27;s a working AI program. Your answer will be worded differently each time. The full program is on compiled canvas dot com.</p></section><section class="ai-sec fade-up" id="s5"><h2><span>5</span>Parameters that matter</h2><p>Three settings change your results, and your bill, more than anything else.</p><p>Model. Small models are fast and cheap. Big ones think harder. Start small, and move up only if you need to.</p><p>Max tokens. The longest the answer can be. It also caps what one call can cost.</p><p>Temperature, from lesson five. Low for facts and code. Higher for ideas.</p><div class="ai-keys"><span style="--i:0">small: fast, cheap</span><span style="--i:1">large: smarter, costlier</span><span style="--i:2">max_tokens=200</span><span style="--i:3">CAPS LENGTH AND COST</span><span style="--i:4">0.2 · FACTS, CODE</span><span style="--i:5">0.7 · BALANCED</span><span style="--i:6">1.0 · IDEAS</span></div></section><section class="ai-sec fade-up" id="s6"><h2><span>6</span>Streaming</h2><p>Ever noticed chatbots type their answer word by word? That&#x27;s not an animation. It&#x27;s streaming.</p><p>Without streaming, your app waits until the whole answer is ready, then shows it all at once. Long answers feel slow.</p><p>With streaming, pieces arrive as the model writes them. The first words show up almost instantly.</p><p>In Python, use messages dot stream, then loop over the text stream and print each piece, without a new line.</p><p>Same total time. But it feels much faster, because people start reading straight away. Look at this graph.</p><p>Your turn. Pause. Your chatbot sends back the entire answer after eight seconds. Which feature fixes how slow it feels?</p><p>Streaming. The words start arriving in about a second.</p><div class="ai-keys"><span style="--i:0">WORD</span><span style="--i:1">BY WORD</span><span style="--i:2">wait… wait… everything at once</span><span style="--i:3">first words in a blink</span></div></section><section class="ai-sec fade-up" id="s7"><h2><span>7</span>Cheat sheet</h2><ul class="ai-list"><li>Send: key · model · messages</li><li>System · user · assistant</li><li>Send history each time</li><li>Start with a small model</li><li>max_tokens caps cost</li><li>Stream it</li></ul></section><section class="ai-sec fade-up" id="s8"><h2><span>8</span>Quick quiz</h2><details class="ai-q"><summary>1. Which role sets the rules?</summary><p>System.</p></details><details class="ai-q"><summary>2. Which setting caps how long the answer can be?</summary><p>Max tokens.</p></details><details class="ai-q"><summary>3. Does the model remember the last message on its own?</summary><p>No. You send the history each time.</p></details></section><section class="ai-sec fade-up" id="s9"><h2><span>9</span>Homework</h2><p>Your homework. Run the first call program. Change the system prompt to answer like a cricket commentator, and watch the reply change. All the Python code is on this page, ready to copy. And paste your favourite answer in the comments.</p></section>
+<div class="ai-next"><div><span>Up next</span><strong>Conversation memory</strong></div></div><div class="d-flex justify-content-between gap-2 my-4"><a class="btn btn-outline-secondary" href="10-python-api-setup.html">← Previous lesson</a><a class="btn btn-brand" href="index.html">See all lessons</a></div></div></div></div><script>
+document.querySelectorAll('.ai-copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var t = b.closest('.ai-code').querySelector('code').textContent, d = function () { b.textContent = 'Copied!'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); },
+      o = function () { var a = document.createElement('textarea'); a.value = t; a.style.position = 'fixed'; a.style.opacity = '0'; document.body.appendChild(a); a.select(); document.execCommand('copy'); a.remove(); d(); };
+    if (navigator.clipboard) navigator.clipboard.writeText(t).then(d, o); else o();
+  });
+});
+</script><script>
+(function () {
+  var $ = function (r, s) { return r.querySelector(s); }, $$ = function (r, s) { return Array.prototype.slice.call(r.querySelectorAll(s)); };
+  var softmax = function (s, t) { var m = Math.max.apply(null, s), x = s.map(function (v) { return Math.exp((v - m) / t); }), z = x.reduce(function (a, b) { return a + b; }, 0); return x.map(function (v) { return v / z; }); };
+  var bars = function (box, names, ps, hi) {
+    box.innerHTML = names.map(function (n, i) { return '<div class="lab-bar' + (i === hi ? ' hi' : '') + '"><span>' + n + '</span><i style="width:' + (ps[i] * 100).toFixed(1) + '%"></i><b>' + Math.round(ps[i] * 100) + '%</b></div>'; }).join('');
+  };
+  var draw = function (ps) { var r = Math.random(), a = 0; for (var i = 0; i < ps.length; i++) { a += ps[i]; if (r < a) return i; } return ps.length - 1; };
+  var esc = function (s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var L = {};
+
+  L.tok = function (el) {
+    var inp = $(el, 'input'), out = $(el, '[data-out]');
+    var keep = ' i a an the and or is am are to of in on it you we my love python java hello world code token tokens model learn ', pre = ['un', 're', 'dis', 'pre'], suf = ['able', 'ing', 'tion', 'ness', 'ment', 'ed', 'ly', 'er'];
+    var id = function (s) { var h = 7; for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) % 50257; return h; };
+    var split = function (w) {
+      var lead = w[0] === ' ' ? ' ' : '', core = w.trim(), low = core.toLowerCase(), parts = [];
+      if (!/^[a-z]+$/i.test(core) || core.length <= 6 || keep.indexOf(' ' + low + ' ') >= 0) return [w];
+      pre.forEach(function (p) { if (!parts.length && low.indexOf(p) === 0 && low.length > p.length + 3) { parts.push(core.slice(0, p.length)); core = core.slice(p.length); low = low.slice(p.length); } });
+      var tail = ''; suf.some(function (s) { if (low.length > s.length + 2 && low.slice(-s.length) === s) { tail = core.slice(-s.length); core = core.slice(0, -s.length); return true; } });
+      while (core.length > 6) { parts.push(core.slice(0, 4)); core = core.slice(4); }
+      parts.push(core); if (tail) parts.push(tail); parts[0] = lead + parts[0]; return parts;
+    };
+    var run = function () {
+      var txt = inp.value, words = txt.match(/ ?[A-Za-z]+| ?\d| ?[^\sA-Za-z\d]/g) || [], toks = [];
+      words.forEach(function (w) { toks = toks.concat(split(w)); });
+      out.innerHTML = toks.map(function (t, i) { return '<span class="lab-tk k' + (i % 5) + '">' + esc(t.replace(/^ /, '·')) + '<small>' + id(t) + '</small></span>'; }).join('') || '<span class="lab-hint">Type something above.</span>';
+      $(el, '[data-w]').textContent = (txt.match(/[A-Za-z0-9']+/g) || []).length; $(el, '[data-t]').textContent = toks.length; $(el, '[data-c]').textContent = txt.length;
+    };
+    inp.addEventListener('input', run); run();
+  };
+
+  L.emb = function (el) {
+    var W = { cat: [.9, .8], dog: [.8, .9], puppy: [.62, .98], kitten: [.98, .6], car: [.15, -.9], bus: [-.12, -.95], truck: [.32, -.85], apple: [-.86, .3], mango: [-.95, .1], banana: [-.75, .5] };
+    var svg = $(el, 'svg'), res = $(el, '[data-res]'), sel = [], X = function (v) { return 170 + v[0] * 135; }, Y = function (v) { return 125 - v[1] * 100; };
+    var cos = function (a, b) { return (a[0] * b[0] + a[1] * b[1]) / (Math.hypot(a[0], a[1]) * Math.hypot(b[0], b[1])); };
+    var paint = function () {
+      var g = '<line class="ax" x1="20" y1="125" x2="320" y2="125"/><line class="ax" x1="170" y1="15" x2="170" y2="235"/>';
+      if (sel.length === 2) g += '<line class="link" x1="' + X(W[sel[0]]) + '" y1="' + Y(W[sel[0]]) + '" x2="' + X(W[sel[1]]) + '" y2="' + Y(W[sel[1]]) + '"/>';
+      Object.keys(W).forEach(function (k) { var v = W[k], on = sel.indexOf(k) >= 0; g += '<g class="pt' + (on ? ' on' : '') + '" data-w="' + k + '" tabindex="0" role="button" aria-label="' + k + '"><circle cx="' + X(v) + '" cy="' + Y(v) + '" r="' + (on ? 8 : 6) + '"/><text x="' + (X(v) + 10) + '" y="' + (Y(v) + 4) + '">' + k + '</text></g>'; });
+      svg.innerHTML = g;
+      if (sel.length === 1) res.textContent = 'Now pick a second word.';
+      if (sel.length === 2) { var s = cos(W[sel[0]], W[sel[1]]); res.innerHTML = '<b>' + sel[0] + ' ↔ ' + sel[1] + '</b>: similarity <b>' + s.toFixed(2) + '</b> · ' + (s > .85 ? 'very close in meaning' : s > .3 ? 'a little related' : 'not related at all'); }
+    };
+    var pick = function (k) { if (sel.length === 2) sel = []; if (sel.indexOf(k) < 0) sel.push(k); paint(); };
+    svg.addEventListener('click', function (ev) { var g = ev.target.closest('[data-w]'); if (g) pick(g.getAttribute('data-w')); });
+    svg.addEventListener('keydown', function (ev) { var g = ev.target.closest('[data-w]'); if (g && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); pick(g.getAttribute('data-w')); } });
+    sel = ['cat', 'dog']; paint();
+  };
+
+  L.soft = function (el, c) {
+    var t = $(el, '[data-temp]'), box = $(el, '[data-bars]'), out = $(el, '[data-samples]'), ps = [];
+    var pr = $(el, '[data-prompt]'), last = '___';
+    var show = function () { pr.innerHTML = esc(c.prompt) + ' <mark>' + esc(last) + '</mark>'; };
+    var run = function (hi) { ps = softmax(c.scores, +t.value); $(el, '[data-tv]').textContent = (+t.value).toFixed(1); bars(box, c.words, ps, hi); };
+    t.addEventListener('input', function () { run(); out.innerHTML = ''; });
+    $(el, '[data-pick]').addEventListener('click', function () { var i = draw(ps); last = c.words[i]; show(); run(i); });
+    $(el, '[data-ten]').addEventListener('click', function () {
+      var got = []; for (var k = 0; k < 10; k++) got.push(c.words[draw(ps)]);
+      var uniq = got.filter(function (w, i) { return got.indexOf(w) === i; }).length;
+      out.innerHTML = got.map(function (w) { return '<span>' + esc(w) + '</span>'; }).join('') + '<em>' + uniq + ' different answer' + (uniq > 1 ? 's' : '') + ' at temperature ' + (+t.value).toFixed(1) + '</em>';
+    });
+    show(); run();
+  };
+
+  L.att = function (el) {
+    var base = ['The', 'animal', "didn't", 'cross', 'the', 'street', 'because', 'it', 'was'], end = 'tired', focus = 7;
+    var sent = $(el, '[data-sent]'), res = $(el, '[data-res]');
+    var weights = function (f) {
+      var w = base.concat([end]).map(function () { return .02; });
+      if (f === 7) { if (end === 'tired') { w[1] = .62; w[5] = .1; } else { w[5] = .6; w[1] = .12; } w[9] = .12; w[7] = .06; }
+      else if (f === 9) { if (end === 'tired') w[1] = .45; else w[5] = .45; w[7] = .3; w[8] = .1; }
+      else { w[f] = .35; if (f > 0) w[f - 1] = .2; if (f < 9) w[f + 1] = .2; if (f === 3) { w[1] = .2; w[5] = .2; } }
+      var z = w.reduce(function (a, b) { return a + b; }, 0); return w.map(function (v) { return v / z; });
+    };
+    var paint = function () {
+      var words = base.concat([end]), w = weights(focus), top = -1;
+      w.forEach(function (v, i) { if (i !== focus && (top < 0 || v > w[top])) top = i; });
+      sent.innerHTML = words.map(function (x, i) { return '<button type="button" class="lab-w' + (i === focus ? ' focus' : '') + '" data-i="' + i + '" style="--a:' + (i === focus ? 1 : Math.min(1, w[i] * 1.6)).toFixed(2) + '">' + esc(x) + '<small>' + (i === focus ? 'asking' : Math.round(w[i] * 100) + '%') + '</small></button>'; }).join('');
+      res.innerHTML = '<b>' + esc(words[focus]) + '</b> pays the most attention to <b>' + esc(words[top]) + '</b> (' + Math.round(w[top] * 100) + '%).';
+    };
+    sent.addEventListener('click', function (ev) { var b = ev.target.closest('[data-i]'); if (b) { focus = +b.getAttribute('data-i'); paint(); } });
+    $$(el, '[data-end]').forEach(function (b) { b.addEventListener('click', function () { end = b.getAttribute('data-end'); $$(el, '[data-end]').forEach(function (x) { x.classList.toggle('on', x === b); }); focus = 7; paint(); }); });
+    paint();
+  };
+
+  L.qkv = function (el) {
+    var K = [[.9, .1], [.1, .9], [.2, .2]], V = [[1, 0], [0, 1], [.5, .5]], a = $(el, '[data-q0]'), b = $(el, '[data-q1]');
+    var run = function () {
+      var q = [+a.value, +b.value]; $(el, '[data-v0]').textContent = q[0].toFixed(1); $(el, '[data-v1]').textContent = q[1].toFixed(1);
+      var s = K.map(function (k) { return (k[0] * q[0] + k[1] * q[1]) / Math.SQRT2; }), w = softmax(s, 1);
+      var o = [0, 1].map(function (j) { return w.reduce(function (acc, x, i) { return acc + x * V[i][j]; }, 0); });
+      var hi = w.indexOf(Math.max.apply(null, w)); bars($(el, '[data-bars]'), ['animal', 'street', 'tired'], w, hi);
+      $(el, '[data-res]').innerHTML = 'Weights <code>[' + w.map(function (x) { return x.toFixed(2); }).join(' ') + ']</code> · new meaning of <em>it</em> <code>[' + o.map(function (x) { return x.toFixed(2); }).join(' ') + ']</code> — mostly <b>' + ['animal', 'street', 'tired'][hi] + '</b>.';
+    };
+    a.addEventListener('input', run); b.addEventListener('input', run); run();
+  };
+
+  L.pick = function (el) {
+    var res = $(el, '[data-res]'), box = $$(el, 'input');
+    var run = function () {
+      var f = {}; box.forEach(function (x) { f[x.getAttribute('data-k')] = x.checked; });
+      var r = f.private ? ['open-weight model on your server', 'Private data never leaves your machines. You download the weights and run them yourself.']
+        : f.image ? ['multimodal model', 'It can take images or audio as input, not just text.']
+        : f.hard ? ['reasoning model', 'It thinks step by step first. Slower and costlier, but far better at hard problems.']
+        : ['small fast model', 'Cheap and quick. Most everyday tasks need nothing more.'];
+      var args = Object.keys(f).filter(function (k) { return f[k]; }).map(function (k) { return k + '=True'; }).join(', ');
+      res.innerHTML = '<span>Use a</span><strong>' + r[0] + '</strong><p>' + r[1] + '</p><code>pick_model(' + args + ')  # ' + r[0] + '</code>';
+    };
+    box.forEach(function (x) { x.addEventListener('change', run); }); run();
+  };
+
+  L.ctx = function (el, c) {
+    var n = 0, chat = $(el, '[data-chat]'), btn = $(el, '[data-send]');
+    var paint = function () {
+      var msgs = c.msgs.slice(0, n), used = 0, keep = [];
+      for (var i = msgs.length - 1; i >= 0; i--) { var k = msgs[i].split(' ').length; if (used + k > c.limit) break; used += k; keep.unshift(i); }
+      chat.innerHTML = msgs.map(function (m, i) { var on = keep.indexOf(i) >= 0; return '<li class="' + (i % 2 ? 'bot' : 'you') + (on ? '' : ' gone') + '"><span>' + esc(m) + '</span><small>' + m.split(' ').length + ' tokens' + (on ? '' : ' · forgotten') + '</small></li>'; }).join('') || '<li class="lab-hint">The chat is empty. Send a message.</li>';
+      $(el, '[data-fill]').style.width = (used / c.limit * 100) + '%'; $(el, '[data-used]').textContent = used + ' / ' + c.limit + ' tokens in the window';
+      btn.disabled = n >= c.msgs.length;
+      if (n === c.msgs.length && keep[0] > 0) chat.insertAdjacentHTML('beforeend', '<li class="lab-warn">The first message, with the name, fell out of the window. The model can\'t see it any more, so it has forgotten your name.</li>');
+    };
+    btn.addEventListener('click', function () { n++; paint(); });
+    $(el, '[data-reset]').addEventListener('click', function () { n = 0; paint(); });
+    paint();
+  };
+
+  L.cost = function (el) {
+    var get = function (k) { return Math.max(0, +$(el, '[data-k="' + k + '"]').value || 0); }, rs = function (v) { return '₹' + (v >= 100 ? Math.round(v).toLocaleString('en-IN') : v.toFixed(2)); };
+    var run = function () {
+      var inp = get('inp'), out = get('out'), turns = Math.min(40, Math.max(1, get('turns'))), users = get('users'), pin = get('pin'), pout = get('pout'), hist = $(el, '[data-k="hist"]').checked, per = [], tot = 0;
+      for (var k = 1; k <= turns; k++) { var sent = hist ? inp * k + out * (k - 1) : inp, c = sent / 1e6 * pin + out / 1e6 * pout; per.push(c); tot += c; }
+      var top = Math.max.apply(null, per) || 1;
+      $(el, '[data-bars]').innerHTML = per.map(function (v, i) { return '<i style="height:' + Math.max(4, v / top * 100) + '%" title="Message ' + (i + 1) + ': ' + rs(v) + '"></i>'; }).join('') + '<small>cost of message 1 → ' + turns + '</small>';
+      $(el, '[data-res]').innerHTML = '<span><b>' + rs(per[0]) + '</b> first message</span><span><b>' + rs(per[per.length - 1]) + '</b> last message</span><span><b>' + rs(tot * users) + '</b> per day</span><span><b>' + rs(tot * users * 30) + '</b> per month</span>';
+    };
+    $$(el, 'input').forEach(function (x) { x.addEventListener('input', run); }); run();
+  };
+
+  L.prompt = function (el) {
+    var rows = $$(el, '.lab-parts label'), out = $(el, '[data-prompt-out]'), miss = { Role: 'a generic tone', Task: 'it guessing what you want', Context: 'answers pitched at the wrong level', Example: 'a style that may not match yours', Format: 'a random answer shape' };
+    var run = function () {
+      var on = [], lack = [];
+      rows.forEach(function (r) { var c = $(r, 'input[type=checkbox]'), t = $(r, '.form-control'), k = c.getAttribute('data-p'); r.classList.toggle('off', !c.checked); if (c.checked && t.value.trim()) on.push(k + ': ' + t.value.trim()); else lack.push(k); });
+      out.textContent = on.join('\n') || '(empty prompt)';
+      $(el, '[data-bar]').style.width = (on.length / 5 * 100) + '%';
+      $(el, '[data-score]').innerHTML = '<b>' + on.length + ' of 5 parts.</b> ' + (lack.length ? 'Without ' + lack.join(' and ').toLowerCase() + ', expect ' + lack.map(function (k) { return miss[k]; }).join(' and ') + '.' : 'This prompt leaves the model very little to guess.');
+    };
+    $$(el, 'input').forEach(function (x) { x.addEventListener('input', run); x.addEventListener('change', run); }); run();
+  };
+
+  $$(document, '.lab').forEach(function (el) { var c = el.getAttribute('data-cfg'); try { L[el.getAttribute('data-lab')](el, c ? JSON.parse(c) : null); } catch (err) { console.error(err); } });
+
+  // Run the lesson's Python right here, with Pyodide loaded only when someone presses Run.
+  var py = null;
+  var boot = function () {
+    if (py) return py;
+    py = new Promise(function (ok, bad) { var s = document.createElement('script'); s.src = 'https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js'; s.onload = function () { loadPyodide().then(ok, bad); }; s.onerror = bad; document.head.appendChild(s); });
+    return py;
+  };
+  $$(document, '.ai-run').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var wrap = b.closest('.ai-code'), src = $(wrap, 'code').textContent, out = wrap.nextElementSibling;
+      if (!out || !out.classList.contains('ai-out')) { out = document.createElement('div'); out.className = 'ai-out'; out.innerHTML = '<span>▶ Output</span><pre></pre>'; wrap.after(out); }
+      var pre = $(out, 'pre'), lab = $(out, 'span'); b.disabled = true; b.textContent = 'Running…'; lab.textContent = py ? '▶ Running…' : '▶ Loading Python in your browser (first time takes a few seconds)…';
+      boot().then(function (p) {
+        return (/numpy/.test(src) ? p.loadPackage('numpy') : Promise.resolve()).then(function () {
+          var lines = []; p.setStdout({ batched: function (s) { lines.push(s); } }); p.setStderr({ batched: function (s) { lines.push(s); } });
+          return p.runPythonAsync(src).then(function () { return lines; }, function (err) { lines.push(String(err.message || err).trim().split('\n').slice(-1)[0]); out.classList.add('err'); return lines; });
+        });
+      }).then(function (lines) { pre.textContent = lines.join('\n') || '(no output)'; lab.textContent = out.classList.contains('err') ? '▶ Error (fix the code and run again)' : '▶ Output · ran in your browser'; },
+        function () { lab.textContent = '▶ Could not load Python. Check your connection, or run it with python3 on your computer.'; })
+        .then(function () { b.disabled = false; b.textContent = '▶ Run'; out.classList.remove('err'); });
+    });
+  });
+})();
+</script>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free courses for software careers: DSA in Java, Generative AI, and resume and LinkedIn guidance.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../dsa/index.html">DSA in Java</a>
+        <a href="../dsa/episodes/index.html">All episodes</a>
+        <a href="../gen-ai/index.html">Generative AI</a>
+        <a href="../career/resume-builder.html">Free resume builder</a>
+        <a href="../stories/index.html">Web Stories</a>
+        <a href="../blog/index.html">Guides</a>
+        <a href="../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../index.html#how">How it works</a>
+        <a href="../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
