@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Generative AI for Beginners: 6 Free Lessons on How ChatGPT Actually Works | Compiled Canvas</title>
+<meta name="description" content="Free Generative AI course for beginners: how LLMs work, tokens, attention, model types, temperature and prompt engineering, with Python.">
+<link rel="canonical" href="https://compiledcanvas.com/blog/generative-ai-for-beginners-free-course.html">
+<meta property="og:site_name" content="Compiled Canvas">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://compiledcanvas.com/blog/generative-ai-for-beginners-free-course.html">
+<meta property="og:title" content="Generative AI for Beginners: 6 Free Lessons on How ChatGPT Actually Works | Compiled Canvas">
+<meta property="og:description" content="Free Generative AI course for beginners: how LLMs work, tokens, attention, model types, temperature and prompt engineering, with Python.">
+<meta property="og:image" content="https://compiledcanvas.com/assets/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../assets/logo.png">
+<script>try{var t=localStorage.getItem('cc-theme');if(t)document.documentElement.setAttribute('data-bs-theme',t);}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Generative AI for Beginners: 6 Free Lessons on How ChatGPT Actually Works", "description": "Free Generative AI course for beginners: how LLMs work, tokens, attention, model types, temperature and prompt engineering, with Python.", "author": {"@type": "Person", "name": "Amit Singh"}, "publisher": {"@type": "Organization", "name": "Compiled Canvas", "url": "https://compiledcanvas.com/", "logo": {"@type": "ImageObject", "url": "https://compiledcanvas.com/assets/logo.png"}, "sameAs": ["https://www.youtube.com/@compiledcanvas", "https://www.instagram.com/compiledcanvas", "https://github.com/amitxaidev"]}, "datePublished": "2026-11-04", "mainEntityOfPage": "https://compiledcanvas.com/blog/generative-ai-for-beginners-free-course.html"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://compiledcanvas.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://compiledcanvas.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Generative AI for Beginners: 6 Free Lessons on How ChatGPT Actually Works", "item": "https://compiledcanvas.com/blog/generative-ai-for-beginners-free-course.html"}]}</script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="../index.html">
+      <img src="../assets/logo.png" width="30" height="30" alt="" class="rounded-circle">
+      <span>Compiled <span class="text-brand">Canvas</span></span>
+    </a>
+    <span class="navbar-text small text-white-50 d-none d-lg-inline me-auto ms-2">Developed and created by Amit Singh</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../dsa/index.html">DSA in Java <span class="badge text-bg-success">Live</span></a></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../gen-ai/index.html">Generative AI <span class="badge text-bg-success">Live</span></a></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Java <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Python <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">SQL <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">Spring Boot <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">OOPS <span>soon</span></span></li>
+            <li><span class="dropdown-item-text small text-white-50 d-flex justify-content-between gap-3">System Design <span>soon</span></span></li>
+            <li><a class="dropdown-item d-flex justify-content-between gap-3" href="../career/index.html">Resume &amp; LinkedIn <span class="badge text-bg-success">Live</span></a></li>
+            <li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../index.html#courses">All courses →</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">Videos</a></li>
+        <li class="nav-item ms-md-2"><button class="btn btn-sm btn-outline-light theme-btn" type="button">Dark mode</button></li>
+        <li class="nav-item ms-md-2 mt-2 mt-md-0"><a class="btn btn-sm btn-brand" href="../index.html#courses">Start learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-grow-1">
+<section class="ai-hero"><div class="container"><p class="ai-trail"><a href="../index.html">Home</a> / <a href="index.html">Blog</a></p><h1>Generative AI for Beginners: 6 Free Lessons on How ChatGPT Actually Works</h1><p class="lead">Tokens, embeddings, attention, model types, temperature and prompts, explained simply, with Python you can run.</p><p class="small text-white-50 mb-0">By Amit Singh · Compiled Canvas</p></div></section><article class="container py-5 bl-body"><p>Everyone uses ChatGPT. Very few people can explain what happens between pressing Enter and seeing the answer. That gap matters: once you understand tokens, context windows and temperature, you write better prompts, pick cheaper models, and stop being surprised when a chatbot "forgets" or makes something up.</p>
+<p>This is a free course I'm building on YouTube, <a href="https://www.youtube.com/playlist?list=PLRL2nIvx6KmE">Generative AI with Python</a>. Each lesson is short, uses everyday pictures, and has small Python programs you can run from the <a href="https://compiledcanvas.com/gen-ai/">lesson pages on compiledcanvas.com</a>. Here are the first six.</p>
+<h2>Lesson 1: What is generative AI?</h2>
+<figure class="bl-vid"><iframe src="https://www.youtube.com/embed/PiPeKwAzh7w" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<p>AI, machine learning, deep learning and generative AI aren't four separate things. They're four circles, each inside the last. AI is any machine doing something that looks smart. Machine learning learns patterns from examples instead of hand-written rules. Deep learning does that with many-layered neural networks. Generative AI is the deep learning that creates new text, images or code.</p>
+<p>▶ <a href="https://www.youtube.com/watch?v=PiPeKwAzh7w">Watch lesson 1</a> · <a href="https://compiledcanvas.com/gen-ai/01-what-is-generative-ai.html">Read the lesson page</a></p>
+<h2>Lesson 2: How LLMs work</h2>
+<figure class="bl-vid"><iframe src="https://www.youtube.com/embed/-JwguQV3eHY" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<p>A large language model never sees your words. It sees numbers. Text is cut into tokens (100 tokens is about 75 English words), each token becomes an embedding (a list of numbers where similar meanings sit close together), and the model scores every possible next token. It picks one, adds it to the text, and asks again. That's it: next-token prediction, one token at a time.</p>
+<p>▶ <a href="https://www.youtube.com/watch?v=-JwguQV3eHY">Watch lesson 2</a> · <a href="https://compiledcanvas.com/gen-ai/02-how-llms-work.html">Run the Python tokenizer and softmax</a></p>
+<h2>Lesson 3: Transformers and attention</h2>
+<p>"The animal didn't cross the street because it was too tired." You know "it" means the animal. For a computer that's hard, and the 2017 paper Attention Is All You Need solved it. Each word scores every other word for relevance, using a query, a key and a value, a bit like a YouTube search. Because every word is processed at once, transformers train fast on GPUs.</p>
+<p>▶ <a href="https://www.youtube.com/watch?v=HW19mkHq4Gk">Watch lesson 3</a> · <a href="https://compiledcanvas.com/gen-ai/03-transformers-attention.html">Build attention in Python</a></p>
+<h2>Lesson 4: Open vs closed models, reasoning and multimodal</h2>
+<p>Closed models (GPT, Claude, Gemini) run on the company's servers and you pay per use. Open-weight models you can download and run yourself. Reasoning models think before answering: slower and pricier, better at maths and code. Multimodal models take images and audio. The lesson ends with a simple way to choose.</p>
+<p>▶ <a href="https://www.youtube.com/watch?v=7bdX4UPCRh0">Watch lesson 4</a> · <a href="https://compiledcanvas.com/gen-ai/04-model-landscape.html">Read the lesson page</a></p>
+<h2>Lesson 5: Context window, temperature and cost</h2>
+<p>Why does your chatbot forget? Its context window is a whiteboard: only what fits on it is seen, and old text falls off. Temperature is the randomness dial: low for facts and code, higher for brainstorming. And you pay for tokens in and tokens out, so pasting a huge document every turn gets expensive fast.</p>
+<p>▶ <a href="https://www.youtube.com/watch?v=-HmWJx_9F0A">Watch lesson 5</a> · <a href="https://compiledcanvas.com/gen-ai/05-context-temperature-cost.html">Try the temperature demo</a></p>
+<h2>Lesson 6: The 5 parts of a great prompt</h2>
+<figure class="bl-vid"><iframe src="https://www.youtube.com/embed/9crw9ZEzzJs" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<p>Vague in, vague out. A strong prompt has five parts: a role (who it should be), instructions (one clear job), context (what it can't know), examples (show what good looks like) and an output format (bullets, JSON, a table). And give it a way out: tell it to say "I don't know" when it isn't sure.</p>
+<p>▶ <a href="https://www.youtube.com/watch?v=9crw9ZEzzJs">Watch lesson 6</a> · <a href="https://compiledcanvas.com/gen-ai/06-prompt-anatomy.html">Use the prompt builder</a></p>
+<h2>What&#x27;s next</h2>
+<ul><li>Zero-shot, few-shot and chain-of-thought prompting.</li><li>Calling an LLM API from Python, then building a chatbot.</li><li>RAG: making an AI answer from your own documents.</li><li>AI agents that use tools.</li><li>Each lesson also has a 1-minute <a href="https://compiledcanvas.com/stories/">Web Story</a> with a quiz.</li></ul>
+<p class="bl-cta">▶ <a href="https://www.youtube.com/playlist?list=PLRL2nIvx6KmE">Watch the full Generative AI playlist on YouTube</a><br>🔔 <a href="https://www.youtube.com/@compiledcanvas?sub_confirmation=1">Subscribe to Compiled Canvas</a> for a new lesson every week.</p></article>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5"><img src="../assets/logo.png" width="28" height="28" alt="" class="rounded-circle"> Compiled <span class="text-brand">Canvas</span></div>
+        <p class="mb-2">Free courses for software careers: DSA in Java, Generative AI, and resume and LinkedIn guidance.</p>
+        <p class="mb-0 text-white">Developed and created by Amit Singh</p>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <h2 class="foot-head">Learn</h2>
+        <a href="../dsa/index.html">DSA in Java</a>
+        <a href="../dsa/episodes/index.html">All episodes</a>
+        <a href="../gen-ai/index.html">Generative AI</a>
+        <a href="../career/resume-builder.html">Free resume builder</a>
+        <a href="../stories/index.html">Web Stories</a>
+        <a href="../blog/index.html">Guides</a>
+        <a href="../index.html#courses">All courses</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">About</h2>
+        <a href="../index.html#how">How it works</a>
+        <a href="../index.html#about">The creator</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="foot-head">Follow</h2>
+        <a href="https://www.youtube.com/@compiledcanvas" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/compiledcanvas" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/amitxaidev/amitxaidev.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <p class="foot-note">LeetCode problems are linked, not copied. Our solutions are MIT licensed.</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
